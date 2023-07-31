@@ -1,0 +1,174 @@
+This document describes how to build this NewGRF from source.
+
+Contents:
+
+1 License
+2 Building from source
+  2.1 Obtaining the source
+  2.2 Dependencies
+  2.3 Makefile targets
+  2.4 Speed issues
+
+
+
+---------
+1 License
+---------
+
+Finnish Trainset
+Copyright (C) 2013 Finnish Trainset Team
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+
+
+----------------------
+2 Building from source
+----------------------
+
+Usually there's not much which needs to be changed when you obtain the
+source. Your friends will usually be
+    make
+	make install
+Both will build the grf from source, the latter will also try to copy
+the grf into your grf folder so that it is available for testing and
+use straight away.
+
+
+2.1 Obtaining the source
+------------------------
+
+The source code can be obtained from the #openttdcoop DevZone
+via source browser:
+    http://dev.openttdcoop.org/projects/finnishtrainset/repository
+or via mercurial checkout:
+    hg clone http://hg.openttdcoop.org/finnishtrainset
+or via a source bundle download (releases and nightlies only):
+    http://bundles.openttdcoop.org/finnishtrainset/
+
+
+2.2 Dependencies
+----------------
+
+Requirements for running the Makefile successfully:
+	NML
+	gcc
+	md5sum (or md5 on Mac)
+	make
+    mercurial (recommended)
+    python (recommended)
+
+If you want to bundle the grf, you'll need additionally
+	tar
+	zip
+	bzip2
+	unix2dos (optional)
+
+Windows only:
+On Windows systems this means that you'll need to install MinGW and MSys
+in order to obtain a posix compatible environment. Then the makefile can
+be called the very same way as it is on linux and mac systems.
+MinGW/MSys contain the above mentioned programmes (except NML of course) 
+and can be obtained from http://www.mingw.org/ That site also features 
+an excellent walk-through on how to install it.0
+
+If you use for OpenTTD data folder a non-default path or Windows with a
+non-English localization make sure to copy Makefile.local.sample to
+Makefile.local and edit the line with
+	INSTALLDIR =
+accordingly so that it shows the full path to your OpenTTD data
+directory.
+
+
+2.3 Makefile targets
+--------------------
+
+A brief overview over all Makefile targets is given here:
+
+all:
+	This is the default target, if also no parameter is given to
+	make. It will simply build the grf file, if it needs building
+
+depend:
+	Re-run the dependency check. Usually not manually needed.
+
+docs:
+	Build the documentation files
+
+bundle:
+	This target will create a directory called "<name>-nightly" and
+	copy the grf file there and the documentation files, readme.txt,
+	changelog.txt and license.txt
+
+bundle_zip
+	This will zip the bundle directory into one zip for distribution
+
+bundle_tar
+	This will tar the bundle directory into a tar archive for
+	distribution or upload to bananas
+
+bundle_src
+	Creates a source bundle
+
+install:
+	This will create a tar archive (like bundle_tar) and copy it
+	into the INSTALLDIR as specified in Makefile.local (or the
+	default dir, if that isn't defined). Don't rely on a good
+	detection of the default installation directory. It's
+	especially bound to fail on windows machines.
+
+distclean:
+	This phony target cleans everything from a source bundle which
+	wasn't shipped.
+
+clean:
+	This phony target will delete all files which this Makefile will
+	create
+
+mrproper:
+	This phony target will delete also all directories created by
+	different Makefile targets
+
+remake:
+	It's a shortcut for first cleaning the dir and then making the
+	grf anew.
+
+addcheck:
+	Check whether there are some files required but not part of the
+	repository.
+
+check:
+	Check the md5sum of the built newgrf against the supplied md5sum
+	(Intended to be used when building from tar balls)
+
+
+2.4 Speed issues
+----------------
+
+A note concerning the speed of the makefile:
+It seems that the required tools using MinGW and / or msys are thoroughly
+slow on Windows. A few example run times for OpenGFX, same processor type
+(both core 2 duo, 2.26GHz for the windows machine, 2.0 GHz for the OSX
+machine). Note that the values given are the 'real' time. Even though
+this varies more and is dependent on the processor load, that's what you
+have to wait for; the 'user' times are quite low on the Windows machine
+(~16s), but that by no means reflects the build time. Times are from
+OpenGFX r539 with makefile r199.
+
+DEP_CHECK_TYPE         Windows               bash native
+                 native       in VM            (OSX)
+none            1m23.360s      -             0m32.781s
+mdep            1m54.484s   0m30.164s        0m33.807s
+normal          2m37.857s      -             0m36.528s

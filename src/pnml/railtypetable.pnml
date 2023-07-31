@@ -1,0 +1,117 @@
+/* 
+Using Semi-Standardised Railtype Scheme.
+The First Letter:
+S - 1435 mm gauge
+B - 1520 mm gauge
+N - 1067 mm gauge
+n - 1000 mm gauge
+m - 762 mm gauge
+D - 1435/1520 mm gauge
+d - 1435/1067 mm gauge
+C - 1435/1000 mm gauge
+c - 1067/762 mm gauge
+M - Monorail;
+L - Magnetic Levitation (Maglev);
+
+The Second Letter:
+For S, B, D gauges:
+A - 80 km/h
+B - 120 km/h
+C - 160 km/h
+D - 210 km/h
+E - 250 km/h (unlimited for B gauge)
+F - 310 km/h
+G - Unlimited;
+For N, n, d, C gauges:
+A - 80 km/h
+B - 100 km/h
+C - 130 km/h
+D - 160 km/h;
+For m and c gauges:
+A - 60 km/h;
+For Monorail:
+A - Unlimited;
+For Maglev:
+A - 120 km/h
+B - Unlimited;
+
+The Third Letter:
+A - Very Low Axle Load (don't use in China Set: Rails)
+B - Low Axle Load (don't use in China Set: Rails)
+C - Medium Axle Load - all passenger MUs and narrow gauge passenger cars, 762mm gauge freight wagons
+D - High Axle Load - all standard/broad gauge passenger cars, locomotives and light freight wagons
+E - Very High Axle Load - all heavy freight wagons;
+
+The Last Letter:
+N - Non-Electrified
+A - 25 kV AC
+D - 1.5 kV DC
+B - 25 kV AC / 1.5 kV DC
+d - 750 V DC
+3 - Third Rail Electrification;
+*/
+
+railtypetable {
+    RAIL,
+    ELRL,
+    MONO,
+    MGLV,
+    SADN: [SADN, SAAN, RAIL],
+    SAEN: [SAEN, SAAN, RAIL],
+    SBDN: [SBDN, SADN, SAAN, RAIL],
+    SBEN: [SBEN, SAEN, SAAN, RAIL],
+    SCDN: [SCDN, SADN, SAAN, RAIL],
+    SBDA: [SBDA, SADA, SAAA, SAAE, ELRL],
+    SBEA: [SBEA, SAEA, SAAA, SAAE, ELRL],
+    SCCA: [SCCA, SACA, SAAA, SAAE, ELRL],
+    SCDA: [SCDA, SADA, SAAA, SAAE, ELRL],
+    SDCA: [SDCA, SACA, SAAA, SAAE, ELRL],
+    SDDA: [SDDA, SADA, SAAA, SAAE, ELRL],
+    SECA: [SECA, SACA, SAAA, SAAE, ELRL],
+    SEDA: [SEDA, SADA, SAAA, SAAE, ELRL],
+    SFCA: [SFCA, SACA, SAAA, SAAE, ELRL],
+    SGCA: [SGCA, SACA, SAAA, SAAE, ELRL],
+    SBCB: [SBCB, SACB, SAAB, SAAE, ELRL],
+    SACD: [SACD, SAAD, SAAE, ELRL],
+    SBCD: [SBCD, SACD, SAAD, SAAE, ELRL],
+    SCCD: [SCCD, SACD, SAAD, SAAE, ELRL],
+    SACd: [SACd, SAAd, SAAE, ELRL],
+    SBCd: [SBCd, SACd, SAAd, SAAE, ELRL],
+    SCCd: [SCCd, SACd, SAAd, SAAE, ELRL],
+    SAC3: [SAC3, SAA3, "3RDR", MTRO, ELRL],
+    SBC3: [SBC3, SAC3, SAA3, "3RDR", MTRO, ELRL],
+    SCC3: [SCC3, SAC3, SAA3, "3RDR", MTRO, ELRL],
+    NADN: [NADN, NAAN, NGRL],
+    NBDN: [NBDN, NADN, NAAN, NGRL],
+    NCCN: [NCCN, NACN, NAAN, NGRL],
+    NADA: [NADA, NAAA, NAAE, ELNG],
+    NBCA: [NBCA, NACA, NAAA, NAAE, ELNG],
+    NBDA: [NBDA, NADA, NAAA, NAAE, ELNG],
+    NCCA: [NCCA, NACA, NAAA, NAAE, ELNG],
+    NCDA: [NCDA, NADA, NAAA, NAAE, ELNG],
+    NDCA: [NDCA, NACA, NAAA, NAAE, ELNG],
+    nADN: [nADN, nAAN, NADN, NAAN, NGRL],
+    nBDN: [nBDN, nADN, nAAN, NBDN, NADN, NAAN, NGRL],
+    nBDA: [nBDA, nADA, nAAA, nAAE, NBDA, NADA, NAAA, NAAE, ELNG],
+    nCCA: [nCCA, nACA, nAAA, nAAE, NCCA, NACA, NAAA, NAAE, ELNG],
+    nDCA: [nDCA, nACA, nAAA, nAAE, NDCA, NACA, NAAA, NAAE, ELNG],
+    mACN: [mACN, mAAN, nACN, nAAN, NACN, NAAN, NGRL],
+    BADN: [BADN, BAAN, RLA0, RAIL],
+    BAEN: [BAEN, BAAN, RLA0, RAIL],
+    BBDN: [BBDN, BADN, BAAN, RLA0, RAIL],
+    BBEN: [BBEN, BAEN, BAAN, RLA0, RAIL],
+    BCDN: [BCDN, BADN, BAAN, RLA0, RAIL],
+    BBDA: [BBDA, BADA, BAAA, BAAE, ERA1, ELRL],
+    BBEA: [BBEA, BAEA, BAAA, BAAE, ERA1, ELRL],
+    BCDA: [BCDA, BADA, BAAA, BAAE, ERA1, ELRL],
+    BDDA: [BDDA, BADA, BAAA, BAAE, ERA1, ELRL],
+    BECA: [BECA, BACA, BAAA, BAAE, ERA1, ELRL],
+    DBDN: [DBDN, DADN, DAAN, RAIL],
+    DCDA: [DCDA, DADA, DAAA, DAAE, ELRL],
+    dBDN: [dBDN, dADN, dAAN, RAIL],
+    dCDA: [dCDA, dADA, dAAA, dAAE, ELRL],
+    CBDN: [CBDN, CADN, CAAN, RAIL],
+    CCDA: [CCDA, CADA, CAAA, CAAE, ELRL],
+    cACN: [cACN, cAAN, NGRL],
+    LACN: [LACN, LAAN, MGLV],
+}

@@ -1,0 +1,417 @@
+
+#define FRONT_LOW 0xE8
+#define FRONT_HIGH 0xEE
+#define REAR_LOW 0xF5
+#define REAR_HIGH 0xFC
+
+#define DRIVING 0x45
+#define BRAKE 0xB8
+#define NONE 0x14
+
+// Front of consist,  stuff in the back
+recolour_lights_front = reserve_sprites(1);
+replace(recolour_lights_front) {
+    recolour_sprite {
+        FRONT_LOW: DRIVING;
+        FRONT_HIGH: DRIVING;
+        REAR_LOW: NONE;
+        REAR_HIGH: NONE;
+    }
+}
+// Front of consist,  stuff in the back, flipped
+recolour_lights_front_flipped = reserve_sprites(1);
+replace(recolour_lights_front_flipped) {
+    recolour_sprite {
+        FRONT_LOW: NONE;
+        FRONT_HIGH: NONE;
+        REAR_LOW: DRIVING;
+        REAR_HIGH: DRIVING;
+    }
+}
+// Rear of consist, stuff in the front
+recolour_lights_rear = reserve_sprites(1);
+replace(recolour_lights_rear) {
+    recolour_sprite {
+        FRONT_LOW: NONE;
+        FRONT_HIGH: NONE;
+        REAR_LOW: BRAKE;
+        REAR_HIGH: NONE;
+    }
+}
+// Rear of consist, stuff in the front, flipped
+recolour_lights_rear_flipped = reserve_sprites(1);
+replace(recolour_lights_rear_flipped) {
+    recolour_sprite {
+        FRONT_LOW: BRAKE;
+        FRONT_HIGH: NONE;
+        REAR_LOW: NONE;
+        REAR_HIGH: NONE;
+    }
+}
+// Sole vehicle in consist
+recolour_lights_all = reserve_sprites(1);
+replace(recolour_lights_all) {
+    recolour_sprite {
+        FRONT_LOW: DRIVING;
+        FRONT_HIGH: DRIVING;
+        REAR_LOW: BRAKE;
+        REAR_HIGH: NONE;
+    }
+}
+// Sole vehicle in consist, flipped
+recolour_lights_all_flipped = reserve_sprites(1);
+replace(recolour_lights_all_flipped) {
+    recolour_sprite {
+        FRONT_LOW: BRAKE;
+        FRONT_HIGH: NONE;
+        REAR_LOW: DRIVING;
+        REAR_HIGH: DRIVING;
+    }
+}
+// Middle of consist
+recolour_lights_none = reserve_sprites(1);
+replace(recolour_lights_none) {
+    recolour_sprite {
+        FRONT_LOW: NONE;
+        FRONT_HIGH: NONE;
+        REAR_LOW: NONE;
+        REAR_HIGH: NONE;
+    }
+}
+
+switch (FEAT_TRAINS, SELF, switch_recolour_lights_front, var[0xC8]) {
+    0xFE: recolour_lights_front_flipped;
+    0xFF: recolour_lights_front_flipped;
+    recolour_lights_front;
+}
+switch (FEAT_TRAINS, SELF, switch_recolour_lights_rear, var[0xC8]) {
+    0xFE: recolour_lights_rear_flipped;
+    0xFF: recolour_lights_rear_flipped;
+    recolour_lights_rear;
+}
+switch (FEAT_TRAINS, SELF, switch_recolour_lights_all, var[0xC8]) {
+    0xFE: recolour_lights_all_flipped;
+    0xFF: recolour_lights_all_flipped;
+    recolour_lights_all;
+}
+
+switch (FEAT_TRAINS, SELF, switch_recolour_lights_notfront,
+        position_in_consist_from_end) {
+    0: switch_recolour_lights_rear;
+    recolour_lights_none;
+}
+switch (FEAT_TRAINS, SELF, switch_recolour_lights_multiple,
+        position_in_consist) {
+    0: switch_recolour_lights_front;
+    switch_recolour_lights_notfront;
+}
+switch (FEAT_TRAINS, SELF, switch_recolour_lights, num_vehs_in_consist) {
+    1: switch_recolour_lights_all;
+    switch_recolour_lights_multiple;
+}
+
+#undef FRONT_LOW
+#undef FRONT_HIGH
+#undef REAR_LOW
+#undef REAR_HIGH
+
+#undef DRIVING
+#undef BRAKE
+#undef NONE
+
+
+/* Partially from Dutch trains */
+
+recolour_aore = reserve_sprites(1);
+replace(recolour_aore) {
+    recolour_sprite {
+        0xE8: 0x2B;
+        0xE9: 0x4A;
+        0xEA: 0x2C;
+        0xEB: 0xA2;
+        0xEC: 0x4B;
+        0xED: 0x4C;
+        0xEE: 0x75; }}
+
+recolour_bean = reserve_sprites(1);
+replace(recolour_bean) {
+    recolour_sprite {
+        0xE8..0xEC: 0xE3..0xE7;
+        0xED..0xEE: 0x70..0x71; }}
+
+recolour_blue = reserve_sprites(1);
+replace(recolour_blue) {
+    recolour_sprite {
+        0xE8..0xEE: 0x91..0x97; }}
+
+recolour_clay = reserve_sprites(1);
+replace(recolour_clay) {
+    recolour_sprite {
+        0xE8: 0x6D;
+        0xE9: 0x6D;
+        0xEA: 0x4C;
+        0xEB: 0x75;
+        0xEC: 0x76;
+        0xED: 0x4F;
+        0xEE: 0x26; }}
+
+recolour_cmnt = reserve_sprites(1);
+replace(recolour_cmnt) {
+    recolour_sprite {
+        0xE8..0xEC: 0x05..0x09;
+        0xED..0xEE: 0x10..0x11; }}
+
+recolour_coal = reserve_sprites(1);
+replace(recolour_coal) {
+    recolour_sprite {
+        0xE8..0xED: 0x01..0x06;
+        0xEE: 0x01; }}
+
+recolour_coke = reserve_sprites(1);
+replace(recolour_coke) {
+    recolour_sprite {
+        0xE8..0xED: 0xE2..0xE7;
+        0xEE: 0x10; }}
+
+recolour_core = reserve_sprites(1);
+replace(recolour_core) {
+    recolour_sprite {
+        0xE8: 0x19;
+        0xE9: 0x36;
+        0xEA: 0x1A;
+        0xEB: 0x37;
+        0xEC: 0x38;
+        0xED: 0x39;
+        0xEE: 0x1D; }}
+
+recolour_fert = reserve_sprites(1);
+replace(recolour_fert) {
+    recolour_sprite {
+        0xE8: 0x35;
+        0xE9: 0x6B;
+        0xEA: 0x6C;
+        0xEB: 0x6D;
+        0xEC: 0x6E;
+        0xED: 0x6F;
+        0xEE: 0x3A; }}
+
+recolour_frut = reserve_sprites(1);
+replace(recolour_frut) {
+    recolour_sprite {
+        0xE8: 0x04;
+        0xE9: 0x1D;
+        0xEA: 0x40;
+        0xEB: 0xC2;
+        0xEC: 0x42;
+        0xED: 0x5F;
+        0xEE: 0x43; }}
+
+recolour_grai = reserve_sprites(1);
+replace(recolour_grai) {
+    recolour_sprite {
+        0xE8..0xEB: 0x40..0x43;
+        0xEC: 0x33;
+        0xED: 0x44;
+        0xEE: 0x34; }}
+
+recolour_grvl = reserve_sprites(1);
+replace(recolour_grvl) {
+    recolour_sprite {
+        0xE8: 0x08;
+        0xE9: 0x09;
+        0xEA..0xEE: 0x0A..0x0E; }}
+
+recolour_iore = reserve_sprites(1);
+replace(recolour_iore) {
+    recolour_sprite {
+        0xE8..0xEE: 0x47..0x4D; }}
+
+recolour_java = reserve_sprites(1);
+replace(recolour_java) {
+    recolour_sprite {
+        0xE8: 0x6A;
+        0xE9: 0x60;
+        0xEA: 0x69;
+        0xEB: 0x46;
+        0xEC: 0x5C;
+        0xED: 0x3C;
+        0xEE: 0x47; }}
+
+recolour_lime = reserve_sprites(1);
+replace(recolour_lime) {
+    recolour_sprite {
+        0xE8: 0x0A;
+        0xE9: 0x1E;
+        0xEA: 0x0B;
+        0xEB: 0x3B;
+        0xEC: 0x0C;
+        0xED: 0xDE;
+        0xEE: 0x0E; }}
+
+recolour_olsd = reserve_sprites(1);
+replace(recolour_olsd) {
+    recolour_sprite {
+        0xE8: 0x6D;
+        0xE9: 0x38;
+        0xEA: 0x5C;
+        0xEB: 0x6F;
+        0xEC: 0x5E;
+        0xED: 0x3B;
+        0xEE: 0x26; }}
+
+recolour_pota = reserve_sprites(1);
+replace(recolour_pota) {
+    recolour_sprite {
+        0xE8: 0x17;
+        0xE9: 0x0D;
+        0xEA: 0x87;
+        0xEB: 0x0E;
+        0xEC: 0xD2;
+        0xED: 0x0F;
+        0xEE: 0x0F; }}
+
+recolour_rcyc = reserve_sprites(1);
+replace(recolour_rcyc) {
+    recolour_sprite {
+        0xE8: 0x34;
+        0xE9: 0x54;
+        0xEA: 0x94;
+        0xEB: 0xA5;
+        0xEC: 0x8F;
+        0xED: 0x0B;
+        0xEE: 0x0E; }}
+
+recolour_sand = reserve_sprites(1);
+replace(recolour_sand) {
+    recolour_sprite {
+        0xE8: 0x3A;
+        0xE9: 0x1E;
+        0xEA: 0x3B;
+        0xEB: 0x26;
+        0xEC: 0x1F;
+        0xED: 0x27;
+        0xEE: 0xA8; }}
+
+recolour_scmt = reserve_sprites(1);
+replace(recolour_scmt) {
+    recolour_sprite {
+        0xE8: 0x03;
+        0xE9: 0x7B;
+        0xEA: 0x11;
+        0xEB: 0x13;
+        0xEC: 0x4C;
+        0xED: 0x16;
+        0xEE: 0x17; }}
+
+recolour_sgbt = reserve_sprites(1);
+replace(recolour_sgbt) {
+    recolour_sprite {
+        0xE8: 0x69;
+        0xE9: 0x5C;
+        0xEA: 0x6D;
+        0xEB: 0x3B;
+        0xEC: 0x1A;
+        0xED: 0x6C;
+        0xEE: 0x35; }}
+
+recolour_sgcn = reserve_sprites(1);
+replace(recolour_sgcn) {
+    recolour_sprite {
+        0xE8: 0x69;
+        0xE9: 0x55;
+        0xEA: 0x53;
+        0xEB: 0x51;
+        0xEC: 0x59;
+        0xED: 0x50;
+        0xEE: 0x40; }}
+
+recolour_sash = reserve_sprites(1);
+replace(recolour_sash) {
+    recolour_sprite {
+        0xE8..0xEC: 0x0B..0x0F;
+        0xED..0xEE: 0x16..0x17; }}
+
+recolour_slag = reserve_sprites(1);
+replace(recolour_slag) {
+    recolour_sprite {
+        0xE8..0xEC: 0x01..0x05;
+        0xED: 0xE8;
+        0xEE: 0xEC; }}
+
+recolour_sugr = reserve_sprites(1);
+replace(recolour_sugr) {
+    recolour_sprite {
+        0xE8..0xEE: 0x73..0x79; }}
+
+recolour_sulp = reserve_sprites(1);
+replace(recolour_sulp) {
+    recolour_sprite {
+        0xE8: 0x41;
+        0xE9: 0x57;
+        0xEA: 0x5E;
+        0xEB: 0x42;
+        0xEC: 0x32;
+        0xED: 0x5F;
+        0xEE: 0x34; }}
+
+/* Wood peat */
+recolour_wdpr = reserve_sprites(1);
+replace(recolour_wdpr) {
+    recolour_sprite {
+        0xE8: 0x3C;
+        0xE9: 0x3D;
+        0xEA: 0x3E;
+        0xEB: 0x3F;
+        0xEC: 0x40;
+        0xED: 0x26;
+        0xEE: 0x27; }}
+
+recolour_whea = reserve_sprites(1);
+replace(recolour_whea) {
+    recolour_sprite {
+        0xE8..0xEA: 0x40..0x42;
+        0xEB..0xEE: 0x24..0x27; }}
+
+/* Split the switch, nml craps out if there are more than 30 ranges */
+switch(FEAT_TRAINS, SELF, recolour_bulk_, cargo_type_in_veh) {
+    SCMT: recolour_scmt;
+    SGBT: recolour_sgbt;
+    SGCN: recolour_sgcn;
+    SLAG: recolour_slag;
+    SUGR: recolour_sugr;
+    SULP: recolour_sulp;
+    WDPR: recolour_wdpr;
+    WHEA: recolour_whea;
+    recolour_wdpr; }
+switch(FEAT_TRAINS, SELF, recolour_bulk, cargo_type_in_veh) {
+    AORE: recolour_aore;
+    BEAN: recolour_bean;
+    BDMT: recolour_wdpr;
+    CASS: recolour_bean;
+    CERE: recolour_grai;
+    CLAY: recolour_clay;
+    CMNT: recolour_cmnt;
+    COAL: recolour_coal;
+    CORE: recolour_core;
+    FERT: recolour_fert;
+    FICR: recolour_sgcn;
+    FMSP: recolour_fert;
+    FRUT: recolour_frut;
+    IORE: recolour_iore;
+    GOOD: recolour_wdpr; /* Wood peat */
+    GRAI: recolour_grai;
+    GRVL: recolour_grvl;
+    JAVA: recolour_java;
+    LIME: recolour_lime;
+    MAIZ: recolour_grai;
+    MNO2: recolour_lime;
+    NITR: recolour_sugr;
+    OLSD: recolour_olsd;
+    POTA: recolour_pota;
+    PEAT: recolour_fert;
+    QLME: recolour_lime;
+    RCYC: recolour_rcyc;
+    SASH: recolour_sash;
+    SAND: recolour_sand;
+    recolour_bulk_;
+}

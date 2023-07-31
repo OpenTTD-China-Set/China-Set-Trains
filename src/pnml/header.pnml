@@ -1,0 +1,121 @@
+grf {
+    grfid:   "\5F\5F\03\00";
+    name:    string(STR_GRF_NAME);
+    desc:    string(STR_GRF_DESCRIPTION, string(STR_GRF_DESC_EXTRA), string(STR_GRF_DESC_README));
+    url:     string(STR_GRF_URL);
+    version: 1;
+    min_compatible_version: 1;
+
+    param 0 {
+        param_loading_speed {
+            type: int;
+            name: string(STR_PARAM_LOADING_SPEED);
+            desc: string(STR_PARAM_LOADING_SPEED_DESC);
+            min_value: 0;
+            max_value: 3;
+            def_value: 1;
+            names: {
+                0: string(STR_PARAM_DIVIDE_2);
+                1: string(STR_PARAM_NORMAL);
+                2: string(STR_PARAM_TIMES_2);
+                3: string(STR_PARAM_TIMES_4);
+            };
+        }
+    }
+    param 1 {
+        param_purchase_cost {
+            type: int;
+            name: string(STR_PARAM_PURCHASE_COST);
+            desc: string(STR_PARAM_PURCHASE_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 2;
+            names: {
+                0: string(STR_PARAM_DIVIDE_16);
+                1: string(STR_PARAM_DIVIDE_8);
+                2: string(STR_PARAM_DIVIDE_4);
+                3: string(STR_PARAM_DIVIDE_2);
+                4: string(STR_PARAM_NORMAL);
+                5: string(STR_PARAM_TIMES_2);
+                6: string(STR_PARAM_TIMES_4);
+                7: string(STR_PARAM_TIMES_8);
+                8: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+    param 2 {
+        param_running_cost {
+            type: int;
+            name: string(STR_PARAM_RUNNING_COST);
+            desc: string(STR_PARAM_RUNNING_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 2;
+            names: {
+                0: string(STR_PARAM_DIVIDE_16);
+                1: string(STR_PARAM_DIVIDE_8);
+                2: string(STR_PARAM_DIVIDE_4);
+                3: string(STR_PARAM_DIVIDE_2);
+                4: string(STR_PARAM_NORMAL);
+                5: string(STR_PARAM_TIMES_2);
+                6: string(STR_PARAM_TIMES_4);
+                7: string(STR_PARAM_TIMES_8);
+                8: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+    param 3 {
+        param_volume {
+            type: int;
+            name: string(STR_PARAM_VOL);
+            desc: string(STR_PARAM_VOL_DESC);
+            min_value: 0;
+            max_value: 3;
+            def_value: 1;
+            names: {
+                0: string(STR_PARAM_VOL_DISABLED);
+                1: string(STR_PARAM_VOL_33);
+                2: string(STR_PARAM_VOL_66);
+                3: string(STR_PARAM_NORMAL);
+            };
+        }
+    }
+}
+
+basecost {
+    PR_BUILD_VEHICLE_TRAIN: param_purchase_cost - 2;
+    PR_BUILD_VEHICLE_WAGON: param_purchase_cost + 2;
+    PR_RUNNING_TRAIN_STEAM: param_running_cost  - 3;
+    PR_RUNNING_TRAIN_DIESEL: param_running_cost  - 3;
+    PR_RUNNING_TRAIN_ELECTRIC: param_running_cost  - 3;
+ }
+
+/* disable original trains */
+disable_item(FEAT_TRAINS, 0, 115);
+
+/* only OpenTTD is supported, not enforced though */
+if (ttd_platform != PLATFORM_OPENTTD) {
+    //requires OpenTTD
+    error(FATAL, USED_WITH, "OpenTTD");
+}
+else {
+    if (openttd_version < version_openttd(1, 2, 0, 23971)) {
+        //requires OpenTTD 1.2.0-RC1 or later since the introduction of dynamic_engines and cargo_age_period.
+        error(FATAL, REQUIRES_OPENTTD, "1.2.0-RC1 / r23971");
+    }
+}
+
+//check if dynamic_engines is enabled
+if (dynamic_engines == 0) {
+ //Required dynamic_engines to load all vehicles
+ error(FATAL, USED_WITH, string(str_used_with_dynamic_engines));
+}
+
+/* fix depot view */
+train_width_32_px = 1;
+traininfo_y_offset = 2;
+
+/* 1 px empty spriteset */
+spriteset (spriteset_empty, "src/empty.png") {
+    [0, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0, 0] }

@@ -1,0 +1,203 @@
+Finnish Trainset Changelog
+==========================
+
+0.6.0 (12/12/2015)
+--------------------------
+
+-Feature: Simn-t covered wagon
+-Feature: Lgjn container wagon
+-Feature: Tau talc wagon
+-Feature: Uac powder wagon
+-Feature: Zans acid wagon
+-Feature: Elo open wagon
+-Feature: Gmz tank wagon
+-Feature: Edo and ERd double decker IC coaches
+-Feature: M4000E and M2200D2 sprite updates
+-Feature: Nom may be refitted for bad guys
+-Feature: Trr "Kisko-kalle" locotractor
+-Feature: Dv15 can be refitted to yellow industrial livery
+-Feature: 40 px long blue coaches
+-Feature: 40 px single decker IC coaches
+-Feature: 40 px double decker IC coaches
+-Feature: Sr3 Vectron has "last mile" diesel engines of 482 hp
+-Feature: Fennia Rail Dr18 (744.7f) diesel locomotive
+-Feature: Vv12 diesel locomotive
+-Feature: Running sound volume parameter
+-Feature: Better translation support (eints), autobuilding all languages from source
+-Fix: Edfs, Edo and ERd speeds 160 -> 200 km/h
+-Fix: Dr12 and Dr13 sprites shortened by 1 px in / \ views
+-Fix: Dm7, DmG7, EFia, EFiab, FPoab, Geoab, Sim sprites shortened by 1 px in / \ views
+-Fix: Wagon cargo updates, removal of unnecessary cargoes from uncompatible wagons, transferring removed cargos to proper wagons
+-Fix: Fixes to Finnish translation
+-Fix: Hr11 length
+-Fix: Complete code/xcf overhaul and numerous related bugfixes
+-Fix: Hccmqqr weight fix
+-Fix: Running sounds fade in & fade out fixes
+-Fix: More internal changes (xcf and grf-coding production related)
+-Fix: CSV internal changes and updates
+-Translation: French
+-Translation: Spanish
+-Translation: Catalan
+-Translation: Croatian
+-Translation: Italian
+
+0.5.9 (13/9/2014)
+--------------------------
+-Feature: Sr3 Vectron VR green livery
+-Fix: EFiab price had one zero too much
+-Fix: Internal changes (xcf and grf-production related)
+
+0.5.8 (29/9/2013)
+--------------------------
+-Feature: Ei passenger coach
+-Feature: Additional info for current coaches
+-Fix: All passenger vehicles can carry tourists too
+
+
+0.5.7 (21/9/2013)
+--------------------------
+-Feature: Eit additional info
+-Fix: Despriction styles unified with FRISS
+-Fix: Title colours and URLs fixed
+-Fix: Some language strings updated
+-Fix: Dr14 manufacturer additional property string fixed
+
+
+0.5.6 (12/9/2013)
+--------------------------
+-Feature: Vggk refridgerated wagon
+-Feature: Vgobo tank wagon
+-Feature: Vo open wagon
+-Feature: Hdk open wagon
+-Bugfix: N-locomotive TE fix
+-Bugfix: Some fixes to Finnish regearing strings
+-Bugfix: Gbl Finnish string was missing
+-Bugfix: Buying list sorting improved by unit type 
+-Bugfix: H open wagon sprites revised
+
+
+0.5.5 (5/9/2013)
+--------------------------
+-Translation: Finnish
+-Feature: Purchase and running cost settings 
+available in NewGRF parametres
+-Feature: Wagon and coach running costs,
+enabled by default, can be turned off from NewGRF settings
+-Feature: Sm6 EMU added
+-Feature: A1, A4 and B1 class steam locomotives added
+-Feature: E class coach
+-Feature: P class mail coach 
+-Feature: Move67 diesel locomotive added
+-Feature: Tve1 switcher locomotive added
+-Feature: Tve2 switcher locomotive added
+-Feature: Tve3 switcher locomotive added
+-Feature: Vok open wagon added
+-Feature: M100 Metro (available on 3rd rail and Metro railtypes) added
+-Feature: EFs conductor coach as EFit refit
+-Feature: Rbkt restaurant coach added
+-Feature: CEit 1st / 2nd class divided coach added
+-Feature: Ein 2nd class coach added 
+-Feature: Eip 2nd class coach added
+-Feature: Eipt 2nd class coach added
+-Feature: Fot luggage/conductor coach added
+-Feature: Hkb can carry steel
+-Feature: No available as blue coach
+-Feature: Sound effects added on Dm8, Dm9, Hr11, Dm4, Dv11
+-Feature: Russian wagons do have (SZD/RZD) on their names
+-Bugfix: Sorting changed, Non-Finnish SeaRail and Russian wagons 
+are now on end of buying list
+-Bugfix: Rk autolivery
+-Bugfix: English translation finetuning
+-Bugfix: Gbl as separate wagon instead of Gbk refit
+-Bugfix: Gg and Ggig as separate wagons instead of Gb and Gbk refits 
+-Bugfix: HP increased for all steamers
+-Bugfix: B1 flippable
+-Bugfix: E and P sorting on the buying list
+-Bugfix: Tve4 hp decreased
+-Bugfix: Move66 TE corrected
+-Bugfix: Snpss introduction date fixed
+-Bugfix: CEit flippable
+-Bugfix: EFs speed increased
+-Bugfix: G and Gb sprites swapped
+-Bugfix: Purchasing and running costs balanced
+-Bugfix: Better quality sounds
+-Bugfix: Sound levels normalized to -15 dB
+-Bugfix: Eita has now seal head logo
+-Bugfix: Dr16 couplings fixed (again)
+-Bugfix: Hccmqqr, Edm and De speed fixed (160 km/h)
+-Bugfix: Updating of freight wagon cargo classes (once more)
+-Bugfix: Dm8 and Dm9 class desprictions mixed
+-Bugfix: Nom sprites finetuning (doors removed from heads)
+-Bugfix: Pot sprites finetuning
+-Bugfix: Fots sprites finetuning
+
+
+0.5.4 (16/6/2013)
+--------------------------
+-Feature: UIC axle schemes, service classes, prime movers,
+transmission types, locomotive builder and other information
+in buying menu properties of rolling stock
+-Feature: Freight wagon doors closing at 100% load individually
+-Feature: Move 66 and C600 diesel locomotives added
+-Feature: Dv11 diesel locomotive added
+-Feature: Ds1 "Motti" diesel multiple unit added
+-Feature: Dr14 "Seepra" diesel locomotive added
+-Feature: Rk restaurant coach added
+-Feature: Eita "Silja Line" coach added
+-Feature: Earliest freight wagons available longer
+-Feature: More cargo types for Gbln
+-Feature: Update of freight wagon cargo classes to 
+support more cargoes
+-Feature: Finetuning some wagon/coach names
+-Feature: Configurable passenger loading times
+(local/express/sleeper classes configurable)
+-Feature: Tanker wagon cargo adjustments
+-Feature: Valmet N new refittable colour, yellow
+-Feature: Dr12 and Dm7 "yellow safety nose" liveries added
+-Feature: KDh1 added (2 refittable liveries)
+-Feature: KDh2 added
+-Feature: M4500E added
+-Feature: Pr1 flippable
+-Feature: G closes now doors only when fully loaded
+and/or in transit
+-Bugfix: Little detail fixes on additional information
+-Bugfix: Hccmqqr capacity fix
+-Bugfix: Some wagon names fixed
+-Bugfix: Buying window sprites vertical alignments fixed
+-Bugfix: Dv12 and Tve4 traction efforts fixed
+-Bugfix: KDs1 speed and traction effort fixed
+-Bugfix: Eil 140 km/h before 2003, 2003 onwards 160 km/h
+-Bugfix: KEi/KEis/KCik, Dm8 and Dm9 introduction dates fixed
+-Bugfix: Tr1 power increased to 1600 hp
+-Bugfix: DmG7 introduction date fixed
+-Bugfix: Dm4 and Hr11 introduction dates fixed
+-Bugfix: Rkt restaurant coach sprite finetuning
+-Bugfix: Eit coach sprite alignment bug fixed
+-Bugfix: Occ couplings fixed
+-Bugfix: G-wagon sprite finetuning
+-Bugfix: Dm4, Dm8 share loading speeds with express vehicles
+-Bugfix: Armoured van loading speeds 
+independent from passenger coaches
+-Bugfix: Sm5 alignment bug fixed
+-Bugfix: Prototype engine string changed
+-Bugfix: Dr13 and Dr16 upper couplings lowered 
+by one pixel
+-Bugfix: Hain and Ma alignment fixes
+-Bugfix: Ma wagon sprites fixed
+-Bugfix: Sr2 red livery bug fixed
+-Bugfix: Steam locomotive TE and weight corrections
+-Bugfix: Sorting of Fots mail van fixed
+
+
+0.5.3 (16/5/2013)
+--------------------------
+-Feature: Wagon base cost changed, cost factors adjusted
+-Feature: Gbln-t available as a refittable variant of Gbln after year 1999
+-Bugfix: Vehicles in depot are now correctly aligned
+-Bugfix: Dr13 vertical and horizontal views shortened
+-Bugfix: Hain loading stages fixed
+
+
+0.5.2 (15/5/2013)
+--------------------------
+-Feature: Initial release

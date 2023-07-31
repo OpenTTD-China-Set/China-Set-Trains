@@ -1,0 +1,24 @@
+﻿##grflangid 0x01
+
+STR_GRF_NAME        :China Set: Trains
+STR_GRF_DESC        :The Train sector of the China Set of OpenTTD.
+STR_GRF_URL         :https://www.tt-forums.net/viewtopic.php?t=91092
+STR_GRF_DESC_EXTRA  :Trains: Locomotives, MUs, Coaches and Wagons in China Mainland. More contents in the future.
+STR_GRF_DESC_README :See readme for details.
+
+
+
+STR_PARAM_PURCHASE_COST      :Purchase costs
+STR_PARAM_PURCHASE_COST_DESC :Adjust vehicle purchase costs. Default is 25%.
+STR_PARAM_RUNNING_COST       :Running costs
+STR_PARAM_RUNNING_COST_DESC  :Adjust vehicle running costs. Default is 25%.
+
+STR_PARAM_DIVIDE_16 :6.25%
+STR_PARAM_DIVIDE_8  :12.5%
+STR_PARAM_DIVIDE_4  :25%
+STR_PARAM_DIVIDE_2  :50%
+STR_PARAM_NORMAL    :100%
+STR_PARAM_TIMES_2   :200%
+STR_PARAM_TIMES_4   :400%
+STR_PARAM_TIMES_8   :800%
+STR_PARAM_TIMES_16  :1600%
