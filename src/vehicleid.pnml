@@ -1,0 +1,92 @@
+//This file sets all vehicle IDs. Each type has a range of 128/256/512/1024 possible IDs.
+
+//Horse, available ID range: 512-1023 (hex 0x0200..0x03FF)
+#define id_range_horse 0x0200..0x03FF
+
+
+//Unit Wagons, available ID range: 1024-2047 (hex 0x0400..0x07FF)
+#define id_range_unit_wagons 0x0400..0x07FF
+
+//Where Unit Wagons for Passengers on RAIL/ELRL: 1024-1535
+#define id_range_unit_wagons_RAIL 0x0400..0x05FF
+
+//Unit Wagons for Cargoes on RAIL/ELRL: 1536-1663
+#define id_range_unit_wagons_RAIL_CARGO 0x0600..0x067F
+
+//Unit Wagons on MONO: 1663-1791
+#define id_range_unit_wagons_MONO 0x0680..0x06FF
+
+//Unit Wagons on MGLV: 1792-2047
+#define id_range_unit_wagons_MGLV 0x0700..0x07FF
+
+
+//Coaches, available ID range: 2048-3071 (hex 0x0800..0x0BFF)
+#define id_range_coaches 0x0800..0x0BFF
+item (FEAT_TRAINS, yz25g, 2048) {}
+item (FEAT_TRAINS, rz25g, 2049) {}
+item (FEAT_TRAINS, yw25g, 2050) {}
+item (FEAT_TRAINS, rw25g, 2051) {}
+
+//Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
+#define id_range_wagons 0x0C00..0x0FFF
+
+
+//Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
+#define id_range_steam 0x1000..0x13FF
+
+
+//Diesel, available ID range: 5120-6143 (hex 0x1400..0x17FF)
+#define id_range_diesel 0x1400..0x17FF
+
+
+//25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
+#define id_range_25_electric 0x1800..0x1BFF
+
+
+//Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
+#define id_range_multi_loco 0x1C00..0x1FFF 
+
+
+//DMU, available ID range: 8192-9215 (hex 0x2000..0x23FF)
+#define id_range_dmu 0x2000..0x23FF
+
+
+//25kV AC EMU, available ID range: 9216-10239 (hex 0x2400..0x27FF)
+#define id_range_25_emu 0x2000..0x23FF
+
+
+//1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
+#define id_range_1500_emu 0x2800..0x2BFF
+
+
+//750V DC EMU, available ID range: 11264-12287 (hex 0x2C00..0x2FFF)
+#define id_range_750_emu 0x2C00..0x2BFF
+
+
+//Third Rail EMU, available ID range: 11288-13311 (hex 0x3000..0x33FF)
+#define id_range_third_emu 0x3000..0x33FF
+
+
+//Multi Power MU, available ID range: 13312-14335 (hex 0x3400..0x37FF)
+#define id_range_multi_mu 0x3400..0x37FF
+
+
+//Monorail MU, available ID range: 14336-14847 (hex 0x3800..0x39FF)
+#define id_range_mono_mu 0x3800..0x3BFF
+
+
+//Maglev MU, availabel ID range: 14848-15359 (hex 0x3A00..0x3BFF)
+#define id_range_mglv_mu 0x3A00..0x3BFF
+
+
+//Cargo DMU, available ID range: 15340-15615 (hex 0x3C00..0x3CFF)
+#define id_range_cargo_dmu 0x3C00..0x3CFF
+
+
+//25kV AC Cargo EMU, available ID range: 15616-16127 (hex 0x3D00..0x3EFF)
+#define id_range_25_cargo_emu 0x3D00..0x3EFF
+
+
+//Multi Power Cargo MU, available range: 16128..16383 (hex 0x3F00..0x3FFF)
+#define id_range_multi_cargo_mu 0x3F00..0x3FFF
+

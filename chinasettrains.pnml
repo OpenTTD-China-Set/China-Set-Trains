@@ -1,0 +1,73 @@
+// Define the GRF
+#include "src/header.pnml"
+
+// Templates
+#include "src/template.pnml"
+
+// Helpers
+#include "src/railtypetable.pnml"
+#include "src/cargotable.pnml"
+#include "src/functions.pnml"
+
+// IDs
+#include "src/vehicleid.pnml"
+
+// Horse
+
+
+// Unit Wagons
+
+
+// Coaches
+#include "src/coaches/yz25g_graphics.pnml"
+#include "src/coaches/yz25g_item.pnml"
+#include "src/coaches/rz25g_graphics.pnml"
+#include "src/coaches/rz25g_item.pnml"
+#include "src/coaches/yw25g_graphics.pnml"
+#include "src/coaches/yw25g_item.pnml"
+#include "src/coaches/rw25g_graphics.pnml"
+#include "src/coaches/rw25g_item.pnml"
+
+// Steam
+
+
+// Diesel
+
+
+// 25kV AC Electric
+
+
+// Multi Power Locomotive
+
+
+// DMU
+
+
+// 25kV AC EMU
+
+
+// 1.5kV DC EMU
+
+
+// 750V DC EMU
+
+
+// Third Rail EMU
+
+
+// Multi Power MU
+
+
+// Monorail MU
+
+
+// Maglev MU
+
+
+// Cargo DMU
+
+
+// 25kV AC Cargo EMU
+
+
+// Multi Power Cargo MU

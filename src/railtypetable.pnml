@@ -56,6 +56,7 @@ railtypetable {
     ELRL,
     MONO,
     MGLV,
+    SACN: [SACN, SAAN, RAIL],
     SADN: [SADN, SAAN, RAIL],
     SAEN: [SAEN, SAAN, RAIL],
     SBDN: [SBDN, SADN, SAAN, RAIL],

@@ -1,0 +1,61 @@
+// Begin template
+
+// Learned from JP+ Shinkansen
+
+// Empty Template
+
+template template_empty() {
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+}
+
+// Purchase Templates
+template template_purchase_empty() {
+    // a: vehicle type (all lower cases), b: vehicle name (all lower cases)
+    []
+    []
+    []
+    []
+    []
+    []
+    [0, 0, 2, 2, 0, 0, "gfx/empty.png"]
+    []
+}
+
+template template_purchase (a, b) {
+    // a: vehicle type (all lower cases), b: vehicle name (all lower cases)
+    []
+    []
+    []
+    []
+    []
+    []
+    [-56, -40, "gfx/"+a+"/"+b+"/7.png"]
+    []
+}
+
+// Standard
+
+template template_12_standard (a, b) {
+    // a: vehicle type (all lower cases), b: vehicle name (all lower cases)
+    [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/2.png"]
+    [-96, -48, "gfx/"+a+"/"+b+"/3.png"]
+    [-40, -76, "gfx/"+a+"/"+b+"/4.png"]
+    [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/6.png"]
+    [-96, -48, "gfx/"+a+"/"+b+"/7.png"]
+    [-40, -76, "gfx/"+a+"/"+b+"/8.png"]
+}
+
+// Below shamelessly stolen from JP+ Shinkansen
+
+spriteset (empty_sprites, "gfx/empty.png") {
+  [0, 0, 2, 2, 0, 0, CROP]
+}

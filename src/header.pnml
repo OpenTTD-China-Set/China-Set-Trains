@@ -1,9 +1,9 @@
 grf {
     grfid:   "\5F\5F\03\00";
     name:    string(STR_GRF_NAME);
-    desc:    string(STR_GRF_DESCRIPTION, string(STR_GRF_DESC_EXTRA), string(STR_GRF_DESC_README));
+    desc:    string(STR_GRF_DESC, string(STR_GRF_DESC_EXTRA), string(STR_GRF_DESC_README));
     url:     string(STR_GRF_URL);
-    version: 1;
+    version: 3;
     min_compatible_version: 1;
 
     param 0 {
@@ -65,18 +65,17 @@ grf {
         }
     }
     param 3 {
-        param_volume {
+        param_cargo_decay {
             type: int;
-            name: string(STR_PARAM_VOL);
-            desc: string(STR_PARAM_VOL_DESC);
+            name: string(STR_PARAM_CARGO_DECAY);
+            desc: string(STR_PARAM_CARGO_DECAY_DESC);
             min_value: 0;
-            max_value: 3;
-            def_value: 1;
+            max_value: 2;
+            def_value: 0;
             names: {
-                0: string(STR_PARAM_VOL_DISABLED);
-                1: string(STR_PARAM_VOL_33);
-                2: string(STR_PARAM_VOL_66);
-                3: string(STR_PARAM_NORMAL);
+                0: string(STR_PARAM_STANDARD);
+                1: string(STR_PARAM_LONG);
+                2: string(STR_PARAM_VERY_LONG);
             };
         }
     }
@@ -108,14 +107,9 @@ else {
 //check if dynamic_engines is enabled
 if (dynamic_engines == 0) {
  //Required dynamic_engines to load all vehicles
- error(FATAL, USED_WITH, string(str_used_with_dynamic_engines));
+ error(FATAL, USED_WITH, string(STR_USED_WITH_DYNAMIC_ENGINES));
 }
 
 /* fix depot view */
 train_width_32_px = 1;
 traininfo_y_offset = 2;
-
-/* 1 px empty spriteset */
-spriteset (spriteset_empty, "src/empty.png") {
-    [0, 0, 1, 1, 0, 0]
-    [0, 0, 1, 1, 0, 0] }

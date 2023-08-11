@@ -1,0 +1,16 @@
+################################################################
+# Definitions needed for tar releases
+# This part is automatically generated
+################################################################
+REPO_REVISION := 3
+NEWGRF_VERSION := 3
+REPO_HASH := 619944a30dbe
+REPO_VERSION_STRING := 0.0.1
+REPO_TITLE := China Set: Trains 0.0.1
+REPO_DATE := 
+REPO_BRANCH := 
+REPO_MODIFIED := 
+REPO_TAGS    := 0.0.1
+HG := :
+GIT := :
+PYTHON := :

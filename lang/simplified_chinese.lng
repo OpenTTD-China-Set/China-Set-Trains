@@ -1,0 +1,22 @@
+##grflangid 0x56
+
+STR_GRF_NAME        :中国包：火车
+STR_GRF_DESC        :OpenTTD中国包的火车部分。
+STR_GRF_URL         :https://www.tt-forums.net/viewtopic.php?t=91092
+STR_GRF_DESC_EXTRA  :中国大陆的火车，包括机车、动车组、车厢。未来会有更多内容。
+STR_GRF_DESC_README :更多信息请查看Readme。
+
+STR_PARAM_PURCHASE_COST      :购买费用
+STR_PARAM_PURCHASE_COST_DESC :调整车辆购买费用。默认为25%。
+STR_PARAM_RUNNING_COST       :运营费用
+STR_PARAM_RUNNING_COST_DESC  :调整车辆运营费用。默认为25%。
+
+STR_PARAM_DIVIDE_16 :6.25%
+STR_PARAM_DIVIDE_8  :12.5%
+STR_PARAM_DIVIDE_4  :25%
+STR_PARAM_DIVIDE_2  :50%
+STR_PARAM_NORMAL    :100%
+STR_PARAM_TIMES_2   :200%
+STR_PARAM_TIMES_4   :400%
+STR_PARAM_TIMES_8   :800%
+STR_PARAM_TIMES_16  :1600%

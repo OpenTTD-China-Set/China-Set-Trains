@@ -1,0 +1,868 @@
+# 1 "chinasettrains.pnml"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "chinasettrains.pnml"
+// Define the GRF
+# 1 "src/header.pnml" 1
+grf {
+    grfid: "\5F\5F\03\00";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESC, string(STR_GRF_DESC_EXTRA), string(STR_GRF_DESC_README));
+    url: string(STR_GRF_URL);
+    version: 3;
+    min_compatible_version: 1;
+
+    param 0 {
+        param_loading_speed {
+            type: int;
+            name: string(STR_PARAM_LOADING_SPEED);
+            desc: string(STR_PARAM_LOADING_SPEED_DESC);
+            min_value: 0;
+            max_value: 3;
+            def_value: 1;
+            names: {
+                0: string(STR_PARAM_DIVIDE_2);
+                1: string(STR_PARAM_NORMAL);
+                2: string(STR_PARAM_TIMES_2);
+                3: string(STR_PARAM_TIMES_4);
+            };
+        }
+    }
+    param 1 {
+        param_purchase_cost {
+            type: int;
+            name: string(STR_PARAM_PURCHASE_COST);
+            desc: string(STR_PARAM_PURCHASE_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 2;
+            names: {
+                0: string(STR_PARAM_DIVIDE_16);
+                1: string(STR_PARAM_DIVIDE_8);
+                2: string(STR_PARAM_DIVIDE_4);
+                3: string(STR_PARAM_DIVIDE_2);
+                4: string(STR_PARAM_NORMAL);
+                5: string(STR_PARAM_TIMES_2);
+                6: string(STR_PARAM_TIMES_4);
+                7: string(STR_PARAM_TIMES_8);
+                8: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+    param 2 {
+        param_running_cost {
+            type: int;
+            name: string(STR_PARAM_RUNNING_COST);
+            desc: string(STR_PARAM_RUNNING_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 2;
+            names: {
+                0: string(STR_PARAM_DIVIDE_16);
+                1: string(STR_PARAM_DIVIDE_8);
+                2: string(STR_PARAM_DIVIDE_4);
+                3: string(STR_PARAM_DIVIDE_2);
+                4: string(STR_PARAM_NORMAL);
+                5: string(STR_PARAM_TIMES_2);
+                6: string(STR_PARAM_TIMES_4);
+                7: string(STR_PARAM_TIMES_8);
+                8: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+    param 3 {
+        param_cargo_decay {
+            type: int;
+            name: string(STR_PARAM_CARGO_DECAY);
+            desc: string(STR_PARAM_CARGO_DECAY_DESC);
+            min_value: 0;
+            max_value: 2;
+            def_value: 0;
+            names: {
+                0: string(STR_PARAM_STANDARD);
+                1: string(STR_PARAM_LONG);
+                2: string(STR_PARAM_VERY_LONG);
+            };
+        }
+    }
+}
+
+basecost {
+    PR_BUILD_VEHICLE_TRAIN: param_purchase_cost - 2;
+    PR_BUILD_VEHICLE_WAGON: param_purchase_cost + 2;
+    PR_RUNNING_TRAIN_STEAM: param_running_cost - 3;
+    PR_RUNNING_TRAIN_DIESEL: param_running_cost - 3;
+    PR_RUNNING_TRAIN_ELECTRIC: param_running_cost - 3;
+ }
+
+/* disable original trains */
+disable_item(FEAT_TRAINS, 0, 115);
+
+/* only OpenTTD is supported, not enforced though */
+if (ttd_platform != PLATFORM_OPENTTD) {
+    //requires OpenTTD
+    error(FATAL, USED_WITH, "OpenTTD");
+}
+else {
+    if (openttd_version < version_openttd(1, 2, 0, 23971)) {
+        //requires OpenTTD 1.2.0-RC1 or later since the introduction of dynamic_engines and cargo_age_period.
+        error(FATAL, REQUIRES_OPENTTD, "1.2.0-RC1 / r23971");
+    }
+}
+
+//check if dynamic_engines is enabled
+if (dynamic_engines == 0) {
+ //Required dynamic_engines to load all vehicles
+ error(FATAL, USED_WITH, string(STR_USED_WITH_DYNAMIC_ENGINES));
+}
+
+/* fix depot view */
+train_width_32_px = 1;
+traininfo_y_offset = 2;
+# 3 "chinasettrains.pnml" 2
+
+// Templates
+# 1 "src/template.pnml" 1
+// Begin template
+
+// Learned from JP+ Shinkansen
+
+// Empty Template
+
+template template_empty() {
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+  [0, 0, 2, 2, 0, 0, CROP, "gfx/empty.png"]
+}
+
+// Purchase Templates
+template template_purchase_empty() {
+    // a: vehicle type (all lower cases), b: vehicle name (all lower cases)
+    []
+    []
+    []
+    []
+    []
+    []
+    [0, 0, 2, 2, 0, 0, "gfx/empty.png"]
+    []
+}
+
+template template_purchase (a, b) {
+    // a: vehicle type (all lower cases), b: vehicle name (all lower cases)
+    []
+    []
+    []
+    []
+    []
+    []
+    [-56, -40, "gfx/"+a+"/"+b+"/7.png"]
+    []
+}
+
+// Standard
+
+template template_12_standard (a, b) {
+    // a: vehicle type (all lower cases), b: vehicle name (all lower cases)
+    [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/2.png"]
+    [-96, -48, "gfx/"+a+"/"+b+"/3.png"]
+    [-40, -76, "gfx/"+a+"/"+b+"/4.png"]
+    [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/6.png"]
+    [-96, -48, "gfx/"+a+"/"+b+"/7.png"]
+    [-40, -76, "gfx/"+a+"/"+b+"/8.png"]
+}
+
+// Below shamelessly stolen from JP+ Shinkansen
+
+spriteset (empty_sprites, "gfx/empty.png") {
+  [0, 0, 2, 2, 0, 0, CROP]
+}
+# 6 "chinasettrains.pnml" 2
+
+// Helpers
+# 1 "src/railtypetable.pnml" 1
+/* 
+Using Semi-Standardised Railtype Scheme.
+The First Letter:
+S - 1435 mm gauge
+B - 1520 mm gauge
+N - 1067 mm gauge
+n - 1000 mm gauge
+m - 762 mm gauge
+D - 1435/1520 mm gauge
+d - 1435/1067 mm gauge
+C - 1435/1000 mm gauge
+c - 1067/762 mm gauge
+M - Monorail;
+L - Magnetic Levitation (Maglev);
+
+The Second Letter:
+For S, B, D gauges:
+A - 80 km/h
+B - 120 km/h
+C - 160 km/h
+D - 210 km/h
+E - 250 km/h (unlimited for B gauge)
+F - 310 km/h
+G - Unlimited;
+For N, n, d, C gauges:
+A - 80 km/h
+B - 100 km/h
+C - 130 km/h
+D - 160 km/h;
+For m and c gauges:
+A - 60 km/h;
+For Monorail:
+A - Unlimited;
+For Maglev:
+A - 120 km/h
+B - Unlimited;
+
+The Third Letter:
+A - Very Low Axle Load (don't use in China Set: Rails)
+B - Low Axle Load (don't use in China Set: Rails)
+C - Medium Axle Load - all passenger MUs and narrow gauge passenger cars, 762mm gauge freight wagons
+D - High Axle Load - all standard/broad gauge passenger cars, locomotives and light freight wagons
+E - Very High Axle Load - all heavy freight wagons;
+
+The Last Letter:
+N - Non-Electrified
+A - 25 kV AC
+D - 1.5 kV DC
+B - 25 kV AC / 1.5 kV DC
+d - 750 V DC
+3 - Third Rail Electrification;
+*/
+
+railtypetable {
+    RAIL,
+    ELRL,
+    MONO,
+    MGLV,
+    SACN: [SACN, SAAN, RAIL],
+    SADN: [SADN, SAAN, RAIL],
+    SAEN: [SAEN, SAAN, RAIL],
+    SBDN: [SBDN, SADN, SAAN, RAIL],
+    SBEN: [SBEN, SAEN, SAAN, RAIL],
+    SCDN: [SCDN, SADN, SAAN, RAIL],
+    SBDA: [SBDA, SADA, SAAA, SAAE, ELRL],
+    SBEA: [SBEA, SAEA, SAAA, SAAE, ELRL],
+    SCCA: [SCCA, SACA, SAAA, SAAE, ELRL],
+    SCDA: [SCDA, SADA, SAAA, SAAE, ELRL],
+    SDCA: [SDCA, SACA, SAAA, SAAE, ELRL],
+    SDDA: [SDDA, SADA, SAAA, SAAE, ELRL],
+    SECA: [SECA, SACA, SAAA, SAAE, ELRL],
+    SEDA: [SEDA, SADA, SAAA, SAAE, ELRL],
+    SFCA: [SFCA, SACA, SAAA, SAAE, ELRL],
+    SGCA: [SGCA, SACA, SAAA, SAAE, ELRL],
+    SBCB: [SBCB, SACB, SAAB, SAAE, ELRL],
+    SACD: [SACD, SAAD, SAAE, ELRL],
+    SBCD: [SBCD, SACD, SAAD, SAAE, ELRL],
+    SCCD: [SCCD, SACD, SAAD, SAAE, ELRL],
+    SACd: [SACd, SAAd, SAAE, ELRL],
+    SBCd: [SBCd, SACd, SAAd, SAAE, ELRL],
+    SCCd: [SCCd, SACd, SAAd, SAAE, ELRL],
+    SAC3: [SAC3, SAA3, "3RDR", MTRO, ELRL],
+    SBC3: [SBC3, SAC3, SAA3, "3RDR", MTRO, ELRL],
+    SCC3: [SCC3, SAC3, SAA3, "3RDR", MTRO, ELRL],
+    NADN: [NADN, NAAN, NGRL],
+    NBDN: [NBDN, NADN, NAAN, NGRL],
+    NCCN: [NCCN, NACN, NAAN, NGRL],
+    NADA: [NADA, NAAA, NAAE, ELNG],
+    NBCA: [NBCA, NACA, NAAA, NAAE, ELNG],
+    NBDA: [NBDA, NADA, NAAA, NAAE, ELNG],
+    NCCA: [NCCA, NACA, NAAA, NAAE, ELNG],
+    NCDA: [NCDA, NADA, NAAA, NAAE, ELNG],
+    NDCA: [NDCA, NACA, NAAA, NAAE, ELNG],
+    nADN: [nADN, nAAN, NADN, NAAN, NGRL],
+    nBDN: [nBDN, nADN, nAAN, NBDN, NADN, NAAN, NGRL],
+    nBDA: [nBDA, nADA, nAAA, nAAE, NBDA, NADA, NAAA, NAAE, ELNG],
+    nCCA: [nCCA, nACA, nAAA, nAAE, NCCA, NACA, NAAA, NAAE, ELNG],
+    nDCA: [nDCA, nACA, nAAA, nAAE, NDCA, NACA, NAAA, NAAE, ELNG],
+    mACN: [mACN, mAAN, nACN, nAAN, NACN, NAAN, NGRL],
+    BADN: [BADN, BAAN, RLA0, RAIL],
+    BAEN: [BAEN, BAAN, RLA0, RAIL],
+    BBDN: [BBDN, BADN, BAAN, RLA0, RAIL],
+    BBEN: [BBEN, BAEN, BAAN, RLA0, RAIL],
+    BCDN: [BCDN, BADN, BAAN, RLA0, RAIL],
+    BBDA: [BBDA, BADA, BAAA, BAAE, ERA1, ELRL],
+    BBEA: [BBEA, BAEA, BAAA, BAAE, ERA1, ELRL],
+    BCDA: [BCDA, BADA, BAAA, BAAE, ERA1, ELRL],
+    BDDA: [BDDA, BADA, BAAA, BAAE, ERA1, ELRL],
+    BECA: [BECA, BACA, BAAA, BAAE, ERA1, ELRL],
+    DBDN: [DBDN, DADN, DAAN, RAIL],
+    DCDA: [DCDA, DADA, DAAA, DAAE, ELRL],
+    dBDN: [dBDN, dADN, dAAN, RAIL],
+    dCDA: [dCDA, dADA, dAAA, dAAE, ELRL],
+    CBDN: [CBDN, CADN, CAAN, RAIL],
+    CCDA: [CCDA, CADA, CAAA, CAAE, ELRL],
+    cACN: [cACN, cAAN, NGRL],
+    LACN: [LACN, LAAN, MGLV],
+}
+# 9 "chinasettrains.pnml" 2
+# 1 "src/cargotable.pnml" 1
+cargotable {
+    PASS, COAL, MAIL, OIL_, LVST, GOOD, GRAI, WOOD,
+    IORE, STEL, VALU, PAPR, WHEA, FOOD, GOLD, RUBR,
+    FRUT, MAIZ, CORE, WATR, DIAM, SUGR, TOYS, BATT,
+    SWET, TOFF, COLA, CTCD, BUBL, PLST, FZDR, AORE,
+    BDMT, BEAN, BEER, BOOM, BRCK, CBLK, CERA, CERE,
+    CLAY, CMNT, COPR, CSTI, CTAR, DYES, ENSP, FECR,
+    FERT, FICR, FISH, FMSP, GLAS, GRVL, JAVA, KAOL,
+    LIME, MILK, OLSD, PEAT, PETR, PHOS, PLAS, PORE,
+    POTA, RFPR, SAND, SCMT, SULP, TOUR, TYRE, URAN,
+    VEHI, WDPR, WOOL, ZINC, ACID, ALUM, BAKE, CASS,
+    CHLO, CHSE, CIGR, COAT, COBL, COKE, ELTR, EOIL,
+    FRVG, FUEL, FURN, IRON, LYE_, MEAT, METL, MNO2,
+    MNSP, MOLS, MPTS, NH3_, NUTS, NICK, NITR, NKOR,
+    NUKF, NUKW, OILI, OILD, OTI1, OTI2, OYST, O2__,
+    PCL_, PIPE, POWR, QLME, RCYC, SALT, SASH, SEED,
+    SESP, SGBT, SGCN, SLAG, SOAP, STAL, STCB, STSE,
+    STSH, STST, STWR, TATO, TEXT, TBCO, TWOD, VBOD,
+    VENG, VPTS, WSTE, YETI, YETY, RSGR, SCRP
+}
+# 10 "chinasettrains.pnml" 2
+# 1 "src/functions.pnml" 1
+/* Begin Functions */
+// shamelessly stolen from jp+ shinkansen
+
+switch (FEAT_TRAINS, PARENT, func_is_reversed, vehicle_is_reversed) {return;}
+
+switch (FEAT_TRAINS, SELF, runningcostfactor, current_speed) {
+        0: return 1/9 ; // Stopped
+        1..10: return 1/3 ; // Moving below 10 m/s
+        return 1; // Track speed
+    }
+
+
+switch (FEAT_TRAINS, SELF, switch_visual_effect_and_powered, ((position_in_articulated_veh == 0) && !func_is_reversed()) || ((position_in_articulated_veh_from_end == 0) && func_is_reversed()) ) {
+ 1: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 0, ENABLE_WAGON_POWER);
+ return visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}
+
+
+/* LENGTHS */
+
+// Standard 2-8-2 Length
+    switch (FEAT_TRAINS, SELF, switch_length_2_8_2, position_in_articulated_veh % 3) {
+        1: return 8;
+        return 2;
+    }
+
+// Standard 1-8-1 Length
+    switch (FEAT_TRAINS, SELF, switch_length_1_8_1, position_in_articulated_veh % 3) {
+        1: return 8;
+        return 1;
+    }
+
+/* End Functions */
+# 11 "chinasettrains.pnml" 2
+
+// IDs
+# 1 "src/vehicleid.pnml" 1
+//This file sets all vehicle IDs. Each type has a range of 128/256/512/1024 possible IDs.
+
+//Horse, available ID range: 512-1023 (hex 0x0200..0x03FF)
+
+
+
+//Unit Wagons, available ID range: 1024-2047 (hex 0x0400..0x07FF)
+
+
+//Where Unit Wagons for Passengers on RAIL/ELRL: 1024-1535
+
+
+//Unit Wagons for Cargoes on RAIL/ELRL: 1536-1663
+
+
+//Unit Wagons on MONO: 1663-1791
+
+
+//Unit Wagons on MGLV: 1792-2047
+
+
+
+//Coaches, available ID range: 2048-3071 (hex 0x0800..0x0BFF)
+
+item (FEAT_TRAINS, yz25g, 2048) {}
+item (FEAT_TRAINS, rz25g, 2049) {}
+item (FEAT_TRAINS, yw25g, 2050) {}
+item (FEAT_TRAINS, rw25g, 2051) {}
+
+//Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
+
+
+
+//Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
+
+
+
+//Diesel, available ID range: 5120-6143 (hex 0x1400..0x17FF)
+
+
+
+//25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
+
+
+
+//Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
+
+
+
+//DMU, available ID range: 8192-9215 (hex 0x2000..0x23FF)
+
+
+
+//25kV AC EMU, available ID range: 9216-10239 (hex 0x2400..0x27FF)
+
+
+
+//1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
+
+
+
+//750V DC EMU, available ID range: 11264-12287 (hex 0x2C00..0x2FFF)
+
+
+
+//Third Rail EMU, available ID range: 11288-13311 (hex 0x3000..0x33FF)
+
+
+
+//Multi Power MU, available ID range: 13312-14335 (hex 0x3400..0x37FF)
+
+
+
+//Monorail MU, available ID range: 14336-14847 (hex 0x3800..0x39FF)
+
+
+
+//Maglev MU, availabel ID range: 14848-15359 (hex 0x3A00..0x3BFF)
+
+
+
+//Cargo DMU, available ID range: 15340-15615 (hex 0x3C00..0x3CFF)
+
+
+
+//25kV AC Cargo EMU, available ID range: 15616-16127 (hex 0x3D00..0x3EFF)
+
+
+
+//Multi Power Cargo MU, available range: 16128..16383 (hex 0x3F00..0x3FFF)
+# 14 "chinasettrains.pnml" 2
+
+// Horse
+
+
+// Unit Wagons
+
+
+// Coaches
+# 1 "src/coaches/yz25g_graphics.pnml" 1
+// Begin YZ25G
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_yz25g_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_yz25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25g")
+}
+
+// Vehicle
+spriteset (spriteset_yz25g_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_yz25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_12_standard ("coaches", "25g")
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25g_articulated_part, extra_callback_info1) {
+    1..2: return yz25g;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25g_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_yz25g_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25g_capacity, position_in_articulated_veh % 3) {
+    1: return 112;
+    return 0;
+}
+# 23 "chinasettrains.pnml" 2
+# 1 "src/coaches/yz25g_item.pnml" 1
+item (FEAT_TRAINS, yz25g) {
+    property {
+        // Menu
+        name: string(STR_NAME_YZ25G);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1992,01,01);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        vehicle_life: 30;
+        track_type: SADN;
+
+        // Cargo
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: 0;
+        cargo_allow_refit: [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit: [];
+        refit_cost: 0;
+        default_cargo_type: PASS;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        cargo_capacity: 112;
+        loading_speed: 8 << param_loading_speed;
+        cargo_age_period: 185 << param_cargo_decay;
+
+        // Stats
+        speed: 120 km/h;
+        power: 0 hp;
+        weight: 47.3 ton;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+    }
+    graphics {
+        // Menu
+
+        // Graphics
+        default: switch_yz25g_graphics;
+        purchase: spriteset_yz25g_purchase_original;
+        articulated_part: switch_yz25g_articulated_part;
+
+        // Stats
+        length: switch_length_2_8_2;
+        cargo_capacity: switch_yz25g_capacity;
+        cost_factor: 7;
+        running_cost_factor: 5 * runningcostfactor();
+        purchase_running_cost_factor: 5;
+        purchase_cargo_capacity: 112/3;
+    }
+}
+
+// End YZ25G
+# 24 "chinasettrains.pnml" 2
+# 1 "src/coaches/rz25g_graphics.pnml" 1
+// Begin RZ25G
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_rz25g_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_rz25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25g")
+}
+
+// Vehicle
+spriteset (spriteset_rz25g_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_rz25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_12_standard ("coaches", "25g")
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz25g_articulated_part, extra_callback_info1) {
+    1..2: return rz25g;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz25g_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_rz25g_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz25g_capacity, position_in_articulated_veh % 3) {
+    1: return 80;
+    return 0;
+}
+# 25 "chinasettrains.pnml" 2
+# 1 "src/coaches/rz25g_item.pnml" 1
+item (FEAT_TRAINS, rz25g) {
+    property {
+        // Menu
+        name: string(STR_NAME_RZ25G);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1992,01,01);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        vehicle_life: 30;
+        track_type: SADN;
+
+        // Cargo
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: 0;
+        cargo_allow_refit: [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit: [];
+        refit_cost: 0;
+        default_cargo_type: PASS;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        cargo_capacity: 80;
+        loading_speed: 8 << param_loading_speed;
+        cargo_age_period: 222 << param_cargo_decay;
+
+        // Stats
+        speed: 120 km/h;
+        power: 0 hp;
+        weight: 47.9 ton;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+    }
+    graphics {
+        // Menu
+
+        // Graphics
+        default: switch_rz25g_graphics;
+        purchase: spriteset_rz25g_purchase_original;
+        articulated_part: switch_rz25g_articulated_part;
+
+        // Stats
+        length: switch_length_2_8_2;
+        cargo_capacity: switch_rz25g_capacity;
+        cost_factor: 8;
+        running_cost_factor: 5 * runningcostfactor();
+        purchase_running_cost_factor: 5;
+        purchase_cargo_capacity: 80/3;
+    }
+}
+
+// End RZ25G
+# 26 "chinasettrains.pnml" 2
+# 1 "src/coaches/yw25g_graphics.pnml" 1
+// Begin YW25G
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_yw25g_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_yw25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25g")
+}
+
+// Vehicle
+spriteset (spriteset_yw25g_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_yw25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_12_standard ("coaches", "25g")
+}
+
+switch (FEAT_TRAINS, SELF, switch_yw25g_articulated_part, extra_callback_info1) {
+    1..2: return yw25g;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yw25g_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_yw25g_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yw25g_capacity, position_in_articulated_veh % 3) {
+    1: return 66;
+    return 0;
+}
+# 27 "chinasettrains.pnml" 2
+# 1 "src/coaches/yw25g_item.pnml" 1
+item (FEAT_TRAINS, yw25g) {
+    property {
+        // Menu
+        name: string(STR_NAME_YW25G);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1992,01,01);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        vehicle_life: 30;
+        track_type: SADN;
+
+        // Cargo
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: 0;
+        cargo_allow_refit: [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit: [];
+        refit_cost: 0;
+        default_cargo_type: PASS;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        cargo_capacity: 66;
+        loading_speed: 6 << param_loading_speed;
+        cargo_age_period: 370 << param_cargo_decay;
+
+        // Stats
+        speed: 120 km/h;
+        power: 0 hp;
+        weight: 47.3 ton;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+    }
+    graphics {
+        // Menu
+
+        // Graphics
+        default: switch_yw25g_graphics;
+        purchase: spriteset_yw25g_purchase_original;
+        articulated_part: switch_yw25g_articulated_part;
+
+        // Stats
+        length: switch_length_2_8_2;
+        cargo_capacity: switch_yw25g_capacity;
+        cost_factor: 12;
+        running_cost_factor: 9 * runningcostfactor();
+        purchase_running_cost_factor: 9;
+        purchase_cargo_capacity: 66/3;
+    }
+}
+
+// End YW25G
+# 28 "chinasettrains.pnml" 2
+# 1 "src/coaches/rw25g_graphics.pnml" 1
+// Begin RW25G
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_rw25g_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_rw25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25g")
+}
+
+// Vehicle
+spriteset (spriteset_rw25g_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_rw25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_12_standard ("coaches", "25g")
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25g_articulated_part, extra_callback_info1) {
+    1..2: return rw25g;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25g_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_rw25g_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25g_capacity, position_in_articulated_veh % 3) {
+    1: return 36;
+    return 0;
+}
+# 29 "chinasettrains.pnml" 2
+# 1 "src/coaches/rw25g_item.pnml" 1
+item (FEAT_TRAINS, rw25g) {
+    property {
+        // Menu
+        name: string(STR_NAME_RW25G);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1992,01,01);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        vehicle_life: 30;
+        track_type: SADN;
+
+        // Cargo
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: 0;
+        cargo_allow_refit: [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit: [];
+        refit_cost: 0;
+        default_cargo_type: PASS;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        cargo_capacity: 36;
+        loading_speed: 4 << param_loading_speed;
+        cargo_age_period: 444 << param_cargo_decay;
+
+        // Stats
+        speed: 120 km/h;
+        power: 0 hp;
+        weight: 47.3 ton;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+    }
+    graphics {
+        // Menu
+
+        // Graphics
+        default: switch_rw25g_graphics;
+        purchase: spriteset_rw25g_purchase_original;
+        articulated_part: switch_rw25g_articulated_part;
+
+        // Stats
+        length: switch_length_2_8_2;
+        cargo_capacity: switch_rw25g_capacity;
+        cost_factor: 13;
+        running_cost_factor: 10 * runningcostfactor();
+        purchase_running_cost_factor: 10;
+        purchase_cargo_capacity: 36/3;
+    }
+}
+
+// End RW25G
+# 30 "chinasettrains.pnml" 2
+
+// Steam
+
+
+// Diesel
+
+
+// 25kV AC Electric
+
+
+// Multi Power Locomotive
+
+
+// DMU
+
+
+// 25kV AC EMU
+
+
+// 1.5kV DC EMU
+
+
+// 750V DC EMU
+
+
+// Third Rail EMU
+
+
+// Multi Power MU
+
+
+// Monorail MU
+
+
+// Maglev MU
+
+
+// Cargo DMU
+
+
+// 25kV AC Cargo EMU
+
+
+// Multi Power Cargo MU

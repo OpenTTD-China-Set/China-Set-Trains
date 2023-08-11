@@ -1,0 +1,34 @@
+// Begin RZ25G
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_rz25g_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_rz25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25g")
+}
+
+// Vehicle
+spriteset (spriteset_rz25g_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_rz25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_12_standard ("coaches", "25g")
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz25g_articulated_part, extra_callback_info1) {
+    1..2: return rz25g;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz25g_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_rz25g_original;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz25g_capacity, position_in_articulated_veh % 3) {
+    1: return 80;
+    return 0;
+}
