@@ -27,8 +27,10 @@ item (FEAT_TRAINS, yw25g) {
         // Stats
         speed:                          120 km/h;
         power:                          0 hp;
-        weight:                         47.3 ton;
+        weight:                         48.5 ton;
+        cost_factor:                    12;
         running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            9;
     }
     graphics {
         // Menu
@@ -42,7 +44,7 @@ item (FEAT_TRAINS, yw25g) {
         length:                         switch_length_2_8_2;
         cargo_capacity:                 switch_yw25g_capacity;
         cost_factor:                    12;
-        running_cost_factor:            9 * runningcostfactor();
+        running_cost_factor:            max(9 * runningcostfactor(), 1);
         purchase_running_cost_factor:   9;
         purchase_cargo_capacity:        66/3;
     }

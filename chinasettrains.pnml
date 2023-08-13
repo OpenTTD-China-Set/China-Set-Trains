@@ -27,6 +27,14 @@
 #include "src/coaches/yw25g_item.pnml"
 #include "src/coaches/rw25g_graphics.pnml"
 #include "src/coaches/rw25g_item.pnml"
+#include "src/coaches/yz25t_graphics.pnml"
+#include "src/coaches/yz25t_item.pnml"
+#include "src/coaches/rz25t_graphics.pnml"
+#include "src/coaches/rz25t_item.pnml"
+#include "src/coaches/yw25t_graphics.pnml"
+#include "src/coaches/yw25t_item.pnml"
+#include "src/coaches/rw25t_graphics.pnml"
+#include "src/coaches/rw25t_item.pnml"
 
 // Steam
 
@@ -35,7 +43,8 @@
 
 
 // 25kV AC Electric
-
+#include "src/25-electric/hxd3c_graphics.pnml"
+#include "src/25-electric/hxd3c_item.pnml"
 
 // Multi Power Locomotive
 

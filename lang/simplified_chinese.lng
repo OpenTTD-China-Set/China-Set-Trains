@@ -1,6 +1,6 @@
 ##grflangid 0x56
 
-STR_GRF_NAME        :中国包：火车
+STR_GRF_NAME        :中国包：火车 {VERSION_STRING}
 STR_GRF_DESC        :OpenTTD中国包的火车部分。
 STR_GRF_URL         :https://www.tt-forums.net/viewtopic.php?t=91092
 STR_GRF_DESC_EXTRA  :中国大陆的火车，包括机车、动车组、车厢。未来会有更多内容。
@@ -20,3 +20,21 @@ STR_PARAM_TIMES_2   :200%
 STR_PARAM_TIMES_4   :400%
 STR_PARAM_TIMES_8   :800%
 STR_PARAM_TIMES_16  :1600%
+
+STR_PARAM_CARGO_DECAY       :货物贬值周期
+STR_PARAM_CARGO_DECAY_DESC  :调整车厢的货物贬值周期。“较长”为“标准”的两倍，“很长”是“较长”的两倍。即使在“标准”设置下，货物贬值周期也随车厢种类而变化。
+STR_PARAM_STANDARD          :标准
+STR_PARAM_LONG              :较长
+STR_PARAM_VERY_LONG         :很长
+
+STR_USED_WITH_DYNAMIC_ENGINES       :This GRF needs dynamic_engines to be turned on. Open console, and type "setting dynamic_engines 1".
+
+STR_NAME_YZ25G          :YZ25G (25米改进型硬座客车)
+STR_NAME_RZ25G          :RZ25G (25米改进型软座客车)
+STR_NAME_YW25G          :YW25G (25米改进型硬卧客车)
+STR_NAME_RW25G          :RW25G (25米改进型软卧客车)
+STR_NAME_HXD3C          :HXD3C (和谐3C型电力机车)
+STR_NAME_YZ25T          :YZ25T (25米特快型硬座客车)
+STR_NAME_RZ25T          :RZ25T (25米特快型软座客车)
+STR_NAME_YW25T          :YW25T (25米特快型硬卧客车)
+STR_NAME_RW25T          :RW25T (25米特快型软卧客车)

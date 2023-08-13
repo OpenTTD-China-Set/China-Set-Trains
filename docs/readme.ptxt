@@ -1,4 +1,4 @@
-﻿{{GRF_TITLE}} {{REPO_VERSION}} README
+﻿China Set: Trains 0.0.2.23 README
 ===============================
 
 ----------
@@ -27,9 +27,8 @@
 1 About
 -------
 
-The Finnish Trainset is a NewGRF featuring Finnish Rolling stock from
-1870 to present day. This trainset has been created by Finnish Trainset
-team. See credits.
+China Set: Trains is the train sector of the China set of OpenTTD.
+It is developed by China Set Team, which can be found in Part 6.
 
 
 ---------------------
@@ -38,7 +37,7 @@ team. See credits.
 
 2.1 Requirements
 ----------------
-- OpenTTD 1.2.0 or nightly r23842, or higher
+- OpenTTD 1.2.0 or nightly r23971, or higher
 - Not compatible with TTDPatch
 
 
@@ -46,36 +45,28 @@ team. See credits.
 ----------------
 OpenTTD:
   see http://wiki.openttd.org/NewGRF
-  This NewGRF is available from the ingame Online Content
+  This NewGRF is available from the ingame Online Content.
 
 
 2.3 Parameter settings
 ----------------------
 
-Local, express and sleeper passenger MU/coach loading speeds can be 
-defined using NewGRF parametres. Default values are:
-
-Local: 40
-Express: 25
-Sleeper: 15
-
 Purchase and running costs can be defined using NewGRF parametres.
 Default parametres are:
 
-Purchase cost setting: Medium
-Running cost setting: Medium
+Purchase cost setting: 25%
+Running cost setting: 25%
 
-Wagon and coach running costs can be turned on and off using
-NewGRF parameter (Enable wagon and coach running costs)
-
-Default setting for wagon and coach running costs is on.
+Cargo age period, which affects the devaluing of cargo as time goes,
+can be extended using NewGRF parametres. Default is "Standard".
+"Low" is "Standard" doubled, while "Very Low" is "Low" Doubled. Even
+in "Standard" mode, cargo age period varies depending on wagon types.
 
 
 2.4 Usage
 ---------
-Everything in this set is Finnish rolling stock, in addition of several
-wagon types from Eastern (Russian) and Western (Sweden, SeaRail)
-interconnections.
+Everything in this set is Mainland China rolling stock, in addition of 
+several wagon types from international connections.
 
 Locomotives and multiple units featuring refitting are for deciding the
 speed and traction effort suitable for freight or passenger operations
@@ -106,8 +97,7 @@ graphics on major part of wagons.
 --------------
 
 Some wagons will appear too "tubeous" on consist. If you do notice too
-tubeous wagons on consist, please report them to the Finnish Trainset
-DevZone.
+tubeous wagons on consist, please report them to the China Set Dev Team.
 
 
 
@@ -118,20 +108,13 @@ DevZone.
 Information regarding rolling stock is provided from realiable sources.
 Errors may exist, do report them when encountered.
 
-Some locomotives and multiple units feature idling, accelerating and
-running sound effects. They are used with permissions from several
-parties:
-
-Oskari Kvist, Ville Saarelainen, Suomen Rautatiemuseo (Finnish Railway
-Museum), Lari Nylund, Juhana Konttinen, Niklas Savinsaari, 
-Pietu Tuovinen, Mikael Sarhervo, Timo Keski-Pitäjä and others.
 
 ----------------------------
 5 Frequently Asked Questions
 ----------------------------
 
 Q: Why can't I use this in older versions of OpenTTD or TTDPatch?
-A: This NewGRF uses some features only available to OpenTTD r23842 and
+A: This NewGRF uses some features only available to OpenTTD r23971 and
    newer. Furthermore, the most recent version of NML used to build this
    NewGRF, produces GRF version 8. This is only supported by OpenTTD
    r23166 and newer anyways.
@@ -143,46 +126,62 @@ A: This NewGRF uses some features only available to OpenTTD r23842 and
 ---------
 
 Founder:
-- Villem
+- John Franklin
 
 Project leading and management:
-- DanMacK (Dan MacKellar)
-- Kyosuke1989 (Oskari Kvist)
+- John Franklin
+- Ahyangyi
+- NACHN
+- wuwu
 
 Information basis:
-- DanMacK (Dan MacKellar)
-- as
-- Lakie (Nathaniel Lake)
-- Kyosuke1989 (Oskari Kvist)
-- juzza1 (Jussi Virtanen)
+- NACHN
+- wuwu
+- babel
+- huanfeng
+- nengyeqing
+- Mikhail
+- Haiyan
+- FJZer0ich
 
 Graphics (see individual graphic files in the source for details):
-- DanMacK (Dan MacKellar)
-- Purno
-- Hairysteed
-- jpl (Juhani Pirttilahti)
-- Kyosuke1989 (Oskari Kvist)
-- juzza1 (Jussi Virtanen)
-- Emperor Jake
-- alluke
-
-Sound effects (see individual sound files in the source for details):
-- Kyosuke1989 (Oskari Kvist)
+- NACHN
+- FJZer0ich
 
 Code:
-- FooBar (Jasper Vries), initial DevZone-implementation
-- juzza1 (Jussi Virtanen), NML-based coding on DevZone
-- Lakie (Nathaniel Lake), earlier NFO-based coding
+- John Franklin, NML-based Coding
+- Ahyangyi, Co-operator
 
 Translations:
-- Finnish:  Kyosuke1989 (Oskari Kvist)
+- 
 
-Makefile system:
+Makefile system (not by China Set Team):
 - planetmaker (Ingo von Borstel)
 
+Code Reference:
+- Finnish Trainset Team
+- JP+ Team
+  - KeepinItRail for JP+ Shinkansen
+- 2cc Trainset Team
+- xUSSR Team
 
-Special thanks to everyone whom thanks is due.
+Helpers on Discord:
+- andythenorth
+- Emperor Jake
+- Belaja Lilija
+- Simo333
+- Garlic_Bread42
+- and more...
 
+Special thanks to:
+
+Everyone whom thanks is due;
+
+Patch Pack Developers, especially JGR;
+
+OpenTTD Developers;
+
+Chris Sawyer.
 
 
 ---------------------
@@ -192,8 +191,8 @@ Special thanks to everyone whom thanks is due.
 7.1 Bug reports
 ---------------
 Please report any bugs you find at
-  bug tracker: http://dev.openttdcoop.org/projects/finnishtrainset/issues
-  or forum topic: http://www.tt-forums.net/viewtopic.php?f=26&t=21457
+  bug tracker: https://github.com/JohnFranklin523/China-Set-Trains
+  or forum topic: http://www.tt-forums.net/viewtopic.php?t=91092
 
 Always included a detailed description of the bug, preferrably with
 screenshot and savegame. Also state the exact game version you're using,
@@ -212,14 +211,15 @@ don't report it here but in the forum topic of the patch(pack) instead.
 ------------------
 If you have any problems using this NewGRF that are not covered in the
 Frequently Asked Questions above, then you can ask your questions in the
-forum topic: http://www.tt-forums.net/viewtopic.php?f=26&t=21457
+forum topic: https://www.tt-forums.net/viewtopic.php?t=91092
 
 
 7.3 General enquiries
 ---------------------
 
 If you have any queries that cannot be asked in the forum topic, then
-contact kyosuke1989 via Private Message at www.tt-forums.net.
+contact John Franklin (JohnFranklin523) via Private Message at 
+www.tt-forums.net.
 
 
 
@@ -227,8 +227,8 @@ contact kyosuke1989 via Private Message at www.tt-forums.net.
 8 License
 ---------
 
-FTS - Finnish Train Set
-Copyright (C) 2013 Finnish Trainset Team
+China Set: Trains
+Copyright (C) 2023 China Set Team
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

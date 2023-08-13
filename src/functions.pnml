@@ -4,8 +4,8 @@
 switch (FEAT_TRAINS, PARENT, func_is_reversed, vehicle_is_reversed) {return;}
 
 switch (FEAT_TRAINS, SELF, runningcostfactor, current_speed) {
-        0: return 1/9 ;          	// Stopped
-        1..10: return 1/3 ;        	// Moving below 10 m/s
+        0: return 1/4 ;          	// Stopped
+        1..10: return 1/2 ;        	// Moving below 10 m/s
         return 1; 				    // Track speed
     }
 

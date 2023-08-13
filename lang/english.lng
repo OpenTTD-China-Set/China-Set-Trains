@@ -1,6 +1,6 @@
 ﻿##grflangid 0x01
 
-STR_GRF_NAME        :China Set: Trains
+STR_GRF_NAME        :China Set: Trains {VERSION_STRING}
 STR_GRF_DESC        :The Train sector of the China Set of OpenTTD.
 STR_GRF_URL         :https://www.tt-forums.net/viewtopic.php?t=91092
 STR_GRF_DESC_EXTRA  :Trains: Locomotives, MUs, Coaches and Wagons in China Mainland. More contents in the future.
@@ -32,7 +32,12 @@ STR_PARAM_VERY_LONG         :Very Long
 
 STR_USED_WITH_DYNAMIC_ENGINES       :This GRF needs dynamic_engines to be turned on. Open console, and type "setting dynamic_engines 1".
 
-STR_NAME_YZ25G:         YZ25G (25m Improved Hard Seat Passenger Coach)
-STR_NAME_RZ25G:         RZ25G (25m Improved Soft Seat Passenger Coach)
-STR_NAME_YW25G:         YW25G (25m Improved Hard Sleeper Passenger Coach)
-STR_NAME_RW25G:         RW25G (25m Improved Soft Sleeper Passenger Coach)
+STR_NAME_YZ25G          :YZ25G (25m Improved Hard Seat Passenger Coach)
+STR_NAME_RZ25G          :RZ25G (25m Improved Soft Seat Passenger Coach)
+STR_NAME_YW25G          :YW25G (25m Improved Hard Sleeper Passenger Coach)
+STR_NAME_RW25G          :RW25G (25m Improved Soft Sleeper Passenger Coach)
+STR_NAME_HXD3C          :HXD3C (Hexie/Harmony 3C Electric Locomotive)
+STR_NAME_YZ25T          :YZ25T (25m Express Hard Seat Passenger Coach)
+STR_NAME_RZ25T          :RZ25T (25m Express Soft Seat Passenger Coach)
+STR_NAME_YW25T          :YW25T (25m Express Hard Sleeper Passenger Coach)
+STR_NAME_RW25T          :RW25T (25m Express Soft Sleeper Passenger Coach)
