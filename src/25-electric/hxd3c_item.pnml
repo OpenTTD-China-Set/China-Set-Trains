@@ -34,10 +34,11 @@ item (FEAT_TRAINS, hxd3c) {
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            104;
         reliability_decay:              6;
+        bitmask_vehicle_info:           bitmask(7);
     }
     graphics {
         // Menu
-        
+        additional_text:                switch_hxd3c_additional_text;
         // Graphics
         default:                        switch_hxd3c_graphics;
         purchase:                       spriteset_hxd3c_purchase_original;
@@ -47,8 +48,8 @@ item (FEAT_TRAINS, hxd3c) {
         length:                         switch_length_1_8_1;
         cargo_capacity:                 0;
         cost_factor:                    127;
-        running_cost_factor:            max(104 * runningcostfactor(), 1);
-        purchase_running_cost_factor:   104;
+        running_cost_factor:            52 * runningcostfactor();
+        purchase_running_cost_factor:   312;
         purchase_cargo_capacity:        0;
     }
 }

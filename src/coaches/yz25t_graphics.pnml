@@ -32,3 +32,9 @@ switch (FEAT_TRAINS, SELF, switch_yz25t_capacity, position_in_articulated_veh % 
     1: return 118;
     return 0;
 }
+
+switch (FEAT_TRAINS, SELF, switch_yz25t_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_320_400));
+    2: return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_640_800));
+    return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_160_200));
+}

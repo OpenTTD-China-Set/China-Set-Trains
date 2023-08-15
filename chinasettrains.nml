@@ -9,7 +9,7 @@ grf {
     name: string(STR_GRF_NAME);
     desc: string(STR_GRF_DESC, string(STR_GRF_DESC_EXTRA), string(STR_GRF_DESC_README));
     url: string(STR_GRF_URL);
-    version: 23;
+    version: 34;
     min_compatible_version: 1;
 
     param 0 {
@@ -358,12 +358,43 @@ cargotable {
 
 switch (FEAT_TRAINS, PARENT, func_is_reversed, vehicle_is_reversed) {return;}
 
-switch (FEAT_TRAINS, SELF, runningcostfactor, current_speed) {
-        0: return 1/4 ; // Stopped
-        1..10: return 1/2 ; // Moving below 10 m/s
-        return 1; // Track speed
+// Running cost factor depending on speed
+switch (FEAT_TRAINS, SELF, runningcostfactor, ((current_speed / max_speed) == 0) + ((current_speed / max_speed) <= 1/4) + ((current_speed / max_speed) <= 1/2) + ((current_speed / max_speed) <= 2/3)) {
+        4: return 2; // Stopped
+        3: return 3; // Moving below 1/4 max speed
+        2: return 4; // Moving below 1/2 max speed
+        1: return 5; // Moving below 2/3 max speed
+        return 6;
     }
 
+/*
+
+BITMASK SHEET
+
+bitmask(0): default, reserved
+bitmask(1): restaurant car
+bitmask(2): air condition generator car
+bitmask(3): conductor car
+bitmask(4): brake van
+bitmask(5): reserved
+bitmask(6): locomotives unable to supply electricity for cars
+bitmask(7): locomotives able to supply electricity for cars
+
+For example, 
+bitmask_vehicle_info:           bitmask(1, 5);
+
+*/
+// Another running cost factor depending on the existence of restaurant car
+switch (FEAT_TRAINS, PARENT, cafefactor, hasbit(bitmask_consist_info, 1)) {
+    1: return 0;
+    return 1;
+}
+
+// Cargo age period factor depending on Air Conditioner: After 2000, if the train is not pulled by an locomotive able to supply electricity for cars (bitmask 7), nor is there an air condition generator car (bitmask 2), the cargo_age_period of this passenger car reduces by 1/5.
+switch (FEAT_TRAINS, PARENT, acfactor, (current_year < 2000) || (hasbit(bitmask_consist_info, 7) || hasbit(bitmask_consist_info, 2)) ) {
+    0: return 4;
+    return 5;
+}
 
 switch (FEAT_TRAINS, SELF, switch_visual_effect_and_powered, ((position_in_articulated_veh == 0) && !func_is_reversed()) || ((position_in_articulated_veh_from_end == 0) && func_is_reversed()) ) {
  1: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 0, ENABLE_WAGON_POWER);
@@ -422,6 +453,12 @@ item (FEAT_TRAINS, yz25t, 2052) {}
 item (FEAT_TRAINS, rz25t, 2053) {}
 item (FEAT_TRAINS, yw25t, 2054) {}
 item (FEAT_TRAINS, rw25t, 2055) {}
+item (FEAT_TRAINS, xl25k, 2056) {}
+item (FEAT_TRAINS, xl25g, 2057) {}
+item (FEAT_TRAINS, yz25k, 2058) {}
+item (FEAT_TRAINS, rz25k, 2059) {}
+item (FEAT_TRAINS, yw25k, 2060) {}
+item (FEAT_TRAINS, rw25k, 2061) {}
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 
@@ -433,7 +470,8 @@ item (FEAT_TRAINS, rw25t, 2055) {}
 
 //Diesel, available ID range: 5120-6143 (hex 0x1400..0x17FF)
 
-
+item (FEAT_TRAINS, df4k, 5120) {}
+item (FEAT_TRAINS, df4h, 5121) {}
 
 //25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
 
@@ -529,6 +567,12 @@ switch (FEAT_TRAINS, SELF, switch_yz25g_capacity, position_in_articulated_veh % 
     1: return 118;
     return 0;
 }
+
+switch (FEAT_TRAINS, SELF, switch_yz25g_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_DECAY_320_400));
+    2: return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_DECAY_640_800));
+    return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_DECAY_160_200));
+}
 # 23 "chinasettrains.pnml" 2
 # 1 "src/coaches/yz25g_item.pnml" 1
 item (FEAT_TRAINS, yz25g) {
@@ -563,10 +607,11 @@ item (FEAT_TRAINS, yz25g) {
         weight: 47.3 ton;
         cost_factor: 8;
         running_cost_base: RUNNING_COST_ELECTRIC;
-        running_cost_factor: 5;
+        running_cost_factor: 6;
     }
     graphics {
         // Menu
+        additional_text: switch_yz25g_additional_text;
 
         // Graphics
         default: switch_yz25g_graphics;
@@ -576,9 +621,10 @@ item (FEAT_TRAINS, yz25g) {
         // Stats
         length: switch_length_2_8_2;
         cargo_capacity: switch_yz25g_capacity;
+        cargo_age_period: (40 * acfactor()) << param_cargo_decay;
         cost_factor: 8;
-        running_cost_factor: max(5 * runningcostfactor(), 1);
-        purchase_running_cost_factor: 5;
+        running_cost_factor: 6 * runningcostfactor() * cafefactor();
+        purchase_running_cost_factor: 36;
         purchase_cargo_capacity: 118/3;
     }
 }
@@ -620,6 +666,12 @@ switch (FEAT_TRAINS, SELF, switch_rz25g_capacity, position_in_articulated_veh % 
     1: return 80;
     return 0;
 }
+
+switch (FEAT_TRAINS, SELF, switch_rz25g_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_DECAY_384_480));
+    2: return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_DECAY_768_960));
+    return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_DECAY_192_240));
+}
 # 25 "chinasettrains.pnml" 2
 # 1 "src/coaches/rz25g_item.pnml" 1
 item (FEAT_TRAINS, rz25g) {
@@ -654,10 +706,11 @@ item (FEAT_TRAINS, rz25g) {
         weight: 45.3 ton;
         cost_factor: 8;
         running_cost_base: RUNNING_COST_ELECTRIC;
-        running_cost_factor: 5;
+        running_cost_factor: 6;
     }
     graphics {
         // Menu
+        additional_text: switch_rz25g_additional_text;
 
         // Graphics
         default: switch_rz25g_graphics;
@@ -667,9 +720,10 @@ item (FEAT_TRAINS, rz25g) {
         // Stats
         length: switch_length_2_8_2;
         cargo_capacity: switch_rz25g_capacity;
+        cargo_age_period: (48 * acfactor()) << param_cargo_decay;
         cost_factor: 8;
-        running_cost_factor: max(5 * runningcostfactor(), 1);
-        purchase_running_cost_factor: 5;
+        running_cost_factor: 6 * runningcostfactor() * cafefactor();
+        purchase_running_cost_factor: 36;
         purchase_cargo_capacity: 80/3;
     }
 }
@@ -711,6 +765,12 @@ switch (FEAT_TRAINS, SELF, switch_yw25g_capacity, position_in_articulated_veh % 
     1: return 66;
     return 0;
 }
+
+switch (FEAT_TRAINS, SELF, switch_yw25g_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_DECAY_640_800));
+    2: return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_DECAY_1280_1600));
+    return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_DECAY_320_400));
+}
 # 27 "chinasettrains.pnml" 2
 # 1 "src/coaches/yw25g_item.pnml" 1
 item (FEAT_TRAINS, yw25g) {
@@ -743,12 +803,13 @@ item (FEAT_TRAINS, yw25g) {
         speed: 120 km/h;
         power: 0 hp;
         weight: 48.5 ton;
-        cost_factor: 12;
+        cost_factor: 13;
         running_cost_base: RUNNING_COST_ELECTRIC;
-        running_cost_factor: 9;
+        running_cost_factor: 10;
     }
     graphics {
         // Menu
+        additional_text: switch_yw25g_additional_text;
 
         // Graphics
         default: switch_yw25g_graphics;
@@ -758,9 +819,10 @@ item (FEAT_TRAINS, yw25g) {
         // Stats
         length: switch_length_2_8_2;
         cargo_capacity: switch_yw25g_capacity;
-        cost_factor: 12;
-        running_cost_factor: max(9 * runningcostfactor(), 1);
-        purchase_running_cost_factor: 9;
+        cargo_age_period: (80 * acfactor()) << param_cargo_decay;
+        cost_factor: 13;
+        running_cost_factor: 10 * runningcostfactor() * cafefactor();
+        purchase_running_cost_factor: 60;
         purchase_cargo_capacity: 66/3;
     }
 }
@@ -802,6 +864,12 @@ switch (FEAT_TRAINS, SELF, switch_rw25g_capacity, position_in_articulated_veh % 
     1: return 36;
     return 0;
 }
+
+switch (FEAT_TRAINS, SELF, switch_rw25g_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_DECAY_768_960));
+    2: return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_DECAY_1536_1920));
+    return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_DECAY_384_480));
+}
 # 29 "chinasettrains.pnml" 2
 # 1 "src/coaches/rw25g_item.pnml" 1
 item (FEAT_TRAINS, rw25g) {
@@ -836,10 +904,11 @@ item (FEAT_TRAINS, rw25g) {
         weight: 47.5 ton;
         cost_factor: 13;
         running_cost_base: RUNNING_COST_ELECTRIC;
-        running_cost_factor: 10;
+        running_cost_factor: 11;
     }
     graphics {
         // Menu
+        additional_text: switch_rw25g_additional_text;
 
         // Graphics
         default: switch_rw25g_graphics;
@@ -849,9 +918,10 @@ item (FEAT_TRAINS, rw25g) {
         // Stats
         length: switch_length_2_8_2;
         cargo_capacity: switch_rw25g_capacity;
+        cargo_age_period: (96 * acfactor()) << param_cargo_decay;
         cost_factor: 13;
-        running_cost_factor: max(10 * runningcostfactor(), 1);
-        purchase_running_cost_factor: 10;
+        running_cost_factor: 11 * runningcostfactor() * cafefactor();
+        purchase_running_cost_factor: 66;
         purchase_cargo_capacity: 36/3;
     }
 }
@@ -893,6 +963,12 @@ switch (FEAT_TRAINS, SELF, switch_yz25t_capacity, position_in_articulated_veh % 
     1: return 118;
     return 0;
 }
+
+switch (FEAT_TRAINS, SELF, switch_yz25t_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_320_400));
+    2: return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_640_800));
+    return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_160_200));
+}
 # 31 "chinasettrains.pnml" 2
 # 1 "src/coaches/yz25t_item.pnml" 1
 item (FEAT_TRAINS, yz25t) {
@@ -927,10 +1003,11 @@ item (FEAT_TRAINS, yz25t) {
         weight: 50 ton;
         cost_factor: 8;
         running_cost_base: RUNNING_COST_ELECTRIC;
-        running_cost_factor: 5;
+        running_cost_factor: 6;
     }
     graphics {
         // Menu
+        additional_text: switch_yz25t_additional_text;
 
         // Graphics
         default: switch_yz25t_graphics;
@@ -940,9 +1017,10 @@ item (FEAT_TRAINS, yz25t) {
         // Stats
         length: switch_length_2_8_2;
         cargo_capacity: switch_yz25t_capacity;
+        cargo_age_period: (40 * acfactor()) << param_cargo_decay;
         cost_factor: 8;
-        running_cost_factor: max(5 * runningcostfactor(), 1);
-        purchase_running_cost_factor: 5;
+        running_cost_factor: 6 * runningcostfactor() * cafefactor();
+        purchase_running_cost_factor: 36;
         purchase_cargo_capacity: 118/3;
     }
 }
@@ -984,6 +1062,12 @@ switch (FEAT_TRAINS, SELF, switch_rz25t_capacity, position_in_articulated_veh % 
     1: return 80;
     return 0;
 }
+
+switch (FEAT_TRAINS, SELF, switch_rz25t_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_384_480));
+    2: return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_768_960));
+    return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_192_240));
+}
 # 33 "chinasettrains.pnml" 2
 # 1 "src/coaches/rz25t_item.pnml" 1
 item (FEAT_TRAINS, rz25t) {
@@ -1018,10 +1102,11 @@ item (FEAT_TRAINS, rz25t) {
         weight: 46.4 ton;
         cost_factor: 8;
         running_cost_base: RUNNING_COST_ELECTRIC;
-        running_cost_factor: 5;
+        running_cost_factor: 6;
     }
     graphics {
         // Menu
+        additional_text: switch_rz25t_additional_text;
 
         // Graphics
         default: switch_rz25t_graphics;
@@ -1031,9 +1116,10 @@ item (FEAT_TRAINS, rz25t) {
         // Stats
         length: switch_length_2_8_2;
         cargo_capacity: switch_rz25t_capacity;
+        cargo_age_period: (48 * acfactor()) << param_cargo_decay;
         cost_factor: 8;
-        running_cost_factor: max(5 * runningcostfactor(), 1);
-        purchase_running_cost_factor: 5;
+        running_cost_factor: 6 * runningcostfactor() * cafefactor();
+        purchase_running_cost_factor: 36;
         purchase_cargo_capacity: 80/3;
     }
 }
@@ -1075,6 +1161,12 @@ switch (FEAT_TRAINS, SELF, switch_yw25t_capacity, position_in_articulated_veh % 
     1: return 66;
     return 0;
 }
+
+switch (FEAT_TRAINS, SELF, switch_yw25t_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_640_800));
+    2: return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_1280_1600));
+    return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_320_400));
+}
 # 35 "chinasettrains.pnml" 2
 # 1 "src/coaches/yw25t_item.pnml" 1
 item (FEAT_TRAINS, yw25t) {
@@ -1107,12 +1199,13 @@ item (FEAT_TRAINS, yw25t) {
         speed: 160 km/h;
         power: 0 hp;
         weight: 52.9 ton;
-        cost_factor: 12;
+        cost_factor: 13;
         running_cost_base: RUNNING_COST_ELECTRIC;
-        running_cost_factor: 9;
+        running_cost_factor: 10;
     }
     graphics {
         // Menu
+        additional_text: switch_yw25t_additional_text;
 
         // Graphics
         default: switch_yw25t_graphics;
@@ -1122,9 +1215,10 @@ item (FEAT_TRAINS, yw25t) {
         // Stats
         length: switch_length_2_8_2;
         cargo_capacity: switch_yw25t_capacity;
-        cost_factor: 12;
-        running_cost_factor: max(9 * runningcostfactor(), 1);
-        purchase_running_cost_factor: 9;
+        cargo_age_period: (80 * acfactor()) << param_cargo_decay;
+        cost_factor: 13;
+        running_cost_factor: 10 * runningcostfactor() * cafefactor();
+        purchase_running_cost_factor: 60;
         purchase_cargo_capacity: 66/3;
     }
 }
@@ -1166,6 +1260,12 @@ switch (FEAT_TRAINS, SELF, switch_rw25t_capacity, position_in_articulated_veh % 
     1: return 36;
     return 0;
 }
+
+switch (FEAT_TRAINS, SELF, switch_rw25t_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_768_960));
+    2: return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_1536_1920));
+    return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_384_480));
+}
 # 37 "chinasettrains.pnml" 2
 # 1 "src/coaches/rw25t_item.pnml" 1
 item (FEAT_TRAINS, rw25t) {
@@ -1198,12 +1298,13 @@ item (FEAT_TRAINS, rw25t) {
         speed: 160 km/h;
         power: 0 hp;
         weight: 51.3 ton;
-        cost_factor: 13;
+        cost_factor: 14;
         running_cost_base: RUNNING_COST_ELECTRIC;
-        running_cost_factor: 10;
+        running_cost_factor: 11;
     }
     graphics {
         // Menu
+        additional_text: switch_rw25t_additional_text;
 
         // Graphics
         default: switch_rw25t_graphics;
@@ -1213,21 +1314,863 @@ item (FEAT_TRAINS, rw25t) {
         // Stats
         length: switch_length_2_8_2;
         cargo_capacity: switch_rw25t_capacity;
-        cost_factor: 13;
-        running_cost_factor: max(10 * runningcostfactor(), 1);
-        purchase_running_cost_factor: 10;
+        cargo_age_period: (96 * acfactor()) << param_cargo_decay;
+        cost_factor: 14;
+        running_cost_factor: 11 * runningcostfactor() * cafefactor();
+        purchase_running_cost_factor: 66;
         purchase_cargo_capacity: 36/3;
     }
 }
 
 // End RW25T
 # 38 "chinasettrains.pnml" 2
+# 1 "src/coaches/xl25k_graphics.pnml" 1
+// Begin XL25K
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_xl25k_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_xl25k_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "xl25k")
+}
+
+// Vehicle
+spriteset (spriteset_xl25k_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_xl25k_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_12_standard ("coaches", "xl25k")
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25k_articulated_part, extra_callback_info1) {
+    1..2: return xl25k;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25k_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_xl25k_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25k_capacity, position_in_articulated_veh % 3) {
+    1: return 71;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25k_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_400));
+    2: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_800));
+    return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_200));
+}
+# 39 "chinasettrains.pnml" 2
+# 1 "src/coaches/xl25k_item.pnml" 1
+item (FEAT_TRAINS, xl25k) {
+    property {
+        // Menu
+        name: string(STR_NAME_XL25K);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1996,01,01);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        vehicle_life: 30;
+        track_type: SADN;
+
+        // Cargo
+        refittable_cargo_classes: bitmask(CC_MAIL);
+        non_refittable_cargo_classes: 0;
+        cargo_allow_refit: [MAIL];
+        cargo_disallow_refit: [];
+        refit_cost: 0;
+        default_cargo_type: MAIL;
+        ai_special_flag: AI_FLAG_CARGO;
+        cargo_capacity: 71;
+        loading_speed: 6 << param_loading_speed;
+        cargo_age_period: 185 << param_cargo_decay;
+
+        // Stats
+        speed: 140 km/h;
+        power: 0 hp;
+        weight: 45.1 ton;
+        cost_factor: 7;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        running_cost_factor: 4;
+    }
+    graphics {
+        // Menu
+        additional_text: switch_xl25k_additional_text;
+
+        // Graphics
+        default: switch_xl25k_graphics;
+        purchase: spriteset_xl25k_purchase_original;
+        articulated_part: switch_xl25k_articulated_part;
+
+        // Stats
+        length: switch_length_2_8_2;
+        cargo_capacity: switch_xl25k_capacity;
+        cargo_age_period: 200 << param_cargo_decay;
+        cost_factor: 7;
+        running_cost_factor: 4 * runningcostfactor();
+        purchase_running_cost_factor: 24;
+        purchase_cargo_capacity: 71/3;
+    }
+}
+
+// End XL25K
+# 40 "chinasettrains.pnml" 2
+# 1 "src/coaches/xl25g_graphics.pnml" 1
+// Begin XL25G
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_xl25g_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_xl25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "xl25g")
+}
+
+// Vehicle
+spriteset (spriteset_xl25g_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_xl25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_12_standard ("coaches", "xl25g")
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25g_articulated_part, extra_callback_info1) {
+    1..2: return xl25g;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25g_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_xl25g_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25g_capacity, position_in_articulated_veh % 3) {
+    1: return 71;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25g_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_DECAY_400));
+    2: return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_DECAY_800));
+    return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_DECAY_200));
+}
+# 41 "chinasettrains.pnml" 2
+# 1 "src/coaches/xl25g_item.pnml" 1
+item (FEAT_TRAINS, xl25g) {
+    property {
+        // Menu
+        name: string(STR_NAME_XL25G);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1996,01,01);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        vehicle_life: 30;
+        track_type: SADN;
+
+        // Cargo
+        refittable_cargo_classes: bitmask(CC_MAIL);
+        non_refittable_cargo_classes: 0;
+        cargo_allow_refit: [MAIL];
+        cargo_disallow_refit: [];
+        refit_cost: 0;
+        default_cargo_type: MAIL;
+        ai_special_flag: AI_FLAG_CARGO;
+        cargo_capacity: 71;
+        loading_speed: 6 << param_loading_speed;
+        cargo_age_period: 185 << param_cargo_decay;
+
+        // Stats
+        speed: 120 km/h;
+        power: 0 hp;
+        weight: 46.0 ton;
+        cost_factor: 7;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        running_cost_factor: 4;
+    }
+    graphics {
+        // Menu
+        additional_text: switch_xl25g_additional_text;
+
+        // Graphics
+        default: switch_xl25g_graphics;
+        purchase: spriteset_xl25g_purchase_original;
+        articulated_part: switch_xl25g_articulated_part;
+
+        // Stats
+        length: switch_length_2_8_2;
+        cargo_capacity: switch_xl25g_capacity;
+        cargo_age_period: 200 << param_cargo_decay;
+        cost_factor: 7;
+        running_cost_factor: 4 * runningcostfactor();
+        purchase_running_cost_factor: 24;
+        purchase_cargo_capacity: 71/3;
+    }
+}
+
+// End XL25G
+# 42 "chinasettrains.pnml" 2
+# 1 "src/coaches/yz25k_graphics.pnml" 1
+// Begin YZ25K
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_yz25k_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_yz25k_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25k")
+}
+
+// Vehicle
+spriteset (spriteset_yz25k_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_yz25k_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_12_standard ("coaches", "25k")
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25k_articulated_part, extra_callback_info1) {
+    1..2: return yz25k;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25k_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_yz25k_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25k_capacity, position_in_articulated_veh % 3) {
+    1: return 118;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25k_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_320_400));
+    2: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_640_800));
+    return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_160_200));
+}
+# 43 "chinasettrains.pnml" 2
+# 1 "src/coaches/yz25k_item.pnml" 1
+item (FEAT_TRAINS, yz25k) {
+    property {
+        // Menu
+        name: string(STR_NAME_YZ25K);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1996,01,01);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        vehicle_life: 30;
+        track_type: SADN;
+
+        // Cargo
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: 0;
+        cargo_allow_refit: [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit: [];
+        refit_cost: 0;
+        default_cargo_type: PASS;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        cargo_capacity: 118;
+        loading_speed: 8 << param_loading_speed;
+        cargo_age_period: 185 << param_cargo_decay;
+
+        // Stats
+        speed: 140 km/h;
+        power: 0 hp;
+        weight: 48.8 ton;
+        cost_factor: 8;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        running_cost_factor: 6;
+    }
+    graphics {
+        // Menu
+        additional_text: switch_yz25k_additional_text;
+
+        // Graphics
+        default: switch_yz25k_graphics;
+        purchase: spriteset_yz25k_purchase_original;
+        articulated_part: switch_yz25k_articulated_part;
+
+        // Stats
+        length: switch_length_2_8_2;
+        cargo_capacity: switch_yz25k_capacity;
+        cargo_age_period: (40 * acfactor()) << param_cargo_decay;
+        cost_factor: 8;
+        running_cost_factor: 6 * runningcostfactor() * cafefactor();
+        purchase_running_cost_factor: 36;
+        purchase_cargo_capacity: 118/3;
+    }
+}
+
+// End YZ25K
+# 44 "chinasettrains.pnml" 2
+# 1 "src/coaches/rz25k_graphics.pnml" 1
+// Begin RZ25K
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_rz25k_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_rz25k_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25k")
+}
+
+// Vehicle
+spriteset (spriteset_rz25k_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_rz25k_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_12_standard ("coaches", "25k")
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz25k_articulated_part, extra_callback_info1) {
+    1..2: return rz25k;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz25k_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_rz25k_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz25k_capacity, position_in_articulated_veh % 3) {
+    1: return 80;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz25k_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_384_480));
+    2: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_768_960));
+    return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_192_240));
+}
+# 45 "chinasettrains.pnml" 2
+# 1 "src/coaches/rz25k_item.pnml" 1
+item (FEAT_TRAINS, rz25k) {
+    property {
+        // Menu
+        name: string(STR_NAME_RZ25K);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1996,01,01);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        vehicle_life: 30;
+        track_type: SADN;
+
+        // Cargo
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: 0;
+        cargo_allow_refit: [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit: [];
+        refit_cost: 0;
+        default_cargo_type: PASS;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        cargo_capacity: 80;
+        loading_speed: 8 << param_loading_speed;
+        cargo_age_period: 222 << param_cargo_decay;
+
+        // Stats
+        speed: 140 km/h;
+        power: 0 hp;
+        weight: 41.6 ton;
+        cost_factor: 8;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        running_cost_factor: 6;
+    }
+    graphics {
+        // Menu
+        additional_text: switch_rz25k_additional_text;
+
+        // Graphics
+        default: switch_rz25k_graphics;
+        purchase: spriteset_rz25k_purchase_original;
+        articulated_part: switch_rz25k_articulated_part;
+
+        // Stats
+        length: switch_length_2_8_2;
+        cargo_capacity: switch_rz25k_capacity;
+        cargo_age_period: (48 * acfactor()) << param_cargo_decay;
+        cost_factor: 8;
+        running_cost_factor: 6 * runningcostfactor() * cafefactor();
+        purchase_running_cost_factor: 36;
+        purchase_cargo_capacity: 80/3;
+    }
+}
+
+// End RZ25K
+# 46 "chinasettrains.pnml" 2
+# 1 "src/coaches/yw25k_graphics.pnml" 1
+// Begin YW25K
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_yw25k_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_yw25k_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25k")
+}
+
+// Vehicle
+spriteset (spriteset_yw25k_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_yw25k_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_12_standard ("coaches", "25k")
+}
+
+switch (FEAT_TRAINS, SELF, switch_yw25k_articulated_part, extra_callback_info1) {
+    1..2: return yw25k;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yw25k_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_yw25k_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yw25k_capacity, position_in_articulated_veh % 3) {
+    1: return 66;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yw25k_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_640_800));
+    2: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_1280_1600));
+    return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_320_400));
+}
+# 47 "chinasettrains.pnml" 2
+# 1 "src/coaches/yw25k_item.pnml" 1
+item (FEAT_TRAINS, yw25k) {
+    property {
+        // Menu
+        name: string(STR_NAME_YW25K);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1996,01,01);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        vehicle_life: 30;
+        track_type: SADN;
+
+        // Cargo
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: 0;
+        cargo_allow_refit: [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit: [];
+        refit_cost: 0;
+        default_cargo_type: PASS;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        cargo_capacity: 66;
+        loading_speed: 6 << param_loading_speed;
+        cargo_age_period: 370 << param_cargo_decay;
+
+        // Stats
+        speed: 140 km/h;
+        power: 0 hp;
+        weight: 46.5 ton;
+        cost_factor: 13;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        running_cost_factor: 10;
+    }
+    graphics {
+        // Menu
+        additional_text: switch_yw25k_additional_text;
+
+        // Graphics
+        default: switch_yw25k_graphics;
+        purchase: spriteset_yw25k_purchase_original;
+        articulated_part: switch_yw25k_articulated_part;
+
+        // Stats
+        length: switch_length_2_8_2;
+        cargo_capacity: switch_yw25k_capacity;
+        cargo_age_period: (80 * acfactor()) << param_cargo_decay;
+        cost_factor: 13;
+        running_cost_factor: 10 * runningcostfactor() * cafefactor();
+        purchase_running_cost_factor: 60;
+        purchase_cargo_capacity: 66/3;
+    }
+}
+
+// End YW25K
+# 48 "chinasettrains.pnml" 2
+# 1 "src/coaches/rw25k_graphics.pnml" 1
+// Begin RW25K
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_rw25k_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_rw25k_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25k")
+}
+
+// Vehicle
+spriteset (spriteset_rw25k_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_rw25k_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_12_standard ("coaches", "25k")
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25k_articulated_part, extra_callback_info1) {
+    1..2: return rw25k;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25k_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_rw25k_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25k_capacity, position_in_articulated_veh % 3) {
+    1: return 36;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25k_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_768_960));
+    2: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_1536_1920));
+    return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_384_480));
+}
+# 49 "chinasettrains.pnml" 2
+# 1 "src/coaches/rw25k_item.pnml" 1
+item (FEAT_TRAINS, rw25k) {
+    property {
+        // Menu
+        name: string(STR_NAME_RW25K);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1996,01,01);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        vehicle_life: 30;
+        track_type: SADN;
+
+        // Cargo
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: 0;
+        cargo_allow_refit: [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit: [];
+        refit_cost: 0;
+        default_cargo_type: PASS;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        cargo_capacity: 36;
+        loading_speed: 4 << param_loading_speed;
+        cargo_age_period: 444 << param_cargo_decay;
+
+        // Stats
+        speed: 140 km/h;
+        power: 0 hp;
+        weight: 47.0 ton;
+        cost_factor: 13;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        running_cost_factor: 11;
+    }
+    graphics {
+        // Menu
+        additional_text: switch_rw25k_additional_text;
+
+        // Graphics
+        default: switch_rw25k_graphics;
+        purchase: spriteset_rw25k_purchase_original;
+        articulated_part: switch_rw25k_articulated_part;
+
+        // Stats
+        length: switch_length_2_8_2;
+        cargo_capacity: switch_rw25k_capacity;
+        cargo_age_period: (96 * acfactor()) << param_cargo_decay;
+        cost_factor: 13;
+        running_cost_factor: 11 * runningcostfactor() * cafefactor();
+        purchase_running_cost_factor: 66;
+        purchase_cargo_capacity: 36/3;
+    }
+}
+
+// End RW25K
+# 50 "chinasettrains.pnml" 2
 
 // Steam
 
 
 // Diesel
+# 1 "src/diesel/df4k_graphics.pnml" 1
+// Begin DF4K
 
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_df4k_purchase_green) {
+    template_purchase_empty ()
+}
+spriteset (spriteset_df4k_purchase_orange) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_df4k_purchase_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "df4")
+}
+alternative_sprites(spriteset_df4k_purchase_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "df4-orange")
+}
+
+
+// Vehicle
+spriteset (spriteset_df4k_green) {
+    template_empty ()
+}
+spriteset (spriteset_df4k_orange) {
+    template_empty ()
+}
+alternative_sprites(spriteset_df4k_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_10_standard ("diesel", "df4")
+}
+alternative_sprites(spriteset_df4k_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_10_standard ("diesel", "df4-orange")
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_df4k_articulated_part, extra_callback_info1) {
+    1..2: return df4k;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4k_subtype, cargo_subtype) {
+    1: spriteset_df4k_green;
+    spriteset_df4k_orange;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4k_subtype_text, cargo_subtype) {
+    1: return string(STR_GREEN);
+    return string(STR_ORANGE);
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4k_graphics, position_in_articulated_veh % 3) {
+    1: switch_df4k_subtype;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4k_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4k_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_DF4_LIVERY_AVAILABILITY), string(STR_DF4_NICKNAME), string(STR_RELIABILITY_32));
+}
+# 56 "chinasettrains.pnml" 2
+# 1 "src/diesel/df4k_item.pnml" 1
+item (FEAT_TRAINS, df4k) {
+    property {
+        // Menu
+        name: string(STR_NAME_DF4K);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class: ENGINE_CLASS_DIESEL;
+
+        // Availability
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1969,01,01);
+        model_life: 60;
+        retire_early: 40;
+        vehicle_life: 30;
+        track_type: SADN;
+
+        // Cargo
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: 0;
+        cargo_allow_refit: [];
+        cargo_disallow_refit: [];
+        refit_cost: 0;
+        default_cargo_type: PASS;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        cargo_capacity: 1;
+        loading_speed: 8 << param_loading_speed;
+        cargo_age_period: 185 << param_cargo_decay;
+
+        // Stats
+        speed: 120 km/h;
+        power: 2610 hpM;
+        weight: 138 ton;
+        tractive_effort_coefficient: 0.242;
+        cost_factor: 53;
+        running_cost_base: RUNNING_COST_DIESEL;
+        running_cost_factor: 50;
+        reliability_decay: 32;
+        bitmask_vehicle_info: bitmask(6);
+    }
+    graphics {
+        // Menu
+        additional_text: switch_df4k_additional_text;
+        cargo_subtype_text: switch_df4k_subtype_text;
+
+        // Graphics
+        default: switch_df4k_graphics;
+        purchase: spriteset_df4k_purchase_orange;
+        articulated_part: switch_df4k_articulated_part;
+
+        // Stats
+        length: switch_length_1_8_1;
+        cargo_capacity: 0;
+        cost_factor: 53;
+        running_cost_factor: 25 * runningcostfactor();
+        purchase_running_cost_factor: 150;
+        purchase_cargo_capacity: 0;
+    }
+}
+
+// End DF4K
+# 57 "chinasettrains.pnml" 2
+# 1 "src/diesel/df4h_graphics.pnml" 1
+// Begin DF4H
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_df4h_purchase_green) {
+    template_purchase_empty ()
+}
+spriteset (spriteset_df4h_purchase_orange) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_df4h_purchase_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "df4")
+}
+alternative_sprites(spriteset_df4h_purchase_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "df4-orange")
+}
+
+// Vehicle
+spriteset (spriteset_df4h_green) {
+    template_empty ()
+}
+spriteset (spriteset_df4h_orange) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_df4h_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_10_standard ("diesel", "df4")
+}
+alternative_sprites(spriteset_df4h_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_10_standard ("diesel", "df4-orange")
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4h_articulated_part, extra_callback_info1) {
+    1..2: return df4h;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4h_subtype, cargo_subtype) {
+    1: spriteset_df4h_orange;
+    spriteset_df4h_green;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4h_subtype_text, cargo_subtype) {
+    1: return string(STR_ORANGE);
+    return string(STR_GREEN);
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4h_graphics, position_in_articulated_veh % 3) {
+    1: switch_df4h_subtype;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4h_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4h_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_DF4_LIVERY_AVAILABILITY), string(STR_DF4_NICKNAME), string(STR_RELIABILITY_32));
+}
+# 58 "chinasettrains.pnml" 2
+# 1 "src/diesel/df4h_item.pnml" 1
+item (FEAT_TRAINS, df4h) {
+    property {
+        // Menu
+        name: string(STR_NAME_DF4H);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class: ENGINE_CLASS_DIESEL;
+
+        // Availability
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1969,01,01);
+        model_life: 60;
+        retire_early: 40;
+        vehicle_life: 30;
+        track_type: SADN;
+
+        // Cargo
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: 0;
+        cargo_allow_refit: [];
+        cargo_disallow_refit: [];
+        refit_cost: 0;
+        default_cargo_type: PASS;
+        ai_special_flag: AI_FLAG_CARGO;
+        cargo_capacity: 1;
+        loading_speed: 8 << param_loading_speed;
+        cargo_age_period: 185 << param_cargo_decay;
+
+        // Stats
+        speed: 100 km/h;
+        power: 2610 hpM;
+        weight: 138 ton;
+        tractive_effort_coefficient: 0.305;
+        cost_factor: 53;
+        running_cost_base: RUNNING_COST_DIESEL;
+        running_cost_factor: 72;
+        reliability_decay: 32;
+        bitmask_vehicle_info: bitmask(6);
+    }
+    graphics {
+        // Menu
+        additional_text: switch_df4h_additional_text;
+        cargo_subtype_text: switch_df4h_subtype_text;
+
+        // Graphics
+        default: switch_df4h_graphics;
+        purchase: spriteset_df4h_purchase_green;
+        articulated_part: switch_df4h_articulated_part;
+
+        // Stats
+        length: switch_length_1_8_1;
+        cargo_capacity: 0;
+        cost_factor: 53;
+        running_cost_factor: 25 * runningcostfactor();
+        purchase_running_cost_factor: 150;
+        purchase_cargo_capacity: 0;
+    }
+}
+
+// End DF4H
+# 59 "chinasettrains.pnml" 2
 
 // 25kV AC Electric
 # 1 "src/25-electric/hxd3c_graphics.pnml" 1
@@ -1264,7 +2207,11 @@ switch (FEAT_TRAINS, SELF, switch_hxd3c_graphics, position_in_articulated_veh % 
 switch (FEAT_TRAINS, SELF, switch_hxd3c_capacity, position_in_articulated_veh % 3) {
     return 0;
 }
-# 47 "chinasettrains.pnml" 2
+
+switch (FEAT_TRAINS, SELF, switch_hxd3c_additional_text, param_cargo_decay) {
+    return string(STR_DESC_2, string(STR_HXD3C_NICKNAME), string(STR_RELIABILITY_6));
+}
+# 62 "chinasettrains.pnml" 2
 # 1 "src/25-electric/hxd3c_item.pnml" 1
 item (FEAT_TRAINS, hxd3c) {
     property {
@@ -1302,10 +2249,11 @@ item (FEAT_TRAINS, hxd3c) {
         running_cost_base: RUNNING_COST_ELECTRIC;
         running_cost_factor: 104;
         reliability_decay: 6;
+        bitmask_vehicle_info: bitmask(7);
     }
     graphics {
         // Menu
-
+        additional_text: switch_hxd3c_additional_text;
         // Graphics
         default: switch_hxd3c_graphics;
         purchase: spriteset_hxd3c_purchase_original;
@@ -1315,14 +2263,14 @@ item (FEAT_TRAINS, hxd3c) {
         length: switch_length_1_8_1;
         cargo_capacity: 0;
         cost_factor: 127;
-        running_cost_factor: max(104 * runningcostfactor(), 1);
-        purchase_running_cost_factor: 104;
+        running_cost_factor: 52 * runningcostfactor();
+        purchase_running_cost_factor: 312;
         purchase_cargo_capacity: 0;
     }
 }
 
 // End HXD3C
-# 48 "chinasettrains.pnml" 2
+# 63 "chinasettrains.pnml" 2
 
 // Multi Power Locomotive
 

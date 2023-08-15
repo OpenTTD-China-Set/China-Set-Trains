@@ -33,8 +33,45 @@ STR_NAME_YZ25G          :YZ25G (25米改进型硬座客车)
 STR_NAME_RZ25G          :RZ25G (25米改进型软座客车)
 STR_NAME_YW25G          :YW25G (25米改进型硬卧客车)
 STR_NAME_RW25G          :RW25G (25米改进型软卧客车)
+
 STR_NAME_HXD3C          :HXD3C (和谐3C型电力机车)
-STR_NAME_YZ25T          :YZ25T (25米特快型硬座客车)
-STR_NAME_RZ25T          :RZ25T (25米特快型软座客车)
-STR_NAME_YW25T          :YW25T (25米特快型硬卧客车)
-STR_NAME_RW25T          :RW25T (25米特快型软卧客车)
+STR_NAME_YZ25T          :YZ25T (25米提速型硬座客车)
+STR_NAME_RZ25T          :RZ25T (25米提速型软座客车)
+STR_NAME_YW25T          :YW25T (25米提速型硬卧客车)
+STR_NAME_RW25T          :RW25T (25米提速型软卧客车)
+STR_NAME_XL25K          :XL25K (25米快速型行李车)
+STR_NAME_XL25G          :XL25G (25米改进型行李车)
+STR_NAME_YZ25K          :YZ25K (25米快速型硬座客车)
+STR_NAME_RZ25K          :RZ25K (25米快速型软座客车)
+STR_NAME_YW25K          :YW25K (25米快速型硬卧客车)
+STR_NAME_RW25K          :RW25K (25米快速型软卧客车)
+
+STR_NAME_DF4K           :DF4 (东风4型柴油机车) (客运型)
+STR_NAME_DF4H           :DF4 (东风4型柴油机车) (货运型)
+
+STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿色{GOLD}、{ORANGE}橘色
+STR_25G_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{GREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_25T_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{GREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_25K_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{GREEN}“高阻绿”{GOLD}涂装 (未完成)
+
+STR_DF4_NICKNAME                    :{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
+STR_HXD3C_NICKNAME                  :{BLACK}昵称: {GOLD}电狒狒
+
+STR_RELIABILITY_32                  :{BLACK}可靠性下降速度：{GOLD}32
+STR_RELIABILITY_6                   :{BLACK}可靠性下降速度：{GOLD}6
+
+STR_ORIGINAL            :{GOLD} - 原版涂装
+STR_ORANGE              :{ORANGE} - 橘色涂装
+STR_GREEN               :{GREEN} - 绿色涂装
+
+STR_DECAY_160_200       :{BLACK}货物贬值周期：{GOLD}200{BLACK}，{RED}2000年后车厢无供电时为160
+STR_DECAY_320_400       :{BLACK}货物贬值周期：{GOLD}400{BLACK}，{RED}2000年后车厢无供电时为320
+STR_DECAY_640_800       :{BLACK}货物贬值周期：{GOLD}800{BLACK}，{RED}2000年后车厢无供电时为640
+STR_DECAY_192_240       :{BLACK}货物贬值周期：{GOLD}240{BLACK}，{RED}2000年后车厢无供电时为192
+STR_DECAY_384_480       :{BLACK}货物贬值周期：{GOLD}480{BLACK}，{RED}2000年后车厢无供电时为384
+STR_DECAY_768_960       :{BLACK}货物贬值周期：{GOLD}960{BLACK}，{RED}2000年后车厢无供电时为768
+STR_DECAY_1280_1600     :{BLACK}货物贬值周期：{GOLD}1600{BLACK}，{RED}2000年后车厢无供电时为1280
+STR_DECAY_1536_1920     :{BLACK}货物贬值周期：{GOLD}1920{BLACK}，{RED}2000年后车厢无供电时为1536
+STR_DECAY_200           :{BLACK}货物贬值周期：{GOLD}200
+STR_DECAY_400           :{BLACK}货物贬值周期：{GOLD}400
+STR_DECAY_800           :{BLACK}货物贬值周期：{GOLD}800

@@ -2,15 +2,15 @@
 # Definitions needed for tar releases
 # This part is automatically generated
 ################################################################
-REPO_REVISION := 23
-NEWGRF_VERSION := 23
+REPO_REVISION := 34
+NEWGRF_VERSION := 34
 REPO_HASH := 619944a30dbe
-REPO_VERSION_STRING := 0.0.2.23
-REPO_TITLE := China Set: Trains 0.0.2.23
-REPO_DATE := 20230813
+REPO_VERSION_STRING := 0.0.3.34
+REPO_TITLE := China Set: Trains 0.0.3.34
+REPO_DATE := 20230815
 REPO_BRANCH := 
 REPO_MODIFIED := 
-REPO_TAGS    := 0.0.2.23
-HG := :
+REPO_TAGS    := 0.0.3.34
+HG := 
 GIT := :
 PYTHON := :

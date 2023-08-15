@@ -36,8 +36,49 @@ STR_NAME_YZ25G          :YZ25G (25m Improved Hard Seat Passenger Coach)
 STR_NAME_RZ25G          :RZ25G (25m Improved Soft Seat Passenger Coach)
 STR_NAME_YW25G          :YW25G (25m Improved Hard Sleeper Passenger Coach)
 STR_NAME_RW25G          :RW25G (25m Improved Soft Sleeper Passenger Coach)
+
 STR_NAME_HXD3C          :HXD3C (Hexie/Harmony 3C Electric Locomotive)
-STR_NAME_YZ25T          :YZ25T (25m Express Hard Seat Passenger Coach)
-STR_NAME_RZ25T          :RZ25T (25m Express Soft Seat Passenger Coach)
-STR_NAME_YW25T          :YW25T (25m Express Hard Sleeper Passenger Coach)
-STR_NAME_RW25T          :RW25T (25m Express Soft Sleeper Passenger Coach)
+STR_NAME_YZ25T          :YZ25T (25m Accelerated Hard Seat Passenger Coach)
+STR_NAME_RZ25T          :RZ25T (25m Accelerated Soft Seat Passenger Coach)
+STR_NAME_YW25T          :YW25T (25m Accelerated Hard Sleeper Passenger Coach)
+STR_NAME_RW25T          :RW25T (25m Accelerated Soft Sleeper Passenger Coach)
+STR_NAME_XL25K          :XL25K (25m Rapid Luggage Car)
+STR_NAME_XL25G          :XL25G (25m Improved Luggage Car)
+STR_NAME_YZ25K          :YZ25K (25m Rapid Hard Seat Passenger Coach)
+STR_NAME_RZ25K          :RZ25K (25m Rapid Soft Seat Passenger Coach)
+STR_NAME_YW25K          :YW25K (25m Rapid Hard Sleeper Passenger Coach)
+STR_NAME_RW25K          :RW25K (25m Rapid Soft Sleeper Passenger Coach)
+
+STR_NAME_DF4K           :DF4 (Dongfeng 4 Diesel Locomotive) (Passenger Type)
+STR_NAME_DF4H           :DF4 (Dongfeng 4 Diesel Locomotive) (Freight Type)
+
+STR_DESC_3                          :{STRING}{}{STRING}{}{STRING}
+STR_DESC_2                          :{STRING}{}{STRING}
+
+STR_DF4_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery and {ORANGE}Orange {GOLD}Livery
+STR_25G_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {GREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_25T_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {GREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_25K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {GREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+
+STR_DF4_NICKNAME                    :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
+STR_HXD3C_NICKNAME                  :{BLACK}Nickname: {GOLD}Electric Baboon
+
+
+STR_RELIABILITY_32                  :{BLACK}Reliability decay speed: {GOLD}32
+STR_RELIABILITY_6                   :{BLACK}Reliability decay speed: {GOLD}6
+
+STR_ORIGINAL            :{GOLD} - Original Livery
+STR_ORANGE              :{ORANGE} - Orange Livery
+STR_GREEN               :{GREEN} - Green Livery
+
+STR_DECAY_160_200       :{BLACK}Cargo Age Period: {GOLD}200{BLACK}, {RED}160 after 2000 without electricity supply
+STR_DECAY_320_400       :{BLACK}Cargo Age Period: {GOLD}400{BLACK}, {RED}320 after 2000 without electricity supply
+STR_DECAY_640_800       :{BLACK}Cargo Age Period: {GOLD}800{BLACK}, {RED}640 after 2000 without electricity supply
+STR_DECAY_192_240       :{BLACK}Cargo Age Period: {GOLD}240{BLACK}, {RED}192 after 2000 without electricity supply
+STR_DECAY_384_480       :{BLACK}Cargo Age Period: {GOLD}480{BLACK}, {RED}384 after 2000 without electricity supply
+STR_DECAY_768_960       :{BLACK}Cargo Age Period: {GOLD}960{BLACK}, {RED}768 after 2000 without electricity supply
+STR_DECAY_1280_1600     :{BLACK}Cargo Age Period: {GOLD}1600{BLACK}, {RED}1280 after 2000 without electricity supply
+STR_DECAY_1536_1920     :{BLACK}Cargo Age Period: {GOLD}1920{BLACK}, {RED}1536 after 2000 without electricity supply
+STR_DECAY_200           :{BLACK}Cargo Age Period: {GOLD}200
+STR_DECAY_400           :{BLACK}Cargo Age Period: {GOLD}400
+STR_DECAY_800           :{BLACK}Cargo Age Period: {GOLD}800

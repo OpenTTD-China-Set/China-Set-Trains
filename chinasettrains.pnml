@@ -35,12 +35,27 @@
 #include "src/coaches/yw25t_item.pnml"
 #include "src/coaches/rw25t_graphics.pnml"
 #include "src/coaches/rw25t_item.pnml"
+#include "src/coaches/xl25k_graphics.pnml"
+#include "src/coaches/xl25k_item.pnml"
+#include "src/coaches/xl25g_graphics.pnml"
+#include "src/coaches/xl25g_item.pnml"
+#include "src/coaches/yz25k_graphics.pnml"
+#include "src/coaches/yz25k_item.pnml"
+#include "src/coaches/rz25k_graphics.pnml"
+#include "src/coaches/rz25k_item.pnml"
+#include "src/coaches/yw25k_graphics.pnml"
+#include "src/coaches/yw25k_item.pnml"
+#include "src/coaches/rw25k_graphics.pnml"
+#include "src/coaches/rw25k_item.pnml"
 
 // Steam
 
 
 // Diesel
-
+#include "src/diesel/df4k_graphics.pnml"
+#include "src/diesel/df4k_item.pnml"
+#include "src/diesel/df4h_graphics.pnml"
+#include "src/diesel/df4h_item.pnml"
 
 // 25kV AC Electric
 #include "src/25-electric/hxd3c_graphics.pnml"

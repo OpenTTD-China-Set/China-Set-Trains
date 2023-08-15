@@ -30,10 +30,11 @@ item (FEAT_TRAINS, rw25g) {
         weight:                         47.5 ton;
         cost_factor:                    13;
         running_cost_base:              RUNNING_COST_ELECTRIC;
-        running_cost_factor:            10;
+        running_cost_factor:            11;
     }
     graphics {
         // Menu
+        additional_text:                switch_rw25g_additional_text;
         
         // Graphics
         default:                        switch_rw25g_graphics;
@@ -43,9 +44,10 @@ item (FEAT_TRAINS, rw25g) {
         // Stats
         length:                         switch_length_2_8_2;
         cargo_capacity:                 switch_rw25g_capacity;
+        cargo_age_period:               (96 * acfactor()) << param_cargo_decay;
         cost_factor:                    13;
-        running_cost_factor:            max(10 * runningcostfactor(), 1);
-        purchase_running_cost_factor:   10;
+        running_cost_factor:            11 * runningcostfactor() * cafefactor();
+        purchase_running_cost_factor:   66;
         purchase_cargo_capacity:        36/3;
     }
 }
