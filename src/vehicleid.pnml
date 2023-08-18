@@ -9,6 +9,35 @@
 
 //Where Unit Wagons for Passengers on RAIL/ELRL: 1024-1535
 #define id_range_unit_wagons_RAIL 0x0400..0x05FF
+item (FEAT_TRAINS, zemuw, 1024) {}
+item (FEAT_TRAINS, zymuw, 1025) {}
+item (FEAT_TRAINS, ztmuw, 1026) {}
+item (FEAT_TRAINS, zsmuw, 1027) {}
+item (FEAT_TRAINS, swmuw, 1028) {}
+item (FEAT_TRAINS, zetmuw, 1029) {}
+item (FEAT_TRAINS, zesmuw, 1030) {}
+item (FEAT_TRAINS, zeswmuw, 1031) {}
+item (FEAT_TRAINS, zytmuw, 1032) {}
+item (FEAT_TRAINS, zysmuw, 1033) {}
+item (FEAT_TRAINS, zyswmuw, 1034) {}
+item (FEAT_TRAINS, zecmuw, 1035) {}
+item (FEAT_TRAINS, wemuw, 1036) {}
+item (FEAT_TRAINS, wymuw, 1037) {}
+item (FEAT_TRAINS, wrmuw, 1038) {}
+item (FEAT_TRAINS, wgmuw, 1039) {}
+item (FEAT_TRAINS, wrcmuw, 1040) {}
+item (FEAT_TRAINS, camuw, 1041) {}
+item (FEAT_TRAINS, yzmuw, 1042) {}
+item (FEAT_TRAINS, rzmuw, 1043) {}
+item (FEAT_TRAINS, syzmuw, 1044) {}
+item (FEAT_TRAINS, srzmuw, 1045) {}
+item (FEAT_TRAINS, sywmuw, 1046) {}
+item (FEAT_TRAINS, srwmuw, 1047) {}
+item (FEAT_TRAINS, ryzmuw, 1048) {}
+item (FEAT_TRAINS, rzywmuw, 1049) {}
+item (FEAT_TRAINS, rywmuw, 1050) {}
+item (FEAT_TRAINS, xlmuw, 1051) {}
+
 
 //Unit Wagons for Cargoes on RAIL/ELRL: 1536-1663
 #define id_range_unit_wagons_RAIL_CARGO 0x0600..0x067F
@@ -65,7 +94,7 @@ item (FEAT_TRAINS, hxd3c, 6144) {}
 
 //25kV AC EMU, available ID range: 9216-10239 (hex 0x2400..0x27FF)
 #define id_range_25_emu 0x2000..0x23FF
-
+item (FEAT_TRAINS, cr200j, 9216) {}
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
 #define id_range_1500_emu 0x2800..0x2BFF

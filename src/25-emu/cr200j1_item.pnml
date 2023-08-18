@@ -1,0 +1,212 @@
+item (FEAT_TRAINS, cr200j) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CR200J1);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2017,03,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          160 km/h;
+        power:                          7614 hpM;
+        weight:                         78 ton;
+        tractive_effort_coefficient:    0.314;
+        cost_factor:                    96;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            44;
+        reliability_decay:              20;
+        bitmask_vehicle_info:           bitmask(7);
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_cr200j1_additional_text;
+        can_attach_wagon:               muhead;
+        start_stop:                     mu4car;
+        // Graphics
+        default:                        switch_cr200j1_graphics;
+        purchase:                       spriteset_cr200j1_purchase_original;
+        articulated_part:               switch_cr200j1_articulated_part;
+
+        // Stats
+        length:                         switch_length_1_7_1;
+        cargo_capacity:                 switch_cr200j1_head_capacity;
+        cost_factor:                    96;
+        running_cost_factor:            44 * runningcostfactor();
+        purchase_running_cost_factor:   264;
+        purchase_cargo_capacity:        0;
+    }
+
+    // Multiple Unit Wagons
+    livery_override(zemuw) {
+        default:                        switch_cr200j1_wagon_graphics;
+        cargo_capacity:                 switch_cr200j1_wagon_capacity;
+        length:                         switch_cr200j1_wagon_length;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        articulated_part:               switch_cr200j1_wagon_articulated_part;
+        cost_factor:                    switch_cr200j1_wagon_cost;
+        running_cost_factor:            switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
+    }
+    livery_override(zymuw) {
+        default:                        switch_cr200j1_wagon_graphics;
+        cargo_capacity:                 switch_cr200j1_wagon_capacity;
+        length:                         switch_cr200j1_wagon_length;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        articulated_part:               switch_cr200j1_wagon_articulated_part;
+        cost_factor:                    switch_cr200j1_wagon_cost;
+        running_cost_factor:            switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
+    }
+    livery_override(ztmuw) {
+        default:                        switch_cr200j1_wagon_graphics;
+        cargo_capacity:                 switch_cr200j1_wagon_capacity;
+        length:                         switch_cr200j1_wagon_length;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        articulated_part:               switch_cr200j1_wagon_articulated_part;
+        cost_factor:                    switch_cr200j1_wagon_cost;
+        running_cost_factor:            switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
+    }
+    livery_override(zsmuw) {
+        default:                        switch_cr200j1_wagon_graphics;
+        cargo_capacity:                 switch_cr200j1_wagon_capacity;
+        length:                         switch_cr200j1_wagon_length;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        articulated_part:               switch_cr200j1_wagon_articulated_part;
+        cost_factor:                    switch_cr200j1_wagon_cost;
+        running_cost_factor:            switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
+    }
+    livery_override(swmuw) {
+        default:                        switch_cr200j1_wagon_graphics;
+        cargo_capacity:                 switch_cr200j1_wagon_capacity;
+        length:                         switch_cr200j1_wagon_length;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        articulated_part:               switch_cr200j1_wagon_articulated_part;
+        cost_factor:                    switch_cr200j1_wagon_cost;
+        running_cost_factor:            switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
+    }
+    livery_override(zetmuw) {
+        default:                        switch_cr200j1_wagon_graphics;
+        cargo_capacity:                 switch_cr200j1_wagon_capacity;
+        length:                         switch_cr200j1_wagon_length;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        articulated_part:               switch_cr200j1_wagon_articulated_part;
+        cost_factor:                    switch_cr200j1_wagon_cost;
+        running_cost_factor:            switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
+    }
+    livery_override(zesmuw) {
+        default:                        switch_cr200j1_wagon_graphics;
+        cargo_capacity:                 switch_cr200j1_wagon_capacity;
+        length:                         switch_cr200j1_wagon_length;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        articulated_part:               switch_cr200j1_wagon_articulated_part;
+        cost_factor:                    switch_cr200j1_wagon_cost;
+        running_cost_factor:            switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
+    }
+    livery_override(zeswmuw) {
+        default:                        switch_cr200j1_wagon_graphics;
+        cargo_capacity:                 switch_cr200j1_wagon_capacity;
+        length:                         switch_cr200j1_wagon_length;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        articulated_part:               switch_cr200j1_wagon_articulated_part;
+        cost_factor:                    switch_cr200j1_wagon_cost;
+        running_cost_factor:            switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
+    }
+    livery_override(zytmuw) {
+        default:                        switch_cr200j1_wagon_graphics;
+        cargo_capacity:                 switch_cr200j1_wagon_capacity;
+        length:                         switch_cr200j1_wagon_length;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        articulated_part:               switch_cr200j1_wagon_articulated_part;
+        cost_factor:                    switch_cr200j1_wagon_cost;
+        running_cost_factor:            switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
+    }
+    livery_override(zysmuw) {
+        default:                        switch_cr200j1_wagon_graphics;
+        cargo_capacity:                 switch_cr200j1_wagon_capacity;
+        length:                         switch_cr200j1_wagon_length;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        articulated_part:               switch_cr200j1_wagon_articulated_part;
+        cost_factor:                    switch_cr200j1_wagon_cost;
+        running_cost_factor:            switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
+    }
+    livery_override(zyswmuw) {
+        default:                        switch_cr200j1_wagon_graphics;
+        cargo_capacity:                 switch_cr200j1_wagon_capacity;
+        length:                         switch_cr200j1_wagon_length;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        articulated_part:               switch_cr200j1_wagon_articulated_part;
+        cost_factor:                    switch_cr200j1_wagon_cost;
+        running_cost_factor:            switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
+    }
+    livery_override(zecmuw) {
+        default:                        switch_cr200j1_wagon_graphics;
+        cargo_capacity:                 switch_cr200j1_wagon_capacity;
+        length:                         switch_cr200j1_wagon_length;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        articulated_part:               switch_cr200j1_wagon_articulated_part;
+        cost_factor:                    switch_cr200j1_wagon_cost;
+        running_cost_factor:            switch_cr200j1_wagon_running() * runningcostfactor(); // IT IS A RESTAURANT CAR!
+    }
+    livery_override(wemuw) {
+        default:                        switch_cr200j1_wagon_graphics;
+        cargo_capacity:                 switch_cr200j1_wagon_capacity;
+        length:                         switch_cr200j1_wagon_length;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        articulated_part:               switch_cr200j1_wagon_articulated_part;
+        cost_factor:                    switch_cr200j1_wagon_cost;
+        running_cost_factor:            switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
+    }
+    livery_override(wymuw) {
+        default:                        switch_cr200j1_wagon_graphics;
+        cargo_capacity:                 switch_cr200j1_wagon_capacity;
+        length:                         switch_cr200j1_wagon_length;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        articulated_part:               switch_cr200j1_wagon_articulated_part;
+        cost_factor:                    switch_cr200j1_wagon_cost;
+        running_cost_factor:            switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
+    }
+    livery_override(wgmuw) {
+        default:                        switch_cr200j1_wagon_graphics;
+        cargo_capacity:                 switch_cr200j1_wagon_capacity;
+        length:                         switch_cr200j1_wagon_length;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        articulated_part:               switch_cr200j1_wagon_articulated_part;
+        cost_factor:                    switch_cr200j1_wagon_cost;
+        running_cost_factor:            switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
+    }
+}
+
+// End CR200J1
+

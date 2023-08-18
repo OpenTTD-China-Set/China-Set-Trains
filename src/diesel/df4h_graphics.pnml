@@ -21,7 +21,7 @@ spriteset (spriteset_df4h_green) {
     template_empty ()
 }
 spriteset (spriteset_df4h_orange) {
-    template_purchase_empty ()
+    template_empty ()
 }
 alternative_sprites(spriteset_df4h_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_10_standard ("diesel", "df4")

@@ -1,0 +1,40 @@
+// Begin WYMUW
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_wymuw_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_wymuw_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("unit-wagons-rail", "25dt-cr200j")
+}
+
+// Vehicle
+spriteset (spriteset_wymuw_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_wymuw_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_12_standard ("unit-wagons-rail", "25dt-cr200j")
+}
+
+switch (FEAT_TRAINS, SELF, switch_wymuw_articulated_part, extra_callback_info1) {
+    1..2: return wymuw;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_wymuw_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_wymuw_original;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_wymuw_capacity, position_in_articulated_veh % 3) {
+    1: return 0;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_wymuw_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_ATTACH_CR200J), string(STR_DECAY_1800));
+    2: return string(STR_DESC_2, string(STR_ATTACH_CR200J), string(STR_DECAY_3600));
+    return string(STR_DESC_2, string(STR_ATTACH_CR200J), string(STR_DECAY_900));
+}

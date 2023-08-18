@@ -65,6 +65,29 @@ template template_10_standard (a, b) {
     [-36, -84, "gfx/"+a+"/"+b+"/8.png"]
 }
 
+template template_13_standard (a, b) {
+    [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
+    [-76, -74, "gfx/"+a+"/"+b+"/2.png"]
+    [-104, -48, "gfx/"+a+"/"+b+"/3.png"]
+    [-42, -74, "gfx/"+a+"/"+b+"/4.png"]
+    [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
+    [-76, -74, "gfx/"+a+"/"+b+"/6.png"]
+    [-104, -48, "gfx/"+a+"/"+b+"/7.png"]
+    [-42, -74, "gfx/"+a+"/"+b+"/8.png"]
+}
+
+
+template template_9_standard (a, b) {
+    [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
+    [-62, -84, "gfx/"+a+"/"+b+"/2.png"]
+    [-72, -48, "gfx/"+a+"/"+b+"/3.png"]
+    [-35, -84, "gfx/"+a+"/"+b+"/4.png"]
+    [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
+    [-62, -84, "gfx/"+a+"/"+b+"/6.png"]
+    [-72, -48, "gfx/"+a+"/"+b+"/7.png"]
+    [-35, -84, "gfx/"+a+"/"+b+"/8.png"]
+}
+
 // Below shamelessly stolen from JP+ Shinkansen
 
 spriteset (empty_sprites, "gfx/empty.png") {

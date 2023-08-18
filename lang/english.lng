@@ -36,8 +36,6 @@ STR_NAME_YZ25G          :YZ25G (25m Improved Hard Seat Passenger Coach)
 STR_NAME_RZ25G          :RZ25G (25m Improved Soft Seat Passenger Coach)
 STR_NAME_YW25G          :YW25G (25m Improved Hard Sleeper Passenger Coach)
 STR_NAME_RW25G          :RW25G (25m Improved Soft Sleeper Passenger Coach)
-
-STR_NAME_HXD3C          :HXD3C (Hexie/Harmony 3C Electric Locomotive)
 STR_NAME_YZ25T          :YZ25T (25m Accelerated Hard Seat Passenger Coach)
 STR_NAME_RZ25T          :RZ25T (25m Accelerated Soft Seat Passenger Coach)
 STR_NAME_YW25T          :YW25T (25m Accelerated Hard Sleeper Passenger Coach)
@@ -51,6 +49,26 @@ STR_NAME_RW25K          :RW25K (25m Rapid Soft Sleeper Passenger Coach)
 
 STR_NAME_DF4K           :DF4 (Dongfeng 4 Diesel Locomotive) (Passenger Type)
 STR_NAME_DF4H           :DF4 (Dongfeng 4 Diesel Locomotive) (Freight Type)
+STR_NAME_HXD3C          :HXD3C (Hexie/Harmony 3C Electric Locomotive)
+
+STR_NAME_CR200J1        :CR200J1 (EMU)
+
+STR_NAME_ZEMUW          :2nd-Class MU Wagon
+STR_NAME_ZYMUW          :1st-Class MU Wagon
+STR_NAME_ZTMUW          :Limited-Class MU Wagon
+STR_NAME_ZSMUW          :Business-Class MU Wagon
+STR_NAME_SWMUW          :Luxury-Business-Class MU Wagon
+STR_NAME_ZETMUW         :2nd-Class Limited-Class Combined MU Wagon
+STR_NAME_ZESMUW         :2nd-Class Business-Class Combined MU Wagon
+STR_NAME_ZESWMUW        :2nd-Class Luxury-Business-Class Combined MU Wagon
+STR_NAME_ZYTMUW         :1st-Class Limited-Class Combined MU Wagon
+STR_NAME_ZYSMUW         :1st-Class Business-Class Combined MU Wagon
+STR_NAME_ZYSWMUW        :1st-Class Luxury-Business-Class Combined MU Wagon
+STR_NAME_ZECMUW         :2nd-Class Restaurant Combined MU Wagon
+STR_NAME_WEMUW          :2nd-Class Sleeper MU Wagon
+STR_NAME_WYMUW          :1st-Class Sleeper MU Wagon
+STR_NAME_WGMUW          :Top-Class Sleeper MU Wagon
+
 
 STR_DESC_3                          :{STRING}{}{STRING}{}{STRING}
 STR_DESC_2                          :{STRING}{}{STRING}
@@ -62,9 +80,11 @@ STR_25K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED
 
 STR_DF4_NICKNAME                    :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
 STR_HXD3C_NICKNAME                  :{BLACK}Nickname: {GOLD}Electric Baboon
+STR_CR200J_NICKNAME                 :{BLACK}Nickname: {GREEN}"Hulk" {GOLD}(Official), {GREEN}"Trash Bin" {GOLD}(Folk)
 
 
 STR_RELIABILITY_32                  :{BLACK}Reliability decay speed: {GOLD}32
+STR_RELIABILITY_20                  :{BLACK}Reliability decay speed: {GOLD}20
 STR_RELIABILITY_6                   :{BLACK}Reliability decay speed: {GOLD}6
 
 STR_ORIGINAL            :{GOLD} - Original Livery
@@ -82,3 +102,48 @@ STR_DECAY_1536_1920     :{BLACK}Cargo Age Period: {GOLD}1920{BLACK}, {RED}1536 a
 STR_DECAY_200           :{BLACK}Cargo Age Period: {GOLD}200
 STR_DECAY_400           :{BLACK}Cargo Age Period: {GOLD}400
 STR_DECAY_800           :{BLACK}Cargo Age Period: {GOLD}800
+STR_DECAY_300           :{BLACK}Cargo Age Period: {GOLD}300
+STR_DECAY_500           :{BLACK}Cargo Age Period: {GOLD}500
+STR_DECAY_1000          :{BLACK}Cargo Age Period: {GOLD}1000
+STR_DECAY_2000          :{BLACK}Cargo Age Period: {GOLD}2000
+STR_DECAY_700           :{BLACK}Cargo Age Period: {GOLD}700
+STR_DECAY_1400          :{BLACK}Cargo Age Period: {GOLD}1400
+STR_DECAY_2800          :{BLACK}Cargo Age Period: {GOLD}2800
+STR_DECAY_1600          :{BLACK}Cargo Age Period: {GOLD}1600
+STR_DECAY_3200          :{BLACK}Cargo Age Period: {GOLD}3200
+STR_DECAY_960           :{BLACK}Cargo Age Period: {GOLD}960
+STR_DECAY_1920          :{BLACK}Cargo Age Period: {GOLD}1920
+STR_DECAY_3840          :{BLACK}Cargo Age Period: {GOLD}3840
+STR_DECAY_600           :{BLACK}Cargo Age Period: {GOLD}600
+STR_DECAY_2400          :{BLACK}Cargo Age Period: {GOLD}2400
+STR_DECAY_900           :{BLACK}Cargo Age Period: {GOLD}900
+STR_DECAY_1800          :{BLACK}Cargo Age Period: {GOLD}1800
+STR_DECAY_3600          :{BLACK}Cargo Age Period: {GOLD}3600
+STR_DECAY_1200          :{BLACK}Cargo Age Period: {GOLD}1200
+STR_DECAY_4800          :{BLACK}Cargo Age Period: {GOLD}4800
+STR_DECAY_300_700       :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 300, Limited-Class Part 700
+STR_DECAY_300_800       :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 300, Business-Class Part 800
+STR_DECAY_300_960       :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 300, Luxury-Business-Class Part 960
+STR_DECAY_500_700       :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 500, Limited-Class Part 700
+STR_DECAY_500_800       :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 500, Business-Class Part 800
+STR_DECAY_500_960       :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 500, Luxury-Business-Class Part 960
+STR_DECAY_600_1400      :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 600, Limited-Class Part 1400
+STR_DECAY_600_1600      :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 600, Business-Class Part 1600
+STR_DECAY_600_1920      :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 600, Luxury-Business-Class Part 1920
+STR_DECAY_1000_1400     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 1000, Limited-Class Part 1400
+STR_DECAY_1000_1600     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 1000, Business-Class Part 1600
+STR_DECAY_1000_1920     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 1000, Luxury-Business-Class Part 1920
+STR_DECAY_1200_2800     :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 1200, Limited-Class Part 2800
+STR_DECAY_1200_3200     :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 1200, Business-Class Part 3200
+STR_DECAY_1200_3840     :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 1200, Luxury-Business-Class Part 3840
+STR_DECAY_2000_2800     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 2000, Limited-Class Part 2800
+STR_DECAY_2000_3200     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 2000, Business-Class Part 3200
+STR_DECAY_2000_3840     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 2000, Luxury-Business-Class Part 3840
+
+STR_CAFE_EFFECT         :{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Eliminates All Running Costs of Passenger Cars except Restaurant Cars
+
+STR_ATTACH_ALL_CRH_CR               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs
+STR_ATTACH_SLEEPER_MU               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs
+STR_ATTACH_CR200J                   :{BLACK}Matching MUs: {GOLD}CR200J Series
+STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZT, ZS, SW, ZET, ZES, ZESW, ZYT, ZYS, ZYSW, ZEC, WE, WY, WG
+STR_TOO_SHORT                       :TOO SHORT!

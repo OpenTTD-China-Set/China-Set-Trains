@@ -47,7 +47,7 @@ item (FEAT_TRAINS, hxd3c) {
         // Stats
         length:                         switch_length_1_8_1;
         cargo_capacity:                 0;
-        cost_factor:                    127;
+        cost_factor:                    128;
         running_cost_factor:            52 * runningcostfactor();
         purchase_running_cost_factor:   312;
         purchase_cargo_capacity:        0;

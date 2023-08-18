@@ -50,7 +50,7 @@ item (FEAT_TRAINS, df4h) {
         // Stats
         length:                         switch_length_1_8_1;
         cargo_capacity:                 0;
-        cost_factor:                    53;
+        cost_factor:                    54;
         running_cost_factor:            25 * runningcostfactor();
         purchase_running_cost_factor:   150;
         purchase_cargo_capacity:        0;
