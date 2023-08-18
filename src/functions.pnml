@@ -88,10 +88,16 @@ switch (FEAT_TRAINS, SELF, cr200jwagonxl, vehicle_type_id) {
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
-switch (FEAT_TRAINS, SELF, muhead, vehicle_type_id) {
+switch (FEAT_TRAINS, PARENT, muhead, vehicle_type_id) {
     1024..1051: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     8192..14335: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, locowagon, vehicle_type_id) {
+    1024..1051: return CB_RESULT_ATTACH_DISALLOW;
+    8192..14335: return CB_RESULT_ATTACH_DISALLOW;
+    return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
 }
 
 switch (FEAT_TRAINS, SELF, switch_visual_effect_and_powered, ((position_in_articulated_veh == 0) && !func_is_reversed()) || ((position_in_articulated_veh_from_end == 0) && func_is_reversed()) ) {

@@ -41,6 +41,7 @@ item (FEAT_TRAINS, df4k) {
         // Menu
         additional_text:                switch_df4k_additional_text;
         cargo_subtype_text:             switch_df4k_subtype_text;
+        can_attach_wagon:               locowagon;
 
         // Graphics
         default:                        switch_df4k_graphics;

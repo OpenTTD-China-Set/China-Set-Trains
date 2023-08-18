@@ -9,7 +9,7 @@ grf {
     name: string(STR_GRF_NAME);
     desc: string(STR_GRF_DESC, string(STR_GRF_DESC_EXTRA), string(STR_GRF_DESC_README));
     url: string(STR_GRF_URL);
-    version: 43;
+    version: 44;
     min_compatible_version: 1;
 
     param 0 {
@@ -190,28 +190,28 @@ template template_10_standard (a, b) {
     [-36, -84, "gfx/"+a+"/"+b+"/8.png"]
 }
 
-template template_13_standard (a, b) {
-    [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
-    [-76, -74, "gfx/"+a+"/"+b+"/2.png"]
-    [-104, -48, "gfx/"+a+"/"+b+"/3.png"]
-    [-42, -74, "gfx/"+a+"/"+b+"/4.png"]
-    [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
-    [-76, -74, "gfx/"+a+"/"+b+"/6.png"]
-    [-104, -48, "gfx/"+a+"/"+b+"/7.png"]
-    [-42, -74, "gfx/"+a+"/"+b+"/8.png"]
-}
+// template template_13_standard (a, b) {
+//     [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
+//     [-76, -74, "gfx/"+a+"/"+b+"/2.png"]
+//     [-104, -48, "gfx/"+a+"/"+b+"/3.png"]
+//     [-42, -74, "gfx/"+a+"/"+b+"/4.png"]
+//     [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
+//     [-76, -74, "gfx/"+a+"/"+b+"/6.png"]
+//     [-104, -48, "gfx/"+a+"/"+b+"/7.png"]
+//     [-42, -74, "gfx/"+a+"/"+b+"/8.png"]
+// }
 
 
-template template_9_standard (a, b) {
-    [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
-    [-62, -84, "gfx/"+a+"/"+b+"/2.png"]
-    [-72, -48, "gfx/"+a+"/"+b+"/3.png"]
-    [-35, -84, "gfx/"+a+"/"+b+"/4.png"]
-    [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
-    [-62, -84, "gfx/"+a+"/"+b+"/6.png"]
-    [-72, -48, "gfx/"+a+"/"+b+"/7.png"]
-    [-35, -84, "gfx/"+a+"/"+b+"/8.png"]
-}
+// template template_9_standard (a, b) {
+//     [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
+//     [-62, -84, "gfx/"+a+"/"+b+"/2.png"]
+//     [-72, -48, "gfx/"+a+"/"+b+"/3.png"]
+//     [-35, -84, "gfx/"+a+"/"+b+"/4.png"]
+//     [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
+//     [-62, -84, "gfx/"+a+"/"+b+"/6.png"]
+//     [-72, -48, "gfx/"+a+"/"+b+"/7.png"]
+//     [-35, -84, "gfx/"+a+"/"+b+"/8.png"]
+// }
 
 // Below shamelessly stolen from JP+ Shinkansen
 
@@ -470,10 +470,16 @@ switch (FEAT_TRAINS, SELF, cr200jwagonxl, vehicle_type_id) {
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
-switch (FEAT_TRAINS, SELF, muhead, vehicle_type_id) {
+switch (FEAT_TRAINS, PARENT, muhead, vehicle_type_id) {
     1024..1051: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     8192..14335: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, locowagon, vehicle_type_id) {
+    1024..1051: return CB_RESULT_ATTACH_DISALLOW;
+    8192..14335: return CB_RESULT_ATTACH_DISALLOW;
+    return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
 }
 
 switch (FEAT_TRAINS, SELF, switch_visual_effect_and_powered, ((position_in_articulated_veh == 0) && !func_is_reversed()) || ((position_in_articulated_veh_from_end == 0) && func_is_reversed()) ) {
@@ -708,7 +714,7 @@ item (FEAT_TRAINS, zemuw) {
 
         // Availability
         climates_available: ALL_CLIMATES;
-        introduction_date: date(1900,01,01);
+        introduction_date: date(2000,01,01);
         model_life: VEHICLE_NEVER_EXPIRES;
         vehicle_life: 30;
         track_type: SAAN;
@@ -808,7 +814,7 @@ item (FEAT_TRAINS, zymuw) {
 
         // Availability
         climates_available: ALL_CLIMATES;
-        introduction_date: date(1900,01,01);
+        introduction_date: date(2000,01,01);
         model_life: VEHICLE_NEVER_EXPIRES;
         vehicle_life: 30;
         track_type: SAAN;
@@ -908,7 +914,7 @@ item (FEAT_TRAINS, ztmuw) {
 
         // Availability
         climates_available: ALL_CLIMATES;
-        introduction_date: date(1900,01,01);
+        introduction_date: date(2000,01,01);
         model_life: VEHICLE_NEVER_EXPIRES;
         vehicle_life: 30;
         track_type: SAAN;
@@ -1008,7 +1014,7 @@ item (FEAT_TRAINS, zsmuw) {
 
         // Availability
         climates_available: ALL_CLIMATES;
-        introduction_date: date(1900,01,01);
+        introduction_date: date(2000,01,01);
         model_life: VEHICLE_NEVER_EXPIRES;
         vehicle_life: 30;
         track_type: SAAN;
@@ -1108,7 +1114,7 @@ item (FEAT_TRAINS, swmuw) {
 
         // Availability
         climates_available: ALL_CLIMATES;
-        introduction_date: date(1900,01,01);
+        introduction_date: date(2000,01,01);
         model_life: VEHICLE_NEVER_EXPIRES;
         vehicle_life: 30;
         track_type: SAAN;
@@ -1213,7 +1219,7 @@ item (FEAT_TRAINS, zetmuw) {
 
         // Availability
         climates_available: ALL_CLIMATES;
-        introduction_date: date(1900,01,01);
+        introduction_date: date(2000,01,01);
         model_life: VEHICLE_NEVER_EXPIRES;
         vehicle_life: 30;
         track_type: SAAN;
@@ -1318,7 +1324,7 @@ item (FEAT_TRAINS, zesmuw) {
 
         // Availability
         climates_available: ALL_CLIMATES;
-        introduction_date: date(1900,01,01);
+        introduction_date: date(2000,01,01);
         model_life: VEHICLE_NEVER_EXPIRES;
         vehicle_life: 30;
         track_type: SAAN;
@@ -1423,7 +1429,7 @@ item (FEAT_TRAINS, zeswmuw) {
 
         // Availability
         climates_available: ALL_CLIMATES;
-        introduction_date: date(1900,01,01);
+        introduction_date: date(2000,01,01);
         model_life: VEHICLE_NEVER_EXPIRES;
         vehicle_life: 30;
         track_type: SAAN;
@@ -1528,7 +1534,7 @@ item (FEAT_TRAINS, zytmuw) {
 
         // Availability
         climates_available: ALL_CLIMATES;
-        introduction_date: date(1900,01,01);
+        introduction_date: date(2000,01,01);
         model_life: VEHICLE_NEVER_EXPIRES;
         vehicle_life: 30;
         track_type: SAAN;
@@ -1633,7 +1639,7 @@ item (FEAT_TRAINS, zysmuw) {
 
         // Availability
         climates_available: ALL_CLIMATES;
-        introduction_date: date(1900,01,01);
+        introduction_date: date(2000,01,01);
         model_life: VEHICLE_NEVER_EXPIRES;
         vehicle_life: 30;
         track_type: SAAN;
@@ -1738,7 +1744,7 @@ item (FEAT_TRAINS, zyswmuw) {
 
         // Availability
         climates_available: ALL_CLIMATES;
-        introduction_date: date(1900,01,01);
+        introduction_date: date(2000,01,01);
         model_life: VEHICLE_NEVER_EXPIRES;
         vehicle_life: 30;
         track_type: SAAN;
@@ -1838,7 +1844,7 @@ item (FEAT_TRAINS, zecmuw) {
 
         // Availability
         climates_available: ALL_CLIMATES;
-        introduction_date: date(1900,01,01);
+        introduction_date: date(2000,01,01);
         model_life: VEHICLE_NEVER_EXPIRES;
         vehicle_life: 30;
         track_type: SAAN;
@@ -1939,7 +1945,7 @@ item (FEAT_TRAINS, wemuw) {
 
         // Availability
         climates_available: ALL_CLIMATES;
-        introduction_date: date(1900,01,01);
+        introduction_date: date(2000,01,01);
         model_life: VEHICLE_NEVER_EXPIRES;
         vehicle_life: 30;
         track_type: SAAN;
@@ -2039,7 +2045,7 @@ item (FEAT_TRAINS, wymuw) {
 
         // Availability
         climates_available: ALL_CLIMATES;
-        introduction_date: date(1900,01,01);
+        introduction_date: date(2000,01,01);
         model_life: VEHICLE_NEVER_EXPIRES;
         vehicle_life: 30;
         track_type: SAAN;
@@ -2139,7 +2145,7 @@ item (FEAT_TRAINS, wgmuw) {
 
         // Availability
         climates_available: ALL_CLIMATES;
-        introduction_date: date(1900,01,01);
+        introduction_date: date(2000,01,01);
         model_life: VEHICLE_NEVER_EXPIRES;
         vehicle_life: 30;
         track_type: SAAN;
@@ -3688,6 +3694,7 @@ item (FEAT_TRAINS, df4k) {
         // Menu
         additional_text: switch_df4k_additional_text;
         cargo_subtype_text: switch_df4k_subtype_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_df4k_graphics;
@@ -3811,6 +3818,7 @@ item (FEAT_TRAINS, df4h) {
         // Menu
         additional_text: switch_df4h_additional_text;
         cargo_subtype_text: switch_df4h_subtype_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_df4h_graphics;
@@ -3912,6 +3920,7 @@ item (FEAT_TRAINS, hxd3c) {
     graphics {
         // Menu
         additional_text: switch_hxd3c_additional_text;
+        can_attach_wagon: locowagon;
         // Graphics
         default: switch_hxd3c_graphics;
         purchase: spriteset_hxd3c_purchase_original;
@@ -3962,13 +3971,13 @@ spriteset (spriteset_cr200j1_cab) {
 }
 
 alternative_sprites(spriteset_cr200j1_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_9_standard ("25-emu", "fxd1-cr200j")
+    template_10_standard ("25-emu", "fxd1-cr200j")
 }
 alternative_sprites (spriteset_cr200j1_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_12_standard ("unit-wagons-rail", "25dt-cr200j")
 }
 alternative_sprites (spriteset_cr200j1_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_13_standard ("unit-wagons-rail", "kz25dt-cr200j")
+    template_12_standard ("unit-wagons-rail", "kz25dt-cr200j")
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200j1_articulated_part, extra_callback_info1) {
@@ -4005,7 +4014,6 @@ switch (FEAT_TRAINS, SELF, switch_cr200j1_wagon_graphics, position_in_consist_fr
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200j1_wagon_length, position_in_consist_from_end) {
-    0..2: switch_length_3_7_3;
     switch_length_2_8_2;
 }
 
@@ -4270,6 +4278,30 @@ switch (FEAT_TRAINS, SELF, switch_cr200j1_wagon_articulated_part, vehicle_type_i
     1039: switch_wgmuw_articulated_part;
     return;
 }
+
+switch (FEAT_TRAINS, SELF, switch_cr200j1_wagon_cargo_decay, vehicle_type_id) {
+    1024: return 300;
+    1025: return 500;
+    1026: return 700;
+    1027: return 800;
+    1028: return 960;
+    1029: switch_zetmuw_cargo_decay;
+    1030: switch_zesmuw_cargo_decay;
+    1031: switch_zeswmuw_cargo_decay;
+    1032: switch_zytmuw_cargo_decay;
+    1033: switch_zysmuw_cargo_decay;
+    1034: switch_zyswmuw_cargo_decay;
+    1035: return 300;
+    1036: return 600;
+    1037: return 900;
+    1039: return 1200;
+    return;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200j1_wagon_bitmask, vehicle_type_id) {
+    1035: return bitmask(1);
+    return 0;
+}
 # 102 "chinasettrains.pnml" 2
 # 1 "src/25-emu/cr200j1_item.pnml" 1
 item (FEAT_TRAINS, cr200j) {
@@ -4321,7 +4353,7 @@ item (FEAT_TRAINS, cr200j) {
         articulated_part: switch_cr200j1_articulated_part;
 
         // Stats
-        length: switch_length_1_7_1;
+        length: switch_length_1_8_1;
         cargo_capacity: switch_cr200j1_head_capacity;
         cost_factor: 96;
         running_cost_factor: 44 * runningcostfactor();
@@ -4336,6 +4368,8 @@ item (FEAT_TRAINS, cr200j) {
         length: switch_cr200j1_wagon_length;
         weight: 56;
         can_attach_wagon: muhead;
+        cargo_age_period: switch_cr200j1_wagon_cargo_decay() << param_cargo_decay;
+        bitmask_vehicle_info: switch_cr200j1_wagon_bitmask;
         articulated_part: switch_cr200j1_wagon_articulated_part;
         cost_factor: switch_cr200j1_wagon_cost;
         running_cost_factor: switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
@@ -4346,6 +4380,8 @@ item (FEAT_TRAINS, cr200j) {
         length: switch_cr200j1_wagon_length;
         weight: 56;
         can_attach_wagon: muhead;
+        cargo_age_period: switch_cr200j1_wagon_cargo_decay() << param_cargo_decay;
+        bitmask_vehicle_info: switch_cr200j1_wagon_bitmask;
         articulated_part: switch_cr200j1_wagon_articulated_part;
         cost_factor: switch_cr200j1_wagon_cost;
         running_cost_factor: switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
@@ -4356,6 +4392,8 @@ item (FEAT_TRAINS, cr200j) {
         length: switch_cr200j1_wagon_length;
         weight: 56;
         can_attach_wagon: muhead;
+        cargo_age_period: switch_cr200j1_wagon_cargo_decay() << param_cargo_decay;
+        bitmask_vehicle_info: switch_cr200j1_wagon_bitmask;
         articulated_part: switch_cr200j1_wagon_articulated_part;
         cost_factor: switch_cr200j1_wagon_cost;
         running_cost_factor: switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
@@ -4366,6 +4404,8 @@ item (FEAT_TRAINS, cr200j) {
         length: switch_cr200j1_wagon_length;
         weight: 56;
         can_attach_wagon: muhead;
+        cargo_age_period: switch_cr200j1_wagon_cargo_decay() << param_cargo_decay;
+        bitmask_vehicle_info: switch_cr200j1_wagon_bitmask;
         articulated_part: switch_cr200j1_wagon_articulated_part;
         cost_factor: switch_cr200j1_wagon_cost;
         running_cost_factor: switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
@@ -4376,6 +4416,8 @@ item (FEAT_TRAINS, cr200j) {
         length: switch_cr200j1_wagon_length;
         weight: 56;
         can_attach_wagon: muhead;
+        cargo_age_period: switch_cr200j1_wagon_cargo_decay() << param_cargo_decay;
+        bitmask_vehicle_info: switch_cr200j1_wagon_bitmask;
         articulated_part: switch_cr200j1_wagon_articulated_part;
         cost_factor: switch_cr200j1_wagon_cost;
         running_cost_factor: switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
@@ -4386,6 +4428,8 @@ item (FEAT_TRAINS, cr200j) {
         length: switch_cr200j1_wagon_length;
         weight: 56;
         can_attach_wagon: muhead;
+        cargo_age_period: switch_cr200j1_wagon_cargo_decay() << param_cargo_decay;
+        bitmask_vehicle_info: switch_cr200j1_wagon_bitmask;
         articulated_part: switch_cr200j1_wagon_articulated_part;
         cost_factor: switch_cr200j1_wagon_cost;
         running_cost_factor: switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
@@ -4396,6 +4440,8 @@ item (FEAT_TRAINS, cr200j) {
         length: switch_cr200j1_wagon_length;
         weight: 56;
         can_attach_wagon: muhead;
+        cargo_age_period: switch_cr200j1_wagon_cargo_decay() << param_cargo_decay;
+        bitmask_vehicle_info: switch_cr200j1_wagon_bitmask;
         articulated_part: switch_cr200j1_wagon_articulated_part;
         cost_factor: switch_cr200j1_wagon_cost;
         running_cost_factor: switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
@@ -4406,6 +4452,8 @@ item (FEAT_TRAINS, cr200j) {
         length: switch_cr200j1_wagon_length;
         weight: 56;
         can_attach_wagon: muhead;
+        cargo_age_period: switch_cr200j1_wagon_cargo_decay() << param_cargo_decay;
+        bitmask_vehicle_info: switch_cr200j1_wagon_bitmask;
         articulated_part: switch_cr200j1_wagon_articulated_part;
         cost_factor: switch_cr200j1_wagon_cost;
         running_cost_factor: switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
@@ -4416,6 +4464,8 @@ item (FEAT_TRAINS, cr200j) {
         length: switch_cr200j1_wagon_length;
         weight: 56;
         can_attach_wagon: muhead;
+        cargo_age_period: switch_cr200j1_wagon_cargo_decay() << param_cargo_decay;
+        bitmask_vehicle_info: switch_cr200j1_wagon_bitmask;
         articulated_part: switch_cr200j1_wagon_articulated_part;
         cost_factor: switch_cr200j1_wagon_cost;
         running_cost_factor: switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
@@ -4426,6 +4476,8 @@ item (FEAT_TRAINS, cr200j) {
         length: switch_cr200j1_wagon_length;
         weight: 56;
         can_attach_wagon: muhead;
+        cargo_age_period: switch_cr200j1_wagon_cargo_decay() << param_cargo_decay;
+        bitmask_vehicle_info: switch_cr200j1_wagon_bitmask;
         articulated_part: switch_cr200j1_wagon_articulated_part;
         cost_factor: switch_cr200j1_wagon_cost;
         running_cost_factor: switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
@@ -4436,6 +4488,8 @@ item (FEAT_TRAINS, cr200j) {
         length: switch_cr200j1_wagon_length;
         weight: 56;
         can_attach_wagon: muhead;
+        cargo_age_period: switch_cr200j1_wagon_cargo_decay() << param_cargo_decay;
+        bitmask_vehicle_info: switch_cr200j1_wagon_bitmask;
         articulated_part: switch_cr200j1_wagon_articulated_part;
         cost_factor: switch_cr200j1_wagon_cost;
         running_cost_factor: switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
@@ -4446,6 +4500,8 @@ item (FEAT_TRAINS, cr200j) {
         length: switch_cr200j1_wagon_length;
         weight: 56;
         can_attach_wagon: muhead;
+        cargo_age_period: switch_cr200j1_wagon_cargo_decay() << param_cargo_decay;
+        bitmask_vehicle_info: switch_cr200j1_wagon_bitmask;
         articulated_part: switch_cr200j1_wagon_articulated_part;
         cost_factor: switch_cr200j1_wagon_cost;
         running_cost_factor: switch_cr200j1_wagon_running() * runningcostfactor(); // IT IS A RESTAURANT CAR!
@@ -4456,6 +4512,8 @@ item (FEAT_TRAINS, cr200j) {
         length: switch_cr200j1_wagon_length;
         weight: 56;
         can_attach_wagon: muhead;
+        cargo_age_period: switch_cr200j1_wagon_cargo_decay() << param_cargo_decay;
+        bitmask_vehicle_info: switch_cr200j1_wagon_bitmask;
         articulated_part: switch_cr200j1_wagon_articulated_part;
         cost_factor: switch_cr200j1_wagon_cost;
         running_cost_factor: switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
@@ -4466,6 +4524,8 @@ item (FEAT_TRAINS, cr200j) {
         length: switch_cr200j1_wagon_length;
         weight: 56;
         can_attach_wagon: muhead;
+        cargo_age_period: switch_cr200j1_wagon_cargo_decay() << param_cargo_decay;
+        bitmask_vehicle_info: switch_cr200j1_wagon_bitmask;
         articulated_part: switch_cr200j1_wagon_articulated_part;
         cost_factor: switch_cr200j1_wagon_cost;
         running_cost_factor: switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
@@ -4476,6 +4536,8 @@ item (FEAT_TRAINS, cr200j) {
         length: switch_cr200j1_wagon_length;
         weight: 56;
         can_attach_wagon: muhead;
+        cargo_age_period: switch_cr200j1_wagon_cargo_decay() << param_cargo_decay;
+        bitmask_vehicle_info: switch_cr200j1_wagon_bitmask;
         articulated_part: switch_cr200j1_wagon_articulated_part;
         cost_factor: switch_cr200j1_wagon_cost;
         running_cost_factor: switch_cr200j1_wagon_running() * runningcostfactor() * cafefactor();
