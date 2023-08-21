@@ -1,0 +1,51 @@
+// Begin C64
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_c64_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_c64_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "c64-red")
+}
+
+// Vehicle
+spriteset (spriteset_c64_original) {
+    template_empty ()
+}
+spriteset (spriteset_c64_original_full_one) {
+    template_empty()
+}
+alternative_sprites(spriteset_c64_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_7_standard ("wagons", "c64-red")
+}
+alternative_sprites(spriteset_c64_original_full_one, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_7_standard ("wagons", "c64-red-full-one")
+}
+
+switch (FEAT_TRAINS, SELF, switch_c64_empty_full, cargo_count < 40) {
+    0: spriteset_c64_original_full_one;
+    spriteset_c64_original;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c64_articulated_part, extra_callback_info1) {
+    1..2: return c64;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c64_graphics, position_in_articulated_veh % 3) {
+    1: switch_c64_empty_full;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_c64_capacity, position_in_articulated_veh % 3) {
+    1: return 61;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c64_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_C64_LIVERY_AVAILABILITY), string(STR_DECAY_370));
+    2: return string(STR_DESC_2, string(STR_C64_LIVERY_AVAILABILITY), string(STR_DECAY_740));
+    return string(STR_DESC_2, string(STR_C64_LIVERY_AVAILABILITY), string(STR_DECAY_185));
+}

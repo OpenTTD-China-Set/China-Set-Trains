@@ -65,10 +65,11 @@ item (FEAT_TRAINS, yz25k, 2058) {}
 item (FEAT_TRAINS, rz25k, 2059) {}
 item (FEAT_TRAINS, yw25k, 2060) {}
 item (FEAT_TRAINS, rw25k, 2061) {}
+item (FEAT_TRAINS, kd25g, 2062) {}
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 #define id_range_wagons 0x0C00..0x0FFF
-
+item (FEAT_TRAINS, c64, 3072) {}
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
@@ -82,7 +83,7 @@ item (FEAT_TRAINS, df4h, 5121) {}
 //25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
 #define id_range_25_electric 0x1800..0x1BFF
 item (FEAT_TRAINS, hxd3c, 6144) {}
-
+item (FEAT_TRAINS, hxd3d, 6145) {}
 
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
 #define id_range_multi_loco 0x1C00..0x1FFF 

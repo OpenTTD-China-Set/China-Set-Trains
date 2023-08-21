@@ -39,7 +39,7 @@ item (FEAT_TRAINS, cr200j) {
     graphics {
         // Menu
         additional_text:                switch_cr200j1_additional_text;
-        can_attach_wagon:               muhead;
+        can_attach_wagon:               singlemu;
         start_stop:                     mu4car;
         // Graphics
         default:                        switch_cr200j1_graphics;

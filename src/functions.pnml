@@ -41,6 +41,13 @@ switch (FEAT_TRAINS, PARENT, acfactor, (current_year < 2000) || (hasbit(bitmask_
     return 5;
 }
 
+// Electric Engines MUST BE ELECTRIFIED to supply electricity
+
+switch (FEAT_TRAINS, SELF, airconditioner, vehicle_is_powered) {
+    1: return bitmask(7);
+    return 0;
+}
+
 switch (FEAT_TRAINS, SELF, crhwagon, vehicle_type_id) {
     1024..1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     return CB_RESULT_ATTACH_DISALLOW;
@@ -88,9 +95,14 @@ switch (FEAT_TRAINS, SELF, cr200jwagonxl, vehicle_type_id) {
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
-switch (FEAT_TRAINS, PARENT, muhead, vehicle_type_id) {
+switch (FEAT_TRAINS, SELF, muhead, vehicle_type_id) {
     1024..1051: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     8192..14335: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, singlemu, vehicle_type_id) {
+    1024..1051: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
@@ -135,6 +147,12 @@ switch (FEAT_TRAINS, SELF, mu4car, num_vehs_in_consist < 12) {
 // Standard 1-7-1 Length
     switch (FEAT_TRAINS, SELF, switch_length_1_7_1, position_in_articulated_veh % 3) {
         1: return 7;
+        return 1;
+    }
+
+// Standard 1-5-1 Length
+    switch (FEAT_TRAINS, SELF, switch_length_1_5_1, position_in_articulated_veh % 3) {
+        1: return 5;
         return 1;
     }
 

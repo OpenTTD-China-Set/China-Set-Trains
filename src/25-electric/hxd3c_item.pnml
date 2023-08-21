@@ -34,7 +34,6 @@ item (FEAT_TRAINS, hxd3c) {
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            104;
         reliability_decay:              6;
-        bitmask_vehicle_info:           bitmask(7);
     }
     graphics {
         // Menu
@@ -52,6 +51,7 @@ item (FEAT_TRAINS, hxd3c) {
         running_cost_factor:            52 * runningcostfactor();
         purchase_running_cost_factor:   312;
         purchase_cargo_capacity:        0;
+        bitmask_vehicle_info:           airconditioner;
     }
 }
 

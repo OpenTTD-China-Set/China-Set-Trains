@@ -1,0 +1,37 @@
+// Begin KD25G
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_kd25g_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_kd25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "kd25g")
+}
+
+// Vehicle
+spriteset (spriteset_kd25g_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_kd25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_10_standard ("coaches", "kd25g")
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25g_articulated_part, extra_callback_info1) {
+    1..2: return kd25g;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25g_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_kd25g_original;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25g_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25g_additional_text, param_cargo_decay) {
+    return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_AIR_CONDITIONER_EFFECT));
+}

@@ -35,6 +35,7 @@ item (FEAT_TRAINS, xl25g) {
     graphics {
         // Menu
         additional_text:                switch_xl25g_additional_text;
+        can_attach_wagon:               locowagon;
         
         // Graphics
         default:                        switch_xl25g_graphics;

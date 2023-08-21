@@ -1,6 +1,6 @@
-VERSION        :0.0.4.44
-VERSION_STRING :0.0.4.44
-TITLE          :China Set: Trains 0.0.4.44
+VERSION        :0.0.5.78
+VERSION_STRING :0.0.5.78
+TITLE          :China Set: Trains 0.0.5.78
 FILENAME       :chinasettrains.grf
 REPO_HASH      :619944a30dbe
-NEWGRF_VERSION :44
+NEWGRF_VERSION :78

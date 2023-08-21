@@ -56,11 +56,11 @@ template template_12_standard (a, b) {
 
 template template_10_standard (a, b) {
     [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
-    [-64, -84, "gfx/"+a+"/"+b+"/2.png"]
+    [-62, -82, "gfx/"+a+"/"+b+"/2.png"]
     [-80, -48, "gfx/"+a+"/"+b+"/3.png"]
     [-36, -84, "gfx/"+a+"/"+b+"/4.png"]
     [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
-    [-64, -84, "gfx/"+a+"/"+b+"/6.png"]
+    [-62, -82, "gfx/"+a+"/"+b+"/6.png"]
     [-80, -48, "gfx/"+a+"/"+b+"/7.png"]
     [-36, -84, "gfx/"+a+"/"+b+"/8.png"]
 }
@@ -87,6 +87,17 @@ template template_10_standard (a, b) {
 //     [-72, -48, "gfx/"+a+"/"+b+"/7.png"]
 //     [-35, -84, "gfx/"+a+"/"+b+"/8.png"]
 // }
+
+template template_7_standard (a, b) {
+    [-12, -104, "gfx/"+a+"/"+b+"/1.png"]
+    [-34, -96, "gfx/"+a+"/"+b+"/2.png"]
+    [-36, -48, "gfx/"+a+"/"+b+"/3.png"]
+    [-4, -84, "gfx/"+a+"/"+b+"/4.png"]
+    [-12, -84, "gfx/"+a+"/"+b+"/5.png"]
+    [-60, -84, "gfx/"+a+"/"+b+"/6.png"]
+    [-80, -48, "gfx/"+a+"/"+b+"/7.png"]
+    [-24, -92, "gfx/"+a+"/"+b+"/8.png"]
+}
 
 // Below shamelessly stolen from JP+ Shinkansen
 

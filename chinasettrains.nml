@@ -9,7 +9,7 @@ grf {
     name: string(STR_GRF_NAME);
     desc: string(STR_GRF_DESC, string(STR_GRF_DESC_EXTRA), string(STR_GRF_DESC_README));
     url: string(STR_GRF_URL);
-    version: 44;
+    version: 78;
     min_compatible_version: 1;
 
     param 0 {
@@ -181,11 +181,11 @@ template template_12_standard (a, b) {
 
 template template_10_standard (a, b) {
     [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
-    [-64, -84, "gfx/"+a+"/"+b+"/2.png"]
+    [-62, -82, "gfx/"+a+"/"+b+"/2.png"]
     [-80, -48, "gfx/"+a+"/"+b+"/3.png"]
     [-36, -84, "gfx/"+a+"/"+b+"/4.png"]
     [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
-    [-64, -84, "gfx/"+a+"/"+b+"/6.png"]
+    [-62, -82, "gfx/"+a+"/"+b+"/6.png"]
     [-80, -48, "gfx/"+a+"/"+b+"/7.png"]
     [-36, -84, "gfx/"+a+"/"+b+"/8.png"]
 }
@@ -212,6 +212,17 @@ template template_10_standard (a, b) {
 //     [-72, -48, "gfx/"+a+"/"+b+"/7.png"]
 //     [-35, -84, "gfx/"+a+"/"+b+"/8.png"]
 // }
+
+template template_7_standard (a, b) {
+    [-12, -104, "gfx/"+a+"/"+b+"/1.png"]
+    [-34, -96, "gfx/"+a+"/"+b+"/2.png"]
+    [-36, -48, "gfx/"+a+"/"+b+"/3.png"]
+    [-4, -84, "gfx/"+a+"/"+b+"/4.png"]
+    [-12, -84, "gfx/"+a+"/"+b+"/5.png"]
+    [-60, -84, "gfx/"+a+"/"+b+"/6.png"]
+    [-80, -48, "gfx/"+a+"/"+b+"/7.png"]
+    [-24, -92, "gfx/"+a+"/"+b+"/8.png"]
+}
 
 // Below shamelessly stolen from JP+ Shinkansen
 
@@ -423,6 +434,13 @@ switch (FEAT_TRAINS, PARENT, acfactor, (current_year < 2000) || (hasbit(bitmask_
     return 5;
 }
 
+// Electric Engines MUST BE ELECTRIFIED to supply electricity
+
+switch (FEAT_TRAINS, SELF, airconditioner, vehicle_is_powered) {
+    1: return bitmask(7);
+    return 0;
+}
+
 switch (FEAT_TRAINS, SELF, crhwagon, vehicle_type_id) {
     1024..1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     return CB_RESULT_ATTACH_DISALLOW;
@@ -470,9 +488,14 @@ switch (FEAT_TRAINS, SELF, cr200jwagonxl, vehicle_type_id) {
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
-switch (FEAT_TRAINS, PARENT, muhead, vehicle_type_id) {
+switch (FEAT_TRAINS, SELF, muhead, vehicle_type_id) {
     1024..1051: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     8192..14335: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, singlemu, vehicle_type_id) {
+    1024..1051: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
@@ -517,6 +540,12 @@ switch (FEAT_TRAINS, SELF, mu4car, num_vehs_in_consist < 12) {
 // Standard 1-7-1 Length
     switch (FEAT_TRAINS, SELF, switch_length_1_7_1, position_in_articulated_veh % 3) {
         1: return 7;
+        return 1;
+    }
+
+// Standard 1-5-1 Length
+    switch (FEAT_TRAINS, SELF, switch_length_1_5_1, position_in_articulated_veh % 3) {
+        1: return 5;
         return 1;
     }
 
@@ -592,10 +621,11 @@ item (FEAT_TRAINS, yz25k, 2058) {}
 item (FEAT_TRAINS, rz25k, 2059) {}
 item (FEAT_TRAINS, yw25k, 2060) {}
 item (FEAT_TRAINS, rw25k, 2061) {}
+item (FEAT_TRAINS, kd25g, 2062) {}
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 
-
+item (FEAT_TRAINS, c64, 3072) {}
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 
@@ -609,7 +639,7 @@ item (FEAT_TRAINS, df4h, 5121) {}
 //25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
 
 item (FEAT_TRAINS, hxd3c, 6144) {}
-
+item (FEAT_TRAINS, hxd3d, 6145) {}
 
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
 
@@ -2276,6 +2306,7 @@ item (FEAT_TRAINS, yz25g) {
     graphics {
         // Menu
         additional_text: switch_yz25g_additional_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_yz25g_graphics;
@@ -2375,6 +2406,7 @@ item (FEAT_TRAINS, rz25g) {
     graphics {
         // Menu
         additional_text: switch_rz25g_additional_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_rz25g_graphics;
@@ -2474,6 +2506,7 @@ item (FEAT_TRAINS, yw25g) {
     graphics {
         // Menu
         additional_text: switch_yw25g_additional_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_yw25g_graphics;
@@ -2573,6 +2606,7 @@ item (FEAT_TRAINS, rw25g) {
     graphics {
         // Menu
         additional_text: switch_rw25g_additional_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_rw25g_graphics;
@@ -2672,6 +2706,7 @@ item (FEAT_TRAINS, xl25g) {
     graphics {
         // Menu
         additional_text: switch_xl25g_additional_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_xl25g_graphics;
@@ -2691,6 +2726,104 @@ item (FEAT_TRAINS, xl25g) {
 
 // End XL25G
 # 62 "chinasettrains.pnml" 2
+# 1 "src/coaches/25g/kd25g_graphics.pnml" 1
+// Begin KD25G
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_kd25g_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_kd25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "kd25g")
+}
+
+// Vehicle
+spriteset (spriteset_kd25g_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_kd25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_10_standard ("coaches", "kd25g")
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25g_articulated_part, extra_callback_info1) {
+    1..2: return kd25g;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25g_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_kd25g_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25g_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25g_additional_text, param_cargo_decay) {
+    return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_AIR_CONDITIONER_EFFECT));
+}
+# 63 "chinasettrains.pnml" 2
+# 1 "src/coaches/25g/kd25g_item.pnml" 1
+item (FEAT_TRAINS, kd25g) {
+    property {
+        // Menu
+        name: string(STR_NAME_KD25G);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1992,01,01);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        vehicle_life: 30;
+        track_type: SADN;
+
+        // Cargo
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: 0;
+        cargo_allow_refit: [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit: [];
+        refit_cost: 0;
+        default_cargo_type: PASS;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        cargo_capacity: 118;
+        loading_speed: 8 << param_loading_speed;
+        cargo_age_period: 185 << param_cargo_decay;
+
+        // Stats
+        speed: 120 km/h;
+        power: 0 hp;
+        weight: 60 ton;
+        cost_factor: 8;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        running_cost_factor: 6;
+        bitmask_vehicle_info: bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text: switch_kd25g_additional_text;
+        can_attach_wagon: locowagon;
+
+        // Graphics
+        default: switch_kd25g_graphics;
+        purchase: spriteset_kd25g_purchase_original;
+        articulated_part: switch_kd25g_articulated_part;
+
+        // Stats
+        length: switch_length_1_8_1;
+        cargo_capacity: switch_kd25g_capacity;
+        cargo_age_period: 200 << param_cargo_decay;
+        cost_factor: 23;
+        running_cost_factor: 20 * runningcostfactor() * cafefactor();
+        purchase_running_cost_factor: 120;
+        purchase_cargo_capacity: 0;
+    }
+}
+
+// End KD25G
+# 64 "chinasettrains.pnml" 2
 # 1 "src/coaches/25t/yz25t_graphics.pnml" 1
 // Begin YZ25T
 
@@ -2732,7 +2865,7 @@ switch (FEAT_TRAINS, SELF, switch_yz25t_additional_text, param_cargo_decay) {
     2: return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_640_800));
     return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_160_200));
 }
-# 63 "chinasettrains.pnml" 2
+# 65 "chinasettrains.pnml" 2
 # 1 "src/coaches/25t/yz25t_item.pnml" 1
 item (FEAT_TRAINS, yz25t) {
     property {
@@ -2771,6 +2904,7 @@ item (FEAT_TRAINS, yz25t) {
     graphics {
         // Menu
         additional_text: switch_yz25t_additional_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_yz25t_graphics;
@@ -2789,7 +2923,7 @@ item (FEAT_TRAINS, yz25t) {
 }
 
 // End YZ25T
-# 64 "chinasettrains.pnml" 2
+# 66 "chinasettrains.pnml" 2
 # 1 "src/coaches/25t/rz25t_graphics.pnml" 1
 // Begin RZ25T
 
@@ -2831,7 +2965,7 @@ switch (FEAT_TRAINS, SELF, switch_rz25t_additional_text, param_cargo_decay) {
     2: return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_768_960));
     return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_192_240));
 }
-# 65 "chinasettrains.pnml" 2
+# 67 "chinasettrains.pnml" 2
 # 1 "src/coaches/25t/rz25t_item.pnml" 1
 item (FEAT_TRAINS, rz25t) {
     property {
@@ -2870,6 +3004,7 @@ item (FEAT_TRAINS, rz25t) {
     graphics {
         // Menu
         additional_text: switch_rz25t_additional_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_rz25t_graphics;
@@ -2888,7 +3023,7 @@ item (FEAT_TRAINS, rz25t) {
 }
 
 // End RZ25T
-# 66 "chinasettrains.pnml" 2
+# 68 "chinasettrains.pnml" 2
 # 1 "src/coaches/25t/yw25t_graphics.pnml" 1
 // Begin YW25T
 
@@ -2930,7 +3065,7 @@ switch (FEAT_TRAINS, SELF, switch_yw25t_additional_text, param_cargo_decay) {
     2: return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_1280_1600));
     return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_320_400));
 }
-# 67 "chinasettrains.pnml" 2
+# 69 "chinasettrains.pnml" 2
 # 1 "src/coaches/25t/yw25t_item.pnml" 1
 item (FEAT_TRAINS, yw25t) {
     property {
@@ -2969,6 +3104,7 @@ item (FEAT_TRAINS, yw25t) {
     graphics {
         // Menu
         additional_text: switch_yw25t_additional_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_yw25t_graphics;
@@ -2987,7 +3123,7 @@ item (FEAT_TRAINS, yw25t) {
 }
 
 // End YW25T
-# 68 "chinasettrains.pnml" 2
+# 70 "chinasettrains.pnml" 2
 # 1 "src/coaches/25t/rw25t_graphics.pnml" 1
 // Begin RW25T
 
@@ -3029,7 +3165,7 @@ switch (FEAT_TRAINS, SELF, switch_rw25t_additional_text, param_cargo_decay) {
     2: return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_1536_1920));
     return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_384_480));
 }
-# 69 "chinasettrains.pnml" 2
+# 71 "chinasettrains.pnml" 2
 # 1 "src/coaches/25t/rw25t_item.pnml" 1
 item (FEAT_TRAINS, rw25t) {
     property {
@@ -3068,6 +3204,7 @@ item (FEAT_TRAINS, rw25t) {
     graphics {
         // Menu
         additional_text: switch_rw25t_additional_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_rw25t_graphics;
@@ -3086,7 +3223,7 @@ item (FEAT_TRAINS, rw25t) {
 }
 
 // End RW25T
-# 70 "chinasettrains.pnml" 2
+# 72 "chinasettrains.pnml" 2
 # 1 "src/coaches/25k/yz25k_graphics.pnml" 1
 // Begin YZ25K
 
@@ -3128,7 +3265,7 @@ switch (FEAT_TRAINS, SELF, switch_yz25k_additional_text, param_cargo_decay) {
     2: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_640_800));
     return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_160_200));
 }
-# 71 "chinasettrains.pnml" 2
+# 73 "chinasettrains.pnml" 2
 # 1 "src/coaches/25k/yz25k_item.pnml" 1
 item (FEAT_TRAINS, yz25k) {
     property {
@@ -3167,6 +3304,7 @@ item (FEAT_TRAINS, yz25k) {
     graphics {
         // Menu
         additional_text: switch_yz25k_additional_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_yz25k_graphics;
@@ -3185,7 +3323,7 @@ item (FEAT_TRAINS, yz25k) {
 }
 
 // End YZ25K
-# 72 "chinasettrains.pnml" 2
+# 74 "chinasettrains.pnml" 2
 # 1 "src/coaches/25k/rz25k_graphics.pnml" 1
 // Begin RZ25K
 
@@ -3227,7 +3365,7 @@ switch (FEAT_TRAINS, SELF, switch_rz25k_additional_text, param_cargo_decay) {
     2: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_768_960));
     return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_192_240));
 }
-# 73 "chinasettrains.pnml" 2
+# 75 "chinasettrains.pnml" 2
 # 1 "src/coaches/25k/rz25k_item.pnml" 1
 item (FEAT_TRAINS, rz25k) {
     property {
@@ -3266,6 +3404,7 @@ item (FEAT_TRAINS, rz25k) {
     graphics {
         // Menu
         additional_text: switch_rz25k_additional_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_rz25k_graphics;
@@ -3284,7 +3423,7 @@ item (FEAT_TRAINS, rz25k) {
 }
 
 // End RZ25K
-# 74 "chinasettrains.pnml" 2
+# 76 "chinasettrains.pnml" 2
 # 1 "src/coaches/25k/yw25k_graphics.pnml" 1
 // Begin YW25K
 
@@ -3326,7 +3465,7 @@ switch (FEAT_TRAINS, SELF, switch_yw25k_additional_text, param_cargo_decay) {
     2: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_1280_1600));
     return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_320_400));
 }
-# 75 "chinasettrains.pnml" 2
+# 77 "chinasettrains.pnml" 2
 # 1 "src/coaches/25k/yw25k_item.pnml" 1
 item (FEAT_TRAINS, yw25k) {
     property {
@@ -3365,6 +3504,7 @@ item (FEAT_TRAINS, yw25k) {
     graphics {
         // Menu
         additional_text: switch_yw25k_additional_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_yw25k_graphics;
@@ -3383,7 +3523,7 @@ item (FEAT_TRAINS, yw25k) {
 }
 
 // End YW25K
-# 76 "chinasettrains.pnml" 2
+# 78 "chinasettrains.pnml" 2
 # 1 "src/coaches/25k/rw25k_graphics.pnml" 1
 // Begin RW25K
 
@@ -3425,7 +3565,7 @@ switch (FEAT_TRAINS, SELF, switch_rw25k_additional_text, param_cargo_decay) {
     2: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_1536_1920));
     return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_384_480));
 }
-# 77 "chinasettrains.pnml" 2
+# 79 "chinasettrains.pnml" 2
 # 1 "src/coaches/25k/rw25k_item.pnml" 1
 item (FEAT_TRAINS, rw25k) {
     property {
@@ -3464,6 +3604,7 @@ item (FEAT_TRAINS, rw25k) {
     graphics {
         // Menu
         additional_text: switch_rw25k_additional_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_rw25k_graphics;
@@ -3482,7 +3623,7 @@ item (FEAT_TRAINS, rw25k) {
 }
 
 // End RW25K
-# 78 "chinasettrains.pnml" 2
+# 80 "chinasettrains.pnml" 2
 # 1 "src/coaches/25k/xl25k_graphics.pnml" 1
 // Begin XL25K
 
@@ -3524,7 +3665,7 @@ switch (FEAT_TRAINS, SELF, switch_xl25k_additional_text, param_cargo_decay) {
     2: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_800));
     return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_200));
 }
-# 79 "chinasettrains.pnml" 2
+# 81 "chinasettrains.pnml" 2
 # 1 "src/coaches/25k/xl25k_item.pnml" 1
 item (FEAT_TRAINS, xl25k) {
     property {
@@ -3563,6 +3704,7 @@ item (FEAT_TRAINS, xl25k) {
     graphics {
         // Menu
         additional_text: switch_xl25k_additional_text;
+        can_attach_wagon: locowagon;
 
         // Graphics
         default: switch_xl25k_graphics;
@@ -3581,7 +3723,120 @@ item (FEAT_TRAINS, xl25k) {
 }
 
 // End XL25K
-# 80 "chinasettrains.pnml" 2
+# 82 "chinasettrains.pnml" 2
+
+// Wagons
+# 1 "src/wagons/c64_graphics.pnml" 1
+// Begin C64
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_c64_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_c64_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "c64-red")
+}
+
+// Vehicle
+spriteset (spriteset_c64_original) {
+    template_empty ()
+}
+spriteset (spriteset_c64_original_full_one) {
+    template_empty()
+}
+alternative_sprites(spriteset_c64_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_7_standard ("wagons", "c64-red")
+}
+alternative_sprites(spriteset_c64_original_full_one, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_7_standard ("wagons", "c64-red-full-one")
+}
+
+switch (FEAT_TRAINS, SELF, switch_c64_empty_full, cargo_count < 40) {
+    0: spriteset_c64_original_full_one;
+    spriteset_c64_original;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c64_articulated_part, extra_callback_info1) {
+    1..2: return c64;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c64_graphics, position_in_articulated_veh % 3) {
+    1: switch_c64_empty_full;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c64_capacity, position_in_articulated_veh % 3) {
+    1: return 61;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c64_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_C64_LIVERY_AVAILABILITY), string(STR_DECAY_370));
+    2: return string(STR_DESC_2, string(STR_C64_LIVERY_AVAILABILITY), string(STR_DECAY_740));
+    return string(STR_DESC_2, string(STR_C64_LIVERY_AVAILABILITY), string(STR_DECAY_185));
+}
+# 85 "chinasettrains.pnml" 2
+# 1 "src/wagons/c64_item.pnml" 1
+item (FEAT_TRAINS, c64) {
+    property {
+        // Menu
+        name: string(STR_NAME_C64);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1988,01,01);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        vehicle_life: 30;
+        track_type: SADN;
+
+        // Cargo
+        refittable_cargo_classes: bitmask(CC_EXPRESS, CC_BULK, CC_PIECE_GOODS, CC_COVERED, CC_OVERSIZED);
+        non_refittable_cargo_classes: bitmask(CC_PASSENGERS, CC_LIQUID, CC_HAZARDOUS);
+        cargo_allow_refit: [];
+        cargo_disallow_refit: [];
+        refit_cost: 0;
+        default_cargo_type: DEFAULT_CARGO_FIRST_REFITTABLE;
+        ai_special_flag: AI_FLAG_CARGO;
+        cargo_capacity: 61;
+        loading_speed: 8 << param_loading_speed;
+        cargo_age_period: 185 << param_cargo_decay;
+
+        // Stats
+        speed: 100 km/h;
+        power: 0 hp;
+        weight: 22.5 ton;
+        cost_factor: 8;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        running_cost_factor: 6;
+    }
+    graphics {
+        // Menu
+        additional_text: switch_c64_additional_text;
+        can_attach_wagon: locowagon;
+
+        // Graphics
+        default: switch_c64_graphics;
+        purchase: spriteset_c64_purchase_original;
+        articulated_part: switch_c64_articulated_part;
+
+        // Stats
+        length: switch_length_1_5_1;
+        cargo_capacity: switch_c64_capacity;
+        cargo_age_period: (40 * acfactor()) << param_cargo_decay;
+        cost_factor: 5;
+        running_cost_factor: 4 * runningcostfactor() * cafefactor();
+        purchase_running_cost_factor: 16;
+        purchase_cargo_capacity: 61/3;
+    }
+}
+
+// End C64
+# 86 "chinasettrains.pnml" 2
 
 // Steam
 
@@ -3649,7 +3904,7 @@ switch (FEAT_TRAINS, SELF, switch_df4k_capacity, position_in_articulated_veh % 3
 switch (FEAT_TRAINS, SELF, switch_df4k_additional_text, param_cargo_decay) {
     return string(STR_DESC_3, string(STR_DF4_LIVERY_AVAILABILITY), string(STR_DF4_NICKNAME), string(STR_RELIABILITY_32));
 }
-# 86 "chinasettrains.pnml" 2
+# 92 "chinasettrains.pnml" 2
 # 1 "src/diesel/df4k_item.pnml" 1
 item (FEAT_TRAINS, df4k) {
     property {
@@ -3712,7 +3967,7 @@ item (FEAT_TRAINS, df4k) {
 }
 
 // End DF4K
-# 87 "chinasettrains.pnml" 2
+# 93 "chinasettrains.pnml" 2
 # 1 "src/diesel/df4h_graphics.pnml" 1
 // Begin DF4H
 
@@ -3773,7 +4028,7 @@ switch (FEAT_TRAINS, SELF, switch_df4h_capacity, position_in_articulated_veh % 3
 switch (FEAT_TRAINS, SELF, switch_df4h_additional_text, param_cargo_decay) {
     return string(STR_DESC_3, string(STR_DF4_LIVERY_AVAILABILITY), string(STR_DF4_NICKNAME), string(STR_RELIABILITY_32));
 }
-# 88 "chinasettrains.pnml" 2
+# 94 "chinasettrains.pnml" 2
 # 1 "src/diesel/df4h_item.pnml" 1
 item (FEAT_TRAINS, df4h) {
     property {
@@ -3836,7 +4091,7 @@ item (FEAT_TRAINS, df4h) {
 }
 
 // End DF4H
-# 89 "chinasettrains.pnml" 2
+# 95 "chinasettrains.pnml" 2
 
 // 25kV AC Electric
 # 1 "src/25-electric/hxd3c_graphics.pnml" 1
@@ -3877,7 +4132,7 @@ switch (FEAT_TRAINS, SELF, switch_hxd3c_capacity, position_in_articulated_veh % 
 switch (FEAT_TRAINS, SELF, switch_hxd3c_additional_text, param_cargo_decay) {
     return string(STR_DESC_2, string(STR_HXD3C_NICKNAME), string(STR_RELIABILITY_6));
 }
-# 92 "chinasettrains.pnml" 2
+# 98 "chinasettrains.pnml" 2
 # 1 "src/25-electric/hxd3c_item.pnml" 1
 item (FEAT_TRAINS, hxd3c) {
     property {
@@ -3915,7 +4170,6 @@ item (FEAT_TRAINS, hxd3c) {
         running_cost_base: RUNNING_COST_ELECTRIC;
         running_cost_factor: 104;
         reliability_decay: 6;
-        bitmask_vehicle_info: bitmask(7);
     }
     graphics {
         // Menu
@@ -3933,11 +4187,111 @@ item (FEAT_TRAINS, hxd3c) {
         running_cost_factor: 52 * runningcostfactor();
         purchase_running_cost_factor: 312;
         purchase_cargo_capacity: 0;
+        bitmask_vehicle_info: airconditioner;
     }
 }
 
 // End HXD3C
-# 93 "chinasettrains.pnml" 2
+# 99 "chinasettrains.pnml" 2
+# 1 "src/25-electric/hxd3d_graphics.pnml" 1
+// Begin HXD3D
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_hxd3d_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_hxd3d_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-electric", "hxd3d")
+}
+
+// Vehicle
+spriteset (spriteset_hxd3d_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_hxd3d_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_10_standard ("25-electric", "hxd3d")
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd3d_articulated_part, extra_callback_info1) {
+    1..2: return hxd3d;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd3d_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_hxd3d_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd3d_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd3d_additional_text, param_cargo_decay) {
+    return string(STR_DESC_2, string(STR_HXD3D_NICKNAME), string(STR_RELIABILITY_6));
+}
+# 100 "chinasettrains.pnml" 2
+# 1 "src/25-electric/hxd3d_item.pnml" 1
+item (FEAT_TRAINS, hxd3d) {
+    property {
+        // Menu
+        name: string(STR_NAME_HXD3D);
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        misc_flags: bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class: ENGINE_CLASS_ELECTRIC;
+
+        // Availability
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(2012,01,01);
+        model_life: VEHICLE_NEVER_EXPIRES;
+        vehicle_life: 30;
+        track_type: SADA;
+
+        // Cargo
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: 0;
+        cargo_allow_refit: [];
+        cargo_disallow_refit: [];
+        refit_cost: 0;
+        default_cargo_type: PASS;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        cargo_capacity: 1;
+        loading_speed: 8 << param_loading_speed;
+        cargo_age_period: 185 << param_cargo_decay;
+
+        // Stats
+        speed: 170 km/h;
+        power: 9789 hpM;
+        weight: 126 ton;
+        tractive_effort_coefficient: 0.34;
+        cost_factor: 127;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        running_cost_factor: 104;
+        reliability_decay: 6;
+    }
+    graphics {
+        // Menu
+        additional_text: switch_hxd3d_additional_text;
+        can_attach_wagon: locowagon;
+        // Graphics
+        default: switch_hxd3d_graphics;
+        purchase: spriteset_hxd3d_purchase_original;
+        articulated_part: switch_hxd3d_articulated_part;
+
+        // Stats
+        length: switch_length_1_8_1;
+        cargo_capacity: 0;
+        cost_factor: 127;
+        running_cost_factor: 52 * runningcostfactor();
+        purchase_running_cost_factor: 312;
+        purchase_cargo_capacity: 0;
+        bitmask_vehicle_info: airconditioner;
+    }
+}
+
+// End HXD3D
+# 101 "chinasettrains.pnml" 2
 
 // Multi Power Locomotive
 
@@ -4302,7 +4656,7 @@ switch (FEAT_TRAINS, SELF, switch_cr200j1_wagon_bitmask, vehicle_type_id) {
     1035: return bitmask(1);
     return 0;
 }
-# 102 "chinasettrains.pnml" 2
+# 110 "chinasettrains.pnml" 2
 # 1 "src/25-emu/cr200j1_item.pnml" 1
 item (FEAT_TRAINS, cr200j) {
     property {
@@ -4345,7 +4699,7 @@ item (FEAT_TRAINS, cr200j) {
     graphics {
         // Menu
         additional_text: switch_cr200j1_additional_text;
-        can_attach_wagon: muhead;
+        can_attach_wagon: singlemu;
         start_stop: mu4car;
         // Graphics
         default: switch_cr200j1_graphics;
@@ -4545,7 +4899,7 @@ item (FEAT_TRAINS, cr200j) {
 }
 
 // End CR200J1
-# 103 "chinasettrains.pnml" 2
+# 111 "chinasettrains.pnml" 2
 
 // 1.5kV DC EMU
 

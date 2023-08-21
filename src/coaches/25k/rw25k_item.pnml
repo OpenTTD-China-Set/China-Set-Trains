@@ -35,6 +35,7 @@ item (FEAT_TRAINS, rw25k) {
     graphics {
         // Menu
         additional_text:                switch_rw25k_additional_text;
+        can_attach_wagon:               locowagon;
         
         // Graphics
         default:                        switch_rw25k_graphics;

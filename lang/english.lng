@@ -46,10 +46,14 @@ STR_NAME_YZ25K          :YZ25K (25m Rapid Hard Seat Passenger Coach)
 STR_NAME_RZ25K          :RZ25K (25m Rapid Soft Seat Passenger Coach)
 STR_NAME_YW25K          :YW25K (25m Rapid Hard Sleeper Passenger Coach)
 STR_NAME_RW25K          :RW25K (25m Rapid Soft Sleeper Passenger Coach)
+STR_NAME_KD25G          :KD25G (25m Improved Air Conditioner Generator Car)
+
+STR_NAME_C64            :C64 (Gondola)
 
 STR_NAME_DF4K           :DF4 (Dongfeng 4 Diesel Locomotive) (Passenger Type)
 STR_NAME_DF4H           :DF4 (Dongfeng 4 Diesel Locomotive) (Freight Type)
 STR_NAME_HXD3C          :HXD3C (Hexie/Harmony 3C Electric Locomotive)
+STR_NAME_HXD3D          :HXD3D (Hexie/Harmony 3D Electric Locomotive)
 
 STR_NAME_CR200J1        :CR200J1 (EMU)
 
@@ -77,9 +81,11 @@ STR_DF4_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GREEN}Green {G
 STR_25G_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {GREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {GREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {GREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_C64_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 
 STR_DF4_NICKNAME                    :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
 STR_HXD3C_NICKNAME                  :{BLACK}Nickname: {GOLD}Electric Baboon
+STR_HXD3D_NICKNAME                  :{BLACK}Nickname: {GOLD}Tomato
 STR_CR200J_NICKNAME                 :{BLACK}Nickname: {GREEN}"Hulk" {GOLD}(Official), {GREEN}"Trash Bin" {GOLD}(Folk)
 
 
@@ -139,8 +145,12 @@ STR_DECAY_1200_3840     :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 1200, Lux
 STR_DECAY_2000_2800     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 2000, Limited-Class Part 2800
 STR_DECAY_2000_3200     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 2000, Business-Class Part 3200
 STR_DECAY_2000_3840     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 2000, Luxury-Business-Class Part 3840
+STR_DECAY_185           :{BLACK}Cargo Age Period: {GOLD}185
+STR_DECAY_370           :{BLACK}Cargo Age Period: {GOLD}370
+STR_DECAY_740           :{BLACK}Cargo Age Period: {GOLD}740
 
-STR_CAFE_EFFECT         :{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Eliminates All Running Costs of Passenger Cars except Restaurant Cars
+STR_CAFE_EFFECT                     :{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Eliminates All Running Costs of Passenger Cars except Restaurant Cars
+STR_AIR_CONDITIONER_EFFECT          :{BLACK}Air Conditioner Effect: {GOLD}Attaching Air Conditioner Generator Car Increases Cargo Age Period of Passenger Cars Hauled by Locomotives without Electricity Supply
 
 STR_ATTACH_ALL_CRH_CR               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs
 STR_ATTACH_SLEEPER_MU               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs

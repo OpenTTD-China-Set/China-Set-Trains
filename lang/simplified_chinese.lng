@@ -46,10 +46,14 @@ STR_NAME_YZ25K          :YZ25K (25米快速型硬座客车)
 STR_NAME_RZ25K          :RZ25K (25米快速型软座客车)
 STR_NAME_YW25K          :YW25K (25米快速型硬卧客车)
 STR_NAME_RW25K          :RW25K (25米快速型软卧客车)
+STR_NAME_KD25G          :KD25G (25米改进型空调发电车)
+
+STR_NAME_C64            :C64 (敞车)
 
 STR_NAME_DF4K           :DF4 (东风4型柴油机车) (客运型)
 STR_NAME_DF4H           :DF4 (东风4型柴油机车) (货运型)
 STR_NAME_HXD3C          :HXD3C (和谐3C型电力机车)
+STR_NAME_HXD3D          :HXD3D (和谐3D型电力机车)
 
 STR_NAME_CR200J1        :CR200J1 (电力动车)
 
@@ -73,9 +77,11 @@ STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿�
 STR_25G_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{GREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{GREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{GREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_C64_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 
 STR_DF4_NICKNAME                    :{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
 STR_HXD3C_NICKNAME                  :{BLACK}昵称: {GOLD}电狒狒
+STR_HXD3D_NICKNAME                  :{BLACK}昵称: {GOLD}番茄
 STR_CR200J_NICKNAME                 :{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方), {GREEN}“垃圾桶”{GOLD}(民间)
 
 STR_RELIABILITY_32                  :{BLACK}可靠性下降速度：{GOLD}32
@@ -134,8 +140,12 @@ STR_DECAY_1200_3840     :{BLACK}货物贬值周期：{GOLD}二等座1200，商�
 STR_DECAY_2000_2800     :{BLACK}货物贬值周期：{GOLD}一等座2000，特等座2800
 STR_DECAY_2000_3200     :{BLACK}货物贬值周期：{GOLD}一等座2000，商务座3200
 STR_DECAY_2000_3840     :{BLACK}货物贬值周期：{GOLD}一等座2000，商务座3840
+STR_DECAY_185           :{BLACK}货物贬值周期：{GOLD}185
+STR_DECAY_370           :{BLACK}货物贬值周期：{GOLD}370
+STR_DECAY_740           :{BLACK}货物贬值周期：{GOLD}740
 
-STR_CAFE_EFFECT         :{BLACK}餐车的作用：{GOLD}加挂餐车使除餐车外的所有客运车厢运行费用清零
+STR_CAFE_EFFECT                     :{BLACK}餐车的作用：{GOLD}加挂餐车使除餐车外的所有客运车厢运行费用清零
+STR_AIR_CONDITIONER_EFFECT          :{BLACK}空调发电车的作用：{GOLD}加挂空调发电车可增加非机供机车牵引客车的货物贬值周期
 
 STR_ATTACH_ALL_CRH_CR               :{BLACK}匹配的动车组：{GOLD}所有和谐/复兴号动车
 STR_ATTACH_SLEEPER_MU               :{BLACK}匹配的动车组：{GOLD}所有提供卧铺的和谐/复兴号动车
