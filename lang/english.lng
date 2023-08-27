@@ -49,6 +49,7 @@ STR_NAME_RW25K          :RW25K (25m Rapid Soft Sleeper Passenger Coach)
 STR_NAME_KD25G          :KD25G (25m Improved Air Conditioner Generator Car)
 
 STR_NAME_C64            :C64 (Gondola)
+STR_NAME_P62            :P62 (Boxcar)
 
 STR_NAME_DF4K           :DF4 (Dongfeng 4 Diesel Locomotive) (Passenger Type)
 STR_NAME_DF4H           :DF4 (Dongfeng 4 Diesel Locomotive) (Freight Type)
@@ -73,7 +74,7 @@ STR_NAME_WEMUW          :2nd-Class Sleeper MU Wagon
 STR_NAME_WYMUW          :1st-Class Sleeper MU Wagon
 STR_NAME_WGMUW          :Top-Class Sleeper MU Wagon
 
-
+STR_DESC_4                          :{STRING}{}{STRING}{}{STRING}{}{STRING}
 STR_DESC_3                          :{STRING}{}{STRING}{}{STRING}
 STR_DESC_2                          :{STRING}{}{STRING}
 
@@ -82,6 +83,7 @@ STR_25G_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {RED}Red {GOLD}
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {GREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {GREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random
 
 STR_DF4_NICKNAME                    :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
 STR_HXD3C_NICKNAME                  :{BLACK}Nickname: {GOLD}Electric Baboon
@@ -148,6 +150,9 @@ STR_DECAY_2000_3840     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 2000, Lux
 STR_DECAY_185           :{BLACK}Cargo Age Period: {GOLD}185
 STR_DECAY_370           :{BLACK}Cargo Age Period: {GOLD}370
 STR_DECAY_740           :{BLACK}Cargo Age Period: {GOLD}740
+STR_DECAY_185_100_555   :{BLACK}Cargo Age Period: {GOLD}185, Passengers 100, Livestock 555
+STR_DECAY_370_200_1110  :{BLACK}Cargo Age Period: {GOLD}370, Passengers 200, Livestock 1110
+STR_DECAY_740_400_2220  :{BLACK}Cargo Age Period: {GOLD}740, Passengers 400, Livestock 2220
 
 STR_CAFE_EFFECT                     :{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Eliminates All Running Costs of Passenger Cars except Restaurant Cars
 STR_AIR_CONDITIONER_EFFECT          :{BLACK}Air Conditioner Effect: {GOLD}Attaching Air Conditioner Generator Car Increases Cargo Age Period of Passenger Cars Hauled by Locomotives without Electricity Supply
@@ -157,3 +162,5 @@ STR_ATTACH_SLEEPER_MU               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/H
 STR_ATTACH_CR200J                   :{BLACK}Matching MUs: {GOLD}CR200J Series
 STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZT, ZS, SW, ZET, ZES, ZESW, ZYT, ZYS, ZYSW, ZEC, WE, WY, WG
 STR_TOO_SHORT                       :TOO SHORT!
+STR_ELECTRICITY_SUPPLY_YES          :{BLACK}Electricity Supply for cars: {GOLD}YES
+STR_ELECTRICITY_SUPPLY_NO           :{BLACK}Electricity Supply for cars: {RED}NO

@@ -1,0 +1,68 @@
+// Begin P62
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_p62_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_p62_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "p62-brown")
+}
+
+// Vehicle
+spriteset (spriteset_p62_brown) {
+    template_empty ()
+}
+spriteset (spriteset_p62_grey) {
+    template_empty ()
+}
+spriteset (spriteset_p62_blue) {
+    template_empty ()
+}
+alternative_sprites(spriteset_p62_brown, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_8_standard ("wagons", "p62-brown")
+}
+alternative_sprites(spriteset_p62_grey, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_8_standard ("wagons", "p62-grey")
+}
+alternative_sprites(spriteset_p62_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_8_standard ("wagons", "p62-blue")
+}
+
+random_switch (FEAT_TRAINS, SELF, switch_p62_random) {
+    1: spriteset_p62_brown;
+    1: spriteset_p62_grey;
+    1: spriteset_p62_blue;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p62_articulated_part, extra_callback_info1) {
+    1..2: return p62;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p62_graphics, position_in_articulated_veh % 3) {
+    1: switch_p62_random;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_p62_capacity, position_in_articulated_veh % 3) {
+    1: return 60;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p62_decay_1, cargo_classes == CC_PASSENGERS) {
+    1: return 100;
+    return 185;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p62_decay, cargo_type_in_veh == LVST) {
+    1: return 555;
+    switch_p62_decay_1;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p62_additional_text, param_cargo_decay) {
+    1: return string(STR_DESC_2, string(STR_P62_LIVERY_AVAILABILITY), string(STR_DECAY_370_200_1110));
+    2: return string(STR_DESC_2, string(STR_P62_LIVERY_AVAILABILITY), string(STR_DECAY_740_400_2220));
+    return string(STR_DESC_2, string(STR_P62_LIVERY_AVAILABILITY), string(STR_DECAY_185_100_555));
+}

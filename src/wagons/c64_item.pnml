@@ -45,9 +45,9 @@ item (FEAT_TRAINS, c64) {
         // Stats
         length:                         switch_length_1_5_1;
         cargo_capacity:                 switch_c64_capacity;
-        cargo_age_period:               (40 * acfactor()) << param_cargo_decay;
+        cargo_age_period:               185 << param_cargo_decay;
         cost_factor:                    5;
-        running_cost_factor:            4 * runningcostfactor() * cafefactor();
+        running_cost_factor:            4 * runningcostfactor();
         purchase_running_cost_factor:   16;
         purchase_cargo_capacity:        61/3;
     }

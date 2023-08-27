@@ -49,6 +49,7 @@ STR_NAME_RW25K          :RW25K (25米快速型软卧客车)
 STR_NAME_KD25G          :KD25G (25米改进型空调发电车)
 
 STR_NAME_C64            :C64 (敞车)
+STR_NAME_P62            :P62 (棚车)
 
 STR_NAME_DF4K           :DF4 (东风4型柴油机车) (客运型)
 STR_NAME_DF4H           :DF4 (东风4型柴油机车) (货运型)
@@ -78,6 +79,7 @@ STR_25G_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{RED}红{WHI
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{GREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{GREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
+STR_P62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机
 
 STR_DF4_NICKNAME                    :{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
 STR_HXD3C_NICKNAME                  :{BLACK}昵称: {GOLD}电狒狒
@@ -143,6 +145,9 @@ STR_DECAY_2000_3840     :{BLACK}货物贬值周期：{GOLD}一等座2000，商�
 STR_DECAY_185           :{BLACK}货物贬值周期：{GOLD}185
 STR_DECAY_370           :{BLACK}货物贬值周期：{GOLD}370
 STR_DECAY_740           :{BLACK}货物贬值周期：{GOLD}740
+STR_DECAY_185_100_555   :{BLACK}货物贬值周期：{GOLD}185，棚代客100，装载活禽/畜555
+STR_DECAY_370_200_1110  :{BLACK}货物贬值周期：{GOLD}370，棚代客200，装载活禽/畜1110
+STR_DECAY_740_400_2220  :{BLACK}货物贬值周期：{GOLD}740，棚代客400，装载活禽/畜2220
 
 STR_CAFE_EFFECT                     :{BLACK}餐车的作用：{GOLD}加挂餐车使除餐车外的所有客运车厢运行费用清零
 STR_AIR_CONDITIONER_EFFECT          :{BLACK}空调发电车的作用：{GOLD}加挂空调发电车可增加非机供机车牵引客车的货物贬值周期
@@ -150,5 +155,7 @@ STR_AIR_CONDITIONER_EFFECT          :{BLACK}空调发电车的作用：{GOLD}加
 STR_ATTACH_ALL_CRH_CR               :{BLACK}匹配的动车组：{GOLD}所有和谐/复兴号动车
 STR_ATTACH_SLEEPER_MU               :{BLACK}匹配的动车组：{GOLD}所有提供卧铺的和谐/复兴号动车
 STR_ATTACH_CR200J                   :{BLACK}匹配的动车组：{GOLD}CR200J系列动车
-STR_CR200J_CAN_ATTACH_WAGON:        :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座（复兴号智能动车组标准）、二等/特等合造、二等/商务合造、二等/商务（复兴号智能动车组标准）合造、一等/特等合造、一等/商务合造、一等/商务（复兴号智能动车组标准）合造、二等/餐车合造、二等卧、一等卧、高级软卧
+STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座（复兴号智能动车组标准）、二等/特等合造、二等/商务合造、二等/商务（复兴号智能动车组标准）合造、一等/特等合造、一等/商务合造、一等/商务（复兴号智能动车组标准）合造、二等/餐车合造、二等卧、一等卧、高级软卧
 STR_TOO_SHORT                       :列车太短了
+STR_ELECTRICITY_SUPPLY_YES          :{BLACK}机供：{GOLD}是
+STR_ELECTRICITY_SUPPLY_NO           :{BLACK}机供：{RED}否

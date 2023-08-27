@@ -53,7 +53,7 @@ item (FEAT_TRAINS, df4k) {
         cargo_capacity:                 0;
         cost_factor:                    54;
         running_cost_factor:            25 * runningcostfactor();
-        purchase_running_cost_factor:   150;
+        purchase_running_cost_factor:   100;
         purchase_cargo_capacity:        0;
     }
 }

@@ -70,6 +70,7 @@ item (FEAT_TRAINS, kd25g, 2062) {}
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 #define id_range_wagons 0x0C00..0x0FFF
 item (FEAT_TRAINS, c64, 3072) {}
+item (FEAT_TRAINS, p62, 3073) {}
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
