@@ -57,6 +57,7 @@ STR_NAME_HXD3C          :HXD3C (和谐3C型电力机车)
 STR_NAME_HXD3D          :HXD3D (和谐3D型电力机车)
 
 STR_NAME_CR200J1        :CR200J1 (电力动车)
+STR_NAME_CRH5A          :CRH5A (电力动车)
 
 STR_NAME_ZEMUW          :动车组二等座车厢
 STR_NAME_ZYMUW          :动车组一等座车厢
@@ -85,9 +86,11 @@ STR_DF4_NICKNAME                    :{BLACK}昵称：{GREEN}绿色{GOLD}涂装�
 STR_HXD3C_NICKNAME                  :{BLACK}昵称: {GOLD}电狒狒
 STR_HXD3D_NICKNAME                  :{BLACK}昵称: {GOLD}番茄
 STR_CR200J_NICKNAME                 :{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方), {GREEN}“垃圾桶”{GOLD}(民间)
+STR_CRH5A_NICKNAME                  :{BLACK}昵称：{GOLD}驴
 
 STR_RELIABILITY_32                  :{BLACK}可靠性下降速度：{GOLD}32
 STR_RELIABILITY_20                  :{BLACK}可靠性下降速度：{GOLD}20
+STR_RELIABILITY_16                  :{BLACK}可靠性下降速度：{GOLD}16
 STR_RELIABILITY_6                   :{BLACK}可靠性下降速度：{GOLD}6
 
 STR_ORIGINAL            :{GOLD} - 原版涂装
@@ -156,6 +159,14 @@ STR_ATTACH_ALL_CRH_CR               :{BLACK}匹配的动车组：{GOLD}所有和
 STR_ATTACH_SLEEPER_MU               :{BLACK}匹配的动车组：{GOLD}所有提供卧铺的和谐/复兴号动车
 STR_ATTACH_CR200J                   :{BLACK}匹配的动车组：{GOLD}CR200J系列动车
 STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座（复兴号智能动车组标准）、二等/特等合造、二等/商务合造、二等/商务（复兴号智能动车组标准）合造、一等/特等合造、一等/商务合造、一等/商务（复兴号智能动车组标准）合造、二等/餐车合造、二等卧、一等卧、高级软卧
-STR_TOO_SHORT                       :列车太短了
+STR_CRH5A_CAN_ATTACH_WAGON          :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座（复兴号智能动车组标准）、二等/特等合造、二等/商务合造、二等/商务（复兴号智能动车组标准）合造、一等/特等合造、一等/商务合造、一等/商务（复兴号智能动车组标准）合造、二等/餐车合造
+
+STR_CRH5A_CONSIST                   :{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车1495公制马力
+
+STR_CRH5A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
+
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}机供：{GOLD}是
 STR_ELECTRICITY_SUPPLY_NO           :{BLACK}机供：{RED}否
+
+STR_TOO_SHORT                       :列车太短了
+STR_MUST_BE_4_8_12_16_CARS          :该动车组车厢数必须为4，8，12或16，否则无法运行

@@ -110,6 +110,8 @@
 // 25kV AC EMU
 #include "src/25-emu/cr200j1_graphics.pnml"
 #include "src/25-emu/cr200j1_item.pnml"
+#include "src/25-emu/crh5a_graphics.pnml"
+#include "src/25-emu/crh5a_item.pnml"
 
 // 1.5kV DC EMU
 

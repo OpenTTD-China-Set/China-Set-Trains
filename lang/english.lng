@@ -57,23 +57,25 @@ STR_NAME_HXD3C          :HXD3C (Hexie/Harmony 3C Electric Locomotive)
 STR_NAME_HXD3D          :HXD3D (Hexie/Harmony 3D Electric Locomotive)
 
 STR_NAME_CR200J1        :CR200J1 (EMU)
+STR_NAME_CRH5A          :CRH5A (EMU)
 
-STR_NAME_ZEMUW          :2nd-Class MU Wagon
-STR_NAME_ZYMUW          :1st-Class MU Wagon
-STR_NAME_ZTMUW          :Limited-Class MU Wagon
-STR_NAME_ZSMUW          :Business-Class MU Wagon
-STR_NAME_SWMUW          :Luxury-Business-Class MU Wagon
-STR_NAME_ZETMUW         :2nd-Class Limited-Class Combined MU Wagon
-STR_NAME_ZESMUW         :2nd-Class Business-Class Combined MU Wagon
-STR_NAME_ZESWMUW        :2nd-Class Luxury-Business-Class Combined MU Wagon
-STR_NAME_ZYTMUW         :1st-Class Limited-Class Combined MU Wagon
-STR_NAME_ZYSMUW         :1st-Class Business-Class Combined MU Wagon
-STR_NAME_ZYSWMUW        :1st-Class Luxury-Business-Class Combined MU Wagon
-STR_NAME_ZECMUW         :2nd-Class Restaurant Combined MU Wagon
-STR_NAME_WEMUW          :2nd-Class Sleeper MU Wagon
-STR_NAME_WYMUW          :1st-Class Sleeper MU Wagon
-STR_NAME_WGMUW          :Top-Class Sleeper MU Wagon
+STR_NAME_ZEMUW          :2nd-Class (ZE) MU Wagon
+STR_NAME_ZYMUW          :1st-Class (ZY) MU Wagon
+STR_NAME_ZTMUW          :Limited-Class (ZT) MU Wagon
+STR_NAME_ZSMUW          :Business-Class (ZS) MU Wagon
+STR_NAME_SWMUW          :Luxury-Business-Class (SW) MU Wagon
+STR_NAME_ZETMUW         :2nd-Class Limited-Class Combined (ZET) MU Wagon
+STR_NAME_ZESMUW         :2nd-Class Business-Class Combined (ZES) MU Wagon
+STR_NAME_ZESWMUW        :2nd-Class Luxury-Business-Class Combined (ZESW) MU Wagon
+STR_NAME_ZYTMUW         :1st-Class Limited-Class Combined (ZYT) MU Wagon
+STR_NAME_ZYSMUW         :1st-Class Business-Class Combined (ZYS) MU Wagon
+STR_NAME_ZYSWMUW        :1st-Class Luxury-Business-Class Combined (ZYSW) MU Wagon
+STR_NAME_ZECMUW         :2nd-Class Restaurant Combined (ZEC) MU Wagon
+STR_NAME_WEMUW          :2nd-Class Sleeper (WE) MU Wagon
+STR_NAME_WYMUW          :1st-Class Sleeper (WY) MU Wagon
+STR_NAME_WGMUW          :Top-Class Sleeper (WG) MU Wagon
 
+STR_DESC_5                          :{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}
 STR_DESC_4                          :{STRING}{}{STRING}{}{STRING}{}{STRING}
 STR_DESC_3                          :{STRING}{}{STRING}{}{STRING}
 STR_DESC_2                          :{STRING}{}{STRING}
@@ -89,10 +91,12 @@ STR_DF4_NICKNAME                    :{BLACK}Nickname: {GOLD}"Watermelon" for {GR
 STR_HXD3C_NICKNAME                  :{BLACK}Nickname: {GOLD}Electric Baboon
 STR_HXD3D_NICKNAME                  :{BLACK}Nickname: {GOLD}Tomato
 STR_CR200J_NICKNAME                 :{BLACK}Nickname: {GREEN}"Hulk" {GOLD}(Official), {GREEN}"Trash Bin" {GOLD}(Folk)
+STR_CRH5A_NICKNAME                  :{BLACK}Nickname: {GOLD}Donkey
 
 
 STR_RELIABILITY_32                  :{BLACK}Reliability decay speed: {GOLD}32
 STR_RELIABILITY_20                  :{BLACK}Reliability decay speed: {GOLD}20
+STR_RELIABILITY_16                  :{BLACK}Reliability decay speed: {GOLD}16
 STR_RELIABILITY_6                   :{BLACK}Reliability decay speed: {GOLD}6
 
 STR_ORIGINAL            :{GOLD} - Original Livery
@@ -161,6 +165,14 @@ STR_ATTACH_ALL_CRH_CR               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/H
 STR_ATTACH_SLEEPER_MU               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs
 STR_ATTACH_CR200J                   :{BLACK}Matching MUs: {GOLD}CR200J Series
 STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZT, ZS, SW, ZET, ZES, ZESW, ZYT, ZYS, ZYSW, ZEC, WE, WY, WG
-STR_TOO_SHORT                       :TOO SHORT!
+STR_CRH5A_CAN_ATTACH_WAGON          :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZT, ZS, SW, ZET, ZES, ZESW, ZYT, ZYS, ZYSW, ZEC
+
+STR_CRH5A_CONSIST                   :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car
+
+STR_CRH5A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}Electricity Supply for cars: {GOLD}YES
 STR_ELECTRICITY_SUPPLY_NO           :{BLACK}Electricity Supply for cars: {RED}NO
+
+STR_TOO_SHORT                       :TOO SHORT!
+STR_MUST_BE_4_8_12_16_CARS          :This MU must be in a consist of 4, 8, 12 or 16 cars to run.

@@ -1,9 +1,9 @@
-item (FEAT_TRAINS, cr200j) {
+item (FEAT_TRAINS, cr200j1) {
     property {
         // Menu
         name:                           string(STR_NAME_CR200J1);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
-        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
         
         // Availability
@@ -39,7 +39,7 @@ item (FEAT_TRAINS, cr200j) {
     graphics {
         // Menu
         additional_text:                switch_cr200j1_additional_text;
-        can_attach_wagon:               singlemu;
+        can_attach_wagon:               cr200jwagon;
         start_stop:                     mu4car;
         // Graphics
         default:                        switch_cr200j1_graphics;

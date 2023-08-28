@@ -205,6 +205,14 @@ switch (FEAT_TRAINS, SELF, mu4car, num_vehs_in_consist < 12) {
     return CB_RESULT_NO_TEXT;
 }
 
+switch (FEAT_TRAINS, SELF, mu481216car, num_vehs_in_consist) {
+    12: return CB_RESULT_NO_TEXT;
+    24: return CB_RESULT_NO_TEXT;
+    36: return CB_RESULT_NO_TEXT;
+    48: return CB_RESULT_NO_TEXT;
+    return string(STR_MUST_BE_4_8_12_16_CARS);
+}
+
 /* LENGTHS */
 
 // Standard 2-8-2 Length

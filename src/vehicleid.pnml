@@ -96,7 +96,8 @@ item (FEAT_TRAINS, hxd3d, 6145) {}
 
 //25kV AC EMU, available ID range: 9216-10239 (hex 0x2400..0x27FF)
 #define id_range_25_emu 0x2000..0x23FF
-item (FEAT_TRAINS, cr200j, 9216) {}
+item (FEAT_TRAINS, cr200j1, 9216) {}
+item (FEAT_TRAINS, crh5a, 9217) {}
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
 #define id_range_1500_emu 0x2800..0x2BFF
