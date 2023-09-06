@@ -1,0 +1,83 @@
+/* Begin Functions Again */
+
+
+switch (FEAT_TRAINS, SELF, switch_crh_wagon_articulated_part, vehicle_type_id) {
+    1024: switch_zemuw_articulated_part;
+    1025: switch_zymuw_articulated_part;
+    1026: switch_ztmuw_articulated_part;
+    1027: switch_zsmuw_articulated_part;
+    1028: switch_swmuw_articulated_part;
+    1029: switch_zetmuw_articulated_part;
+    1030: switch_zesmuw_articulated_part;
+    1031: switch_zeswmuw_articulated_part;
+    1032: switch_zytmuw_articulated_part;
+    1033: switch_zysmuw_articulated_part;
+    1034: switch_zyswmuw_articulated_part;
+    1035: switch_zecmuw_articulated_part;
+    return;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh_wagon_cargo_decay, vehicle_type_id) {
+    1024: return 15 * 5;
+    1025: return 25 * 5;
+    1026: return 35 * 5;
+    1027: return 40 * 5;
+    1028: return 48 * 5;
+    1029: switch_zetmuw_cargo_decay;
+    1030: switch_zesmuw_cargo_decay;
+    1031: switch_zeswmuw_cargo_decay;
+    1032: switch_zytmuw_cargo_decay;
+    1033: switch_zysmuw_cargo_decay;
+    1034: switch_zyswmuw_cargo_decay;
+    1035: return 15 * 5;
+    return;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh_wagon_bitmask, vehicle_type_id) {
+    1035: return bitmask(1);
+    return 0;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_cr200j_wagon_articulated_part, vehicle_type_id) {
+    1024: switch_zemuw_articulated_part;
+    1025: switch_zymuw_articulated_part;
+    1026: switch_ztmuw_articulated_part;
+    1027: switch_zsmuw_articulated_part;
+    1028: switch_swmuw_articulated_part;
+    1029: switch_zetmuw_articulated_part;
+    1030: switch_zesmuw_articulated_part;
+    1031: switch_zeswmuw_articulated_part;
+    1032: switch_zytmuw_articulated_part;
+    1033: switch_zysmuw_articulated_part;
+    1034: switch_zyswmuw_articulated_part;
+    1035: switch_zecmuw_articulated_part;
+    1036: switch_wemuw_articulated_part;
+    1037: switch_wymuw_articulated_part;
+    1039: switch_wgmuw_articulated_part;
+    return;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200j_wagon_cargo_decay, vehicle_type_id) {
+    1024: return 15 * 5;
+    1025: return 25 * 5;
+    1026: return 35 * 5;
+    1027: return 40 * 5;
+    1028: return 48 * 5;
+    1029: switch_zetmuw_cargo_decay;
+    1030: switch_zesmuw_cargo_decay;
+    1031: switch_zeswmuw_cargo_decay;
+    1032: switch_zytmuw_cargo_decay;
+    1033: switch_zysmuw_cargo_decay;
+    1034: switch_zyswmuw_cargo_decay;
+    1035: return 15 * 5;
+    1036: return 30 * 5;
+    1037: return 45 * 5;
+    1039: return 60 * 5;
+    return;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200j_wagon_bitmask, vehicle_type_id) {
+    1035: return bitmask(1);
+    return 0;
+}

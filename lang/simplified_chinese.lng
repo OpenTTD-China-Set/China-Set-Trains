@@ -6,6 +6,8 @@ STR_GRF_URL         :https://www.tt-forums.net/viewtopic.php?t=91092
 STR_GRF_DESC_EXTRA  :中国大陆的火车，包括机车、动车组、车厢。未来会有更多内容。
 STR_GRF_DESC_README :更多信息请查看Readme。
 
+STR_LEAPING_LIU_NEVER_DIES      :{BLUE}跨越不死，曙光永生
+
 STR_PARAM_LOADING_SPEED         :装载速度
 STR_PARAM_LOADING_SPEED_DESC    :调整车辆装载速度。默认为100%。
 
@@ -36,28 +38,32 @@ STR_NAME_YZ25G          :YZ25G (25米改进型硬座客车)
 STR_NAME_RZ25G          :RZ25G (25米改进型软座客车)
 STR_NAME_YW25G          :YW25G (25米改进型硬卧客车)
 STR_NAME_RW25G          :RW25G (25米改进型软卧客车)
-STR_NAME_YZ25T          :YZ25T (25米提速型硬座客车)
-STR_NAME_RZ25T          :RZ25T (25米提速型软座客车)
-STR_NAME_YW25T          :YW25T (25米提速型硬卧客车)
-STR_NAME_RW25T          :RW25T (25米提速型软卧客车)
-STR_NAME_XL25K          :XL25K (25米快速型行李车)
-STR_NAME_XL25G          :XL25G (25米改进型行李车)
 STR_NAME_YZ25K          :YZ25K (25米快速型硬座客车)
 STR_NAME_RZ25K          :RZ25K (25米快速型软座客车)
 STR_NAME_YW25K          :YW25K (25米快速型硬卧客车)
 STR_NAME_RW25K          :RW25K (25米快速型软卧客车)
+STR_NAME_YZ25T          :YZ25T (25米提速型硬座客车)
+STR_NAME_RZ25T          :RZ25T (25米提速型软座客车)
+STR_NAME_YW25T          :YW25T (25米提速型硬卧客车)
+STR_NAME_RW25T          :RW25T (25米提速型软卧客车)
+STR_NAME_XL25G          :XL25G (25米改进型行李车)
+STR_NAME_XL25K          :XL25K (25米快速型行李车)
+STR_NAME_XL25T_SSPE     :XL25T (25米提速型行李车) (SSPE)
 STR_NAME_KD25G          :KD25G (25米改进型空调发电车)
+STR_NAME_KD25K          :KD25K (25米快速型空调发电车)
 
 STR_NAME_C64            :C64 (敞车)
 STR_NAME_P62            :P62 (棚车)
 
-STR_NAME_DF4K           :DF4 (东风4型柴油机车) (客运型)
-STR_NAME_DF4H           :DF4 (东风4型柴油机车) (货运型)
+STR_NAME_DF4K           :DF4 (东风4型内燃机车) (客运型)
+STR_NAME_DF4H           :DF4 (东风4型内燃机车) (货运型)
+STR_NAME_DF11G          :DF11G (东风11G型内燃机车)
 STR_NAME_HXD3C          :HXD3C (和谐3C型电力机车)
 STR_NAME_HXD3D          :HXD3D (和谐3D型电力机车)
 
 STR_NAME_CR200J1        :CR200J1 (电力动车)
 STR_NAME_CRH5A          :CRH5A (电力动车)
+STR_NAME_CR400BF        :CR400BF (电力动车)
 
 STR_NAME_ZEMUW          :动车组二等座车厢
 STR_NAME_ZYMUW          :动车组一等座车厢
@@ -75,6 +81,8 @@ STR_NAME_WEMUW          :动车组二等卧铺车厢
 STR_NAME_WYMUW          :动车组一等卧铺车厢
 STR_NAME_WGMUW          :动车组高级软卧车厢
 
+STR_XL25T_SSPE_DESCRIPTION          :{BLACK}新时速运递公司使用的XL25T版本。
+
 STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿色{GOLD}、{ORANGE}橘色
 STR_25G_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{GREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{GREEN}“高阻绿”{GOLD}涂装 (未完成)
@@ -83,15 +91,18 @@ STR_C64_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机
 STR_P62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机
 
 STR_DF4_NICKNAME                    :{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
+STR_DF11G_NICKNAME                  :{BLACK}昵称: {GOLD}猪
 STR_HXD3C_NICKNAME                  :{BLACK}昵称: {GOLD}电狒狒
 STR_HXD3D_NICKNAME                  :{BLACK}昵称: {GOLD}番茄
 STR_CR200J_NICKNAME                 :{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方), {GREEN}“垃圾桶”{GOLD}(民间)
 STR_CRH5A_NICKNAME                  :{BLACK}昵称：{GOLD}驴
+STR_CR400BF_NICKNAME                :{BLACK}昵称：{GOLD}金凤凰
 
 STR_RELIABILITY_32                  :{BLACK}可靠性下降速度：{GOLD}32
 STR_RELIABILITY_20                  :{BLACK}可靠性下降速度：{GOLD}20
 STR_RELIABILITY_16                  :{BLACK}可靠性下降速度：{GOLD}16
 STR_RELIABILITY_6                   :{BLACK}可靠性下降速度：{GOLD}6
+STR_RELIABILITY_5                   :{BLACK}可靠性下降速度：{GOLD}5
 
 STR_ORIGINAL            :{GOLD} - 原版涂装
 STR_ORANGE              :{ORANGE} - 橘色涂装
@@ -152,21 +163,26 @@ STR_DECAY_185_100_555   :{BLACK}货物贬值周期：{GOLD}185，棚代客100，
 STR_DECAY_370_200_1110  :{BLACK}货物贬值周期：{GOLD}370，棚代客200，装载活禽/畜1110
 STR_DECAY_740_400_2220  :{BLACK}货物贬值周期：{GOLD}740，棚代客400，装载活禽/畜2220
 
-STR_CAFE_EFFECT                     :{BLACK}餐车的作用：{GOLD}加挂餐车使除餐车外的所有客运车厢运行费用清零
+STR_CAFE_EFFECT                     :{BLACK}餐车的作用：{GOLD}加挂餐车使除餐车外的所有非通勤客车运行费用减半，货物贬值周期增加1/4
 STR_AIR_CONDITIONER_EFFECT          :{BLACK}空调发电车的作用：{GOLD}加挂空调发电车可增加非机供机车牵引客车的货物贬值周期
 
 STR_ATTACH_ALL_CRH_CR               :{BLACK}匹配的动车组：{GOLD}所有和谐/复兴号动车
 STR_ATTACH_SLEEPER_MU               :{BLACK}匹配的动车组：{GOLD}所有提供卧铺的和谐/复兴号动车
 STR_ATTACH_CR200J                   :{BLACK}匹配的动车组：{GOLD}CR200J系列动车
 STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座（复兴号智能动车组标准）、二等/特等合造、二等/商务合造、二等/商务（复兴号智能动车组标准）合造、一等/特等合造、一等/商务合造、一等/商务（复兴号智能动车组标准）合造、二等/餐车合造、二等卧、一等卧、高级软卧
-STR_CRH5A_CAN_ATTACH_WAGON          :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座（复兴号智能动车组标准）、二等/特等合造、二等/商务合造、二等/商务（复兴号智能动车组标准）合造、一等/特等合造、一等/商务合造、一等/商务（复兴号智能动车组标准）合造、二等/餐车合造
+STR_CRH_CAN_ATTACH_WAGON            :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座（复兴号智能动车组标准）、二等/特等合造、二等/商务合造、二等/商务（复兴号智能动车组标准）合造、一等/特等合造、一等/商务合造、一等/商务（复兴号智能动车组标准）合造、二等/餐车合造
 
-STR_CRH5A_CONSIST                   :{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车1495公制马力
+STR_DF11G_CONSIST                   :{BLACK}构成：{GOLD}两节重联 (普通)，或一节在头部提供动力，另一节在尾部供电 (“拆猪”，最高速度 120 km/h, 功率 4133 公制马力)
+STR_CRH5A_CONSIST                   :{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车 1495 公制马力
+STR_CR400BF_CONSIST                 :{BLACK}构成：{GOLD}5-17节； n 节构成中动力车节数为 int(n/2) ，拖车节数为 int((n+1)/2)
 
 STR_CRH5A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
+STR_CR400BF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等/商务座合造
 
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}机供：{GOLD}是
 STR_ELECTRICITY_SUPPLY_NO           :{BLACK}机供：{RED}否
 
 STR_TOO_SHORT                       :列车太短了
-STR_MUST_BE_4_8_12_16_CARS          :该动车组车厢数必须为4，8，12或16，否则无法运行
+STR_ONLY_TWO_SECTIONS               :该机车节数必须为2，否则无法运行
+STR_MUST_BE_4_8_12_16_CARS          :该动车组节数必须为4，8，12或16，否则无法运行
+STR_MUST_BE_5_TO_17_CARS            :该动车组节数必须在5至17之间，否则无法运行

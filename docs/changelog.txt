@@ -1,5 +1,11 @@
 China Set: Trains Changelog
 =========================
+0.0.8.95 (6/9/2023)
+--------------------
+Add: CR400BF, DF11G, XL25T, KD25K
+Change: mechanics of running_cost of air conditioner generator cars and restaurant cars
+Fix #8: Sprites of CRH5A
+
 0.0.7.90 (28/8/2023)
 --------------------
 Add: CRH5A

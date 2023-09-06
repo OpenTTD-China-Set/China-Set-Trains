@@ -50,8 +50,8 @@ item (FEAT_TRAINS, crh5a) {
         length:                         switch_length_2_8_2;
         cargo_capacity:                 switch_crh5a_head_capacity;
         cost_factor:                    61;
-        running_cost_factor:            26 * runningcostfactor();
-        purchase_running_cost_factor:   104;
+        running_cost_factor:            26 * runningcostfactor() * cafecostfactor() + 20;
+        purchase_running_cost_factor:   124;
         purchase_cargo_capacity:        56/3;
     }
 
@@ -64,11 +64,11 @@ item (FEAT_TRAINS, crh5a) {
         length:                         switch_crh5a_wagon_length;
         weight:                         56;
         can_attach_wagon:               muhead;
-        cargo_age_period:               switch_crh5a_wagon_cargo_decay() << param_cargo_decay;
-        bitmask_vehicle_info:           switch_crh5a_wagon_bitmask;
-        articulated_part:               switch_crh5a_wagon_articulated_part;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
         cost_factor:                    switch_crh5a_wagon_cost;
-        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafefactor();
+        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
     }
     livery_override(zymuw) {
         default:                        switch_crh5a_wagon_graphics;
@@ -78,11 +78,11 @@ item (FEAT_TRAINS, crh5a) {
         length:                         switch_crh5a_wagon_length;
         weight:                         56;
         can_attach_wagon:               muhead;
-        cargo_age_period:               switch_crh5a_wagon_cargo_decay() << param_cargo_decay;
-        bitmask_vehicle_info:           switch_crh5a_wagon_bitmask;
-        articulated_part:               switch_crh5a_wagon_articulated_part;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
         cost_factor:                    switch_crh5a_wagon_cost;
-        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafefactor();
+        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
     }
     livery_override(ztmuw) {
         default:                        switch_crh5a_wagon_graphics;
@@ -92,11 +92,11 @@ item (FEAT_TRAINS, crh5a) {
         length:                         switch_crh5a_wagon_length;
         weight:                         56;
         can_attach_wagon:               muhead;
-        cargo_age_period:               switch_crh5a_wagon_cargo_decay() << param_cargo_decay;
-        bitmask_vehicle_info:           switch_crh5a_wagon_bitmask;
-        articulated_part:               switch_crh5a_wagon_articulated_part;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
         cost_factor:                    switch_crh5a_wagon_cost;
-        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafefactor();
+        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
     }
     livery_override(zsmuw) {
         default:                        switch_crh5a_wagon_graphics;
@@ -106,11 +106,11 @@ item (FEAT_TRAINS, crh5a) {
         length:                         switch_crh5a_wagon_length;
         weight:                         56;
         can_attach_wagon:               muhead;
-        cargo_age_period:               switch_crh5a_wagon_cargo_decay() << param_cargo_decay;
-        bitmask_vehicle_info:           switch_crh5a_wagon_bitmask;
-        articulated_part:               switch_crh5a_wagon_articulated_part;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
         cost_factor:                    switch_crh5a_wagon_cost;
-        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafefactor();
+        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
     }
     livery_override(swmuw) {
         default:                        switch_crh5a_wagon_graphics;
@@ -120,11 +120,11 @@ item (FEAT_TRAINS, crh5a) {
         length:                         switch_crh5a_wagon_length;
         weight:                         56;
         can_attach_wagon:               muhead;
-        cargo_age_period:               switch_crh5a_wagon_cargo_decay() << param_cargo_decay;
-        bitmask_vehicle_info:           switch_crh5a_wagon_bitmask;
-        articulated_part:               switch_crh5a_wagon_articulated_part;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
         cost_factor:                    switch_crh5a_wagon_cost;
-        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafefactor();
+        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
     }
     livery_override(zetmuw) {
         default:                        switch_crh5a_wagon_graphics;
@@ -134,11 +134,11 @@ item (FEAT_TRAINS, crh5a) {
         length:                         switch_crh5a_wagon_length;
         weight:                         56;
         can_attach_wagon:               muhead;
-        cargo_age_period:               switch_crh5a_wagon_cargo_decay() << param_cargo_decay;
-        bitmask_vehicle_info:           switch_crh5a_wagon_bitmask;
-        articulated_part:               switch_crh5a_wagon_articulated_part;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
         cost_factor:                    switch_crh5a_wagon_cost;
-        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafefactor();
+        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
     }
     livery_override(zesmuw) {
         default:                        switch_crh5a_wagon_graphics;
@@ -148,11 +148,11 @@ item (FEAT_TRAINS, crh5a) {
         length:                         switch_crh5a_wagon_length;
         weight:                         56;
         can_attach_wagon:               muhead;
-        cargo_age_period:               switch_crh5a_wagon_cargo_decay() << param_cargo_decay;
-        bitmask_vehicle_info:           switch_crh5a_wagon_bitmask;
-        articulated_part:               switch_crh5a_wagon_articulated_part;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
         cost_factor:                    switch_crh5a_wagon_cost;
-        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafefactor();
+        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
     }
     livery_override(zeswmuw) {
         default:                        switch_crh5a_wagon_graphics;
@@ -162,11 +162,11 @@ item (FEAT_TRAINS, crh5a) {
         length:                         switch_crh5a_wagon_length;
         weight:                         56;
         can_attach_wagon:               muhead;
-        cargo_age_period:               switch_crh5a_wagon_cargo_decay() << param_cargo_decay;
-        bitmask_vehicle_info:           switch_crh5a_wagon_bitmask;
-        articulated_part:               switch_crh5a_wagon_articulated_part;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
         cost_factor:                    switch_crh5a_wagon_cost;
-        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafefactor();
+        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
     }
     livery_override(zytmuw) {
         default:                        switch_crh5a_wagon_graphics;
@@ -176,11 +176,11 @@ item (FEAT_TRAINS, crh5a) {
         length:                         switch_crh5a_wagon_length;
         weight:                         56;
         can_attach_wagon:               muhead;
-        cargo_age_period:               switch_crh5a_wagon_cargo_decay() << param_cargo_decay;
-        bitmask_vehicle_info:           switch_crh5a_wagon_bitmask;
-        articulated_part:               switch_crh5a_wagon_articulated_part;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
         cost_factor:                    switch_crh5a_wagon_cost;
-        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafefactor();
+        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
     }
     livery_override(zysmuw) {
         default:                        switch_crh5a_wagon_graphics;
@@ -190,11 +190,11 @@ item (FEAT_TRAINS, crh5a) {
         length:                         switch_crh5a_wagon_length;
         weight:                         56;
         can_attach_wagon:               muhead;
-        cargo_age_period:               switch_crh5a_wagon_cargo_decay() << param_cargo_decay;
-        bitmask_vehicle_info:           switch_crh5a_wagon_bitmask;
-        articulated_part:               switch_crh5a_wagon_articulated_part;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
         cost_factor:                    switch_crh5a_wagon_cost;
-        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafefactor();
+        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
     }
     livery_override(zyswmuw) {
         default:                        switch_crh5a_wagon_graphics;
@@ -204,11 +204,11 @@ item (FEAT_TRAINS, crh5a) {
         length:                         switch_crh5a_wagon_length;
         weight:                         56;
         can_attach_wagon:               muhead;
-        cargo_age_period:               switch_crh5a_wagon_cargo_decay() << param_cargo_decay;
-        bitmask_vehicle_info:           switch_crh5a_wagon_bitmask;
-        articulated_part:               switch_crh5a_wagon_articulated_part;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
         cost_factor:                    switch_crh5a_wagon_cost;
-        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafefactor();
+        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
     }
     livery_override(zecmuw) {
         default:                        switch_crh5a_wagon_graphics;
@@ -218,11 +218,11 @@ item (FEAT_TRAINS, crh5a) {
         length:                         switch_crh5a_wagon_length;
         weight:                         56;
         can_attach_wagon:               muhead;
-        cargo_age_period:               switch_crh5a_wagon_cargo_decay() << param_cargo_decay;
-        bitmask_vehicle_info:           switch_crh5a_wagon_bitmask;
-        articulated_part:               switch_crh5a_wagon_articulated_part;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
         cost_factor:                    switch_crh5a_wagon_cost;
-        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor(); // IT IS A RESTAURANT CAR!
+        running_cost_factor:            switch_crh5a_wagon_running() * runningcostfactor() + 20 + accostfactor(); // IT IS A RESTAURANT CAR!
     }
 }
 

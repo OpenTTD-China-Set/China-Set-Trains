@@ -6,7 +6,7 @@ item (FEAT_TRAINS, kd25g) {
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         
         // Availability
-        climates_available:             ALL_CLIMATES;
+        climates_available:             NO_CLIMATE;
         introduction_date:              date(1992,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
@@ -47,9 +47,9 @@ item (FEAT_TRAINS, kd25g) {
         length:                         switch_length_1_8_1;
         cargo_capacity:                 switch_kd25g_capacity;
         cargo_age_period:               200 << param_cargo_decay;
-        cost_factor:                    23;
-        running_cost_factor:            20 * runningcostfactor();
-        purchase_running_cost_factor:   80;
+        cost_factor:                    13;
+        running_cost_factor:            5 * runningcostfactor() + 20;
+        purchase_running_cost_factor:   40;
         purchase_cargo_capacity:        0;
     }
 }

@@ -46,7 +46,7 @@ item (FEAT_TRAINS, zecmuw) {
         // Stats
         length:                         switch_length_2_8_2;
         cargo_capacity:                 switch_zecmuw_capacity;
-        cargo_age_period:               300 << param_cargo_decay;
+        cargo_age_period:               (15 * 5 * cafedecayfactor()) << param_cargo_decay;
         cost_factor:                    24;
         running_cost_factor:            6 * runningcostfactor();
         purchase_running_cost_factor:   36;

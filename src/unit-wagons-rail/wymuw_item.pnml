@@ -45,9 +45,9 @@ item (FEAT_TRAINS, wymuw) {
         // Stats
         length:                         switch_length_2_8_2;
         cargo_capacity:                 switch_wymuw_capacity;
-        cargo_age_period:               900 << param_cargo_decay;
+        cargo_age_period:               (45 * 5 * cafedecayfactor()) << param_cargo_decay;
         cost_factor:                    24;
-        running_cost_factor:            6 * runningcostfactor() * cafefactor();
+        running_cost_factor:            6 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   36;
         purchase_cargo_capacity:        39/3;
     }

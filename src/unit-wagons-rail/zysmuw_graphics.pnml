@@ -34,8 +34,8 @@ switch (FEAT_TRAINS, SELF, switch_zysmuw_capacity, position_in_articulated_veh %
 }
 
 switch (FEAT_TRAINS, SELF, switch_zysmuw_cargo_decay, position_in_articulated_veh % 3) {
-    0: return 800;
-    return 500;
+    0: return 40 * 5;
+    return 25 * 5;
 }
 
 switch (FEAT_TRAINS, SELF, switch_zysmuw_additional_text, param_cargo_decay) {

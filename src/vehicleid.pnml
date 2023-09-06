@@ -1,4 +1,4 @@
-//This file sets all vehicle IDs. Each type has a range of 128/256/512/1024 possible IDs.
+//This file sets all vehicle IDs. Each type has a range of 32/64/128/256/512/768/1024 possible IDs.
 
 //Horse, available ID range: 512-1023 (hex 0x0200..0x03FF)
 #define id_range_horse 0x0200..0x03FF
@@ -65,7 +65,11 @@ item (FEAT_TRAINS, yz25k, 2058) {}
 item (FEAT_TRAINS, rz25k, 2059) {}
 item (FEAT_TRAINS, yw25k, 2060) {}
 item (FEAT_TRAINS, rw25k, 2061) {}
-item (FEAT_TRAINS, kd25g, 2062) {}
+item (FEAT_TRAINS, kd25g, 2062) {} // OLD, HIDDEN, DO NOT MODIFY
+item (FEAT_TRAINS, kd25k, 2063) {}
+item (FEAT_TRAINS, xl25t_sspe, 2064) {}
+item (FEAT_TRAINS, kd25g_new, 2065) {}
+
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 #define id_range_wagons 0x0C00..0x0FFF
@@ -80,6 +84,7 @@ item (FEAT_TRAINS, p62, 3073) {}
 #define id_range_diesel 0x1400..0x17FF
 item (FEAT_TRAINS, df4k, 5120) {}
 item (FEAT_TRAINS, df4h, 5121) {}
+item (FEAT_TRAINS, df11g, 5122) {}
 
 //25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
 #define id_range_25_electric 0x1800..0x1BFF
@@ -98,6 +103,7 @@ item (FEAT_TRAINS, hxd3d, 6145) {}
 #define id_range_25_emu 0x2000..0x23FF
 item (FEAT_TRAINS, cr200j1, 9216) {}
 item (FEAT_TRAINS, crh5a, 9217) {}
+item (FEAT_TRAINS, cr400bf, 9218) {}
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
 #define id_range_1500_emu 0x2800..0x2BFF

@@ -6,6 +6,8 @@ STR_GRF_URL         :https://www.tt-forums.net/viewtopic.php?t=91092
 STR_GRF_DESC_EXTRA  :Trains: Locomotives, MUs, Coaches and Wagons in China Mainland. More contents in the future.
 STR_GRF_DESC_README :See readme for details.
 
+STR_LEAPING_LIU_NEVER_DIES      :{BLUE}Leaping Liu Never Dies.
+
 STR_PARAM_LOADING_SPEED         :Loading Speed
 STR_PARAM_LOADING_SPEED_DESC    :Adjust vehicle loading speed. Default is 100%.
 
@@ -36,28 +38,32 @@ STR_NAME_YZ25G          :YZ25G (25m Improved Hard Seat Passenger Coach)
 STR_NAME_RZ25G          :RZ25G (25m Improved Soft Seat Passenger Coach)
 STR_NAME_YW25G          :YW25G (25m Improved Hard Sleeper Passenger Coach)
 STR_NAME_RW25G          :RW25G (25m Improved Soft Sleeper Passenger Coach)
-STR_NAME_YZ25T          :YZ25T (25m Accelerated Hard Seat Passenger Coach)
-STR_NAME_RZ25T          :RZ25T (25m Accelerated Soft Seat Passenger Coach)
-STR_NAME_YW25T          :YW25T (25m Accelerated Hard Sleeper Passenger Coach)
-STR_NAME_RW25T          :RW25T (25m Accelerated Soft Sleeper Passenger Coach)
-STR_NAME_XL25K          :XL25K (25m Rapid Luggage Car)
-STR_NAME_XL25G          :XL25G (25m Improved Luggage Car)
 STR_NAME_YZ25K          :YZ25K (25m Rapid Hard Seat Passenger Coach)
 STR_NAME_RZ25K          :RZ25K (25m Rapid Soft Seat Passenger Coach)
 STR_NAME_YW25K          :YW25K (25m Rapid Hard Sleeper Passenger Coach)
 STR_NAME_RW25K          :RW25K (25m Rapid Soft Sleeper Passenger Coach)
+STR_NAME_YZ25T          :YZ25T (25m Accelerated Hard Seat Passenger Coach)
+STR_NAME_RZ25T          :RZ25T (25m Accelerated Soft Seat Passenger Coach)
+STR_NAME_YW25T          :YW25T (25m Accelerated Hard Sleeper Passenger Coach)
+STR_NAME_RW25T          :RW25T (25m Accelerated Soft Sleeper Passenger Coach)
+STR_NAME_XL25G          :XL25G (25m Improved Luggage Car)
+STR_NAME_XL25K          :XL25K (25m Rapid Luggage Car)
+STR_NAME_XL25T_SSPE     :XL25T (25m Accelerated Luggage Car) (SSPE)
 STR_NAME_KD25G          :KD25G (25m Improved Air Conditioner Generator Car)
+STR_NAME_KD25K          :KD25K (25m Rapid Air Conditioner Generator Car)
 
 STR_NAME_C64            :C64 (Gondola)
 STR_NAME_P62            :P62 (Boxcar)
 
 STR_NAME_DF4K           :DF4 (Dongfeng 4 Diesel Locomotive) (Passenger Type)
 STR_NAME_DF4H           :DF4 (Dongfeng 4 Diesel Locomotive) (Freight Type)
+STR_NAME_DF11G          :DF11G (Dongfeng 11G Diesel Locomotive)
 STR_NAME_HXD3C          :HXD3C (Hexie/Harmony 3C Electric Locomotive)
 STR_NAME_HXD3D          :HXD3D (Hexie/Harmony 3D Electric Locomotive)
 
 STR_NAME_CR200J1        :CR200J1 (EMU)
 STR_NAME_CRH5A          :CRH5A (EMU)
+STR_NAME_CR400BF        :CR400BF (EMU)
 
 STR_NAME_ZEMUW          :2nd-Class (ZE) MU Wagon
 STR_NAME_ZYMUW          :1st-Class (ZY) MU Wagon
@@ -80,6 +86,8 @@ STR_DESC_4                          :{STRING}{}{STRING}{}{STRING}{}{STRING}
 STR_DESC_3                          :{STRING}{}{STRING}{}{STRING}
 STR_DESC_2                          :{STRING}{}{STRING}
 
+STR_XL25T_SSPE_DESCRIPTION          :{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.
+
 STR_DF4_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery and {ORANGE}Orange {GOLD}Livery
 STR_25G_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {GREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {GREEN}"Gaozu Green" {GOLD}Livery (unfinished)
@@ -88,16 +96,19 @@ STR_C64_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (u
 STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random
 
 STR_DF4_NICKNAME                    :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
+STR_DF11G_NICKNAME                  :{BLACK}Nickname: {GOLD}Pig
 STR_HXD3C_NICKNAME                  :{BLACK}Nickname: {GOLD}Electric Baboon
 STR_HXD3D_NICKNAME                  :{BLACK}Nickname: {GOLD}Tomato
 STR_CR200J_NICKNAME                 :{BLACK}Nickname: {GREEN}"Hulk" {GOLD}(Official), {GREEN}"Trash Bin" {GOLD}(Folk)
 STR_CRH5A_NICKNAME                  :{BLACK}Nickname: {GOLD}Donkey
+STR_CR400BF_NICKNAME                :{BLACK}Nickname: {GOLD}Golden Phoenix
 
 
 STR_RELIABILITY_32                  :{BLACK}Reliability decay speed: {GOLD}32
 STR_RELIABILITY_20                  :{BLACK}Reliability decay speed: {GOLD}20
 STR_RELIABILITY_16                  :{BLACK}Reliability decay speed: {GOLD}16
 STR_RELIABILITY_6                   :{BLACK}Reliability decay speed: {GOLD}6
+STR_RELIABILITY_5                   :{BLACK}Reliability decay speed: {GOLD}5
 
 STR_ORIGINAL            :{GOLD} - Original Livery
 STR_ORANGE              :{ORANGE} - Orange Livery
@@ -158,21 +169,26 @@ STR_DECAY_185_100_555   :{BLACK}Cargo Age Period: {GOLD}185, Passengers 100, Liv
 STR_DECAY_370_200_1110  :{BLACK}Cargo Age Period: {GOLD}370, Passengers 200, Livestock 1110
 STR_DECAY_740_400_2220  :{BLACK}Cargo Age Period: {GOLD}740, Passengers 400, Livestock 2220
 
-STR_CAFE_EFFECT                     :{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Eliminates All Running Costs of Passenger Cars except Restaurant Cars
+STR_CAFE_EFFECT                     :{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Halves Running Costs of Non-Commuter Passenger Cars except Restaurant Cars, and Increases Cargo Age Period by 1/4
 STR_AIR_CONDITIONER_EFFECT          :{BLACK}Air Conditioner Effect: {GOLD}Attaching Air Conditioner Generator Car Increases Cargo Age Period of Passenger Cars Hauled by Locomotives without Electricity Supply
 
 STR_ATTACH_ALL_CRH_CR               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs
 STR_ATTACH_SLEEPER_MU               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs
 STR_ATTACH_CR200J                   :{BLACK}Matching MUs: {GOLD}CR200J Series
 STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZT, ZS, SW, ZET, ZES, ZESW, ZYT, ZYS, ZYSW, ZEC, WE, WY, WG
-STR_CRH5A_CAN_ATTACH_WAGON          :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZT, ZS, SW, ZET, ZES, ZESW, ZYT, ZYS, ZYSW, ZEC
+STR_CRH_CAN_ATTACH_WAGON            :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZT, ZS, SW, ZET, ZES, ZESW, ZYT, ZYS, ZYSW, ZEC
 
+STR_DF11G_CONSIST                   :{BLACK}Consist: {GOLD}2 sections joint together (Normal), or one section at head, another section at back ("Splitting Pig", max speed 120 km/h, power 4133 hpM)
 STR_CRH5A_CONSIST                   :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car
+STR_CR400BF_CONSIST                 :{BLACK}Consist: {GOLD}5 to 17 cars; int(n/2) motorised cars and int((n+1)/2) trailers in an n-car consist.
 
 STR_CRH5A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CR400BF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class Business-Class Combined (ZYS)
 
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}Electricity Supply for cars: {GOLD}YES
 STR_ELECTRICITY_SUPPLY_NO           :{BLACK}Electricity Supply for cars: {RED}NO
 
 STR_TOO_SHORT                       :TOO SHORT!
+STR_ONLY_TWO_SECTIONS               :This locomotive must be in a consist of two sections to run.
 STR_MUST_BE_4_8_12_16_CARS          :This MU must be in a consist of 4, 8, 12 or 16 cars to run.
+STR_MUST_BE_5_TO_17_CARS            :This MU must be in a consist of 5 to 17 cars to run.

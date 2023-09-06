@@ -1,0 +1,639 @@
+// Begin CR400BF
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_cr400bf_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_cr400bf_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-emu", "cr400bf-c")
+}
+
+// Vehicle
+spriteset (spriteset_cr400bf_front) {
+    template_empty ()
+}
+spriteset (spriteset_cr400bf_middle_m) {
+    template_empty ()
+}
+spriteset (spriteset_cr400bf_middle_t) {
+    template_empty ()
+}
+spriteset (spriteset_cr400bf_middle_tp) {
+    template_empty ()
+}
+spriteset (spriteset_cr400bf_cab) {
+    template_empty ()
+}
+
+alternative_sprites(spriteset_cr400bf_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_13_standard ("25-emu", "cr400bf-c")
+}
+alternative_sprites (spriteset_cr400bf_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_12_standard ("25-emu", "cr400bf-m")
+}
+alternative_sprites (spriteset_cr400bf_middle_t, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_12_standard ("25-emu", "cr400bf-t")
+}
+alternative_sprites (spriteset_cr400bf_middle_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_12_standard ("25-emu", "cr400bf-tp")
+}
+alternative_sprites (spriteset_cr400bf_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_13_reversed ("25-emu", "cr400bf-c")
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_articulated_part, extra_callback_info1) {
+    1..2: return cr400bf;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_cr400bf_front;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_head_capacity, position_in_articulated_veh % 3) {
+    0: return 5;
+    1: return 28;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_additional_text, param_cargo_decay) {
+    return string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CR400BF_NICKNAME), string(STR_RELIABILITY_5), string(STR_CR400BF_CONSIST), string(STR_CR400BF_HEAD_SEAT));
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_5_middle_graphics, position_in_consist) {
+    4: spriteset_cr400bf_middle_m;
+    7: spriteset_cr400bf_middle_m;
+    10: spriteset_cr400bf_middle_tp;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_6_middle_graphics, position_in_consist) {
+    4: spriteset_cr400bf_middle_m;
+    7: spriteset_cr400bf_middle_m;
+    10: spriteset_cr400bf_middle_tp;
+    13: spriteset_cr400bf_middle_m;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_7_middle_graphics, position_in_consist) {
+    4: spriteset_cr400bf_middle_m;
+    7: spriteset_cr400bf_middle_t; //This panto does not rise
+    10: spriteset_cr400bf_middle_m;
+    13: spriteset_cr400bf_middle_tp; //ONLY THIS PANTO RISES
+    16: spriteset_cr400bf_middle_m;
+    empty_sprites;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_8_middle_graphics, position_in_consist) {
+    4: spriteset_cr400bf_middle_m;
+    7: spriteset_cr400bf_middle_t; //This panto does not rise
+    10: spriteset_cr400bf_middle_m;
+    13: spriteset_cr400bf_middle_m;
+    16: spriteset_cr400bf_middle_tp; //ONLY THIS PANTO RISES
+    19: spriteset_cr400bf_middle_m;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_9_middle_graphics, position_in_consist) {
+    4: spriteset_cr400bf_middle_m;
+    7: spriteset_cr400bf_middle_t; //This panto does not rise
+    10: spriteset_cr400bf_middle_m;
+    13: spriteset_cr400bf_middle_m;
+    16: spriteset_cr400bf_middle_tp; //ONLY THIS PANTO RISES
+    19: spriteset_cr400bf_middle_m;
+    22: spriteset_cr400bf_middle_m; //Trailer without panto looks the same as motorised car
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_10_middle_graphics, position_in_consist) {
+    4: spriteset_cr400bf_middle_m;
+    7: spriteset_cr400bf_middle_t; //This panto does not rise
+    10: spriteset_cr400bf_middle_m;
+    13: spriteset_cr400bf_middle_m;
+    16: spriteset_cr400bf_middle_m; //Trailer without panto looks the same as motorised car
+    19: spriteset_cr400bf_middle_m;
+    22: spriteset_cr400bf_middle_tp; //ONLY THIS PANTO RISES
+    25: spriteset_cr400bf_middle_m;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_11_middle_graphics, position_in_consist) {
+    4: spriteset_cr400bf_middle_m;
+    7: spriteset_cr400bf_middle_t; //This panto does not rise
+    10: spriteset_cr400bf_middle_m;
+    13: spriteset_cr400bf_middle_m; //Trailer without panto looks the same as motorised car
+    16: spriteset_cr400bf_middle_m;
+    19: spriteset_cr400bf_middle_m; //Trailer without panto looks the same as motorised car
+    22: spriteset_cr400bf_middle_m;
+    25: spriteset_cr400bf_middle_tp; //ONLY THIS PANTO RISES
+    28: spriteset_cr400bf_middle_m;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_12_middle_graphics, position_in_consist) {
+    4: spriteset_cr400bf_middle_m;
+    7: spriteset_cr400bf_middle_t; //This panto does not rise
+    10: spriteset_cr400bf_middle_m;
+    13: spriteset_cr400bf_middle_tp; //ONLY THIS PANTO RISES
+    16: spriteset_cr400bf_middle_m;
+    19: spriteset_cr400bf_middle_m;
+    22: spriteset_cr400bf_middle_t; //This panto does not rise
+    25: spriteset_cr400bf_middle_m;
+    28: spriteset_cr400bf_middle_t; //This panto does not rise
+    31: spriteset_cr400bf_middle_m;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_13_middle_graphics, position_in_consist) {
+    4: spriteset_cr400bf_middle_m;
+    7: spriteset_cr400bf_middle_t; //This panto does not rise
+    10: spriteset_cr400bf_middle_m;
+    13: spriteset_cr400bf_middle_tp; //ONLY THIS PANTO RISES
+    16: spriteset_cr400bf_middle_m;
+    19: spriteset_cr400bf_middle_m; //Trailer without panto looks the same as motorised car
+    22: spriteset_cr400bf_middle_m;
+    25: spriteset_cr400bf_middle_t; //This panto does not rise
+    28: spriteset_cr400bf_middle_m;
+    31: spriteset_cr400bf_middle_t; //This panto does not rise
+    34: spriteset_cr400bf_middle_m;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_14_middle_graphics, position_in_consist) {
+    4: spriteset_cr400bf_middle_m;
+    7: spriteset_cr400bf_middle_t; //This panto does not rise
+    10: spriteset_cr400bf_middle_m;
+    13: spriteset_cr400bf_middle_m; //Trailer without panto looks the same as motorised car
+    16: spriteset_cr400bf_middle_tp; //ONLY THIS PANTO RISES
+    19: spriteset_cr400bf_middle_m;
+    22: spriteset_cr400bf_middle_m;
+    25: spriteset_cr400bf_middle_t; //This panto does not rise
+    28: spriteset_cr400bf_middle_m;
+    31: spriteset_cr400bf_middle_m;
+    34: spriteset_cr400bf_middle_t; //This panto does not rise
+    37: spriteset_cr400bf_middle_m;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_15_middle_graphics, position_in_consist) {
+    4: spriteset_cr400bf_middle_m;
+    7: spriteset_cr400bf_middle_t; //This panto does not rise
+    10: spriteset_cr400bf_middle_m;
+    13: spriteset_cr400bf_middle_m; //Trailer without panto looks the same as motorised car
+    16: spriteset_cr400bf_middle_tp; //ONLY THIS PANTO RISES
+    19: spriteset_cr400bf_middle_m;
+    22: spriteset_cr400bf_middle_m; //Trailer without panto looks the same as motorised car
+    25: spriteset_cr400bf_middle_m;
+    28: spriteset_cr400bf_middle_t; //This panto does not rise
+    31: spriteset_cr400bf_middle_m;
+    34: spriteset_cr400bf_middle_m;
+    37: spriteset_cr400bf_middle_t; //This panto does not rise
+    40: spriteset_cr400bf_middle_m;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_16_middle_graphics, position_in_consist) {
+    4: spriteset_cr400bf_middle_m;
+    7: spriteset_cr400bf_middle_t; //This panto does not rise
+    10: spriteset_cr400bf_middle_m;
+    13: spriteset_cr400bf_middle_m;
+    16: spriteset_cr400bf_middle_tp; //ONLY THIS PANTO RISES
+    19: spriteset_cr400bf_middle_m;
+    22: spriteset_cr400bf_middle_m; //Trailer without panto looks the same as motorised car
+    25: spriteset_cr400bf_middle_m; //Trailer without panto looks the same as motorised car
+    28: spriteset_cr400bf_middle_m;
+    31: spriteset_cr400bf_middle_t; //This panto does not rise
+    34: spriteset_cr400bf_middle_m;
+    37: spriteset_cr400bf_middle_m;
+    40: spriteset_cr400bf_middle_t; //This panto does not rise
+    43: spriteset_cr400bf_middle_m;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_17_middle_graphics, position_in_consist) {
+    4: spriteset_cr400bf_middle_m;
+    7: spriteset_cr400bf_middle_t; //This panto does not rise
+    10: spriteset_cr400bf_middle_m;
+    13: spriteset_cr400bf_middle_m;
+    16: spriteset_cr400bf_middle_tp; //ONLY THIS PANTO RISES
+    19: spriteset_cr400bf_middle_m;
+    22: spriteset_cr400bf_middle_m; //Trailer without panto looks the same as motorised car
+    25: spriteset_cr400bf_middle_m; //Trailer without panto looks the same as motorised car
+    28: spriteset_cr400bf_middle_m;
+    31: spriteset_cr400bf_middle_t; //This panto does not rise
+    34: spriteset_cr400bf_middle_m;
+    37: spriteset_cr400bf_middle_m;
+    40: spriteset_cr400bf_middle_t; //This panto does not rise
+    43: spriteset_cr400bf_middle_m;
+    46: spriteset_cr400bf_middle_m; //Trailer without panto looks the same as motorised car
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_graphics, num_vehs_in_consist) {
+    1..15: switch_cr400bf_5_middle_graphics;
+    16..18: switch_cr400bf_6_middle_graphics;
+    19..21: switch_cr400bf_7_middle_graphics;
+    22..24: switch_cr400bf_8_middle_graphics;
+    25..27: switch_cr400bf_9_middle_graphics;
+    28..30: switch_cr400bf_10_middle_graphics;
+    31..33: switch_cr400bf_11_middle_graphics;
+    34..36: switch_cr400bf_12_middle_graphics;
+    37..39: switch_cr400bf_13_middle_graphics;
+    40..42: switch_cr400bf_14_middle_graphics;
+    43..45: switch_cr400bf_15_middle_graphics;
+    46..48: switch_cr400bf_16_middle_graphics;
+    49..51: switch_cr400bf_17_middle_graphics;
+    return string(STR_MUST_BE_5_TO_17_CARS);
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_cr400bf_cab;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_graphics, position_in_consist_from_end) {
+    0..2: switch_cr400bf_cab_graphics;
+    switch_cr400bf_middle_graphics;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_length, position_in_consist_from_end) {
+    switch_length_2_8_2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_ze, position_in_articulated_veh % 3) {
+    1: return 90;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zy, position_in_articulated_veh % 3) {
+    1: return 60;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zt, position_in_articulated_veh % 3) {
+    1: return 33;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zs, position_in_articulated_veh % 3) {
+    1: return 26;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_sw, position_in_articulated_veh % 3) {
+    1: return 26;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zet, position_in_articulated_veh % 3) {
+    0: return 9;
+    1: return 65;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zes, position_in_articulated_veh % 3) {
+    0: return 9;
+    1: return 55;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zesw, position_in_articulated_veh % 3) {
+    0: return 8;
+    1: return 60;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zyt, position_in_articulated_veh % 3) {
+    0: return 9;
+    1: return 40;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zys, position_in_articulated_veh % 3) {
+    0: return 9;
+    1: return 36;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zysw, position_in_articulated_veh % 3) {
+    0: return 8;
+    1: return 40;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zec, position_in_articulated_veh % 3) {
+    1: return 48;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity, vehicle_type_id) {
+    1024: switch_cr400bf_middle_capacity_ze;
+    1025: switch_cr400bf_middle_capacity_zy;
+    1026: switch_cr400bf_middle_capacity_zt;
+    1027: switch_cr400bf_middle_capacity_zs;
+    1028: switch_cr400bf_middle_capacity_sw;
+    1029: switch_cr400bf_middle_capacity_zet;
+    1030: switch_cr400bf_middle_capacity_zes;
+    1031: switch_cr400bf_middle_capacity_zesw;
+    1032: switch_cr400bf_middle_capacity_zyt;
+    1033: switch_cr400bf_middle_capacity_zys;
+    1034: switch_cr400bf_middle_capacity_zysw;
+    1035: switch_cr400bf_middle_capacity_zec;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_ze, position_in_articulated_veh % 3) {
+    1: return 60;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zy, position_in_articulated_veh % 3) {
+    1: return 40;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zt, position_in_articulated_veh % 3) {
+    1: return 22;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zs, position_in_articulated_veh % 3) {
+    1: return 18;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_sw, position_in_articulated_veh % 3) {
+    1: return 18;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zet, position_in_articulated_veh % 3) {
+    0: return 6;
+    1: return 40;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zes, position_in_articulated_veh % 3) {
+    0: return 6;
+    1: return 40;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zesw, position_in_articulated_veh % 3) {
+    0: return 6;
+    1: return 40;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zyt, position_in_articulated_veh % 3) {
+    0: return 6;
+    1: return 28;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zys, position_in_articulated_veh % 3) {
+    0: return 5;
+    1: return 28;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zysw, position_in_articulated_veh % 3) {
+    0: return 5;
+    1: return 28;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zec, position_in_articulated_veh % 3) {
+    1: return 18;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity, vehicle_type_id) {
+    1024: switch_cr400bf_cab_capacity_ze;
+    1025: switch_cr400bf_cab_capacity_zy;
+    1026: switch_cr400bf_cab_capacity_zt;
+    1027: switch_cr400bf_cab_capacity_zs;
+    1028: switch_cr400bf_cab_capacity_sw;
+    1029: switch_cr400bf_cab_capacity_zet;
+    1030: switch_cr400bf_cab_capacity_zes;
+    1031: switch_cr400bf_cab_capacity_zesw;
+    1032: switch_cr400bf_cab_capacity_zyt;
+    1033: switch_cr400bf_cab_capacity_zys;
+    1034: switch_cr400bf_cab_capacity_zysw;
+    1035: switch_cr400bf_cab_capacity_zec;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_capacity, position_in_consist_from_end) {
+    0..2: switch_cr400bf_cab_capacity;
+    switch_cr400bf_middle_capacity;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_cost_power, vehicle_type_id) {
+    1024: return 89;
+    1025: return 93;
+    1026: return 97;
+    1027: return 98;
+    1028: return 101;
+    1029: return 91;
+    1030: return 91;
+    1031: return 92;
+    1032: return 94;
+    1033: return 94;
+    1034: return 95;
+    1035: return 108;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_running_power, vehicle_type_id) {
+    1024: return 32;
+    1025: return 34;
+    1026: return 36;
+    1027: return 36;
+    1028: return 38;
+    1029: return 33;
+    1030: return 33;
+    1031: return 34;
+    1032: return 34;
+    1033: return 35;
+    1034: return 35;
+    1035: return 36;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_cost_unpower, vehicle_type_id) {
+    1024: return 30;
+    1025: return 34;
+    1026: return 37;
+    1027: return 39;
+    1028: return 41;
+    1029: return 31;
+    1030: return 32;
+    1031: return 33;
+    1032: return 35;
+    1033: return 35;
+    1034: return 36;
+    1035: return 49;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_running_unpower, vehicle_type_id) {
+    1024: return 7;
+    1025: return 9;
+    1026: return 11;
+    1027: return 12;
+    1028: return 13;
+    1029: return 8;
+    1030: return 8;
+    1031: return 9;
+    1032: return 10;
+    1033: return 10;
+    1034: return 10;
+    1035: return 12;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_cost, vehicle_is_potentially_powered) {
+    1: switch_cr400bf_wagon_cost_power;
+    switch_cr400bf_wagon_cost_unpower;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_running, vehicle_is_potentially_powered) {
+    1: switch_cr400bf_wagon_running_power;
+    switch_cr400bf_wagon_running_unpower;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_5_wagon_power, position_in_consist) {
+    3..8: return 3535; //2nd-3rd
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_6_wagon_power, position_in_consist) {
+    3..8: return 3535; //2nd-3rd
+    12..14: return 3535; //5th
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_7_wagon_power, position_in_consist) {
+    3..5: return 3535; //2nd
+    9..11: return 3535; //4th
+    15..17: return 3535; //6th
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_8_wagon_power, position_in_consist) {
+    3..5: return 3535; //2nd
+    9..14: return 3535; //4-5th
+    18..20: return 3535; //7th
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_9_wagon_power, position_in_consist) {
+    //same as 8
+    3..5: return 3535; //2nd
+    9..14: return 3535; //4-5th
+    18..20: return 3535; //7th
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_10_wagon_power, position_in_consist) {
+    3..5: return 3535; //2nd
+    9..14: return 3535; //4-5th
+    18..20: return 3535; //7th
+    24..26: return 3535; //9th
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_11_wagon_power, position_in_consist) {
+    3..5: return 3535; //2nd
+    9..11: return 3535; //4th
+    15..17: return 3535; //6th
+    21..23: return 3535; //8th
+    27..29: return 3535; //10th
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_12_wagon_power, position_in_consist) {
+    3..5: return 3535; //2nd
+    9..11: return 3535; //4th
+    15..20: return 3535; //6-7th
+    24..26: return 3535; //9th
+    30..32: return 3535; //11th
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_13_wagon_power, position_in_consist) {
+    3..5: return 3535; //2nd
+    9..11: return 3535; //4th
+    15..17: return 3535; //6th
+    21..23: return 3535; //8th
+    27..29: return 3535; //10th
+    33..35: return 3535; //12th
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_14_wagon_power, position_in_consist) {
+    3..5: return 3535; //2nd
+    9..11: return 3535; //4th
+    18..23: return 3535; //7-8th
+    27..32: return 3535; //10-11th
+    36..38: return 3535; //13th
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_15_wagon_power, position_in_consist) {
+    3..5: return 3535; //2nd
+    9..11: return 3535; //4th
+    18..20: return 3535; //7th
+    24..26: return 3535; //9th
+    30..35: return 3535; //11-12th
+    39..41: return 3535; //14th
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_16_wagon_power, position_in_consist) {
+    3..5: return 3535; //2nd
+    9..14: return 3535; //4-5th
+    18..20: return 3535; //7th
+    27..29: return 3535; //10th
+    33..38: return 3535; //12-13th
+    42..44: return 3535; //15th
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_17_wagon_power, position_in_consist) {
+    //same as 16
+    3..5: return 3535; //2nd
+    9..14: return 3535; //4-5th
+    18..20: return 3535; //7th
+    27..29: return 3535; //10th
+    33..38: return 3535; //12-13th
+    42..44: return 3535; //15th
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_power, num_vehs_in_consist) {
+    1..15: switch_cr400bf_5_wagon_power;
+    16..18: switch_cr400bf_6_wagon_power;
+    19..21: switch_cr400bf_7_wagon_power;
+    22..24: switch_cr400bf_8_wagon_power;
+    25..27: switch_cr400bf_9_wagon_power;
+    28..30: switch_cr400bf_10_wagon_power;
+    31..33: switch_cr400bf_11_wagon_power;
+    34..36: switch_cr400bf_12_wagon_power;
+    37..39: switch_cr400bf_13_wagon_power;
+    40..42: switch_cr400bf_14_wagon_power;
+    43..45: switch_cr400bf_15_wagon_power;
+    46..48: switch_cr400bf_16_wagon_power;
+    49..51: switch_cr400bf_17_wagon_power;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_traction, vehicle_is_potentially_powered) {
+    1: return int(0.118*255);
+    return 0;
+}

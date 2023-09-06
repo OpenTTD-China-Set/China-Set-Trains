@@ -45,9 +45,9 @@ item (FEAT_TRAINS, yw25g) {
         // Stats
         length:                         switch_length_2_8_2;
         cargo_capacity:                 switch_yw25g_capacity;
-        cargo_age_period:               (80 * acfactor()) << param_cargo_decay;
+        cargo_age_period:               (20 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
         cost_factor:                    13;
-        running_cost_factor:            11 * runningcostfactor() * cafefactor();
+        running_cost_factor:            11 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   44;
         purchase_cargo_capacity:        66/3;
     }

@@ -61,14 +61,9 @@
 #include "src/coaches/25g/xl25g_item.pnml"
 #include "src/coaches/25g/kd25g_graphics.pnml"
 #include "src/coaches/25g/kd25g_item.pnml"
-#include "src/coaches/25t/yz25t_graphics.pnml"
-#include "src/coaches/25t/yz25t_item.pnml"
-#include "src/coaches/25t/rz25t_graphics.pnml"
-#include "src/coaches/25t/rz25t_item.pnml"
-#include "src/coaches/25t/yw25t_graphics.pnml"
-#include "src/coaches/25t/yw25t_item.pnml"
-#include "src/coaches/25t/rw25t_graphics.pnml"
-#include "src/coaches/25t/rw25t_item.pnml"
+#include "src/coaches/25g/kd25g_new_graphics.pnml"
+#include "src/coaches/25g/kd25g_new_item.pnml"
+
 #include "src/coaches/25k/yz25k_graphics.pnml"
 #include "src/coaches/25k/yz25k_item.pnml"
 #include "src/coaches/25k/rz25k_graphics.pnml"
@@ -79,12 +74,28 @@
 #include "src/coaches/25k/rw25k_item.pnml"
 #include "src/coaches/25k/xl25k_graphics.pnml"
 #include "src/coaches/25k/xl25k_item.pnml"
+#include "src/coaches/25k/kd25k_graphics.pnml"
+#include "src/coaches/25k/kd25k_item.pnml"
+
+#include "src/coaches/25t/yz25t_graphics.pnml"
+#include "src/coaches/25t/yz25t_item.pnml"
+#include "src/coaches/25t/rz25t_graphics.pnml"
+#include "src/coaches/25t/rz25t_item.pnml"
+#include "src/coaches/25t/yw25t_graphics.pnml"
+#include "src/coaches/25t/yw25t_item.pnml"
+#include "src/coaches/25t/rw25t_graphics.pnml"
+#include "src/coaches/25t/rw25t_item.pnml"
+#include "src/coaches/25t/xl25t_sspe_graphics.pnml"
+#include "src/coaches/25t/xl25t_sspe_item.pnml"
 
 // Wagons
 #include "src/wagons/c64_graphics.pnml"
 #include "src/wagons/c64_item.pnml"
 #include "src/wagons/p62_graphics.pnml"
 #include "src/wagons/p62_item.pnml"
+
+// Another Function File
+#include "src/function2.pnml"
 
 // Steam
 
@@ -94,6 +105,8 @@
 #include "src/diesel/df4k_item.pnml"
 #include "src/diesel/df4h_graphics.pnml"
 #include "src/diesel/df4h_item.pnml"
+#include "src/diesel/df11g_graphics.pnml"
+#include "src/diesel/df11g_item.pnml"
 
 // 25kV AC Electric
 #include "src/25-electric/hxd3c_graphics.pnml"
@@ -112,6 +125,8 @@
 #include "src/25-emu/cr200j1_item.pnml"
 #include "src/25-emu/crh5a_graphics.pnml"
 #include "src/25-emu/crh5a_item.pnml"
+#include "src/25-emu/cr400bf_graphics.pnml"
+#include "src/25-emu/cr400bf_item.pnml"
 
 // 1.5kV DC EMU
 
@@ -138,3 +153,7 @@
 
 
 // Multi Power Cargo MU
+
+
+// Sort Vehicles
+#include "src/vehiclesort.pnml"
