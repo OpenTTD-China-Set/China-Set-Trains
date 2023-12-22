@@ -4,7 +4,7 @@ grf {
     desc:    string(STR_GRF_DESC, string(STR_GRF_DESC_EXTRA), string(STR_GRF_DESC_README));
     url:     string(STR_GRF_URL);
     version: REPO_REVISION;
-    min_compatible_version: 1;
+    min_compatible_version: 107;
 
     param 0 {
         param_loading_speed {
@@ -82,11 +82,11 @@ grf {
 }
 
 basecost {
-    PR_BUILD_VEHICLE_TRAIN: param_purchase_cost - 2;
-    PR_BUILD_VEHICLE_WAGON: param_purchase_cost + 2;
-    PR_RUNNING_TRAIN_STEAM: param_running_cost  - 3;
-    PR_RUNNING_TRAIN_DIESEL: param_running_cost  - 3;
-    PR_RUNNING_TRAIN_ELECTRIC: param_running_cost  - 3;
+    PR_BUILD_VEHICLE_TRAIN: param_purchase_cost - 3;
+    PR_BUILD_VEHICLE_WAGON: param_purchase_cost + 1;
+    PR_RUNNING_TRAIN_STEAM: param_running_cost  - 4;
+    PR_RUNNING_TRAIN_DIESEL: param_running_cost  - 4;
+    PR_RUNNING_TRAIN_ELECTRIC: param_running_cost  - 4;
  }
 
 /* disable original trains */

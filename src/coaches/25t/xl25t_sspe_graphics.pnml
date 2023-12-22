@@ -34,7 +34,5 @@ switch (FEAT_TRAINS, SELF, switch_xl25t_sspe_capacity, position_in_articulated_v
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25t_sspe_additional_text, param_cargo_decay) {
-    1: return string(STR_DESC_2, string(STR_XL25T_SSPE_DESCRIPTION), string(STR_DECAY_400));
-    2: return string(STR_DESC_2, string(STR_XL25T_SSPE_DESCRIPTION), string(STR_DECAY_800));
     return string(STR_DESC_2, string(STR_XL25T_SSPE_DESCRIPTION), string(STR_DECAY_200));
 }

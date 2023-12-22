@@ -34,7 +34,5 @@ switch (FEAT_TRAINS, SELF, switch_wymuw_capacity, position_in_articulated_veh % 
 }
 
 switch (FEAT_TRAINS, SELF, switch_wymuw_additional_text, param_cargo_decay) {
-    1: return string(STR_DESC_2, string(STR_ATTACH_CR200J), string(STR_DECAY_1800));
-    2: return string(STR_DESC_2, string(STR_ATTACH_CR200J), string(STR_DECAY_3600));
-    return string(STR_DESC_2, string(STR_ATTACH_CR200J), string(STR_DECAY_900));
+    return string(STR_DESC_2, string(STR_ATTACH_CR200J), string(STR_COMFORT_640));
 }

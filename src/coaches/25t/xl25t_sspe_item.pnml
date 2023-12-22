@@ -10,7 +10,7 @@ item (FEAT_TRAINS, xl25t_sspe) {
         introduction_date:              date(2002,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SADN;
+        track_type:                     SACN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_MAIL);
@@ -47,8 +47,8 @@ item (FEAT_TRAINS, xl25t_sspe) {
         cargo_capacity:                 switch_xl25t_sspe_capacity;
         cargo_age_period:               200 << param_cargo_decay;
         cost_factor:                    8;
-        running_cost_factor:            5 * runningcostfactor();
-        purchase_running_cost_factor:   20;
+        running_cost_factor:            7 * runningcostfactor();
+        purchase_running_cost_factor:   28;
         purchase_cargo_capacity:        92/3;
     }
 }

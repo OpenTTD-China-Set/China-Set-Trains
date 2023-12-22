@@ -7,7 +7,7 @@ spriteset (spriteset_df11g_purchase) {
     template_purchase_empty ()
 }
 alternative_sprites(spriteset_df11g_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("diesel", "df11g")
+    template_purchase1 ("diesel", "df11g")
 }
 
 
@@ -19,10 +19,10 @@ spriteset (spriteset_df11g_leaping_reversed) {
     template_empty ()
 }
 alternative_sprites(spriteset_df11g_leaping, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_10_standard ("diesel", "df11g")
+    template_standard ("diesel", "df11g")
 }
 alternative_sprites(spriteset_df11g_leaping_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_10_reversed ("diesel", "df11g")
+    template_reversed ("diesel", "df11gr")
 }
 
 switch (FEAT_TRAINS, SELF, switch_df11g_articulated_part, extra_callback_info1) {
@@ -52,11 +52,6 @@ switch (FEAT_TRAINS, SELF, switch_df11g_graphics, num_vehs_in_vehid_chain % 6) {
     0: switch_df11g_graphics_joint;
     3: switch_df11g_graphics_split;
     empty_sprites;
-}
-
-switch (FEAT_TRAINS, SELF, switch_df11g_start_stop, count_veh_id(5122)) {
-    6: return CB_RESULT_NO_TEXT;
-    return string(STR_ONLY_TWO_SECTIONS);
 }
 
 switch (FEAT_TRAINS, SELF, switch_df11g_speed, num_vehs_in_vehid_chain % 6) {

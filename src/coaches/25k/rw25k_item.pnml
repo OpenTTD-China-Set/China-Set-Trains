@@ -10,7 +10,7 @@ item (FEAT_TRAINS, rw25k) {
         introduction_date:              date(1996,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SADN;
+        track_type:                     SACN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
@@ -38,8 +38,8 @@ item (FEAT_TRAINS, rw25k) {
         can_attach_wagon:               locowagon;
         
         // Graphics
-        default:                        switch_rw25k_graphics;
-        purchase:                       spriteset_rw25k_purchase_original;
+        default:                        switch_25k_graphics;
+        purchase:                       spriteset_25k_purchase_original;
         articulated_part:               switch_rw25k_articulated_part;
 
         // Stats
@@ -47,8 +47,8 @@ item (FEAT_TRAINS, rw25k) {
         cargo_capacity:                 switch_rw25k_capacity;
         cargo_age_period:               (24 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
         cost_factor:                    14;
-        running_cost_factor:            11 * runningcostfactor() * cafecostfactor() + accostfactor();
-        purchase_running_cost_factor:   44;
+        running_cost_factor:            13 * runningcostfactor() * cafecostfactor() + accostfactor();
+        purchase_running_cost_factor:   52;
         purchase_cargo_capacity:        36/3;
     }
 }

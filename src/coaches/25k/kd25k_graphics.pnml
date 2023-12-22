@@ -7,7 +7,7 @@ spriteset (spriteset_kd25k_purchase_original) {
     template_purchase_empty ()
 }
 alternative_sprites(spriteset_kd25k_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "kd25k")
+    template_purchase1 ("coaches", "kd25k")
 }
 
 // Vehicle
@@ -15,7 +15,7 @@ spriteset (spriteset_kd25k_original) {
     template_empty ()
 }
 alternative_sprites(spriteset_kd25k_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_11_standard ("coaches", "kd25k")
+    template_standard ("coaches", "kd25k")
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25k_articulated_part, extra_callback_info1) {

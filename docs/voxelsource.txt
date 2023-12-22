@@ -1,0 +1,27 @@
+All files in \voxel\files folder are originated from Timberwolf
+
+DF11G
+By John Franklin
+Originated from BR Class 43 "IC 125" by Timberwolf
+
+25T
+By John Franklin and Babel
+Originated from Pullman Coach by Timberwolf
+
+25G
+By Babel and John Franklin
+Originated from 25T -> Pullman Coach by Timberwolf
+
+25K
+By Babel
+Originated from 25T -> Pullman Coach by Timberwolf
+
+CA25T
+By John Franklin and Babel
+Variant of 25T
+
+KD25G KD25K XL25G XL25K
+By Babel
+
+CA25G CA25K
+By John Franklin

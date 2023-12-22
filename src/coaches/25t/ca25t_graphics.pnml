@@ -1,0 +1,38 @@
+// Begin CA25T
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_ca25t_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_ca25t_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase1 ("coaches", "ca25t1")
+}
+
+// Vehicle
+spriteset (spriteset_ca25t_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_ca25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "ca25t1")
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25t_articulated_part, extra_callback_info1) {
+    1..2: return ca25t;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25t_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_ca25t_original;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25t_capacity, position_in_articulated_veh % 3) {
+    1: return 48;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25t_additional_text, param_cargo_decay) {
+    return string(STR_DESC_4, string(STR_CAFE_EFFECT), string(STR_25T_LIVERY_AVAILABILITY), string(STR_CA25T_LIVERY_AVAILABILITY), string(STR_COMFORT_160_CAFE));
+}

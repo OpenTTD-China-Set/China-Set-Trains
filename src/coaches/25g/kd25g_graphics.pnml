@@ -1,5 +1,4 @@
-// Begin KD25G
-// OLD FILE. DO NOT MODIFY!
+// Begin KD25G (New Version)
 
 // Graphics
 
@@ -8,7 +7,7 @@ spriteset (spriteset_kd25g_purchase_original) {
     template_purchase_empty ()
 }
 alternative_sprites(spriteset_kd25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "kd25g")
+    template_purchase1 ("coaches", "kd25g")
 }
 
 // Vehicle
@@ -16,7 +15,7 @@ spriteset (spriteset_kd25g_original) {
     template_empty ()
 }
 alternative_sprites(spriteset_kd25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_10_standard ("coaches", "kd25g")
+    template_standard ("coaches", "kd25g")
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25g_articulated_part, extra_callback_info1) {

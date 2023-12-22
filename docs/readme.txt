@@ -147,6 +147,7 @@ Information basis:
 Graphics (see individual graphic files in the source for details):
 - NACHN
 - FJZer0ich
+- babel 
 
 Code:
 - John Franklin, NML-based Coding
@@ -155,10 +156,14 @@ Code:
 Translations:
 - 
 
+GoRender Tools:
+- Timberwolf (Matt Kimber)
+
 Makefile system (not by China Set Team):
 - planetmaker (Ingo von Borstel)
 
 Code Reference:
+- Timberwolf (Matt Kimber)
 - Finnish Trainset Team
 - JP+ Team
   - KeepinItRail for JP+ Shinkansen

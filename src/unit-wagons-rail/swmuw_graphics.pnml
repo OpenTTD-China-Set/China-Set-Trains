@@ -34,7 +34,5 @@ switch (FEAT_TRAINS, SELF, switch_swmuw_capacity, position_in_articulated_veh % 
 }
 
 switch (FEAT_TRAINS, SELF, switch_swmuw_additional_text, param_cargo_decay) {
-    1: return string(STR_DESC_2, string(STR_ATTACH_ALL_CRH_CR), string(STR_DECAY_1920));
-    2: return string(STR_DESC_2, string(STR_ATTACH_ALL_CRH_CR), string(STR_DECAY_3840));
-    return string(STR_DESC_2, string(STR_ATTACH_ALL_CRH_CR), string(STR_DECAY_960));
+    return string(STR_DESC_2, string(STR_ATTACH_ALL_CRH_CR), string(STR_COMFORT_720));
 }

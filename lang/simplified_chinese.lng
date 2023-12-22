@@ -32,20 +32,23 @@ STR_PARAM_STANDARD          :标准
 STR_PARAM_LONG              :较长
 STR_PARAM_VERY_LONG         :很长
 
-STR_USED_WITH_DYNAMIC_ENGINES       :This GRF needs dynamic_engines to be turned on. Open console, and type "setting dynamic_engines 1".
+STR_USED_WITH_DYNAMIC_ENGINES       :请切换至控制台模式, 键入 "setting dynamic_engines 1", 否则您无法游玩中国包.
 
 STR_NAME_YZ25G          :YZ25G (25米改进型硬座客车)
 STR_NAME_RZ25G          :RZ25G (25米改进型软座客车)
 STR_NAME_YW25G          :YW25G (25米改进型硬卧客车)
 STR_NAME_RW25G          :RW25G (25米改进型软卧客车)
+STR_NAME_CA25G          :CA25G (25米改进型餐车)
 STR_NAME_YZ25K          :YZ25K (25米快速型硬座客车)
 STR_NAME_RZ25K          :RZ25K (25米快速型软座客车)
 STR_NAME_YW25K          :YW25K (25米快速型硬卧客车)
 STR_NAME_RW25K          :RW25K (25米快速型软卧客车)
+STR_NAME_CA25K          :CA25K (25米快速型餐车)
 STR_NAME_YZ25T          :YZ25T (25米提速型硬座客车)
 STR_NAME_RZ25T          :RZ25T (25米提速型软座客车)
 STR_NAME_YW25T          :YW25T (25米提速型硬卧客车)
 STR_NAME_RW25T          :RW25T (25米提速型软卧客车)
+STR_NAME_CA25T          :CA25T (25米提速型餐车)
 STR_NAME_XL25G          :XL25G (25米改进型行李车)
 STR_NAME_XL25K          :XL25K (25米快速型行李车)
 STR_NAME_XL25T_SSPE     :XL25T (25米提速型行李车) (SSPE)
@@ -70,12 +73,6 @@ STR_NAME_ZYMUW          :动车组一等座车厢
 STR_NAME_ZTMUW          :动车组特等座车厢
 STR_NAME_ZSMUW          :动车组商务座车厢
 STR_NAME_SWMUW          :动车组商务座车厢（复兴号智能动车组标准）
-STR_NAME_ZETMUW         :动车组二等/特等座合造车厢
-STR_NAME_ZESMUW         :动车组二等/商务座合造车厢
-STR_NAME_ZESWMUW        :动车组二等/商务座（复兴号智能动车组标准）合造车厢
-STR_NAME_ZYTMUW         :动车组一等/特等座合造车厢
-STR_NAME_ZYSMUW         :动车组一等/商务座合造车厢
-STR_NAME_ZYSWMUW        :动车组一等/商务座（复兴号智能动车组标准）合造车厢
 STR_NAME_ZECMUW         :动车组二等座/餐车合造车厢
 STR_NAME_WEMUW          :动车组二等卧铺车厢
 STR_NAME_WYMUW          :动车组一等卧铺车厢
@@ -89,6 +86,8 @@ STR_25T_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WH
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{GREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_P62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机
+
+STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}目前仅有广九铁路子涂装
 
 STR_DF4_NICKNAME                    :{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
 STR_DF11G_NICKNAME                  :{BLACK}昵称: {GOLD}猪
@@ -108,60 +107,26 @@ STR_ORIGINAL            :{GOLD} - 原版涂装
 STR_ORANGE              :{ORANGE} - 橘色涂装
 STR_GREEN               :{GREEN} - 绿色涂装
 
-STR_DECAY_160_200       :{BLACK}货物贬值周期：{GOLD}200{BLACK}，{RED}2000年后车厢无供电时为160
-STR_DECAY_320_400       :{BLACK}货物贬值周期：{GOLD}400{BLACK}，{RED}2000年后车厢无供电时为320
-STR_DECAY_640_800       :{BLACK}货物贬值周期：{GOLD}800{BLACK}，{RED}2000年后车厢无供电时为640
-STR_DECAY_192_240       :{BLACK}货物贬值周期：{GOLD}240{BLACK}，{RED}2000年后车厢无供电时为192
-STR_DECAY_384_480       :{BLACK}货物贬值周期：{GOLD}480{BLACK}，{RED}2000年后车厢无供电时为384
-STR_DECAY_768_960       :{BLACK}货物贬值周期：{GOLD}960{BLACK}，{RED}2000年后车厢无供电时为768
-STR_DECAY_1280_1600     :{BLACK}货物贬值周期：{GOLD}1600{BLACK}，{RED}2000年后车厢无供电时为1280
-STR_DECAY_1536_1920     :{BLACK}货物贬值周期：{GOLD}1920{BLACK}，{RED}2000年后车厢无供电时为1536
-STR_DECAY_200           :{BLACK}货物贬值周期：{GOLD}200
-STR_DECAY_400           :{BLACK}货物贬值周期：{GOLD}400
-STR_DECAY_800           :{BLACK}货物贬值周期：{GOLD}800
-STR_DECAY_300           :{BLACK}货物贬值周期：{GOLD}300
-STR_DECAY_500           :{BLACK}货物贬值周期：{GOLD}500
-STR_DECAY_1000          :{BLACK}货物贬值周期：{GOLD}1000
-STR_DECAY_2000          :{BLACK}货物贬值周期：{GOLD}2000
-STR_DECAY_700           :{BLACK}货物贬值周期：{GOLD}700
-STR_DECAY_1400          :{BLACK}货物贬值周期：{GOLD}1400
-STR_DECAY_2800          :{BLACK}货物贬值周期：{GOLD}2800
-STR_DECAY_1600          :{BLACK}货物贬值周期：{GOLD}1600
-STR_DECAY_3200          :{BLACK}货物贬值周期：{GOLD}3200
-STR_DECAY_960           :{BLACK}货物贬值周期：{GOLD}960
-STR_DECAY_1920          :{BLACK}货物贬值周期：{GOLD}1920
-STR_DECAY_3840          :{BLACK}货物贬值周期：{GOLD}3840
-STR_DECAY_600           :{BLACK}货物贬值周期：{GOLD}600
-STR_DECAY_2400          :{BLACK}货物贬值周期：{GOLD}2400
-STR_DECAY_900           :{BLACK}货物贬值周期：{GOLD}900
-STR_DECAY_1800          :{BLACK}货物贬值周期：{GOLD}1800
-STR_DECAY_3600          :{BLACK}货物贬值周期：{GOLD}3600
-STR_DECAY_1200          :{BLACK}货物贬值周期：{GOLD}1200
-STR_DECAY_4800          :{BLACK}货物贬值周期：{GOLD}4800
-STR_DECAY_300_700       :{BLACK}货物贬值周期：{GOLD}二等座300，特等座700
-STR_DECAY_300_800       :{BLACK}货物贬值周期：{GOLD}二等座300，商务座800
-STR_DECAY_300_960       :{BLACK}货物贬值周期：{GOLD}二等座300，商务座960
-STR_DECAY_500_700       :{BLACK}货物贬值周期：{GOLD}一等座500，特等座700
-STR_DECAY_500_800       :{BLACK}货物贬值周期：{GOLD}一等座500，商务座800
-STR_DECAY_500_960       :{BLACK}货物贬值周期：{GOLD}一等座500，商务座960
-STR_DECAY_600_1400      :{BLACK}货物贬值周期：{GOLD}二等座600，特等座1400
-STR_DECAY_600_1600      :{BLACK}货物贬值周期：{GOLD}二等座600，商务座1600
-STR_DECAY_600_1920      :{BLACK}货物贬值周期：{GOLD}二等座600，商务座1920
-STR_DECAY_1000_1400     :{BLACK}货物贬值周期：{GOLD}一等座1000，特等座1400
-STR_DECAY_1000_1600     :{BLACK}货物贬值周期：{GOLD}一等座1000，商务座1600
-STR_DECAY_1000_1920     :{BLACK}货物贬值周期：{GOLD}一等座1000，商务座1920
-STR_DECAY_1200_2800     :{BLACK}货物贬值周期：{GOLD}二等座1200，特等座2800
-STR_DECAY_1200_3200     :{BLACK}货物贬值周期：{GOLD}二等座1200，商务座3200
-STR_DECAY_1200_3840     :{BLACK}货物贬值周期：{GOLD}二等座1200，商务座3840
-STR_DECAY_2000_2800     :{BLACK}货物贬值周期：{GOLD}一等座2000，特等座2800
-STR_DECAY_2000_3200     :{BLACK}货物贬值周期：{GOLD}一等座2000，商务座3200
-STR_DECAY_2000_3840     :{BLACK}货物贬值周期：{GOLD}一等座2000，商务座3840
-STR_DECAY_185           :{BLACK}货物贬值周期：{GOLD}185
-STR_DECAY_370           :{BLACK}货物贬值周期：{GOLD}370
-STR_DECAY_740           :{BLACK}货物贬值周期：{GOLD}740
-STR_DECAY_185_100_555   :{BLACK}货物贬值周期：{GOLD}185，棚代客100，装载活禽/畜555
-STR_DECAY_370_200_1110  :{BLACK}货物贬值周期：{GOLD}370，棚代客200，装载活禽/畜1110
-STR_DECAY_740_400_2220  :{BLACK}货物贬值周期：{GOLD}740，棚代客400，装载活禽/畜2220
+STR_COMFORT_160         :{BLACK}舒适度：{GOLD}160
+STR_COMFORT_192         :{BLACK}舒适度：{GOLD}192
+STR_COMFORT_288         :{BLACK}舒适度：{GOLD}288
+STR_COMFORT_384         :{BLACK}舒适度：{GOLD}384
+
+STR_COMFORT_160_CAFE    :{BLACK}舒适度：{GOLD}160 {BLACK}，但由于餐车作用，运营时至少为200
+
+STR_COMFORT_240         :{BLACK}舒适度：{GOLD}240
+STR_COMFORT_400         :{BLACK}舒适度：{GOLD}400
+STR_COMFORT_480         :{BLACK}舒适度：{GOLD}480
+STR_COMFORT_560         :{BLACK}舒适度：{GOLD}560
+STR_COMFORT_640         :{BLACK}舒适度：{GOLD}640
+STR_COMFORT_720         :{BLACK}舒适度：{GOLD}720
+STR_COMFORT_800         :{BLACK}舒适度：{GOLD}800
+
+STR_COMFORT_240_CAFE    :{BLACK}舒适度：{GOLD}240 {BLACK}，但由于餐车作用，运营时至少为300
+
+STR_DECAY_185           :{BLACK}货物贬值周期因子：{GOLD}185
+STR_DECAY_200           :{BLACK}货物贬值周期因子：{GOLD}200
+STR_DECAY_BOXCAR        :{BLACK}货物贬值周期因子：{GOLD}185，棚代客100，装载活禽/畜560
 
 STR_CAFE_EFFECT                     :{BLACK}餐车的作用：{GOLD}加挂餐车使除餐车外的所有非通勤客车运行费用减半，货物贬值周期增加1/4
 STR_AIR_CONDITIONER_EFFECT          :{BLACK}空调发电车的作用：{GOLD}加挂空调发电车可增加非机供机车牵引客车的货物贬值周期
@@ -169,8 +134,8 @@ STR_AIR_CONDITIONER_EFFECT          :{BLACK}空调发电车的作用：{GOLD}加
 STR_ATTACH_ALL_CRH_CR               :{BLACK}匹配的动车组：{GOLD}所有和谐/复兴号动车
 STR_ATTACH_SLEEPER_MU               :{BLACK}匹配的动车组：{GOLD}所有提供卧铺的和谐/复兴号动车
 STR_ATTACH_CR200J                   :{BLACK}匹配的动车组：{GOLD}CR200J系列动车
-STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座（复兴号智能动车组标准）、二等/特等合造、二等/商务合造、二等/商务（复兴号智能动车组标准）合造、一等/特等合造、一等/商务合造、一等/商务（复兴号智能动车组标准）合造、二等/餐车合造、二等卧、一等卧、高级软卧
-STR_CRH_CAN_ATTACH_WAGON            :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座（复兴号智能动车组标准）、二等/特等合造、二等/商务合造、二等/商务（复兴号智能动车组标准）合造、一等/特等合造、一等/商务合造、一等/商务（复兴号智能动车组标准）合造、二等/餐车合造
+STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座（复兴号智能动车组标准）、二等/餐车合造、二等卧、一等卧、高级软卧
+STR_CRH_CAN_ATTACH_WAGON            :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座（复兴号智能动车组标准）、二等/餐车合造
 
 STR_DF11G_CONSIST                   :{BLACK}构成：{GOLD}两节重联 (普通)，或一节在头部提供动力，另一节在尾部供电 (“拆猪”，最高速度 120 km/h, 功率 4133 公制马力)
 STR_CRH5A_CONSIST                   :{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车 1495 公制马力

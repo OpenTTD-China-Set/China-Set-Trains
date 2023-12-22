@@ -10,7 +10,7 @@ item (FEAT_TRAINS, c64) {
         introduction_date:              date(1988,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SADN;
+        track_type:                     SACN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_EXPRESS, CC_BULK, CC_PIECE_GOODS, CC_COVERED, CC_OVERSIZED);
@@ -43,7 +43,7 @@ item (FEAT_TRAINS, c64) {
         articulated_part:               switch_c64_articulated_part;
 
         // Stats
-        length:                         switch_length_1_5_1;
+        length:                         switch_length_2_3_2;
         cargo_capacity:                 switch_c64_capacity;
         cargo_age_period:               185 << param_cargo_decay;
         cost_factor:                    5;

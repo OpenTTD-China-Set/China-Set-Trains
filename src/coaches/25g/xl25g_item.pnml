@@ -10,7 +10,7 @@ item (FEAT_TRAINS, xl25g) {
         introduction_date:              date(1996,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SADN;
+        track_type:                     SACN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_MAIL);

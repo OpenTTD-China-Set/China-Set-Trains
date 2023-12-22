@@ -7,7 +7,7 @@ spriteset (spriteset_xl25k_purchase_original) {
     template_purchase_empty ()
 }
 alternative_sprites(spriteset_xl25k_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "xl25k")
+    template_purchase1 ("coaches", "xl25k")
 }
 
 // Vehicle
@@ -15,7 +15,7 @@ spriteset (spriteset_xl25k_original) {
     template_empty ()
 }
 alternative_sprites(spriteset_xl25k_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_12_standard ("coaches", "xl25k")
+    template_standard ("coaches", "xl25k")
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25k_articulated_part, extra_callback_info1) {
@@ -34,7 +34,5 @@ switch (FEAT_TRAINS, SELF, switch_xl25k_capacity, position_in_articulated_veh % 
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25k_additional_text, param_cargo_decay) {
-    1: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_400));
-    2: return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_800));
     return string(STR_DESC_2, string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_200));
 }

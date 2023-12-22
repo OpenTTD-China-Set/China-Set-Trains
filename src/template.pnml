@@ -40,7 +40,39 @@ template template_purchase (a, b) {
     []
 }
 
-// Standard
+template template_purchase1 (a, b) {
+    // a: vehicle type (all lower cases), b: vehicle name (all lower cases)
+    []
+    []
+    []
+    []
+    []
+    []
+    [664,   0, 192,  64, -96, -48, "gfx/"+a+"/"+b+".png"]
+    []
+}
+
+template template_standard (a, b) {
+    [  0,   0,  32, 144, -12, -72, "gfx/"+a+"/"+b+".png"]
+    [ 40,   0, 120, 116, -72, -76, "gfx/"+a+"/"+b+".png"]
+    [168,   0, 192,  64, -96, -48, "gfx/"+a+"/"+b+".png"]
+    [368,   0, 120, 116, -40, -76, "gfx/"+a+"/"+b+".png"]
+    [496,   0,  32, 144, -12, -72, "gfx/"+a+"/"+b+".png"]
+    [536,   0, 120, 116, -72, -76, "gfx/"+a+"/"+b+".png"]
+    [664,   0, 192,  64, -96, -48, "gfx/"+a+"/"+b+".png"]
+    [864,   0, 120, 116, -40, -76, "gfx/"+a+"/"+b+".png"]
+}
+
+template template_reversed (a, b) {
+    [496,   0,  32, 144, -12, -72, "gfx/"+a+"/"+b+".png"]
+    [536,   0, 120, 116, -72, -76, "gfx/"+a+"/"+b+".png"]
+    [664,   0, 192,  64, -96, -48, "gfx/"+a+"/"+b+".png"]
+    [864,   0, 120, 116, -40, -76, "gfx/"+a+"/"+b+".png"]
+    [  0,   0,  32, 144, -12, -72, "gfx/"+a+"/"+b+".png"]
+    [ 40,   0, 120, 116, -72, -76, "gfx/"+a+"/"+b+".png"]
+    [168,   0, 192,  64, -96, -48, "gfx/"+a+"/"+b+".png"]
+    [368,   0, 120, 116, -40, -76, "gfx/"+a+"/"+b+".png"]
+}
 
 template template_12_standard (a, b) {
     // a: vehicle type (all lower cases), b: vehicle name (all lower cases)
@@ -57,69 +89,58 @@ template template_12_standard (a, b) {
 template template_11_standard (a, b) {
     // a: vehicle type (all lower cases), b: vehicle name (all lower cases)
     [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
-    [-65, -80, "gfx/"+a+"/"+b+"/2.png"]
-    [-80, -48, "gfx/"+a+"/"+b+"/3.png"]
-    [-34, -79, "gfx/"+a+"/"+b+"/4.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/2.png"]
+    [-88, -48, "gfx/"+a+"/"+b+"/3.png"]
+    [-44, -82, "gfx/"+a+"/"+b+"/4.png"]
     [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
-    [-71, -79, "gfx/"+a+"/"+b+"/6.png"]
-    [-96, -48, "gfx/"+a+"/"+b+"/7.png"]
-    [-40, -80, "gfx/"+a+"/"+b+"/8.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/6.png"]
+    [-88, -48, "gfx/"+a+"/"+b+"/7.png"]
+    [-44, -82, "gfx/"+a+"/"+b+"/8.png"]
 }
 
-template template_11_reversed (a, b) {
-    // a: vehicle type (all lower cases), b: vehicle name (all lower cases)
-    [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
-    [-67, -79, "gfx/"+a+"/"+b+"/6.png"]
-    [-80, -48, "gfx/"+a+"/"+b+"/7.png"]
-    [-34, -80, "gfx/"+a+"/"+b+"/8.png"]
-    [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
-    [-71, -81, "gfx/"+a+"/"+b+"/2.png"]
-    [-96, -48, "gfx/"+a+"/"+b+"/3.png"]
-    [-42, -80, "gfx/"+a+"/"+b+"/4.png"]
-}
 
 template template_10_standard (a, b) {
     [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
-    [-62, -82, "gfx/"+a+"/"+b+"/2.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/2.png"]
     [-80, -48, "gfx/"+a+"/"+b+"/3.png"]
-    [-36, -84, "gfx/"+a+"/"+b+"/4.png"]
+    [-48, -88, "gfx/"+a+"/"+b+"/4.png"]
     [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
-    [-62, -82, "gfx/"+a+"/"+b+"/6.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/6.png"]
     [-80, -48, "gfx/"+a+"/"+b+"/7.png"]
-    [-36, -84, "gfx/"+a+"/"+b+"/8.png"]
+    [-48, -88, "gfx/"+a+"/"+b+"/8.png"]
 }
 
 template template_10_reversed (a, b) {
     [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
-    [-62, -80, "gfx/"+a+"/"+b+"/6.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/6.png"]
     [-80, -48, "gfx/"+a+"/"+b+"/7.png"]
-    [-36, -86, "gfx/"+a+"/"+b+"/8.png"]
+    [-48, -88, "gfx/"+a+"/"+b+"/8.png"]
     [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
-    [-62, -84, "gfx/"+a+"/"+b+"/2.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/2.png"]
     [-80, -48, "gfx/"+a+"/"+b+"/3.png"]
-    [-36, -82, "gfx/"+a+"/"+b+"/4.png"]
+    [-48, -88, "gfx/"+a+"/"+b+"/4.png"]
 }
 
 template template_13_standard (a, b) {
     [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
-    [-76, -74, "gfx/"+a+"/"+b+"/2.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/2.png"]
     [-104, -48, "gfx/"+a+"/"+b+"/3.png"]
-    [-42, -74, "gfx/"+a+"/"+b+"/4.png"]
+    [-36, -70, "gfx/"+a+"/"+b+"/4.png"]
     [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
-    [-76, -74, "gfx/"+a+"/"+b+"/6.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/6.png"]
     [-104, -48, "gfx/"+a+"/"+b+"/7.png"]
-    [-42, -74, "gfx/"+a+"/"+b+"/8.png"]
+    [-36, -70, "gfx/"+a+"/"+b+"/8.png"]
 }
 
 template template_13_reversed (a, b) {
     [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
-    [-76, -74, "gfx/"+a+"/"+b+"/6.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/6.png"]
     [-104, -48, "gfx/"+a+"/"+b+"/7.png"]
-    [-42, -74, "gfx/"+a+"/"+b+"/8.png"]
+    [-36, -70, "gfx/"+a+"/"+b+"/8.png"]
     [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
-    [-76, -74, "gfx/"+a+"/"+b+"/2.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/2.png"]
     [-104, -48, "gfx/"+a+"/"+b+"/3.png"]
-    [-42, -74, "gfx/"+a+"/"+b+"/4.png"]
+    [-36, -70, "gfx/"+a+"/"+b+"/4.png"]
 }
 
 
@@ -135,26 +156,26 @@ template template_13_reversed (a, b) {
 // }
 
 template template_8_standard (a, b) {
-    [-12, -88, "gfx/"+a+"/"+b+"/1.png"]
-    [-48, -88, "gfx/"+a+"/"+b+"/2.png"]
-    [-60, -48, "gfx/"+a+"/"+b+"/3.png"]
-    [-28, -88, "gfx/"+a+"/"+b+"/4.png"]
-    [-12, -88, "gfx/"+a+"/"+b+"/5.png"]
-    [-56, -88, "gfx/"+a+"/"+b+"/6.png"]
-    [-68, -48, "gfx/"+a+"/"+b+"/7.png"]
-    [-28, -88, "gfx/"+a+"/"+b+"/8.png"]
+    [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/2.png"]
+    [-64, -48, "gfx/"+a+"/"+b+"/3.png"]
+    [-56, -100, "gfx/"+a+"/"+b+"/4.png"]
+    [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/6.png"]
+    [-64, -48, "gfx/"+a+"/"+b+"/7.png"]
+    [-56, -100, "gfx/"+a+"/"+b+"/8.png"]
 }
 
 
 template template_7_standard (a, b) {
-    [-12, -104, "gfx/"+a+"/"+b+"/1.png"]
-    [-34, -96, "gfx/"+a+"/"+b+"/2.png"]
-    [-36, -48, "gfx/"+a+"/"+b+"/3.png"]
-    [-4, -84, "gfx/"+a+"/"+b+"/4.png"]
-    [-12, -84, "gfx/"+a+"/"+b+"/5.png"]
-    [-60, -84, "gfx/"+a+"/"+b+"/6.png"]
-    [-80, -48, "gfx/"+a+"/"+b+"/7.png"]
-    [-24, -92, "gfx/"+a+"/"+b+"/8.png"]
+    [-12, -72, "gfx/"+a+"/"+b+"/1.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/2.png"]
+    [-56, -48, "gfx/"+a+"/"+b+"/3.png"]
+    [-60, -106, "gfx/"+a+"/"+b+"/4.png"]
+    [-12, -72, "gfx/"+a+"/"+b+"/5.png"]
+    [-72, -76, "gfx/"+a+"/"+b+"/6.png"]
+    [-56, -48, "gfx/"+a+"/"+b+"/7.png"]
+    [-60, -106, "gfx/"+a+"/"+b+"/8.png"]
 }
 
 // Below shamelessly stolen from JP+ Shinkansen

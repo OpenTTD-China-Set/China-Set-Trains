@@ -10,7 +10,7 @@ item (FEAT_TRAINS, rw25g) {
         introduction_date:              date(1992,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SADN;
+        track_type:                     SACN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
@@ -38,8 +38,8 @@ item (FEAT_TRAINS, rw25g) {
         can_attach_wagon:               locowagon;
         
         // Graphics
-        default:                        switch_rw25g_graphics;
-        purchase:                       spriteset_rw25g_purchase_original;
+        default:                        switch_25g_graphics;
+        purchase:                       spriteset_25g_purchase_original;
         articulated_part:               switch_rw25g_articulated_part;
 
         // Stats

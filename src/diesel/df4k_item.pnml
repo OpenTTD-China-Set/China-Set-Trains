@@ -12,7 +12,7 @@ item (FEAT_TRAINS, df4k) {
         model_life:                     60;
         retire_early:                   40;
         vehicle_life:                   30;
-        track_type:                     SADN;
+        track_type:                     SACN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
@@ -49,11 +49,11 @@ item (FEAT_TRAINS, df4k) {
         articulated_part:               switch_df4k_articulated_part;
 
         // Stats
-        length:                         switch_length_1_8_1;
+        length:                         switch_length_2_6_2;
         cargo_capacity:                 0;
         cost_factor:                    54;
-        running_cost_factor:            25 * runningcostfactor();
-        purchase_running_cost_factor:   100;
+        running_cost_factor:            51 * runningcostfactor();
+        purchase_running_cost_factor:   204;
         purchase_cargo_capacity:        0;
     }
 }

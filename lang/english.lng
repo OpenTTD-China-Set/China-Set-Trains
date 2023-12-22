@@ -26,7 +26,7 @@ STR_PARAM_TIMES_4   :400%
 STR_PARAM_TIMES_8   :800%
 STR_PARAM_TIMES_16  :1600%
 
-STR_PARAM_CARGO_DECAY       :Cargo Age Period
+STR_PARAM_CARGO_DECAY       :Comfort
 STR_PARAM_CARGO_DECAY_DESC  :Adjust cargo age period of coaches and wagons. "Long" is "Standard" doubled, while "Very Long" is "Long" doubled. Even in "Standard" mode, cargo age period varies.
 STR_PARAM_STANDARD          :Standard
 STR_PARAM_LONG              :Long
@@ -38,14 +38,17 @@ STR_NAME_YZ25G          :YZ25G (25m Improved Hard Seat Passenger Coach)
 STR_NAME_RZ25G          :RZ25G (25m Improved Soft Seat Passenger Coach)
 STR_NAME_YW25G          :YW25G (25m Improved Hard Sleeper Passenger Coach)
 STR_NAME_RW25G          :RW25G (25m Improved Soft Sleeper Passenger Coach)
+STR_NAME_CA25G          :CA25G (25m Improved Restaurant Car)
 STR_NAME_YZ25K          :YZ25K (25m Rapid Hard Seat Passenger Coach)
 STR_NAME_RZ25K          :RZ25K (25m Rapid Soft Seat Passenger Coach)
 STR_NAME_YW25K          :YW25K (25m Rapid Hard Sleeper Passenger Coach)
 STR_NAME_RW25K          :RW25K (25m Rapid Soft Sleeper Passenger Coach)
+STR_NAME_CA25K          :CA25K (25m Rapid Improved Restaurant Car)
 STR_NAME_YZ25T          :YZ25T (25m Accelerated Hard Seat Passenger Coach)
 STR_NAME_RZ25T          :RZ25T (25m Accelerated Soft Seat Passenger Coach)
 STR_NAME_YW25T          :YW25T (25m Accelerated Hard Sleeper Passenger Coach)
 STR_NAME_RW25T          :RW25T (25m Accelerated Soft Sleeper Passenger Coach)
+STR_NAME_CA25T          :CA25T (25m Accelerated Restaurant Car)
 STR_NAME_XL25G          :XL25G (25m Improved Luggage Car)
 STR_NAME_XL25K          :XL25K (25m Rapid Luggage Car)
 STR_NAME_XL25T_SSPE     :XL25T (25m Accelerated Luggage Car) (SSPE)
@@ -70,12 +73,6 @@ STR_NAME_ZYMUW          :1st-Class (ZY) MU Wagon
 STR_NAME_ZTMUW          :Limited-Class (ZT) MU Wagon
 STR_NAME_ZSMUW          :Business-Class (ZS) MU Wagon
 STR_NAME_SWMUW          :Luxury-Business-Class (SW) MU Wagon
-STR_NAME_ZETMUW         :2nd-Class Limited-Class Combined (ZET) MU Wagon
-STR_NAME_ZESMUW         :2nd-Class Business-Class Combined (ZES) MU Wagon
-STR_NAME_ZESWMUW        :2nd-Class Luxury-Business-Class Combined (ZESW) MU Wagon
-STR_NAME_ZYTMUW         :1st-Class Limited-Class Combined (ZYT) MU Wagon
-STR_NAME_ZYSMUW         :1st-Class Business-Class Combined (ZYS) MU Wagon
-STR_NAME_ZYSWMUW        :1st-Class Luxury-Business-Class Combined (ZYSW) MU Wagon
 STR_NAME_ZECMUW         :2nd-Class Restaurant Combined (ZEC) MU Wagon
 STR_NAME_WEMUW          :2nd-Class Sleeper (WE) MU Wagon
 STR_NAME_WYMUW          :1st-Class Sleeper (WY) MU Wagon
@@ -94,6 +91,8 @@ STR_25T_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue {GOL
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {GREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random
+
+STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}Only Guangzhou-Kowloon Sub-Livery available so far
 
 STR_DF4_NICKNAME                    :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
 STR_DF11G_NICKNAME                  :{BLACK}Nickname: {GOLD}Pig
@@ -114,60 +113,26 @@ STR_ORIGINAL            :{GOLD} - Original Livery
 STR_ORANGE              :{ORANGE} - Orange Livery
 STR_GREEN               :{GREEN} - Green Livery
 
-STR_DECAY_160_200       :{BLACK}Cargo Age Period: {GOLD}200{BLACK}, {RED}160 after 2000 without electricity supply
-STR_DECAY_320_400       :{BLACK}Cargo Age Period: {GOLD}400{BLACK}, {RED}320 after 2000 without electricity supply
-STR_DECAY_640_800       :{BLACK}Cargo Age Period: {GOLD}800{BLACK}, {RED}640 after 2000 without electricity supply
-STR_DECAY_192_240       :{BLACK}Cargo Age Period: {GOLD}240{BLACK}, {RED}192 after 2000 without electricity supply
-STR_DECAY_384_480       :{BLACK}Cargo Age Period: {GOLD}480{BLACK}, {RED}384 after 2000 without electricity supply
-STR_DECAY_768_960       :{BLACK}Cargo Age Period: {GOLD}960{BLACK}, {RED}768 after 2000 without electricity supply
-STR_DECAY_1280_1600     :{BLACK}Cargo Age Period: {GOLD}1600{BLACK}, {RED}1280 after 2000 without electricity supply
-STR_DECAY_1536_1920     :{BLACK}Cargo Age Period: {GOLD}1920{BLACK}, {RED}1536 after 2000 without electricity supply
-STR_DECAY_200           :{BLACK}Cargo Age Period: {GOLD}200
-STR_DECAY_400           :{BLACK}Cargo Age Period: {GOLD}400
-STR_DECAY_800           :{BLACK}Cargo Age Period: {GOLD}800
-STR_DECAY_300           :{BLACK}Cargo Age Period: {GOLD}300
-STR_DECAY_500           :{BLACK}Cargo Age Period: {GOLD}500
-STR_DECAY_1000          :{BLACK}Cargo Age Period: {GOLD}1000
-STR_DECAY_2000          :{BLACK}Cargo Age Period: {GOLD}2000
-STR_DECAY_700           :{BLACK}Cargo Age Period: {GOLD}700
-STR_DECAY_1400          :{BLACK}Cargo Age Period: {GOLD}1400
-STR_DECAY_2800          :{BLACK}Cargo Age Period: {GOLD}2800
-STR_DECAY_1600          :{BLACK}Cargo Age Period: {GOLD}1600
-STR_DECAY_3200          :{BLACK}Cargo Age Period: {GOLD}3200
-STR_DECAY_960           :{BLACK}Cargo Age Period: {GOLD}960
-STR_DECAY_1920          :{BLACK}Cargo Age Period: {GOLD}1920
-STR_DECAY_3840          :{BLACK}Cargo Age Period: {GOLD}3840
-STR_DECAY_600           :{BLACK}Cargo Age Period: {GOLD}600
-STR_DECAY_2400          :{BLACK}Cargo Age Period: {GOLD}2400
-STR_DECAY_900           :{BLACK}Cargo Age Period: {GOLD}900
-STR_DECAY_1800          :{BLACK}Cargo Age Period: {GOLD}1800
-STR_DECAY_3600          :{BLACK}Cargo Age Period: {GOLD}3600
-STR_DECAY_1200          :{BLACK}Cargo Age Period: {GOLD}1200
-STR_DECAY_4800          :{BLACK}Cargo Age Period: {GOLD}4800
-STR_DECAY_300_700       :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 300, Limited-Class Part 700
-STR_DECAY_300_800       :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 300, Business-Class Part 800
-STR_DECAY_300_960       :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 300, Luxury-Business-Class Part 960
-STR_DECAY_500_700       :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 500, Limited-Class Part 700
-STR_DECAY_500_800       :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 500, Business-Class Part 800
-STR_DECAY_500_960       :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 500, Luxury-Business-Class Part 960
-STR_DECAY_600_1400      :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 600, Limited-Class Part 1400
-STR_DECAY_600_1600      :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 600, Business-Class Part 1600
-STR_DECAY_600_1920      :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 600, Luxury-Business-Class Part 1920
-STR_DECAY_1000_1400     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 1000, Limited-Class Part 1400
-STR_DECAY_1000_1600     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 1000, Business-Class Part 1600
-STR_DECAY_1000_1920     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 1000, Luxury-Business-Class Part 1920
-STR_DECAY_1200_2800     :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 1200, Limited-Class Part 2800
-STR_DECAY_1200_3200     :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 1200, Business-Class Part 3200
-STR_DECAY_1200_3840     :{BLACK}Cargo Age Period: {GOLD}2nd-Class Part 1200, Luxury-Business-Class Part 3840
-STR_DECAY_2000_2800     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 2000, Limited-Class Part 2800
-STR_DECAY_2000_3200     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 2000, Business-Class Part 3200
-STR_DECAY_2000_3840     :{BLACK}Cargo Age Period: {GOLD}1st-Class Part 2000, Luxury-Business-Class Part 3840
-STR_DECAY_185           :{BLACK}Cargo Age Period: {GOLD}185
-STR_DECAY_370           :{BLACK}Cargo Age Period: {GOLD}370
-STR_DECAY_740           :{BLACK}Cargo Age Period: {GOLD}740
-STR_DECAY_185_100_555   :{BLACK}Cargo Age Period: {GOLD}185, Passengers 100, Livestock 555
-STR_DECAY_370_200_1110  :{BLACK}Cargo Age Period: {GOLD}370, Passengers 200, Livestock 1110
-STR_DECAY_740_400_2220  :{BLACK}Cargo Age Period: {GOLD}740, Passengers 400, Livestock 2220
+STR_COMFORT_160         :{BLACK}Comfort: {GOLD}160
+STR_COMFORT_192         :{BLACK}Comfort: {GOLD}192
+STR_COMFORT_288         :{BLACK}Comfort: {GOLD}288
+STR_COMFORT_384         :{BLACK}Comfort: {GOLD}384
+
+STR_COMFORT_160_CAFE    :{BLACK}Comfort: {GOLD}160 {BLACK}, but at least 200 in operation due to its restaurant identity
+
+STR_COMFORT_240         :{BLACK}Comfort: {GOLD}240
+STR_COMFORT_400         :{BLACK}Comfort: {GOLD}400
+STR_COMFORT_480         :{BLACK}Comfort: {GOLD}480
+STR_COMFORT_560         :{BLACK}Comfort: {GOLD}560
+STR_COMFORT_640         :{BLACK}Comfort: {GOLD}640
+STR_COMFORT_720         :{BLACK}Comfort: {GOLD}720
+STR_COMFORT_800         :{BLACK}Comfort: {GOLD}800
+
+STR_COMFORT_240_CAFE    :{BLACK}Comfort: {GOLD}240 {BLACK}, but at least 300 in operation due to its restaurant identity
+
+STR_DECAY_185           :{BLACK}Cargo Age Period Factor: {GOLD}185
+STR_DECAY_200           :{BLACK}Cargo Age Period Factor: {GOLD}200
+STR_DECAY_BOXCAR        :{BLACK}Cargo Age Period Factor: {GOLD}185, Passengers 100, Livestock 560
 
 STR_CAFE_EFFECT                     :{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Halves Running Costs of Non-Commuter Passenger Cars except Restaurant Cars, and Increases Cargo Age Period by 1/4
 STR_AIR_CONDITIONER_EFFECT          :{BLACK}Air Conditioner Effect: {GOLD}Attaching Air Conditioner Generator Car Increases Cargo Age Period of Passenger Cars Hauled by Locomotives without Electricity Supply
@@ -175,15 +140,15 @@ STR_AIR_CONDITIONER_EFFECT          :{BLACK}Air Conditioner Effect: {GOLD}Attach
 STR_ATTACH_ALL_CRH_CR               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs
 STR_ATTACH_SLEEPER_MU               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs
 STR_ATTACH_CR200J                   :{BLACK}Matching MUs: {GOLD}CR200J Series
-STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZT, ZS, SW, ZET, ZES, ZESW, ZYT, ZYS, ZYSW, ZEC, WE, WY, WG
-STR_CRH_CAN_ATTACH_WAGON            :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZT, ZS, SW, ZET, ZES, ZESW, ZYT, ZYS, ZYSW, ZEC
+STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZT, ZS, SW, ZEC, WE, WY, WG
+STR_CRH_CAN_ATTACH_WAGON            :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZT, ZS, SW, ZEC
 
 STR_DF11G_CONSIST                   :{BLACK}Consist: {GOLD}2 sections joint together (Normal), or one section at head, another section at back ("Splitting Pig", max speed 120 km/h, power 4133 hpM)
 STR_CRH5A_CONSIST                   :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car
 STR_CR400BF_CONSIST                 :{BLACK}Consist: {GOLD}5 to 17 cars; int(n/2) motorised cars and int((n+1)/2) trailers in an n-car consist.
 
 STR_CRH5A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CR400BF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class Business-Class Combined (ZYS)
+STR_CR400BF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}Electricity Supply for cars: {GOLD}YES
 STR_ELECTRICITY_SUPPLY_NO           :{BLACK}Electricity Supply for cars: {RED}NO

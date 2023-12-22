@@ -11,7 +11,7 @@ item (FEAT_TRAINS, df11g) {
         introduction_date:              date(2003,11,15);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SADN;
+        track_type:                     SACN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
@@ -34,13 +34,12 @@ item (FEAT_TRAINS, df11g) {
         running_cost_base:              RUNNING_COST_DIESEL;
         running_cost_factor:            35;
         reliability_decay:              6;
-        bitmask_vehicle_info:           bitmask(7);
+        bitmask_vehicle_info:           bitmask(2);
     }
     graphics {
         // Menu
         additional_text:                        switch_df11g_additional_text;
         can_attach_wagon:                       locowagon;
-        start_stop:                             switch_df11g_start_stop;
 
         // Graphics
         default:                                switch_df11g_graphics;
@@ -54,11 +53,11 @@ item (FEAT_TRAINS, df11g) {
         purchase_power:                         8266;
         tractive_effort_coefficient:            switch_df11g_traction;
         purchase_tractive_effort_coefficient:   int(0.143*2*255);
-        length:                                 switch_length_1_8_1;
+        length:                                 switch_length_2_6_2;
         cargo_capacity:                         0;
         cost_factor:                            93;
-        running_cost_factor:                    35 * runningcostfactor();
-        purchase_running_cost_factor:           140;
+        running_cost_factor:                    69 * runningcostfactor() + 10;
+        purchase_running_cost_factor:           276;
         purchase_cargo_capacity:                0;
     }
 }

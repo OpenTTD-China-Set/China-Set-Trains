@@ -54,8 +54,7 @@ switch (FEAT_TRAINS, SELF, switch_cr400bf_graphics, position_in_articulated_veh 
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_head_capacity, position_in_articulated_veh % 3) {
-    0: return 5;
-    1: return 28;
+    1: return 40;
     return 0;
 }
 
@@ -289,42 +288,6 @@ switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_sw, position_in_articu
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zet, position_in_articulated_veh % 3) {
-    0: return 9;
-    1: return 65;
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zes, position_in_articulated_veh % 3) {
-    0: return 9;
-    1: return 55;
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zesw, position_in_articulated_veh % 3) {
-    0: return 8;
-    1: return 60;
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zyt, position_in_articulated_veh % 3) {
-    0: return 9;
-    1: return 40;
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zys, position_in_articulated_veh % 3) {
-    0: return 9;
-    1: return 36;
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zysw, position_in_articulated_veh % 3) {
-    0: return 8;
-    1: return 40;
-    return 0;
-}
-
 switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity_zec, position_in_articulated_veh % 3) {
     1: return 48;
     return 0;
@@ -336,12 +299,6 @@ switch (FEAT_TRAINS, SELF, switch_cr400bf_middle_capacity, vehicle_type_id) {
     1026: switch_cr400bf_middle_capacity_zt;
     1027: switch_cr400bf_middle_capacity_zs;
     1028: switch_cr400bf_middle_capacity_sw;
-    1029: switch_cr400bf_middle_capacity_zet;
-    1030: switch_cr400bf_middle_capacity_zes;
-    1031: switch_cr400bf_middle_capacity_zesw;
-    1032: switch_cr400bf_middle_capacity_zyt;
-    1033: switch_cr400bf_middle_capacity_zys;
-    1034: switch_cr400bf_middle_capacity_zysw;
     1035: switch_cr400bf_middle_capacity_zec;
     return 0;
 }
@@ -371,42 +328,6 @@ switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_sw, position_in_articulat
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zet, position_in_articulated_veh % 3) {
-    0: return 6;
-    1: return 40;
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zes, position_in_articulated_veh % 3) {
-    0: return 6;
-    1: return 40;
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zesw, position_in_articulated_veh % 3) {
-    0: return 6;
-    1: return 40;
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zyt, position_in_articulated_veh % 3) {
-    0: return 6;
-    1: return 28;
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zys, position_in_articulated_veh % 3) {
-    0: return 5;
-    1: return 28;
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zysw, position_in_articulated_veh % 3) {
-    0: return 5;
-    1: return 28;
-    return 0;
-}
-
 switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity_zec, position_in_articulated_veh % 3) {
     1: return 18;
     return 0;
@@ -418,12 +339,6 @@ switch (FEAT_TRAINS, SELF, switch_cr400bf_cab_capacity, vehicle_type_id) {
     1026: switch_cr400bf_cab_capacity_zt;
     1027: switch_cr400bf_cab_capacity_zs;
     1028: switch_cr400bf_cab_capacity_sw;
-    1029: switch_cr400bf_cab_capacity_zet;
-    1030: switch_cr400bf_cab_capacity_zes;
-    1031: switch_cr400bf_cab_capacity_zesw;
-    1032: switch_cr400bf_cab_capacity_zyt;
-    1033: switch_cr400bf_cab_capacity_zys;
-    1034: switch_cr400bf_cab_capacity_zysw;
     1035: switch_cr400bf_cab_capacity_zec;
     return 0;
 }
@@ -434,66 +349,42 @@ switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_capacity, position_in_consist_fr
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_cost_power, vehicle_type_id) {
-    1024: return 89;
-    1025: return 93;
-    1026: return 97;
-    1027: return 98;
-    1028: return 101;
-    1029: return 91;
-    1030: return 91;
-    1031: return 92;
-    1032: return 94;
-    1033: return 94;
-    1034: return 95;
-    1035: return 108;
+    1024: return 87;
+    1025: return 91;
+    1026: return 94;
+    1027: return 95;
+    1028: return 97;
+    1035: return 106;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_running_power, vehicle_type_id) {
-    1024: return 32;
-    1025: return 34;
-    1026: return 36;
-    1027: return 36;
-    1028: return 38;
-    1029: return 33;
-    1030: return 33;
-    1031: return 34;
-    1032: return 34;
-    1033: return 35;
-    1034: return 35;
-    1035: return 36;
+    1024: return 72;
+    1025: return 76;
+    1026: return 79;
+    1027: return 80;
+    1028: return 82;
+    1035: return 76;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_cost_unpower, vehicle_type_id) {
-    1024: return 30;
-    1025: return 34;
-    1026: return 37;
-    1027: return 39;
-    1028: return 41;
-    1029: return 31;
-    1030: return 32;
-    1031: return 33;
-    1032: return 35;
-    1033: return 35;
-    1034: return 36;
-    1035: return 49;
+    1024: return 28;
+    1025: return 32;
+    1026: return 34;
+    1027: return 36;
+    1028: return 37;
+    1035: return 47;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_running_unpower, vehicle_type_id) {
-    1024: return 7;
-    1025: return 9;
-    1026: return 11;
-    1027: return 12;
-    1028: return 13;
-    1029: return 8;
-    1030: return 8;
-    1031: return 9;
-    1032: return 10;
-    1033: return 10;
-    1034: return 10;
-    1035: return 12;
+    1024: return 13;
+    1025: return 17;
+    1026: return 19;
+    1027: return 21;
+    1028: return 22;
+    1035: return 17;
     return 0;
 }
 

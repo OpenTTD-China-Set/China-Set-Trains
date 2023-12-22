@@ -14,12 +14,7 @@ item (FEAT_TRAINS, zymuw, 1025) {}
 item (FEAT_TRAINS, ztmuw, 1026) {}
 item (FEAT_TRAINS, zsmuw, 1027) {}
 item (FEAT_TRAINS, swmuw, 1028) {}
-item (FEAT_TRAINS, zetmuw, 1029) {}
-item (FEAT_TRAINS, zesmuw, 1030) {}
-item (FEAT_TRAINS, zeswmuw, 1031) {}
-item (FEAT_TRAINS, zytmuw, 1032) {}
-item (FEAT_TRAINS, zysmuw, 1033) {}
-item (FEAT_TRAINS, zyswmuw, 1034) {}
+// 1029-1034 Deleted
 item (FEAT_TRAINS, zecmuw, 1035) {}
 item (FEAT_TRAINS, wemuw, 1036) {}
 item (FEAT_TRAINS, wymuw, 1037) {}
@@ -33,9 +28,7 @@ item (FEAT_TRAINS, syzmuw, 1044) {}
 item (FEAT_TRAINS, srzmuw, 1045) {}
 item (FEAT_TRAINS, sywmuw, 1046) {}
 item (FEAT_TRAINS, srwmuw, 1047) {}
-item (FEAT_TRAINS, ryzmuw, 1048) {}
-item (FEAT_TRAINS, rzywmuw, 1049) {}
-item (FEAT_TRAINS, rywmuw, 1050) {}
+// 1048-1050 Deleted
 item (FEAT_TRAINS, xlmuw, 1051) {}
 
 
@@ -65,10 +58,13 @@ item (FEAT_TRAINS, yz25k, 2058) {}
 item (FEAT_TRAINS, rz25k, 2059) {}
 item (FEAT_TRAINS, yw25k, 2060) {}
 item (FEAT_TRAINS, rw25k, 2061) {}
-item (FEAT_TRAINS, kd25g, 2062) {} // OLD, HIDDEN, DO NOT MODIFY
+//2062 Deleted
 item (FEAT_TRAINS, kd25k, 2063) {}
 item (FEAT_TRAINS, xl25t_sspe, 2064) {}
-item (FEAT_TRAINS, kd25g_new, 2065) {}
+item (FEAT_TRAINS, kd25g, 2065) {}
+item (FEAT_TRAINS, ca25t, 2066) {}
+item (FEAT_TRAINS, ca25g, 2067) {}
+item (FEAT_TRAINS, ca25k, 2068) {}
 
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)

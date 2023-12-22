@@ -62,7 +62,5 @@ switch (FEAT_TRAINS, SELF, switch_p62_decay, cargo_type_in_veh == LVST) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_p62_additional_text, param_cargo_decay) {
-    1: return string(STR_DESC_2, string(STR_P62_LIVERY_AVAILABILITY), string(STR_DECAY_370_200_1110));
-    2: return string(STR_DESC_2, string(STR_P62_LIVERY_AVAILABILITY), string(STR_DECAY_740_400_2220));
-    return string(STR_DESC_2, string(STR_P62_LIVERY_AVAILABILITY), string(STR_DECAY_185_100_555));
+    return string(STR_DESC_2, string(STR_P62_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR));
 }

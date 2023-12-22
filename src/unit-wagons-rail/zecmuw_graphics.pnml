@@ -34,7 +34,5 @@ switch (FEAT_TRAINS, SELF, switch_zecmuw_capacity, position_in_articulated_veh %
 }
 
 switch (FEAT_TRAINS, SELF, switch_zecmuw_additional_text, param_cargo_decay) {
-    1: return string(STR_DESC_3, string(STR_CAFE_EFFECT), string(STR_ATTACH_ALL_CRH_CR), string(STR_DECAY_600));
-    2: return string(STR_DESC_3, string(STR_CAFE_EFFECT), string(STR_ATTACH_ALL_CRH_CR), string(STR_DECAY_1200));
-    return string(STR_DESC_3, string(STR_CAFE_EFFECT), string(STR_ATTACH_ALL_CRH_CR), string(STR_DECAY_300));
+    return string(STR_DESC_3, string(STR_CAFE_EFFECT), string(STR_ATTACH_ALL_CRH_CR), string(STR_COMFORT_240_CAFE));
 }

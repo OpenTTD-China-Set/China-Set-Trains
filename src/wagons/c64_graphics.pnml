@@ -45,7 +45,5 @@ switch (FEAT_TRAINS, SELF, switch_c64_capacity, position_in_articulated_veh % 3)
 }
 
 switch (FEAT_TRAINS, SELF, switch_c64_additional_text, param_cargo_decay) {
-    1: return string(STR_DESC_2, string(STR_C64_LIVERY_AVAILABILITY), string(STR_DECAY_370));
-    2: return string(STR_DESC_2, string(STR_C64_LIVERY_AVAILABILITY), string(STR_DECAY_740));
     return string(STR_DESC_2, string(STR_C64_LIVERY_AVAILABILITY), string(STR_DECAY_185));
 }
