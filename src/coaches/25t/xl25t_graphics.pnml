@@ -1,0 +1,38 @@
+// Begin XL25T
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_xl25t_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_xl25t_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase1 ("coaches", "xl25t")
+}
+
+// Vehicle
+spriteset (spriteset_xl25t_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_xl25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "xl25t")
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25t_articulated_part, extra_callback_info1) {
+    1..2: return xl25t;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25t_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_xl25t_original;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25t_capacity, position_in_articulated_veh % 3) {
+    1: return 71;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25t_additional_text, param_cargo_decay) {
+    return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_200));
+}

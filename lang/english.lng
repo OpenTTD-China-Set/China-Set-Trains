@@ -34,6 +34,17 @@ STR_PARAM_VERY_LONG         :Very Long
 
 STR_USED_WITH_DYNAMIC_ENGINES       :This GRF needs dynamic_engines to be turned on. Open console, and type "setting dynamic_engines 1".
 
+STR_NAME_YZ22           :YZ22 (22 Type Hard Seat Passenger Coach)
+STR_NAME_RZ22           :RZ22 (22 Type Soft Seat Passenger Coach)
+STR_NAME_YW22           :YW22 (22 Type Hard Sleeper Passenger Coach)
+STR_NAME_RW22           :RW22 (22 Type Soft Sleeper Passenger Coach)
+STR_NAME_YZ22B          :YZ22B (22B Type Hard Seat Passenger Coach)
+STR_NAME_YW22B          :YW22B (22B Type Hard Sleeper Passenger Coach)
+STR_NAME_RW22B          :RW22B (22B Type Soft Sleeper Passenger Coach)
+STR_NAME_YZ25B          :YZ25B (25m Standard Hard Seat Passenger Coach)
+STR_NAME_RZ25B          :RZ25B (25m Standard Soft Seat Passenger Coach)
+STR_NAME_YW25B          :YW25B (25m Standard Hard Sleeper Passenger Coach)
+STR_NAME_RW25B          :RW25B (25m Standard Soft Sleeper Passenger Coach)
 STR_NAME_YZ25G          :YZ25G (25m Improved Hard Seat Passenger Coach)
 STR_NAME_RZ25G          :RZ25G (25m Improved Soft Seat Passenger Coach)
 STR_NAME_YW25G          :YW25G (25m Improved Hard Sleeper Passenger Coach)
@@ -51,12 +62,14 @@ STR_NAME_RW25T          :RW25T (25m Accelerated Soft Sleeper Passenger Coach)
 STR_NAME_CA25T          :CA25T (25m Accelerated Restaurant Car)
 STR_NAME_XL25G          :XL25G (25m Improved Luggage Car)
 STR_NAME_XL25K          :XL25K (25m Rapid Luggage Car)
+STR_NAME_XL25T          :XL25T (25m Accelerated Luggage Car)
 STR_NAME_XL25T_SSPE     :XL25T (25m Accelerated Luggage Car) (SSPE)
 STR_NAME_KD25G          :KD25G (25m Improved Air Conditioner Generator Car)
 STR_NAME_KD25K          :KD25K (25m Rapid Air Conditioner Generator Car)
 
 STR_NAME_C64            :C64 (Gondola)
 STR_NAME_P62            :P62 (Boxcar)
+STR_NAME_G60            :G60 (Tanker)
 
 STR_NAME_DF4K           :DF4 (Dongfeng 4 Diesel Locomotive) (Passenger Type)
 STR_NAME_DF4H           :DF4 (Dongfeng 4 Diesel Locomotive) (Freight Type)
@@ -86,11 +99,15 @@ STR_DESC_2                          :{STRING}{}{STRING}
 STR_XL25T_SSPE_DESCRIPTION          :{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.
 
 STR_DF4_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery and {ORANGE}Orange {GOLD}Livery
-STR_25G_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {GREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_25T_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {GREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_25K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {GREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_22_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: Ordinary {GREEN}Green {GOLD}Livery, Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery (unfinished)
+STR_22B_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: Ordinary {GREEN}Green {GOLD}Livery
+STR_25B_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: Ordinary {GREEN}Green {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_25G_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_25T_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_25K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_G60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GRAY}Grey {GOLD}with Random-Colour Stripes (unfinished)
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
-STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random
+STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished), temporarily using P60 model
 
 STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}Only Guangzhou-Kowloon Sub-Livery available so far
 
@@ -113,12 +130,20 @@ STR_ORIGINAL            :{GOLD} - Original Livery
 STR_ORANGE              :{ORANGE} - Orange Livery
 STR_GREEN               :{GREEN} - Green Livery
 
+STR_YW22_BUILD_YEAR     : - According to build year
+STR_YW22_ORIGINAL       : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240
+STR_YW22_1966           : - 1966 Design - Capacity 60, Comfort 288
+
+STR_COMFORT_144         :{BLACK}Comfort: {GOLD}144
 STR_COMFORT_160         :{BLACK}Comfort: {GOLD}160
 STR_COMFORT_192         :{BLACK}Comfort: {GOLD}192
 STR_COMFORT_288         :{BLACK}Comfort: {GOLD}288
 STR_COMFORT_384         :{BLACK}Comfort: {GOLD}384
 
+STR_COMFORT_YW22        :{BLACK}Comfort: {GOLD}240 {BLACK}, refittable to Capacity 60, Comfort 288 from 1966 onwards
+
 STR_COMFORT_160_CAFE    :{BLACK}Comfort: {GOLD}160 {BLACK}, but at least 200 in operation due to its restaurant identity
+STR_COMFORT_384_AC      :{BLACK}Comfort: {GOLD}384 {BLACK}, but at least 480 in operation due to the presence of air conditioner
 
 STR_COMFORT_240         :{BLACK}Comfort: {GOLD}240
 STR_COMFORT_400         :{BLACK}Comfort: {GOLD}400
@@ -135,7 +160,12 @@ STR_DECAY_200           :{BLACK}Cargo Age Period Factor: {GOLD}200
 STR_DECAY_BOXCAR        :{BLACK}Cargo Age Period Factor: {GOLD}185, Passengers 100, Livestock 560
 
 STR_CAFE_EFFECT                     :{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Halves Running Costs of Non-Commuter Passenger Cars except Restaurant Cars, and Increases Cargo Age Period by 1/4
-STR_AIR_CONDITIONER_EFFECT          :{BLACK}Air Conditioner Effect: {GOLD}Attaching Air Conditioner Generator Car Increases Cargo Age Period of Passenger Cars Hauled by Locomotives without Electricity Supply
+STR_AIR_CONDITIONER_EFFECT          :{BLACK}Air Conditioner Effect: {GOLD}Attaching Air Conditioner Generator Car Increases Cargo Age Period of Most Passenger Cars Hauled by Locomotives without Electricity Supply
+
+STR_NO_AIR_CONDITIONER              :{BLACK}Air Conditioner: {RED}Unavailable
+STR_SELF_AIR_CONDITIONER            :{BLACK}With Air Conditioner Compartment {RED}ONLY USED BY ITSELF
+
+STR_DESC_PENGDAIKE                  :{BLACK}Passengers in Boxcars (Peng Dai Ke): From 1980s to 2008, to handle huge traffic amounts during the Spring Festival period, temporary trains where passengers crowding in boxcars had to be operated. This reflected a severe lack of railway transport resources at that time.
 
 STR_ATTACH_ALL_CRH_CR               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs
 STR_ATTACH_SLEEPER_MU               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs

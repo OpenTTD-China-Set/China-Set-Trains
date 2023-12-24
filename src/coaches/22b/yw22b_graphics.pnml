@@ -1,0 +1,38 @@
+// Begin YW22B
+
+// Graphics
+
+// // Purchase Menu
+// spriteset (spriteset_yw22b_purchase_original) {
+//     template_purchase_empty ()
+// }
+// alternative_sprites(spriteset_yw22b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+//     template_purchase1 ("coaches", "22b")
+// }
+
+// // Vehicle
+// spriteset (spriteset_yw22b_original) {
+//     template_empty ()
+// }
+// alternative_sprites(spriteset_yw22b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+//     template_standard ("coaches", "22b")
+// }
+
+switch (FEAT_TRAINS, SELF, switch_yw22b_articulated_part, extra_callback_info1) {
+    1..2: return yw22b;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+// switch (FEAT_TRAINS, SELF, switch_yw22b_graphics, position_in_articulated_veh % 3) {
+//     0: spriteset_yw22b_original;
+//     empty_sprites;   
+// }
+
+switch (FEAT_TRAINS, SELF, switch_yw22b_capacity, position_in_articulated_veh % 3) {
+    1: return 60;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yw22b_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_22B_LIVERY_AVAILABILITY), string(STR_COMFORT_288), string(STR_NO_AIR_CONDITIONER));
+}

@@ -37,6 +37,32 @@
 
 
 // Coaches
+
+#include "src/coaches/22/yz22_graphics.pnml"
+#include "src/coaches/22/yz22_item.pnml"
+#include "src/coaches/22/rz22_graphics.pnml"
+#include "src/coaches/22/rz22_item.pnml"
+#include "src/coaches/22/yw22_graphics.pnml"
+#include "src/coaches/22/yw22_item.pnml"
+#include "src/coaches/22/rw22_graphics.pnml"
+#include "src/coaches/22/rw22_item.pnml"
+
+#include "src/coaches/22b/yz22b_graphics.pnml"
+#include "src/coaches/22b/yz22b_item.pnml"
+#include "src/coaches/22b/yw22b_graphics.pnml"
+#include "src/coaches/22b/yw22b_item.pnml"
+#include "src/coaches/22b/rw22b_graphics.pnml"
+#include "src/coaches/22b/rw22b_item.pnml"
+
+#include "src/coaches/25b/yz25b_graphics.pnml"
+#include "src/coaches/25b/yz25b_item.pnml"
+#include "src/coaches/25b/rz25b_graphics.pnml"
+#include "src/coaches/25b/rz25b_item.pnml"
+#include "src/coaches/25b/yw25b_graphics.pnml"
+#include "src/coaches/25b/yw25b_item.pnml"
+#include "src/coaches/25b/rw25b_graphics.pnml"
+#include "src/coaches/25b/rw25b_item.pnml"
+
 #include "src/coaches/25g/yz25g_graphics.pnml"
 #include "src/coaches/25g/yz25g_item.pnml"
 #include "src/coaches/25g/rz25g_graphics.pnml"
@@ -77,6 +103,8 @@
 #include "src/coaches/25t/rw25t_item.pnml"
 #include "src/coaches/25t/ca25t_graphics.pnml"
 #include "src/coaches/25t/ca25t_item.pnml"
+#include "src/coaches/25t/xl25t_graphics.pnml"
+#include "src/coaches/25t/xl25t_item.pnml"
 #include "src/coaches/25t/xl25t_sspe_graphics.pnml"
 #include "src/coaches/25t/xl25t_sspe_item.pnml"
 
@@ -85,6 +113,8 @@
 #include "src/wagons/c64_item.pnml"
 #include "src/wagons/p62_graphics.pnml"
 #include "src/wagons/p62_item.pnml"
+#include "src/wagons/g60_graphics.pnml"
+#include "src/wagons/g60_item.pnml"
 
 // Another Function File
 #include "src/function2.pnml"

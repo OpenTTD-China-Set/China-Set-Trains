@@ -20,8 +20,23 @@ CA25T
 By John Franklin and Babel
 Variant of 25T
 
-KD25G KD25K XL25G XL25K
+22, 22B, KD25G, KD25K, XL25G, XL25K, XL25T
 By Babel
 
-CA25G CA25K
+25B, RW25B
+By Babel, modified by John Franklin
+
+XL25T_SSPE
+By Babel and John Franklin
+
+CA25G, CA25K
 By John Franklin
+
+C64
+By Babel and John Franklin
+
+G60
+By Babel, modified by John Franklin
+
+P60
+By Babel

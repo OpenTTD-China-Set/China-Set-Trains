@@ -3,30 +3,57 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_c64_purchase_original) {
+spriteset (spriteset_c64_purchase) {
     template_purchase_empty ()
 }
-alternative_sprites(spriteset_c64_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("wagons", "c64-red")
+alternative_sprites(spriteset_c64_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase1 ("wagons", "c64")
 }
 
 // Vehicle
-spriteset (spriteset_c64_original) {
+spriteset (spriteset_c64_black_empty) {
     template_empty ()
 }
-spriteset (spriteset_c64_original_full_one) {
-    template_empty()
+spriteset (spriteset_c64_black_coal_half) {
+    template_empty ()
 }
-alternative_sprites(spriteset_c64_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_7_standard ("wagons", "c64-red")
+spriteset (spriteset_c64_black_coal_full) {
+    template_empty ()
 }
-alternative_sprites(spriteset_c64_original_full_one, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_7_standard ("wagons", "c64-red-full-one")
+spriteset (spriteset_c64_black_cover) {
+    template_empty ()
+}
+alternative_sprites(spriteset_c64_black_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "c64")
+}
+alternative_sprites(spriteset_c64_black_coal_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "c64-coal-half")
+}
+alternative_sprites(spriteset_c64_black_coal_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "c64-coal-full")
+}
+alternative_sprites(spriteset_c64_black_cover, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "c64-cover")
 }
 
-switch (FEAT_TRAINS, SELF, switch_c64_empty_full, cargo_count < 40) {
-    0: spriteset_c64_original_full_one;
-    spriteset_c64_original;
+switch (FEAT_TRAINS, SELF, switch_c64_black_coal, cargo_count < 40) {
+    0: spriteset_c64_black_coal_full;
+    spriteset_c64_black_coal_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c64_cargo, cargo_classes) {
+    bitmask(CC_COVERED): spriteset_c64_black_cover;
+    bitmask(CC_BULK): switch_c64_black_coal;
+    spriteset_c64_black_cover;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c64_black, cargo_count < 5) {
+    0: switch_c64_cargo;
+    spriteset_c64_black_empty;
+}
+
+random_switch (FEAT_TRAINS, SELF, random_c64_colour) {
+    1: switch_c64_black; // More colours waiting to be added
 }
 
 switch (FEAT_TRAINS, SELF, switch_c64_articulated_part, extra_callback_info1) {
@@ -35,7 +62,7 @@ switch (FEAT_TRAINS, SELF, switch_c64_articulated_part, extra_callback_info1) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_c64_graphics, position_in_articulated_veh % 3) {
-    1: switch_c64_empty_full;
+    1: random_c64_colour;
     empty_sprites;   
 }
 

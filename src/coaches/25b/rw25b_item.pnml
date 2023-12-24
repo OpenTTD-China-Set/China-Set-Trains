@@ -1,0 +1,57 @@
+item (FEAT_TRAINS, rw25b) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_RW25B);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1992,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 36;
+        loading_speed:                  4 << param_loading_speed;
+        cargo_age_period:               444 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          0 hp;
+        weight:                         51.5 ton;
+        cost_factor:                    13;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            11;
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_rw25b_additional_text;
+        can_attach_wagon:               locowagon;
+        
+        // Graphics
+        default:                        switch_rw25b_graphics;
+        purchase:                       spriteset_rw25b_purchase_original;
+        articulated_part:               switch_rw25b_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_rw25b_capacity;
+        cargo_age_period:               (24 * 5 * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    24;
+        running_cost_factor:            11 * runningcostfactor() * cafecostfactor() + 5;
+        purchase_running_cost_factor:   49;
+        purchase_cargo_capacity:        36/3;
+    }
+}
+
+// End RW25B
+

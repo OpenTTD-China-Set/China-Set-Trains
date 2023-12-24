@@ -267,5 +267,10 @@ switch (FEAT_TRAINS, SELF, mu5to17car, num_vehs_in_consist) {
         1: return 3;
         return 2;
     }
-
+    
+// Standard 2-2-2 Length
+    switch (FEAT_TRAINS, SELF, switch_length_2_2_2, position_in_articulated_veh % 3) {
+        1: return 2;
+        return 2;
+    }
 /* End Functions */ 

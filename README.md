@@ -131,10 +131,11 @@ Information basis:
 - Haiyan
 - FJZer0ich
 
-Graphics (see individual graphic files in the source for details):
+Graphics (see \docs\voxelsource.txt for details):
 - NACHN
 - FJZer0ich
 - babel
+- John Franklin
 
 Code:
 - John Franklin, NML-based Coding
@@ -228,8 +229,8 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along
-with this program; if not, write to the Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+with this program; if not, please check 
+https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 
 ## 9 Obtaining the source

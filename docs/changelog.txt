@@ -1,5 +1,22 @@
 China Set: Trains Changelog
 =========================
+0.1.0.112 (24/12/2023)
+--------------------
+GitHub push, but no release
+Fix #17: YW22 comfort when using build year design
+Fix #18: "Peng Dai Ke" capacity
+Fix #19: YZ22, RW22, G60 introducing year
+
+0.1.0.111 (24/12/2023)
+--------------------
+NOT COMPATIBLE WITH ANY VERSION BEFORE r111
+Add: YZ22, RZ22, YW22, RW22, YZ22B, YW22B, RW22B, YZ25B, RZ25B, YW25B, RW25B, XL25T, G60
+Fix #15: "Passengers in Boxcars" (Peng Dai Ke) are now as crowded as expected, and tourists now refuse to crowd in boxcars
+Fix #16: Boxcars now have double capacity of mail
+Change: Length of C64 to 6
+Change: Sprites of XL25T_SSPE, C64 to MagicaVoxel output
+Change: Sprites of P62 to MagicaVoxel output, but temporarily using P60 models
+
 0.1.0.110 (22/12/2023)
 --------------------
 GitHub push, but no release

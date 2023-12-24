@@ -39,11 +39,11 @@ item (FEAT_TRAINS, c64) {
         
         // Graphics
         default:                        switch_c64_graphics;
-        purchase:                       spriteset_c64_purchase_original;
+        purchase:                       spriteset_c64_purchase;
         articulated_part:               switch_c64_articulated_part;
 
         // Stats
-        length:                         switch_length_2_3_2;
+        length:                         switch_length_2_2_2;
         cargo_capacity:                 switch_c64_capacity;
         cargo_age_period:               185 << param_cargo_decay;
         cost_factor:                    5;

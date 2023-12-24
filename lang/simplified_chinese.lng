@@ -34,6 +34,17 @@ STR_PARAM_VERY_LONG         :很长
 
 STR_USED_WITH_DYNAMIC_ENGINES       :请切换至控制台模式, 键入 "setting dynamic_engines 1", 否则您无法游玩中国包.
 
+STR_NAME_YZ22           :YZ22 (22型硬座客车)
+STR_NAME_RZ22           :RZ22 (22型软座客车)
+STR_NAME_YW22           :YW22 (22型硬卧客车)
+STR_NAME_RW22           :RW22 (22型软卧客车)
+STR_NAME_YZ22B          :YZ22B (22B型硬座客车)
+STR_NAME_YW22B          :YW22B (22B型硬卧客车)
+STR_NAME_RW22B          :RW22B (22B型软卧客车)
+STR_NAME_YZ25B          :YZ25B (25米标准型硬座客车)
+STR_NAME_RZ25B          :RZ25B (25米标准型软座客车)
+STR_NAME_YW25B          :YW25B (25米标准型硬卧客车)
+STR_NAME_RW25B          :RW25B (25米标准型软卧客车)
 STR_NAME_YZ25G          :YZ25G (25米改进型硬座客车)
 STR_NAME_RZ25G          :RZ25G (25米改进型软座客车)
 STR_NAME_YW25G          :YW25G (25米改进型硬卧客车)
@@ -51,12 +62,14 @@ STR_NAME_RW25T          :RW25T (25米提速型软卧客车)
 STR_NAME_CA25T          :CA25T (25米提速型餐车)
 STR_NAME_XL25G          :XL25G (25米改进型行李车)
 STR_NAME_XL25K          :XL25K (25米快速型行李车)
+STR_NAME_XL25T          :XL25T (25米提速型行李车)
 STR_NAME_XL25T_SSPE     :XL25T (25米提速型行李车) (SSPE)
 STR_NAME_KD25G          :KD25G (25米改进型空调发电车)
 STR_NAME_KD25K          :KD25K (25米快速型空调发电车)
 
 STR_NAME_C64            :C64 (敞车)
 STR_NAME_P62            :P62 (棚车)
+STR_NAME_G60            :G60 (罐车)
 
 STR_NAME_DF4K           :DF4 (东风4型内燃机车) (客运型)
 STR_NAME_DF4H           :DF4 (东风4型内燃机车) (货运型)
@@ -81,11 +94,15 @@ STR_NAME_WGMUW          :动车组高级软卧车厢
 STR_XL25T_SSPE_DESCRIPTION          :{BLACK}新时速运递公司使用的XL25T版本。
 
 STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿色{GOLD}、{ORANGE}橘色
-STR_25G_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{GREEN}“高阻绿”{GOLD}涂装 (未完成)
-STR_25T_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{GREEN}“高阻绿”{GOLD}涂装 (未完成)
-STR_25K_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{GREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_22_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装 (未完成)
+STR_22B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装
+STR_25B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_25G_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_25T_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_25K_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_G60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带 (未完成)
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
-STR_P62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机
+STR_P62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)，目前暂时使用P60模型
 
 STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}目前仅有广九铁路子涂装
 
@@ -107,12 +124,20 @@ STR_ORIGINAL            :{GOLD} - 原版涂装
 STR_ORANGE              :{ORANGE} - 橘色涂装
 STR_GREEN               :{GREEN} - 绿色涂装
 
+STR_YW22_BUILD_YEAR     : - 根据建造年份选择设计
+STR_YW22_ORIGINAL       : - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
+STR_YW22_1966           : - 1966年新设计 - 定员60，舒适度288
+
+STR_COMFORT_144         :{BLACK}舒适度：{GOLD}144
 STR_COMFORT_160         :{BLACK}舒适度：{GOLD}160
 STR_COMFORT_192         :{BLACK}舒适度：{GOLD}192
 STR_COMFORT_288         :{BLACK}舒适度：{GOLD}288
 STR_COMFORT_384         :{BLACK}舒适度：{GOLD}384
 
+STR_COMFORT_YW22        :{BLACK}舒适度：{GOLD}240 {BLACK}，1966年起可改装为定员60，舒适度288
+
 STR_COMFORT_160_CAFE    :{BLACK}舒适度：{GOLD}160 {BLACK}，但由于餐车作用，运营时至少为200
+STR_COMFORT_384_AC      :{BLACK}舒适度：{GOLD}384 {BLACK}，但由于空调作用，运营时至少为480
 
 STR_COMFORT_240         :{BLACK}舒适度：{GOLD}240
 STR_COMFORT_400         :{BLACK}舒适度：{GOLD}400
@@ -129,7 +154,12 @@ STR_DECAY_200           :{BLACK}货物贬值周期因子：{GOLD}200
 STR_DECAY_BOXCAR        :{BLACK}货物贬值周期因子：{GOLD}185，棚代客100，装载活禽/畜560
 
 STR_CAFE_EFFECT                     :{BLACK}餐车的作用：{GOLD}加挂餐车使除餐车外的所有非通勤客车运行费用减半，货物贬值周期增加1/4
-STR_AIR_CONDITIONER_EFFECT          :{BLACK}空调发电车的作用：{GOLD}加挂空调发电车可增加非机供机车牵引客车的货物贬值周期
+STR_AIR_CONDITIONER_EFFECT          :{BLACK}空调发电车的作用：{GOLD}加挂空调发电车可增加大部分非机供机车牵引客车的货物贬值周期
+
+STR_NO_AIR_CONDITIONER              :{BLACK}空调：{RED}不可用
+STR_SELF_AIR_CONDITIONER            :{BLACK}自带空调发电机{RED}但仅用于本车厢
+
+STR_DESC_PENGDAIKE                  :{BLACK}棚代客：从20世纪80年代至2008年，为适应春运期间极大的客流量，部分铁路局曾开行使用棚车装载旅客的临客列车，内部极度拥挤。该现象反映了当时铁路运输资源的严重缺乏。
 
 STR_ATTACH_ALL_CRH_CR               :{BLACK}匹配的动车组：{GOLD}所有和谐/复兴号动车
 STR_ATTACH_SLEEPER_MU               :{BLACK}匹配的动车组：{GOLD}所有提供卧铺的和谐/复兴号动车

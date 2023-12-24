@@ -65,12 +65,26 @@ item (FEAT_TRAINS, kd25g, 2065) {}
 item (FEAT_TRAINS, ca25t, 2066) {}
 item (FEAT_TRAINS, ca25g, 2067) {}
 item (FEAT_TRAINS, ca25k, 2068) {}
+item (FEAT_TRAINS, xl25t, 2069) {}
+item (FEAT_TRAINS, yz22, 2070) {}
+item (FEAT_TRAINS, rz22, 2071) {}
+item (FEAT_TRAINS, yw22, 2072) {}
+item (FEAT_TRAINS, rw22, 2073) {}
+item (FEAT_TRAINS, yz22b, 2074) {}
+item (FEAT_TRAINS, yw22b, 2075) {}
+item (FEAT_TRAINS, rw22b, 2076) {}
+item (FEAT_TRAINS, yz25b, 2077) {}
+item (FEAT_TRAINS, rz25b, 2078) {}
+item (FEAT_TRAINS, yw25b, 2079) {}
+item (FEAT_TRAINS, rw25b, 2080) {}
 
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 #define id_range_wagons 0x0C00..0x0FFF
 item (FEAT_TRAINS, c64, 3072) {}
 item (FEAT_TRAINS, p62, 3073) {}
+item (FEAT_TRAINS, g60, 3074) {}
+
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
