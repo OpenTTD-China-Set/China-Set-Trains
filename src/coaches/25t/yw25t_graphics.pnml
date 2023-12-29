@@ -34,5 +34,5 @@ switch (FEAT_TRAINS, SELF, switch_yw25t_capacity, position_in_articulated_veh % 
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw25t_additional_text, param_cargo_decay) {
-    return string(STR_DESC_2, string(STR_25T_LIVERY_AVAILABILITY), string(STR_COMFORT_288));
+    return string(STR_DESC_3, string(STR_FULL_NAME_YW25T), string(STR_25T_LIVERY_AVAILABILITY), string(STR_COMFORT_288));
 }

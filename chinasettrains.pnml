@@ -111,6 +111,8 @@
 // Wagons
 #include "src/wagons/c64_graphics.pnml"
 #include "src/wagons/c64_item.pnml"
+#include "src/wagons/p60_graphics.pnml"
+#include "src/wagons/p60_item.pnml"
 #include "src/wagons/p62_graphics.pnml"
 #include "src/wagons/p62_item.pnml"
 #include "src/wagons/g60_graphics.pnml"

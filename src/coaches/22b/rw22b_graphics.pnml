@@ -2,31 +2,31 @@
 
 // Graphics
 
-// // Purchase Menu
-// spriteset (spriteset_rw22b_purchase_original) {
-//     template_purchase_empty ()
-// }
-// alternative_sprites(spriteset_rw22b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-//     template_purchase1 ("coaches", "rw22b")
-// }
+// Purchase Menu
+spriteset (spriteset_rw22b_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_rw22b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase1 ("coaches", "rw22b")
+}
 
-// // Vehicle
-// spriteset (spriteset_rw22b_original) {
-//     template_empty ()
-// }
-// alternative_sprites(spriteset_rw22b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-//     template_standard ("coaches", "rw22b")
-// }
+// Vehicle
+spriteset (spriteset_rw22b_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_rw22b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "rw22b")
+}
 
 switch (FEAT_TRAINS, SELF, switch_rw22b_articulated_part, extra_callback_info1) {
     1..2: return rw22b;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-// switch (FEAT_TRAINS, SELF, switch_rw22b_graphics, position_in_articulated_veh % 3) {
-//     0: spriteset_rw22b_original;
-//     empty_sprites;   
-// }
+switch (FEAT_TRAINS, SELF, switch_rw22b_graphics, position_in_articulated_veh % 3) {
+    0: spriteset_rw22b_original;
+    empty_sprites;   
+}
 
 switch (FEAT_TRAINS, SELF, switch_rw22b_capacity, position_in_articulated_veh % 3) {
     1: return 32;
@@ -34,5 +34,5 @@ switch (FEAT_TRAINS, SELF, switch_rw22b_capacity, position_in_articulated_veh % 
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw22b_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_22B_LIVERY_AVAILABILITY), string(STR_COMFORT_384_AC), string(STR_SELF_AIR_CONDITIONER));
+    return string(STR_DESC_4, string(STR_FULL_NAME_RW22B), string(STR_22B_LIVERY_AVAILABILITY), string(STR_COMFORT_384_AC), string(STR_SELF_AIR_CONDITIONER));
 }

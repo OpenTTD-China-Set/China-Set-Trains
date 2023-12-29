@@ -38,8 +38,8 @@ item (FEAT_TRAINS, rw22b) {
         can_attach_wagon:               locowagon;
         
         // Graphics
-        default:                        switch_22b_graphics;
-        purchase:                       spriteset_22b_purchase_original;
+        default:                        switch_rw22b_graphics;
+        purchase:                       spriteset_rw22b_purchase_original;
         articulated_part:               switch_rw22b_articulated_part;
 
         // Stats

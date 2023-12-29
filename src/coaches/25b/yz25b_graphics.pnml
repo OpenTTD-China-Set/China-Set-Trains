@@ -34,5 +34,5 @@ switch (FEAT_TRAINS, SELF, switch_yz25b_capacity, position_in_articulated_veh % 
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25b_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_25B_LIVERY_AVAILABILITY), string(STR_COMFORT_144), string(STR_NO_AIR_CONDITIONER));
+    return string(STR_DESC_4, string(STR_FULL_NAME_YZ25B), string(STR_25B_LIVERY_AVAILABILITY), string(STR_COMFORT_144), string(STR_NO_AIR_CONDITIONER));
 }

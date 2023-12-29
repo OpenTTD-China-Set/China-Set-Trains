@@ -24,14 +24,13 @@ switch (FEAT_TRAINS, SELF, switch_yw22_articulated_part, extra_callback_info1) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw22_cargo_subtype_pre_1966, cargo_subtype) {
-    0: return string(STR_YW22_BUILD_YEAR);
+    0: return string(STR_BUILD_YEAR);
     1: return string(STR_YW22_ORIGINAL);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw22_cargo_subtype_post_1966, cargo_subtype) {
-    0: return string(STR_YW22_BUILD_YEAR);
-    1: return string(STR_YW22_ORIGINAL);
+    0..1: switch_yw22_cargo_subtype_pre_1966;
     2: return string(STR_YW22_1966);
     return CB_RESULT_NO_TEXT;
 }
@@ -74,5 +73,5 @@ switch (FEAT_TRAINS, SELF, switch_yw22_cargo_decay, cargo_subtype) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw22_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_YW22), string(STR_NO_AIR_CONDITIONER));
+    return string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_YW22), string(STR_NO_AIR_CONDITIONER));
 }

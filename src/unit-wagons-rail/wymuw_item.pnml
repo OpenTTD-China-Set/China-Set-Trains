@@ -38,14 +38,14 @@ item (FEAT_TRAINS, wymuw) {
         can_attach_wagon:               muhead;
 
         // Graphics
-        default:                        switch_wymuw_graphics;
-        purchase:                       spriteset_wymuw_purchase_original;
+        default:                        switch_crhmuw_graphics;
+        purchase:                       spriteset_crhmuw_purchase_original;
         articulated_part:               switch_wymuw_articulated_part;
 
         // Stats
         length:                         switch_length_2_8_2;
         cargo_capacity:                 switch_wymuw_capacity;
-        cargo_age_period:               (45 * 5 * cafedecayfactor()) << param_cargo_decay;
+        cargo_age_period:               (32 * 5 * cafedecayfactor()) << param_cargo_decay;
         cost_factor:                    24;
         running_cost_factor:            6 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   36;

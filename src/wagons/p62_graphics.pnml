@@ -7,7 +7,7 @@ spriteset (spriteset_p62_purchase_original) {
     template_purchase_empty ()
 }
 alternative_sprites(spriteset_p62_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase1 ("wagons", "p60")
+    template_purchase1 ("wagons", "p62")
 }
 
 // Vehicle
@@ -15,7 +15,7 @@ spriteset (spriteset_p62_black) {
     template_empty ()
 }
 alternative_sprites(spriteset_p62_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("wagons", "p60")
+    template_standard ("wagons", "p62")
 }
 
 random_switch (FEAT_TRAINS, SELF, random_p62_colour) {
@@ -58,12 +58,12 @@ switch (FEAT_TRAINS, SELF, switch_p62_loading_speed, cargo_classes == bitmask(CC
 }
 
 switch (FEAT_TRAINS, SELF, switch_p62_decay_pengdaike, (cargo_classes == bitmask(CC_PASSENGERS)) || (cargo_type_in_veh == YETI) || (cargo_type_in_veh == YETY)) {
-    1: return 100;
+    1: return 80;
     return 185;
 }
 
 switch (FEAT_TRAINS, SELF, switch_p62_decay, cargo_type_in_veh == LVST) {
-    1: return 555;
+    1: return 560;
     switch_p62_decay_pengdaike;
 }
 

@@ -2,30 +2,9 @@
 
 // Graphics
 
-// Purchase Menu
-spriteset (spriteset_zsmuw_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_zsmuw_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("unit-wagons-rail", "25dt-cr200j")
-}
-
-// Vehicle
-spriteset (spriteset_zsmuw_original) {
-    template_empty ()
-}
-alternative_sprites(spriteset_zsmuw_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_12_standard ("unit-wagons-rail", "25dt-cr200j")
-}
-
 switch (FEAT_TRAINS, SELF, switch_zsmuw_articulated_part, extra_callback_info1) {
     1..2: return zsmuw;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
-}
-
-switch (FEAT_TRAINS, SELF, switch_zsmuw_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_zsmuw_original;
-    empty_sprites;   
 }
 
 switch (FEAT_TRAINS, SELF, switch_zsmuw_capacity, position_in_articulated_veh % 3) {

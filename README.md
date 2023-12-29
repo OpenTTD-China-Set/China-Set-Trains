@@ -31,7 +31,7 @@ It is developed by China Set Team, which can be found in Part 6.
 
 ### 2.1 Requirements
 
-- OpenTTD 1.2.0 or nightly r23971, or higher
+- OpenTTD 1.4.0-beta1 or nightly r26157, or higher
 - Not compatible with TTDPatch
 
 
@@ -104,7 +104,7 @@ Errors may exist, do report them when encountered.
 
 Q: Why can't I use this in older versions of OpenTTD or TTDPatch?
 
-A: This NewGRF uses some features only available to OpenTTD r23971 and
+A: This NewGRF uses some features only available to OpenTTD r26157 and
    newer. Furthermore, the most recent version of NML used to build this
    NewGRF, produces GRF version 8. This is only supported by OpenTTD
    r23166 and newer anyways.
@@ -136,6 +136,7 @@ Graphics (see \docs\voxelsource.txt for details):
 - FJZer0ich
 - babel
 - John Franklin
+- Mikhail
 
 Code:
 - John Franklin, NML-based Coding

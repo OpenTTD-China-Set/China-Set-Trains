@@ -84,6 +84,7 @@ item (FEAT_TRAINS, rw25b, 2080) {}
 item (FEAT_TRAINS, c64, 3072) {}
 item (FEAT_TRAINS, p62, 3073) {}
 item (FEAT_TRAINS, g60, 3074) {}
+item (FEAT_TRAINS, p60, 3075) {}
 
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)

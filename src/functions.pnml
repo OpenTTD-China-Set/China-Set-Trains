@@ -274,3 +274,9 @@ switch (FEAT_TRAINS, SELF, mu5to17car, num_vehs_in_consist) {
         return 2;
     }
 /* End Functions */ 
+
+
+switch (FEAT_TRAINS, SELF, too_many_graphics_12, position_in_articulated_veh % 3) {
+    1: spriteset_too_many_12;
+    empty_sprites;
+}

@@ -14,8 +14,14 @@ alternative_sprites(spriteset_25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH
 spriteset (spriteset_25g_original) {
     template_empty ()
 }
+spriteset (spriteset_25g_jinwen) {
+    template_empty ()
+}
 alternative_sprites(spriteset_25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25g")
+}
+alternative_sprites(spriteset_25g_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25g-jinwen")
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25g_articulated_part, extra_callback_info1) {
@@ -23,9 +29,44 @@ switch (FEAT_TRAINS, SELF, switch_yz25g_articulated_part, extra_callback_info1) 
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_25g_graphics, position_in_articulated_veh % 3) {
+switch (FEAT_TRAINS, SELF, switch_25g_cargo_subtype_pre_1998, cargo_subtype) {
+    0: return string(STR_BUILD_YEAR);
+    1: return string(STR_RED_WHITE);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_25g_cargo_subtype_1998_2014, cargo_subtype) {
+    0..1: switch_25g_cargo_subtype_pre_1998;
+    2: return string(STR_JINWEN);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_25g_cargo_subtype_post_2014, cargo_subtype) {
+    0..2: switch_25g_cargo_subtype_1998_2014;
+    3: return string(STR_GAOZU_GREEN);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_25g_cargo_subtype, current_year) {
+    0..1997: switch_25g_cargo_subtype_pre_1998;
+    1998..2014: switch_25g_cargo_subtype_1998_2014;
+    switch_25g_cargo_subtype_post_2014;
+}
+
+switch (FEAT_TRAINS, SELF, switch_25g_build_year_sprite, build_year) {
+    spriteset_25g_original; // Unfinished
+}
+
+switch (FEAT_TRAINS, SELF, switch_25g_graphics_subtype, cargo_subtype) {
+    0: switch_25g_build_year_sprite;
     1: spriteset_25g_original;
-    empty_sprites;   
+    2: spriteset_25g_jinwen;
+    3: spriteset_25g_original;  // Will change to "spriteset_25g_gaozu" once the "gaozu green" sprite is finished
+}
+
+switch (FEAT_TRAINS, SELF, switch_25g_graphics, position_in_articulated_veh % 3) {
+    1: switch_25g_graphics_subtype;
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25g_capacity, position_in_articulated_veh % 3) {
@@ -34,5 +75,5 @@ switch (FEAT_TRAINS, SELF, switch_yz25g_capacity, position_in_articulated_veh % 
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25g_additional_text, param_cargo_decay) {
-    return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_COMFORT_160));
+    return string(STR_DESC_3, string(STR_FULL_NAME_YZ25G), string(STR_25G_LIVERY_AVAILABILITY), string(STR_COMFORT_160));
 }

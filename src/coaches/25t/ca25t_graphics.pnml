@@ -34,5 +34,5 @@ switch (FEAT_TRAINS, SELF, switch_ca25t_capacity, position_in_articulated_veh % 
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca25t_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_CAFE_EFFECT), string(STR_25T_LIVERY_AVAILABILITY), string(STR_CA25T_LIVERY_AVAILABILITY), string(STR_COMFORT_160_CAFE));
+    return string(STR_DESC_5, string(STR_FULL_NAME_CA25T), string(STR_CAFE_EFFECT), string(STR_25T_LIVERY_AVAILABILITY), string(STR_CA25T_LIVERY_AVAILABILITY), string(STR_COMFORT_160_CAFE));
 }

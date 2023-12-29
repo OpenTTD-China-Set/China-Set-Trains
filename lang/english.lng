@@ -34,48 +34,49 @@ STR_PARAM_VERY_LONG         :Very Long
 
 STR_USED_WITH_DYNAMIC_ENGINES       :This GRF needs dynamic_engines to be turned on. Open console, and type "setting dynamic_engines 1".
 
-STR_NAME_YZ22           :YZ22 (22 Type Hard Seat Passenger Coach)
-STR_NAME_RZ22           :RZ22 (22 Type Soft Seat Passenger Coach)
-STR_NAME_YW22           :YW22 (22 Type Hard Sleeper Passenger Coach)
-STR_NAME_RW22           :RW22 (22 Type Soft Sleeper Passenger Coach)
-STR_NAME_YZ22B          :YZ22B (22B Type Hard Seat Passenger Coach)
-STR_NAME_YW22B          :YW22B (22B Type Hard Sleeper Passenger Coach)
-STR_NAME_RW22B          :RW22B (22B Type Soft Sleeper Passenger Coach)
-STR_NAME_YZ25B          :YZ25B (25m Standard Hard Seat Passenger Coach)
-STR_NAME_RZ25B          :RZ25B (25m Standard Soft Seat Passenger Coach)
-STR_NAME_YW25B          :YW25B (25m Standard Hard Sleeper Passenger Coach)
-STR_NAME_RW25B          :RW25B (25m Standard Soft Sleeper Passenger Coach)
-STR_NAME_YZ25G          :YZ25G (25m Improved Hard Seat Passenger Coach)
-STR_NAME_RZ25G          :RZ25G (25m Improved Soft Seat Passenger Coach)
-STR_NAME_YW25G          :YW25G (25m Improved Hard Sleeper Passenger Coach)
-STR_NAME_RW25G          :RW25G (25m Improved Soft Sleeper Passenger Coach)
-STR_NAME_CA25G          :CA25G (25m Improved Restaurant Car)
-STR_NAME_YZ25K          :YZ25K (25m Rapid Hard Seat Passenger Coach)
-STR_NAME_RZ25K          :RZ25K (25m Rapid Soft Seat Passenger Coach)
-STR_NAME_YW25K          :YW25K (25m Rapid Hard Sleeper Passenger Coach)
-STR_NAME_RW25K          :RW25K (25m Rapid Soft Sleeper Passenger Coach)
-STR_NAME_CA25K          :CA25K (25m Rapid Improved Restaurant Car)
-STR_NAME_YZ25T          :YZ25T (25m Accelerated Hard Seat Passenger Coach)
-STR_NAME_RZ25T          :RZ25T (25m Accelerated Soft Seat Passenger Coach)
-STR_NAME_YW25T          :YW25T (25m Accelerated Hard Sleeper Passenger Coach)
-STR_NAME_RW25T          :RW25T (25m Accelerated Soft Sleeper Passenger Coach)
-STR_NAME_CA25T          :CA25T (25m Accelerated Restaurant Car)
-STR_NAME_XL25G          :XL25G (25m Improved Luggage Car)
-STR_NAME_XL25K          :XL25K (25m Rapid Luggage Car)
-STR_NAME_XL25T          :XL25T (25m Accelerated Luggage Car)
-STR_NAME_XL25T_SSPE     :XL25T (25m Accelerated Luggage Car) (SSPE)
-STR_NAME_KD25G          :KD25G (25m Improved Air Conditioner Generator Car)
-STR_NAME_KD25K          :KD25K (25m Rapid Air Conditioner Generator Car)
+STR_NAME_YZ22           :YZ22 (Passenger Coach)
+STR_NAME_RZ22           :RZ22 (Passenger Coach)
+STR_NAME_YW22           :YW22 (Passenger Coach)
+STR_NAME_RW22           :RW22 (Passenger Coach)
+STR_NAME_YZ22B          :YZ22B (Passenger Coach)
+STR_NAME_YW22B          :YW22B (Passenger Coach)
+STR_NAME_RW22B          :RW22B (Passenger Coach)
+STR_NAME_YZ25B          :YZ25B (Passenger Coach)
+STR_NAME_RZ25B          :RZ25B (Passenger Coach)
+STR_NAME_YW25B          :YW25B (Passenger Coach)
+STR_NAME_RW25B          :RW25B (Passenger Coach)
+STR_NAME_YZ25G          :YZ25G (Passenger Coach)
+STR_NAME_RZ25G          :RZ25G (Passenger Coach)
+STR_NAME_YW25G          :YW25G (Passenger Coach)
+STR_NAME_RW25G          :RW25G (Passenger Coach)
+STR_NAME_CA25G          :CA25G (Restaurant Car)
+STR_NAME_YZ25K          :YZ25K (Passenger Coach)
+STR_NAME_RZ25K          :RZ25K (Passenger Coach)
+STR_NAME_YW25K          :YW25K (Passenger Coach)
+STR_NAME_RW25K          :RW25K (Passenger Coach)
+STR_NAME_CA25K          :CA25K (Restaurant Car)
+STR_NAME_YZ25T          :YZ25T (Passenger Coach)
+STR_NAME_RZ25T          :RZ25T (Passenger Coach)
+STR_NAME_YW25T          :YW25T (Passenger Coach)
+STR_NAME_RW25T          :RW25T (Passenger Coach)
+STR_NAME_CA25T          :CA25T (Restaurant Car)
+STR_NAME_XL25G          :XL25G (Luggage Car)
+STR_NAME_XL25K          :XL25K (Luggage Car)
+STR_NAME_XL25T          :XL25T (Luggage Car)
+STR_NAME_XL25T_SSPE     :XL25T-SSPE (Luggage Car)
+STR_NAME_KD25G          :KD25G (Air Conditioner Generator Car)
+STR_NAME_KD25K          :KD25K (Air Conditioner Generator Car)
 
 STR_NAME_C64            :C64 (Gondola)
+STR_NAME_P60            :P60 (Boxcar)
 STR_NAME_P62            :P62 (Boxcar)
 STR_NAME_G60            :G60 (Tanker)
 
-STR_NAME_DF4K           :DF4 (Dongfeng 4 Diesel Locomotive) (Passenger Type)
-STR_NAME_DF4H           :DF4 (Dongfeng 4 Diesel Locomotive) (Freight Type)
-STR_NAME_DF11G          :DF11G (Dongfeng 11G Diesel Locomotive)
-STR_NAME_HXD3C          :HXD3C (Hexie/Harmony 3C Electric Locomotive)
-STR_NAME_HXD3D          :HXD3D (Hexie/Harmony 3D Electric Locomotive)
+STR_NAME_DF4K           :DF4 (Diesel) (Passenger Type)
+STR_NAME_DF4H           :DF4 (Diesel) (Freight Type)
+STR_NAME_DF11G          :DF11G (Diesel)
+STR_NAME_HXD3C          :HXD3C (Electric)
+STR_NAME_HXD3D          :HXD3D (Electric)
 
 STR_NAME_CR200J1        :CR200J1 (EMU)
 STR_NAME_CRH5A          :CRH5A (EMU)
@@ -91,6 +92,44 @@ STR_NAME_WEMUW          :2nd-Class Sleeper (WE) MU Wagon
 STR_NAME_WYMUW          :1st-Class Sleeper (WY) MU Wagon
 STR_NAME_WGMUW          :Top-Class Sleeper (WG) MU Wagon
 
+STR_FULL_NAME_YZ22           :{BLACK}Full Name: {GOLD}22 Type Hard Seat Passenger Coach
+STR_FULL_NAME_RZ22           :{BLACK}Full Name: {GOLD}22 Type Soft Seat Passenger Coach
+STR_FULL_NAME_YW22           :{BLACK}Full Name: {GOLD}22 Type Hard Sleeper Passenger Coach
+STR_FULL_NAME_RW22           :{BLACK}Full Name: {GOLD}22 Type Soft Sleeper Passenger Coach
+STR_FULL_NAME_YZ22B          :{BLACK}Full Name: {GOLD}22B Type Hard Seat Passenger Coach
+STR_FULL_NAME_YW22B          :{BLACK}Full Name: {GOLD}22B Type Hard Sleeper Passenger Coach
+STR_FULL_NAME_RW22B          :{BLACK}Full Name: {GOLD}22B Type Soft Sleeper Passenger Coach
+STR_FULL_NAME_YZ25B          :{BLACK}Full Name: {GOLD}25m Standard Hard Seat Passenger Coach
+STR_FULL_NAME_RZ25B          :{BLACK}Full Name: {GOLD}25m Standard Soft Seat Passenger Coach
+STR_FULL_NAME_YW25B          :{BLACK}Full Name: {GOLD}25m Standard Hard Sleeper Passenger Coach
+STR_FULL_NAME_RW25B          :{BLACK}Full Name: {GOLD}25m Standard Soft Sleeper Passenger Coach
+STR_FULL_NAME_YZ25G          :{BLACK}Full Name: {GOLD}25m Improved Hard Seat Passenger Coach
+STR_FULL_NAME_RZ25G          :{BLACK}Full Name: {GOLD}25m Improved Soft Seat Passenger Coach
+STR_FULL_NAME_YW25G          :{BLACK}Full Name: {GOLD}25m Improved Hard Sleeper Passenger Coach
+STR_FULL_NAME_RW25G          :{BLACK}Full Name: {GOLD}25m Improved Soft Sleeper Passenger Coach
+STR_FULL_NAME_CA25G          :{BLACK}Full Name: {GOLD}25m Improved Restaurant Car
+STR_FULL_NAME_YZ25K          :{BLACK}Full Name: {GOLD}25m Rapid Hard Seat Passenger Coach
+STR_FULL_NAME_RZ25K          :{BLACK}Full Name: {GOLD}25m Rapid Soft Seat Passenger Coach
+STR_FULL_NAME_YW25K          :{BLACK}Full Name: {GOLD}25m Rapid Hard Sleeper Passenger Coach
+STR_FULL_NAME_RW25K          :{BLACK}Full Name: {GOLD}25m Rapid Soft Sleeper Passenger Coach
+STR_FULL_NAME_CA25K          :{BLACK}Full Name: {GOLD}25m Rapid Improved Restaurant Car
+STR_FULL_NAME_YZ25T          :{BLACK}Full Name: {GOLD}25m Accelerated Hard Seat Passenger Coach
+STR_FULL_NAME_RZ25T          :{BLACK}Full Name: {GOLD}25m Accelerated Soft Seat Passenger Coach
+STR_FULL_NAME_YW25T          :{BLACK}Full Name: {GOLD}25m Accelerated Hard Sleeper Passenger Coach
+STR_FULL_NAME_RW25T          :{BLACK}Full Name: {GOLD}25m Accelerated Soft Sleeper Passenger Coach
+STR_FULL_NAME_CA25T          :{BLACK}Full Name: {GOLD}25m Accelerated Restaurant Car
+STR_FULL_NAME_XL25G          :{BLACK}Full Name: {GOLD}25m Improved Luggage Car
+STR_FULL_NAME_XL25K          :{BLACK}Full Name: {GOLD}25m Rapid Luggage Car
+STR_FULL_NAME_XL25T          :{BLACK}Full Name: {GOLD}25m Accelerated Luggage Car
+STR_FULL_NAME_KD25G          :{BLACK}Full Name: {GOLD}25m Improved Air Conditioner Generator Car
+STR_FULL_NAME_KD25K          :{BLACK}Full Name: {GOLD}25m Rapid Air Conditioner Generator Car
+
+STR_FULL_NAME_DF4            :{BLACK}Full Name: {GOLD}Dongfeng 4 Diesel Locomotive
+STR_FULL_NAME_DF11G          :{BLACK}Full Name: {BLUE}Dongfeng 11G {WHITE}Diesel Locomotive
+STR_FULL_NAME_HXD3C          :{BLACK}Full Name: {GOLD}Hexie/Harmony 3C Electric Locomotive
+STR_FULL_NAME_HXD3D          :{BLACK}Full Name: {GOLD}Hexie/Harmony 3D Electric Locomotive
+
+STR_DESC_6                          :{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}
 STR_DESC_5                          :{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}
 STR_DESC_4                          :{STRING}{}{STRING}{}{STRING}{}{STRING}
 STR_DESC_3                          :{STRING}{}{STRING}{}{STRING}
@@ -102,12 +141,13 @@ STR_DF4_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GREEN}Green {G
 STR_22_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: Ordinary {GREEN}Green {GOLD}Livery, Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery (unfinished)
 STR_22B_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: Ordinary {GREEN}Green {GOLD}Livery
 STR_25B_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: Ordinary {GREEN}Green {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_25G_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_25G_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_G60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GRAY}Grey {GOLD}with Random-Colour Stripes (unfinished)
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
-STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished), temporarily using P60 model
+STR_P60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 
 STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}Only Guangzhou-Kowloon Sub-Livery available so far
 
@@ -130,9 +170,12 @@ STR_ORIGINAL            :{GOLD} - Original Livery
 STR_ORANGE              :{ORANGE} - Orange Livery
 STR_GREEN               :{GREEN} - Green Livery
 
-STR_YW22_BUILD_YEAR     : - According to build year
+STR_BUILD_YEAR          : - According to build year
 STR_YW22_ORIGINAL       : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240
 STR_YW22_1966           : - 1966 Design - Capacity 60, Comfort 288
+STR_RED_WHITE           : - {RED}Red {BLACK}and {WHITE}White
+STR_JINWEN              : - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLACK}Company
+STR_GAOZU_GREEN         : - {DKGREEN}"Gaozu Green" {BLACK}(unfinished)
 
 STR_COMFORT_144         :{BLACK}Comfort: {GOLD}144
 STR_COMFORT_160         :{BLACK}Comfort: {GOLD}160
@@ -157,7 +200,7 @@ STR_COMFORT_240_CAFE    :{BLACK}Comfort: {GOLD}240 {BLACK}, but at least 300 in 
 
 STR_DECAY_185           :{BLACK}Cargo Age Period Factor: {GOLD}185
 STR_DECAY_200           :{BLACK}Cargo Age Period Factor: {GOLD}200
-STR_DECAY_BOXCAR        :{BLACK}Cargo Age Period Factor: {GOLD}185, Passengers 100, Livestock 560
+STR_DECAY_BOXCAR        :{BLACK}Cargo Age Period Factor: {GOLD}185, Passengers 80, Livestock 560
 
 STR_CAFE_EFFECT                     :{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Halves Running Costs of Non-Commuter Passenger Cars except Restaurant Cars, and Increases Cargo Age Period by 1/4
 STR_AIR_CONDITIONER_EFFECT          :{BLACK}Air Conditioner Effect: {GOLD}Attaching Air Conditioner Generator Car Increases Cargo Age Period of Most Passenger Cars Hauled by Locomotives without Electricity Supply

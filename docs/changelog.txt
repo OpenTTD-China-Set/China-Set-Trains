@@ -1,5 +1,53 @@
 China Set: Trains Changelog
 =========================
+0.1.0.124 (29/12/2023)
+--------------------
+Fix #21: Push-Pull functionality
+
+0.1.0.123 (29/12/2023)
+--------------------
+Add: P60
+Add: Sprites to remind "too many MU wagons"
+Feature: Push-Pull experiment of DF11G "Splitting Pig" and CRH5A
+Change: Sprites of P62 changed to its own MagicaVoxel model output
+Change: Adjustment of all MagicaVoxel sprites
+
+0.1.0.122 (27/12/2023)
+--------------------
+Change: Adjustments of all MagicaVoxel sprites
+
+0.1.0.121 (27/12/2023)
+--------------------
+Change: Sprites of DF4 (Freight Type) changed to MagicaVoxel output
+Change: Adjustments of all MagicaVoxel sprites
+
+0.1.0.120 (26/12/2023)
+--------------------
+Change: Adjustments of all MagicaVoxel sprites
+
+0.1.0.119 (26/12/2023)
+--------------------
+Change: Sprites of CRH5A changed to MagicaVoxel output
+Change: Adjustments of all MagicaVoxel sprites
+
+0.1.0.118 (26/12/2023)
+--------------------
+Add: 25G Jinhua-Wenzhou Railway Company Sprites
+Change: Adjustments of all MagicaVoxel sprites
+Change: Pantograph rise of HXD3C and HXD3D
+Change: Sprites of MU Wagons changed to MagicaVoxel output of CRH5-M in purchase list
+
+0.1.0.114 (25/12/2023)
+--------------------
+Change: Sprites of HXD3C and HXD3D to MagicaVoxel output
+Change: Exclusive sprites for RW22B
+
+0.1.0.113 (25/12/2023)
+--------------------
+Change: Makefile.dist mechanics
+Change: Lower the comfort of "Peng Dai Ke" to 80
+Fix #20: CR400BF head seat display in simplified_chinese.lng
+
 0.1.0.112 (24/12/2023)
 --------------------
 GitHub push, but no release

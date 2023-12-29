@@ -39,6 +39,7 @@ sort (FEAT_TRAINS, [
     xl25t_sspe,
     kd25g,
     kd25k,
+    p60,
     p62,
     c64,
     g60,

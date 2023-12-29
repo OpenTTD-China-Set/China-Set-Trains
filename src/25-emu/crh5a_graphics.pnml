@@ -7,7 +7,7 @@ spriteset (spriteset_crh5a_purchase_original) {
     template_purchase_empty ()
 }
 alternative_sprites(spriteset_crh5a_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("25-emu", "crh5a-c")
+    template_purchase1 ("25-emu", "crh5-mc")
 }
 
 // Vehicle
@@ -26,21 +26,54 @@ spriteset (spriteset_crh5a_middle_tp) {
 spriteset (spriteset_crh5a_cab) {
     template_empty ()
 }
+spriteset (spriteset_crh5a_middle_m_reversed) {
+    template_empty ()
+}
+spriteset (spriteset_crh5a_middle_t_reversed) {
+    template_empty ()
+}
+spriteset (spriteset_crh5a_middle_tp_reversed) {
+    template_empty ()
+}
 
 alternative_sprites(spriteset_crh5a_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_12_standard ("25-emu", "crh5a-c")
+    template_standard ("25-emu", "crh5-mc")
 }
 alternative_sprites (spriteset_crh5a_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_12_standard ("25-emu", "crh5a-m")
+    template_standard ("25-emu", "crh5-m")
 }
 alternative_sprites (spriteset_crh5a_middle_t, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_12_standard ("25-emu", "crh5a-t")
+    template_standard ("25-emu", "crh5-tp") // NON-RISING PANTO SPRITES UNFINISHED
 }
 alternative_sprites (spriteset_crh5a_middle_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_12_standard ("25-emu", "crh5a-tp")
+    template_standard ("25-emu", "crh5-tp")
 }
 alternative_sprites (spriteset_crh5a_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_12_standard ("25-emu", "crh5a-ce")
+    template_reversed ("25-emu", "crh5-mc")
+}
+alternative_sprites (spriteset_crh5a_middle_m_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh5-m")
+}
+alternative_sprites (spriteset_crh5a_middle_t_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh5-tp") // NON-RISING PANTO SPRITES UNFINISHED
+}
+alternative_sprites (spriteset_crh5a_middle_tp_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh5-tp")
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh5a_middle_m_pushpull, vehicle_is_reversed) {
+    1: spriteset_crh5a_middle_m_reversed;
+    spriteset_crh5a_middle_m;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh5a_middle_t_pushpull, vehicle_is_reversed) {
+    1: spriteset_crh5a_middle_t_reversed;
+    spriteset_crh5a_middle_t;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh5a_middle_tp_pushpull, vehicle_is_reversed) {
+    1: spriteset_crh5a_middle_tp_reversed;
+    spriteset_crh5a_middle_tp;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_articulated_part, extra_callback_info1) {
@@ -68,54 +101,65 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_4_middle_graphics, position_in_consist) 
     empty_sprites;
 }
 
+switch (FEAT_TRAINS, SELF, switch_crh5a_4_middle_graphics_reversed, position_in_consist) {
+    4: spriteset_crh5a_middle_tp_reversed;
+    7: spriteset_crh5a_middle_m_reversed;
+    empty_sprites;
+}
+
 switch (FEAT_TRAINS, SELF, switch_crh5a_8_middle_graphics, position_in_consist) {
-    4: spriteset_crh5a_middle_m;
-    7: spriteset_crh5a_middle_t; //This panto does not rise
-    10: spriteset_crh5a_middle_m;
-    13: spriteset_crh5a_middle_m; //Trailer without panto looks the same as motorised car
-    16: spriteset_crh5a_middle_tp; //ONLY THIS PANTO RISES
-    19: spriteset_crh5a_middle_m;
+    4: switch_crh5a_middle_m_pushpull;
+    7: switch_crh5a_middle_tp_pushpull; //THIS PANTO RISES
+    10: switch_crh5a_middle_m_pushpull;
+    13: switch_crh5a_middle_m_pushpull; //Trailer without panto looks the same as motorised car
+    16: switch_crh5a_middle_tp_pushpull; //THIS PANTO RISES
+    19: switch_crh5a_middle_m_pushpull;
     empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_12_middle_graphics, position_in_consist) {
-    4: spriteset_crh5a_middle_m;
-    7: spriteset_crh5a_middle_t; //This panto does not rise
-    10: spriteset_crh5a_middle_m;
-    13: spriteset_crh5a_middle_tp; //ONLY THIS PANTO RISES
-    16: spriteset_crh5a_middle_m;
-    19: spriteset_crh5a_middle_m; //Trailer without panto looks the same as motorised car
-    22: spriteset_crh5a_middle_t; //This panto does not rise
-    25: spriteset_crh5a_middle_m;
-    28: spriteset_crh5a_middle_t; //This panto does not rise
-    31: spriteset_crh5a_middle_m;
+    4: switch_crh5a_middle_m_pushpull;
+    7: switch_crh5a_middle_t_pushpull; //This panto does not rise
+    10: switch_crh5a_middle_m_pushpull;
+    13: switch_crh5a_middle_tp_pushpull; //THIS PANTO RISES
+    16: switch_crh5a_middle_m_pushpull;
+    19: switch_crh5a_middle_m_pushpull; //Trailer without panto looks the same as motorised car
+    22: switch_crh5a_middle_tp_pushpull; //THIS PANTO RISES
+    25: switch_crh5a_middle_m_pushpull;
+    28: switch_crh5a_middle_t_pushpull; //This panto does not rise
+    31: switch_crh5a_middle_m_pushpull;
     empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_16_middle_graphics, position_in_consist) {
-    4: spriteset_crh5a_middle_m;
-    7: spriteset_crh5a_middle_t; //This panto does not rise
-    10: spriteset_crh5a_middle_m;
-    13: spriteset_crh5a_middle_m; //Trailer without panto looks the same as motorised car
-    16: spriteset_crh5a_middle_tp; //ONLY THIS PANTO RISES
-    19: spriteset_crh5a_middle_m;
-    22: spriteset_crh5a_middle_m;
-    25: spriteset_crh5a_middle_m;
-    28: spriteset_crh5a_middle_m;
-    31: spriteset_crh5a_middle_t; //This panto does not rise
-    34: spriteset_crh5a_middle_m;
-    37: spriteset_crh5a_middle_m; //Trailer without panto looks the same as motorised car
-    40: spriteset_crh5a_middle_t; //This panto does not rise
-    43: spriteset_crh5a_middle_m;
+    4: switch_crh5a_middle_m_pushpull;
+    7: switch_crh5a_middle_t_pushpull; //This panto does not rise
+    10: switch_crh5a_middle_m_pushpull;
+    13: switch_crh5a_middle_m_pushpull; //Trailer without panto looks the same as motorised car
+    16: switch_crh5a_middle_tp_pushpull; //THIS PANTO RISES
+    19: switch_crh5a_middle_m_pushpull;
+    22: switch_crh5a_middle_m_pushpull;
+    25: switch_crh5a_middle_m_pushpull;
+    28: switch_crh5a_middle_m_pushpull;
+    31: switch_crh5a_middle_tp_pushpull; //THIS PANTO RISES
+    34: switch_crh5a_middle_m_pushpull;
+    37: switch_crh5a_middle_m_pushpull; //Trailer without panto looks the same as motorised car
+    40: switch_crh5a_middle_t_pushpull; //This panto does not rise
+    43: switch_crh5a_middle_m_pushpull;
     empty_sprites;
 }
 
+switch (FEAT_TRAINS, SELF, switch_crh5a_4_middle_graphics_pushpull, vehicle_is_reversed) {
+    1: switch_crh5a_4_middle_graphics_reversed;
+    switch_crh5a_4_middle_graphics;
+}
+
 switch (FEAT_TRAINS, SELF, switch_crh5a_middle_graphics, num_vehs_in_consist) {
-    1..12: switch_crh5a_4_middle_graphics;
+    1..12: switch_crh5a_4_middle_graphics_pushpull;
     13..24: switch_crh5a_8_middle_graphics;
     25..36: switch_crh5a_12_middle_graphics;
     37..48: switch_crh5a_16_middle_graphics;
-    return string(STR_MUST_BE_4_8_12_16_CARS);
+    too_many_graphics_12;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_cab_graphics, position_in_articulated_veh % 3) {

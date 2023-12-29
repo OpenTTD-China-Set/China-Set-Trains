@@ -3,19 +3,19 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_zemuw_purchase_original) {
+spriteset (spriteset_crhmuw_purchase_original) {
     template_purchase_empty ()
 }
-alternative_sprites(spriteset_zemuw_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("unit-wagons-rail", "25dt-cr200j")
+alternative_sprites(spriteset_crhmuw_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase1 ("unit-wagons-rail", "crh5-m")
 }
 
 // Vehicle
-spriteset (spriteset_zemuw_original) {
+spriteset (spriteset_crhmuw_original) {
     template_empty ()
 }
-alternative_sprites(spriteset_zemuw_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_12_standard ("unit-wagons-rail", "25dt-cr200j")
+alternative_sprites(spriteset_crhmuw_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("unit-wagons-rail", "crh5-m")
 }
 
 switch (FEAT_TRAINS, SELF, switch_zemuw_articulated_part, extra_callback_info1) {
@@ -23,8 +23,8 @@ switch (FEAT_TRAINS, SELF, switch_zemuw_articulated_part, extra_callback_info1) 
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_zemuw_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_zemuw_original;
+switch (FEAT_TRAINS, SELF, switch_crhmuw_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_crhmuw_original;
     empty_sprites;   
 }
 

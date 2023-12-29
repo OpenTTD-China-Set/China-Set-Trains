@@ -33,5 +33,5 @@ switch (FEAT_TRAINS, SELF, switch_kd25g_capacity, position_in_articulated_veh % 
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25g_additional_text, param_cargo_decay) {
-    return string(STR_DESC_2, string(STR_25G_LIVERY_AVAILABILITY), string(STR_AIR_CONDITIONER_EFFECT));
+    return string(STR_DESC_4, string(STR_FULL_NAME_KD25G), string(STR_25G_LIVERY_AVAILABILITY), string(STR_AIR_CONDITIONER_EFFECT));
 }

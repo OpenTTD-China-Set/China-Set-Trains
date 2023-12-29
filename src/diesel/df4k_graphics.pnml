@@ -3,31 +3,31 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_df4k_purchase_green) {
+spriteset (spriteset_df4_purchase_green) {
     template_purchase_empty ()
 }
-spriteset (spriteset_df4k_purchase_orange) {
+spriteset (spriteset_df4_purchase_orange) {
     template_purchase_empty ()
 }
-alternative_sprites(spriteset_df4k_purchase_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("diesel", "df4")
+alternative_sprites(spriteset_df4_purchase_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase1 ("diesel", "df4")
 }
-alternative_sprites(spriteset_df4k_purchase_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+alternative_sprites(spriteset_df4_purchase_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("diesel", "df4-orange")
 }
 
 
 // Vehicle
-spriteset (spriteset_df4k_green) {
+spriteset (spriteset_df4_green) {
     template_empty ()
 }
-spriteset (spriteset_df4k_orange) {
+spriteset (spriteset_df4_orange) {
     template_empty ()
 }
-alternative_sprites(spriteset_df4k_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_10_standard ("diesel", "df4")
+alternative_sprites(spriteset_df4_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4")
 }
-alternative_sprites(spriteset_df4k_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+alternative_sprites(spriteset_df4_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_10_standard ("diesel", "df4-orange")
 }
 
@@ -37,18 +37,19 @@ switch (FEAT_TRAINS, SELF, switch_df4k_articulated_part, extra_callback_info1) {
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_df4k_subtype, cargo_subtype) {
-    1: spriteset_df4k_green;
-    spriteset_df4k_orange;
+switch (FEAT_TRAINS, SELF, switch_df4k_graphics_subtype, cargo_subtype) {
+    1: spriteset_df4_green;
+    spriteset_df4_orange;
 }
 
-switch (FEAT_TRAINS, SELF, switch_df4k_subtype_text, cargo_subtype) {
+switch (FEAT_TRAINS, SELF, switch_df4k_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORANGE);
     1: return string(STR_GREEN);
-    return string(STR_ORANGE);
+    return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df4k_graphics, position_in_articulated_veh % 3) {
-    1: switch_df4k_subtype;
+    1: switch_df4k_graphics_subtype;
     empty_sprites;   
 }
 
@@ -57,5 +58,5 @@ switch (FEAT_TRAINS, SELF, switch_df4k_capacity, position_in_articulated_veh % 3
 }
 
 switch (FEAT_TRAINS, SELF, switch_df4k_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF4_LIVERY_AVAILABILITY), string(STR_DF4_NICKNAME), string(STR_RELIABILITY_32));
+    return string(STR_DESC_5, string(STR_FULL_NAME_DF4), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF4_LIVERY_AVAILABILITY), string(STR_DF4_NICKNAME), string(STR_RELIABILITY_32));
 }

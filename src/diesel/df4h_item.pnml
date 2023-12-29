@@ -40,12 +40,12 @@ item (FEAT_TRAINS, df4h) {
     graphics {
         // Menu
         additional_text:                switch_df4h_additional_text;
-        cargo_subtype_text:             switch_df4h_subtype_text;
+        cargo_subtype_text:             switch_df4h_cargo_subtype;
         can_attach_wagon:               locowagon;
 
         // Graphics
         default:                        switch_df4h_graphics;
-        purchase:                       spriteset_df4h_purchase_green;
+        purchase:                       spriteset_df4_purchase_green;
         articulated_part:               switch_df4h_articulated_part;
 
         // Stats

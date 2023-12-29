@@ -34,48 +34,49 @@ STR_PARAM_VERY_LONG         :很长
 
 STR_USED_WITH_DYNAMIC_ENGINES       :请切换至控制台模式, 键入 "setting dynamic_engines 1", 否则您无法游玩中国包.
 
-STR_NAME_YZ22           :YZ22 (22型硬座客车)
-STR_NAME_RZ22           :RZ22 (22型软座客车)
-STR_NAME_YW22           :YW22 (22型硬卧客车)
-STR_NAME_RW22           :RW22 (22型软卧客车)
-STR_NAME_YZ22B          :YZ22B (22B型硬座客车)
-STR_NAME_YW22B          :YW22B (22B型硬卧客车)
-STR_NAME_RW22B          :RW22B (22B型软卧客车)
-STR_NAME_YZ25B          :YZ25B (25米标准型硬座客车)
-STR_NAME_RZ25B          :RZ25B (25米标准型软座客车)
-STR_NAME_YW25B          :YW25B (25米标准型硬卧客车)
-STR_NAME_RW25B          :RW25B (25米标准型软卧客车)
-STR_NAME_YZ25G          :YZ25G (25米改进型硬座客车)
-STR_NAME_RZ25G          :RZ25G (25米改进型软座客车)
-STR_NAME_YW25G          :YW25G (25米改进型硬卧客车)
-STR_NAME_RW25G          :RW25G (25米改进型软卧客车)
-STR_NAME_CA25G          :CA25G (25米改进型餐车)
-STR_NAME_YZ25K          :YZ25K (25米快速型硬座客车)
-STR_NAME_RZ25K          :RZ25K (25米快速型软座客车)
-STR_NAME_YW25K          :YW25K (25米快速型硬卧客车)
-STR_NAME_RW25K          :RW25K (25米快速型软卧客车)
-STR_NAME_CA25K          :CA25K (25米快速型餐车)
-STR_NAME_YZ25T          :YZ25T (25米提速型硬座客车)
-STR_NAME_RZ25T          :RZ25T (25米提速型软座客车)
-STR_NAME_YW25T          :YW25T (25米提速型硬卧客车)
-STR_NAME_RW25T          :RW25T (25米提速型软卧客车)
-STR_NAME_CA25T          :CA25T (25米提速型餐车)
-STR_NAME_XL25G          :XL25G (25米改进型行李车)
-STR_NAME_XL25K          :XL25K (25米快速型行李车)
-STR_NAME_XL25T          :XL25T (25米提速型行李车)
-STR_NAME_XL25T_SSPE     :XL25T (25米提速型行李车) (SSPE)
-STR_NAME_KD25G          :KD25G (25米改进型空调发电车)
-STR_NAME_KD25K          :KD25K (25米快速型空调发电车)
+STR_NAME_YZ22           :YZ22 (客车)
+STR_NAME_RZ22           :RZ22 (客车)
+STR_NAME_YW22           :YW22 (客车)
+STR_NAME_RW22           :RW22 (客车)
+STR_NAME_YZ22B          :YZ22B (客车)
+STR_NAME_YW22B          :YW22B (客车)
+STR_NAME_RW22B          :RW22B (客车)
+STR_NAME_YZ25B          :YZ25B (客车)
+STR_NAME_RZ25B          :RZ25B (客车)
+STR_NAME_YW25B          :YW25B (客车)
+STR_NAME_RW25B          :RW25B (客车)
+STR_NAME_YZ25G          :YZ25G (客车)
+STR_NAME_RZ25G          :RZ25G (客车)
+STR_NAME_YW25G          :YW25G (客车)
+STR_NAME_RW25G          :RW25G (客车)
+STR_NAME_CA25G          :CA25G (餐车)
+STR_NAME_YZ25K          :YZ25K (客车)
+STR_NAME_RZ25K          :RZ25K (客车)
+STR_NAME_YW25K          :YW25K (客车)
+STR_NAME_RW25K          :RW25K (客车)
+STR_NAME_CA25K          :CA25K (餐车)
+STR_NAME_YZ25T          :YZ25T (客车)
+STR_NAME_RZ25T          :RZ25T (客车)
+STR_NAME_YW25T          :YW25T (客车)
+STR_NAME_RW25T          :RW25T (客车)
+STR_NAME_CA25T          :CA25T (餐车)
+STR_NAME_XL25G          :XL25G (行李车)
+STR_NAME_XL25K          :XL25K (行李车)
+STR_NAME_XL25T          :XL25T (行李车)
+STR_NAME_XL25T_SSPE     :XL25T-SSPE (行李车)
+STR_NAME_KD25G          :KD25G (空调发电车)
+STR_NAME_KD25K          :KD25K (空调发电车)
 
 STR_NAME_C64            :C64 (敞车)
+STR_NAME_P60            :P60 (棚车)
 STR_NAME_P62            :P62 (棚车)
 STR_NAME_G60            :G60 (罐车)
 
-STR_NAME_DF4K           :DF4 (东风4型内燃机车) (客运型)
-STR_NAME_DF4H           :DF4 (东风4型内燃机车) (货运型)
-STR_NAME_DF11G          :DF11G (东风11G型内燃机车)
-STR_NAME_HXD3C          :HXD3C (和谐3C型电力机车)
-STR_NAME_HXD3D          :HXD3D (和谐3D型电力机车)
+STR_NAME_DF4K           :DF4 (内燃) (客运型)
+STR_NAME_DF4H           :DF4 (内燃) (货运型)
+STR_NAME_DF11G          :DF11G (内燃)
+STR_NAME_HXD3C          :HXD3C (电力)
+STR_NAME_HXD3D          :HXD3D (电力)
 
 STR_NAME_CR200J1        :CR200J1 (电力动车)
 STR_NAME_CRH5A          :CRH5A (电力动车)
@@ -85,11 +86,48 @@ STR_NAME_ZEMUW          :动车组二等座车厢
 STR_NAME_ZYMUW          :动车组一等座车厢
 STR_NAME_ZTMUW          :动车组特等座车厢
 STR_NAME_ZSMUW          :动车组商务座车厢
-STR_NAME_SWMUW          :动车组商务座车厢（复兴号智能动车组标准）
+STR_NAME_SWMUW          :动车组商务座车厢 (复兴号智能动车组标准)
 STR_NAME_ZECMUW         :动车组二等座/餐车合造车厢
 STR_NAME_WEMUW          :动车组二等卧铺车厢
 STR_NAME_WYMUW          :动车组一等卧铺车厢
 STR_NAME_WGMUW          :动车组高级软卧车厢
+
+STR_FULL_NAME_YZ22           :{BLACK}全称：{GOLD}22型硬座客车
+STR_FULL_NAME_RZ22           :{BLACK}全称：{GOLD}22型软座客车
+STR_FULL_NAME_YW22           :{BLACK}全称：{GOLD}22型硬卧客车
+STR_FULL_NAME_RW22           :{BLACK}全称：{GOLD}22型软卧客车
+STR_FULL_NAME_YZ22B          :{BLACK}全称：{GOLD}22B型硬座客车
+STR_FULL_NAME_YW22B          :{BLACK}全称：{GOLD}22B型硬卧客车
+STR_FULL_NAME_RW22B          :{BLACK}全称：{GOLD}22B型软卧客车
+STR_FULL_NAME_YZ25B          :{BLACK}全称：{GOLD}25米标准型硬座客车
+STR_FULL_NAME_RZ25B          :{BLACK}全称：{GOLD}25米标准型软座客车
+STR_FULL_NAME_YW25B          :{BLACK}全称：{GOLD}25米标准型硬卧客车
+STR_FULL_NAME_RW25B          :{BLACK}全称：{GOLD}25米标准型软卧客车
+STR_FULL_NAME_YZ25G          :{BLACK}全称：{GOLD}25米改进型硬座客车
+STR_FULL_NAME_RZ25G          :{BLACK}全称：{GOLD}25米改进型软座客车
+STR_FULL_NAME_YW25G          :{BLACK}全称：{GOLD}25米改进型硬卧客车
+STR_FULL_NAME_RW25G          :{BLACK}全称：{GOLD}25米改进型软卧客车
+STR_FULL_NAME_CA25G          :{BLACK}全称：{GOLD}25米改进型餐车
+STR_FULL_NAME_YZ25K          :{BLACK}全称：{GOLD}25米快速型硬座客车
+STR_FULL_NAME_RZ25K          :{BLACK}全称：{GOLD}25米快速型软座客车
+STR_FULL_NAME_YW25K          :{BLACK}全称：{GOLD}25米快速型硬卧客车
+STR_FULL_NAME_RW25K          :{BLACK}全称：{GOLD}25米快速型软卧客车
+STR_FULL_NAME_CA25K          :{BLACK}全称：{GOLD}25米快速型餐车
+STR_FULL_NAME_YZ25T          :{BLACK}全称：{GOLD}25米提速型硬座客车
+STR_FULL_NAME_RZ25T          :{BLACK}全称：{GOLD}25米提速型软座客车
+STR_FULL_NAME_YW25T          :{BLACK}全称：{GOLD}25米提速型硬卧客车
+STR_FULL_NAME_RW25T          :{BLACK}全称：{GOLD}25米提速型软卧客车
+STR_FULL_NAME_CA25T          :{BLACK}全称：{GOLD}25米提速型餐车
+STR_FULL_NAME_XL25G          :{BLACK}全称：{GOLD}25米改进型行李车
+STR_FULL_NAME_XL25K          :{BLACK}全称：{GOLD}25米快速型行李车
+STR_FULL_NAME_XL25T          :{BLACK}全称：{GOLD}25米提速型行李车
+STR_FULL_NAME_KD25G          :{BLACK}全称：{GOLD}25米改进型空调发电车
+STR_FULL_NAME_KD25K          :{BLACK}全称：{GOLD}25米快速型空调发电车
+
+STR_FULL_NAME_DF4            :{BLACK}全称：{GOLD}东风4型内燃机车
+STR_FULL_NAME_DF11G          :{BLACK}全称：{BLUE}东风11G型{WHITE}内燃机车
+STR_FULL_NAME_HXD3C          :{BLACK}全称：{GOLD}和谐3C型电力机车
+STR_FULL_NAME_HXD3D          :{BLACK}全称：{GOLD}和谐3D型电力机车
 
 STR_XL25T_SSPE_DESCRIPTION          :{BLACK}新时速运递公司使用的XL25T版本。
 
@@ -97,12 +135,13 @@ STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿�
 STR_22_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装 (未完成)
 STR_22B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装
 STR_25B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
-STR_25G_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_25G_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}，“高阻绿”{GOLD}涂装 (未完成)
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_G60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带 (未完成)
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
-STR_P62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)，目前暂时使用P60模型
+STR_P60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
+STR_P62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 
 STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}目前仅有广九铁路子涂装
 
@@ -124,9 +163,12 @@ STR_ORIGINAL            :{GOLD} - 原版涂装
 STR_ORANGE              :{ORANGE} - 橘色涂装
 STR_GREEN               :{GREEN} - 绿色涂装
 
-STR_YW22_BUILD_YEAR     : - 根据建造年份选择设计
+STR_BUILD_YEAR          : - 根据建造年份选择设计
 STR_YW22_ORIGINAL       : - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
 STR_YW22_1966           : - 1966年新设计 - 定员60，舒适度288
+STR_RED_WHITE           : - {RED}红{WHITE}白{BLACK}相间
+STR_JINWEN              : - {WHITE}金{RED}温{BLUE}铁{WHITE}路{BLACK}公司
+STR_GAOZU_GREEN         : - {DKGREEN}"高阻绿" {BLACK}(未完成)
 
 STR_COMFORT_144         :{BLACK}舒适度：{GOLD}144
 STR_COMFORT_160         :{BLACK}舒适度：{GOLD}160
@@ -151,7 +193,7 @@ STR_COMFORT_240_CAFE    :{BLACK}舒适度：{GOLD}240 {BLACK}，但由于餐车�
 
 STR_DECAY_185           :{BLACK}货物贬值周期因子：{GOLD}185
 STR_DECAY_200           :{BLACK}货物贬值周期因子：{GOLD}200
-STR_DECAY_BOXCAR        :{BLACK}货物贬值周期因子：{GOLD}185，棚代客100，装载活禽/畜560
+STR_DECAY_BOXCAR        :{BLACK}货物贬值周期因子：{GOLD}185，棚代客80，装载活禽/畜560
 
 STR_CAFE_EFFECT                     :{BLACK}餐车的作用：{GOLD}加挂餐车使除餐车外的所有非通勤客车运行费用减半，货物贬值周期增加1/4
 STR_AIR_CONDITIONER_EFFECT          :{BLACK}空调发电车的作用：{GOLD}加挂空调发电车可增加大部分非机供机车牵引客车的货物贬值周期
@@ -164,15 +206,15 @@ STR_DESC_PENGDAIKE                  :{BLACK}棚代客：从20世纪80年代至20
 STR_ATTACH_ALL_CRH_CR               :{BLACK}匹配的动车组：{GOLD}所有和谐/复兴号动车
 STR_ATTACH_SLEEPER_MU               :{BLACK}匹配的动车组：{GOLD}所有提供卧铺的和谐/复兴号动车
 STR_ATTACH_CR200J                   :{BLACK}匹配的动车组：{GOLD}CR200J系列动车
-STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座（复兴号智能动车组标准）、二等/餐车合造、二等卧、一等卧、高级软卧
-STR_CRH_CAN_ATTACH_WAGON            :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座（复兴号智能动车组标准）、二等/餐车合造
+STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
+STR_CRH_CAN_ATTACH_WAGON            :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
 
 STR_DF11G_CONSIST                   :{BLACK}构成：{GOLD}两节重联 (普通)，或一节在头部提供动力，另一节在尾部供电 (“拆猪”，最高速度 120 km/h, 功率 4133 公制马力)
 STR_CRH5A_CONSIST                   :{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车 1495 公制马力
 STR_CR400BF_CONSIST                 :{BLACK}构成：{GOLD}5-17节； n 节构成中动力车节数为 int(n/2) ，拖车节数为 int((n+1)/2)
 
 STR_CRH5A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
-STR_CR400BF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等/商务座合造
+STR_CR400BF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}机供：{GOLD}是
 STR_ELECTRICITY_SUPPLY_NO           :{BLACK}机供：{RED}否

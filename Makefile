@@ -7,8 +7,8 @@
 
 SHELL := /bin/bash
 
--include Makefile.config
--include Makefile.local
+-include ./Makefile.config
+-include ./Makefile.local
 
 ##################################################################
 #
@@ -76,10 +76,10 @@ GENERATE_LNG  ?= lng
 # target 'all' must be first target
 all: $(GENERATE_GRF) $(GENERATE_DOC) bundle_tar
 
--include Makefile.in
+-include ./Makefile.in
 
 # general definitions (no rules!)
--include Makefile.dist
+-include ./Makefile.dist
 .PHONY: all clean distclean doc bundle bundle_bsrc bundle_bzip bundle_gsrc bundle_src bundle_tar bundle_xsrc bundle_xz bundle_zip bundle_zsrc check
 
 # We want to disable the default rules. It's not c/c++ anyway

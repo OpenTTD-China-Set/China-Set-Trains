@@ -4,6 +4,15 @@ DF11G
 By John Franklin
 Originated from BR Class 43 "IC 125" by Timberwolf
 
+DF4
+By Mikhail and Babel
+
+HXD3C/D
+By Babel
+
+CRH5A
+By Babel
+
 25T
 By John Franklin and Babel
 Originated from Pullman Coach by Timberwolf
@@ -20,7 +29,7 @@ CA25T
 By John Franklin and Babel
 Variant of 25T
 
-22, 22B, KD25G, KD25K, XL25G, XL25K, XL25T
+22, 22B, RW22B, KD25G, KD25K, XL25G, XL25K, XL25T
 By Babel
 
 25B, RW25B
@@ -31,6 +40,9 @@ By Babel and John Franklin
 
 CA25G, CA25K
 By John Franklin
+
+25G-Jinwen
+By wuwu (kaitokiwa)
 
 C64
 By Babel and John Franklin

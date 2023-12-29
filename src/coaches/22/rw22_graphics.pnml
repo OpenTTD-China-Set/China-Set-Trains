@@ -34,5 +34,5 @@ switch (FEAT_TRAINS, SELF, switch_rw22_capacity, position_in_articulated_veh % 3
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw22_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_384), string(STR_NO_AIR_CONDITIONER));
+    return string(STR_DESC_4, string(STR_FULL_NAME_RW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_384), string(STR_NO_AIR_CONDITIONER));
 }
