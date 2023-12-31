@@ -7,7 +7,7 @@ spriteset (spriteset_crhmuw_purchase_original) {
     template_purchase_empty ()
 }
 alternative_sprites(spriteset_crhmuw_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase1 ("unit-wagons-rail", "crh5-m")
+    template_purchase ("unit-wagons-rail", "crh5-m")
 }
 
 // Vehicle

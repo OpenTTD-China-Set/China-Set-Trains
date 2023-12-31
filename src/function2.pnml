@@ -4,7 +4,6 @@
 switch (FEAT_TRAINS, SELF, switch_crh_wagon_articulated_part, vehicle_type_id) {
     1024: switch_zemuw_articulated_part;
     1025: switch_zymuw_articulated_part;
-    1026: switch_ztmuw_articulated_part;
     1027: switch_zsmuw_articulated_part;
     1028: switch_swmuw_articulated_part;
     1035: switch_zecmuw_articulated_part;
@@ -14,7 +13,6 @@ switch (FEAT_TRAINS, SELF, switch_crh_wagon_articulated_part, vehicle_type_id) {
 switch (FEAT_TRAINS, SELF, switch_crh_wagon_cargo_decay, vehicle_type_id) {
     1024: return 12 * 5;
     1025: return 20 * 5;
-    1026: return 28 * 5;
     1027: return 32 * 5;
     1028: return 36 * 5;
     1035: return 12 * 5;
@@ -30,7 +28,6 @@ switch (FEAT_TRAINS, SELF, switch_crh_wagon_bitmask, vehicle_type_id) {
 switch (FEAT_TRAINS, SELF, switch_cr200j_wagon_articulated_part, vehicle_type_id) {
     1024: switch_zemuw_articulated_part;
     1025: switch_zymuw_articulated_part;
-    1026: switch_ztmuw_articulated_part;
     1027: switch_zsmuw_articulated_part;
     1028: switch_swmuw_articulated_part;
     1035: switch_zecmuw_articulated_part;
@@ -43,7 +40,6 @@ switch (FEAT_TRAINS, SELF, switch_cr200j_wagon_articulated_part, vehicle_type_id
 switch (FEAT_TRAINS, SELF, switch_cr200j_wagon_cargo_decay, vehicle_type_id) {
     1024: return 12 * 5;
     1025: return 20 * 5;
-    1026: return 28 * 5;
     1027: return 32 * 5;
     1028: return 36 * 5;
     1035: return 12 * 5;

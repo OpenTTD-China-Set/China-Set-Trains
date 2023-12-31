@@ -150,6 +150,7 @@ Graphics (see \docs\voxelsource.txt for details):
 - babel 
 - John Franklin
 - Mikhail
+- wuwu
 
 Code:
 - John Franklin, NML-based Coding

@@ -67,6 +67,7 @@ STR_NAME_XL25T_SSPE     :XL25T-SSPE (行李车)
 STR_NAME_KD25G          :KD25G (空调发电车)
 STR_NAME_KD25K          :KD25K (空调发电车)
 
+STR_NAME_C62            :C62 (敞车)
 STR_NAME_C64            :C64 (敞车)
 STR_NAME_P60            :P60 (棚车)
 STR_NAME_P62            :P62 (棚车)
@@ -75,16 +76,17 @@ STR_NAME_G60            :G60 (罐车)
 STR_NAME_DF4K           :DF4 (内燃) (客运型)
 STR_NAME_DF4H           :DF4 (内燃) (货运型)
 STR_NAME_DF11G          :DF11G (内燃)
+STR_NAME_HXD1B          :HXD1B (电力)
 STR_NAME_HXD3C          :HXD3C (电力)
 STR_NAME_HXD3D          :HXD3D (电力)
 
-STR_NAME_CR200J1        :CR200J1 (电力动车)
+STR_NAME_CR200JA        :CR200J-A (电力动车)
+STR_NAME_CR200JAL       :CR200J-A (长编组) (电力动车)
 STR_NAME_CRH5A          :CRH5A (电力动车)
 STR_NAME_CR400BF        :CR400BF (电力动车)
 
 STR_NAME_ZEMUW          :动车组二等座车厢
 STR_NAME_ZYMUW          :动车组一等座车厢
-STR_NAME_ZTMUW          :动车组特等座车厢
 STR_NAME_ZSMUW          :动车组商务座车厢
 STR_NAME_SWMUW          :动车组商务座车厢 (复兴号智能动车组标准)
 STR_NAME_ZECMUW         :动车组二等座/餐车合造车厢
@@ -126,6 +128,7 @@ STR_FULL_NAME_KD25K          :{BLACK}全称：{GOLD}25米快速型空调发电�
 
 STR_FULL_NAME_DF4            :{BLACK}全称：{GOLD}东风4型内燃机车
 STR_FULL_NAME_DF11G          :{BLACK}全称：{BLUE}东风11G型{WHITE}内燃机车
+STR_FULL_NAME_HXD1B          :{BLACK}全称：{GOLD}和谐1B型电力机车
 STR_FULL_NAME_HXD3C          :{BLACK}全称：{GOLD}和谐3C型电力机车
 STR_FULL_NAME_HXD3D          :{BLACK}全称：{GOLD}和谐3D型电力机车
 
@@ -139,6 +142,7 @@ STR_25G_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{RED}红{WHI
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_G60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带 (未完成)
+STR_C62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_P60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_P62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
@@ -147,6 +151,7 @@ STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}目前仅有广九铁路子涂装
 
 STR_DF4_NICKNAME                    :{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
 STR_DF11G_NICKNAME                  :{BLACK}昵称: {GOLD}猪
+STR_HXD1B_NICKNAME                  :{BLACK}昵称: {GOLD}河蟹
 STR_HXD3C_NICKNAME                  :{BLACK}昵称: {GOLD}电狒狒
 STR_HXD3D_NICKNAME                  :{BLACK}昵称: {GOLD}番茄
 STR_CR200J_NICKNAME                 :{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方), {GREEN}“垃圾桶”{GOLD}(民间)
@@ -184,7 +189,6 @@ STR_COMFORT_384_AC      :{BLACK}舒适度：{GOLD}384 {BLACK}，但由于空调�
 STR_COMFORT_240         :{BLACK}舒适度：{GOLD}240
 STR_COMFORT_400         :{BLACK}舒适度：{GOLD}400
 STR_COMFORT_480         :{BLACK}舒适度：{GOLD}480
-STR_COMFORT_560         :{BLACK}舒适度：{GOLD}560
 STR_COMFORT_640         :{BLACK}舒适度：{GOLD}640
 STR_COMFORT_720         :{BLACK}舒适度：{GOLD}720
 STR_COMFORT_800         :{BLACK}舒适度：{GOLD}800
@@ -206,8 +210,8 @@ STR_DESC_PENGDAIKE                  :{BLACK}棚代客：从20世纪80年代至20
 STR_ATTACH_ALL_CRH_CR               :{BLACK}匹配的动车组：{GOLD}所有和谐/复兴号动车
 STR_ATTACH_SLEEPER_MU               :{BLACK}匹配的动车组：{GOLD}所有提供卧铺的和谐/复兴号动车
 STR_ATTACH_CR200J                   :{BLACK}匹配的动车组：{GOLD}CR200J系列动车
-STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
-STR_CRH_CAN_ATTACH_WAGON            :{BLACK}匹配的车厢：{GOLD}二等座、一等座、特等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
+STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
+STR_CRH_CAN_ATTACH_WAGON            :{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
 
 STR_DF11G_CONSIST                   :{BLACK}构成：{GOLD}两节重联 (普通)，或一节在头部提供动力，另一节在尾部供电 (“拆猪”，最高速度 120 km/h, 功率 4133 公制马力)
 STR_CRH5A_CONSIST                   :{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车 1495 公制马力

@@ -7,7 +7,7 @@ spriteset (spriteset_df11g_purchase) {
     template_purchase_empty ()
 }
 alternative_sprites(spriteset_df11g_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase1 ("diesel", "df11g")
+    template_purchase ("diesel", "df11g")
 }
 
 
@@ -15,23 +15,11 @@ alternative_sprites(spriteset_df11g_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP)
 spriteset (spriteset_df11g_leaping) {
     template_empty ()
 }
-spriteset (spriteset_df11g_leaping_back) {
-    template_empty ()
-}
-spriteset (spriteset_df11g_leaping_reversed) {
-    template_empty ()
-}
 spriteset (spriteset_df11g_leaping_back_reversed) {
     template_empty ()
 }
 alternative_sprites(spriteset_df11g_leaping, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df11g")
-}
-alternative_sprites(spriteset_df11g_leaping_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df11gb")
-}
-alternative_sprites(spriteset_df11g_leaping_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("diesel", "df11gr")
 }
 alternative_sprites(spriteset_df11g_leaping_back_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("diesel", "df11gbr")
@@ -50,23 +38,13 @@ switch (FEAT_TRAINS, SELF, switch_df11g_graphics_joint, position_in_vehid_chain 
     empty_sprites;   
 }
 
-switch (FEAT_TRAINS, SELF, switch_df11g_graphics_front_pushpull, vehicle_is_reversed) {
-    1: spriteset_df11g_leaping_reversed;
-    spriteset_df11g_leaping;
-}
-
-switch (FEAT_TRAINS, SELF, switch_df11g_graphics_back_pushpull, vehicle_is_reversed) {
-    1: spriteset_df11g_leaping_back;
-    spriteset_df11g_leaping_back_reversed;
-}
-
 switch (FEAT_TRAINS, SELF, switch_df11g_graphics_front, position_in_articulated_veh % 3) {
-    1: switch_df11g_graphics_front_pushpull;
+    1: spriteset_df11g_leaping;
     empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df11g_graphics_split, position_in_consist_from_end) {
-    1: switch_df11g_graphics_back_pushpull;
+    1: spriteset_df11g_leaping_back_reversed;
     switch_df11g_graphics_front;
 }
 

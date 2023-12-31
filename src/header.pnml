@@ -99,7 +99,7 @@ if (ttd_platform != PLATFORM_OPENTTD) {
 }
 else {
     if (openttd_version < version_openttd(1, 4, 0, 26157)) {
-        //requires OpenTTD 1.2.0-RC1 or later since the introduction of dynamic_engines and cargo_age_period.
+        //requires OpenTTD 1.4.0-beta1 or later since the introduction of cargo_age_period and articulated vehicle position.
         error(FATAL, REQUIRES_OPENTTD, "1.4.0-beta1 / r26157");
     }
 }

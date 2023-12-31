@@ -7,7 +7,7 @@ spriteset (spriteset_crh5a_purchase_original) {
     template_purchase_empty ()
 }
 alternative_sprites(spriteset_crh5a_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase1 ("25-emu", "crh5-mc")
+    template_purchase ("25-emu", "crh5-mc")
 }
 
 // Vehicle
@@ -26,15 +26,6 @@ spriteset (spriteset_crh5a_middle_tp) {
 spriteset (spriteset_crh5a_cab) {
     template_empty ()
 }
-spriteset (spriteset_crh5a_middle_m_reversed) {
-    template_empty ()
-}
-spriteset (spriteset_crh5a_middle_t_reversed) {
-    template_empty ()
-}
-spriteset (spriteset_crh5a_middle_tp_reversed) {
-    template_empty ()
-}
 
 alternative_sprites(spriteset_crh5a_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh5-mc")
@@ -51,30 +42,6 @@ alternative_sprites (spriteset_crh5a_middle_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BP
 alternative_sprites (spriteset_crh5a_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh5-mc")
 }
-alternative_sprites (spriteset_crh5a_middle_m_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "crh5-m")
-}
-alternative_sprites (spriteset_crh5a_middle_t_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "crh5-tp") // NON-RISING PANTO SPRITES UNFINISHED
-}
-alternative_sprites (spriteset_crh5a_middle_tp_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "crh5-tp")
-}
-
-switch (FEAT_TRAINS, SELF, switch_crh5a_middle_m_pushpull, vehicle_is_reversed) {
-    1: spriteset_crh5a_middle_m_reversed;
-    spriteset_crh5a_middle_m;
-}
-
-switch (FEAT_TRAINS, SELF, switch_crh5a_middle_t_pushpull, vehicle_is_reversed) {
-    1: spriteset_crh5a_middle_t_reversed;
-    spriteset_crh5a_middle_t;
-}
-
-switch (FEAT_TRAINS, SELF, switch_crh5a_middle_tp_pushpull, vehicle_is_reversed) {
-    1: spriteset_crh5a_middle_tp_reversed;
-    spriteset_crh5a_middle_tp;
-}
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_articulated_part, extra_callback_info1) {
     1..2: return crh5a;
@@ -83,7 +50,7 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_articulated_part, extra_callback_info1) 
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_graphics, position_in_articulated_veh % 3) {
     1: spriteset_crh5a_front;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_head_capacity, position_in_articulated_veh % 3) {
@@ -101,61 +68,50 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_4_middle_graphics, position_in_consist) 
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh5a_4_middle_graphics_reversed, position_in_consist) {
-    4: spriteset_crh5a_middle_tp_reversed;
-    7: spriteset_crh5a_middle_m_reversed;
-    empty_sprites;
-}
-
 switch (FEAT_TRAINS, SELF, switch_crh5a_8_middle_graphics, position_in_consist) {
-    4: switch_crh5a_middle_m_pushpull;
-    7: switch_crh5a_middle_tp_pushpull; //THIS PANTO RISES
-    10: switch_crh5a_middle_m_pushpull;
-    13: switch_crh5a_middle_m_pushpull; //Trailer without panto looks the same as motorised car
-    16: switch_crh5a_middle_tp_pushpull; //THIS PANTO RISES
-    19: switch_crh5a_middle_m_pushpull;
+    4: spriteset_crh5a_middle_m;
+    7: spriteset_crh5a_middle_tp; //THIS PANTO RISES
+    10: spriteset_crh5a_middle_m;
+    13: spriteset_crh5a_middle_m; //Trailer without panto looks the same as motorised car
+    16: spriteset_crh5a_middle_tp; //THIS PANTO RISES
+    19: spriteset_crh5a_middle_m;
     empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_12_middle_graphics, position_in_consist) {
-    4: switch_crh5a_middle_m_pushpull;
-    7: switch_crh5a_middle_t_pushpull; //This panto does not rise
-    10: switch_crh5a_middle_m_pushpull;
-    13: switch_crh5a_middle_tp_pushpull; //THIS PANTO RISES
-    16: switch_crh5a_middle_m_pushpull;
-    19: switch_crh5a_middle_m_pushpull; //Trailer without panto looks the same as motorised car
-    22: switch_crh5a_middle_tp_pushpull; //THIS PANTO RISES
-    25: switch_crh5a_middle_m_pushpull;
-    28: switch_crh5a_middle_t_pushpull; //This panto does not rise
-    31: switch_crh5a_middle_m_pushpull;
+    4: spriteset_crh5a_middle_m;
+    7: spriteset_crh5a_middle_t; //This panto does not rise
+    10: spriteset_crh5a_middle_m;
+    13: spriteset_crh5a_middle_tp; //THIS PANTO RISES
+    16: spriteset_crh5a_middle_m;
+    19: spriteset_crh5a_middle_m; //Trailer without panto looks the same as motorised car
+    22: spriteset_crh5a_middle_tp; //THIS PANTO RISES
+    25: spriteset_crh5a_middle_m;
+    28: spriteset_crh5a_middle_t; //This panto does not rise
+    31: spriteset_crh5a_middle_m;
     empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_16_middle_graphics, position_in_consist) {
-    4: switch_crh5a_middle_m_pushpull;
-    7: switch_crh5a_middle_t_pushpull; //This panto does not rise
-    10: switch_crh5a_middle_m_pushpull;
-    13: switch_crh5a_middle_m_pushpull; //Trailer without panto looks the same as motorised car
-    16: switch_crh5a_middle_tp_pushpull; //THIS PANTO RISES
-    19: switch_crh5a_middle_m_pushpull;
-    22: switch_crh5a_middle_m_pushpull;
-    25: switch_crh5a_middle_m_pushpull;
-    28: switch_crh5a_middle_m_pushpull;
-    31: switch_crh5a_middle_tp_pushpull; //THIS PANTO RISES
-    34: switch_crh5a_middle_m_pushpull;
-    37: switch_crh5a_middle_m_pushpull; //Trailer without panto looks the same as motorised car
-    40: switch_crh5a_middle_t_pushpull; //This panto does not rise
-    43: switch_crh5a_middle_m_pushpull;
+    4: spriteset_crh5a_middle_m;
+    7: spriteset_crh5a_middle_t; //This panto does not rise
+    10: spriteset_crh5a_middle_m;
+    13: spriteset_crh5a_middle_m; //Trailer without panto looks the same as motorised car
+    16: spriteset_crh5a_middle_tp; //THIS PANTO RISES
+    19: spriteset_crh5a_middle_m;
+    22: spriteset_crh5a_middle_m;
+    25: spriteset_crh5a_middle_m;
+    28: spriteset_crh5a_middle_m;
+    31: spriteset_crh5a_middle_tp; //THIS PANTO RISES
+    34: spriteset_crh5a_middle_m;
+    37: spriteset_crh5a_middle_m; //Trailer without panto looks the same as motorised car
+    40: spriteset_crh5a_middle_t; //This panto does not rise
+    43: spriteset_crh5a_middle_m;
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh5a_4_middle_graphics_pushpull, vehicle_is_reversed) {
-    1: switch_crh5a_4_middle_graphics_reversed;
-    switch_crh5a_4_middle_graphics;
-}
-
 switch (FEAT_TRAINS, SELF, switch_crh5a_middle_graphics, num_vehs_in_consist) {
-    1..12: switch_crh5a_4_middle_graphics_pushpull;
+    1..12: switch_crh5a_4_middle_graphics;
     13..24: switch_crh5a_8_middle_graphics;
     25..36: switch_crh5a_12_middle_graphics;
     37..48: switch_crh5a_16_middle_graphics;
@@ -186,11 +142,6 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_middle_capacity_zy, position_in_articula
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh5a_middle_capacity_zt, position_in_articulated_veh % 3) {
-    1: return 34;
-    return 0;
-}
-
 switch (FEAT_TRAINS, SELF, switch_crh5a_middle_capacity_zs, position_in_articulated_veh % 3) {
     1: return 28;
     return 0;
@@ -209,7 +160,6 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_middle_capacity_zec, position_in_articul
 switch (FEAT_TRAINS, SELF, switch_crh5a_middle_capacity, vehicle_type_id) {
     1024: switch_crh5a_middle_capacity_ze;
     1025: switch_crh5a_middle_capacity_zy;
-    1026: switch_crh5a_middle_capacity_zt;
     1027: switch_crh5a_middle_capacity_zs;
     1028: switch_crh5a_middle_capacity_sw;
     1035: switch_crh5a_middle_capacity_zec;
@@ -223,11 +173,6 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_cab_capacity_ze, position_in_articulated
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_cab_capacity_zy, position_in_articulated_veh % 3) {
     1: return 56;
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_crh5a_cab_capacity_zt, position_in_articulated_veh % 3) {
-    1: return 27;
     return 0;
 }
 
@@ -249,7 +194,6 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_cab_capacity_zec, position_in_articulate
 switch (FEAT_TRAINS, SELF, switch_crh5a_cab_capacity, vehicle_type_id) {
     1024: switch_crh5a_cab_capacity_ze;
     1025: switch_crh5a_cab_capacity_zy;
-    1026: switch_crh5a_cab_capacity_zt;
     1027: switch_crh5a_cab_capacity_zs;
     1028: switch_crh5a_cab_capacity_sw;
     1035: switch_crh5a_cab_capacity_zec;
@@ -264,7 +208,6 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_capacity, position_in_consist_from
 switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_cost_power, vehicle_type_id) {
     1024: return 55;
     1025: return 59;
-    1026: return 61;
     1027: return 63;
     1028: return 64;
     1035: return 73;
@@ -274,7 +217,6 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_cost_power, vehicle_type_id) {
 switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_running_power, vehicle_type_id) {
     1024: return 46;
     1025: return 50;
-    1026: return 52;
     1027: return 54;
     1028: return 55;
     1035: return 49;
@@ -284,7 +226,6 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_running_power, vehicle_type_id) {
 switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_cost_unpower, vehicle_type_id) {
     1024: return 16;
     1025: return 20;
-    1026: return 23;
     1027: return 24;
     1028: return 25;
     1035: return 35;
@@ -294,7 +235,6 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_cost_unpower, vehicle_type_id) {
 switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_running_unpower, vehicle_type_id) {
     1024: return 7;
     1025: return 11;
-    1026: return 14;
     1027: return 15;
     1028: return 16;
     1035: return 11;

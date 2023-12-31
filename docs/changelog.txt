@@ -1,5 +1,48 @@
 China Set: Trains Changelog
 =========================
+From 0.0.8 (6/9/2023) to 0.1.0 (31/12/2023):
+--------------------
+NOT BACKWARD COMPATIBLE
+Add: HXD1B, CR200J-A Long Version, YZ22, YW22, RZ22, RW22, YZ22B, YW22B, RW22B, YZ25B, RZ25B, YW25B, RW25B, CA25G, CA25K, CA25T, XL25T, C62, P60, G60
+Add: Sprites to remind "too many MU wagons"
+Remove: Limited Class and all "combined" MU Wagon except second-class restaurant combined coach
+Change: Sprites of all vehicles changed to MagicaVoxel output
+Change: cargo_age_period basis and display
+Change: half running_cost_base, double running_cost_factor for locomotives
+Change: running costs of trains of different max speeds
+Change: Increase the capacity and lower the cargo_age_period of "Passengers in Boxcars" (Peng Dai Ke)
+Change: lengths of some vehicles, and length calculations of vehicles shorter than length 11
+
+0.1.0.129 (31/12/2023)
+--------------------
+READY TO RELEASE
+NOT COMPATIBLE WITH ANY VERSION BEFORE r129
+Add: HXD1B, C62
+Remove: Limited Class MU Wagon
+Change: Sprites of CR400BF, DF4 (Orange) changed to MagicaVoxel output
+Change: Minor adjustment of sprites of DF4 (Green)
+Fix #26: C64 (covered) wheels
+
+0.1.0.128 (31/12/2023)
+--------------------
+Fix #25: CR200J-A-L sprite problem
+
+0.1.0.127 (31/12/2023)
+--------------------
+Add: CR200J-A long version
+Change: CR200J1 name changed to CR200J-A
+Change: Sprites of CR200J-A to MagicaVoxel output
+Fix #24: sprite misalignments of some passenger coaches
+
+0.1.0.126 (30/12/2023)
+--------------------
+Change: Push-Pull failed, removed
+
+0.1.0.125 (30/12/2023)
+--------------------
+Fix #22: Push-Pull functionality (again)
+Fix #23: CRH5A head seat cargo aging
+
 0.1.0.124 (29/12/2023)
 --------------------
 Fix #21: Push-Pull functionality

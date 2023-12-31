@@ -7,7 +7,7 @@
 //     template_purchase_empty ()
 // }
 // alternative_sprites(spriteset_yw22_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-//     template_purchase1 ("coaches", "22")
+//     template_purchase ("coaches", "22")
 // }
 
 // // Vehicle
@@ -41,7 +41,7 @@ switch (FEAT_TRAINS, SELF, switch_yw22_cargo_subtype, current_year) {
 }
 
 // switch (FEAT_TRAINS, SELF, switch_yw22_graphics, position_in_articulated_veh % 3) {
-//     0: spriteset_yw22_original;
+//     1: spriteset_yw22_original;
 //     empty_sprites;   
 // }
 

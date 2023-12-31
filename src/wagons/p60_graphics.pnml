@@ -7,7 +7,7 @@ spriteset (spriteset_p60_purchase_original) {
     template_purchase_empty ()
 }
 alternative_sprites(spriteset_p60_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase1 ("wagons", "p60")
+    template_purchase ("wagons", "p60")
 }
 
 // Vehicle

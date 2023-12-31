@@ -67,6 +67,7 @@ STR_NAME_XL25T_SSPE     :XL25T-SSPE (Luggage Car)
 STR_NAME_KD25G          :KD25G (Air Conditioner Generator Car)
 STR_NAME_KD25K          :KD25K (Air Conditioner Generator Car)
 
+STR_NAME_C62            :C62 (Gondola)
 STR_NAME_C64            :C64 (Gondola)
 STR_NAME_P60            :P60 (Boxcar)
 STR_NAME_P62            :P62 (Boxcar)
@@ -75,16 +76,17 @@ STR_NAME_G60            :G60 (Tanker)
 STR_NAME_DF4K           :DF4 (Diesel) (Passenger Type)
 STR_NAME_DF4H           :DF4 (Diesel) (Freight Type)
 STR_NAME_DF11G          :DF11G (Diesel)
+STR_NAME_HXD1B          :HXD1B (Electric)
 STR_NAME_HXD3C          :HXD3C (Electric)
 STR_NAME_HXD3D          :HXD3D (Electric)
 
-STR_NAME_CR200J1        :CR200J1 (EMU)
+STR_NAME_CR200JA        :CR200J-A (EMU)
+STR_NAME_CR200JAL       :CR200J-A (Long Version) (EMU)
 STR_NAME_CRH5A          :CRH5A (EMU)
 STR_NAME_CR400BF        :CR400BF (EMU)
 
 STR_NAME_ZEMUW          :2nd-Class (ZE) MU Wagon
 STR_NAME_ZYMUW          :1st-Class (ZY) MU Wagon
-STR_NAME_ZTMUW          :Limited-Class (ZT) MU Wagon
 STR_NAME_ZSMUW          :Business-Class (ZS) MU Wagon
 STR_NAME_SWMUW          :Luxury-Business-Class (SW) MU Wagon
 STR_NAME_ZECMUW         :2nd-Class Restaurant Combined (ZEC) MU Wagon
@@ -126,6 +128,7 @@ STR_FULL_NAME_KD25K          :{BLACK}Full Name: {GOLD}25m Rapid Air Conditioner 
 
 STR_FULL_NAME_DF4            :{BLACK}Full Name: {GOLD}Dongfeng 4 Diesel Locomotive
 STR_FULL_NAME_DF11G          :{BLACK}Full Name: {BLUE}Dongfeng 11G {WHITE}Diesel Locomotive
+STR_FULL_NAME_HXD1B          :{BLACK}Full Name: {GOLD}Hexie/Harmony 1B Electric Locomotive
 STR_FULL_NAME_HXD3C          :{BLACK}Full Name: {GOLD}Hexie/Harmony 3C Electric Locomotive
 STR_FULL_NAME_HXD3D          :{BLACK}Full Name: {GOLD}Hexie/Harmony 3D Electric Locomotive
 
@@ -145,6 +148,7 @@ STR_25G_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {RED}Red {GOLD}
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_G60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GRAY}Grey {GOLD}with Random-Colour Stripes (unfinished)
+STR_C62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_P60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
@@ -153,6 +157,7 @@ STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}Only Guangzhou-Kowloon Sub-Livery av
 
 STR_DF4_NICKNAME                    :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
 STR_DF11G_NICKNAME                  :{BLACK}Nickname: {GOLD}Pig
+STR_HXD1B_NICKNAME                  :{BLACK}Nickname: {GOLD}River Crab
 STR_HXD3C_NICKNAME                  :{BLACK}Nickname: {GOLD}Electric Baboon
 STR_HXD3D_NICKNAME                  :{BLACK}Nickname: {GOLD}Tomato
 STR_CR200J_NICKNAME                 :{BLACK}Nickname: {GREEN}"Hulk" {GOLD}(Official), {GREEN}"Trash Bin" {GOLD}(Folk)
@@ -191,7 +196,6 @@ STR_COMFORT_384_AC      :{BLACK}Comfort: {GOLD}384 {BLACK}, but at least 480 in 
 STR_COMFORT_240         :{BLACK}Comfort: {GOLD}240
 STR_COMFORT_400         :{BLACK}Comfort: {GOLD}400
 STR_COMFORT_480         :{BLACK}Comfort: {GOLD}480
-STR_COMFORT_560         :{BLACK}Comfort: {GOLD}560
 STR_COMFORT_640         :{BLACK}Comfort: {GOLD}640
 STR_COMFORT_720         :{BLACK}Comfort: {GOLD}720
 STR_COMFORT_800         :{BLACK}Comfort: {GOLD}800
@@ -213,8 +217,8 @@ STR_DESC_PENGDAIKE                  :{BLACK}Passengers in Boxcars (Peng Dai Ke):
 STR_ATTACH_ALL_CRH_CR               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs
 STR_ATTACH_SLEEPER_MU               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs
 STR_ATTACH_CR200J                   :{BLACK}Matching MUs: {GOLD}CR200J Series
-STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZT, ZS, SW, ZEC, WE, WY, WG
-STR_CRH_CAN_ATTACH_WAGON            :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZT, ZS, SW, ZEC
+STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, WE, WY, WG
+STR_CRH_CAN_ATTACH_WAGON            :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC
 
 STR_DF11G_CONSIST                   :{BLACK}Consist: {GOLD}2 sections joint together (Normal), or one section at head, another section at back ("Splitting Pig", max speed 120 km/h, power 4133 hpM)
 STR_CRH5A_CONSIST                   :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car

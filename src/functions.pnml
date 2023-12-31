@@ -211,6 +211,12 @@ switch (FEAT_TRAINS, SELF, mu4car, num_vehs_in_consist < 12) {
     return CB_RESULT_NO_TEXT;
 }
 
+// Long MUs need at least 4 cars to start
+switch (FEAT_TRAINS, SELF, mu8car, num_vehs_in_consist < 24) {
+    1: return string(STR_TOO_SHORT);
+    return CB_RESULT_NO_TEXT;
+}
+
 switch (FEAT_TRAINS, SELF, mu481216car, num_vehs_in_consist) {
     12: return CB_RESULT_NO_TEXT;
     24: return CB_RESULT_NO_TEXT;
@@ -232,21 +238,15 @@ switch (FEAT_TRAINS, SELF, mu5to17car, num_vehs_in_consist) {
         return 2;
     }
 
-// Standard 2-6-2 Length
-    switch (FEAT_TRAINS, SELF, switch_length_2_6_2, position_in_articulated_veh % 3) {
-        1: return 6;
-        return 2;
-    }
-
-// Standard 3-7-3 Length
-    switch (FEAT_TRAINS, SELF, switch_length_3_7_3, position_in_articulated_veh % 3) {
-        1: return 7;
-        return 3;
-    }
-
 // Standard 2-7-2 Length
     switch (FEAT_TRAINS, SELF, switch_length_2_7_2, position_in_articulated_veh % 3) {
         1: return 7;
+        return 2;
+    }
+
+// Standard 2-6-2 Length
+    switch (FEAT_TRAINS, SELF, switch_length_2_6_2, position_in_articulated_veh % 3) {
+        1: return 6;
         return 2;
     }
 

@@ -20,8 +20,6 @@
 #include "src/unit-wagons-rail/zemuw_item.pnml"
 #include "src/unit-wagons-rail/zymuw_graphics.pnml"
 #include "src/unit-wagons-rail/zymuw_item.pnml"
-#include "src/unit-wagons-rail/ztmuw_graphics.pnml"
-#include "src/unit-wagons-rail/ztmuw_item.pnml"
 #include "src/unit-wagons-rail/zsmuw_graphics.pnml"
 #include "src/unit-wagons-rail/zsmuw_item.pnml"
 #include "src/unit-wagons-rail/swmuw_graphics.pnml"
@@ -109,6 +107,8 @@
 #include "src/coaches/25t/xl25t_sspe_item.pnml"
 
 // Wagons
+#include "src/wagons/c62_graphics.pnml"
+#include "src/wagons/c62_item.pnml"
 #include "src/wagons/c64_graphics.pnml"
 #include "src/wagons/c64_item.pnml"
 #include "src/wagons/p60_graphics.pnml"
@@ -133,6 +133,8 @@
 #include "src/diesel/df11g_item.pnml"
 
 // 25kV AC Electric
+#include "src/25-electric/hxd1b_graphics.pnml"
+#include "src/25-electric/hxd1b_item.pnml"
 #include "src/25-electric/hxd3c_graphics.pnml"
 #include "src/25-electric/hxd3c_item.pnml"
 #include "src/25-electric/hxd3d_graphics.pnml"
@@ -145,8 +147,10 @@
 
 
 // 25kV AC EMU
-#include "src/25-emu/cr200j1_graphics.pnml"
-#include "src/25-emu/cr200j1_item.pnml"
+#include "src/25-emu/cr200ja_graphics.pnml"
+#include "src/25-emu/cr200ja_item.pnml"
+#include "src/25-emu/cr200jal_graphics.pnml"
+#include "src/25-emu/cr200jal_item.pnml"
 #include "src/25-emu/crh5a_graphics.pnml"
 #include "src/25-emu/crh5a_item.pnml"
 #include "src/25-emu/cr400bf_graphics.pnml"

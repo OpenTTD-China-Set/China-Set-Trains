@@ -10,7 +10,7 @@ spriteset (spriteset_df4_purchase_orange) {
     template_purchase_empty ()
 }
 alternative_sprites(spriteset_df4_purchase_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase1 ("diesel", "df4")
+    template_purchase ("diesel", "df4")
 }
 alternative_sprites(spriteset_df4_purchase_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("diesel", "df4-orange")
@@ -28,7 +28,7 @@ alternative_sprites(spriteset_df4_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4")
 }
 alternative_sprites(spriteset_df4_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_10_standard ("diesel", "df4-orange")
+    template_standard ("diesel", "df4-orange")
 }
 
 

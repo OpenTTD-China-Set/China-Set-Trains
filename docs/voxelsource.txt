@@ -10,7 +10,7 @@ By Mikhail and Babel
 HXD3C/D
 By Babel
 
-CRH5A
+CRH5A, CR400BF, CR200J-A
 By Babel
 
 25T
@@ -44,11 +44,14 @@ By John Franklin
 25G-Jinwen
 By wuwu (kaitokiwa)
 
-C64
+C62, C64
 By Babel and John Franklin
 
 G60
 By Babel, modified by John Franklin
 
-P60
+P60, P62
 By Babel
+
+HXD1B
+By wuwu and Babel 

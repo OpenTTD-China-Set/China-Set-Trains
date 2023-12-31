@@ -7,7 +7,7 @@ spriteset (spriteset_25t_purchase_original) {
     template_purchase_empty ()
 }
 alternative_sprites(spriteset_25t_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase1 ("coaches", "25t")
+    template_purchase ("coaches", "25t")
 }
 
 // Vehicle

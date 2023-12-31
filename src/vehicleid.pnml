@@ -11,7 +11,7 @@
 #define id_range_unit_wagons_RAIL 0x0400..0x05FF
 item (FEAT_TRAINS, zemuw, 1024) {}
 item (FEAT_TRAINS, zymuw, 1025) {}
-item (FEAT_TRAINS, ztmuw, 1026) {}
+// 1026 Deleted
 item (FEAT_TRAINS, zsmuw, 1027) {}
 item (FEAT_TRAINS, swmuw, 1028) {}
 // 1029-1034 Deleted
@@ -85,7 +85,7 @@ item (FEAT_TRAINS, c64, 3072) {}
 item (FEAT_TRAINS, p62, 3073) {}
 item (FEAT_TRAINS, g60, 3074) {}
 item (FEAT_TRAINS, p60, 3075) {}
-
+item (FEAT_TRAINS, c62, 3076) {}
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
@@ -101,6 +101,7 @@ item (FEAT_TRAINS, df11g, 5122) {}
 #define id_range_25_electric 0x1800..0x1BFF
 item (FEAT_TRAINS, hxd3c, 6144) {}
 item (FEAT_TRAINS, hxd3d, 6145) {}
+item (FEAT_TRAINS, hxd1b, 6146) {}
 
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
 #define id_range_multi_loco 0x1C00..0x1FFF 
@@ -112,9 +113,10 @@ item (FEAT_TRAINS, hxd3d, 6145) {}
 
 //25kV AC EMU, available ID range: 9216-10239 (hex 0x2400..0x27FF)
 #define id_range_25_emu 0x2000..0x23FF
-item (FEAT_TRAINS, cr200j1, 9216) {}
+item (FEAT_TRAINS, cr200ja, 9216) {}
 item (FEAT_TRAINS, crh5a, 9217) {}
 item (FEAT_TRAINS, cr400bf, 9218) {}
+item (FEAT_TRAINS, cr200jal, 9219) {}
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
 #define id_range_1500_emu 0x2800..0x2BFF
