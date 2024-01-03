@@ -45,6 +45,8 @@ STR_NAME_YZ25B          :YZ25B (客车)
 STR_NAME_RZ25B          :RZ25B (客车)
 STR_NAME_YW25B          :YW25B (客车)
 STR_NAME_RW25B          :RW25B (客车)
+STR_NAME_SYZ25B         :SYZ25B (客车)
+STR_NAME_SRZ25B         :SRZ25B (客车)
 STR_NAME_YZ25G          :YZ25G (客车)
 STR_NAME_RZ25G          :RZ25G (客车)
 STR_NAME_YW25G          :YW25G (客车)
@@ -54,6 +56,8 @@ STR_NAME_YZ25K          :YZ25K (客车)
 STR_NAME_RZ25K          :RZ25K (客车)
 STR_NAME_YW25K          :YW25K (客车)
 STR_NAME_RW25K          :RW25K (客车)
+STR_NAME_SYZ25K         :SYZ25K (客车)
+STR_NAME_SRZ25K         :SRZ25K (客车)
 STR_NAME_CA25K          :CA25K (餐车)
 STR_NAME_YZ25T          :YZ25T (客车)
 STR_NAME_RZ25T          :RZ25T (客车)
@@ -72,10 +76,18 @@ STR_NAME_C64            :C64 (敞车)
 STR_NAME_P60            :P60 (棚车)
 STR_NAME_P62            :P62 (棚车)
 STR_NAME_G60            :G60 (罐车)
+STR_NAME_NX17           :NX17 (平车)
 
 STR_NAME_DF4K           :DF4 (内燃) (客运型)
 STR_NAME_DF4H           :DF4 (内燃) (货运型)
+STR_NAME_DF4D0000       :DF4D-0000 (内燃)
+STR_NAME_DF4D3000       :DF4D-3000 (内燃)
+STR_NAME_DF4D4000       :DF4D-4000/7000 (内燃)
+STR_NAME_DF11           :DF11 (内燃)
 STR_NAME_DF11G          :DF11G (内燃)
+STR_NAME_SS3            :SS3 (电力)
+STR_NAME_SS8            :SS8 (电力)
+STR_NAME_HXD1           :HXD1 (电力)
 STR_NAME_HXD1B          :HXD1B (电力)
 STR_NAME_HXD3C          :HXD3C (电力)
 STR_NAME_HXD3D          :HXD3D (电力)
@@ -105,6 +117,8 @@ STR_FULL_NAME_YZ25B          :{BLACK}全称：{GOLD}25米标准型硬座客车
 STR_FULL_NAME_RZ25B          :{BLACK}全称：{GOLD}25米标准型软座客车
 STR_FULL_NAME_YW25B          :{BLACK}全称：{GOLD}25米标准型硬卧客车
 STR_FULL_NAME_RW25B          :{BLACK}全称：{GOLD}25米标准型软卧客车
+STR_FULL_NAME_SYZ25B         :{BLACK}全称：{GOLD}25米标准型双层硬座客车
+STR_FULL_NAME_SRZ25B         :{BLACK}全称：{GOLD}25米标准型双层软座客车
 STR_FULL_NAME_YZ25G          :{BLACK}全称：{GOLD}25米改进型硬座客车
 STR_FULL_NAME_RZ25G          :{BLACK}全称：{GOLD}25米改进型软座客车
 STR_FULL_NAME_YW25G          :{BLACK}全称：{GOLD}25米改进型硬卧客车
@@ -114,6 +128,8 @@ STR_FULL_NAME_YZ25K          :{BLACK}全称：{GOLD}25米快速型硬座客车
 STR_FULL_NAME_RZ25K          :{BLACK}全称：{GOLD}25米快速型软座客车
 STR_FULL_NAME_YW25K          :{BLACK}全称：{GOLD}25米快速型硬卧客车
 STR_FULL_NAME_RW25K          :{BLACK}全称：{GOLD}25米快速型软卧客车
+STR_FULL_NAME_SYZ25K         :{BLACK}全称：{GOLD}25米快速型双层硬座客车
+STR_FULL_NAME_SRZ25K         :{BLACK}全称：{GOLD}25米快速型双层软座客车
 STR_FULL_NAME_CA25K          :{BLACK}全称：{GOLD}25米快速型餐车
 STR_FULL_NAME_YZ25T          :{BLACK}全称：{GOLD}25米提速型硬座客车
 STR_FULL_NAME_RZ25T          :{BLACK}全称：{GOLD}25米提速型软座客车
@@ -127,30 +143,48 @@ STR_FULL_NAME_KD25G          :{BLACK}全称：{GOLD}25米改进型空调发电�
 STR_FULL_NAME_KD25K          :{BLACK}全称：{GOLD}25米快速型空调发电车
 
 STR_FULL_NAME_DF4            :{BLACK}全称：{GOLD}东风4型内燃机车
+STR_FULL_NAME_DF4D           :{BLACK}全称：{GOLD}东风4D型内燃机车
+STR_FULL_NAME_DF11           :{BLACK}全称：{GOLD}东风11型内燃机车
 STR_FULL_NAME_DF11G          :{BLACK}全称：{BLUE}东风11G型{WHITE}内燃机车
+STR_FULL_NAME_SS3            :{BLACK}全称：{GOLD}韶山3型电力机车
+STR_FULL_NAME_SS8            :{BLACK}全称：{GOLD}韶山8型电力机车
+STR_FULL_NAME_HXD1           :{BLACK}全称：{GOLD}和谐1型电力机车
 STR_FULL_NAME_HXD1B          :{BLACK}全称：{GOLD}和谐1B型电力机车
 STR_FULL_NAME_HXD3C          :{BLACK}全称：{GOLD}和谐3C型电力机车
 STR_FULL_NAME_HXD3D          :{BLACK}全称：{GOLD}和谐3D型电力机车
 
 STR_XL25T_SSPE_DESCRIPTION          :{BLACK}新时速运递公司使用的XL25T版本。
 
-STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿色{GOLD}、{ORANGE}橘色
+STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿色{GOLD}，{ORANGE}橘色
+STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BROWN}原版{GOLD}涂装，{GREEN}西户铁路{GOLD}涂装
+STR_DF4D4000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BLUE}4000{YELLOW}系{GOLD}涂装，{GREEN}7000{YELLOW}系{GOLD}涂装
 STR_22_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装 (未完成)
 STR_22B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装
-STR_25B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_25B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{BLUE}集{RED}通{WHITE}铁{BLUE}路{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_RW25B_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_S25B_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{ORANGE}橙{YELLOW}黄{GOLD}相间涂装 (低开门，装载较快，120 km/h)
 STR_25G_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}，“高阻绿”{GOLD}涂装 (未完成)
+STR_KD25G_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{LTBLUE}沪芦列车{GOLD}涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装 (未完成){DKGREEN}，“高阻绿”{GOLD}涂装 (未完成)
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_S25K_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{LTBLUE}沪芦列车{GOLD}涂装 (低开门，装载较快)
+STR_KD25K_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{LTBLUE}沪芦列车{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_G60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带 (未完成)
 STR_C62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_P60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_P62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
+STR_NX17_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 
 STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}目前仅有广九铁路子涂装
 
 STR_DF4_NICKNAME                    :{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
+STR_DF4D_NICKNAME                   :{BLACK}昵称: {GOLD}老虎
+STR_DF11_NICKNAME                   :{BLACK}昵称: {GOLD}狮子
 STR_DF11G_NICKNAME                  :{BLACK}昵称: {GOLD}猪
+STR_SS3_NICKNAME                    :{BLACK}昵称: {GOLD}三哥 (前期), 三爷 (老化后)
+STR_SS8_NICKNAME                    :{BLACK}昵称: {GOLD}扫把
+STR_HXD1_NICKNAME                   :{BLACK}昵称: {GOLD}蓝精灵
 STR_HXD1B_NICKNAME                  :{BLACK}昵称: {GOLD}河蟹
 STR_HXD3C_NICKNAME                  :{BLACK}昵称: {GOLD}电狒狒
 STR_HXD3D_NICKNAME                  :{BLACK}昵称: {GOLD}番茄
@@ -161,17 +195,27 @@ STR_CR400BF_NICKNAME                :{BLACK}昵称：{GOLD}金凤凰
 STR_RELIABILITY_32                  :{BLACK}可靠性下降速度：{GOLD}32
 STR_RELIABILITY_20                  :{BLACK}可靠性下降速度：{GOLD}20
 STR_RELIABILITY_16                  :{BLACK}可靠性下降速度：{GOLD}16
+STR_RELIABILITY_14                  :{BLACK}可靠性下降速度：{GOLD}14
+STR_RELIABILITY_10                  :{BLACK}可靠性下降速度：{GOLD}10
+STR_RELIABILITY_8                   :{BLACK}可靠性下降速度：{GOLD}8
 STR_RELIABILITY_6                   :{BLACK}可靠性下降速度：{GOLD}6
 STR_RELIABILITY_5                   :{BLACK}可靠性下降速度：{GOLD}5
 
-STR_ORIGINAL            :{GOLD} - 原版涂装
+STR_ORIGINAL            : - 原版涂装
 STR_ORANGE              :{ORANGE} - 橘色涂装
 STR_GREEN               :{GREEN} - 绿色涂装
+STR_XIHU                : - {GREEN}西户铁路{BLACK}涂装
+STR_XIHU_REVERSE        : - {GREEN}西户铁路{BLACK}涂装，倒转方向
+STR_DF4D_7000           : - {GREEN}7000{YELLOW}系{BLACK}涂装
 
 STR_BUILD_YEAR          : - 根据建造年份选择设计
 STR_YW22_ORIGINAL       : - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
 STR_YW22_1966           : - 1966年新设计 - 定员60，舒适度288
+STR_ORDINARY_GREEN      : - {GREEN}绿皮车{BLACK}涂装
 STR_RED_WHITE           : - {RED}红{WHITE}白{BLACK}相间
+STR_BLUE_RED_WHITE      : - {BLUE}蓝{WHITE}白{RED}红{BLACK}相间涂装
+STR_JITONG              : - {BLUE}集{RED}通{WHITE}铁{BLUE}路{BLACK}涂装
+STR_LUCHAOGANG          : - {LTBLUE}沪芦列车{BLACK}涂装
 STR_JINWEN              : - {WHITE}金{RED}温{BLUE}铁{WHITE}路{BLACK}公司
 STR_GAOZU_GREEN         : - {DKGREEN}"高阻绿" {BLACK}(未完成)
 

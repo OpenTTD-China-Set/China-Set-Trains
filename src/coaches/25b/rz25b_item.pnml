@@ -41,6 +41,7 @@ item (FEAT_TRAINS, rz25b) {
         default:                        switch_25b_graphics;
         purchase:                       spriteset_25b_purchase_original;
         articulated_part:               switch_rz25b_articulated_part;
+        cargo_subtype_text:             switch_25b_cargo_subtype;
 
         // Stats
         length:                         switch_length_2_8_2;

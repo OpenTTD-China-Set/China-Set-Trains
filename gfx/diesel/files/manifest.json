@@ -22,8 +22,8 @@
   "sprites": [
     {
       "angle": 0,
-      "width": 32,
-      "height": 144,
+      "width": 36,
+      "height": 160,
       "flip": true,
       "render_elevation": 33
     },
@@ -47,8 +47,8 @@
     },
     {
       "angle": 180,
-      "width": 32,
-      "height": 144,
+      "width": 36,
+      "height": 160,
       "flip": true,
       "render_elevation": 33
     },

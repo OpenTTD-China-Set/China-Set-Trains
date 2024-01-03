@@ -1,0 +1,89 @@
+// Begin NX17
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_nx17_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_nx17_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "nx17")
+}
+
+// Vehicle
+spriteset (spriteset_nx17_black_empty) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_black_container_half) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_black_container_full) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_black_cover) {
+    template_empty ()
+}
+alternative_sprites(spriteset_nx17_black_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17")
+}
+alternative_sprites(spriteset_nx17_black_container_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-container-half")
+}
+alternative_sprites(spriteset_nx17_black_container_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-container-full")
+}
+alternative_sprites(spriteset_nx17_black_cover, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-cover")
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx17_black_container, cargo_count < 32) {
+    0: spriteset_nx17_black_container_full;
+    spriteset_nx17_black_container_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx17_cargo, cargo_classes) {
+    bitmask(CC_EXPRESS): switch_nx17_black_container;
+    bitmask(CC_PIECE_GOODS): switch_nx17_black_container;
+    bitmask(CC_MAIL): switch_nx17_black_container;
+    spriteset_nx17_black_cover;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx17_black, cargo_count < 5) {
+    0: switch_nx17_cargo;
+    spriteset_nx17_black_empty;
+}
+
+random_switch (FEAT_TRAINS, SELF, random_nx17_colour) {
+    1: switch_nx17_black; // More colours waiting to be added
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx17_articulated_part, extra_callback_info1) {
+    1..2: return nx17;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx17_graphics, position_in_articulated_veh % 3) {
+    1: random_nx17_colour;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx17_capacity_cargo, cargo_type_in_veh) {
+    MAIL: return 120;
+    GOOD: return 90;
+    return 60;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx17_capacity, position_in_articulated_veh % 3) {
+    1: switch_nx17_capacity_cargo;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx17_loading_speed, cargo_type_in_veh) {
+    MAIL: return 15;
+    GOOD: return 15;
+    return 10;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx17_additional_text, param_cargo_decay) {
+    return string(STR_DESC_2, string(STR_NX17_LIVERY_AVAILABILITY), string(STR_DECAY_185));
+}

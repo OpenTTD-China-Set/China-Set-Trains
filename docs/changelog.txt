@@ -1,5 +1,19 @@
 China Set: Trains Changelog
 =========================
+0.1.1.132 (3/1/2024)
+--------------------
+Fix #29: HXD1 Back sprites
+
+0.1.1.131 (3/1/2024)
+--------------------
+Add: DF4D (-0000, -3000, -4/7000), DF11, SS3, SS8, HXD1, (KD25G, KD25K, SYZ25K, SRZ25K)-Luchaogang, NX17, (YZ, RZ, YW)25B-Jitong, (SYZ, SRZ)25B (Low-door version)
+Change: sprites of HXD1B
+
+0.1.1.130 (2/1/2024)
+--------------------
+Fix #27: Sprite scales and misalignments
+Fix #28: XL25K/T and DF4 (orange) sprites
+
 From 0.0.8 (6/9/2023) to 0.1.0 (31/12/2023):
 --------------------
 NOT BACKWARD COMPATIBLE

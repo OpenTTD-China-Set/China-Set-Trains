@@ -1,0 +1,38 @@
+// Begin SYZ25K
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_s25k_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_s25k_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "s25k-luchaogang")
+}
+
+// Vehicle
+spriteset (spriteset_s25k_luchaogang) {
+    template_empty ()
+}
+alternative_sprites(spriteset_s25k_luchaogang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "s25k-luchaogang")
+}
+
+switch (FEAT_TRAINS, SELF, switch_syz25k_articulated_part, extra_callback_info1) {
+    1..2: return syz25k;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_s25k_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_s25k_luchaogang;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_syz25k_capacity, position_in_articulated_veh % 3) {
+    1: return 148;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_syz25k_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_FULL_NAME_SYZ25K), string(STR_S25K_LIVERY_AVAILABILITY), string(STR_COMFORT_160));
+}

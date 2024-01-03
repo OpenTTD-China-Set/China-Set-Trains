@@ -1,4 +1,4 @@
-// Begin KD25G (New Version)
+// Begin KD25G
 
 // Graphics
 
@@ -14,8 +14,14 @@ alternative_sprites(spriteset_kd25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEP
 spriteset (spriteset_kd25g_original) {
     template_empty ()
 }
+spriteset (spriteset_kd25g_luchaogang) {
+    template_empty ()
+}
 alternative_sprites(spriteset_kd25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "kd25g")
+}
+alternative_sprites(spriteset_kd25g_luchaogang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "kd25g-luchaogang")
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25g_articulated_part, extra_callback_info1) {
@@ -23,8 +29,43 @@ switch (FEAT_TRAINS, SELF, switch_kd25g_articulated_part, extra_callback_info1) 
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_kd25g_graphics, position_in_articulated_veh % 3) {
+switch (FEAT_TRAINS, SELF, switch_kd25g_cargo_subtype_pre_2008, cargo_subtype) {
+    0: return string(STR_BUILD_YEAR);
+    1: return string(STR_RED_WHITE);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25g_cargo_subtype_2008_2014, cargo_subtype) {
+    0..1: switch_kd25g_cargo_subtype_pre_2008;
+    2: return string(STR_LUCHAOGANG);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25g_cargo_subtype_post_2014, cargo_subtype) {
+    0..2: switch_kd25g_cargo_subtype_2008_2014;
+    3: return string(STR_GAOZU_GREEN);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25g_cargo_subtype, current_year) {
+    0..2007: switch_kd25g_cargo_subtype_pre_2008;
+    2008..2014: switch_kd25g_cargo_subtype_2008_2014;
+    switch_kd25g_cargo_subtype_post_2014;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25g_build_year_sprite, build_year) {
+    spriteset_kd25g_original; // Unfinished
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25g_graphics_subtype, cargo_subtype) {
+    0: switch_kd25g_build_year_sprite;
     1: spriteset_kd25g_original;
+    2: spriteset_kd25g_luchaogang;
+    3: spriteset_kd25g_original;  // Will change to "spriteset_kd25g_gaozu" once the "gaozu green" sprite is finished
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25g_graphics, position_in_articulated_veh % 3) {
+    1: switch_kd25g_graphics_subtype;
     empty_sprites;   
 }
 
@@ -33,5 +74,5 @@ switch (FEAT_TRAINS, SELF, switch_kd25g_capacity, position_in_articulated_veh % 
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25g_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_FULL_NAME_KD25G), string(STR_25G_LIVERY_AVAILABILITY), string(STR_AIR_CONDITIONER_EFFECT));
+    return string(STR_DESC_4, string(STR_FULL_NAME_KD25G), string(STR_KD25G_LIVERY_AVAILABILITY), string(STR_AIR_CONDITIONER_EFFECT));
 }

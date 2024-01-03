@@ -41,6 +41,7 @@ item (FEAT_TRAINS, kd25k) {
         // Graphics
         default:                        switch_kd25k_graphics;
         purchase:                       spriteset_kd25k_purchase_original;
+        cargo_subtype_text:             switch_kd25k_cargo_subtype;
         articulated_part:               switch_kd25k_articulated_part;
 
         // Stats

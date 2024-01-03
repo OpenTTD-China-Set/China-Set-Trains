@@ -41,6 +41,7 @@ item (FEAT_TRAINS, kd25g) {
         // Graphics
         default:                        switch_kd25g_graphics;
         purchase:                       spriteset_kd25g_purchase_original;
+        cargo_subtype_text:             switch_kd25g_cargo_subtype;
         articulated_part:               switch_kd25g_articulated_part;
 
         // Stats
@@ -54,5 +55,5 @@ item (FEAT_TRAINS, kd25g) {
     }
 }
 
-// End KD25G (New Version)
+// End KD25G
 
