@@ -1,0 +1,42 @@
+// Begin GN70
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_gn70_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_gn70_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "gn70")
+}
+
+// Vehicle
+spriteset (spriteset_gn70_black) {
+    template_empty ()
+}
+alternative_sprites(spriteset_gn70_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "gn70")
+}
+
+random_switch (FEAT_TRAINS, SELF, random_gn70_colour) {
+    1: spriteset_gn70_black; // More colours waiting to be added
+}
+
+switch (FEAT_TRAINS, SELF, switch_gn70_articulated_part, extra_callback_info1) {
+    1..2: return gn70;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_gn70_graphics, position_in_articulated_veh % 3) {
+    1: random_gn70_colour;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_gn70_capacity, position_in_articulated_veh % 3) {
+    1: return 70;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_gn70_additional_text, param_cargo_decay) {
+    return string(STR_DESC_2, string(STR_GN70_LIVERY_AVAILABILITY), string(STR_DECAY_185));
+}

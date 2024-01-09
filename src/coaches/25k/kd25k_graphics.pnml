@@ -17,11 +17,17 @@ spriteset (spriteset_kd25k_original) {
 spriteset (spriteset_kd25k_luchaogang) {
     template_empty ()
 }
+spriteset (spriteset_kd25k_xian) {
+    template_empty ()
+}
 alternative_sprites(spriteset_kd25k_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "kd25k")
 }
 alternative_sprites(spriteset_kd25k_luchaogang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "kd25k-luchaogang")
+}
+alternative_sprites(spriteset_kd25k_xian, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "kd25k-xi'an")
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25k_articulated_part, extra_callback_info1) {
@@ -29,28 +35,13 @@ switch (FEAT_TRAINS, SELF, switch_kd25k_articulated_part, extra_callback_info1) 
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_kd25k_cargo_subtype_pre_2008, cargo_subtype) {
+switch (FEAT_TRAINS, SELF, switch_kd25k_cargo_subtype, cargo_subtype) {
     0: return string(STR_BUILD_YEAR);
     1: return string(STR_BLUE_RED_WHITE);
-    return CB_RESULT_NO_TEXT;
-}
-
-switch (FEAT_TRAINS, SELF, switch_kd25k_cargo_subtype_2008_2014, cargo_subtype) {
-    0..1: switch_kd25k_cargo_subtype_pre_2008;
     2: return string(STR_LUCHAOGANG);
+    3: return string(STR_XIAN);
+    4: return string(STR_GAOZU_GREEN);
     return CB_RESULT_NO_TEXT;
-}
-
-switch (FEAT_TRAINS, SELF, switch_kd25k_cargo_subtype_post_2014, cargo_subtype) {
-    0..2: switch_kd25k_cargo_subtype_2008_2014;
-    3: return string(STR_GAOZU_GREEN);
-    return CB_RESULT_NO_TEXT;
-}
-
-switch (FEAT_TRAINS, SELF, switch_kd25k_cargo_subtype, current_year) {
-    0..2007: switch_kd25k_cargo_subtype_pre_2008;
-    2008..2014: switch_kd25k_cargo_subtype_2008_2014;
-    switch_kd25k_cargo_subtype_post_2014;
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25k_build_year_sprite, current_year) {
@@ -61,7 +52,8 @@ switch (FEAT_TRAINS, SELF, switch_kd25k_graphics_subtype, cargo_subtype) {
     0: switch_kd25k_build_year_sprite;
     1: spriteset_kd25k_original;
     2: spriteset_kd25k_luchaogang;
-    3: spriteset_kd25k_original; // Will change to "spriteset_kd25k_gaozu" once the "gaozu green" sprite is finished
+    3: spriteset_kd25k_xian;
+    4: spriteset_kd25k_original; // Will change to "spriteset_kd25k_gaozu" once the "gaozu green" sprite is finished
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25k_graphics, position_in_articulated_veh % 3) {

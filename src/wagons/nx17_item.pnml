@@ -13,7 +13,7 @@ item (FEAT_TRAINS, nx17) {
         track_type:                     SACN;
 
         // Cargo
-        refittable_cargo_classes:       bitmask(CC_EXPRESS, CC_BULK, CC_PIECE_GOODS, CC_COVERED, CC_OVERSIZED);
+        refittable_cargo_classes:       bitmask(CC_MAIL, CC_EXPRESS, CC_BULK, CC_PIECE_GOODS, CC_COVERED, CC_OVERSIZED);
         non_refittable_cargo_classes:   bitmask(CC_PASSENGERS, CC_LIQUID, CC_HAZARDOUS);
         cargo_allow_refit:              [];
         cargo_disallow_refit:           [YETI, YETY];

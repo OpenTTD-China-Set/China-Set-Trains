@@ -21,7 +21,7 @@ item (FEAT_TRAINS, rw25g) {
         default_cargo_type:             PASS;
         ai_special_flag:                AI_FLAG_PASSENGER;
         cargo_capacity:                 36;
-        loading_speed:                  4 << param_loading_speed;
+        loading_speed:                  8 << param_loading_speed;
         cargo_age_period:               444 << param_cargo_decay;
 
         // Stats

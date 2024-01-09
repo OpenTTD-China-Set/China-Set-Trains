@@ -29,28 +29,12 @@ switch (FEAT_TRAINS, SELF, switch_yz25b_articulated_part, extra_callback_info1) 
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_25b_cargo_subtype_pre_1997, cargo_subtype) {
+switch (FEAT_TRAINS, SELF, switch_25b_cargo_subtype, cargo_subtype) {
     0: return string(STR_BUILD_YEAR);
     1: return string(STR_ORDINARY_GREEN);
-    return CB_RESULT_NO_TEXT;
-}
-
-switch (FEAT_TRAINS, SELF, switch_25b_cargo_subtype_1997_2014, cargo_subtype) {
-    0..1: switch_25b_cargo_subtype_pre_1997;
     2: return string(STR_JITONG);
-    return CB_RESULT_NO_TEXT;
-}
-
-switch (FEAT_TRAINS, SELF, switch_25b_cargo_subtype_post_2014, cargo_subtype) {
-    0..2: switch_25b_cargo_subtype_1997_2014;
     3: return string(STR_GAOZU_GREEN);
     return CB_RESULT_NO_TEXT;
-}
-
-switch (FEAT_TRAINS, SELF, switch_25b_cargo_subtype, current_year) {
-    0..1997: switch_25b_cargo_subtype_pre_1997;
-    1998..2014: switch_25b_cargo_subtype_1997_2014;
-    switch_25b_cargo_subtype_post_2014;
 }
 
 switch (FEAT_TRAINS, SELF, switch_25b_build_year_sprite, build_year) {

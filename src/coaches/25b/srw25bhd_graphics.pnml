@@ -1,0 +1,15 @@
+// Begin SRW25BHD
+
+switch (FEAT_TRAINS, SELF, switch_srw25bhd_articulated_part, extra_callback_info1) {
+    1..2: return srw25bhd;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_srw25bhd_capacity, position_in_articulated_veh % 3) {
+    1: return 50;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_srw25bhd_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_FULL_NAME_SRW25B), string(STR_S25BHD_LIVERY_AVAILABILITY), string(STR_COMFORT_384));
+}

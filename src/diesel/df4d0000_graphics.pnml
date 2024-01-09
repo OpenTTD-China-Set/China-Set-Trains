@@ -36,21 +36,11 @@ switch (FEAT_TRAINS, SELF, switch_df4d0000_articulated_part, extra_callback_info
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_df4d0000_cargo_subtype_pre_2022, cargo_subtype) {
-    0: return string(STR_ORIGINAL);
-    return CB_RESULT_NO_TEXT;
-}
-
-switch (FEAT_TRAINS, SELF, switch_df4d0000_cargo_subtype_post_2022, cargo_subtype) {
+switch (FEAT_TRAINS, SELF, switch_df4d0000_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGINAL);
     1: return string(STR_XIHU);
     2: return string(STR_XIHU_REVERSE);
     return CB_RESULT_NO_TEXT;
-}
-
-switch (FEAT_TRAINS, SELF, switch_df4d0000_cargo_subtype, current_year) {
-    0..2021: switch_df4d0000_cargo_subtype_pre_2022;
-    switch_df4d0000_cargo_subtype_post_2022;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df4d0000_graphics_subtype, cargo_subtype) {

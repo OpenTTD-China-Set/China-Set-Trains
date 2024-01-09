@@ -1,0 +1,91 @@
+// Begin NJ2
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_nj2_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_nj2_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "nj2-original")
+}
+
+
+// Vehicle
+spriteset (spriteset_nj2_original) {
+    template_empty ()
+}
+spriteset (spriteset_nj2_original_back) {
+    template_empty ()
+}
+spriteset (spriteset_nj2) {
+    template_empty ()
+}
+spriteset (spriteset_nj2_back) {
+    template_empty ()
+}
+alternative_sprites(spriteset_nj2_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "nj2-original")
+}
+alternative_sprites(spriteset_nj2_original_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "nj2-original-back")
+}
+alternative_sprites(spriteset_nj2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "nj2")
+}
+alternative_sprites(spriteset_nj2_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "nj2-back")
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_articulated_part, extra_callback_info1) {
+    1..2: return nj2;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_QINGZANG);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_graphics_subtype_front, cargo_subtype) {
+    0: spriteset_nj2_original;
+    1: spriteset_nj2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_graphics_subtype_back, cargo_subtype) {
+    0: spriteset_nj2_original_back;
+    1: spriteset_nj2_back;
+}
+
+// "Splitting NJ2"
+
+switch (FEAT_TRAINS, SELF, switch_nj2_graphics_joint, position_in_vehid_chain % 6) {
+    1: switch_nj2_graphics_subtype_front;
+    4: switch_nj2_graphics_subtype_back;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_graphics_front, position_in_articulated_veh % 3) {
+    1: switch_nj2_graphics_subtype_front;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_graphics_split, position_in_consist_from_end) {
+    1: switch_nj2_graphics_subtype_back;
+    switch_nj2_graphics_front;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_graphics, num_vehs_in_vehid_chain % 6) {
+    0: switch_nj2_graphics_joint;
+    3: switch_nj2_graphics_split;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_additional_text, param_cargo_decay) {
+    return string(STR_DESC_5, string(STR_US_IMPORT), string(STR_NJ2_LIVERY_AVAILABILITY), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8), string(STR_NJ2_CONSIST));
+}

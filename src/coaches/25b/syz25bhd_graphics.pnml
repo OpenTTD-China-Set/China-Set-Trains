@@ -1,0 +1,63 @@
+// Begin SYZ25BHD
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_s25bhd_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_s25bhd_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "s25bhd-deteriorate")
+}
+
+// Vehicle
+spriteset (spriteset_s25bhd_original) {
+    template_empty ()
+}
+spriteset (spriteset_s25bhd_deteriorate) {
+    template_empty ()
+}
+spriteset (spriteset_s25bhd_shenyang) {
+    template_empty ()
+}
+alternative_sprites(spriteset_s25bhd_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "s25bhd-deteriorate") // Unfinished
+}
+alternative_sprites(spriteset_s25bhd_deteriorate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "s25bhd-deteriorate")
+}
+alternative_sprites(spriteset_s25bhd_shenyang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "s25bhd-shenyang")
+}
+
+switch (FEAT_TRAINS, SELF, switch_syz25bhd_articulated_part, extra_callback_info1) {
+    1..2: return syz25bhd;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_s25bhd_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL); // Unfinished
+    1: return string(STR_DETERIORATE);
+    2: return string(STR_SHENYANG);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_s25bhd_graphics_subtype, cargo_subtype) {
+    0: spriteset_s25bhd_original; // Unfinished
+    1: spriteset_s25bhd_deteriorate;
+    2: spriteset_s25bhd_shenyang;
+}
+
+switch (FEAT_TRAINS, SELF, switch_s25bhd_graphics, position_in_articulated_veh % 3) {
+    1: switch_s25bhd_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_syz25bhd_capacity, position_in_articulated_veh % 3) {
+    1: return 176;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_syz25bhd_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_FULL_NAME_SYZ25B), string(STR_S25BHD_LIVERY_AVAILABILITY), string(STR_COMFORT_160));
+}

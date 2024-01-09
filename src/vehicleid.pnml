@@ -77,11 +77,19 @@ item (FEAT_TRAINS, yz25b, 2077) {}
 item (FEAT_TRAINS, rz25b, 2078) {}
 item (FEAT_TRAINS, yw25b, 2079) {}
 item (FEAT_TRAINS, rw25b, 2080) {}
-item (FEAT_TRAINS, syz25b, 2081) {}
-item (FEAT_TRAINS, srz25b, 2082) {}
-item (FEAT_TRAINS, syz25k, 2083) {}
-item (FEAT_TRAINS, srz25k, 2084) {}
-
+item (FEAT_TRAINS, syz25bld, 2081) {}
+item (FEAT_TRAINS, srz25bld, 2082) {}
+item (FEAT_TRAINS, syz25kld, 2083) {}
+item (FEAT_TRAINS, srz25kld, 2084) {}
+item (FEAT_TRAINS, syz25bhd, 2085) {}
+item (FEAT_TRAINS, srz25bhd, 2086) {}
+item (FEAT_TRAINS, syw25bhd, 2087) {}
+item (FEAT_TRAINS, srw25bhd, 2088) {}
+item (FEAT_TRAINS, syz25khd, 2089) {}
+item (FEAT_TRAINS, srz25khd, 2090) {}
+item (FEAT_TRAINS, syw25khd, 2091) {}
+item (FEAT_TRAINS, srw25khd, 2092) {}
+item (FEAT_TRAINS, sca25khd, 2093) {}
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 #define id_range_wagons 0x0C00..0x0FFF
@@ -91,6 +99,10 @@ item (FEAT_TRAINS, g60, 3074) {}
 item (FEAT_TRAINS, p60, 3075) {}
 item (FEAT_TRAINS, c62, 3076) {}
 item (FEAT_TRAINS, nx17, 3077) {}
+item (FEAT_TRAINS, n60, 3078) {}
+item (FEAT_TRAINS, c70, 3079) {}
+item (FEAT_TRAINS, p70, 3080) {}
+item (FEAT_TRAINS, gn70, 3081) {}
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
@@ -105,6 +117,8 @@ item (FEAT_TRAINS, df4d0000, 5123) {}
 item (FEAT_TRAINS, df4d3000, 5124) {}
 item (FEAT_TRAINS, df4d4000, 5125) {}
 item (FEAT_TRAINS, df11, 5126) {}
+item (FEAT_TRAINS, nj2, 5127) {}
+item (FEAT_TRAINS, df5, 5128) {}
 
 //25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
 #define id_range_25_electric 0x1800..0x1BFF
@@ -114,6 +128,7 @@ item (FEAT_TRAINS, hxd1b, 6146) {}
 item (FEAT_TRAINS, ss3, 6147) {}
 item (FEAT_TRAINS, ss8, 6148) {}
 item (FEAT_TRAINS, hxd1, 6149) {}
+item (FEAT_TRAINS, ss4, 6150) {}
 
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
 #define id_range_multi_loco 0x1C00..0x1FFF 

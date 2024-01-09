@@ -34,5 +34,5 @@ switch (FEAT_TRAINS, SELF, switch_xl25t_capacity, position_in_articulated_veh % 
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25t_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_FULL_NAME_XL25T), string(STR_25T_LIVERY_AVAILABILITY), string(STR_DECAY_200));
+    return string(STR_DESC_3, string(STR_FULL_NAME_XL25T), string(STR_XL25T_LIVERY_AVAILABILITY), string(STR_DECAY_200));
 }

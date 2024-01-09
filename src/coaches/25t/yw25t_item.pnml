@@ -21,7 +21,7 @@ item (FEAT_TRAINS, yw25t) {
         default_cargo_type:             PASS;
         ai_special_flag:                AI_FLAG_PASSENGER;
         cargo_capacity:                 66;
-        loading_speed:                  6 << param_loading_speed;
+        loading_speed:                  8 << param_loading_speed;
         cargo_age_period:               370 << param_cargo_decay;
 
         // Stats
@@ -36,6 +36,7 @@ item (FEAT_TRAINS, yw25t) {
         // Menu
         additional_text:                switch_yw25t_additional_text;
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_25t_cargo_subtype;
         
         // Graphics
         default:                        switch_25t_graphics;

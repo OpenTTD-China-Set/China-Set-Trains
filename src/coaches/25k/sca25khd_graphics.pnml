@@ -1,0 +1,38 @@
+// Begin SCA25KHD
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_sca25khd_purchase) {
+    template_empty ()
+}
+alternative_sprites(spriteset_sca25khd_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "sca25khd-xi'an")
+}
+
+// Vehicle
+spriteset (spriteset_sca25khd_xian) {
+    template_empty ()
+}
+alternative_sprites(spriteset_sca25khd_xian, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "sca25khd-xi'an")
+}
+
+switch (FEAT_TRAINS, SELF, switch_sca25khd_articulated_part, extra_callback_info1) {
+    1..2: return sca25khd;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_sca25khd_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_sca25khd_xian;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_sca25khd_capacity, position_in_articulated_veh % 3) {
+    1: return 72;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_sca25khd_additional_text, param_cargo_decay) {
+    return string(STR_DESC_4, string(STR_FULL_NAME_SCA25K), string(STR_SCA25KHD_LIVERY_AVAILABILITY), string(STR_COMFORT_160_CAFE), string(STR_CAFE_EFFECT));
+}

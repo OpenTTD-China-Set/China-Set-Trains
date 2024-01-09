@@ -50,23 +50,29 @@ By Babel and John Franklin
 G60
 By Babel, modified by John Franklin
 
-P60, P62
+P60, P62, P70, NX17, N60, GN70, C70
 By Babel
 
 HXD1B
 By wuwu and Babel 
 
-SS3, SS8, DF4D-0000, DF4D-xihu, DF11
+SS3, SS4, SS8, DF4D-0000, DF4D-xihu, DF5, DF11, NJ2 (Qingzang)
 By Babel
 
-DF4D-3000, -4000, -7000
+DF4D-3000, -4000, -7000, NJ2 (Original)
 By wuwu
 
-(KD25G, KD25K, S25K)-Luchaogang, 25B-Jitong
+(KD25G, KD25K, S25K Low Door)-Luchaogang, 25B-Jitong
 By wuwu
 
-S25B (Short distance version)
+S25B Low Door
 By Babel
 
-NX17
+25T-(Qingzang, Gaozu Green), S25B High Door - deteriorated
 By Babel
+
+S25K Low Door - Liaodong Peninsula, S25K High Door - Xianxing, S25B Low Doors -(Urumqi, Xianxing, with strengthening steel sheet, deteriorated), S25B High Door - Shenyang, (CA, KD)25G-Orange
+By wuwu
+
+(SY/RZ, SYW, SRW, SCA, KD)25K-Xi'an
+By wuwu

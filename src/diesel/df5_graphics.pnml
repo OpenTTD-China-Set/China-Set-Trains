@@ -1,0 +1,34 @@
+// Begin DF5
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_df5_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_df5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "df5")
+}
+
+// Vehicle
+spriteset (spriteset_df5_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_df5_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df5")
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_df5_articulated_part, extra_callback_info1) {
+    1..2: return df5;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df5_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_df5_original;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_df5_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_FULL_NAME_DF5), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_16));
+}

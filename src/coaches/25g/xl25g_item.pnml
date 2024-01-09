@@ -13,7 +13,7 @@ item (FEAT_TRAINS, xl25g) {
         track_type:                     SACN;
 
         // Cargo
-        refittable_cargo_classes:       bitmask(CC_MAIL);
+        refittable_cargo_classes:       bitmask(CC_MAIL, CC_ARMOURED);
         non_refittable_cargo_classes:   0;
         cargo_allow_refit:              [MAIL];
         cargo_disallow_refit:           [];
