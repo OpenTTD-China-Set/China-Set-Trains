@@ -8,15 +8,15 @@ item (FEAT_TRAINS, crh5a) {
         
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2006,01,01);
+        introduction_date:              date(2007,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SACA;
+        track_type:                     SAAA;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
         non_refittable_cargo_classes:   0;
-        cargo_allow_refit:              [];
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
         cargo_disallow_refit:           [];
         refit_cost:                     0;
         default_cargo_type:             PASS;

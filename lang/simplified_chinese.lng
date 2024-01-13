@@ -110,7 +110,9 @@ STR_NAME_HXD3D          :HXD3D (电力)
 
 STR_NAME_CR200JA        :CR200J-A (电力动车)
 STR_NAME_CR200JAL       :CR200J-A (长编组) (电力动车)
+STR_NAME_CRH2A          :CRH2A (电力动车)
 STR_NAME_CRH5A          :CRH5A (电力动车)
+STR_NAME_CRH2C          :CRH2C (电力动车)
 STR_NAME_CR400BF        :CR400BF (电力动车)
 
 STR_NAME_ZEMUW          :动车组二等座车厢
@@ -225,17 +227,27 @@ STR_HXD1B_NICKNAME                  :{BLACK}昵称: {GOLD}河蟹
 STR_HXD3C_NICKNAME                  :{BLACK}昵称: {GOLD}电狒狒
 STR_HXD3D_NICKNAME                  :{BLACK}昵称: {GOLD}番茄
 STR_CR200J_NICKNAME                 :{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方), {GREEN}“垃圾桶”{GOLD}(民间)
+STR_CRH2A_NICKNAME                  :{BLACK}昵称：{GOLD}带鱼
+STR_CRH2C_NICKNAME                  :{BLACK}昵称：{GOLD}疯带鱼
 STR_CRH5A_NICKNAME                  :{BLACK}昵称：{GOLD}驴
 STR_CR400BF_NICKNAME                :{BLACK}昵称：{GOLD}金凤凰
 
 STR_RELIABILITY_32                  :{BLACK}可靠性下降速度：{GOLD}32
 STR_RELIABILITY_20                  :{BLACK}可靠性下降速度：{GOLD}20
 STR_RELIABILITY_16                  :{BLACK}可靠性下降速度：{GOLD}16
+STR_RELIABILITY_15                  :{BLACK}可靠性下降速度：{GOLD}15
 STR_RELIABILITY_14                  :{BLACK}可靠性下降速度：{GOLD}14
 STR_RELIABILITY_10                  :{BLACK}可靠性下降速度：{GOLD}10
 STR_RELIABILITY_8                   :{BLACK}可靠性下降速度：{GOLD}8
 STR_RELIABILITY_6                   :{BLACK}可靠性下降速度：{GOLD}6
 STR_RELIABILITY_5                   :{BLACK}可靠性下降速度：{GOLD}5
+
+STR_310_KMH             : - 最高速度 310 km/h
+STR_350_KMH             : - 最高速度 350 km/h，运营费用增加
+STR_380_KMH             : - 最高速度 380 km/h，运营费用大幅增加
+
+STR_350_AVAILABLE       :可改装为最高速度 350 km/h，运营费用增加
+STR_350_380_AVAILABLE   :可改装为最高速度 350 或 380 km/h，运营费用增加
 
 STR_ORIGINAL            : - 原版涂装
 STR_ORANGE              :{ORANGE} - 橘色涂装
@@ -306,7 +318,11 @@ STR_NJ2_CONSIST                     :{BLACK}构成：{GOLD}2-4节重联
 STR_DF11G_CONSIST                   :{BLACK}构成：{GOLD}两节重联 (普通)，或一节在头部提供动力，另一节在尾部供电 (“拆猪”，最高速度 120 km/h, 功率 4133 公制马力)
 STR_CRH5A_CONSIST                   :{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车 1495 公制马力
 STR_CR400BF_CONSIST                 :{BLACK}构成：{GOLD}5-17节； n 节构成中动力车节数为 int(n/2) ，拖车节数为 int((n+1)/2)
+STR_CRH2A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，半数（向上取整）车厢为动力车
+STR_CRH2C_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾拖车，中间全为动力车
 
+STR_CRH2A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
+STR_CRH2C_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
 STR_CRH5A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CR400BF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 

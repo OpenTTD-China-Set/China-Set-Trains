@@ -131,6 +131,7 @@ Founder:
 Project leading and management:
 - John Franklin
 - Ahyangyi
+- babel
 - NACHN
 - wuwu
 
@@ -151,6 +152,8 @@ Graphics (see \docs\voxelsource.txt for details):
 - John Franklin
 - Mikhail
 - wuwu
+- ctx
+- shentie106
 
 Code:
 - John Franklin, NML-based Coding

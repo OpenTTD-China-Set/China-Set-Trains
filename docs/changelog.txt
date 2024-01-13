@@ -1,5 +1,16 @@
 China Set: Trains Changelog
 =========================
+0.1.3.136 (13/1/2024)
+--------------------
+Add: CRH2C
+Fix #31: CRH2A Power
+Fix #32: CR400BF Power and tractive effort
+
+0.1.3.135 (13/1/2024)
+--------------------
+Add: CRH2A, prepared for CRH2C, CRH3A, CR200J-B, DJJ1, NDJ3
+Change: YETI Lives Matter - All MUs refittable to YETI workers
+
 0.1.2.134 (9/1/2024)
 --------------------
 Fix #30: NJ2 Sprites

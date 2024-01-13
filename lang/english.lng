@@ -110,7 +110,9 @@ STR_NAME_HXD3D          :HXD3D (Electric)
 
 STR_NAME_CR200JA        :CR200J-A (EMU)
 STR_NAME_CR200JAL       :CR200J-A (Long Version) (EMU)
+STR_NAME_CRH2A          :CRH2A (EMU)
 STR_NAME_CRH5A          :CRH5A (EMU)
+STR_NAME_CRH2C          :CRH2C (EMU)
 STR_NAME_CR400BF        :CR400BF (EMU)
 
 STR_NAME_ZEMUW          :2nd-Class (ZE) MU Wagon
@@ -231,6 +233,8 @@ STR_HXD1B_NICKNAME                  :{BLACK}Nickname: {GOLD}River Crab
 STR_HXD3C_NICKNAME                  :{BLACK}Nickname: {GOLD}Electric Baboon
 STR_HXD3D_NICKNAME                  :{BLACK}Nickname: {GOLD}Tomato
 STR_CR200J_NICKNAME                 :{BLACK}Nickname: {GREEN}"Hulk" {GOLD}(Official), {GREEN}"Trash Bin" {GOLD}(Folk)
+STR_CRH2A_NICKNAME                  :{BLACK}Nickname: {GOLD}Hairtail
+STR_CRH2C_NICKNAME                  :{BLACK}Nickname: {GOLD}Crazy Hairtail
 STR_CRH5A_NICKNAME                  :{BLACK}Nickname: {GOLD}Donkey
 STR_CR400BF_NICKNAME                :{BLACK}Nickname: {GOLD}Golden Phoenix
 
@@ -238,11 +242,19 @@ STR_CR400BF_NICKNAME                :{BLACK}Nickname: {GOLD}Golden Phoenix
 STR_RELIABILITY_32                  :{BLACK}Reliability decay speed: {GOLD}32
 STR_RELIABILITY_20                  :{BLACK}Reliability decay speed: {GOLD}20
 STR_RELIABILITY_16                  :{BLACK}Reliability decay speed: {GOLD}16
+STR_RELIABILITY_15                  :{BLACK}Reliability decay speed: {GOLD}15
 STR_RELIABILITY_14                  :{BLACK}Reliability decay speed: {GOLD}14
 STR_RELIABILITY_10                  :{BLACK}Reliability decay speed: {GOLD}10
 STR_RELIABILITY_8                   :{BLACK}Reliability decay speed: {GOLD}8
 STR_RELIABILITY_6                   :{BLACK}Reliability decay speed: {GOLD}6
 STR_RELIABILITY_5                   :{BLACK}Reliability decay speed: {GOLD}5
+
+STR_310_KMH             : - Max Speed 310 km/h
+STR_350_KMH             : - Max Speed 350 km/h, Running Costs Increase
+STR_380_KMH             : - Max Speed 380 km/h, Running Costs Greatly Increase
+
+STR_350_AVAILABLE       :Refittable to Max Speed 350 km/h (Increasing running costs)
+STR_350_380_AVAILABLE   :Refittable to Max Speed 350 or 380 km/h (Increasing running costs)
 
 STR_ORIGINAL            : - Original Livery
 STR_ORANGE              :{ORANGE} - Orange Livery
@@ -250,6 +262,7 @@ STR_GREEN               :{GREEN} - Green Livery
 STR_XIHU                : - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery
 STR_XIHU_REVERSE        : - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery, reversed
 STR_DF4D_7000           : - {GREEN}7000-{YELLOW}Series {BLACK}Livery
+
 
 STR_BUILD_YEAR          : - According to build year
 STR_YW22_ORIGINAL       : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240
@@ -313,7 +326,11 @@ STR_NJ2_CONSIST                     :{BLACK}Consist: {GOLD}2 to 4 sections
 STR_DF11G_CONSIST                   :{BLACK}Consist: {GOLD}2 sections joint together (Normal), or one section at head, another section at back ("Splitting Pig", max speed 120 km/h, power 4133 hpM)
 STR_CRH5A_CONSIST                   :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car
 STR_CR400BF_CONSIST                 :{BLACK}Consist: {GOLD}5 to 17 cars; int(n/2) motorised cars and int((n+1)/2) trailers in an n-car consist.
+STR_CRH2A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, half of which (ceiling up) are motorised cars
+STR_CRH2C_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with head and cab trailers, all middle cars motorised
 
+STR_CRH2A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
+STR_CRH2C_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
 STR_CRH5A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CR400BF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 
