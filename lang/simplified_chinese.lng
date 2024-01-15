@@ -108,9 +108,13 @@ STR_NAME_HXD1B          :HXD1B (电力)
 STR_NAME_HXD3C          :HXD3C (电力)
 STR_NAME_HXD3D          :HXD3D (电力)
 
+STR_NAME_NDJ3           :NDJ3 "长城号" (电力动车)
+STR_NAME_DJJ1           :DJJ1 "蓝箭" (电力动车)
 STR_NAME_CR200JA        :CR200J-A (电力动车)
 STR_NAME_CR200JAL       :CR200J-A (长编组) (电力动车)
+STR_NAME_CR200JB        :CR200J-B (电力动车)
 STR_NAME_CRH2A          :CRH2A (电力动车)
+STR_NAME_CRH3A          :CRH3A (电力动车)
 STR_NAME_CRH5A          :CRH5A (电力动车)
 STR_NAME_CRH2C          :CRH2C (电力动车)
 STR_NAME_CR400BF        :CR400BF (电力动车)
@@ -186,6 +190,7 @@ STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿�
 STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BROWN}原版{GOLD}涂装，{GREEN}西户铁路{GOLD}涂装
 STR_DF4D4000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BLUE}4000{YELLOW}系{GOLD}涂装，{GREEN}7000{YELLOW}系{GOLD}涂装
 STR_NJ2_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{WHITE}原色{GOLD}涂装，{DKGREEN}青藏铁路{GOLD}涂装
+STR_DJJ1_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}原版涂装，广深铁路涂装
 STR_22_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装 (未完成)
 STR_22B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装
 STR_25B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{BLUE}集{RED}通{WHITE}铁{BLUE}路{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
@@ -226,17 +231,21 @@ STR_HXD1_NICKNAME                   :{BLACK}昵称: {GOLD}蓝精灵
 STR_HXD1B_NICKNAME                  :{BLACK}昵称: {GOLD}河蟹
 STR_HXD3C_NICKNAME                  :{BLACK}昵称: {GOLD}电狒狒
 STR_HXD3D_NICKNAME                  :{BLACK}昵称: {GOLD}番茄
+STR_NDJ3_NICKNAME                   :{BLACK}昵称：{WHITE}大白猪
 STR_CR200J_NICKNAME                 :{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方), {GREEN}“垃圾桶”{GOLD}(民间)
 STR_CRH2A_NICKNAME                  :{BLACK}昵称：{GOLD}带鱼
 STR_CRH2C_NICKNAME                  :{BLACK}昵称：{GOLD}疯带鱼
+STR_CRH3A_NICKNAME                  :{BLACK}昵称：{GOLD}黄金眼
 STR_CRH5A_NICKNAME                  :{BLACK}昵称：{GOLD}驴
 STR_CR400BF_NICKNAME                :{BLACK}昵称：{GOLD}金凤凰
 
 STR_RELIABILITY_32                  :{BLACK}可靠性下降速度：{GOLD}32
+STR_RELIABILITY_24                  :{BLACK}可靠性下降速度：{GOLD}24
 STR_RELIABILITY_20                  :{BLACK}可靠性下降速度：{GOLD}20
 STR_RELIABILITY_16                  :{BLACK}可靠性下降速度：{GOLD}16
 STR_RELIABILITY_15                  :{BLACK}可靠性下降速度：{GOLD}15
 STR_RELIABILITY_14                  :{BLACK}可靠性下降速度：{GOLD}14
+STR_RELIABILITY_12                  :{BLACK}可靠性下降速度：{GOLD}12
 STR_RELIABILITY_10                  :{BLACK}可靠性下降速度：{GOLD}10
 STR_RELIABILITY_8                   :{BLACK}可靠性下降速度：{GOLD}8
 STR_RELIABILITY_6                   :{BLACK}可靠性下降速度：{GOLD}6
@@ -272,6 +281,7 @@ STR_XIAN                : - 西安铁路局
 STR_SHENYANG            : - 沈阳铁路局
 STR_XIANXING            : - 先行号涂装
 STR_QINGZANG            : - 青藏铁路涂装
+STR_GUANGSHEN           : - 广深铁路涂装
 STR_JINWEN              : - {WHITE}金{RED}温{BLUE}铁{WHITE}路{BLACK}公司
 STR_GAOZU_GREEN         : - {DKGREEN}"高阻绿" {BLACK}(未完成, 25T除外)
 
@@ -311,18 +321,24 @@ STR_DESC_PENGDAIKE                  :{BLACK}棚代客：从20世纪80年代至20
 STR_ATTACH_ALL_CRH_CR               :{BLACK}匹配的动车组：{GOLD}所有和谐/复兴号动车
 STR_ATTACH_SLEEPER_MU               :{BLACK}匹配的动车组：{GOLD}所有提供卧铺的和谐/复兴号动车
 STR_ATTACH_CR200J                   :{BLACK}匹配的动车组：{GOLD}CR200J系列动车
+STR_NDJ3_CAN_ATTACH_WAGON           :{BLACK}匹配的车厢：{GOLD}二等座、一等座、二等/餐车合造{BLACK}，二等座载客量：114，舒适度：200
+STR_DJJ1_CAN_ATTACH_WAGON           :{BLACK}匹配的车厢：仅有{GOLD}一等座{BLACK}，与软座相似，舒适度：240
 STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
 STR_CRH_CAN_ATTACH_WAGON            :{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
 
 STR_NJ2_CONSIST                     :{BLACK}构成：{GOLD}2-4节重联
 STR_DF11G_CONSIST                   :{BLACK}构成：{GOLD}两节重联 (普通)，或一节在头部提供动力，另一节在尾部供电 (“拆猪”，最高速度 120 km/h, 功率 4133 公制马力)
+STR_NDJ3_CONSIST                    :{BLACK}构成：{GOLD}头尾各一节，中间加挂至少四节车厢
+STR_DJJ1_CONSIST                    :{BLACK}构成：{GOLD}头部一节，或头尾各一节，中间加挂至少四节车厢
 STR_CRH5A_CONSIST                   :{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车 1495 公制马力
 STR_CR400BF_CONSIST                 :{BLACK}构成：{GOLD}5-17节； n 节构成中动力车节数为 int(n/2) ，拖车节数为 int((n+1)/2)
 STR_CRH2A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，半数（向上取整）车厢为动力车
 STR_CRH2C_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾拖车，中间全为动力车
+STR_CRH3A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
 
 STR_CRH2A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
 STR_CRH2C_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
+STR_CRH3A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CRH5A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CR400BF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 

@@ -136,7 +136,7 @@ item (FEAT_TRAINS, ss4, 6150) {}
 
 //DMU, available ID range: 8192-9215 (hex 0x2000..0x23FF)
 #define id_range_dmu 0x2000..0x23FF
-
+item (FEAT_TRAINS, ndj3, 8192) {}
 
 //25kV AC EMU, available ID range: 9216-10239 (hex 0x2400..0x27FF)
 #define id_range_25_emu 0x2000..0x23FF
@@ -146,6 +146,9 @@ item (FEAT_TRAINS, cr400bf, 9218) {}
 item (FEAT_TRAINS, cr200jal, 9219) {}
 item (FEAT_TRAINS, crh2a, 9220) {}
 item (FEAT_TRAINS, crh2c, 9221) {}
+item (FEAT_TRAINS, crh3a, 9222) {}
+item (FEAT_TRAINS, cr200jb, 9223) {}
+item (FEAT_TRAINS, djj1, 9224) {}
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
 #define id_range_1500_emu 0x2800..0x2BFF

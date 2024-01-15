@@ -1,0 +1,160 @@
+// Begin CR200JB
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_cr200jb_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_cr200jb_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-emu", "cr200j-b-m")
+}
+
+// Vehicle
+spriteset (spriteset_cr200jb_front) {
+    template_empty ()
+}
+spriteset (spriteset_cr200jb_middle) {
+    template_empty ()
+}
+spriteset (spriteset_cr200jb_cab) {
+    template_empty ()
+}
+
+alternative_sprites(spriteset_cr200jb_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cr200j-b-m")
+}
+alternative_sprites (spriteset_cr200jb_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cr200j-b-t")
+}
+alternative_sprites (spriteset_cr200jb_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cr200j-b-c")
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_articulated_part, extra_callback_info1) {
+    1..2: return cr200jb;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_cr200jb_front;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_head_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CR200J_NICKNAME), string(STR_RELIABILITY_12));
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_middle_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_cr200jb_middle;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_cab_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_cr200jb_cab;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_wagon_graphics, position_in_consist_from_end) {
+    0..2: switch_cr200jb_cab_graphics;
+    switch_cr200jb_middle_graphics;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_wagon_length, position_in_consist_from_end) {
+    switch_length_2_8_2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_middle_capacity_ze, position_in_articulated_veh % 3) {
+    1: return 98;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_middle_capacity_zy, position_in_articulated_veh % 3) {
+    1: return 72;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_middle_capacity_zs, position_in_articulated_veh % 3) {
+    1: return 24;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_middle_capacity_sw, position_in_articulated_veh % 3) {
+    1: return 18;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_middle_capacity_zec, position_in_articulated_veh % 3) {
+    1: return 76;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_middle_capacity, vehicle_type_id) {
+    1024: switch_cr200jb_middle_capacity_ze;
+    1025: switch_cr200jb_middle_capacity_zy;
+    1027: switch_cr200jb_middle_capacity_zs;
+    1028: switch_cr200jb_middle_capacity_sw;
+    1035: switch_cr200jb_middle_capacity_zec;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_cab_capacity_ze, position_in_articulated_veh % 3) {
+    1: return 72;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_cab_capacity_zy, position_in_articulated_veh % 3) {
+    1: return 56;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_cab_capacity_zs, position_in_articulated_veh % 3) {
+    1: return 18;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_cab_capacity_sw, position_in_articulated_veh % 3) {
+    1: return 12;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_cab_capacity_zec, position_in_articulated_veh % 3) {
+    1: return 52;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_cab_capacity, vehicle_type_id) {
+    1024: switch_cr200jb_cab_capacity_ze;
+    1025: switch_cr200jb_cab_capacity_zy;
+    1027: switch_cr200jb_cab_capacity_zs;
+    1028: switch_cr200jb_cab_capacity_sw;
+    1035: switch_cr200jb_cab_capacity_zec;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_wagon_capacity, position_in_consist_from_end) {
+    0..2: switch_cr200jb_cab_capacity;
+    switch_cr200jb_middle_capacity;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_wagon_cost, vehicle_type_id) {
+    1024: return 20;
+    1025: return 24;
+    1027: return 28;
+    1028: return 29;
+    1035: return 40;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jb_wagon_running, vehicle_type_id) {
+    1024: return 8;
+    1025: return 12;
+    1027: return 16;
+    1028: return 17;
+    1035: return 13;
+    return 0;
+}

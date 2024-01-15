@@ -1,0 +1,77 @@
+item (FEAT_TRAINS, djj1) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_DJJ1);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2000,09,01);
+        model_life:                     30;
+        retire_early:                   20;
+        vehicle_life:                   15;
+        track_type:                     SACA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          200 km/h;
+        power:                          4800 kW;
+        weight:                         78 ton;
+        tractive_effort_coefficient:    0.276;
+        cost_factor:                    96;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            44;
+        reliability_decay:              24;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_djj1_additional_text;
+        can_attach_wagon:               djj1wagon;
+        start_stop:                     switch_djj1_start_stop;
+        cargo_subtype_text:             swtich_djj1_cargo_subtype;
+
+        // Graphics
+        default:                        switch_djj1_graphics;
+        purchase:                       spriteset_djj1_purchase_original;
+        articulated_part:               switch_djj1_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_6_2;
+        cargo_capacity:                 0;
+        cost_factor:                    85;
+        running_cost_factor:            81 * runningcostfactor() + 20;
+        purchase_running_cost_factor:   344;
+        purchase_cargo_capacity:        0;
+    }
+
+    // Multiple Unit Wagons
+    livery_override(zymuw) {
+        default:                        switch_djj1_wagon_graphics;
+        cargo_capacity:                 switch_djj1_wagon_capacity;
+        length:                         switch_djj1_wagon_length;
+        weight:                         44;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (12 * 4 * 5) << param_cargo_decay;
+        bitmask_vehicle_info:           0;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    9;
+        running_cost_factor:            8 * runningcostfactor() * 2 + 2; // NO CAFE, WITH AC
+    }
+}
+
+// End DJJ1
+

@@ -200,17 +200,24 @@
 
 
 // DMU
-
+#include "src/dmu/ndj3_graphics.pnml"
+#include "src/dmu/ndj3_item.pnml"
 
 // 25kV AC EMU
+#include "src/25-emu/djj1_graphics.pnml"
+#include "src/25-emu/djj1_item.pnml"
 #include "src/25-emu/cr200ja_graphics.pnml"
 #include "src/25-emu/cr200ja_item.pnml"
 #include "src/25-emu/cr200jal_graphics.pnml"
 #include "src/25-emu/cr200jal_item.pnml"
+#include "src/25-emu/cr200jb_graphics.pnml"
+#include "src/25-emu/cr200jb_item.pnml"
 #include "src/25-emu/crh2a_graphics.pnml"
 #include "src/25-emu/crh2a_item.pnml"
 #include "src/25-emu/crh2c_graphics.pnml"
 #include "src/25-emu/crh2c_item.pnml"
+#include "src/25-emu/crh3a_graphics.pnml"
+#include "src/25-emu/crh3a_item.pnml"
 #include "src/25-emu/crh5a_graphics.pnml"
 #include "src/25-emu/crh5a_item.pnml"
 #include "src/25-emu/cr400bf_graphics.pnml"
