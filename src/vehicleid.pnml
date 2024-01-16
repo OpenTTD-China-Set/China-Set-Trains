@@ -119,6 +119,9 @@ item (FEAT_TRAINS, df4d4000, 5125) {}
 item (FEAT_TRAINS, df11, 5126) {}
 item (FEAT_TRAINS, nj2, 5127) {}
 item (FEAT_TRAINS, df5, 5128) {}
+// 5129-5130 coded by wuwu
+item (FEAT_TRAINS, df4bk, 5129) {}
+item (FEAT_TRAINS, df4bh, 5130) {}
 
 //25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
 #define id_range_25_electric 0x1800..0x1BFF
@@ -129,6 +132,14 @@ item (FEAT_TRAINS, ss3, 6147) {}
 item (FEAT_TRAINS, ss8, 6148) {}
 item (FEAT_TRAINS, hxd1, 6149) {}
 item (FEAT_TRAINS, ss4, 6150) {}
+// 6151-6157 coded by wuwu
+item (FEAT_TRAINS, ss4g, 6151) {}
+item (FEAT_TRAINS, ss5, 6152) {}
+item (FEAT_TRAINS, ss6, 6153) {}
+item (FEAT_TRAINS, ss7, 6154) {}
+item (FEAT_TRAINS, ss7b, 6155) {}
+item (FEAT_TRAINS, ss7c, 6156) {}
+item (FEAT_TRAINS, ss7e, 6157) {}
 
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
 #define id_range_multi_loco 0x1C00..0x1FFF 

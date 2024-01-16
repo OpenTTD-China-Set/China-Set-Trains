@@ -1,5 +1,11 @@
 China Set: Trains Changelog
 =========================
+0.1.3.141 (16/1/2024)
+--------------------
+Merged wuwu (kaitokiwa) branch
+Add: DF4B, SS4G, SS5, SS6, SS6B, SS7, SS7B, SS7C, SS7E (coded by wuwu)
+Change: DF4 sprites (coded by wuwu)
+
 0.1.3.140 (15/1/2024)
 --------------------
 Add: NDJ3

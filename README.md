@@ -120,11 +120,11 @@ Project leading and management:
 - Ahyangyi
 - babel
 - NACHN
-- wuwu
+- wuwu (kaitokiwa)
 
 Information basis:
 - NACHN
-- wuwu
+- wuwu (kaitokiwa)
 - babel
 - huanfeng
 - nengyeqing
@@ -138,13 +138,14 @@ Graphics (see \docs\voxelsource.txt for details):
 - babel
 - John Franklin
 - Mikhail
-- wuwu
+- wuwu (kaitokiwa)
 - ctx
 - shentie106
 
 Code:
 - John Franklin, NML-based Coding
 - Ahyangyi, Co-operator
+- wuwu (kaitokiwa), Co-operator
 
 Translations:
 

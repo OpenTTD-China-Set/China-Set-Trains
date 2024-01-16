@@ -60,7 +60,7 @@ switch (FEAT_TRAINS, SELF, djj1wagon, vehicle_type_id) {
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
-switch (FEAT_TRAINS, SELF, switch_djj1_start_stop, (num_vehs_in_consist >= 12) && ((position_in_articulated_veh < 3) || (position_in_articulated_veh_from_end < 3))) {
+switch (FEAT_TRAINS, SELF, switch_djj1_start_stop, (num_vehs_in_consist >= 12) && ((position_in_consist < 3) || (position_in_consist_from_end < 3))) {
     0: return string(STR_DJJ1_CONSIST);
     return CB_RESULT_NO_TEXT;
 }

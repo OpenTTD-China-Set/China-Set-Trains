@@ -93,6 +93,8 @@ STR_NAME_NX17           :NX17 (平车)
 
 STR_NAME_DF4K           :DF4 (内燃) (客运型)
 STR_NAME_DF4H           :DF4 (内燃) (货运型)
+STR_NAME_DF4BK          :DF4B (内燃) (客运型)
+STR_NAME_DF4BH          :DF4B (内燃) (货运型)
 STR_NAME_DF4D0000       :DF4D-0000 (内燃)
 STR_NAME_DF4D3000       :DF4D-3000 (内燃)
 STR_NAME_DF4D4000       :DF4D-4000/7000 (内燃)
@@ -102,13 +104,21 @@ STR_NAME_DF11G          :DF11G (内燃)
 STR_NAME_NJ2            :NJ2 (内燃)
 STR_NAME_SS3            :SS3 (电力)
 STR_NAME_SS4            :SS4 (电力)
+STR_NAME_SS4G           :SS4G (电力)
+STR_NAME_SS5            :SS5 (电力)
+STR_NAME_SS6            :SS6 (电力)
+STR_NAME_SS6B           :SS6B (电力)
+STR_NAME_SS7            :SS7 (电力)
+STR_NAME_SS7B           :SS7B (电力)
+STR_NAME_SS7C           :SS7C (电力)
+STR_NAME_SS7E           :SS7E (电力)
 STR_NAME_SS8            :SS8 (电力)
 STR_NAME_HXD1           :HXD1 (电力)
 STR_NAME_HXD1B          :HXD1B (电力)
 STR_NAME_HXD3C          :HXD3C (电力)
 STR_NAME_HXD3D          :HXD3D (电力)
 
-STR_NAME_NDJ3           :NDJ3 "长城号" (电力动车)
+STR_NAME_NDJ3           :NDJ3 "长城号" (内燃动车)
 STR_NAME_DJJ1           :DJJ1 "蓝箭" (电力动车)
 STR_NAME_CR200JA        :CR200J-A (电力动车)
 STR_NAME_CR200JAL       :CR200J-A (长编组) (电力动车)
@@ -170,12 +180,21 @@ STR_FULL_NAME_KD25G          :{BLACK}全称：{GOLD}25米改进型空调发电�
 STR_FULL_NAME_KD25K          :{BLACK}全称：{GOLD}25米快速型空调发电车
 
 STR_FULL_NAME_DF4            :{BLACK}全称：{GOLD}东风4型内燃机车
+STR_FULL_NAME_DF4B           :{BLACK}全称：{GOLD}东风4B型内燃机车
 STR_FULL_NAME_DF5            :{BLACK}全称：{GOLD}东风5型内燃机车
 STR_FULL_NAME_DF4D           :{BLACK}全称：{GOLD}东风4D型内燃机车
 STR_FULL_NAME_DF11           :{BLACK}全称：{GOLD}东风11型内燃机车
 STR_FULL_NAME_DF11G          :{BLACK}全称：{BLUE}东风11G型{WHITE}内燃机车
 STR_FULL_NAME_SS3            :{BLACK}全称：{GOLD}韶山3型电力机车
 STR_FULL_NAME_SS4            :{BLACK}全称：{GOLD}韶山4型电力机车
+STR_FULL_NAME_SS4G           :{BLACK}全称：{GOLD}韶山4G型电力机车
+STR_FULL_NAME_SS5            :{BLACK}全称：{GOLD}韶山5型电力机车
+STR_FULL_NAME_SS6            :{BLACK}全称：{GOLD}韶山6型电力机车
+STR_FULL_NAME_SS6B           :{BLACK}全称：{GOLD}韶山6B型电力机车
+STR_FULL_NAME_SS7            :{BLACK}全称：{GOLD}韶山7型电力机车
+STR_FULL_NAME_SS7B           :{BLACK}全称：{GOLD}韶山7B型电力机车
+STR_FULL_NAME_SS7C           :{BLACK}全称：{GOLD}韶山7C型电力机车
+STR_FULL_NAME_SS7E           :{BLACK}全称：{GOLD}韶山7E型电力机车
 STR_FULL_NAME_SS8            :{BLACK}全称：{GOLD}韶山8型电力机车
 STR_FULL_NAME_HXD1           :{BLACK}全称：{GOLD}和谐1型电力机车
 STR_FULL_NAME_HXD1B          :{BLACK}全称：{GOLD}和谐1B型电力机车
@@ -186,10 +205,11 @@ STR_US_IMPORT                :美国进口车型
 
 STR_XL25T_SSPE_DESCRIPTION          :{BLACK}新时速运递公司使用的XL25T版本。
 
-STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿色{GOLD}，{ORANGE}橘色
+STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿色涂装{GOLD}，{ORANGE}橘色涂装{BLACK}，{BLUE}京铁{YELLOW}资产{GOLD}涂装，{BLUE}“乌克兰”{YELLOW}涂装
 STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BROWN}原版{GOLD}涂装，{GREEN}西户铁路{GOLD}涂装
 STR_DF4D4000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BLUE}4000{YELLOW}系{GOLD}涂装，{GREEN}7000{YELLOW}系{GOLD}涂装
 STR_NJ2_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{WHITE}原色{GOLD}涂装，{DKGREEN}青藏铁路{GOLD}涂装
+STR_SS7C_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}大脸猫涂装，{YELLOW}香蕉{GOLD}涂装
 STR_DJJ1_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}原版涂装，广深铁路涂装
 STR_22_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装 (未完成)
 STR_22B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装
@@ -221,11 +241,20 @@ STR_NX17_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}随机
 STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}目前仅有广九铁路子涂装
 
 STR_DF4_NICKNAME                    :{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
+STR_DF4B_NICKNAME                   :{BLACK}改进后的内燃机使得该机车更加耐用。昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
 STR_DF4D_NICKNAME                   :{BLACK}昵称: {GOLD}老虎
 STR_DF11_NICKNAME                   :{BLACK}昵称: {GOLD}狮子
 STR_DF11G_NICKNAME                  :{BLACK}昵称: {GOLD}猪
 STR_SS3_NICKNAME                    :{BLACK}昵称: {GOLD}三哥 (前期), 三爷 (老化后)
 STR_SS4_NICKNAME                    :{BLACK}昵称: {BLUE}宝鸡蓝
+STR_SS4G_NICKNAME                   :{BLACK}简介:{GOLD}运用范围相当广泛的八轴货运电力机车，从平原到山区都有她的身影，{BLACK}昵称: {GOLD}四哥
+STR_SS5_NICKNAME                    :{GOLD}试验型机车，产量仅2台。
+STR_SS6_NICKNAME                    :{GOLD}在SS3型电力机车的基础上，吸收8K型电力机车的技术研发而成。用于陇海线西段的货运。{BLACK}昵称: {GOLD}小六
+STR_SS6B_NICKNAME                   :{BLACK}昵称: {GOLD}燕小六
+STR_SS7_NICKNAME                    :{BLACK}简介:{GOLD}为山区小转弯半径线路设计的通用电力机车，最大的特点是使用了B0-B0-B0轴式转向架布局。{BLACK}昵称{GOLD}烧鸡
+STR_SS7B_NICKNAME                   :{BLACK}简介:{GOLD}试制型25t轴重干线重载货运电力机车，产量仅2台，其中0001号机车于2005年因山体滑坡事故报废。{BLACK}昵称{GOLD}大脸猫
+STR_SS7C_NICKNAME                   :{BLACK}简介:{GOLD}客货运两用干线电力机车，昵称大脸猫（原版涂装）、{YELLOW}香蕉（黄色涂装）
+STR_SS7E_NICKNAME                   :{BLACK}简介:{GOLD}准高速干线电力机车，{BLACK}昵称{GOLD}美女
 STR_SS8_NICKNAME                    :{BLACK}昵称: {GOLD}扫把
 STR_HXD1_NICKNAME                   :{BLACK}昵称: {GOLD}蓝精灵
 STR_HXD1B_NICKNAME                  :{BLACK}昵称: {GOLD}河蟹
@@ -260,10 +289,15 @@ STR_350_380_AVAILABLE   :可改装为最高速度 350 或 380 km/h，运营费�
 
 STR_ORIGINAL            : - 原版涂装
 STR_ORANGE              :{ORANGE} - 橘色涂装
+STR_LATER_ORANGE        :{ORANGE} - 后期橘色涂装
 STR_GREEN               :{GREEN} - 绿色涂装
+STR_LATER_GREEN         :{GREEN} - 后期绿色涂装
 STR_XIHU                : - {GREEN}西户铁路{BLACK}涂装
 STR_XIHU_REVERSE        : - {GREEN}西户铁路{BLACK}涂装，倒转方向
 STR_DF4D_7000           : - {GREEN}7000{YELLOW}系{BLACK}涂装
+STR_SS7C_BANANA         : - {YELLOW}黄色{BLACK}涂装
+STR_DF4_JTZC            : - {YELLOW}京铁{BLUE}资产{BLACK}涂装
+STR_UKRAINE             : - {YELLOW}“乌克兰”{BLUE}涂装
 
 STR_BUILD_YEAR          : - 根据建造年份选择设计
 STR_YW22_ORIGINAL       : - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240

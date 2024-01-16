@@ -9,12 +9,18 @@ switch (FEAT_TRAINS, SELF, switch_df4h_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_df4h_graphics_subtype, cargo_subtype) {
     1: spriteset_df4_orange;
+    2: spriteset_df4b_green;
+    3: spriteset_df4_ukraine;
+    4: spriteset_df4_jtzc;
     spriteset_df4_green;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df4h_cargo_subtype, cargo_subtype) {
     0: return string(STR_GREEN);
     1: return string(STR_ORANGE);
+    2: return string(STR_LATER_GREEN);
+    3: return string(STR_UKRAINE);
+    4: return string(STR_DF4_JTZC);
     return CB_RESULT_NO_TEXT;
 }
 

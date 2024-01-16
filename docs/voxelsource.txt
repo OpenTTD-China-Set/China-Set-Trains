@@ -59,7 +59,7 @@ By wuwu and Babel
 SS3, SS4, SS8, DF4D-0000, DF4D-xihu, DF5, DF11, NJ2 (Qingzang)
 By Babel
 
-DF4D-3000, -4000, -7000, NJ2 (Original)
+DF4D-3000, -4000, -7000, NJ2 (Original), SS4G, SS5, SS6, SS6B
 By wuwu
 
 (KD25G, KD25K, S25K Low Door)-Luchaogang, 25B-Jitong
@@ -82,3 +82,6 @@ By Babel
 
 CRH3A, NDJ3-M
 By ctx
+
+SS7, SS7B, SS7C, SS7E
+By EMB190

@@ -13,7 +13,7 @@ alternative_sprites(spriteset_df4_purchase_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32
     template_purchase ("diesel", "df4")
 }
 alternative_sprites(spriteset_df4_purchase_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("diesel", "df4-orange")
+    template_purchase ("diesel", "df4-early-orange")
 }
 
 
@@ -24,13 +24,36 @@ spriteset (spriteset_df4_green) {
 spriteset (spriteset_df4_orange) {
     template_empty ()
 }
+spriteset (spriteset_df4b_green) {
+    template_empty ()
+}
+spriteset (spriteset_df4b_orange) {
+    template_empty ()
+}
+spriteset (spriteset_df4_ukraine) {
+    template_empty ()
+}
+spriteset (spriteset_df4_jtzc) {
+    template_empty ()
+}
 alternative_sprites(spriteset_df4_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4")
 }
 alternative_sprites(spriteset_df4_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4-orange")
+    template_standard ("diesel", "df4-early-orange")
 }
-
+alternative_sprites(spriteset_df4b_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4b")
+}
+alternative_sprites(spriteset_df4b_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4b-orange")
+}
+alternative_sprites(spriteset_df4_ukraine, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4-ukraine")
+}
+alternative_sprites(spriteset_df4_jtzc, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4-jtzc")
+}
 
 switch (FEAT_TRAINS, SELF, switch_df4k_articulated_part, extra_callback_info1) {
     1..2: return df4k;
@@ -39,12 +62,18 @@ switch (FEAT_TRAINS, SELF, switch_df4k_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_df4k_graphics_subtype, cargo_subtype) {
     1: spriteset_df4_green;
+    2: spriteset_df4b_orange;
+    3: spriteset_df4_ukraine;
+    4: spriteset_df4_jtzc;
     spriteset_df4_orange;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df4k_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORANGE);
     1: return string(STR_GREEN);
+    2: return string(STR_LATER_ORANGE);
+    3: return string(STR_UKRAINE);
+    4: return string(STR_DF4_JTZC);
     return CB_RESULT_NO_TEXT;
 }
 

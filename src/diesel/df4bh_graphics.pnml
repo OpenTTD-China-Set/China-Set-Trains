@@ -1,0 +1,44 @@
+// Begin DF4BH
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_df4bh_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_df4bh_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "df4b")
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4bh_articulated_part, extra_callback_info1) {
+    1..2: return df4bh;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4bh_graphics_subtype, cargo_subtype) {
+    1: spriteset_df4b_orange;
+    2: spriteset_df4_ukraine;
+    3: spriteset_df4_jtzc;
+    spriteset_df4b_green;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4bh_cargo_subtype, cargo_subtype) {
+    0: return string(STR_GREEN);
+    1: return string(STR_ORANGE);
+    2: return string(STR_UKRAINE);
+    3: return string(STR_DF4_JTZC);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4bh_graphics, position_in_articulated_veh % 3) {
+    1: switch_df4bh_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4bh_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4bh_additional_text, param_cargo_decay) {
+    return string(STR_DESC_5, string(STR_FULL_NAME_DF4B), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF4_LIVERY_AVAILABILITY), string(STR_DF4B_NICKNAME), string(STR_RELIABILITY_14));
+}

@@ -35,7 +35,7 @@ item (FEAT_TRAINS, df4h) {
         running_cost_base:              RUNNING_COST_DIESEL;
         running_cost_factor:            72;
         reliability_decay:              32;
-        bitmask_vehicle_info:           bitmask(6);
+        bitmask_vehicle_info:           0;
     }
     graphics {
         // Menu
