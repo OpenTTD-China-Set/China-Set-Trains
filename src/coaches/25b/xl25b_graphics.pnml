@@ -1,0 +1,64 @@
+// Begin XL25B
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_xl25b_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_xl25b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "xl25b")
+}
+
+// Vehicle
+spriteset (spriteset_xl25b_original) {
+    template_empty ()
+}
+spriteset (spriteset_xl25b_red) {
+    template_empty ()
+}
+alternative_sprites(spriteset_xl25b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "xl25b")
+}
+alternative_sprites(spriteset_xl25b_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "xl25b-red")
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25b_articulated_part, extra_callback_info1) {
+    1..2: return xl25b;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25b_cargo_subtype, cargo_subtype) {
+    0: return string(STR_BUILD_YEAR);
+    1: return string(STR_ORIGINAL);
+    2: return string(STR_RED_WHITE);
+    3: return string(STR_GAOZU_GREEN);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25b_build_year, build_year) {
+    0..2014: spriteset_xl25b_original;
+    spriteset_xl25b_original; // UNFINISHED
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25b_graphics_subtype, cargo_subtype) {
+    0: switch_xl25b_build_year;
+    1: spriteset_xl25b_original;
+    2: spriteset_xl25b_red;
+    3: spriteset_xl25b_original; // UNFINISHED
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25b_graphics, position_in_articulated_veh % 3) {
+    1: switch_xl25b_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25b_capacity, position_in_articulated_veh % 3) {
+    1: return 68;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25b_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_FULL_NAME_XL25B), string(STR_XL25B_LIVERY_AVAILABILITY), string(STR_DECAY_200));
+}

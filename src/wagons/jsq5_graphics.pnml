@@ -1,0 +1,40 @@
+// Begin JSQ5
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_jsq5_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_jsq5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "jsq5")
+}
+
+// Vehicle
+spriteset (spriteset_jsq5) {
+    template_empty ()
+}
+alternative_sprites(spriteset_jsq5, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq5")
+}
+
+switch (FEAT_TRAINS, SELF, switch_jsq5_articulated_part, extra_callback_info1) {
+    1..2: return jsq5;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_jsq5_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_jsq5;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_jsq5_capacity_cargo, cargo_type_in_veh) {
+    VEHI: return 20;
+    ENSP: return 30;
+    FMSP: return 30;
+}
+
+switch (FEAT_TRAINS, SELF, switch_jsq5_capacity, position_in_articulated_veh % 3) {
+    1: switch_jsq5_capacity_cargo;
+    return 0;
+}

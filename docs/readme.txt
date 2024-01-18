@@ -154,6 +154,8 @@ Graphics (see \docs\voxelsource.txt for details):
 - wuwu (kaitokiwa)
 - ctx
 - shentie106
+- Haiyan
+- EMB190
 
 Code:
 - John Franklin, NML-based Coding

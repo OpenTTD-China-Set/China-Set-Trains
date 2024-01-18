@@ -73,12 +73,15 @@ STR_NAME_RZ25T          :RZ25T (客车)
 STR_NAME_YW25T          :YW25T (客车)
 STR_NAME_RW25T          :RW25T (客车)
 STR_NAME_CA25T          :CA25T (餐车)
+STR_NAME_XL22           :XL22 (行李车)
+STR_NAME_XL25B          :XL25B (行李车)
 STR_NAME_XL25G          :XL25G (行李车)
 STR_NAME_XL25K          :XL25K (行李车)
 STR_NAME_XL25T          :XL25T (行李车)
 STR_NAME_XL25T_SSPE     :XL25T-SSPE (行李车)
 STR_NAME_KD25G          :KD25G (空调发电车)
 STR_NAME_KD25K          :KD25K (空调发电车)
+STR_NAME_KD25T          :KD25T (空调发电车)
 
 STR_NAME_C62            :C62 (敞车)
 STR_NAME_C64            :C64 (敞车)
@@ -90,6 +93,7 @@ STR_NAME_G60            :G60 (罐车)
 STR_NAME_GN70           :GN70 (罐车)
 STR_NAME_N60            :N60 (平车)
 STR_NAME_NX17           :NX17 (平车)
+STR_NAME_JSQ5           :JSQ5 (汽车运输车)
 
 STR_NAME_DF4K           :DF4 (内燃) (客运型)
 STR_NAME_DF4H           :DF4 (内燃) (货运型)
@@ -123,10 +127,13 @@ STR_NAME_DJJ1           :DJJ1 "蓝箭" (电力动车)
 STR_NAME_CR200JA        :CR200J-A (电力动车)
 STR_NAME_CR200JAL       :CR200J-A (长编组) (电力动车)
 STR_NAME_CR200JB        :CR200J-B (电力动车)
+STR_NAME_CRH1A          :CRH1A (电力动车)
 STR_NAME_CRH2A          :CRH2A (电力动车)
 STR_NAME_CRH3A          :CRH3A (电力动车)
 STR_NAME_CRH5A          :CRH5A (电力动车)
 STR_NAME_CRH2C          :CRH2C (电力动车)
+STR_NAME_CRH3C          :CRH3C (电力动车)
+STR_NAME_CRH380B        :CRH380B (电力动车)
 STR_NAME_CR400BF        :CR400BF (电力动车)
 
 STR_NAME_ZEMUW          :动车组二等座车厢
@@ -173,11 +180,14 @@ STR_FULL_NAME_RZ25T          :{BLACK}全称：{GOLD}25米提速型软座客车
 STR_FULL_NAME_YW25T          :{BLACK}全称：{GOLD}25米提速型硬卧客车
 STR_FULL_NAME_RW25T          :{BLACK}全称：{GOLD}25米提速型软卧客车
 STR_FULL_NAME_CA25T          :{BLACK}全称：{GOLD}25米提速型餐车
+STR_FULL_NAME_XL22           :{BLACK}全称：{GOLD}22型行李车
+STR_FULL_NAME_XL25B          :{BLACK}全称：{GOLD}25米标准型行李车
 STR_FULL_NAME_XL25G          :{BLACK}全称：{GOLD}25米改进型行李车
 STR_FULL_NAME_XL25K          :{BLACK}全称：{GOLD}25米快速型行李车
 STR_FULL_NAME_XL25T          :{BLACK}全称：{GOLD}25米提速型行李车
 STR_FULL_NAME_KD25G          :{BLACK}全称：{GOLD}25米改进型空调发电车
 STR_FULL_NAME_KD25K          :{BLACK}全称：{GOLD}25米快速型空调发电车
+STR_FULL_NAME_KD25T          :{BLACK}全称：{GOLD}25米提速型空调发电车
 
 STR_FULL_NAME_DF4            :{BLACK}全称：{GOLD}东风4型内燃机车
 STR_FULL_NAME_DF4B           :{BLACK}全称：{GOLD}东风4B型内燃机车
@@ -215,6 +225,7 @@ STR_22_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GREEN}绿�
 STR_22B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装
 STR_25B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{BLUE}集{RED}通{WHITE}铁{BLUE}路{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_RW25B_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_XL25B_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_S25BLD_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{ORANGE}橙{YELLOW}黄{GOLD}相间涂装，老化版，加强筋版，乌鲁木齐局，先行号 (均为低开门，装载较快，120 km/h)
 STR_S25BHD_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{GOLD}老化涂装，沈阳铁路局 (均为高开门，装载较慢，140 km/h)
 STR_25G_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}，“高阻绿”{GOLD}涂装 (未完成)
@@ -222,6 +233,7 @@ STR_CA25G_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{RED}红{WHI
 STR_KD25G_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{ORANGE}橙色{GOLD}涂装，{LTBLUE}沪芦列车{GOLD}涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装 (未完成){DKGREEN}，“高阻绿”{GOLD}涂装 (未完成)
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}青藏铁路{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装
 STR_XL25T_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}青藏铁路{GOLD}涂装 (未完成)，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_KD25T_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：仅有{DKGREEN}青藏铁路{GOLD}涂装
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_S25KLD_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{LTBLUE}沪芦列车{GOLD}涂装，辽东半岛号 (均为低开门，装载较快)
 STR_S25KHD_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{GOLD}先行号，西安铁路局 (高开门，装载较慢)
@@ -262,10 +274,13 @@ STR_HXD3C_NICKNAME                  :{BLACK}昵称: {GOLD}电狒狒
 STR_HXD3D_NICKNAME                  :{BLACK}昵称: {GOLD}番茄
 STR_NDJ3_NICKNAME                   :{BLACK}昵称：{WHITE}大白猪
 STR_CR200J_NICKNAME                 :{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方), {GREEN}“垃圾桶”{GOLD}(民间)
+STR_CRH1A_NICKNAME                  :{BLACK}昵称：{GOLD}地铁
 STR_CRH2A_NICKNAME                  :{BLACK}昵称：{GOLD}带鱼
 STR_CRH2C_NICKNAME                  :{BLACK}昵称：{GOLD}疯带鱼
 STR_CRH3A_NICKNAME                  :{BLACK}昵称：{GOLD}黄金眼
+STR_CRH3C_NICKNAME                  :{BLACK}昵称：{GOLD}兔子
 STR_CRH5A_NICKNAME                  :{BLACK}昵称：{GOLD}驴
+STR_CRH380B_NICKNAME                :{BLACK}昵称：{GOLD}疯兔子
 STR_CR400BF_NICKNAME                :{BLACK}昵称：{GOLD}金凤凰
 
 STR_RELIABILITY_32                  :{BLACK}可靠性下降速度：{GOLD}32
@@ -341,6 +356,7 @@ STR_COMFORT_240_CAFE    :{BLACK}舒适度：{GOLD}240 {BLACK}，但由于餐车�
 
 STR_DECAY_185           :{BLACK}货物贬值周期因子：{GOLD}185
 STR_DECAY_200           :{BLACK}货物贬值周期因子：{GOLD}200
+STR_DECAY_400           :{BLACK}货物贬值周期因子：{GOLD}400
 STR_DECAY_BOXCAR        :{BLACK}货物贬值周期因子：{GOLD}185，棚代客80，装载活禽/畜560
 STR_DECAY_BOXCAR_NOPASS :{BLACK}货物贬值周期因子：{GOLD}185，装载活禽/畜560，棚代客不可用
 
@@ -368,12 +384,18 @@ STR_CRH5A_CONSIST                   :{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8
 STR_CR400BF_CONSIST                 :{BLACK}构成：{GOLD}5-17节； n 节构成中动力车节数为 int(n/2) ，拖车节数为 int((n+1)/2)
 STR_CRH2A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，半数（向上取整）车厢为动力车
 STR_CRH2C_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾拖车，中间全为动力车
+STR_CRH1A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为5M3T，16节标准编组为10M6T
 STR_CRH3A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
+STR_CRH3C_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
+STR_CRH380B_CONSIST                 :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
 
+STR_CRH1A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CRH2A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
 STR_CRH2C_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
 STR_CRH3A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
+STR_CRH3C_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
 STR_CRH5A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
+STR_CRH380B_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 STR_CR400BF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}机供：{GOLD}是

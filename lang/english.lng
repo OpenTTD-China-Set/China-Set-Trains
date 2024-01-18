@@ -73,12 +73,15 @@ STR_NAME_RZ25T          :RZ25T (Passenger Coach)
 STR_NAME_YW25T          :YW25T (Passenger Coach)
 STR_NAME_RW25T          :RW25T (Passenger Coach)
 STR_NAME_CA25T          :CA25T (Restaurant Car)
+STR_NAME_XL22           :XL22 (Luggage Car)
+STR_NAME_XL25B          :XL25B (Luggage Car)
 STR_NAME_XL25G          :XL25G (Luggage Car)
 STR_NAME_XL25K          :XL25K (Luggage Car)
 STR_NAME_XL25T          :XL25T (Luggage Car)
 STR_NAME_XL25T_SSPE     :XL25T-SSPE (Luggage Car)
 STR_NAME_KD25G          :KD25G (Air Conditioner Generator Car)
 STR_NAME_KD25K          :KD25K (Air Conditioner Generator Car)
+STR_NAME_KD25T          :KD25T (Air Conditioner Generator Car)
 
 STR_NAME_C62            :C62 (Gondola)
 STR_NAME_C64            :C64 (Gondola)
@@ -90,6 +93,7 @@ STR_NAME_G60            :G60 (Tanker)
 STR_NAME_GN70           :GN70 (Tanker)
 STR_NAME_N60            :N60 (Flatcar)
 STR_NAME_NX17           :NX17 (Flatcar)
+STR_NAME_JSQ5           :JSQ5 (Vehicle Transporter)
 
 STR_NAME_DF4K           :DF4 (Diesel) (Passenger Type)
 STR_NAME_DF4H           :DF4 (Diesel) (Freight Type)
@@ -123,10 +127,13 @@ STR_NAME_DJJ1           :DJJ1 "Blue Arrow" (EMU)
 STR_NAME_CR200JA        :CR200J-A (EMU)
 STR_NAME_CR200JAL       :CR200J-A (Long Version) (EMU)
 STR_NAME_CR200JB        :CR200J-B (EMU)
+STR_NAME_CRH1A          :CRH1A (EMU)
 STR_NAME_CRH2A          :CRH2A (EMU)
 STR_NAME_CRH3A          :CRH3A (EMU)
 STR_NAME_CRH5A          :CRH5A (EMU)
 STR_NAME_CRH2C          :CRH2C (EMU)
+STR_NAME_CRH3C          :CRH3C (EMU)
+STR_NAME_CRH380B        :CRH380B (EMU)
 STR_NAME_CR400BF        :CR400BF (EMU)
 
 STR_NAME_ZEMUW          :2nd-Class (ZE) MU Wagon
@@ -173,11 +180,14 @@ STR_FULL_NAME_RZ25T          :{BLACK}Full Name: {GOLD}25m Accelerated Soft Seat 
 STR_FULL_NAME_YW25T          :{BLACK}Full Name: {GOLD}25m Accelerated Hard Sleeper Passenger Coach
 STR_FULL_NAME_RW25T          :{BLACK}Full Name: {GOLD}25m Accelerated Soft Sleeper Passenger Coach
 STR_FULL_NAME_CA25T          :{BLACK}Full Name: {GOLD}25m Accelerated Restaurant Car
+STR_FULL_NAME_XL22           :{BLACK}Full Name: {GOLD}22 Type Luggage Car
+STR_FULL_NAME_XL25B          :{BLACK}Full Name: {GOLD}25m Standard Luggage Car
 STR_FULL_NAME_XL25G          :{BLACK}Full Name: {GOLD}25m Improved Luggage Car
 STR_FULL_NAME_XL25K          :{BLACK}Full Name: {GOLD}25m Rapid Luggage Car
 STR_FULL_NAME_XL25T          :{BLACK}Full Name: {GOLD}25m Accelerated Luggage Car
 STR_FULL_NAME_KD25G          :{BLACK}Full Name: {GOLD}25m Improved Air Conditioner Generator Car
 STR_FULL_NAME_KD25K          :{BLACK}Full Name: {GOLD}25m Rapid Air Conditioner Generator Car
+STR_FULL_NAME_KD25T          :{BLACK}Full Name: {GOLD}25m Accelerated Air Conditioner Generator Car
 
 STR_FULL_NAME_DF4            :{BLACK}Full Name: {GOLD}Dongfeng 4 Diesel Locomotive
 STR_FULL_NAME_DF4B           :{BLACK}Full Name: {GOLD}Dongfeng 4B Diesel Locomotive
@@ -221,6 +231,7 @@ STR_22_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Ordinary 
 STR_22B_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery
 STR_25B_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_RW25B_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_XL25B_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_S25BLD_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {ORANGE}Orange-{YELLOW}Yellow {GOLD}Livery, deteriorated, with strengthening steel sheet, Urumqi, Xianxing (All low-door，higher loading speed, 120 km/h)
 STR_S25BHD_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}deteriorated, Shenyang (All high-door，lower loading speed, 140 km/h)
 STR_25G_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
@@ -228,6 +239,7 @@ STR_CA25G_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {RED}Red {GOLD}
 STR_KD25G_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery (unfinished), {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery
 STR_XL25T_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery (unfinished), {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_KD25T_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: Only {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_S25KLD_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Liaodong Peninsula Livery (All low-door, higher loading speed)
 STR_S25KHD_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}Xianxing (Pioneer), Xi'an (All high-door, slower loading speed)
@@ -268,10 +280,13 @@ STR_HXD3C_NICKNAME                  :{BLACK}Nickname: {GOLD}Electric Baboon
 STR_HXD3D_NICKNAME                  :{BLACK}Nickname: {GOLD}Tomato
 STR_NDJ3_NICKNAME                   :{BLACK}Nickname: {WHITE}White Pig
 STR_CR200J_NICKNAME                 :{BLACK}Nickname: {GREEN}"Hulk" {GOLD}(Official), {GREEN}"Trash Bin" {GOLD}(Folk)
+STR_CRH1A_NICKNAME                  :{BLACK}Nickname: {GOLD}Metro {BLACK}(due to its high acceleration)                   
 STR_CRH2A_NICKNAME                  :{BLACK}Nickname: {GOLD}Hairtail
 STR_CRH2C_NICKNAME                  :{BLACK}Nickname: {GOLD}Crazy Hairtail
 STR_CRH3A_NICKNAME                  :{BLACK}Nickname: {GOLD}Golden Eyes
+STR_CRH3C_NICKNAME                  :{BLACK}Nickname: {GOLD}Rabbit
 STR_CRH5A_NICKNAME                  :{BLACK}Nickname: {GOLD}Donkey
+STR_CRH380B_NICKNAME                :{BLACK}Nickname: {GOLD}Crazy Rabbit
 STR_CR400BF_NICKNAME                :{BLACK}Nickname: {GOLD}Golden Phoenix
 
 
@@ -349,6 +364,7 @@ STR_COMFORT_240_CAFE    :{BLACK}Comfort: {GOLD}240 {BLACK}, but at least 300 in 
 
 STR_DECAY_185           :{BLACK}Cargo Age Period Factor: {GOLD}185
 STR_DECAY_200           :{BLACK}Cargo Age Period Factor: {GOLD}200
+STR_DECAY_400           :{BLACK}Cargo Age Period Factor: {GOLD}400
 STR_DECAY_BOXCAR        :{BLACK}Cargo Age Period Factor: {GOLD}185, Passengers 80, Livestock 560
 STR_DECAY_BOXCAR_NOPASS :{BLACK}Cargo Age Period Factor: {GOLD}185, Livestock 560, Unrefittable to Passengers
 
@@ -376,12 +392,18 @@ STR_CRH5A_CONSIST                   :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 
 STR_CR400BF_CONSIST                 :{BLACK}Consist: {GOLD}5 to 17 cars; int(n/2) motorised cars and int((n+1)/2) trailers in an n-car consist.
 STR_CRH2A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, half of which (ceiling up) are motorised cars
 STR_CRH2C_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with head and cab trailers, all middle cars motorised
-STR_CRH3A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and ever other car motorised (M-T-M-T-...-T-M-T-M)
+STR_CRH3A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
+STR_CRH1A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars
+STR_CRH3C_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
+STR_CRH380B_CONSIST                 :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
 
+STR_CRH1A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH2A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
 STR_CRH2C_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
 STR_CRH3A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH3C_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
 STR_CRH5A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH380B_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CR400BF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}Electricity Supply for cars: {GOLD}YES

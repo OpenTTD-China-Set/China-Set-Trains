@@ -89,6 +89,30 @@ switch (FEAT_TRAINS, SELF, runningcostfactor, max_speed) {
 }
 
 // For High-Speed Hexie EMUs, speed is limited to 310 km/h IRL, but they can go up to 350 even 380, but with increased running costs
+switch (FEAT_TRAINS, SELF, switch_crh_c_cargo_subtype, cargo_subtype) {
+    0: return string(STR_310_KMH);
+    1: return string(STR_350_KMH);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh_c_speed, cargo_subtype) {
+    0: return 310;
+    return 350;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380_cargo_subtype, cargo_subtype) {
+    0: return string(STR_310_KMH);
+    1: return string(STR_350_KMH);
+    2: return string(STR_380_KMH);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380_speed, cargo_subtype) {
+    0: return 310;
+    1: return 350;
+    return 380;
+}
+
 switch (FEAT_TRAINS, SELF, crh350costpower, vehicle_is_potentially_powered) {
     1: return 10;
     return 4;

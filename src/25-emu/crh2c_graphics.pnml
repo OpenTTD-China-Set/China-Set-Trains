@@ -86,10 +86,6 @@ switch (FEAT_TRAINS, SELF, switch_crh2c_wagon_graphics, position_in_consist_from
     switch_crh2c_middle_graphics;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh2c_wagon_length, position_in_consist_from_end) {
-    switch_length_2_8_2;
-}
-
 switch (FEAT_TRAINS, SELF, switch_crh2c_middle_capacity_ze, position_in_articulated_veh % 3) {
     1: return 100;
     return 0;
@@ -161,17 +157,6 @@ switch (FEAT_TRAINS, SELF, switch_crh2c_cab_capacity, vehicle_type_id) {
 switch (FEAT_TRAINS, SELF, switch_crh2c_wagon_capacity, position_in_consist_from_end) {
     0..2: switch_crh2c_cab_capacity;
     switch_crh2c_middle_capacity;
-}
-
-switch (FEAT_TRAINS, SELF, switch_crh2c_cargo_subtype, cargo_subtype) {
-    0: return string(STR_310_KMH);
-    1: return string(STR_350_KMH);
-    return CB_RESULT_NO_TEXT;
-}
-
-switch (FEAT_TRAINS, SELF, switch_crh2c_speed, cargo_subtype) {
-    0: return 310;
-    return 350;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh2c_wagon_cost_power, vehicle_type_id) {

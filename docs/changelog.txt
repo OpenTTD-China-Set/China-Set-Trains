@@ -1,5 +1,14 @@
 China Set: Trains Changelog
 =========================
+0.1.4.143 (18/1/2024)
+--------------------
+Change: Vehicle sorting (minor)
+Fix #35: CRH3C, CRH380B not displaying higher-speed refit option
+
+0.1.4.142 (18/1/2024)
+--------------------
+Add: XL22, XL25B, KD25T, CRH1A, CRH3C, CRH380B
+
 0.1.3.141 (16/1/2024)
 --------------------
 Merged wuwu (kaitokiwa) branch

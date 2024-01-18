@@ -65,7 +65,7 @@ By wuwu
 (KD25G, KD25K, S25K Low Door)-Luchaogang, 25B-Jitong
 By wuwu
 
-S25B Low Door
+XL25B, S25B Low Door
 By Babel
 
 25T-(Qingzang, Gaozu Green), S25B High Door - deteriorated
@@ -77,11 +77,17 @@ By wuwu
 (SY/RZ, SYW, SRW, SCA, KD)25K-Xi'an
 By wuwu
 
-CRH2A, CRH2C, CR200J-B, DJJ1, NDJ3 Trailer
+CRH2A, CRH2C, CR200J-B, DJJ1, NDJ3 Trailer, (CRH1A, CRH3C, CRH380B)-M/P
 By Babel
 
-CRH3A, NDJ3-M
+CRH3A, NDJ3-M, (CRH1A, CRH3C, CRH380B)-C
 By ctx
 
 SS7, SS7B, SS7C, SS7E
 By EMB190
+
+XL22, KD25T
+By Haiyan
+
+JSQ5
+By shentie106

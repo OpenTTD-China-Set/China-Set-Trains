@@ -44,6 +44,8 @@
 #include "src/coaches/22/yw22_item.pnml"
 #include "src/coaches/22/rw22_graphics.pnml"
 #include "src/coaches/22/rw22_item.pnml"
+#include "src/coaches/22/xl22_graphics.pnml"
+#include "src/coaches/22/xl22_item.pnml"
 
 #include "src/coaches/22b/yz22b_graphics.pnml"
 #include "src/coaches/22b/yz22b_item.pnml"
@@ -60,6 +62,8 @@
 #include "src/coaches/25b/yw25b_item.pnml"
 #include "src/coaches/25b/rw25b_graphics.pnml"
 #include "src/coaches/25b/rw25b_item.pnml"
+#include "src/coaches/25b/xl25b_graphics.pnml"
+#include "src/coaches/25b/xl25b_item.pnml"
 #include "src/coaches/25b/syz25bld_graphics.pnml"
 #include "src/coaches/25b/syz25bld_item.pnml"
 #include "src/coaches/25b/srz25bld_graphics.pnml"
@@ -131,6 +135,8 @@
 #include "src/coaches/25t/xl25t_item.pnml"
 #include "src/coaches/25t/xl25t_sspe_graphics.pnml"
 #include "src/coaches/25t/xl25t_sspe_item.pnml"
+#include "src/coaches/25t/kd25t_graphics.pnml"
+#include "src/coaches/25t/kd25t_item.pnml"
 
 // Wagons
 #include "src/wagons/c62_graphics.pnml"
@@ -153,6 +159,8 @@
 #include "src/wagons/n60_item.pnml"
 #include "src/wagons/nx17_graphics.pnml"
 #include "src/wagons/nx17_item.pnml"
+#include "src/wagons/jsq5_graphics.pnml"
+#include "src/wagons/jsq5_item.pnml"
 
 // Another Function File
 #include "src/function2.pnml"
@@ -232,14 +240,20 @@
 #include "src/25-emu/cr200jal_item.pnml"
 #include "src/25-emu/cr200jb_graphics.pnml"
 #include "src/25-emu/cr200jb_item.pnml"
+#include "src/25-emu/crh1a_graphics.pnml"
+#include "src/25-emu/crh1a_item.pnml"
 #include "src/25-emu/crh2a_graphics.pnml"
 #include "src/25-emu/crh2a_item.pnml"
 #include "src/25-emu/crh2c_graphics.pnml"
 #include "src/25-emu/crh2c_item.pnml"
+#include "src/25-emu/crh3c_graphics.pnml"
+#include "src/25-emu/crh3c_item.pnml"
 #include "src/25-emu/crh3a_graphics.pnml"
 #include "src/25-emu/crh3a_item.pnml"
 #include "src/25-emu/crh5a_graphics.pnml"
 #include "src/25-emu/crh5a_item.pnml"
+#include "src/25-emu/crh380b_graphics.pnml"
+#include "src/25-emu/crh380b_item.pnml"
 #include "src/25-emu/cr400bf_graphics.pnml"
 #include "src/25-emu/cr400bf_item.pnml"
 

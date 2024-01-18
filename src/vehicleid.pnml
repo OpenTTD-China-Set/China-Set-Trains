@@ -90,6 +90,9 @@ item (FEAT_TRAINS, srz25khd, 2090) {}
 item (FEAT_TRAINS, syw25khd, 2091) {}
 item (FEAT_TRAINS, srw25khd, 2092) {}
 item (FEAT_TRAINS, sca25khd, 2093) {}
+item (FEAT_TRAINS, kd25t, 2094) {}
+item (FEAT_TRAINS, xl22, 2095) {}
+item (FEAT_TRAINS, xl25b, 2096) {}
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 #define id_range_wagons 0x0C00..0x0FFF
@@ -103,6 +106,7 @@ item (FEAT_TRAINS, n60, 3078) {}
 item (FEAT_TRAINS, c70, 3079) {}
 item (FEAT_TRAINS, p70, 3080) {}
 item (FEAT_TRAINS, gn70, 3081) {}
+item (FEAT_TRAINS, jsq5, 3082) {}
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
@@ -160,6 +164,9 @@ item (FEAT_TRAINS, crh2c, 9221) {}
 item (FEAT_TRAINS, crh3a, 9222) {}
 item (FEAT_TRAINS, cr200jb, 9223) {}
 item (FEAT_TRAINS, djj1, 9224) {}
+item (FEAT_TRAINS, crh1a, 9225) {}
+item (FEAT_TRAINS, crh3c, 9226) {}
+item (FEAT_TRAINS, crh380b, 9227) {}
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
 #define id_range_1500_emu 0x2800..0x2BFF
