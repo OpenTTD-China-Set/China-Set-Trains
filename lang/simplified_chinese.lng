@@ -68,6 +68,16 @@ STR_NAME_SYW25KHD       :SYW25K (客车) (高开门)
 STR_NAME_SRW25KHD       :SRW25K (客车) (高开门)
 STR_NAME_SCA25KHD       :SCA25K (餐车) (高开门)
 STR_NAME_CA25K          :CA25K (餐车)
+STR_NAME_RZ125Z         :RZ125Z (客车)
+STR_NAME_RZ225Z         :RZ225Z (客车)
+STR_NAME_RZT25Z         :RZT25Z (客车)
+STR_NAME_CA25Z          :CA25Z (餐车)
+STR_NAME_SRZ125Z        :SRZ125Z (客车)
+STR_NAME_SRZ225Z        :SRZ225Z (客车)
+STR_NAME_SCA25Z         :SCA25Z (餐车)
+STR_NAME_SYW25          :SYW25 (客车)
+STR_NAME_SRW25          :SRW25 (客车)
+
 STR_NAME_YZ25T          :YZ25T (客车)
 STR_NAME_RZ25T          :RZ25T (客车)
 STR_NAME_YW25T          :YW25T (客车)
@@ -77,10 +87,13 @@ STR_NAME_XL22           :XL22 (行李车)
 STR_NAME_XL25B          :XL25B (行李车)
 STR_NAME_XL25G          :XL25G (行李车)
 STR_NAME_XL25K          :XL25K (行李车)
+STR_NAME_RZXL25Z        :RZXL25Z (行李车)
+STR_NAME_SRZXL25Z       :SRZXL25Z (行李车)
 STR_NAME_XL25T          :XL25T (行李车)
 STR_NAME_XL25T_SSPE     :XL25T-SSPE (行李车)
 STR_NAME_KD25G          :KD25G (空调发电车)
 STR_NAME_KD25K          :KD25K (空调发电车)
+STR_NAME_KD25Z          :KD25Z (空调发电车)
 STR_NAME_KD25T          :KD25T (空调发电车)
 
 STR_NAME_C62            :C62 (敞车)
@@ -103,9 +116,15 @@ STR_NAME_DF4D0000       :DF4D-0000 (内燃)
 STR_NAME_DF4D3000       :DF4D-3000 (内燃)
 STR_NAME_DF4D4000       :DF4D-4000/7000 (内燃)
 STR_NAME_DF5            :DF5 (内燃) (调车用)
+STR_NAME_DF7G           :DF7G (内燃) (调车用)
+STR_NAME_DF7G5000       :DF7G-5000 (内燃) (调车用)
+STR_NAME_DF7G8000       :DF7G-8000 (内燃) (调车用)
+STR_NAME_DFH7           :DFH7 (内燃) (调车用)
+STR_NAME_DFH7B          :DFH7B (内燃) (调车用)
 STR_NAME_DF11           :DF11 (内燃)
 STR_NAME_DF11G          :DF11G (内燃)
 STR_NAME_NJ2            :NJ2 (内燃)
+STR_NAME_HXN5B          :HXN5B (内燃)
 STR_NAME_SS3            :SS3 (电力)
 STR_NAME_SS4            :SS4 (电力)
 STR_NAME_SS4G           :SS4G (电力)
@@ -175,6 +194,17 @@ STR_FULL_NAME_SYW25K         :{BLACK}全称：{GOLD}25米快速型双层硬卧�
 STR_FULL_NAME_SRW25K         :{BLACK}全称：{GOLD}25米快速型双层软卧客车
 STR_FULL_NAME_SCA25K         :{BLACK}全称：{GOLD}25米快速型双层餐车
 STR_FULL_NAME_CA25K          :{BLACK}全称：{GOLD}25米快速型餐车
+STR_FULL_NAME_RZ125Z         :{BLACK}全称：{GOLD}25米准高速一等软座客车
+STR_FULL_NAME_RZ225Z         :{BLACK}全称：{GOLD}25米准高速二等软座客车
+STR_FULL_NAME_RZT25Z         :{BLACK}全称：{GOLD}25米准高速特等软座客车
+STR_FULL_NAME_CA25Z          :{BLACK}全称：{GOLD}25米准高速餐车
+STR_FULL_NAME_RZXL25Z        :{BLACK}全称：{GOLD}25米准高速软座行李合造车
+STR_FULL_NAME_SRZ125Z        :{BLACK}全称：{GOLD}25米准高速双层一等软座客车
+STR_FULL_NAME_SRZ225Z        :{BLACK}全称：{GOLD}25米准高速双层二等软座客车
+STR_FULL_NAME_SCA25Z         :{BLACK}全称：{GOLD}25米准高速双层餐车
+STR_FULL_NAME_SRZXL25Z       :{BLACK}全称：{GOLD}25米准高速双层软座行李合造车
+STR_FULL_NAME_SYW25          :{BLACK}全称：{GOLD}25米型双层硬卧客车
+STR_FULL_NAME_SRW25          :{BLACK}全称：{GOLD}25米型双层软卧客车
 STR_FULL_NAME_YZ25T          :{BLACK}全称：{GOLD}25米提速型硬座客车
 STR_FULL_NAME_RZ25T          :{BLACK}全称：{GOLD}25米提速型软座客车
 STR_FULL_NAME_YW25T          :{BLACK}全称：{GOLD}25米提速型硬卧客车
@@ -187,14 +217,21 @@ STR_FULL_NAME_XL25K          :{BLACK}全称：{GOLD}25米快速型行李车
 STR_FULL_NAME_XL25T          :{BLACK}全称：{GOLD}25米提速型行李车
 STR_FULL_NAME_KD25G          :{BLACK}全称：{GOLD}25米改进型空调发电车
 STR_FULL_NAME_KD25K          :{BLACK}全称：{GOLD}25米快速型空调发电车
+STR_FULL_NAME_KD25Z          :{BLACK}全称：{GOLD}25米准高速空调发电车
 STR_FULL_NAME_KD25T          :{BLACK}全称：{GOLD}25米提速型空调发电车
 
 STR_FULL_NAME_DF4            :{BLACK}全称：{GOLD}东风4型内燃机车
 STR_FULL_NAME_DF4B           :{BLACK}全称：{GOLD}东风4B型内燃机车
 STR_FULL_NAME_DF5            :{BLACK}全称：{GOLD}东风5型内燃机车
 STR_FULL_NAME_DF4D           :{BLACK}全称：{GOLD}东风4D型内燃机车
+STR_FULL_NAME_DF7G           :{BLACK}全称：{GOLD}东风7G型内燃机车
+STR_FULL_NAME_DF7G5000       :{BLACK}全称：{GOLD}东风7G型内燃机车5000系
+STR_FULL_NAME_DF7G8000       :{BLACK}全称：{GOLD}东风7G型内燃机车8000系
+STR_FULL_NAME_DFH7           :{BLACK}全称：{GOLD}东方红7型内燃机车
+STR_FULL_NAME_DFH7B          :{BLACK}全称：{GOLD}东方红7B型内燃机车
 STR_FULL_NAME_DF11           :{BLACK}全称：{GOLD}东风11型内燃机车
 STR_FULL_NAME_DF11G          :{BLACK}全称：{BLUE}东风11G型{WHITE}内燃机车
+STR_FULL_NAME_HXN5B          :{BLACK}全称：{GOLD}和谐内5B型内燃机车
 STR_FULL_NAME_SS3            :{BLACK}全称：{GOLD}韶山3型电力机车
 STR_FULL_NAME_SS4            :{BLACK}全称：{GOLD}韶山4型电力机车
 STR_FULL_NAME_SS4G           :{BLACK}全称：{GOLD}韶山4G型电力机车
@@ -218,6 +255,7 @@ STR_XL25T_SSPE_DESCRIPTION          :{BLACK}新时速运递公司使用的XL25T�
 STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿色涂装{GOLD}，{ORANGE}橘色涂装{BLACK}，{BLUE}京铁{YELLOW}资产{GOLD}涂装，{BLUE}“乌克兰”{YELLOW}涂装
 STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BROWN}原版{GOLD}涂装，{GREEN}西户铁路{GOLD}涂装
 STR_DF4D4000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BLUE}4000{YELLOW}系{GOLD}涂装，{GREEN}7000{YELLOW}系{GOLD}涂装
+STR_DF7G5000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BLUE}4000{YELLOW}系{GOLD}涂装，{GREEN}7000{YELLOW}系{GOLD}涂装
 STR_NJ2_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{WHITE}原色{GOLD}涂装，{DKGREEN}青藏铁路{GOLD}涂装
 STR_SS7C_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}大脸猫涂装，{YELLOW}香蕉{GOLD}涂装
 STR_DJJ1_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}原版涂装，广深铁路涂装
@@ -235,6 +273,9 @@ STR_25T_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WH
 STR_XL25T_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}青藏铁路{GOLD}涂装 (未完成)，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_KD25T_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：仅有{DKGREEN}青藏铁路{GOLD}涂装
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_25Z_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}西子号{WHITE}列车{GOLD}涂装，{LTBLUE}石秦{WHITE}特慢{GOLD}涂装, {BLUE}广深{RED}铁{WHITE}路{GOLD}涂装
+STR_S25Z_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{LTBLUE}石秦{WHITE}特慢{GOLD}涂装, {BLUE}广深{DKGREEN}铁{WHITE}路{GOLD}涂装
+STR_S25_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}蓝-橙-白涂装，其他彩绘涂装尚未完成
 STR_S25KLD_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{LTBLUE}沪芦列车{GOLD}涂装，辽东半岛号 (均为低开门，装载较快)
 STR_S25KHD_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{GOLD}先行号，西安铁路局 (高开门，装载较慢)
 STR_SCA25KHD_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{GOLD}西安铁路局
@@ -255,8 +296,12 @@ STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}目前仅有广九铁路子涂装
 STR_DF4_NICKNAME                    :{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
 STR_DF4B_NICKNAME                   :{BLACK}改进后的内燃机使得该机车更加耐用。昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
 STR_DF4D_NICKNAME                   :{BLACK}昵称: {GOLD}老虎
+STR_DF7G_NICKNAME                   :{BLACK}昵称: {GOLD}乞丐
+STR_DFH7_NICKNAME                   :{BLACK}作为厂矿调机运用于鞍山钢铁，性能和DFH7B基本没有区别
+STR_DFH7B_NICKNAME                  :{BLACK}作为厂矿调机运用于攀枝花钢铁，性能和DFH7基本没有区别
 STR_DF11_NICKNAME                   :{BLACK}昵称: {GOLD}狮子
 STR_DF11G_NICKNAME                  :{BLACK}昵称: {GOLD}猪
+STR_HXN5B_NICKNAME                  :{BLACK}昵称:{GOLD}番茄炒蛋
 STR_SS3_NICKNAME                    :{BLACK}昵称: {GOLD}三哥 (前期), 三爷 (老化后)
 STR_SS4_NICKNAME                    :{BLACK}昵称: {BLUE}宝鸡蓝
 STR_SS4G_NICKNAME                   :{BLACK}简介:{GOLD}运用范围相当广泛的八轴货运电力机车，从平原到山区都有她的身影，{BLACK}昵称: {GOLD}四哥
@@ -313,6 +358,7 @@ STR_DF4D_7000           : - {GREEN}7000{YELLOW}系{BLACK}涂装
 STR_SS7C_BANANA         : - {YELLOW}黄色{BLACK}涂装
 STR_DF4_JTZC            : - {YELLOW}京铁{BLUE}资产{BLACK}涂装
 STR_UKRAINE             : - {YELLOW}“乌克兰”{BLUE}涂装
+STR_PINGMEI             : - {BLUE}平煤{WHITE}集团{BLACK}涂装
 
 STR_BUILD_YEAR          : - 根据建造年份选择设计
 STR_YW22_ORIGINAL       : - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
@@ -333,17 +379,22 @@ STR_QINGZANG            : - 青藏铁路涂装
 STR_GUANGSHEN           : - 广深铁路涂装
 STR_JINWEN              : - {WHITE}金{RED}温{BLUE}铁{WHITE}路{BLACK}公司
 STR_GAOZU_GREEN         : - {DKGREEN}"高阻绿" {BLACK}(未完成, 25T除外)
+STR_XIZI                : - 西子号涂装
+STR_BEIJING             : - 北京铁路局
 
 STR_COMFORT_144         :{BLACK}舒适度：{GOLD}144
 STR_COMFORT_160         :{BLACK}舒适度：{GOLD}160
 STR_COMFORT_192         :{BLACK}舒适度：{GOLD}192
+STR_COMFORT_256         :{BLACK}舒适度：{GOLD}256
 STR_COMFORT_288         :{BLACK}舒适度：{GOLD}288
+STR_COMFORT_320         :{BLACK}舒适度：{GOLD}320
 STR_COMFORT_384         :{BLACK}舒适度：{GOLD}384
 
-STR_COMFORT_YW22        :{BLACK}舒适度：{GOLD}240 {BLACK}，1966年起可改装为定员60，舒适度288
+STR_COMFORT_YW22        :{BLACK}舒适度：{GOLD}240{BLACK}，1966年起可改装为定员60，舒适度288
 
-STR_COMFORT_160_CAFE    :{BLACK}舒适度：{GOLD}160 {BLACK}，但由于餐车作用，运营时至少为200
-STR_COMFORT_384_AC      :{BLACK}舒适度：{GOLD}384 {BLACK}，但由于空调作用，运营时至少为480
+STR_COMFORT_160_CAFE    :{BLACK}舒适度：{GOLD}160{BLACK}，但由于餐车作用，运营时至少为200
+STR_COMFORT_192_CAFE    :{BLACK}舒适度：{GOLD}192{BLACK}，但由于餐车作用，运营时至少为240
+STR_COMFORT_384_AC      :{BLACK}舒适度：{GOLD}384{BLACK}，但由于空调作用，运营时至少为480
 
 STR_COMFORT_240         :{BLACK}舒适度：{GOLD}240
 STR_COMFORT_400         :{BLACK}舒适度：{GOLD}400

@@ -143,6 +143,7 @@ Graphics (see \docs\voxelsource.txt for details):
 - shentie106
 - Haiyan
 - EMB190
+- DF43110
 
 Code:
 - John Franklin, NML-based Coding

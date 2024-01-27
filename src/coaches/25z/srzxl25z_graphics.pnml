@@ -1,0 +1,38 @@
+// Begin SRZXL25Z
+
+// Graphics
+
+// Purchase Menu
+    spriteset (spriteset_srzxl25z_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_srzxl25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches","srzxl25z")
+}
+
+// Vehicle
+spriteset (spriteset_srzxl25z_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_srzxl25z_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches","srzxl25z")
+}
+
+switch (FEAT_TRAINS, SELF, switch_srzxl25z_articulated_part, extra_callback_info1) {
+    1..2: return srzxl25z;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_srzxl25z_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_srzxl25z_original;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_srzxl25z_capacity, position_in_articulated_veh % 3) {
+    1: return 92;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_srzxl25z_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_FULL_NAME_SRZXL25Z), string(STR_25Z_LIVERY_AVAILABILITY), string(STR_DECAY_200));
+}

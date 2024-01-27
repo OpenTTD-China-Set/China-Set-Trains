@@ -81,7 +81,19 @@ STR_NAME_XL25T          :XL25T (Luggage Car)
 STR_NAME_XL25T_SSPE     :XL25T-SSPE (Luggage Car)
 STR_NAME_KD25G          :KD25G (Air Conditioner Generator Car)
 STR_NAME_KD25K          :KD25K (Air Conditioner Generator Car)
+STR_NAME_KD25Z          :KD25Z (Air Conditioner Generator Car)
 STR_NAME_KD25T          :KD25T (Air Conditioner Generator Car)
+STR_NAME_RZ125Z         :RZ125Z (Passenger Coach)
+STR_NAME_RZ225Z         :RZ225Z (Passenger Coach)
+STR_NAME_RZT25Z         :RZT25Z (Passenger Coach)
+STR_NAME_CA25Z          :CA25Z (Restaurant Car)
+STR_NAME_RZXL25Z        :RZXL25Z (Luggage Car)
+STR_NAME_SRZ125Z        :SRZ125Z (Passenger Coach)
+STR_NAME_SRZ225Z        :SRZ225Z (Passenger Coach)
+STR_NAME_SCA25Z         :SCA25Z (Restaurant Car)
+STR_NAME_SRZXL25Z       :SRZXL25Z (Luggage Car)
+STR_NAME_SYW25          :SYW25 (Passenger Coach)
+STR_NAME_SRW25          :SRW25 (Passenger Coach)
 
 STR_NAME_C62            :C62 (Gondola)
 STR_NAME_C64            :C64 (Gondola)
@@ -103,9 +115,15 @@ STR_NAME_DF4D0000       :DF4D-0000 (Diesel)
 STR_NAME_DF4D3000       :DF4D-3000 (Diesel)
 STR_NAME_DF4D4000       :DF4D-4000/7000 (Diesel)
 STR_NAME_DF5            :DF5 (Diesel Shunter)
+STR_NAME_DF7G           :DF7G (Diesel Shunter)
+STR_NAME_DF7G5000       :DF7G-5000 (Diesel Shunter)
+STR_NAME_DF7G8000       :DF7G-8000 (Diesel Shunter)
+STR_NAME_DFH7           :DFH7 (Diesel)
+STR_NAME_DFH7B          :DFH7B (Diesel)
 STR_NAME_DF11           :DF11 (Diesel)
 STR_NAME_DF11G          :DF11G (Diesel)
 STR_NAME_NJ2            :NJ2 (Diesel)
+STR_NAME_HXN5B          :HXN5B (Diesel)
 STR_NAME_SS3            :SS3 (Electric)
 STR_NAME_SS4            :SS4 (Electric)
 STR_NAME_SS4G           :SS4G (Electric)
@@ -187,14 +205,32 @@ STR_FULL_NAME_XL25K          :{BLACK}Full Name: {GOLD}25m Rapid Luggage Car
 STR_FULL_NAME_XL25T          :{BLACK}Full Name: {GOLD}25m Accelerated Luggage Car
 STR_FULL_NAME_KD25G          :{BLACK}Full Name: {GOLD}25m Improved Air Conditioner Generator Car
 STR_FULL_NAME_KD25K          :{BLACK}Full Name: {GOLD}25m Rapid Air Conditioner Generator Car
+STR_FULL_NAME_KD25Z          :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Air Conditioner Generator Car
 STR_FULL_NAME_KD25T          :{BLACK}Full Name: {GOLD}25m Accelerated Air Conditioner Generator Car
+STR_FULL_NAME_RZ125Z         :{BLACK}Full Name: {GOLD}25m Semi-Highspeed 1st-Class Seat Passenger Coach
+STR_FULL_NAME_RZ225Z         :{BLACK}Full Name: {GOLD}25m Semi-Highspeed 2nd-Class Seat Passenger Coach
+STR_FULL_NAME_RZT25Z         :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Top-Class Seat Passenger Coach
+STR_FULL_NAME_RZXL25Z        :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Soft Seat Passenger Coach & Luggage Car
+STR_FULL_NAME_CA25Z          :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Restaurant Car
+STR_FULL_NAME_SRZ125Z        :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Double Decker 1st-Class Seat Passenger Coach
+STR_FULL_NAME_SRZ225Z        :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Double Decker 2nd-Class Seat Passenger Coach
+STR_FULL_NAME_SCA25Z         :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Double Decker Restaurant Car
+STR_FULL_NAME_SRZXL25Z       :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Double Decker Soft Seat Passenger Coach & Luggage Car
+STR_FULL_NAME_SYW25          :{BLACK}Full Name: {GOLD}25m Double Decker Hard Sleeper Passenger Coach
+STR_FULL_NAME_SRW25          :{BLACK}Full Name: {GOLD}25m Double Decker Soft Sleeper Passenger Coach
 
 STR_FULL_NAME_DF4            :{BLACK}Full Name: {GOLD}Dongfeng 4 Diesel Locomotive
 STR_FULL_NAME_DF4B           :{BLACK}Full Name: {GOLD}Dongfeng 4B Diesel Locomotive
 STR_FULL_NAME_DF5            :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive
 STR_FULL_NAME_DF4D           :{BLACK}Full Name: {GOLD}Dongfeng 4D Diesel Locomotive
+STR_FULL_NAME_DF7G           :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive
+STR_FULL_NAME_DF7G5000       :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive 5000 Series
+STR_FULL_NAME_DF7G8000       :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive 8000 Series
+STR_FULL_NAME_DFH7           :{BLACK}Full Name: {GOLD}Dongfanghong 7 Diesel Locomotive
+STR_FULL_NAME_DFH7B          :{BLACK}Full Name: {GOLD}Dongfanghong 7B Diesel Locomotive
 STR_FULL_NAME_DF11           :{BLACK}Full Name: {GOLD}Dongfeng 11 Diesel Locomotive
 STR_FULL_NAME_DF11G          :{BLACK}Full Name: {BLUE}Dongfeng 11G {WHITE}Diesel Locomotive
+STR_FULL_NAME_HXN5B          :{BLACK}Full Name: {GOLD}Hexienei 5B Diesel Locomotive
 STR_FULL_NAME_SS3            :{BLACK}Full Name: {GOLD}Shaoshan 3 Electric Locomotive
 STR_FULL_NAME_SS4            :{BLACK}Full Name: {GOLD}Shaoshan 4 Electric Locomotive
 STR_FULL_NAME_SS4G           :{BLACK}Full Name: {GOLD}Shaoshan 4G Electric Locomotive
@@ -224,6 +260,7 @@ STR_XL25T_SSPE_DESCRIPTION          :{BLACK}A version of XL25T for Super Speed P
 STR_DF4_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery
 STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {BROWN}Original {GOLD}Livery and {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {GOLD}Railway Livery
 STR_DF4D4000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {BLUE}4000-{YELLOW}Series {GOLD}Livery and {GREEN}7000-{YELLOW}Series {GOLD}Livery
+STR_DF7G5000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: Original Livery and {BLUE}Pingmei {WHITE}Group {BLACK}Livery
 STR_NJ2_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {WHITE}Original {GOLD}and {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery
 STR_SS7C_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Original Livery, {YELLOW}Banana Yellow {GOLD}Livery
 STR_DJJ1_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Original Livery, Guangzhou-Shenzhen Railway Livery
@@ -241,6 +278,9 @@ STR_25T_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue {GOL
 STR_XL25T_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery (unfinished), {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_KD25T_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: Only {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_25Z_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Xi{WHITE}zi{GOLD}Livery, {LTBLUE}Shijiazhuang-Qinhuangdao {WHITE}Slow Train {GOLD}Livery, {BLUE}Guangzhou-{RED}-Shenzhen{WHITE} Railway{GOLD} Livery
+STR_S25Z_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {LTBLUE}Shijiazhuang-Qinhuangdao {WHITE}Slow Train {GOLD}Livery, {BLUE}Guangzhou-{DKGREEN}-Shenzhen{WHITE} Railway{GOLD} Livery
+STR_S25_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{GOLD}-Orange-{WHITE}-White {BLACK}Livery, other livery (unfinished}
 STR_S25KLD_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Liaodong Peninsula Livery (All low-door, higher loading speed)
 STR_S25KHD_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}Xianxing (Pioneer), Xi'an (All high-door, slower loading speed)
 STR_SCA25KHD_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {GOLD}Xi'an
@@ -261,8 +301,12 @@ STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}Only Guangzhou-Kowloon Sub-Livery av
 STR_DF4_NICKNAME                    :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
 STR_DF4B_NICKNAME                   :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
 STR_DF4D_NICKNAME                   :{BLACK}Nickname: {GOLD}Tiger
+STR_DF7G_NICKNAME                   :{BLACK}Nickname: {GOLD}Begger
+STR_DFH7_NICKNAME                   :{BLACK}Used in Anshan Steelworks, Liaoning Province
+STR_DFH7B_NICKNAME                  :{BLACK}Used in Panzhihua Steelworks, Sichuan Province
 STR_DF11_NICKNAME                   :{BLACK}Nickname: {GOLD}Lion
 STR_DF11G_NICKNAME                  :{BLACK}Nickname: {GOLD}Pig
+STR_HXN5B_NICKNAME                  :{BLACK}Nickname:{GOLD}Scrambled egg with tomato
 STR_SS3_NICKNAME                    :{BLACK}Nickname: {GOLD}San'ge (New), Sanye (Old) {}{BLACK}Chinese Lesson: San - Three, Ge - Elder Brother, Ye - Grandfather or a general and respectful pronoun to old men
 STR_SS4_NICKNAME                    :{BLACK}Nickname: {BLUE}Baoji Blue
 STR_SS4G_NICKNAME                   :{BLACK}Nickname: {GOLD}Sige {}{BLACK}Chinese Lesson: Si - Four
@@ -320,6 +364,7 @@ STR_DF4D_7000           : - {GREEN}7000-{YELLOW}Series {BLACK}Livery
 STR_SS7C_BANANA         : - {YELLOW}Banana Yellow {BLACK}Livery
 STR_DF4_JTZC            : - {YELLOW}Beijing {BLUE}Railway Bureau {BLACK}Livery
 STR_UKRAINE             : - {YELLOW}Yellow {BLACK}and {BLUE}Blue {BLACK}Livery
+STR_PINGMEI             : - {BLUE}Pingmei (Pingdingshan Coal Mine) {}WHITE}Group {BLACK}Livery
 
 
 STR_BUILD_YEAR          : - According to build year
@@ -337,20 +382,25 @@ STR_URUMQI              : - Urumqi Railway Bureau
 STR_XIAN                : - Xi'an Railway Bureau
 STR_SHENYANG            : - Shenyang Railway Bureau
 STR_XIANXING            : - Xianxing (Pioneer) Livery
+STR_XIZI                : - Xizi Livery
 STR_QINGZANG            : - Qinghai-Tibet Railway Livery
 STR_GUANGSHEN           : - Guangzhou-Shenzhen Railway Livery
 STR_JINWEN              : - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLACK}Company
 STR_GAOZU_GREEN         : - {DKGREEN}"Gaozu Green" {BLACK}(unfinished except 25T)
+STR_BEIJING             : - Beijing Railway Bureau
 
 STR_COMFORT_144         :{BLACK}Comfort: {GOLD}144
 STR_COMFORT_160         :{BLACK}Comfort: {GOLD}160
 STR_COMFORT_192         :{BLACK}Comfort: {GOLD}192
+STR_COMFORT_256         :{BLACK}Comfort: {GOLD}256
 STR_COMFORT_288         :{BLACK}Comfort: {GOLD}288
+STR_COMFORT_320         :{BLACK}Comfort: {GOLD}320
 STR_COMFORT_384         :{BLACK}Comfort: {GOLD}384
 
 STR_COMFORT_YW22        :{BLACK}Comfort: {GOLD}240 {BLACK}, refittable to Capacity 60, Comfort 288 from 1966 onwards
 
 STR_COMFORT_160_CAFE    :{BLACK}Comfort: {GOLD}160 {BLACK}, but at least 200 in operation due to its restaurant identity
+STR_COMFORT_192_CAFE    :{BLACK}Comfort: {GOLD}192 {BLACK}, but at least 240 in operation due to its restaurant identity
 STR_COMFORT_384_AC      :{BLACK}Comfort: {GOLD}384 {BLACK}, but at least 480 in operation due to the presence of air conditioner
 
 STR_COMFORT_240         :{BLACK}Comfort: {GOLD}240

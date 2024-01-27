@@ -1,0 +1,58 @@
+// Begin KD25Z
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_kd25z_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_kd25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "kd25z")
+}
+
+// Vehicle
+spriteset (spriteset_kd25z_xizi) {
+    template_empty ()
+}
+spriteset (spriteset_kd25z_beijing) {
+    template_empty ()
+}
+spriteset (spriteset_kd25z_guangzhou) {
+    template_empty ()
+}
+alternative_sprites(spriteset_kd25z_xizi, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "kd25z")
+}
+alternative_sprites(spriteset_kd25z_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "kd25z-beijing")
+}
+alternative_sprites(spriteset_kd25z_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "kd25z-guangzhou")
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25z_articulated_part, extra_callback_info1) {
+    1..2: return kd25z;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25z_cargo_subtype, cargo_subtype) {
+    0: return string(STR_XIZI);
+    1: return string(STR_BEIJING);
+    2: return string(STR_GUANGSHEN);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25z_graphics_subtype, cargo_subtype) {
+    0: spriteset_kd25z_xizi;
+    1: spriteset_kd25z_beijing;
+    2: spriteset_kd25z_guangzhou;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25z_graphics, position_in_articulated_veh % 3) {
+    1: switch_kd25z_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25z_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_FULL_NAME_KD25Z), string(STR_25Z_LIVERY_AVAILABILITY), string(STR_AIR_CONDITIONER_EFFECT));
+}

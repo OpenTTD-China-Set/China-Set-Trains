@@ -1,0 +1,38 @@
+// Begin SYW25
+
+// Graphics
+
+// Purchase Menu
+    spriteset (spriteset_syw25_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_syw25_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches","syw25")
+}
+
+// Vehicle
+spriteset (spriteset_syw25_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_syw25_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches","syw25")
+}
+
+switch (FEAT_TRAINS, SELF, switch_syw25_articulated_part, extra_callback_info1) {
+    1..2: return syw25;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_syw25_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_syw25_original;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_syw25_capacity, position_in_articulated_veh % 3) {
+    1: return 80;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_syw25_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_FULL_NAME_SYW25), string(STR_S25_LIVERY_AVAILABILITY), string(STR_COMFORT_288));
+}

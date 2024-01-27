@@ -93,6 +93,19 @@ item (FEAT_TRAINS, sca25khd, 2093) {}
 item (FEAT_TRAINS, kd25t, 2094) {}
 item (FEAT_TRAINS, xl22, 2095) {}
 item (FEAT_TRAINS, xl25b, 2096) {}
+// 2097-2108 coded by wuwu
+item (FEAT_TRAINS, rzt25z, 2097) {}
+item (FEAT_TRAINS, rz125z, 2098) {}
+item (FEAT_TRAINS, rz225z, 2099) {}
+item (FEAT_TRAINS, ca25z, 2100) {}
+item (FEAT_TRAINS, rzxl25z, 2101) {}
+item (FEAT_TRAINS, kd25z, 2102) {}
+item (FEAT_TRAINS, srz125z, 2103) {}
+item (FEAT_TRAINS, srz225z, 2104) {}
+item (FEAT_TRAINS, sca25z, 2105) {}
+item (FEAT_TRAINS, srzxl25z, 2106) {}
+item (FEAT_TRAINS, syw25, 2107) {}
+item (FEAT_TRAINS, srw25, 2108) {}
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 #define id_range_wagons 0x0C00..0x0FFF
@@ -123,9 +136,17 @@ item (FEAT_TRAINS, df4d4000, 5125) {}
 item (FEAT_TRAINS, df11, 5126) {}
 item (FEAT_TRAINS, nj2, 5127) {}
 item (FEAT_TRAINS, df5, 5128) {}
-// 5129-5130 coded by wuwu
+// 5129-5136 coded by wuwu
 item (FEAT_TRAINS, df4bk, 5129) {}
 item (FEAT_TRAINS, df4bh, 5130) {}
+item (FEAT_TRAINS, df4bk, 5129) {}
+item (FEAT_TRAINS, df4bh, 5130) {}
+item (FEAT_TRAINS, df7g, 5131) {}
+item (FEAT_TRAINS, df7g8000, 5132) {}
+item (FEAT_TRAINS, dfh7, 5133) {}
+item (FEAT_TRAINS, dfh7b, 5134) {}
+item (FEAT_TRAINS, df7g5000, 5135) {}
+item (FEAT_TRAINS, hxn5b, 5136) {}
 
 //25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
 #define id_range_25_electric 0x1800..0x1BFF

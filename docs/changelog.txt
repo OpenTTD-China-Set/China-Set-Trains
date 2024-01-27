@@ -1,5 +1,10 @@
 China Set: Trains Changelog
 =========================
+0.1.5.144 (27/1/2024)
+--------------------
+Merged wuwu (kaitokiwa) branch
+Add: DF7G, DF7G-5000, DF7G-8000, DFH7, DFH7B, HXN5B, RZ225Z, RZ125Z, RZT25Z, RZXL25Z, SRZ225Z, SRZ125Z, SRZXL25Z, KD25Z (all coded by wuwu)
+
 0.1.4.143 (18/1/2024)
 --------------------
 Change: Vehicle sorting (minor)

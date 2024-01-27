@@ -7,7 +7,7 @@ item (FEAT_TRAINS, zsmuw) {
         
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2000,01,01);
+        introduction_date:              date(1990,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
         track_type:                     SAAN;
