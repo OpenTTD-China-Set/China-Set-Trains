@@ -1,9 +1,14 @@
 China Set: Trains Changelog
 =========================
+0.1.6.146 (31/1/2024)
+--------------------
+Merged wuwu (kaitokiwa) branch
+Fix #36: DF4B for passenger uses incorrect sprite mistakenly (coded by wuwu)
+
 0.1.6.145 (30/1/2024)
 --------------------
 Merged wuwu (kaitokiwa) branch
-Add: NX17 alternative sprites ( coded by wuwu)
+Add: NX17 alternative sprites (coded by wuwu)
 
 0.1.5.144 (27/1/2024)
 --------------------
