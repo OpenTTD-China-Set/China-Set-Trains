@@ -112,15 +112,19 @@ STR_NAME_DF4K           :DF4 (内燃) (客运型)
 STR_NAME_DF4H           :DF4 (内燃) (货运型)
 STR_NAME_DF4BK          :DF4B (内燃) (客运型)
 STR_NAME_DF4BH          :DF4B (内燃) (货运型)
+STR_NAME_DF4C           :DF4C (内燃)
 STR_NAME_DF4D0000       :DF4D-0000 (内燃)
 STR_NAME_DF4D3000       :DF4D-3000 (内燃)
-STR_NAME_DF4D4000       :DF4D-4000/7000 (内燃)
+STR_NAME_DF4D4000       :DF4D-4000 (内燃)
+STR_NAME_DF4D7000       :DF4D-7000 (内燃)
+STR_NAME_DF4DF          :DF4DF (内燃)
 STR_NAME_DF5            :DF5 (内燃) (调车用)
 STR_NAME_DF7G           :DF7G (内燃) (调车用)
 STR_NAME_DF7G5000       :DF7G-5000 (内燃) (调车用)
 STR_NAME_DF7G8000       :DF7G-8000 (内燃) (调车用)
 STR_NAME_DFH7           :DFH7 (内燃) (调车用)
 STR_NAME_DFH7B          :DFH7B (内燃) (调车用)
+STR_NAME_DF8B           :DF8B (内燃)
 STR_NAME_DF11           :DF11 (内燃)
 STR_NAME_DF11G          :DF11G (内燃)
 STR_NAME_NJ2            :NJ2 (内燃)
@@ -223,12 +227,16 @@ STR_FULL_NAME_KD25T          :{BLACK}全称：{GOLD}25米提速型空调发电�
 STR_FULL_NAME_DF4            :{BLACK}全称：{GOLD}东风4型内燃机车
 STR_FULL_NAME_DF4B           :{BLACK}全称：{GOLD}东风4B型内燃机车
 STR_FULL_NAME_DF5            :{BLACK}全称：{GOLD}东风5型内燃机车
+STR_FULL_NAME_DF4C           :{BLACK}全称：{GOLD}东风4C型内燃机车
 STR_FULL_NAME_DF4D           :{BLACK}全称：{GOLD}东风4D型内燃机车
+STR_FULL_NAME_DF4D7000       :{BLACK}全称：{GOLD}东风4D型内燃机车7000系
+STR_FULL_NAME_DF4DF          :{BLACK}全称：{GOLD}东风4DF型内燃机车
 STR_FULL_NAME_DF7G           :{BLACK}全称：{GOLD}东风7G型内燃机车
 STR_FULL_NAME_DF7G5000       :{BLACK}全称：{GOLD}东风7G型内燃机车5000系
 STR_FULL_NAME_DF7G8000       :{BLACK}全称：{GOLD}东风7G型内燃机车8000系
 STR_FULL_NAME_DFH7           :{BLACK}全称：{GOLD}东方红7型内燃机车
 STR_FULL_NAME_DFH7B          :{BLACK}全称：{GOLD}东方红7B型内燃机车
+STR_FULL_NAME_DF8B           :{BLACK}全称：{GOLD}东风8B型内燃机车
 STR_FULL_NAME_DF11           :{BLACK}全称：{GOLD}东风11型内燃机车
 STR_FULL_NAME_DF11G          :{BLACK}全称：{BLUE}东风11G型{WHITE}内燃机车
 STR_FULL_NAME_HXN5B          :{BLACK}全称：{GOLD}和谐内5B型内燃机车
@@ -252,10 +260,13 @@ STR_US_IMPORT                :美国进口车型
 
 STR_XL25T_SSPE_DESCRIPTION          :{BLACK}新时速运递公司使用的XL25T版本。
 
-STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿色涂装{GOLD}，{ORANGE}橘色涂装{BLACK}，{BLUE}京铁{YELLOW}资产{GOLD}涂装，{BLUE}“乌克兰”{YELLOW}涂装
-STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BROWN}原版{GOLD}涂装，{GREEN}西户铁路{GOLD}涂装
-STR_DF4D4000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BLUE}4000{YELLOW}系{GOLD}涂装，{GREEN}7000{YELLOW}系{GOLD}涂装
-STR_DF7G5000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BLUE}4000{YELLOW}系{GOLD}涂装，{GREEN}7000{YELLOW}系{GOLD}涂装
+STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿色涂装{GOLD}，{ORANGE}橘色涂装{BLACK}，{BLUE}京铁{YELLOW}资产{GOLD}涂装，{BLUE}“乌克兰”{YELLOW}涂装，{BLACK}工人先锋号，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装
+STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BROWN}原版{GOLD}涂装，{GREEN}西户铁路{GOLD}涂装，{PURPLE}秦皇岛地方铁路{BLACK}涂装
+STR_DF4C_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：原版涂装，{GREEN}绿色{GOLD}涂装, “乌克兰”{BLUE}蓝{YELLOW}黄{GOLD}涂装
+STR_DF4D4000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BLUE}“乌克兰”{YELLOW}涂装{GOLD}，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装，峰峰矿区涂装，工人先锋号挂牌
+STR_DF4DF_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：原版涂装，{BLUE}蜀道集团{GOLD}涂装
+STR_DF7G5000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BLUE}平煤{WHITE}集团{GOLD}涂装，原版涂装
+STR_DF8B_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}原版涂装，{GREEN}宝日希勒煤矿{GOLD}涂装
 STR_NJ2_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{WHITE}原色{GOLD}涂装，{DKGREEN}青藏铁路{GOLD}涂装
 STR_SS7C_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}大脸猫涂装，{YELLOW}香蕉{GOLD}涂装
 STR_DJJ1_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}原版涂装，广深铁路涂装
@@ -289,16 +300,19 @@ STR_P60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机
 STR_P62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_P70_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_N60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
-STR_NX17_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
+STR_NX17_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}随机（黑色，棕色）
 
 STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}目前仅有广九铁路子涂装
 
 STR_DF4_NICKNAME                    :{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
 STR_DF4B_NICKNAME                   :{BLACK}改进后的内燃机使得该机车更加耐用。昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
+STR_DF4C_NICKNAME                   :{BLACK}昵称: {GOLD}蓝猫
 STR_DF4D_NICKNAME                   :{BLACK}昵称: {GOLD}老虎
+STR_DF4D7000_NICKNAME               :{BLACK}昵称: {GOLD}柳州虎
 STR_DF7G_NICKNAME                   :{BLACK}昵称: {GOLD}乞丐
 STR_DFH7_NICKNAME                   :{BLACK}作为厂矿调机运用于鞍山钢铁，性能和DFH7B基本没有区别
 STR_DFH7B_NICKNAME                  :{BLACK}作为厂矿调机运用于攀枝花钢铁，性能和DFH7基本没有区别
+STR_DF8B_NICKNAME                   :{BLACK}昵称: {GOLD}芭比
 STR_DF11_NICKNAME                   :{BLACK}昵称: {GOLD}狮子
 STR_DF11G_NICKNAME                  :{BLACK}昵称: {GOLD}猪
 STR_HXN5B_NICKNAME                  :{BLACK}昵称:{GOLD}番茄炒蛋
@@ -359,6 +373,14 @@ STR_SS7C_BANANA         : - {YELLOW}黄色{BLACK}涂装
 STR_DF4_JTZC            : - {YELLOW}京铁{BLUE}资产{BLACK}涂装
 STR_UKRAINE             : - {YELLOW}“乌克兰”{BLUE}涂装
 STR_PINGMEI             : - {BLUE}平煤{WHITE}集团{BLACK}涂装
+STR_DF4B_DPRK           : - {BLUE}蓝{DKGREEN}绿{BLACK}相间涂装
+STR_WORKER_PIONEER      : - 工人先锋号挂牌
+STR_FENGFENG            : - 峰峰矿区涂装
+STR_DF4D4000_DPRK       : - {BLUE}蓝{DKGREEN}绿{BLACK}相间涂装
+STR_QINHUANGDAO         : - {PURPLE}秦皇岛地方铁路{BLACK}涂装
+STR_BAORIXILE           : - {GREEN}宝日希勒煤矿{BLACK}涂装
+STR_HENAN_XINZHENG      : - {GREEN}河南新郑铁路{BLACK}涂装
+STR_SHUDAO              : - {DKBLUE}蜀道集团{BLACK}涂装
 
 STR_BUILD_YEAR          : - 根据建造年份选择设计
 STR_YW22_ORIGINAL       : - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
