@@ -1,16 +1,17 @@
-item (FEAT_TRAINS, df7g5000) {
+item (FEAT_TRAINS, df4d7000) {
     property {
         // Menu
-        name:                           string(STR_NAME_DF7G5000);
+        name:                           string(STR_NAME_DF4D7000);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
         
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2003,12,01);
-        model_life:                     VEHICLE_NEVER_EXPIRES;
-        vehicle_life:                   40;
+        introduction_date:              date(1998,01,01);
+        model_life:                     50;
+        retire_early:                   35;
+        vehicle_life:                   30;
         track_type:                     SACN;
 
         // Cargo
@@ -27,35 +28,34 @@ item (FEAT_TRAINS, df7g5000) {
 
         // Stats
         speed:                          100 km/h;
-        power:                          1500 kW;
+        power:                          2940 kW;
         weight:                         138 ton;
-        tractive_effort_coefficient:    0.322;
+        tractive_effort_coefficient:    0.355;
         cost_factor:                    53;
         running_cost_base:              RUNNING_COST_DIESEL;
         running_cost_factor:            72;
-        reliability_decay:              16;
+        reliability_decay:              14;
         bitmask_vehicle_info:           0;
     }
     graphics {
         // Menu
-        additional_text:                switch_df7g5000_additional_text;
-        cargo_subtype_text:             switch_df7g5000_cargo_subtype;
+        additional_text:                switch_df4d7000_additional_text;
         can_attach_wagon:               locowagon;
 
         // Graphics
-        default:                        switch_df7g5000_graphics;
-        purchase:                       spriteset_df7g5000_purchase;
-        articulated_part:               switch_df7g5000_articulated_part;
+        default:                        switch_df4d7000_graphics;
+        purchase:                       spriteset_df4d7000_purchase;
+        articulated_part:               switch_df4d7000_articulated_part;
 
         // Stats
-        length:                         switch_length_2_5_2;
+        length:                         switch_length_2_6_2;
         cargo_capacity:                 0;
-        cost_factor:                    49;
-        running_cost_factor:            38 * runningcostfactor();
-        purchase_running_cost_factor:   152;
+        cost_factor:                    74;
+        running_cost_factor:            60 * runningcostfactor();
+        purchase_running_cost_factor:   240;
         purchase_cargo_capacity:        0;
     }
 }
 
-// End DF7G5000
+// End DF4D7000
 

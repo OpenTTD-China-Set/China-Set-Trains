@@ -1,0 +1,51 @@
+// Begin DF4DF
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_df4df_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_df4df_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "df4df")
+}
+
+// Vehicle
+spriteset (spriteset_df4df_original) {
+    template_empty ()
+}
+spriteset (spriteset_df4df_shudao) {
+    template_empty ()
+}
+alternative_sprites(spriteset_df4df_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4df")
+}
+alternative_sprites(spriteset_df4df_shudao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4df-shudao")
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_df4df_articulated_part, extra_callback_info1) {
+    1..2: return df4df;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4df_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_SHUDAO);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4df_graphics_subtype, cargo_subtype) {
+    0: spriteset_df4df_original;
+    1: spriteset_df4df_shudao;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4df_graphics, position_in_articulated_veh % 3) {
+    1: switch_df4df_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4df_additional_text, param_cargo_decay) {
+    return string(STR_DESC_5, string(STR_FULL_NAME_DF4DF), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_DF4DF_LIVERY_AVAILABILITY), string(STR_DF4D_NICKNAME), string(STR_RELIABILITY_16));
+}
