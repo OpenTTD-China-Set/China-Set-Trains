@@ -302,7 +302,7 @@ STR_C62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (u
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_C70_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_P60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
-STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (Black, Blue, Brown, Rustyred)
 STR_P70_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_N60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_NX17_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Random (Black, Brown)
