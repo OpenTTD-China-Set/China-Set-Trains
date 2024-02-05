@@ -4,7 +4,7 @@ China Set: Trains Changelog
 --------------------
 Merged wuwu (kaitokiwa) branch
 Fix #36: DF4B for passenger uses incorrect sprite mistakenly
-ADD: DF4D7000, DF4C, DF4DF, DF8B, alternative sprites for DF4BK, DF4BH, DF4D, DF4D-4000, Alternative sprite for P62 (all coded by wuwu)
+ADD: DF4D7000, DF4C, DF4DF, DF8B, alternative sprites for DF4BK, DF4BH, DF4D, DF4D-4000, P62 (all coded by wuwu)
 
 0.1.5.145 (30/1/2024)
 --------------------
