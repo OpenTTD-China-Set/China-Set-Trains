@@ -1,0 +1,38 @@
+// Begin DF4D7000
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_df4d7000_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_df4d7000_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "df4d-7000")
+}
+
+// Vehicle
+spriteset (spriteset_df4d7000_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_df4d7000_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4d-7000")
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_df4d7000_articulated_part, extra_callback_info1) {
+    1..2: return df4d7000;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4d7000_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_df4d7000_original;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4d7000_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4d7000_additional_text, param_cargo_decay) {
+    return string(STR_DESC_4, string(STR_FULL_NAME_DF4D7000), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF4D7000_NICKNAME), string(STR_RELIABILITY_10));
+}

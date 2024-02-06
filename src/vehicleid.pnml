@@ -136,7 +136,7 @@ item (FEAT_TRAINS, df4d4000, 5125) {}
 item (FEAT_TRAINS, df11, 5126) {}
 item (FEAT_TRAINS, nj2, 5127) {}
 item (FEAT_TRAINS, df5, 5128) {}
-// 5129-5136 coded by wuwu
+// 5129-5139 coded by wuwu
 item (FEAT_TRAINS, df4bk, 5129) {}
 item (FEAT_TRAINS, df4bh, 5130) {}
 item (FEAT_TRAINS, df4bk, 5129) {}
@@ -147,6 +147,10 @@ item (FEAT_TRAINS, dfh7, 5133) {}
 item (FEAT_TRAINS, dfh7b, 5134) {}
 item (FEAT_TRAINS, df7g5000, 5135) {}
 item (FEAT_TRAINS, hxn5b, 5136) {}
+item (FEAT_TRAINS, df4c, 5137) {}
+item (FEAT_TRAINS, df4d7000, 5138) {}
+item (FEAT_TRAINS, df8b, 5139) {}
+item (FEAT_TRAINS, df4df, 5140) {}
 
 //25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
 #define id_range_25_electric 0x1800..0x1BFF

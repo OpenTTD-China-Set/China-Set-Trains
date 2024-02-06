@@ -36,6 +36,12 @@ spriteset (spriteset_df4_ukraine) {
 spriteset (spriteset_df4_jtzc) {
     template_empty ()
 }
+spriteset (spriteset_df4b_dprk) {
+    template_empty ()
+}
+spriteset (spriteset_df4bh_worker_pioneer) {
+    template_empty ()
+}
 alternative_sprites(spriteset_df4_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4")
 }
@@ -53,6 +59,12 @@ alternative_sprites(spriteset_df4_ukraine, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 }
 alternative_sprites(spriteset_df4_jtzc, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4-jtzc")
+}
+alternative_sprites(spriteset_df4b_dprk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4b-dprk")
+}
+alternative_sprites(spriteset_df4bh_worker_pioneer, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4bh-worker-pioneer")
 }
 
 switch (FEAT_TRAINS, SELF, switch_df4k_articulated_part, extra_callback_info1) {
