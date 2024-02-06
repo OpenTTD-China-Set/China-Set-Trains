@@ -111,15 +111,19 @@ STR_NAME_DF4K           :DF4 (Diesel) (Passenger Type)
 STR_NAME_DF4H           :DF4 (Diesel) (Freight Type)
 STR_NAME_DF4BK          :DF4B (Diesel) (Passenger Type)
 STR_NAME_DF4BH          :DF4B (Diesel) (Freight Type)
+STR_NAME_DF4C           :DF4C (Diesel)
 STR_NAME_DF4D0000       :DF4D-0000 (Diesel)
+STR_NAME_DF4DF          :DF4DF (Diesel)
 STR_NAME_DF4D3000       :DF4D-3000 (Diesel)
-STR_NAME_DF4D4000       :DF4D-4000/7000 (Diesel)
+STR_NAME_DF4D4000       :DF4D-4000 (Diesel)
+STR_NAME_DF4D7000       :DF4D-7000 (Diesel)
 STR_NAME_DF5            :DF5 (Diesel Shunter)
 STR_NAME_DF7G           :DF7G (Diesel Shunter)
 STR_NAME_DF7G5000       :DF7G-5000 (Diesel Shunter)
 STR_NAME_DF7G8000       :DF7G-8000 (Diesel Shunter)
 STR_NAME_DFH7           :DFH7 (Diesel)
 STR_NAME_DFH7B          :DFH7B (Diesel)
+STR_NAME_DF8B           :DF8B (Diesel)
 STR_NAME_DF11           :DF11 (Diesel)
 STR_NAME_DF11G          :DF11G (Diesel)
 STR_NAME_NJ2            :NJ2 (Diesel)
@@ -221,13 +225,17 @@ STR_FULL_NAME_SRW25          :{BLACK}Full Name: {GOLD}25m Double Decker Soft Sle
 
 STR_FULL_NAME_DF4            :{BLACK}Full Name: {GOLD}Dongfeng 4 Diesel Locomotive
 STR_FULL_NAME_DF4B           :{BLACK}Full Name: {GOLD}Dongfeng 4B Diesel Locomotive
+STR_FULL_NAME_DF4C           :{BLACK}Full Name: {GOLD}Dongfeng 4C Diesel Locomotive
 STR_FULL_NAME_DF5            :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive
 STR_FULL_NAME_DF4D           :{BLACK}Full Name: {GOLD}Dongfeng 4D Diesel Locomotive
+STR_FULL_NAME_DF4D7000       :{BLACK}Full Name: {GOLD}Dongfeng 4D Diesel Locomotive 7000 Series
+STR_FULL_NAME_DF4DF          :{BLACK}Full Name: {GOLD}Dongfeng 4DF Diesel Locomotive
 STR_FULL_NAME_DF7G           :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive
 STR_FULL_NAME_DF7G5000       :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive 5000 Series
 STR_FULL_NAME_DF7G8000       :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive 8000 Series
 STR_FULL_NAME_DFH7           :{BLACK}Full Name: {GOLD}Dongfanghong 7 Diesel Locomotive
 STR_FULL_NAME_DFH7B          :{BLACK}Full Name: {GOLD}Dongfanghong 7B Diesel Locomotive
+STR_FULL_NAME_DF8B           :{BLACK}Full Name: {GOLD}Dongfeng 8B Diesel Locomotive
 STR_FULL_NAME_DF11           :{BLACK}Full Name: {GOLD}Dongfeng 11 Diesel Locomotive
 STR_FULL_NAME_DF11G          :{BLACK}Full Name: {BLUE}Dongfeng 11G {WHITE}Diesel Locomotive
 STR_FULL_NAME_HXN5B          :{BLACK}Full Name: {GOLD}Hexienei 5B Diesel Locomotive
@@ -236,11 +244,11 @@ STR_FULL_NAME_SS4            :{BLACK}Full Name: {GOLD}Shaoshan 4 Electric Locomo
 STR_FULL_NAME_SS4G           :{BLACK}Full Name: {GOLD}Shaoshan 4G Electric Locomotive
 STR_FULL_NAME_SS5            :{BLACK}Full Name: {GOLD}Shaoshan 5 Electric Locomotive
 STR_FULL_NAME_SS6            :{BLACK}Full Name: {GOLD}Shaoshan 6 Electric Locomotive
-STR_FULL_NAME_SS6B           :{BLACK}Full Name：{GOLD}Shaoshan 6B Electric Locomotive
-STR_FULL_NAME_SS7            :{BLACK}Full Name：{GOLD}Shaoshan 7 Electric Locomotive
-STR_FULL_NAME_SS7B           :{BLACK}Full Name：{GOLD}Shaoshan 7B Electric Locomotive
-STR_FULL_NAME_SS7C           :{BLACK}Full Name：{GOLD}Shaoshan 7C Electric Locomotive
-STR_FULL_NAME_SS7E           :{BLACK}Full Name：{GOLD}Shaoshan 7E Electric Locomotive
+STR_FULL_NAME_SS6B           :{BLACK}Full Name: {GOLD}Shaoshan 6B Electric Locomotive
+STR_FULL_NAME_SS7            :{BLACK}Full Name: {GOLD}Shaoshan 7 Electric Locomotive
+STR_FULL_NAME_SS7B           :{BLACK}Full Name: {GOLD}Shaoshan 7B Electric Locomotive
+STR_FULL_NAME_SS7C           :{BLACK}Full Name: {GOLD}Shaoshan 7C Electric Locomotive
+STR_FULL_NAME_SS7E           :{BLACK}Full Name: {GOLD}Shaoshan 7E Electric Locomotive
 STR_FULL_NAME_SS8            :{BLACK}Full Name: {GOLD}Shaoshan 8 Electric Locomotive
 STR_FULL_NAME_HXD1           :{BLACK}Full Name: {GOLD}Hexie/Harmony 1 Electric Locomotive
 STR_FULL_NAME_HXD1B          :{BLACK}Full Name: {GOLD}Hexie/Harmony 1B Electric Locomotive
@@ -257,10 +265,13 @@ STR_DESC_2                          :{STRING}{}{STRING}
 
 STR_XL25T_SSPE_DESCRIPTION          :{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.
 
-STR_DF4_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery
-STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {BROWN}Original {GOLD}Livery and {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {GOLD}Railway Livery
-STR_DF4D4000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {BLUE}4000-{YELLOW}Series {GOLD}Livery and {GREEN}7000-{YELLOW}Series {GOLD}Livery
+STR_DF4_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea, DF4B only), Worker Pioneer Livery (DF4B only), {BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery
+STR_DF4C_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: Original Livery, {GREEN}GREEN {GOLD}Livery, {BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery
+STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {BROWN}Original {GOLD}Livery, {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {GOLD}Railway Livery and {PURPLE}Qinhuangdao Local Railway {GOLD}Livery
+STR_DF4D4000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {BLUE}4000-{YELLOW}Series {GOLD}Livery and {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, Fengfeng Mine Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea), Worker Pioneer Livery
+STR_DF4DF_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: Original Livery, {DKBLUE}Shudao Groups {GOLD}Livery
 STR_DF7G5000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: Original Livery and {BLUE}Pingmei {WHITE}Group {BLACK}Livery
+STR_DF8B_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: Original Livery and {GREEN}Baorixile Coal Mine {BLACK}Livery
 STR_NJ2_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {WHITE}Original {GOLD}and {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery
 STR_SS7C_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Original Livery, {YELLOW}Banana Yellow {GOLD}Livery
 STR_DJJ1_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Original Livery, Guangzhou-Shenzhen Railway Livery
@@ -269,8 +280,8 @@ STR_22B_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Ordinary 
 STR_25B_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_RW25B_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_XL25B_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_S25BLD_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {ORANGE}Orange-{YELLOW}Yellow {GOLD}Livery, deteriorated, with strengthening steel sheet, Urumqi, Xianxing (All low-door，higher loading speed, 120 km/h)
-STR_S25BHD_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}deteriorated, Shenyang (All high-door，lower loading speed, 140 km/h)
+STR_S25BLD_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {ORANGE}Orange-{YELLOW}Yellow {GOLD}Livery, deteriorated, with strengthening steel sheet, Urumqi, Xianxing (All low-door, higher loading speed, 120 km/h)
+STR_S25BHD_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}deteriorated, Shenyang (All high-door, lower loading speed, 140 km/h)
 STR_25G_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_CA25G_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_KD25G_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery (unfinished), {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
@@ -291,19 +302,22 @@ STR_C62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (u
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_C70_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_P60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
-STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (Black, Blue, Brown, Rustyred)
 STR_P70_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_N60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
-STR_NX17_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_NX17_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Random (Black, Brown)
 
 STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}Only Guangzhou-Kowloon Sub-Livery available so far
 
 STR_DF4_NICKNAME                    :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
 STR_DF4B_NICKNAME                   :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
+STR_DF4C_NICKNAME                   :{BLACK}Nickname: {GOLD}Blue Cat
 STR_DF4D_NICKNAME                   :{BLACK}Nickname: {GOLD}Tiger
+STR_DF4D7000_NICKNAME               :{BLACK}Nickname: {GOLD}Liuzhou Tiger
 STR_DF7G_NICKNAME                   :{BLACK}Nickname: {GOLD}Begger
 STR_DFH7_NICKNAME                   :{BLACK}Used in Anshan Steelworks, Liaoning Province
 STR_DFH7B_NICKNAME                  :{BLACK}Used in Panzhihua Steelworks, Sichuan Province
+STR_DF8B_NICKNAME                   :{BLACK}Nickname: {GOLD}Barbie
 STR_DF11_NICKNAME                   :{BLACK}Nickname: {GOLD}Lion
 STR_DF11G_NICKNAME                  :{BLACK}Nickname: {GOLD}Pig
 STR_HXN5B_NICKNAME                  :{BLACK}Nickname:{GOLD}Scrambled egg with tomato
@@ -364,8 +378,15 @@ STR_DF4D_7000           : - {GREEN}7000-{YELLOW}Series {BLACK}Livery
 STR_SS7C_BANANA         : - {YELLOW}Banana Yellow {BLACK}Livery
 STR_DF4_JTZC            : - {YELLOW}Beijing {BLUE}Railway Bureau {BLACK}Livery
 STR_UKRAINE             : - {YELLOW}Yellow {BLACK}and {BLUE}Blue {BLACK}Livery
-STR_PINGMEI             : - {BLUE}Pingmei (Pingdingshan Coal Mine) {}WHITE}Group {BLACK}Livery
-
+STR_PINGMEI             : - {BLUE}Pingmei (Pingdingshan Coal Mine) {WHITE}Group {BLACK}Livery
+STR_DF4B_DPRK           : - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery
+STR_WORKER_PIONEER      : - Worker Pioneer Livery
+STR_FENGFENG            : - Fengfeng Mine Livery
+STR_DF4D4000_DPRK       : - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery
+STR_QINHUANGDAO         : - {PURPLE}Qinhuangdao Local Railway {GOLD}Livery
+STR_BAORIXILE           : - {PURPLE}Baorixile Coal Mine {GOLD}Livery
+STR_HENAN_XINZHENG      : - {GREEN}Henan Xinzheng Railway {GOLD}Livery
+STR_SHUDAO              : - {DKBLUE}Shudao Group {GOLD}Livery
 
 STR_BUILD_YEAR          : - According to build year
 STR_YW22_ORIGINAL       : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240

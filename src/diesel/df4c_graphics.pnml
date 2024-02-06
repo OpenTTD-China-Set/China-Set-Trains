@@ -1,0 +1,62 @@
+// Begin DF4C
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_df4c_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_df4c_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "df4c")
+}
+
+// Vehicle
+spriteset (spriteset_df4c_original) {
+    template_empty ()
+}
+spriteset (spriteset_df4c_henanxinzheng) {
+    template_empty ()
+}
+spriteset (spriteset_df4c_ukraine) {
+    template_empty ()
+}
+alternative_sprites(spriteset_df4c_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4c")
+}
+alternative_sprites(spriteset_df4c_henanxinzheng, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4c-henan-xinzheng")
+}
+alternative_sprites(spriteset_df4c_ukraine, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4c-ukraine")
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4c_articulated_part, extra_callback_info1) {
+    1..2: return df4c;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4c_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_HENAN_XINZHENG);
+    2: return string(STR_UKRAINE);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4c_graphics_subtype, cargo_subtype) {
+    0: spriteset_df4c_original;
+    1: spriteset_df4c_henanxinzheng;
+    2: spriteset_df4c_ukraine;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4c_graphics, position_in_articulated_veh % 3) {
+    1: switch_df4c_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4c_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4c_additional_text, param_cargo_decay) {
+    return string(STR_DESC_5, string(STR_FULL_NAME_DF4C), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF4C_LIVERY_AVAILABILITY), string(STR_DF4C_NICKNAME), string(STR_RELIABILITY_16));
+}

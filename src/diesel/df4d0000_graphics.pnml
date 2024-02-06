@@ -20,6 +20,9 @@ spriteset (spriteset_df4d0000_xihu) {
 spriteset (spriteset_df4d0000_xihu_reversed) {
     template_empty ()
 }
+spriteset (spriteset_df4d0000_qinhuangdao) {
+    template_empty ()
+}
 alternative_sprites(spriteset_df4d0000_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4d-0000")
 }
@@ -29,7 +32,9 @@ alternative_sprites(spriteset_df4d0000_xihu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) 
 alternative_sprites(spriteset_df4d0000_xihu_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4d-xihu-r")
 }
-
+alternative_sprites(spriteset_df4d0000_qinhuangdao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4d-qinhuangdao")
+}
 
 switch (FEAT_TRAINS, SELF, switch_df4d0000_articulated_part, extra_callback_info1) {
     1..2: return df4d0000;
@@ -40,6 +45,7 @@ switch (FEAT_TRAINS, SELF, switch_df4d0000_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGINAL);
     1: return string(STR_XIHU);
     2: return string(STR_XIHU_REVERSE);
+    3: return string(STR_QINHUANGDAO);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -47,6 +53,7 @@ switch (FEAT_TRAINS, SELF, switch_df4d0000_graphics_subtype, cargo_subtype) {
     0: spriteset_df4d0000_original;
     1: spriteset_df4d0000_xihu;
     2: spriteset_df4d0000_xihu_reversed;
+    3: spriteset_df4d0000_qinhuangdao;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df4d0000_graphics, position_in_articulated_veh % 3) {

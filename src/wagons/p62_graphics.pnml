@@ -14,12 +14,61 @@ alternative_sprites(spriteset_p62_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH
 spriteset (spriteset_p62_black) {
     template_empty ()
 }
+spriteset (spriteset_p62_blue) {
+    template_empty ()
+}
+spriteset (spriteset_p62_damaged_severe) {
+    template_empty ()
+}
+spriteset (spriteset_p62_lightblack) {
+    template_empty ()
+}
+spriteset (spriteset_p62_lightblack_damaged) {
+    template_empty ()
+}
+spriteset (spriteset_p62_rustyred) {
+    template_empty ()
+}
+spriteset (spriteset_p62_rustyred_damaged) {
+    template_empty ()
+}
+spriteset (spriteset_p62_brown) {
+    template_empty ()
+}
 alternative_sprites(spriteset_p62_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "p62")
+}
+alternative_sprites(spriteset_p62_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p62-blue")
+}
+alternative_sprites(spriteset_p62_damaged_severe, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p62-damaged-severe")
+}
+alternative_sprites(spriteset_p62_lightblack, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p62-lightblack")
+}
+alternative_sprites(spriteset_p62_lightblack_damaged, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p62-lightblack-damaged")
+}
+alternative_sprites(spriteset_p62_rustyred, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p62-rustyred")
+}
+alternative_sprites(spriteset_p62_rustyred_damaged, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p62-rustyred-damaged")
+}
+alternative_sprites(spriteset_p62_brown, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p62-brown")
 }
 
 random_switch (FEAT_TRAINS, SELF, random_p62_colour) {
     1: spriteset_p62_black; // More colours waiting to be added
+    1: spriteset_p62_blue;
+    1: spriteset_p62_damaged_severe;
+    1: spriteset_p62_lightblack;
+    1: spriteset_p62_lightblack_damaged;
+    1: spriteset_p62_rustyred;
+    1: spriteset_p62_rustyred_damaged;
+    1: spriteset_p62_brown;
 }
 
 switch (FEAT_TRAINS, SELF, switch_p62_articulated_part, extra_callback_info1) {
