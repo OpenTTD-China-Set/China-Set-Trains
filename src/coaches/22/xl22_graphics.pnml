@@ -14,8 +14,20 @@ alternative_sprites(spriteset_xl22_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPT
 spriteset (spriteset_xl22_original) {
     template_empty ()
 }
+spriteset (spriteset_xl22_wru) {
+    template_empty ()
+}
+spriteset (spriteset_xl22_beijing2shanghai) {
+    template_empty ()
+}
 alternative_sprites(spriteset_xl22_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "xl22")
+}
+alternative_sprites(spriteset_xl22_wru, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "xl22-wru")
+}
+alternative_sprites(spriteset_xl22_beijing2shanghai, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "xl22-beijing2shanghai")
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl22_articulated_part, extra_callback_info1) {
@@ -23,9 +35,22 @@ switch (FEAT_TRAINS, SELF, switch_xl22_articulated_part, extra_callback_info1) {
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+switch (FEAT_TRAINS, SELF, switch_xl22_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_WRU);
+    2: return string(STR_BEIJING2SHANGHAI);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl22_graphics_subtype, cargo_subtype) {
+    0: spriteset_xl22_original;
+    1: spriteset_xl22_wru;
+    2: spriteset_xl22_beijing2shanghai;
+}
+
 switch (FEAT_TRAINS, SELF, switch_xl22_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_xl22_original;
-    empty_sprites;   
+    1: switch_xl22_graphics_subtype;
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl22_capacity, position_in_articulated_veh % 3) {
