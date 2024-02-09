@@ -412,6 +412,7 @@ STR_QINHUANGDAO         : - {PURPLE}Qinhuangdao Local Railway {GOLD}Livery
 STR_BAORIXILE           : - {PURPLE}Baorixile Coal Mine {GOLD}Livery
 STR_HENAN_XINZHENG      : - {GREEN}Henan Xinzheng Railway {GOLD}Livery
 STR_SHUDAO              : - {DKBLUE}Shudao Group {GOLD}Livery
+STR_ALTERNATIVE         : - Alternative Original Livery
 
 STR_BUILD_YEAR          : - According to build year
 STR_YW22_ORIGINAL       : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240

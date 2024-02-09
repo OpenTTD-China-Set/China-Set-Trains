@@ -405,6 +405,7 @@ STR_QINHUANGDAO         : - {PURPLE}秦皇岛地方铁路{BLACK}涂装
 STR_BAORIXILE           : - {GREEN}宝日希勒煤矿{BLACK}涂装
 STR_HENAN_XINZHENG      : - {GREEN}河南新郑铁路{BLACK}涂装
 STR_SHUDAO              : - {DKBLUE}蜀道集团{BLACK}涂装
+STR_ALTERNATIVE         : - 另一种原版涂装
 
 STR_BUILD_YEAR          : - 根据建造年份选择设计
 STR_YW22_ORIGINAL       : - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
