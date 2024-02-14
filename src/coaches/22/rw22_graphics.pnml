@@ -23,10 +23,21 @@ switch (FEAT_TRAINS, SELF, switch_rw22_articulated_part, extra_callback_info1) {
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-// switch (FEAT_TRAINS, SELF, switch_rw22_graphics, position_in_articulated_veh % 3) {
-//     1: spriteset_rw22_original;
-//     empty_sprites;   
-// }
+switch (FEAT_TRAINS, SELF, switch_rw22_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_WRU);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw22_graphics_subtype, cargo_subtype) {
+    0: spriteset_22_original;
+    1: spriteset_22_wru;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw22_graphics, position_in_articulated_veh % 3) {
+    1: switch_rw22_graphics_subtype;
+    empty_sprites;
+}
 
 switch (FEAT_TRAINS, SELF, switch_rw22_capacity, position_in_articulated_veh % 3) {
     1: return 32;

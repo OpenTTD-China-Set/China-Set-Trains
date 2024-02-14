@@ -14,8 +14,14 @@ alternative_sprites(spriteset_22_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_
 spriteset (spriteset_22_original) {
     template_empty ()
 }
+spriteset (spriteset_22_wru) {
+    template_empty ()
+}
 alternative_sprites(spriteset_22_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "22")
+}
+alternative_sprites(spriteset_22_wru, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "22-wru")
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz22_articulated_part, extra_callback_info1) {
@@ -23,9 +29,20 @@ switch (FEAT_TRAINS, SELF, switch_yz22_articulated_part, extra_callback_info1) {
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_22_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_22_original;
-    empty_sprites;   
+switch (FEAT_TRAINS, SELF, switch_yz22_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_WRU);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz22_graphics_subtype, cargo_subtype) {
+    0: spriteset_22_original;
+    1: spriteset_22_wru;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz22_graphics, position_in_articulated_veh % 3) {
+    1: switch_yz22_graphics_subtype;
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz22_capacity, position_in_articulated_veh % 3) {

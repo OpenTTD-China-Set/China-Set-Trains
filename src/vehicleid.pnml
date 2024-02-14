@@ -93,7 +93,7 @@ item (FEAT_TRAINS, sca25khd, 2093) {}
 item (FEAT_TRAINS, kd25t, 2094) {}
 item (FEAT_TRAINS, xl22, 2095) {}
 item (FEAT_TRAINS, xl25b, 2096) {}
-// 2097-2108 coded by wuwu
+// 2097-2118 coded by wuwu
 item (FEAT_TRAINS, rzt25z, 2097) {}
 item (FEAT_TRAINS, rz125z, 2098) {}
 item (FEAT_TRAINS, rz225z, 2099) {}
@@ -106,6 +106,16 @@ item (FEAT_TRAINS, sca25z, 2105) {}
 item (FEAT_TRAINS, srzxl25z, 2106) {}
 item (FEAT_TRAINS, syw25, 2107) {}
 item (FEAT_TRAINS, srw25, 2108) {}
+item (FEAT_TRAINS, rw19k, 2109) {}
+item (FEAT_TRAINS, rw19t, 2110) {}
+item (FEAT_TRAINS, uz22, 2111) {}
+item (FEAT_TRAINS, yz22aircon, 2112) {}
+item (FEAT_TRAINS, rz22aircon, 2113) {}
+item (FEAT_TRAINS, yw22aircon, 2114) {}
+item (FEAT_TRAINS, rw22aircon, 2115) {}
+item (FEAT_TRAINS, ca23aircon, 2116) {}
+item (FEAT_TRAINS, ca23, 2117) {}
+item (FEAT_TRAINS, tz, 2118) {}
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 #define id_range_wagons 0x0C00..0x0FFF
@@ -120,6 +130,8 @@ item (FEAT_TRAINS, c70, 3079) {}
 item (FEAT_TRAINS, p70, 3080) {}
 item (FEAT_TRAINS, gn70, 3081) {}
 item (FEAT_TRAINS, jsq5, 3082) {}
+item (FEAT_TRAINS, jsq6, 3083) {}
+item (FEAT_TRAINS, b6, 3084) {}
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF

@@ -36,6 +36,7 @@ item (FEAT_TRAINS, xl22) {
         // Menu
         additional_text:                switch_xl22_additional_text;
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_xl22_cargo_subtype;
         
         // Graphics
         default:                        switch_xl22_graphics;
