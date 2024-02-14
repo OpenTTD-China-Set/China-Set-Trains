@@ -38,6 +38,12 @@ STR_NAME_YZ22           :YZ22 (Passenger Coach)
 STR_NAME_RZ22           :RZ22 (Passenger Coach)
 STR_NAME_YW22           :YW22 (Passenger Coach)
 STR_NAME_RW22           :RW22 (Passenger Coach)
+STR_NAME_YZ22AIRCON     :YZ22 (Passenger Coach) (Air-conditioned)
+STR_NAME_RZ22AIRCON     :RZ22 (Passenger Coach) (Air-conditioned)
+STR_NAME_YW22AIRCON     :YW22 (Passenger Coach) (Air-conditioned)
+STR_NAME_RW22AIRCON     :RW22 (Passenger Coach) (Air-conditioned)
+STR_NAME_CA23           :CA23 (Passenger Coach)
+STR_NAME_CA23AIRCON     :CA23 (Passenger Coach) (Air-conditioned)
 STR_NAME_YZ22B          :YZ22B (Passenger Coach)
 STR_NAME_YW22B          :YW22B (Passenger Coach)
 STR_NAME_RW22B          :RW22B (Passenger Coach)
@@ -56,6 +62,7 @@ STR_NAME_RZ25G          :RZ25G (Passenger Coach)
 STR_NAME_YW25G          :YW25G (Passenger Coach)
 STR_NAME_RW25G          :RW25G (Passenger Coach)
 STR_NAME_CA25G          :CA25G (Restaurant Car)
+STR_NAME_RW19K          :RW19K (Passenger Coach)
 STR_NAME_YZ25K          :YZ25K (Passenger Coach)
 STR_NAME_RZ25K          :RZ25K (Passenger Coach)
 STR_NAME_YW25K          :YW25K (Passenger Coach)
@@ -68,6 +75,7 @@ STR_NAME_SYW25KHD       :SYW25K (Passenger Coach) (High-Door)
 STR_NAME_SRW25KHD       :SRW25K (Passenger Coach) (High-Door)
 STR_NAME_SCA25KHD       :SCA25K (Restaurant Car) (High-Door)
 STR_NAME_CA25K          :CA25K (Restaurant Car)
+STR_NAME_RW19T          :RW19T (Passenger Coach)
 STR_NAME_YZ25T          :YZ25T (Passenger Coach)
 STR_NAME_RZ25T          :RZ25T (Passenger Coach)
 STR_NAME_YW25T          :YW25T (Passenger Coach)
@@ -79,6 +87,8 @@ STR_NAME_XL25G          :XL25G (Luggage Car)
 STR_NAME_XL25K          :XL25K (Luggage Car)
 STR_NAME_XL25T          :XL25T (Luggage Car)
 STR_NAME_XL25T_SSPE     :XL25T-SSPE (Luggage Car)
+STR_NAME_UZ22           :UZ22 (Luggage Car)
+STR_NAME_TZ             :TZ (Air Conditioner Generator Car)
 STR_NAME_KD25G          :KD25G (Air Conditioner Generator Car)
 STR_NAME_KD25K          :KD25K (Air Conditioner Generator Car)
 STR_NAME_KD25Z          :KD25Z (Air Conditioner Generator Car)
@@ -101,11 +111,13 @@ STR_NAME_C70            :C70 (Gondola)
 STR_NAME_P60            :P60 (Boxcar)
 STR_NAME_P62            :P62 (Boxcar)
 STR_NAME_P70            :P70 (Boxcar)
+STR_NAME_B6             :B6  (Refrigerator Wagon)
 STR_NAME_G60            :G60 (Tanker)
 STR_NAME_GN70           :GN70 (Tanker)
 STR_NAME_N60            :N60 (Flatcar)
 STR_NAME_NX17           :NX17 (Flatcar)
 STR_NAME_JSQ5           :JSQ5 (Vehicle Transporter)
+STR_NAME_JSQ6           :JSQ6 (Vehicle Transporter)
 
 STR_NAME_DF4K           :DF4 (Diesel) (Passenger Type)
 STR_NAME_DF4H           :DF4 (Diesel) (Freight Type)
@@ -171,6 +183,12 @@ STR_FULL_NAME_YZ22           :{BLACK}Full Name: {GOLD}22 Type Hard Seat Passenge
 STR_FULL_NAME_RZ22           :{BLACK}Full Name: {GOLD}22 Type Soft Seat Passenger Coach
 STR_FULL_NAME_YW22           :{BLACK}Full Name: {GOLD}22 Type Hard Sleeper Passenger Coach
 STR_FULL_NAME_RW22           :{BLACK}Full Name: {GOLD}22 Type Soft Sleeper Passenger Coach
+STR_FULL_NAME_YZ22AIRCON     :{BLACK}Full Name: {GOLD}22 Type Hard Seat Passenger Coach (Air-conditioned)
+STR_FULL_NAME_RZ22AIRCON     :{BLACK}Full Name: {GOLD}22 Type Soft Seat Passenger Coach (Air-conditioned)
+STR_FULL_NAME_YW22AIRCON     :{BLACK}Full Name: {GOLD}22 Type Hard Sleeper Passenger Coach (Air-conditioned)
+STR_FULL_NAME_RW22AIRCON     :{BLACK}Full Name: {GOLD}22 Type Soft Sleeper Passenger Coach (Air-conditioned)
+STR_FULL_NAME_CA23           :{BLACK}Full Name: {GOLD}23 Type Restaurant Car
+STR_FULL_NAME_CA23AIRCON     :{BLACK}Full Name: {GOLD}23 Type Restaurant Car (Air-conditioned)
 STR_FULL_NAME_YZ22B          :{BLACK}Full Name: {GOLD}22B Type Hard Seat Passenger Coach
 STR_FULL_NAME_YW22B          :{BLACK}Full Name: {GOLD}22B Type Hard Sleeper Passenger Coach
 STR_FULL_NAME_RW22B          :{BLACK}Full Name: {GOLD}22B Type Soft Sleeper Passenger Coach
@@ -187,6 +205,7 @@ STR_FULL_NAME_RZ25G          :{BLACK}Full Name: {GOLD}25m Improved Soft Seat Pas
 STR_FULL_NAME_YW25G          :{BLACK}Full Name: {GOLD}25m Improved Hard Sleeper Passenger Coach
 STR_FULL_NAME_RW25G          :{BLACK}Full Name: {GOLD}25m Improved Soft Sleeper Passenger Coach
 STR_FULL_NAME_CA25G          :{BLACK}Full Name: {GOLD}25m Improved Restaurant Car
+STR_FULL_NAME_RW19K          :{BLACK}Full Name: {GOLD}19K Type Soft Sleeper Passenger Coach (2 berth)
 STR_FULL_NAME_YZ25K          :{BLACK}Full Name: {GOLD}25m Rapid Hard Seat Passenger Coach
 STR_FULL_NAME_RZ25K          :{BLACK}Full Name: {GOLD}25m Rapid Soft Seat Passenger Coach
 STR_FULL_NAME_YW25K          :{BLACK}Full Name: {GOLD}25m Rapid Hard Sleeper Passenger Coach
@@ -197,6 +216,7 @@ STR_FULL_NAME_SYW25K         :{BLACK}Full Name: {GOLD}25m Rapid Double Decker Ha
 STR_FULL_NAME_SRW25K         :{BLACK}Full Name: {GOLD}25m Rapid Double Decker Soft Sleeper Passenger Coach
 STR_FULL_NAME_SCA25K         :{BLACK}Full Name: {GOLD}25m Rapid Double Decker Restaurant Car
 STR_FULL_NAME_CA25K          :{BLACK}Full Name: {GOLD}25m Rapid Improved Restaurant Car
+STR_FULL_NAME_RW19T          :{BLACK}Full Name: {GOLD}19T Type Soft Sleeper Passenger Coach (2 berth)
 STR_FULL_NAME_YZ25T          :{BLACK}Full Name: {GOLD}25m Accelerated Hard Seat Passenger Coach
 STR_FULL_NAME_RZ25T          :{BLACK}Full Name: {GOLD}25m Accelerated Soft Seat Passenger Coach
 STR_FULL_NAME_YW25T          :{BLACK}Full Name: {GOLD}25m Accelerated Hard Sleeper Passenger Coach
@@ -207,6 +227,8 @@ STR_FULL_NAME_XL25B          :{BLACK}Full Name: {GOLD}25m Standard Luggage Car
 STR_FULL_NAME_XL25G          :{BLACK}Full Name: {GOLD}25m Improved Luggage Car
 STR_FULL_NAME_XL25K          :{BLACK}Full Name: {GOLD}25m Rapid Luggage Car
 STR_FULL_NAME_XL25T          :{BLACK}Full Name: {GOLD}25m Accelerated Luggage Car
+STR_FULL_NAME_UZ22           :{BLACK}Full Name: {GOLD}22 Type Railway Post Office
+STR_FULL_NAME_TZ             :{BLACK}Full Name: {GOLD}Special Purpose Car
 STR_FULL_NAME_KD25G          :{BLACK}Full Name: {GOLD}25m Improved Air Conditioner Generator Car
 STR_FULL_NAME_KD25K          :{BLACK}Full Name: {GOLD}25m Rapid Air Conditioner Generator Car
 STR_FULL_NAME_KD25Z          :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Air Conditioner Generator Car
@@ -275,7 +297,8 @@ STR_DF8B_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: Original Livery
 STR_NJ2_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {WHITE}Original {GOLD}and {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery
 STR_SS7C_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Original Livery, {YELLOW}Banana Yellow {GOLD}Livery
 STR_DJJ1_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Original Livery, Guangzhou-Shenzhen Railway Livery
-STR_22_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery (unfinished)
+STR_22_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Wuhan Railway Vocational College Livery, Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery (XL22, UZ22)
+STR_22AIRCON_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {GOLD}Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery, {BLUE}"Qinglonghu"{GOLD} Livery (unfinished)
 STR_22B_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery
 STR_25B_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_RW25B_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
@@ -288,6 +311,7 @@ STR_KD25G_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {RED}Red {GOLD}
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery
 STR_XL25T_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery (unfinished), {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_KD25T_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: Only {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery
+STR_19K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_25Z_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Xi{WHITE}zi{GOLD}Livery, {LTBLUE}Shijiazhuang-Qinhuangdao {WHITE}Slow Train {GOLD}Livery, {BLUE}Guangzhou-{RED}-Shenzhen{WHITE} Railway{GOLD} Livery
 STR_S25Z_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {LTBLUE}Shijiazhuang-Qinhuangdao {WHITE}Slow Train {GOLD}Livery, {BLUE}Guangzhou-{DKGREEN}-Shenzhen{WHITE} Railway{GOLD} Livery
@@ -295,6 +319,7 @@ STR_S25_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{GOL
 STR_S25KLD_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Liaodong Peninsula Livery (All low-door, higher loading speed)
 STR_S25KHD_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}Xianxing (Pioneer), Xi'an (All high-door, slower loading speed)
 STR_SCA25KHD_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {GOLD}Xi'an
+STR_TZ_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {ORANGE}Orange {GOLD}Livery, {GOLD}Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery
 STR_KD25K_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_G60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GRAY}Grey {GOLD}with Random-Colour Stripes (unfinished)
 STR_GN70_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished)
@@ -387,6 +412,7 @@ STR_QINHUANGDAO         : - {PURPLE}Qinhuangdao Local Railway {GOLD}Livery
 STR_BAORIXILE           : - {PURPLE}Baorixile Coal Mine {GOLD}Livery
 STR_HENAN_XINZHENG      : - {GREEN}Henan Xinzheng Railway {GOLD}Livery
 STR_SHUDAO              : - {DKBLUE}Shudao Group {GOLD}Livery
+STR_ALTERNATIVE         : - Alternative Original Livery
 
 STR_BUILD_YEAR          : - According to build year
 STR_YW22_ORIGINAL       : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240
@@ -409,6 +435,8 @@ STR_GUANGSHEN           : - Guangzhou-Shenzhen Railway Livery
 STR_JINWEN              : - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLACK}Company
 STR_GAOZU_GREEN         : - {DKGREEN}"Gaozu Green" {BLACK}(unfinished except 25T)
 STR_BEIJING             : - Beijing Railway Bureau
+STR_WRU                 : - Wuhan Railway Vocational College of Technology Livery
+STR_BEIJING2SHANGHAI    : - Beijing-Shanghai Express Train Livery 
 
 STR_COMFORT_144         :{BLACK}Comfort: {GOLD}144
 STR_COMFORT_160         :{BLACK}Comfort: {GOLD}160
@@ -420,6 +448,7 @@ STR_COMFORT_384         :{BLACK}Comfort: {GOLD}384
 
 STR_COMFORT_YW22        :{BLACK}Comfort: {GOLD}240 {BLACK}, refittable to Capacity 60, Comfort 288 from 1966 onwards
 
+STR_COMFORT_144_CAFE    :{BLACK}Comfort: {GOLD}144 {BLACK}, but at least 180 in operation due to its restaurant identity
 STR_COMFORT_160_CAFE    :{BLACK}Comfort: {GOLD}160 {BLACK}, but at least 200 in operation due to its restaurant identity
 STR_COMFORT_192_CAFE    :{BLACK}Comfort: {GOLD}192 {BLACK}, but at least 240 in operation due to its restaurant identity
 STR_COMFORT_384_AC      :{BLACK}Comfort: {GOLD}384 {BLACK}, but at least 480 in operation due to the presence of air conditioner
@@ -436,6 +465,7 @@ STR_COMFORT_240_CAFE    :{BLACK}Comfort: {GOLD}240 {BLACK}, but at least 300 in 
 STR_DECAY_185           :{BLACK}Cargo Age Period Factor: {GOLD}185
 STR_DECAY_200           :{BLACK}Cargo Age Period Factor: {GOLD}200
 STR_DECAY_400           :{BLACK}Cargo Age Period Factor: {GOLD}400
+STR_DECAY_800           :{BLACK}Cargo Age Period Factor: {GOLD}800
 STR_DECAY_BOXCAR        :{BLACK}Cargo Age Period Factor: {GOLD}185, Passengers 80, Livestock 560
 STR_DECAY_BOXCAR_NOPASS :{BLACK}Cargo Age Period Factor: {GOLD}185, Livestock 560, Unrefittable to Passengers
 

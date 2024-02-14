@@ -38,7 +38,7 @@ item (FEAT_TRAINS, yw22) {
         can_attach_wagon:               locowagon;
         
         // Graphics
-        default:                        switch_22_graphics;
+        default:                        switch_yw22_graphics;
         purchase:                       spriteset_22_purchase_original;
         articulated_part:               switch_yw22_articulated_part;
         cargo_subtype_text:             switch_yw22_cargo_subtype;

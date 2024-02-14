@@ -1,5 +1,10 @@
 China Set: Trains Changelog
 =========================
+0.1.5.147 (9/2/2024)
+--------------------
+Merged wuwu (kaitokiwa) branch
+ADD: JSQ6, B6, RW19K, RW19T, YZ22-Air-conditioned, RZ22-Air-conditioned, YW22-Air-conditioned, RW22-Air-conditioned, CA23-Air-conditioned, UZ22, CA23, TZ (all coded by wuwu)
+
 0.1.5.146 (31/1/2024)
 --------------------
 Merged wuwu (kaitokiwa) branch
