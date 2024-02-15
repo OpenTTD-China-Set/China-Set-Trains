@@ -210,6 +210,10 @@
 #include "src/wagons/jsq6_item.pnml"
 #include "src/wagons/b6_graphics.pnml"
 #include "src/wagons/b6_item.pnml"
+#include "src/wagons/b22_graphics.pnml"
+#include "src/wagons/b22_item.pnml"
+#include "src/wagons/l70_graphics.pnml"
+#include "src/wagons/l70_item.pnml"
 
 // Another Function File
 #include "src/function2.pnml"
@@ -264,6 +268,8 @@
 // 25kV AC Electric
 #include "src/25-electric/ss3_graphics.pnml"
 #include "src/25-electric/ss3_item.pnml"
+#include "src/25-electric/ss3b_graphics.pnml"
+#include "src/25-electric/ss3b_item.pnml"
 #include "src/25-electric/ss4_graphics.pnml"
 #include "src/25-electric/ss4_item.pnml"
 #include "src/25-electric/ss4g_graphics.pnml"
