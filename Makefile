@@ -121,33 +121,6 @@ PYTHON         ?= python
 UNIX2DOS       ?= unix2dos
 UNIX2DOS_FLAGS ?= $(shell [ -n $(UNIX2DOS) ] && $(UNIX2DOS) -q --version 2>/dev/null && echo "-q" || echo "")
 
-################################################################
-# Get the Repository revision, tags and the modified status
-# The displayed name within OpenTTD / TTDPatch
-# Looks like either
-# a nightly build:                 GRF's Name nightly-r51
-# a release build (taged version): GRF's Name 0.1
-################################################################
-# This must be conditional declarations, or building from the tar.gz won't work anymore
-VERSION_INFO ?= "$(shell ./findversion.sh)"
-
-USED_VCS ?= $(shell [ -d .hg ] && echo "HG"; [ -d .git ] && echo "GIT")
-
-# Hash
-REPO_HASH            ?= $(shell echo ${VERSION_INFO} | cut -f1)
-
-# The version reported to OpenTTD. Usually days since 2000 + branch offset
-NEWGRF_VERSION ?= $(shell echo ${VERSION_INFO} | cut -f2)
-
-# Whether there are local changes
-REPO_MODIFIED  ?= $(shell echo ${VERSION_INFO} | cut -f3)
-
-# Any tag which is not 'tip'
-REPO_TAGS      ?= $(shell echo ${VERSION_INFO} | cut -f4)
-
-# The shown version is either a tag, or in the absence of a tag the revision.
-REPO_VERSION_STRING ?= $(shell echo ${VERSION_INFO} | cut -f5)
-
 # The title consists of name and version
 REPO_TITLE     ?= $(REPO_NAME) $(REPO_VERSION_STRING)
 
@@ -168,7 +141,7 @@ pnml:
 
 nml: $(GENERATE_PNML)
 	$(_E) "[CPP] $(NML_FILE)"
-	$(_V) $(CC) -D REPO_REVISION=$(NEWGRF_VERSION) -D NEWGRF_VERSION=$(NEWGRF_VERSION) $(CC_USER_FLAGS) $(CC_FLAGS) -o $(NML_FILE) $(MAIN_SRC_FILE)
+	$(_V) $(CC) -D REPO_REVISION=$(REPO_REVISION) -D NEWGRF_VERSION=$(REPO_REVISION) $(CC_USER_FLAGS) $(CC_FLAGS) -o $(NML_FILE) $(MAIN_SRC_FILE)
 
 clean::
 	$(_E) "[CLEAN NML]"
@@ -252,7 +225,7 @@ custom_tags.txt: $(GENERATE_NML)
 	$(_V) echo "TITLE          :$(REPO_TITLE)" >> $@
 	$(_V) echo "FILENAME       :$(GRF_FILE)" >> $@
 	$(_V) echo "REPO_HASH      :$(REPO_HASH)" >> $@
-	$(_V) echo "NEWGRF_VERSION :$(NEWGRF_VERSION)" >> $@
+	$(_V) echo "NEWGRF_VERSION :$(REPO_REVISION)" >> $@
 
 clean::
 	$(_E) "[CLEAN LNG]"
@@ -355,8 +328,10 @@ GRFID_FLAGS    ?= -m
 # followed by an M, if the source repository is not a clean version.
 
 # Common to all filenames
-FILE_VERSION_STRING ?= $(shell [ -n "$(REPO_TAGS)" ] && echo "$(REPO_TAGS)$(REPO_MODIFIED)" || echo "$(REPO_BRANCH_STRING)$(NEWGRF_VERSION)$(REPO_MODIFIED)")
-DIR_NAME           := $(shell [ -n "$(REPO_TAGS)" ] && echo $(BASE_FILENAME)-$(FILE_VERSION_STRING) || echo $(BASE_FILENAME))
+# FILE_VERSION_STRING ?= $(shell [ -n "$(REPO_TAGS)" ] && echo "$(REPO_TAGS)$(REPO_MODIFIED)" || echo "$(REPO_BRANCH_STRING)$(NEWGRF_VERSION)$(REPO_MODIFIED)")
+# DIR_NAME           := $(shell [ -n "$(REPO_TAGS)" ] && echo $(BASE_FILENAME)-$(FILE_VERSION_STRING) || echo $(BASE_FILENAME))
+FILE_VERSION_STRING ?= $(shell echo $(REPO_VERSION_STRING))
+DIR_NAME		   := $(shell echo $(BASE_FILENAME)-$(FILE_VERSION_STRING))
 VERSIONED_FILENAME := $(BASE_FILENAME)-$(FILE_VERSION_STRING)
 DIR_NAME_SRC       := $(VERSIONED_FILENAME)-source
 
