@@ -147,7 +147,7 @@ STR_NAME_SS5            :SS5 (Electric)
 STR_NAME_SS6            :SS6 (Electric)
 STR_NAME_SS6B           :SS6B (Electric)
 STR_NAME_SS7            :SS7 (Electric)
-STR_NAME_SS7B           :SS7B(Electric)
+STR_NAME_SS7B           :SS7B (Electric)
 STR_NAME_SS7C           :SS7C (Electric)
 STR_NAME_SS7E           :SS7E (Electric)
 STR_NAME_SS8            :SS8 (Electric)
@@ -345,7 +345,7 @@ STR_DFH7B_NICKNAME                  :{BLACK}Used in Panzhihua Steelworks, Sichua
 STR_DF8B_NICKNAME                   :{BLACK}Nickname: {GOLD}Barbie
 STR_DF11_NICKNAME                   :{BLACK}Nickname: {GOLD}Lion
 STR_DF11G_NICKNAME                  :{BLACK}Nickname: {GOLD}Pig
-STR_HXN5B_NICKNAME                  :{BLACK}Nickname:{GOLD}Scrambled egg with tomato
+STR_HXN5B_NICKNAME                  :{BLACK}Nickname: {GOLD}Scrambled egg with tomato
 STR_SS3_NICKNAME                    :{BLACK}Nickname: {GOLD}San'ge (New), Sanye (Old) {}{BLACK}Chinese Lesson: San - Three, Ge - Elder Brother, Ye - Grandfather or a general and respectful pronoun to old men
 STR_SS4_NICKNAME                    :{BLACK}Nickname: {BLUE}Baoji Blue
 STR_SS4G_NICKNAME                   :{BLACK}Nickname: {GOLD}Sige {}{BLACK}Chinese Lesson: Si - Four

@@ -1,5 +1,9 @@
 China Set: Trains Changelog
 =========================
+0.1.5.148 (15/2/2024)
+--------------------
+Language fixes
+
 0.1.5.147 (9/2/2024)
 --------------------
 Merged wuwu (kaitokiwa) branch
