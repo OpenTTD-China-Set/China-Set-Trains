@@ -112,12 +112,14 @@ STR_NAME_P60            :P60 (棚车)
 STR_NAME_P62            :P62 (棚车)
 STR_NAME_P70            :P70 (棚车)
 STR_NAME_B6             :B6 (保温车)
+STR_NAME_B22            :B22 (保温车)
 STR_NAME_G60            :G60 (罐车)
 STR_NAME_GN70           :GN70 (罐车)
 STR_NAME_N60            :N60 (平车)
 STR_NAME_NX17           :NX17 (平车)
 STR_NAME_JSQ5           :JSQ5 (汽车运输车)
 STR_NAME_JSQ6           :JSQ6 (汽车运输车)
+STR_NAME_L70            :L70 (粮食漏斗车)
 
 STR_NAME_DF4K           :DF4 (内燃) (客运型)
 STR_NAME_DF4H           :DF4 (内燃) (货运型)
@@ -141,6 +143,7 @@ STR_NAME_DF11G          :DF11G (内燃)
 STR_NAME_NJ2            :NJ2 (内燃)
 STR_NAME_HXN5B          :HXN5B (内燃)
 STR_NAME_SS3            :SS3 (电力)
+STR_NAME_SS3B            :SS3B (电力)
 STR_NAME_SS4            :SS4 (电力)
 STR_NAME_SS4G           :SS4G (电力)
 STR_NAME_SS5            :SS5 (电力)
@@ -262,6 +265,7 @@ STR_FULL_NAME_DF11           :{BLACK}全称：{GOLD}东风11型内燃机车
 STR_FULL_NAME_DF11G          :{BLACK}全称：{BLUE}东风11G型{WHITE}内燃机车
 STR_FULL_NAME_HXN5B          :{BLACK}全称：{GOLD}和谐内5B型内燃机车
 STR_FULL_NAME_SS3            :{BLACK}全称：{GOLD}韶山3型电力机车
+STR_FULL_NAME_SS3B           :{BLACK}全称：{GOLD}韶山3B型电力机车
 STR_FULL_NAME_SS4            :{BLACK}全称：{GOLD}韶山4型电力机车
 STR_FULL_NAME_SS4G           :{BLACK}全称：{GOLD}韶山4G型电力机车
 STR_FULL_NAME_SS5            :{BLACK}全称：{GOLD}韶山5型电力机车
@@ -341,6 +345,7 @@ STR_DF11_NICKNAME                   :{BLACK}昵称: {GOLD}狮子
 STR_DF11G_NICKNAME                  :{BLACK}昵称: {GOLD}猪
 STR_HXN5B_NICKNAME                  :{BLACK}昵称: {GOLD}番茄炒蛋
 STR_SS3_NICKNAME                    :{BLACK}昵称: {GOLD}三哥 (前期), 三爷 (老化后)
+STR_SS3B_NICKNAME                   :{BLACK}昵称: {GOLD}蓝鸟，大蓝鸟
 STR_SS4_NICKNAME                    :{BLACK}昵称: {BLUE}宝鸡蓝
 STR_SS4G_NICKNAME                   :{BLACK}简介: {GOLD}运用范围相当广泛的八轴货运电力机车，从平原到山区都有她的身影，{BLACK}昵称: {GOLD}四哥
 STR_SS5_NICKNAME                    :{GOLD}试验型机车，产量仅2台。
@@ -459,6 +464,7 @@ STR_DECAY_185           :{BLACK}货物贬值周期因子：{GOLD}185
 STR_DECAY_200           :{BLACK}货物贬值周期因子：{GOLD}200
 STR_DECAY_400           :{BLACK}货物贬值周期因子：{GOLD}400
 STR_DECAY_800           :{BLACK}货物贬值周期因子：{GOLD}800
+STR_DECAY_1600          :{BLACK}货物贬值周期因子：{GOLD}1600
 STR_DECAY_BOXCAR        :{BLACK}货物贬值周期因子：{GOLD}185，棚代客80，装载活禽/畜560
 STR_DECAY_BOXCAR_NOPASS :{BLACK}货物贬值周期因子：{GOLD}185，装载活禽/畜560，棚代客不可用
 

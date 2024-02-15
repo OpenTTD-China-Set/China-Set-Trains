@@ -111,13 +111,15 @@ STR_NAME_C70            :C70 (Gondola)
 STR_NAME_P60            :P60 (Boxcar)
 STR_NAME_P62            :P62 (Boxcar)
 STR_NAME_P70            :P70 (Boxcar)
-STR_NAME_B6             :B6  (Refrigerator Wagon)
+STR_NAME_B6             :B6 (Refrigerator Wagon)
+STR_NAME_B22            :B22 (Refrigerator Wagon)
 STR_NAME_G60            :G60 (Tanker)
 STR_NAME_GN70           :GN70 (Tanker)
 STR_NAME_N60            :N60 (Flatcar)
 STR_NAME_NX17           :NX17 (Flatcar)
 STR_NAME_JSQ5           :JSQ5 (Vehicle Transporter)
 STR_NAME_JSQ6           :JSQ6 (Vehicle Transporter)
+STR_NAME_L70            :L70 (Hopper)
 
 STR_NAME_DF4K           :DF4 (Diesel) (Passenger Type)
 STR_NAME_DF4H           :DF4 (Diesel) (Freight Type)
@@ -141,6 +143,7 @@ STR_NAME_DF11G          :DF11G (Diesel)
 STR_NAME_NJ2            :NJ2 (Diesel)
 STR_NAME_HXN5B          :HXN5B (Diesel)
 STR_NAME_SS3            :SS3 (Electric)
+STR_NAME_SS3B           :SS3B (Electric)
 STR_NAME_SS4            :SS4 (Electric)
 STR_NAME_SS4G           :SS4G (Electric)
 STR_NAME_SS5            :SS5 (Electric)
@@ -262,6 +265,7 @@ STR_FULL_NAME_DF11           :{BLACK}Full Name: {GOLD}Dongfeng 11 Diesel Locomot
 STR_FULL_NAME_DF11G          :{BLACK}Full Name: {BLUE}Dongfeng 11G {WHITE}Diesel Locomotive
 STR_FULL_NAME_HXN5B          :{BLACK}Full Name: {GOLD}Hexienei 5B Diesel Locomotive
 STR_FULL_NAME_SS3            :{BLACK}Full Name: {GOLD}Shaoshan 3 Electric Locomotive
+STR_FULL_NAME_SS3B           :{BLACK}Full Name: {GOLD}Shaoshan 3B Electric Locomotive
 STR_FULL_NAME_SS4            :{BLACK}Full Name: {GOLD}Shaoshan 4 Electric Locomotive
 STR_FULL_NAME_SS4G           :{BLACK}Full Name: {GOLD}Shaoshan 4G Electric Locomotive
 STR_FULL_NAME_SS5            :{BLACK}Full Name: {GOLD}Shaoshan 5 Electric Locomotive
@@ -347,6 +351,7 @@ STR_DF11_NICKNAME                   :{BLACK}Nickname: {GOLD}Lion
 STR_DF11G_NICKNAME                  :{BLACK}Nickname: {GOLD}Pig
 STR_HXN5B_NICKNAME                  :{BLACK}Nickname: {GOLD}Scrambled egg with tomato
 STR_SS3_NICKNAME                    :{BLACK}Nickname: {GOLD}San'ge (New), Sanye (Old) {}{BLACK}Chinese Lesson: San - Three, Ge - Elder Brother, Ye - Grandfather or a general and respectful pronoun to old men
+STR_SS3B_NICKNAME                   :{BLACK}Nickname: {GOLD}Blue Bird
 STR_SS4_NICKNAME                    :{BLACK}Nickname: {BLUE}Baoji Blue
 STR_SS4G_NICKNAME                   :{BLACK}Nickname: {GOLD}Sige {}{BLACK}Chinese Lesson: Si - Four
 STR_SS5_NICKNAME                    :{BLACK}Nickname: {GOLD}Xiaowu (Little Five)
@@ -466,6 +471,7 @@ STR_DECAY_185           :{BLACK}Cargo Age Period Factor: {GOLD}185
 STR_DECAY_200           :{BLACK}Cargo Age Period Factor: {GOLD}200
 STR_DECAY_400           :{BLACK}Cargo Age Period Factor: {GOLD}400
 STR_DECAY_800           :{BLACK}Cargo Age Period Factor: {GOLD}800
+STR_DECAY_1600          :{BLACK}Cargo Age Period Factor: {GOLD}1600
 STR_DECAY_BOXCAR        :{BLACK}Cargo Age Period Factor: {GOLD}185, Passengers 80, Livestock 560
 STR_DECAY_BOXCAR_NOPASS :{BLACK}Cargo Age Period Factor: {GOLD}185, Livestock 560, Unrefittable to Passengers
 

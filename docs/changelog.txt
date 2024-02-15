@@ -1,5 +1,11 @@
 China Set: Trains Changelog
 =========================
+0.1.5.149 (15/2/2024)
+--------------------
+Merged wuwu (kaitokiwa) branch
+Fix #37: p62-brown, DF11G (graphic fix)
+ADD: SS3B, B22, L70 (all coded by wuwu)
+
 0.1.5.148 (15/2/2024)
 --------------------
 Language fixes

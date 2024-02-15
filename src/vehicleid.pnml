@@ -132,6 +132,8 @@ item (FEAT_TRAINS, gn70, 3081) {}
 item (FEAT_TRAINS, jsq5, 3082) {}
 item (FEAT_TRAINS, jsq6, 3083) {}
 item (FEAT_TRAINS, b6, 3084) {}
+item (FEAT_TRAINS, b22, 3085) {}
+item (FEAT_TRAINS, l70, 3086) {}
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
@@ -173,7 +175,7 @@ item (FEAT_TRAINS, ss3, 6147) {}
 item (FEAT_TRAINS, ss8, 6148) {}
 item (FEAT_TRAINS, hxd1, 6149) {}
 item (FEAT_TRAINS, ss4, 6150) {}
-// 6151-6157 coded by wuwu
+// 6151-6158 coded by wuwu
 item (FEAT_TRAINS, ss4g, 6151) {}
 item (FEAT_TRAINS, ss5, 6152) {}
 item (FEAT_TRAINS, ss6, 6153) {}
@@ -181,6 +183,7 @@ item (FEAT_TRAINS, ss7, 6154) {}
 item (FEAT_TRAINS, ss7b, 6155) {}
 item (FEAT_TRAINS, ss7c, 6156) {}
 item (FEAT_TRAINS, ss7e, 6157) {}
+item (FEAT_TRAINS, ss3b, 6158) {}
 
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
 #define id_range_multi_loco 0x1C00..0x1FFF 
