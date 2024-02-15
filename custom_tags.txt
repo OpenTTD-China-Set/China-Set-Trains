@@ -1,0 +1,6 @@
+VERSION        :0.1.5.148
+VERSION_STRING :0.1.5.148
+TITLE          :China Set: Trains 0.1.5.148
+FILENAME       :chinasettrains.grf
+REPO_HASH      :
+NEWGRF_VERSION :148
