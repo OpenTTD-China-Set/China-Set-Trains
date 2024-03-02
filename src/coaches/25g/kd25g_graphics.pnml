@@ -20,6 +20,9 @@ spriteset (spriteset_kd25g_luchaogang) {
 spriteset (spriteset_kd25g_orange) {
     template_empty ()
 }
+spriteset (spriteset_kd25g_xihu) {
+    template_empty ()
+}
 alternative_sprites(spriteset_kd25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "kd25g")
 }
@@ -28,6 +31,9 @@ alternative_sprites(spriteset_kd25g_luchaogang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BP
 }
 alternative_sprites(spriteset_kd25g_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "kd25g-orange")
+}
+alternative_sprites(spriteset_kd25g_xihu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "kd25g-xihu")
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25g_articulated_part, extra_callback_info1) {
@@ -40,7 +46,8 @@ switch (FEAT_TRAINS, SELF, switch_kd25g_cargo_subtype, cargo_subtype) {
     1: return string(STR_RED_WHITE);
     2: return string(STR_LUCHAOGANG);
     3: return string(STR_ORANGE);
-    4: return string(STR_GAOZU_GREEN);
+    4: return string(STR_XIHU);
+    5: return string(STR_GAOZU_GREEN);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -53,7 +60,8 @@ switch (FEAT_TRAINS, SELF, switch_kd25g_graphics_subtype, cargo_subtype) {
     1: spriteset_kd25g_original;
     2: spriteset_kd25g_luchaogang;
     3: spriteset_kd25g_orange;
-    3: spriteset_kd25g_original;  // Will change to "spriteset_kd25g_gaozu" once the "gaozu green" sprite is finished
+    4: spriteset_kd25g_xihu;
+    5: spriteset_kd25g_original;  // Will change to "spriteset_kd25g_gaozu" once the "gaozu green" sprite is finished
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25g_graphics, position_in_articulated_veh % 3) {

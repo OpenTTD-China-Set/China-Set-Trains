@@ -1,0 +1,236 @@
+// Begin CRH6A-A (Section)
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_crh6aa_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_crh6aa_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-emu", "crh6a-a-c-guangqing-1")
+}
+
+// Vehicle
+spriteset (spriteset_crh6aa_front_guangqing) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_front_guangqing_stick) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_middle_1_guangqing) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_middle_2_guangqing) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_cab_guangqing) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_cab_guangqing_stick) {
+    template_empty ()
+}
+
+alternative_sprites (spriteset_crh6aa_front_guangqing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh6a-a-c-guangqing-1")
+}
+alternative_sprites (spriteset_crh6aa_front_guangqing_stick, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh6a-a-c-guangqing-stick-1")
+}
+alternative_sprites (spriteset_crh6aa_middle_1_guangqing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh6a-a-p-guangqing")
+}
+alternative_sprites (spriteset_crh6aa_middle_2_guangqing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh6a-a-p-guangqing")
+}
+alternative_sprites (spriteset_crh6aa_cab_guangqing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh6a-a-c-guangqing-2")
+}
+alternative_sprites (spriteset_crh6aa_cab_guangqing_stick, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh6a-a-c-guangqing-stick-2")
+}
+
+
+spriteset (spriteset_crh6aa_front_guangzhu) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_front_guangzhu_stick) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_middle_1_guangzhu) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_middle_2_guangzhu) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_cab_guangzhu) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_cab_guangzhu_stick) {
+    template_empty ()
+}
+
+alternative_sprites (spriteset_crh6aa_front_guangzhu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh6a-a-c-guangzhu-1")
+}
+alternative_sprites (spriteset_crh6aa_front_guangzhu_stick, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh6a-a-c-guangzhu-stick-1")
+}
+alternative_sprites (spriteset_crh6aa_middle_1_guangzhu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh6a-a-p-guangzhu-1")
+}
+alternative_sprites (spriteset_crh6aa_middle_2_guangzhu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh6a-a-p-guangzhu-2")
+}
+alternative_sprites (spriteset_crh6aa_cab_guangzhu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh6a-a-c-guangzhu-2")
+}
+alternative_sprites (spriteset_crh6aa_cab_guangzhu_stick, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh6a-a-c-guangzhu-stick-2")
+}
+
+
+spriteset (spriteset_crh6aa_front_tianfu) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_front_tianfu_stick) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_front_tianfu_green) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_front_tianfu_green_stick) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_middle_1_tianfu) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_middle_2_tianfu) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_cab_tianfu) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_cab_tianfu_stick) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_cab_tianfu_green) {
+    template_empty ()
+}
+spriteset (spriteset_crh6aa_cab_tianfu_green_stick) {
+    template_empty ()
+}
+
+alternative_sprites (spriteset_crh6aa_front_tianfu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh6a-a-c-tianfu-1")
+}
+alternative_sprites (spriteset_crh6aa_front_tianfu_stick, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh6a-a-c-tianfu-stick-1")
+}
+alternative_sprites (spriteset_crh6aa_front_tianfu_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh6a-a-c-tianfu-green-1")
+}
+alternative_sprites (spriteset_crh6aa_front_tianfu_green_stick, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh6a-a-c-tianfu-green-stick-1")
+}
+alternative_sprites (spriteset_crh6aa_middle_1_tianfu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh6a-a-p-tianfu-1")
+}
+alternative_sprites (spriteset_crh6aa_middle_2_tianfu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh6a-a-p-tianfu-2")
+}
+alternative_sprites (spriteset_crh6aa_cab_tianfu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh6a-a-c-tianfu-2")
+}
+alternative_sprites (spriteset_crh6aa_cab_tianfu_stick, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh6a-a-c-tianfu-stick-2")
+}
+alternative_sprites (spriteset_crh6aa_cab_tianfu_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh6a-a-c-tianfu-green-2")
+}
+alternative_sprites (spriteset_crh6aa_cab_tianfu_green_stick, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh6a-a-c-tianfu-green-stick-2")
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6aa_articulated_part, extra_callback_info1) {
+    1..11: return crh6aa;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6aa_cargo_subtype, cargo_subtype) {
+    0: return string(STR_GUANGQING);
+    1: return string(STR_GUANGZHU);
+    2: return string(STR_TIANFU);
+    3: return string(STR_TIANFU_GREEN);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6aa_front, cargo_subtype) {
+    0: spriteset_crh6aa_front_guangqing;
+    1: spriteset_crh6aa_front_guangzhu;
+    2: spriteset_crh6aa_front_tianfu;
+    3: spriteset_crh6aa_front_tianfu_green;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6aa_front_stick, cargo_subtype) {
+    0: spriteset_crh6aa_front_guangqing_stick;
+    1: spriteset_crh6aa_front_guangzhu_stick;
+    2: spriteset_crh6aa_front_tianfu_stick;
+    3: spriteset_crh6aa_front_tianfu_green_stick;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6aa_middle_1, cargo_subtype) {
+    0: spriteset_crh6aa_middle_1_guangqing;
+    1: spriteset_crh6aa_middle_1_guangzhu;
+    2..3: spriteset_crh6aa_middle_1_tianfu;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6aa_middle_2, cargo_subtype) {
+    0: spriteset_crh6aa_middle_2_guangqing;
+    1: spriteset_crh6aa_middle_2_guangzhu;
+    2..3: spriteset_crh6aa_middle_2_tianfu;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6aa_cab, cargo_subtype) {
+    0: spriteset_crh6aa_cab_guangqing;
+    1: spriteset_crh6aa_cab_guangzhu;
+    2: spriteset_crh6aa_cab_tianfu;
+    3: spriteset_crh6aa_cab_tianfu_green;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6aa_cab_stick, cargo_subtype) {
+    0: spriteset_crh6aa_cab_guangqing_stick;
+    1: spriteset_crh6aa_cab_guangzhu_stick;
+    2: spriteset_crh6aa_cab_tianfu_stick;
+    3: spriteset_crh6aa_cab_tianfu_green_stick;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6aa_graphics_middle, position_in_articulated_veh % 12) {
+    1: switch_crh6aa_front_stick;
+    4: switch_crh6aa_middle_1;
+    7: switch_crh6aa_middle_2;
+    10: switch_crh6aa_cab_stick;
+    empty_sprites;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh6aa_graphics_cab, position_in_consist_from_end) {
+    1: switch_crh6aa_cab;
+    switch_crh6aa_graphics_middle;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6aa_graphics, position_in_consist) {
+    1: switch_crh6aa_front;
+    switch_crh6aa_graphics_cab;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6aa_section_capacity, position_in_articulated_veh % 12) {
+    1: return 150;
+    4: return 201;
+    7: return 201;
+    10: return 150;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6aa_additional_text, param_cargo_decay) {
+    return string(STR_DESC_4, string(STR_RELIABILITY_6), string(STR_CRH6AA_LIVERY_AVAILABILITY), string(STR_CRH6AA_CONSIST), string(STR_COMFORT_160));
+}
