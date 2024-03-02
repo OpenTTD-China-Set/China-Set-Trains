@@ -294,6 +294,8 @@
 #include "src/25-electric/hxd1_item.pnml"
 #include "src/25-electric/hxd1b_graphics.pnml"
 #include "src/25-electric/hxd1b_item.pnml"
+#include "src/25-electric/hxd1d_graphics.pnml"
+#include "src/25-electric/hxd1d_item.pnml"
 #include "src/25-electric/hxd3c_graphics.pnml"
 #include "src/25-electric/hxd3c_item.pnml"
 #include "src/25-electric/hxd3d_graphics.pnml"

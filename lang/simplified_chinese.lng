@@ -156,6 +156,7 @@ STR_NAME_SS7E           :SS7E (电力)
 STR_NAME_SS8            :SS8 (电力)
 STR_NAME_HXD1           :HXD1 (电力)
 STR_NAME_HXD1B          :HXD1B (电力)
+STR_NAME_HXD1D          :HXD1D (电力)
 STR_NAME_HXD3C          :HXD3C (电力)
 STR_NAME_HXD3D          :HXD3D (电力)
 
@@ -278,6 +279,7 @@ STR_FULL_NAME_SS7E           :{BLACK}全称：{GOLD}韶山7E型电力机车
 STR_FULL_NAME_SS8            :{BLACK}全称：{GOLD}韶山8型电力机车
 STR_FULL_NAME_HXD1           :{BLACK}全称：{GOLD}和谐1型电力机车
 STR_FULL_NAME_HXD1B          :{BLACK}全称：{GOLD}和谐1B型电力机车
+STR_FULL_NAME_HXD1D          :{BLACK}全称：{GOLD}和谐1D型电力机车
 STR_FULL_NAME_HXD3C          :{BLACK}全称：{GOLD}和谐3C型电力机车
 STR_FULL_NAME_HXD3D          :{BLACK}全称：{GOLD}和谐3D型电力机车
 
@@ -358,6 +360,7 @@ STR_SS7E_NICKNAME                   :{BLACK}简介: {GOLD}准高速干线电力�
 STR_SS8_NICKNAME                    :{BLACK}昵称: {GOLD}扫把
 STR_HXD1_NICKNAME                   :{BLACK}昵称: {GOLD}蓝精灵
 STR_HXD1B_NICKNAME                  :{BLACK}昵称: {GOLD}河蟹
+STR_HXD1D_NICKNAME                  :{BLACK}昵称: {GOLD}红枣
 STR_HXD3C_NICKNAME                  :{BLACK}昵称: {GOLD}电狒狒
 STR_HXD3D_NICKNAME                  :{BLACK}昵称: {GOLD}番茄
 STR_NDJ3_NICKNAME                   :{BLACK}昵称：{WHITE}大白猪
