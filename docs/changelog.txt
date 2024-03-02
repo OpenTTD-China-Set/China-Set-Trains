@@ -1,5 +1,10 @@
 China Set: Trains Changelog
 =========================
+0.1.5.150 (1/3/2024)
+--------------------
+Merged wuwu (kaitokiwa) branch
+ADD: NX70A ( coded by wuwu)
+
 0.1.5.149 (15/2/2024)
 --------------------
 Merged wuwu (kaitokiwa) branch
