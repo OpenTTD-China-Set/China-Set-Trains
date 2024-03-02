@@ -39,7 +39,7 @@ item (FEAT_TRAINS, crh1e) {
     graphics {
         // Menu
         additional_text:                switch_crh1e_additional_text;
-        can_attach_wagon:               crhwagon;
+        can_attach_wagon:               crhsleeperonly;
         start_stop:                     mu4car;
         // Graphics
         default:                        switch_crh1e_graphics;

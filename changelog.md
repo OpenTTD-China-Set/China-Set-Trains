@@ -5,6 +5,10 @@ China Set: Trains Changelog
 
 ## Initial-0-2 Updates
 
+0.2.0.151 (2/3/2024)
+--------------------
+Fix #38: CRH1E unable to attach sleeper carriages
+
 0.2.0.150 (2/3/2024)
 --------------------
 Merged wuwu (kaitokiwa) and babel-TTT branch
