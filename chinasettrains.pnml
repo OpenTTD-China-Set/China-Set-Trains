@@ -204,6 +204,8 @@
 #include "src/wagons/n60_item.pnml"
 #include "src/wagons/nx17_graphics.pnml"
 #include "src/wagons/nx17_item.pnml"
+#include "src/wagons/nx70a_graphics.pnml"
+#include "src/wagons/nx70a_item.pnml"
 #include "src/wagons/jsq5_graphics.pnml"
 #include "src/wagons/jsq5_item.pnml"
 #include "src/wagons/jsq6_graphics.pnml"

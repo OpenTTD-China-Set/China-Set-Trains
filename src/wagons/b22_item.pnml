@@ -8,8 +8,7 @@ item (FEAT_TRAINS, b22) {
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1986,01,01);
-        model_life:                     50;
-        retire_early:                   25;
+        model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
         track_type:                     SACN;
 
@@ -50,7 +49,7 @@ item (FEAT_TRAINS, b22) {
         cost_factor:                    43;
         running_cost_factor:            33 * runningcostfactor();
         purchase_running_cost_factor:   132;
-        purchase_cargo_capacity:        switch_b22_capacity_cargo() / 15;
+        purchase_cargo_capacity:        switch_b22_capacity_cargo() * 4 / 15;
     }
 }
 

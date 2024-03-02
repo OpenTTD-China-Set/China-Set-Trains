@@ -37,6 +37,7 @@ item (FEAT_TRAINS, ca25z) {
         // Menu
         additional_text:                switch_ca25z_additional_text;
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_ca25z_cargo_subtype;
         
         // Graphics
         default:                        switch_ca25z_graphics;

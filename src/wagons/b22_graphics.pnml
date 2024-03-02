@@ -39,10 +39,13 @@ switch (FEAT_TRAINS, SELF, switch_b22_graphics, position_in_articulated_veh % 15
 }
 
 switch (FEAT_TRAINS, SELF, switch_b22_capacity_cargo, cargo_type_in_veh) {
-    return 184;
+    return 46;
 }
 
 switch (FEAT_TRAINS, SELF, switch_b22_capacity, position_in_articulated_veh % 15) {
     1: switch_b22_capacity_cargo;
+    4: switch_b22_capacity_cargo;
+    10: switch_b22_capacity_cargo;
+    13: switch_b22_capacity_cargo;
     return 0;
 }
