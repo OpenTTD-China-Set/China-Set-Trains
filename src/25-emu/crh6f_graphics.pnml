@@ -98,7 +98,7 @@ switch (FEAT_TRAINS, SELF, switch_crh6f_articulated_part, extra_callback_info1) 
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh6f_cargo_subtype, cargo_subtype) {
-    0: return string(STR_FOSHAN);
+    0: return string(STR_ZHUSANJIAO_ORANGE);
     1: return string(STR_JINSHAN);
     2: return string(STR_XIAOYONG);
     return CB_RESULT_NO_TEXT;
@@ -139,7 +139,7 @@ switch (FEAT_TRAINS, SELF, switch_crh6f_head_capacity, position_in_articulated_v
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh6f_additional_text, param_cargo_decay) {
-    return string(STR_DESC_5, string(STR_CRH6F_CAN_ATTACH_WAGON), string(STR_CRH6F_LIVERY_AVAILABILITY), string(STR_RELIABILITY_6), string(STR_CRH6F_CONSIST), string(STR_CRH6F_HEAD_SEAT));
+    return string(STR_DESC_5, string(STR_CRH6F_CAN_ATTACH_WAGON), string(STR_CRH6F_NICKNAME), string(STR_CRH6F_LIVERY_AVAILABILITY), string(STR_RELIABILITY_6), string(STR_CRH6F_CONSIST), string(STR_CRH6F_HEAD_SEAT));
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh6f_short_graphics, (position_in_consist_from_end == position_in_consist) || (position_in_consist_from_end == position_in_consist + 3)) {

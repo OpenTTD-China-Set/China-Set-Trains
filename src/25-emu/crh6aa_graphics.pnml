@@ -157,7 +157,7 @@ switch (FEAT_TRAINS, SELF, switch_crh6aa_articulated_part, extra_callback_info1)
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh6aa_cargo_subtype, cargo_subtype) {
-    0: return string(STR_GUANGQING);
+    0: return string(STR_ZHUSANJIAO_BLUE);
     1: return string(STR_GUANGZHU);
     2: return string(STR_TIANFU);
     3: return string(STR_TIANFU_GREEN);

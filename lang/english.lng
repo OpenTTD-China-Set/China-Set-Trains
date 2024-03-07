@@ -313,10 +313,10 @@ STR_NJ2_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {WHITE}Original
 STR_SS7C_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Original Livery, {YELLOW}Banana Yellow {GOLD}Livery
 
 STR_DJJ1_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Original Livery, Guangzhou-Shenzhen Railway Livery
-STR_CRH6A2_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}Prototype, Guangzhou-Shenzhen, Guangzhou-Zhuhai, Tianfu (A nickname of Chengdu, meaning "Paradise") (with or without green stripes), Zhengzhou-Jiaozuo, Zhuhai-Airport, Zhujiang Sanjiaozhou (Pearl River Delta) (Blue or Orange)
+STR_CRH6A2_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}Prototype, Guangzhou-Shenzhen, Guangzhou-Zhuhai, Tianfu (A nickname of Chengdu, meaning "Paradise") (with or without green stripes), Zhengzhou-Jiaozuo, Zhuhai-Airport, Pearl River Delta (Blue or Orange)
 STR_CRH6A3_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}Beijing-Tongzhou, Shanghai-Jinshan
-STR_CRH6AA_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}Guangzhou-Qingyuan, Guangzhou-Zhuhai, Tianfu (A nickname of Chengdu, meaning "Paradise") (with or without green stripes)
-STR_CRH6F_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {GOLD}Foshan, Shanghai-Jinshan, Xiaoshan/Hangzhou-Ningbo
+STR_CRH6AA_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}Pearl River Delta, Guangzhou-Zhuhai, Tianfu (A nickname of Chengdu, meaning "Paradise") (with or without green stripes)
+STR_CRH6F_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {GOLD}Pearl River Delta, Shanghai-Jinshan, Xiaoshan/Hangzhou-Ningbo
 
 STR_22_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Wuhan Railway Vocational College Livery, Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery (XL22, UZ22)
 STR_22AIRCON_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {GOLD}Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery, {BLUE}"Qinglonghu"{GOLD} Livery (unfinished)
@@ -391,10 +391,13 @@ STR_CRH1A_NICKNAME                  :{BLACK}Nickname: {GOLD}Metro {BLACK}(due to
 STR_CRH1E_NICKNAME                  :{BLACK}Nickname: {GOLD}Sleeping Metro {BLACK}(due to its sleeper identity)
 STR_CRH2A_NICKNAME                  :{BLACK}Nickname: {GOLD}Hairtail
 STR_CRH2C_NICKNAME                  :{BLACK}Nickname: {GOLD}Crazy Hairtail
+STR_CRH2G_NICKNAME                  :{BLACK}Nickname: {GOLD}Advanced Black Face
 STR_CRH3A_NICKNAME                  :{BLACK}Nickname: {GOLD}Golden Eyes
 STR_CRH3C_NICKNAME                  :{BLACK}Nickname: {GOLD}Rabbit
 STR_CRH5A_NICKNAME                  :{BLACK}Nickname: {GOLD}Donkey
+STR_CRH6F_NICKNAME                  :{BLACK}Nickname: {GOLD}Real Metro
 STR_CRH380B_NICKNAME                :{BLACK}Nickname: {GOLD}Crazy Rabbit
+STR_CRH380CL_NICKNAME                :{BLACK}Nickname: {GOLD}Shark
 STR_CR400BF_NICKNAME                :{BLACK}Nickname: {GOLD}Golden Phoenix
 
 
@@ -470,8 +473,8 @@ STR_TIANFU_GREEN        : - Tianfu (Chengdu) Livery with green stripes
 STR_GUANGZHU            : - Guangzhou-Zhuhai Livery
 STR_ZHENGJIAO           : - Zhengzhou-Jiaozuo Livery
 STR_ZHUJI               : - Zhuhai-Airport Livery
-STR_ZHUSANJIAO_BLUE     : - Pearl River Delta (Zhujiang Sanjiaozhou), Blue
-STR_ZHUSANJIAO_ORANGE   : - Pearl River Delta (Zhujiang Sanjiaozhou), Orange
+STR_ZHUSANJIAO_BLUE     : - Pearl River Delta Intercity Railway, Blue
+STR_ZHUSANJIAO_ORANGE   : - Pearl River Delta Intercity Railway, Orange
 STR_JINSHAN             : - Shanghai-Jinshan Livery
 STR_GUANGQING           : - Guangzhou-Qingyuan Livery
 STR_FOSHAN              : - Foshan Livery

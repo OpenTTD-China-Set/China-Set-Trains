@@ -53,7 +53,7 @@ switch (FEAT_TRAINS, SELF, switch_crh380cl_head_capacity, position_in_articulate
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh380cl_additional_text, param_cargo_decay) {
-    return string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_RELIABILITY_5), string(STR_CRH380CL_CONSIST), string(STR_CRH380CL_HEAD_SEAT), string(STR_350_380_AVAILABLE));
+    return string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH380CL_NICKNAME), string(STR_RELIABILITY_5), string(STR_CRH380CL_CONSIST), string(STR_CRH380CL_HEAD_SEAT), string(STR_350_380_AVAILABLE));
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh380cl_short_graphics, (position_in_consist_from_end == position_in_consist) || (position_in_consist_from_end == position_in_consist + 3)) {
