@@ -53,7 +53,7 @@ switch (FEAT_TRAINS, SELF, switch_crh2g_head_capacity, position_in_articulated_v
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh2g_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_RELIABILITY_12), string(STR_CRH2G_CONSIST), string(STR_CRH2G_HEAD_SEAT));
+    return string(STR_DESC_4, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH2G_NICKNAME), string(STR_RELIABILITY_12), string(STR_CRH2G_CONSIST), string(STR_CRH2G_HEAD_SEAT));
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh2g_short_graphics, (position_in_consist_from_end == position_in_consist) || (position_in_consist_from_end == position_in_consist + 3)) {

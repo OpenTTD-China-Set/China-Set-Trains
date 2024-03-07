@@ -306,11 +306,11 @@ STR_NJ2_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{WHITE}原�
 
 STR_SS7C_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}大脸猫涂装，{YELLOW}香蕉{GOLD}涂装
 
-STR_DJJ1_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}原版涂装，广深铁路涂装
-STR_CRH6A2_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{GOLD}原型，广深，广州-珠海，成都天府号 (有/无绿色条带)，郑州-焦作，珠海机场，珠江三角洲 (蓝/橙色)
+STR_DJJ1_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}蓝箭涂装，广深铁路涂装
+STR_CRH6A2_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{GOLD}原型，广深城际定制版，广珠城际，成都天府号 (有/无绿色条带)，郑焦城际，珠海机场，珠三角城际(蓝/橙色)
 STR_CRH6A3_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{GOLD}京通号，金山铁路
-STR_CRH6AA_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{GOLD}广州-清远，广州-珠海，成都天府号 (有/无绿色条带)
-STR_CRH6F_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{GOLD}佛山，金山铁路，萧甬铁路
+STR_CRH6AA_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{GOLD}珠三角城际，广珠城际，成都天府号 (有/无绿色条带)
+STR_CRH6F_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{GOLD}珠三角城际，金山铁路，萧甬铁路
 
 STR_22_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，武汉铁路技术学院涂装，京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装 (仅XL22，UZ22)
 STR_22AIRCON_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{GOLD}京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装, 青龙湖号{BLUE}蓝色-{WHITE}-白色{GOLD}涂装（未完成）
@@ -385,10 +385,13 @@ STR_CRH1A_NICKNAME                  :{BLACK}昵称：{GOLD}地铁
 STR_CRH1E_NICKNAME                  :{BLACK}昵称：{GOLD}睡地铁
 STR_CRH2A_NICKNAME                  :{BLACK}昵称：{GOLD}带鱼
 STR_CRH2C_NICKNAME                  :{BLACK}昵称：{GOLD}疯带鱼
+STR_CRH2G_NICKNAME                  :{BLACK}昵称: {GOLD}先进黑脸
 STR_CRH3A_NICKNAME                  :{BLACK}昵称：{GOLD}黄金眼
 STR_CRH3C_NICKNAME                  :{BLACK}昵称：{GOLD}兔子
 STR_CRH5A_NICKNAME                  :{BLACK}昵称：{GOLD}驴
+STR_CRH6F_NICKNAME                  :{BLACK}昵称：{GOLD}真地铁
 STR_CRH380B_NICKNAME                :{BLACK}昵称：{GOLD}疯兔子
+STR_CRH380CL_NICKNAME                :{BLACK}昵称：{GOLD}大鲨鱼
 STR_CR400BF_NICKNAME                :{BLACK}昵称：{GOLD}金凤凰
 
 STR_RELIABILITY_32                  :{BLACK}可靠性下降速度：{GOLD}32
@@ -460,14 +463,14 @@ STR_PROTOTYPE           : - 原型
 STR_JINGTONG            : - 京通号涂装
 STR_TIANFU              : - 成都天府号涂装
 STR_TIANFU_GREEN        : - 成都天府号涂装，带绿色条带
-STR_GUANGZHU            : - 广州-珠海涂装
-STR_ZHENGJIAO           : - 郑州-焦作涂装
-STR_ZHUJI               : - 珠海机场涂装
-STR_ZHUSANJIAO_BLUE     : - 珠江三角洲，蓝色
-STR_ZHUSANJIAO_ORANGE   : - 珠江三角洲，橙色
+STR_GUANGZHU            : - 广珠城际涂装
+STR_ZHENGJIAO           : - 郑焦城际涂装
+STR_ZHUJI               : - 珠机城际涂装
+STR_ZHUSANJIAO_BLUE     : - 珠三角城际涂装(蓝)
+STR_ZHUSANJIAO_ORANGE   : - 珠三角城际涂装(橙)
 STR_JINSHAN             : - 金山铁路涂装
-STR_GUANGQING           : - 广州-清远涂装
-STR_FOSHAN              : - 佛山涂装
+STR_GUANGQING           : - 广清城际涂装
+STR_FOSHAN              : - 佛肇城际涂装 
 STR_XIAOYONG            : - 萧甬铁路涂装
 
 STR_COMFORT_144         :{BLACK}舒适度：{GOLD}144
