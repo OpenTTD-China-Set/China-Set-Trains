@@ -1,5 +1,22 @@
 China Set: Trains Changelog
 =========================
+
+# Initial-0 Updates
+
+## Initial-0-2 Updates
+
+0.2.0.151 (2/3/2024)
+--------------------
+Fix #38: CRH1E unable to attach sleeper carriages
+
+0.2.0.150 (2/3/2024)
+--------------------
+Merged wuwu (kaitokiwa) and babel-TTT branch
+Add: NX70A (coded by wuwu), HXD1D (coded by babel)
+Add: CRH6A-(Jingtong, Tianfu, Guangshen, Guangzhu, Jinshan, Zhengjiao, Zhuji, Zhusanjiao), CRH6A-A-(Tianfu, Guangqing, Guangzhu), CRH6F-(Foshan, Jinshan, Xiaoyong), 25G-Xihu, CRH1E, CRH380CL, CRH2G
+
+## Initial-0-1 Updates
+
 0.1.5.149 (15/2/2024)
 --------------------
 Merged wuwu (kaitokiwa) branch
@@ -256,6 +273,8 @@ Change: cargo_age_period basis and display
 Change: half running_cost_base, double running_cost_factor for locomotives
 Change: CR200J1 cab 
 Fix #9: sprite misalignments of C64
+
+## Initial-0-0 Updates
 
 0.0.8.95 (6/9/2023)
 --------------------

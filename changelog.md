@@ -1,0 +1,340 @@
+China Set: Trains Changelog
+=========================
+
+# Initial-0 Updates
+
+## Initial-0-2 Updates
+
+0.2.0.151 (2/3/2024)
+--------------------
+Fix #38: CRH1E unable to attach sleeper carriages
+
+0.2.0.150 (2/3/2024)
+--------------------
+Merged wuwu (kaitokiwa) and babel-TTT branch
+Add: NX70A (coded by wuwu), HXD1D (coded by babel)
+Add: CRH6A-(Jingtong, Tianfu, Guangshen, Guangzhu, Jinshan, Zhengjiao, Zhuji, Zhusanjiao), CRH6A-A-(Tianfu, Guangqing, Guangzhu), CRH6F-(Foshan, Jinshan, Xiaoyong), 25G-Xihu, CRH1E, CRH380CL, CRH2G
+
+## Initial-0-1 Updates
+
+0.1.5.149 (15/2/2024)
+--------------------
+Merged wuwu (kaitokiwa) branch
+Fix #37: p62-brown, DF11G (graphic fix)
+ADD: SS3B, B22, L70 (all coded by wuwu)
+
+0.1.5.148 (15/2/2024)
+--------------------
+Language fixes
+
+0.1.5.147 (9/2/2024)
+--------------------
+Merged wuwu (kaitokiwa) branch
+ADD: JSQ6, B6, RW19K, RW19T, YZ22-Air-conditioned, RZ22-Air-conditioned, YW22-Air-conditioned, RW22-Air-conditioned, CA23-Air-conditioned, UZ22, CA23, TZ (all coded by wuwu)
+
+0.1.5.146 (31/1/2024)
+--------------------
+Merged wuwu (kaitokiwa) branch
+Fix #36: DF4B for passenger uses incorrect sprite mistakenly
+ADD: DF4D7000, DF4C, DF4DF, DF8B, alternative sprites for DF4BK, DF4BH, DF4D, DF4D-4000, P62 (all coded by wuwu)
+
+0.1.5.145 (30/1/2024)
+--------------------
+Merged wuwu (kaitokiwa) branch
+Add: NX17 alternative sprites (coded by wuwu)
+
+0.1.5.144 (27/1/2024)
+--------------------
+Merged wuwu (kaitokiwa) branch
+Add: DF7G, DF7G-5000, DF7G-8000, DFH7, DFH7B, HXN5B, RZ225Z, RZ125Z, RZT25Z, RZXL25Z, SRZ225Z, SRZ125Z, SRZXL25Z, KD25Z (all coded by wuwu)
+
+0.1.4.143 (18/1/2024)
+--------------------
+Change: Vehicle sorting (minor)
+Fix #35: CRH3C, CRH380B not displaying higher-speed refit option
+
+0.1.4.142 (18/1/2024)
+--------------------
+Add: XL22, XL25B, KD25T, CRH1A, CRH3C, CRH380B, JSQ5
+
+0.1.3.141 (16/1/2024)
+--------------------
+Merged wuwu (kaitokiwa) branch
+Add: DF4B, SS4G, SS5, SS6, SS6B, SS7, SS7B, SS7C, SS7E (coded by wuwu)
+Change: DF4 sprites (coded by wuwu)
+
+0.1.3.140 (15/1/2024)
+--------------------
+Add: NDJ3
+Fix #34: DJJ1 failing to form long consist
+
+0.1.3.139 (15/1/2024)
+--------------------
+Add: DJJ1 (Short and Long)
+Fix #33: CR200J-B Head Car sprites
+
+0.1.3.138 (15/1/2024)
+--------------------
+Add: CR200J-B
+
+0.1.3.137 (14/1/2024)
+--------------------
+Add: CRH3A
+
+0.1.3.136 (13/1/2024)
+--------------------
+Add: CRH2C
+Fix #31: CRH2A Power
+Fix #32: CR400BF Power and tractive effort
+
+0.1.3.135 (13/1/2024)
+--------------------
+Add: CRH2A, prepared for CRH2C, CRH3A, CR200J-B, DJJ1, NDJ3
+Change: YETI Lives Matter - All MUs refittable to YETI workers
+
+0.1.2.134 (9/1/2024)
+--------------------
+Fix #30: NJ2 Sprites
+
+0.1.2.133 (9/1/2024)
+--------------------
+Add: NJ2 (Original, Qingzang), SS4, S(YZ, RZ, YW, RW)25B High Door - (deteriorated, Shenyang), S(YZ, RZ, YW, RW)25K High Door - (Xianxing, Xi'an), SCA25K High Door - Xi'an, KD25K-Xi'an, N60, P70, C70, GN70, New sprites (deteriorated, strengthening steel sheet, Urumqi, Xianxing) of S(YZ, RZ)25B Low Door, New sprites (Liaodong Peninsula) of S(YZ, RZ)25B Low Door, New sprites (orange) of (CA, KD)25G, New sprites (Qinghai-Tibet Railway, Gaozu Green) of (YZ, RZ, YW, RW)25T
+Change: boxcars and luggage cars (excluding SSPE) refittable to valuables
+Change: all livery refits are available at anytime
+
+0.1.1.132 (3/1/2024)
+--------------------
+Fix #29: HXD1 Back sprites
+
+0.1.1.131 (3/1/2024)
+--------------------
+Add: DF4D (-0000, -3000, -4/7000), DF11, SS3, SS8, HXD1, (KD25G, KD25K, SYZ25K, SRZ25K)-Luchaogang, NX17, (YZ, RZ, YW)25B-Jitong, (SYZ, SRZ)25B (Low-door version)
+Change: sprites of HXD1B
+
+0.1.1.130 (2/1/2024)
+--------------------
+Fix #27: Sprite scales and misalignments
+Fix #28: XL25K/T and DF4 (orange) sprites
+
+From 0.0.8 (6/9/2023) to 0.1.0 (31/12/2023):
+--------------------
+NOT BACKWARD COMPATIBLE
+Add: HXD1B, CR200J-A Long Version, YZ22, YW22, RZ22, RW22, YZ22B, YW22B, RW22B, YZ25B, RZ25B, YW25B, RW25B, CA25G, CA25K, CA25T, XL25T, C62, P60, G60
+Add: Sprites to remind "too many MU wagons"
+Remove: Limited Class and all "combined" MU Wagon except second-class restaurant combined coach
+Change: Sprites of all vehicles changed to MagicaVoxel output
+Change: cargo_age_period basis and display
+Change: half running_cost_base, double running_cost_factor for locomotives
+Change: running costs of trains of different max speeds
+Change: Increase the capacity and lower the cargo_age_period of "Passengers in Boxcars" (Peng Dai Ke)
+Change: lengths of some vehicles, and length calculations of vehicles shorter than length 11
+
+0.1.0.129 (31/12/2023)
+--------------------
+READY TO RELEASE
+NOT COMPATIBLE WITH ANY VERSION BEFORE r129
+Add: HXD1B, C62
+Remove: Limited Class MU Wagon
+Change: Sprites of CR400BF, DF4 (Orange) changed to MagicaVoxel output
+Change: Minor adjustment of sprites of DF4 (Green)
+Fix #26: C64 (covered) wheels
+
+0.1.0.128 (31/12/2023)
+--------------------
+Fix #25: CR200J-A-L sprite problem
+
+0.1.0.127 (31/12/2023)
+--------------------
+Add: CR200J-A long version
+Change: CR200J1 name changed to CR200J-A
+Change: Sprites of CR200J-A to MagicaVoxel output
+Fix #24: sprite misalignments of some passenger coaches
+
+0.1.0.126 (30/12/2023)
+--------------------
+Change: Push-Pull failed, removed
+
+0.1.0.125 (30/12/2023)
+--------------------
+Fix #22: Push-Pull functionality (again)
+Fix #23: CRH5A head seat cargo aging
+
+0.1.0.124 (29/12/2023)
+--------------------
+Fix #21: Push-Pull functionality
+
+0.1.0.123 (29/12/2023)
+--------------------
+Add: P60
+Add: Sprites to remind "too many MU wagons"
+Feature: Push-Pull experiment of DF11G "Splitting Pig" and CRH5A
+Change: Sprites of P62 changed to its own MagicaVoxel model output
+Change: Adjustment of all MagicaVoxel sprites
+
+0.1.0.122 (27/12/2023)
+--------------------
+Change: Adjustments of all MagicaVoxel sprites
+
+0.1.0.121 (27/12/2023)
+--------------------
+Change: Sprites of DF4 (Freight Type) changed to MagicaVoxel output
+Change: Adjustments of all MagicaVoxel sprites
+
+0.1.0.120 (26/12/2023)
+--------------------
+Change: Adjustments of all MagicaVoxel sprites
+
+0.1.0.119 (26/12/2023)
+--------------------
+Change: Sprites of CRH5A changed to MagicaVoxel output
+Change: Adjustments of all MagicaVoxel sprites
+
+0.1.0.118 (26/12/2023)
+--------------------
+Add: 25G Jinhua-Wenzhou Railway Company Sprites
+Change: Adjustments of all MagicaVoxel sprites
+Change: Pantograph rise of HXD3C and HXD3D
+Change: Sprites of MU Wagons changed to MagicaVoxel output of CRH5-M in purchase list
+
+0.1.0.114 (25/12/2023)
+--------------------
+Change: Sprites of HXD3C and HXD3D to MagicaVoxel output
+Change: Exclusive sprites for RW22B
+
+0.1.0.113 (25/12/2023)
+--------------------
+Change: Makefile.dist mechanics
+Change: Lower the comfort of "Peng Dai Ke" to 80
+Fix #20: CR400BF head seat display in simplified_chinese.lng
+
+0.1.0.112 (24/12/2023)
+--------------------
+GitHub push, but no release
+Fix #17: YW22 comfort when using build year design
+Fix #18: "Peng Dai Ke" capacity
+Fix #19: YZ22, RW22, G60 introducing year
+
+0.1.0.111 (24/12/2023)
+--------------------
+NOT COMPATIBLE WITH ANY VERSION BEFORE r111
+Add: YZ22, RZ22, YW22, RW22, YZ22B, YW22B, RW22B, YZ25B, RZ25B, YW25B, RW25B, XL25T, G60
+Fix #15: "Passengers in Boxcars" (Peng Dai Ke) are now as crowded as expected, and tourists now refuse to crowd in boxcars
+Fix #16: Boxcars now have double capacity of mail
+Change: Length of C64 to 6
+Change: Sprites of XL25T_SSPE, C64 to MagicaVoxel output
+Change: Sprites of P62 to MagicaVoxel output, but temporarily using P60 models
+
+0.1.0.110 (22/12/2023)
+--------------------
+GitHub push, but no release
+Add: CA25G, CA25K
+Change: Sprites of KD25G, XL25G, KD25K, XL25K to MagicaVoxel output
+Fix #14: 25G "red door"
+
+0.1.0.109 (21/12/2023)
+--------------------
+Fix #13: sprite misalignments of vehicles (again)
+
+0.1.0.108 (21/12/2023)
+--------------------
+Fix #11: sprite misalignments of vehicles (again)
+Fix #12: dedicated sprite for reversed DF11G
+
+0.1.0.107 (21/12/2023)
+--------------------
+NOT COMPATIBLE WITH ANY VERSION BEFORE r107
+Change: length calculations of vehicles shorter than length 11
+Change: sprites attached to the middle section of vehicles again
+Change: running costs of trains of different max speeds
+Fix #10: sprite misalignments of vehicles
+
+0.1.0.106 (21/12/2023)
+--------------------
+Add: CA25T (Guangzhou - Kowloon Railway Livery)
+Change: Sprites of 25G, 25K to MagicaVoxel output
+Change: Adjustment of sprites of 25T
+Change: Comfort descriptions of restaurant cars
+
+0.1.0.105 (20/12/2023)
+--------------------
+Change: Sprites of 25T to MagicaVoxel output
+
+0.1.0.104 (19/12/2023)
+--------------------
+Change: Sprites of DF11G to MagicaVoxel output
+
+0.1.0.96 (18/12/2023)
+--------------------
+NOT COMPATIBLE WITH ANY VERSION BEFORE r96
+Add: some random sprites of P62
+Remove: all combined MU coach
+Change: sprites now attached to the front section of vehicles
+Change: cargo_age_period basis and display
+Change: half running_cost_base, double running_cost_factor for locomotives
+Change: CR200J1 cab 
+Fix #9: sprite misalignments of C64
+
+## Initial-0-0 Updates
+
+0.0.8.95 (6/9/2023)
+--------------------
+Add: CR400BF, DF11G, XL25T, KD25K
+Change: mechanics of running_cost of air conditioner generator cars and restaurant cars
+Fix #8: Sprites of CRH5A
+
+0.0.7.90 (28/8/2023)
+--------------------
+Add: CRH5A
+
+0.0.6.81 (27/8/2023)
+--------------------
+Add: P62
+Add: Text showing whether a locomotive is able to supply electricity for cars
+Fix #6: Some passenger cars never support air conditioner
+Fix #7: Running Costs vary as expected
+
+0.0.5.78 (21/8/2023)
+--------------------
+Add: HXD3D, KD25G, C64
+Fix #4: Normal and MU coach attach issue
+Fix #5: Electric engines MUST BE ELECTRIFIED to supply electricity
+
+0.0.4.44 (18/8/2023)
+--------------------
+Fix #3: CR200J livery misplace and cargo_age_period problem
+
+0.0.4.43 (18/8/2023)
+--------------------
+Add: CR200J EMU and corresponding MU Cars
+Fix #2: DF4 Orange Livery Misplace
+
+0.0.3.34 (15/8/2023)
+--------------------
+Add: XL25G, YZ25K, RZ25K, YZ25G, RZ25G
+
+0.0.3.33 (15/8/2023)
+--------------------
+Add: XL25K
+
+0.0.3.32 (15/8/2023)
+--------------------
+Add: DF4 Orange Livery and descriptions of vehicles
+
+0.0.3.27 (14/8/2023)
+--------------------
+Add: DF4 (Passenger, Freight)
+Change: running_cost and cargo_age_period mechanics
+
+0.0.2.23 (13/8/2023)
+--------------------
+Add: YZ25T, RZ25T, YW25T, RW25T
+Change: 25G Capacity and Weight adjustment
+
+0.0.2.21 (13/8/2023)
+--------------------
+Add: HXD3C
+Fix #1: 25G Sprites Overlap
+
+0.0.1.1 (11/8/2023)
+--------------------
+Add: YZ25G, RZ25G, YW25G, RW25G

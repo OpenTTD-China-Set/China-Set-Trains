@@ -192,6 +192,14 @@ switch (FEAT_TRAINS, SELF, crhwagonsleeper, vehicle_type_id) {
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
+switch (FEAT_TRAINS, SELF, crhsleeperonly, vehicle_type_id) {
+    1024: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1037: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1039: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
 switch (FEAT_TRAINS, SELF, crhwagonsleeperxl, vehicle_type_id) {
     1024..1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     1038..1040: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
@@ -230,6 +238,21 @@ switch (FEAT_TRAINS, SELF, muhead, vehicle_type_id) {
 
 switch (FEAT_TRAINS, SELF, singlemu, vehicle_type_id) {
     1024..1051: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, onlyzezy, vehicle_type_id) {
+    1024..1025: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, onlyze, vehicle_type_id) {
+    1024: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, onlycrh6aa, vehicle_type_id) {
+    9230: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
