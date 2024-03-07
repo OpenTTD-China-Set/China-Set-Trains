@@ -173,6 +173,7 @@ STR_NAME_CRH5A          :CRH5A (EMU)
 STR_NAME_CRH2C          :CRH2C (EMU)
 STR_NAME_CRH3C          :CRH3C (EMU)
 STR_NAME_CRH380B        :CRH380B (EMU)
+STR_NAME_CR400AF        :CR400AF (EMU)
 STR_NAME_CR400BF        :CR400BF (EMU)
 STR_NAME_CRH6A2         :CRH6A (2-Door Version) (EMU)
 STR_NAME_CRH6A3         :CRH6A (3-Door Version) (EMU)
@@ -398,6 +399,7 @@ STR_CRH5A_NICKNAME                  :{BLACK}Nickname: {GOLD}Donkey
 STR_CRH6F_NICKNAME                  :{BLACK}Nickname: {GOLD}Real Metro
 STR_CRH380B_NICKNAME                :{BLACK}Nickname: {GOLD}Crazy Rabbit
 STR_CRH380CL_NICKNAME                :{BLACK}Nickname: {GOLD}Shark
+STR_CR400AF_NICKNAME                :{BLACK}Nickname: {GOLD}Red Loong
 STR_CR400BF_NICKNAME                :{BLACK}Nickname: {GOLD}Golden Phoenix
 
 
@@ -537,6 +539,7 @@ STR_DF11G_CONSIST                   :{BLACK}Consist: {GOLD}2 sections joint toge
 STR_NDJ3_CONSIST                    :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle
 STR_DJJ1_CONSIST                    :{BLACK}Consist: {GOLD}One section at front, with wagons attached; or one section at front, another section at back. At least 4 wagons
 STR_CRH5A_CONSIST                   :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car
+STR_CR400AF_CONSIST                 :{BLACK}Consist: {GOLD}5 to 17 cars; int(n/2) motorised cars and int((n+1)/2) trailers in an n-car consist.
 STR_CR400BF_CONSIST                 :{BLACK}Consist: {GOLD}5 to 17 cars; int(n/2) motorised cars and int((n+1)/2) trailers in an n-car consist.
 STR_CRH2A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, half of which (ceiling up) are motorised cars
 STR_CRH2C_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with head and cab trailers, all middle cars motorised
@@ -562,6 +565,7 @@ STR_CRH3C_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
 STR_CRH5A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH380B_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH380CL_HEAD_SEAT              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CR400AF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CR400BF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH6A2_HEAD_SEAT                :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH6A3_HEAD_SEAT                :{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places, Comfort: 160
