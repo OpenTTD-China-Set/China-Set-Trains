@@ -335,6 +335,8 @@
 #include "src/25-emu/crh3a_item.pnml"
 #include "src/25-emu/crh5a_graphics.pnml"
 #include "src/25-emu/crh5a_item.pnml"
+#include "src/25-emu/crh380a_graphics.pnml"
+#include "src/25-emu/crh380a_item.pnml"
 #include "src/25-emu/crh380b_graphics.pnml"
 #include "src/25-emu/crh380b_item.pnml"
 #include "src/25-emu/crh380cl_graphics.pnml"

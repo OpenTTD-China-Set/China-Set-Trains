@@ -172,6 +172,7 @@ STR_NAME_CRH3A          :CRH3A (电力动车)
 STR_NAME_CRH5A          :CRH5A (电力动车)
 STR_NAME_CRH2C          :CRH2C (电力动车)
 STR_NAME_CRH3C          :CRH3C (电力动车)
+STR_NAME_CRH380A        :CRH380A (电力动车)
 STR_NAME_CRH380B        :CRH380B (电力动车)
 STR_NAME_CR400AF        :CR400AF (电力动车)
 STR_NAME_CR400BF        :CR400BF (电力动车)
@@ -391,8 +392,9 @@ STR_CRH3A_NICKNAME                  :{BLACK}昵称：{GOLD}黄金眼
 STR_CRH3C_NICKNAME                  :{BLACK}昵称：{GOLD}兔子
 STR_CRH5A_NICKNAME                  :{BLACK}昵称：{GOLD}驴
 STR_CRH6F_NICKNAME                  :{BLACK}昵称：{GOLD}真地铁
+STR_CRH380A_NICKNAME                :{BLACK}昵称：{GOLD}大老鼠
 STR_CRH380B_NICKNAME                :{BLACK}昵称：{GOLD}疯兔子
-STR_CRH380CL_NICKNAME                :{BLACK}昵称：{GOLD}大鲨鱼
+STR_CRH380CL_NICKNAME               :{BLACK}昵称：{GOLD}大鲨鱼
 STR_CR400AF_NICKNAME                :{BLACK}昵称：{GOLD}红神龙
 STR_CR400BF_NICKNAME                :{BLACK}昵称：{GOLD}金凤凰
 
@@ -541,6 +543,7 @@ STR_CRH1A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8�
 STR_CRH1E_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为5M3T，16节标准编组为10M6T
 STR_CRH3A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
 STR_CRH3C_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
+STR_CRH380A_CONSIST                 :{BLACK}构成：{GOLD}至少4节，头尾拖车，中间全为动力车
 STR_CRH380B_CONSIST                 :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
 STR_CRH380CL_CONSIST                :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
 STR_CRH6A2_CONSIST                  :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
@@ -556,6 +559,7 @@ STR_CRH2G_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CRH3A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CRH3C_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
 STR_CRH5A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
+STR_CRH380A_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 STR_CRH380B_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 STR_CRH380CL_HEAD_SEAT              :{BLACK}头车座席：{GOLD}一等座
 STR_CR400BF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座

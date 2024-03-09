@@ -172,6 +172,7 @@ STR_NAME_CRH3A          :CRH3A (EMU)
 STR_NAME_CRH5A          :CRH5A (EMU)
 STR_NAME_CRH2C          :CRH2C (EMU)
 STR_NAME_CRH3C          :CRH3C (EMU)
+STR_NAME_CRH380A        :CRH380A (EMU)
 STR_NAME_CRH380B        :CRH380B (EMU)
 STR_NAME_CR400AF        :CR400AF (EMU)
 STR_NAME_CR400BF        :CR400BF (EMU)
@@ -397,6 +398,7 @@ STR_CRH3A_NICKNAME                  :{BLACK}Nickname: {GOLD}Golden Eyes
 STR_CRH3C_NICKNAME                  :{BLACK}Nickname: {GOLD}Rabbit
 STR_CRH5A_NICKNAME                  :{BLACK}Nickname: {GOLD}Donkey
 STR_CRH6F_NICKNAME                  :{BLACK}Nickname: {GOLD}Real Metro
+STR_CRH380A_NICKNAME                :{BLACK}Nickname: {GOLD}Big Rat
 STR_CRH380B_NICKNAME                :{BLACK}Nickname: {GOLD}Crazy Rabbit
 STR_CRH380CL_NICKNAME                :{BLACK}Nickname: {GOLD}Shark
 STR_CR400AF_NICKNAME                :{BLACK}Nickname: {GOLD}Red Loong
@@ -548,6 +550,7 @@ STR_CRH3A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with
 STR_CRH1A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars
 STR_CRH1E_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars
 STR_CRH3C_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
+STR_CRH380A_CONSIST                 :{BLACK}Consist: {GOLD}At least 4 cars, with head and cab trailers, all middle cars motorised
 STR_CRH380B_CONSIST                 :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
 STR_CRH380CL_CONSIST                :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
 STR_CRH6A2_CONSIST                  :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
@@ -563,6 +566,7 @@ STR_CRH2G_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH3A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH3C_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
 STR_CRH5A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH380A_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH380B_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH380CL_HEAD_SEAT              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CR400AF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)

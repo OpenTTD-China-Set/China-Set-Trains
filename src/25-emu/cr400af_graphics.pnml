@@ -509,6 +509,6 @@ switch (FEAT_TRAINS, SELF, switch_cr400af_wagon_power, num_vehs_in_consist) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400af_wagon_traction, vehicle_is_potentially_powered) {
-    1: return int(0.118*255);
+    1: return int(0.127*255);
     return 0;
 }
