@@ -1,0 +1,140 @@
+item (FEAT_TRAINS, crh380a) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CRH380A);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2010,09,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   35;
+        track_type:                     SAAA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               400 << param_cargo_decay;
+
+        // Stats
+        speed:                          310 km/h;
+        power:                          1520 kW;
+        weight:                         51 ton;
+        tractive_effort_coefficient:    0.083;
+        cost_factor:                    68;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            56;
+        reliability_decay:              12;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_crh380a_additional_text;
+        can_attach_wagon:               crhwagon;
+        start_stop:                     mu4car;
+        cargo_subtype_text:             switch_crh380_cargo_subtype;
+
+        // Graphics
+        default:                        switch_crh380a_graphics;
+        purchase:                       spriteset_crh380a_purchase_original;
+        articulated_part:               switch_crh380a_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        speed:                          switch_crh380_speed;
+        power:                          return 0;
+        purchase_power:                 return 2067; // HP
+        tractive_effort_coefficient:    return 0;
+        purchase_tractive_effort_coefficient: return int(0.083*255);
+        cargo_capacity:                 switch_crh380a_head_capacity;
+        cargo_age_period:               12 * 5 * cafedecayfactor() << param_cargo_decay;
+        cost_factor:                    68;
+        running_cost_factor:            (54 + crhspeedcost()) * runningcostfactor() * cafecostfactor() + 20;
+        purchase_running_cost_factor:   236;
+        purchase_cargo_capacity:        36/3;
+    }
+
+    // Multiple Unit Wagons
+    livery_override(zemuw) {
+        default:                        switch_crh380a_wagon_graphics;
+        cargo_capacity:                 switch_crh380a_wagon_capacity;
+        power:                          switch_crh380a_wagon_power;
+        tractive_effort_coefficient:    switch_crh380a_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         51;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    switch_crh380a_wagon_cost;
+        running_cost_factor:            (switch_crh380a_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(zymuw) {
+        default:                        switch_crh380a_wagon_graphics;
+        cargo_capacity:                 switch_crh380a_wagon_capacity;
+        power:                          switch_crh380a_wagon_power;
+        tractive_effort_coefficient:    switch_crh380a_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         51;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    switch_crh380a_wagon_cost;
+        running_cost_factor:            (switch_crh380a_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(zsmuw) {
+        default:                        switch_crh380a_wagon_graphics;
+        cargo_capacity:                 switch_crh380a_wagon_capacity;
+        power:                          switch_crh380a_wagon_power;
+        tractive_effort_coefficient:    switch_crh380a_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         51;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    switch_crh380a_wagon_cost;
+        running_cost_factor:            (switch_crh380a_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(swmuw) {
+        default:                        switch_crh380a_wagon_graphics;
+        cargo_capacity:                 switch_crh380a_wagon_capacity;
+        power:                          switch_crh380a_wagon_power;
+        tractive_effort_coefficient:    switch_crh380a_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         51;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    switch_crh380a_wagon_cost;
+        running_cost_factor:            (switch_crh380a_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(zecmuw) {
+        default:                        switch_crh380a_wagon_graphics;
+        cargo_capacity:                 switch_crh380a_wagon_capacity;
+        power:                          switch_crh380a_wagon_power;
+        tractive_effort_coefficient:    switch_crh380a_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         50;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    switch_crh380a_wagon_cost;
+        running_cost_factor:            (switch_crh380a_wagon_running() + crhspeedcost()) * runningcostfactor() + 50 + accostfactor(); // IT IS A RESTAURANT CAR!
+    }
+}
+
+// End CRH380A
+
