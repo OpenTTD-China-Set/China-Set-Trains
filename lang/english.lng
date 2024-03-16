@@ -585,3 +585,4 @@ STR_TOO_SHORT                       :TOO SHORT!
 STR_ONLY_TWO_SECTIONS               :This locomotive must be in a consist of two sections to run.
 STR_MUST_BE_4_8_12_16_CARS          :This MU must be in a consist of 4, 8, 12 or 16 cars to run.
 STR_MUST_BE_5_TO_17_CARS            :This MU must be in a consist of 5 to 17 cars to run.
+STR_MUST_BE_4_TO_24_CARS            :This MU must be in a consist of 4 to 24 cars to run.

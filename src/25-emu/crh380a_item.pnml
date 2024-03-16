@@ -40,11 +40,11 @@ item (FEAT_TRAINS, crh380a) {
         // Menu
         additional_text:                switch_crh380a_additional_text;
         can_attach_wagon:               crhwagon;
-        start_stop:                     mu4car;
+        start_stop:                     mu4to24car;
         cargo_subtype_text:             switch_crh380_cargo_subtype;
 
         // Graphics
-        default:                        switch_crh380a_graphics;
+        default:                        switch_crh380a_front_graphics;
         purchase:                       spriteset_crh380a_purchase_original;
         articulated_part:               switch_crh380a_articulated_part;
 
