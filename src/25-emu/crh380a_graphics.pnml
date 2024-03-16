@@ -173,7 +173,7 @@ switch (FEAT_TRAINS, SELF, switch_crh380a_wagon_running_power, vehicle_type_id) 
     1025: return 67;
     1027: return 61;
     1028: return 62;
-    1035: return 73;
+    1035: return 63;
     return 0;
 }
 
@@ -191,7 +191,7 @@ switch (FEAT_TRAINS, SELF, switch_crh380a_wagon_running_unpower, vehicle_type_id
     1025: return 12;
     1027: return 16;
     1028: return 17;
-    1035: return 37;
+    1035: return 12;
     return 0;
 }
 

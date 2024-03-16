@@ -78,6 +78,21 @@ alternative_sprites (spriteset_too_many_12, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "
     [864,   0, 120, 116, -40, -76]
 }
 
+spriteset (spriteset_erroremu) {
+    template_empty ()
+}
+
+alternative_sprites (spriteset_erroremu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx/erroremu.png") {
+    [  0,   0,  32, 144, -12, -72]
+    [ 40,   0, 120, 116, -72, -76]
+    [168,   0, 192,  80, -96, -60]
+    [368,   0, 120, 116, -40, -76]
+    [496,   0,  32, 144, -12, -72]
+    [536,   0, 120, 116, -72, -76]
+    [664,   0, 192,  80, -96, -60]
+    [864,   0, 120, 116, -40, -76]
+}
+
 spriteset (empty_sprites, "gfx/empty.png") {
   [0, 0, 2, 2, 0, 0, CROP]
 }

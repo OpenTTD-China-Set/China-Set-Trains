@@ -350,7 +350,7 @@ switch (FEAT_TRAINS, SELF, switch_cr400af_wagon_running_power, vehicle_type_id) 
     1025: return 74;
     1027: return 79;
     1028: return 80;
-    1035: return 90;
+    1035: return 80;
     return 0;
 }
 
@@ -368,7 +368,7 @@ switch (FEAT_TRAINS, SELF, switch_cr400af_wagon_running_unpower, vehicle_type_id
     1025: return 16;
     1027: return 21;
     1028: return 22;
-    1035: return 32;
+    1035: return 17;
     return 0;
 }
 
