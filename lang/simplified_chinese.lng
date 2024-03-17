@@ -166,6 +166,7 @@ STR_NAME_DJJ1           :DJJ1 "蓝箭" (电力动车)
 STR_NAME_CR200JA        :CR200J-A (电力动车)
 STR_NAME_CR200JAL       :CR200J-A (长编组) (电力动车)
 STR_NAME_CR200JB        :CR200J-B (电力动车)
+STR_NAME_CR200JC        :CR200J-B (电力动车)
 STR_NAME_CRH1A          :CRH1A (电力动车)
 STR_NAME_CRH2A          :CRH2A (电力动车)
 STR_NAME_CRH3A          :CRH3A (电力动车)
@@ -383,6 +384,7 @@ STR_HXD3C_NICKNAME                  :{BLACK}昵称: {GOLD}电狒狒
 STR_HXD3D_NICKNAME                  :{BLACK}昵称: {GOLD}番茄
 STR_NDJ3_NICKNAME                   :{BLACK}昵称：{WHITE}大白猪
 STR_CR200J_NICKNAME                 :{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方), {GREEN}“垃圾桶”{GOLD}(民间)
+STR_CR200JC_NICKNAME                :{BLACK}昵称：{RED}“A{WHITE}D{GREEN}桶”{GOLD}(民间)
 STR_CRH1A_NICKNAME                  :{BLACK}昵称：{GOLD}地铁
 STR_CRH1E_NICKNAME                  :{BLACK}昵称：{GOLD}睡地铁
 STR_CRH2A_NICKNAME                  :{BLACK}昵称：{GOLD}带鱼
@@ -536,6 +538,7 @@ STR_DJJ1_CONSIST                    :{BLACK}构成：{GOLD}头部一节，或头
 STR_CRH5A_CONSIST                   :{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车 1495 公制马力
 STR_CR400AF_CONSIST                 :{BLACK}构成：{GOLD}5-17节； n 节构成中动力车节数为 int(n/2) ，拖车节数为 int((n+1)/2)
 STR_CR400BF_CONSIST                 :{BLACK}构成：{GOLD}5-17节； n 节构成中动力车节数为 int(n/2) ，拖车节数为 int((n+1)/2)
+STR_CR200JC_CONSIST                 :{BLACK}构成：{GOLD}头部一节，或头尾各一节
 STR_CRH2A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，半数 (向上取整) 车厢为动力车
 STR_CRH2C_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾拖车，中间全为动力车
 STR_CRH2G_CONSIST                   :{BLACK}构成：{GOLD}至少4节，半数 (向上取整) 车厢为动力车
@@ -575,3 +578,4 @@ STR_TOO_SHORT                       :列车太短了
 STR_ONLY_TWO_SECTIONS               :该机车节数必须为2，否则无法运行
 STR_MUST_BE_4_8_12_16_CARS          :该动车组节数必须为4，8，12或16，否则无法运行
 STR_MUST_BE_5_TO_17_CARS            :该动车组节数必须在5至17之间，否则无法运行
+STR_MUST_BE_4_TO_24_CARS            :该动车组节数必须在4至24之间，否则无法运行

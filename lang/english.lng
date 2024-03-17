@@ -166,6 +166,7 @@ STR_NAME_DJJ1           :DJJ1 "Blue Arrow" (EMU)
 STR_NAME_CR200JA        :CR200J-A (EMU)
 STR_NAME_CR200JAL       :CR200J-A (Long Version) (EMU)
 STR_NAME_CR200JB        :CR200J-B (EMU)
+STR_NAME_CR200JC        :CR200J-C (EMU)
 STR_NAME_CRH1A          :CRH1A (EMU)
 STR_NAME_CRH2A          :CRH2A (EMU)
 STR_NAME_CRH3A          :CRH3A (EMU)
@@ -389,6 +390,7 @@ STR_HXD3C_NICKNAME                  :{BLACK}Nickname: {GOLD}Electric Baboon
 STR_HXD3D_NICKNAME                  :{BLACK}Nickname: {GOLD}Tomato
 STR_NDJ3_NICKNAME                   :{BLACK}Nickname: {WHITE}White Pig
 STR_CR200J_NICKNAME                 :{BLACK}Nickname: {GREEN}"Hulk" {GOLD}(Official), {GREEN}"Trash Bin" {GOLD}(Folk)
+STR_CR200JC_NICKNAME                :{BLACK}Nickname: {GREEN}"AD Bin" {GOLD}(Folk)
 STR_CRH1A_NICKNAME                  :{BLACK}Nickname: {GOLD}Metro {BLACK}(due to its high acceleration)                   
 STR_CRH1E_NICKNAME                  :{BLACK}Nickname: {GOLD}Sleeping Metro {BLACK}(due to its sleeper identity)
 STR_CRH2A_NICKNAME                  :{BLACK}Nickname: {GOLD}Hairtail
@@ -543,6 +545,7 @@ STR_DJJ1_CONSIST                    :{BLACK}Consist: {GOLD}One section at front,
 STR_CRH5A_CONSIST                   :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car
 STR_CR400AF_CONSIST                 :{BLACK}Consist: {GOLD}5 to 17 cars; int(n/2) motorised cars and int((n+1)/2) trailers in an n-car consist.
 STR_CR400BF_CONSIST                 :{BLACK}Consist: {GOLD}5 to 17 cars; int(n/2) motorised cars and int((n+1)/2) trailers in an n-car consist.
+STR_CR200JC_CONSIST                 :{BLACK}Consist: {GOLD}One section at front, with wagons attached; or one section at front, another section at back.
 STR_CRH2A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, half of which (ceiling up) are motorised cars
 STR_CRH2C_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with head and cab trailers, all middle cars motorised
 STR_CRH2G_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, half of which (ceiling up) are motorised cars
@@ -582,3 +585,4 @@ STR_TOO_SHORT                       :TOO SHORT!
 STR_ONLY_TWO_SECTIONS               :This locomotive must be in a consist of two sections to run.
 STR_MUST_BE_4_8_12_16_CARS          :This MU must be in a consist of 4, 8, 12 or 16 cars to run.
 STR_MUST_BE_5_TO_17_CARS            :This MU must be in a consist of 5 to 17 cars to run.
+STR_MUST_BE_4_TO_24_CARS            :This MU must be in a consist of 4 to 24 cars to run.
