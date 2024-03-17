@@ -1,0 +1,216 @@
+// Begin CRH380AL
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_crh380al_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_crh380al_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-emu", "crh380a-tc")
+}
+
+// Vehicle
+spriteset (spriteset_crh380al_front) {
+    template_empty ()
+}
+spriteset (spriteset_crh380al_middle_m) {
+    template_empty ()
+}
+spriteset (spriteset_crh380al_middle_p) {
+    template_empty ()
+}
+spriteset (spriteset_crh380al_cab) {
+    template_empty ()
+}
+
+alternative_sprites (spriteset_crh380al_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh380a-tc")
+}
+alternative_sprites (spriteset_crh380al_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh380a-t") 
+}
+alternative_sprites (spriteset_crh380al_middle_p, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh380al-tp")
+}
+alternative_sprites (spriteset_crh380al_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh380a-tc")
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_articulated_part, extra_callback_info1) {
+    1..2: return crh380al;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_front_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_crh380al_front;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_head_capacity, position_in_articulated_veh % 3) {
+    1: return 32;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_additional_text, param_cargo_decay) {
+    return string(STR_DESC_6, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH380A_NICKNAME), string(STR_RELIABILITY_12), string(STR_CRH380AL_CONSIST), string(STR_CRH380A_HEAD_SEAT), string(STR_350_380_AVAILABLE));
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_short_graphics, (position_in_consist / 3) == (num_vehs_in_consist / 6)) {
+    1: spriteset_crh380al_middle_p;
+    spriteset_crh380al_middle_m;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_long_graphics, (position_in_consist_from_end == 13) || (position_in_consist == 13)) {
+    1: spriteset_crh380al_middle_p;
+    spriteset_crh380al_middle_m;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_middle_graphics_1, num_vehs_in_consist) {
+    0..30: switch_crh380al_short_graphics;
+    switch_crh380al_long_graphics;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_middle_graphics, position_in_articulated_veh % 3) {
+    1: switch_crh380al_middle_graphics_1;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_cab_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_crh380al_cab;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_wagon_graphics, position_in_consist_from_end) {
+    0..2: switch_crh380al_cab_graphics;
+    switch_crh380al_middle_graphics;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_middle_capacity_ze, position_in_articulated_veh % 3) {
+    1: return 85;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_middle_capacity_zy, position_in_articulated_veh % 3) {
+    1: return 56;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_middle_capacity_zs, position_in_articulated_veh % 3) {
+    1: return 24;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_middle_capacity_sw, position_in_articulated_veh % 3) {
+    1: return 15;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_middle_capacity_zec, position_in_articulated_veh % 3) {
+    1: return 63;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_middle_capacity, vehicle_type_id) {
+    1024: switch_crh380al_middle_capacity_ze;
+    1025: switch_crh380al_middle_capacity_zy;
+    1027: switch_crh380al_middle_capacity_zs;
+    1028: switch_crh380al_middle_capacity_sw;
+    1035: switch_crh380al_middle_capacity_zec;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_cab_capacity_ze, position_in_articulated_veh % 3) {
+    1: return 50;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_cab_capacity_zy, position_in_articulated_veh % 3) {
+    1: return 32;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_cab_capacity_zs, position_in_articulated_veh % 3) {
+    1: return 12;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_cab_capacity_sw, position_in_articulated_veh % 3) {
+    1: return 9;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_cab_capacity_zec, position_in_articulated_veh % 3) {
+    1: return 36;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_cab_capacity, vehicle_type_id) {
+    1024: switch_crh380al_cab_capacity_ze;
+    1025: switch_crh380al_cab_capacity_zy;
+    1027: switch_crh380al_cab_capacity_zs;
+    1028: switch_crh380al_cab_capacity_sw;
+    1035: switch_crh380al_cab_capacity_zec;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_wagon_capacity, position_in_consist_from_end) {
+    0..2: switch_crh380al_cab_capacity;
+    switch_crh380al_middle_capacity;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_wagon_cost_power, vehicle_type_id) {
+    1024: return 66;
+    1025: return 69;
+    1027: return 73;
+    1028: return 74;
+    1035: return 85;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_wagon_running_power, vehicle_type_id) {
+    1024: return 54;
+    1025: return 67;
+    1027: return 61;
+    1028: return 62;
+    1035: return 63;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_wagon_cost_unpower, vehicle_type_id) {
+    1024: return 20;
+    1025: return 24;
+    1027: return 28;
+    1028: return 29;
+    1035: return 39;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_wagon_running_unpower, vehicle_type_id) {
+    1024: return 8;
+    1025: return 12;
+    1027: return 16;
+    1028: return 17;
+    1035: return 12;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_wagon_cost, vehicle_is_potentially_powered) {
+    1: switch_crh380al_wagon_cost_power;
+    switch_crh380al_wagon_cost_unpower;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_wagon_running, vehicle_is_potentially_powered) {
+    1: switch_crh380al_wagon_running_power;
+    switch_crh380al_wagon_running_unpower;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_wagon_power, (position_in_consist < 3) || (position_in_consist_from_end < 3)) {
+    0: return 2067; // 2067 HP = 1520 KW
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380al_wagon_traction, vehicle_is_potentially_powered) {
+    1: return int(0.0825*255);
+    return 0;
+}

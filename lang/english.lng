@@ -174,6 +174,7 @@ STR_NAME_CRH5A          :CRH5A (EMU)
 STR_NAME_CRH2C          :CRH2C (EMU)
 STR_NAME_CRH3C          :CRH3C (EMU)
 STR_NAME_CRH380A        :CRH380A (EMU)
+STR_NAME_CRH380AL       :CRH380AL (Long Version) (EMU)
 STR_NAME_CRH380B        :CRH380B (EMU)
 STR_NAME_CR400AF        :CR400AF (EMU)
 STR_NAME_CR400BF        :CR400BF (EMU)
@@ -553,7 +554,8 @@ STR_CRH3A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with
 STR_CRH1A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars
 STR_CRH1E_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars
 STR_CRH3C_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
-STR_CRH380A_CONSIST                 :{BLACK}Consist: {GOLD}At least 4 cars, with head and cab trailers, all middle cars motorised
+STR_CRH380A_CONSIST                 :{BLACK}Consist: {GOLD}At least 4 cars, with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12
+STR_CRH380AL_CONSIST                :{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised
 STR_CRH380B_CONSIST                 :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
 STR_CRH380CL_CONSIST                :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
 STR_CRH6A2_CONSIST                  :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
@@ -586,3 +588,4 @@ STR_ONLY_TWO_SECTIONS               :This locomotive must be in a consist of two
 STR_MUST_BE_4_8_12_16_CARS          :This MU must be in a consist of 4, 8, 12 or 16 cars to run.
 STR_MUST_BE_5_TO_17_CARS            :This MU must be in a consist of 5 to 17 cars to run.
 STR_MUST_BE_4_TO_24_CARS            :This MU must be in a consist of 4 to 24 cars to run.
+STR_MUST_BE_8_TO_24_CARS            :This MU must be in a consist of 8 to 24 cars to run.

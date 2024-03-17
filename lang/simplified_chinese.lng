@@ -174,6 +174,7 @@ STR_NAME_CRH5A          :CRH5A (电力动车)
 STR_NAME_CRH2C          :CRH2C (电力动车)
 STR_NAME_CRH3C          :CRH3C (电力动车)
 STR_NAME_CRH380A        :CRH380A (电力动车)
+STR_NAME_CRH380AL       :CRH380AL (长编组) (电力动车)
 STR_NAME_CRH380B        :CRH380B (电力动车)
 STR_NAME_CR400AF        :CR400AF (电力动车)
 STR_NAME_CR400BF        :CR400BF (电力动车)
@@ -546,7 +547,8 @@ STR_CRH1A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8�
 STR_CRH1E_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为5M3T，16节标准编组为10M6T
 STR_CRH3A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
 STR_CRH3C_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
-STR_CRH380A_CONSIST                 :{BLACK}构成：{GOLD}至少4节，头尾拖车，中间全为动力车
+STR_CRH380A_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾拖车，中间全为动力车。大于12节时以重联方式运行。
+STR_CRH380AL_CONSIST                 :{BLACK}构成：{GOLD}8-24节；头尾拖车，中间全为动力车
 STR_CRH380B_CONSIST                 :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
 STR_CRH380CL_CONSIST                :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
 STR_CRH6A2_CONSIST                  :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
@@ -579,3 +581,4 @@ STR_ONLY_TWO_SECTIONS               :该机车节数必须为2，否则无法运
 STR_MUST_BE_4_8_12_16_CARS          :该动车组节数必须为4，8，12或16，否则无法运行
 STR_MUST_BE_5_TO_17_CARS            :该动车组节数必须在5至17之间，否则无法运行
 STR_MUST_BE_4_TO_24_CARS            :该动车组节数必须在4至24之间，否则无法运行
+STR_MUST_BE_8_TO_24_CARS            :该动车组节数必须在8至24之间，否则无法运行
