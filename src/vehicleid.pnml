@@ -167,6 +167,8 @@ item (FEAT_TRAINS, df4c, 5137) {}
 item (FEAT_TRAINS, df4d7000, 5138) {}
 item (FEAT_TRAINS, df8b, 5139) {}
 item (FEAT_TRAINS, df4df, 5140) {}
+// 5141 DF code by Babel
+item (FEAT_TRAINS, df, 5141) {}
 
 //25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
 #define id_range_25_electric 0x1800..0x1BFF
@@ -186,7 +188,7 @@ item (FEAT_TRAINS, ss7b, 6155) {}
 item (FEAT_TRAINS, ss7c, 6156) {}
 item (FEAT_TRAINS, ss7e, 6157) {}
 item (FEAT_TRAINS, ss3b, 6158) {}
-// 6159 coded by babel
+// 6159 coded by Babel
 item (FEAT_TRAINS, hxd1d, 6159) {}
 
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)

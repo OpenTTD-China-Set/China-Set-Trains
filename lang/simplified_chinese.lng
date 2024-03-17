@@ -122,6 +122,7 @@ STR_NAME_JSQ5           :JSQ5 (汽车运输车)
 STR_NAME_JSQ6           :JSQ6 (汽车运输车)
 STR_NAME_L70            :L70 (粮食漏斗车)
 
+STR_NAME_DF             :DF (内燃)
 STR_NAME_DF4K           :DF4 (内燃) (客运型)
 STR_NAME_DF4H           :DF4 (内燃) (货运型)
 STR_NAME_DF4BK          :DF4B (内燃) (客运型)
@@ -299,6 +300,7 @@ STR_US_IMPORT                :美国进口车型
 
 STR_XL25T_SSPE_DESCRIPTION          :{BLACK}新时速运递公司使用的XL25T版本。
 
+STR_DF_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GOLD}黄色{GREEN}窗线{BLACK}涂装, {WHITE}白色{GREEN}窗线{BLACK}涂装
 STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿色涂装{GOLD}，{ORANGE}橘色涂装{BLACK}，{BLUE}京铁{YELLOW}资产{GOLD}涂装，{BLUE}“乌克兰”{YELLOW}涂装，{BLACK}工人先锋号，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装
 STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BROWN}原版{GOLD}涂装，{GREEN}西户铁路{GOLD}涂装，{PURPLE}秦皇岛地方铁路{BLACK}涂装
 STR_DF4C_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：原版涂装，{GREEN}绿色{GOLD}涂装, “乌克兰”{BLUE}蓝{YELLOW}黄{GOLD}涂装
@@ -354,6 +356,7 @@ STR_N60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机
 STR_NX17_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}随机（黑色，棕色）
 STR_NX70A_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{GOLD}仅黑色
 
+STR_DF_NICKNAME                     :{BLACK}昵称：{GOLD}老东风
 STR_DF4_NICKNAME                    :{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
 STR_DF4B_NICKNAME                   :{BLACK}改进后的内燃机使得该机车更加耐用。昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
 STR_DF4C_NICKNAME                   :{BLACK}昵称: {GOLD}蓝猫
@@ -401,6 +404,8 @@ STR_CRH380CL_NICKNAME               :{BLACK}昵称：{GOLD}大鲨鱼
 STR_CR400AF_NICKNAME                :{BLACK}昵称：{GOLD}红神龙
 STR_CR400BF_NICKNAME                :{BLACK}昵称：{GOLD}金凤凰
 
+STR_ALIASNAME_DF                    :{BLACK}别名: {GOLD}巨龙，ND
+
 STR_RELIABILITY_32                  :{BLACK}可靠性下降速度：{GOLD}32
 STR_RELIABILITY_24                  :{BLACK}可靠性下降速度：{GOLD}24
 STR_RELIABILITY_20                  :{BLACK}可靠性下降速度：{GOLD}20
@@ -441,6 +446,8 @@ STR_BAORIXILE           : - {GREEN}宝日希勒煤矿{BLACK}涂装
 STR_HENAN_XINZHENG      : - {GREEN}河南新郑铁路{BLACK}涂装
 STR_SHUDAO              : - {DKBLUE}蜀道集团{BLACK}涂装
 STR_ALTERNATIVE         : - 另一种原版涂装
+STR_DF_YELLOW           : - {GOLD}黄色{GREEN}窗线{BLACK}涂装
+STR_DF_WHITE            : - {WHITE}白色{GREEN}窗线{BLACK}涂装
 
 STR_BUILD_YEAR          : - 根据建造年份选择设计
 STR_YW22_ORIGINAL       : - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240

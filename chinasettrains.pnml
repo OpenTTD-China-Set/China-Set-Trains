@@ -224,6 +224,8 @@
 
 
 // Diesel
+#include "src/diesel/df_graphics.pnml"
+#include "src/diesel/df_item.pnml"
 #include "src/diesel/df4k_graphics.pnml"
 #include "src/diesel/df4k_item.pnml"
 #include "src/diesel/df4h_graphics.pnml"

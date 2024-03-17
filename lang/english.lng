@@ -122,6 +122,7 @@ STR_NAME_JSQ5           :JSQ5 (Vehicle Transporter)
 STR_NAME_JSQ6           :JSQ6 (Vehicle Transporter)
 STR_NAME_L70            :L70 (Hopper)
 
+STR_NAME_DF             :DF (Diesel)
 STR_NAME_DF4K           :DF4 (Diesel) (Passenger Type)
 STR_NAME_DF4H           :DF4 (Diesel) (Freight Type)
 STR_NAME_DF4BK          :DF4B (Diesel) (Passenger Type)
@@ -261,6 +262,7 @@ STR_FULL_NAME_SRZXL25Z       :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Double 
 STR_FULL_NAME_SYW25          :{BLACK}Full Name: {GOLD}25m Double Decker Hard Sleeper Passenger Coach
 STR_FULL_NAME_SRW25          :{BLACK}Full Name: {GOLD}25m Double Decker Soft Sleeper Passenger Coach
 
+STR_FULL_NAME_DF             :{BLACK}Full Name: {GOLD}Dongfeng Diesel Locomotive
 STR_FULL_NAME_DF4            :{BLACK}Full Name: {GOLD}Dongfeng 4 Diesel Locomotive
 STR_FULL_NAME_DF4B           :{BLACK}Full Name: {GOLD}Dongfeng 4B Diesel Locomotive
 STR_FULL_NAME_DF4C           :{BLACK}Full Name: {GOLD}Dongfeng 4C Diesel Locomotive
@@ -305,6 +307,7 @@ STR_DESC_2                          :{STRING}{}{STRING}
 
 STR_XL25T_SSPE_DESCRIPTION          :{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.
 
+STR_DF_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Yellow {GREEN}Line {BLACK}Livery, {WHITE}White {GREEN}Line {BLACK}Livery
 STR_DF4_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea, DF4B only), Worker Pioneer Livery (DF4B only), {BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery
 STR_DF4C_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: Original Livery, {GREEN}GREEN {GOLD}Livery, {BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery
 STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {BROWN}Original {GOLD}Livery, {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {GOLD}Railway Livery and {PURPLE}Qinhuangdao Local Railway {GOLD}Livery
@@ -360,6 +363,7 @@ STR_N60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (u
 STR_NX17_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Random (Black, Brown)
 STR_NX70A_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {GOLD}Black Livery Only
 
+STR_DF_NICKNAME                     :{BLACK}Nickname: {GOLD}Old DongFeng
 STR_DF4_NICKNAME                    :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
 STR_DF4B_NICKNAME                   :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
 STR_DF4C_NICKNAME                   :{BLACK}Nickname: {GOLD}Blue Cat
@@ -403,10 +407,11 @@ STR_CRH5A_NICKNAME                  :{BLACK}Nickname: {GOLD}Donkey
 STR_CRH6F_NICKNAME                  :{BLACK}Nickname: {GOLD}Real Metro
 STR_CRH380A_NICKNAME                :{BLACK}Nickname: {GOLD}Big Rat
 STR_CRH380B_NICKNAME                :{BLACK}Nickname: {GOLD}Crazy Rabbit
-STR_CRH380CL_NICKNAME                :{BLACK}Nickname: {GOLD}Shark
+STR_CRH380CL_NICKNAME               :{BLACK}Nickname: {GOLD}Shark
 STR_CR400AF_NICKNAME                :{BLACK}Nickname: {GOLD}Red Loong
 STR_CR400BF_NICKNAME                :{BLACK}Nickname: {GOLD}Golden Phoenix
 
+STR_ALIASNAME_DF                    :{BLACK}Alias Name: {GOLD}Great Loong
 
 STR_RELIABILITY_32                  :{BLACK}Reliability decay speed: {GOLD}32
 STR_RELIABILITY_24                  :{BLACK}Reliability decay speed: {GOLD}24
@@ -448,6 +453,8 @@ STR_BAORIXILE           : - {PURPLE}Baorixile Coal Mine {GOLD}Livery
 STR_HENAN_XINZHENG      : - {GREEN}Henan Xinzheng Railway {GOLD}Livery
 STR_SHUDAO              : - {DKBLUE}Shudao Group {GOLD}Livery
 STR_ALTERNATIVE         : - Alternative Original Livery
+STR_DF_YELLOW           : - {GOLD}Yellow {GREEN}Line {BLACK}Livery
+STR_DF_WHITE            : - {WHITE}White {GREEN}Line {BLACK}Livery
 
 STR_BUILD_YEAR          : - According to build year
 STR_YW22_ORIGINAL       : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240
