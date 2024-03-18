@@ -262,6 +262,7 @@ STR_FULL_NAME_KD25K          :{BLACK}全称：{GOLD}25米快速型空调发电�
 STR_FULL_NAME_KD25Z          :{BLACK}全称：{GOLD}25米准高速空调发电车
 STR_FULL_NAME_KD25T          :{BLACK}全称：{GOLD}25米提速型空调发电车
 
+STR_FULL_NAME_DF             :{BLACK}全称：{GOLD}东风型内燃机车
 STR_FULL_NAME_DF4            :{BLACK}全称：{GOLD}东风4型内燃机车
 STR_FULL_NAME_DF4B           :{BLACK}全称：{GOLD}东风4B型内燃机车
 STR_FULL_NAME_DF5            :{BLACK}全称：{GOLD}东风5型内燃机车

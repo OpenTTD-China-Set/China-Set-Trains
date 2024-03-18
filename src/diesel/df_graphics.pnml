@@ -7,7 +7,7 @@ spriteset (spriteset_df_purchase) {
 }
 
 alternative_sprites(spriteset_df_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("diesel", "df")
+    template_purchase ("diesel", "df-b")
 }
 
 spriteset (spriteset_df_standard) {
@@ -19,11 +19,11 @@ spriteset (spriteset_df_reversed) {
 }
 
 alternative_sprites(spriteset_df_standard, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("diesel", "df")
+    template_standard ("diesel", "df-b")
 }
 
 alternative_sprites(spriteset_df_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("diesel", "df-b")
+    template_standard ("diesel", "df")
 }
 
 spriteset (spriteset_df_whiteline_standard) {
@@ -35,11 +35,11 @@ spriteset (spriteset_df_whiteline_reversed) {
 }
 
 alternative_sprites(spriteset_df_whiteline_standard, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("diesel", "df-whiteline")
+    template_standard ("diesel", "df-whiteline-b")
 }
 
 alternative_sprites(spriteset_df_whiteline_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("diesel", "df-whiteline-b")
+    template_standard ("diesel", "df-whiteline")
 }
 
 switch (FEAT_TRAINS, SELF, switch_df_articulated_part, extra_callback_info1) {
@@ -78,5 +78,5 @@ switch (FEAT_TRAINS, SELF, switch_df_capacity, position_in_articulated_veh % 3) 
 }
 
 switch (FEAT_TRAINS, SELF, switch_df_additional_text, param_cargo_decay) {
-    return string(STR_DESC_5, string(STR_FULL_NAME_DF), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF_LIVERY_AVAILABILITY), string(STR_DF_NICKNAME), string(STR_RELIABILITY_16));
+    return string(STR_DESC_5, string(STR_FULL_NAME_DF),  string(STR_ALIASNAME_DF), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF_LIVERY_AVAILABILITY), string(STR_DF_NICKNAME), string(STR_RELIABILITY_16));
 }
