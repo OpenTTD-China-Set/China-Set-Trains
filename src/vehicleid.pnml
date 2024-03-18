@@ -190,6 +190,7 @@ item (FEAT_TRAINS, ss7e, 6157) {}
 item (FEAT_TRAINS, ss3b, 6158) {}
 // 6159 coded by Babel
 item (FEAT_TRAINS, hxd1d, 6159) {}
+item (FEAT_TRAINS, _6y2, 6160) {}
 
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
 #define id_range_multi_loco 0x1C00..0x1FFF 
