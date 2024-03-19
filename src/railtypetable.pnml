@@ -3,13 +3,11 @@ Using Semi-Standardised Railtype Scheme.
 The First Letter:
 S - 1435 mm gauge
 B - 1520 mm gauge
-N - 1067 mm gauge
-n - 1000 mm gauge
-m - 762 mm gauge
+N - 1067(1000) mm gauge
+n - 762(600) mm gauge
 D - 1435/1520 mm gauge
-d - 1435/1067 mm gauge
-C - 1435/1000 mm gauge
-c - 1067/762 mm gauge
+d - 1435/1067(1000) mm gauge
+c - 1067/762(600) mm gauge
 M - Monorail;
 L - Magnetic Levitation (Maglev);
 
@@ -22,12 +20,12 @@ D - 210 km/h
 E - 250 km/h (unlimited for B gauge)
 F - 310 km/h
 G - Unlimited;
-For N, n, d, C gauges:
+For N, d, c gauges:
 A - 80 km/h
 B - 100 km/h
 C - 130 km/h
 D - 160 km/h;
-For m and c gauges:
+For n and c gauges:
 A - 60 km/h;
 For Monorail:
 A - Unlimited;
@@ -36,18 +34,17 @@ A - 120 km/h
 B - Unlimited;
 
 The Third Letter:
-A - Very Low Axle Load (don't use in China Set: Rails)
-B - Low Axle Load (don't use in China Set: Rails)
-C - Medium Axle Load - all passenger MUs and narrow gauge passenger cars, 762mm gauge freight wagons
-D - High Axle Load - all standard/broad gauge passenger cars, locomotives and light freight wagons
-E - Very High Axle Load - all heavy freight wagons;
+A - Very Low Axle Load - <= 15 t
+B - Low Axle Load - 16-19 t
+C - Medium Axle Load - 20-23 t
+D - High Axle Load - 24-27 t
+E - Very High Axle Load - >= 28 t;
 
 The Last Letter:
 N - Non-Electrified
 A - 25 kV AC
-D - 1.5 kV DC
-B - 25 kV AC / 1.5 kV DC
-d - 750 V DC
+d - 1.5 kV DC
+( - 25 kV AC / 1.5 kV DC
 3 - Third Rail Electrification;
 */
 
