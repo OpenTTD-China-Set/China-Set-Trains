@@ -183,6 +183,17 @@
 #include "src/coaches/25z/kd25z_graphics.pnml"
 #include "src/coaches/25z/kd25z_item.pnml"
 
+#include "src/coaches/25dt/yz25dt_jinlun_graphics.pnml"
+#include "src/coaches/25dt/yz25dt_jinlun_item.pnml"
+#include "src/coaches/25dt/yw25dt_jinlun_graphics.pnml"
+#include "src/coaches/25dt/yw25dt_jinlun_item.pnml"
+#include "src/coaches/25dt/rw25dt_jinlun_graphics.pnml"
+#include "src/coaches/25dt/rw25dt_jinlun_item.pnml"
+#include "src/coaches/25dt/syz25dt_jinlun_graphics.pnml"
+#include "src/coaches/25dt/syz25dt_jinlun_item.pnml"
+#include "src/coaches/25dt/srz25dt_jinlun_graphics.pnml"
+#include "src/coaches/25dt/srz25dt_jinlun_item.pnml"
+
 // Wagons
 #include "src/wagons/c62_graphics.pnml"
 #include "src/wagons/c62_item.pnml"
@@ -313,6 +324,10 @@
 // DMU
 #include "src/dmu/ndj3_graphics.pnml"
 #include "src/dmu/ndj3_item.pnml"
+#include "src/dmu/nzj2_jinlun_unilaminar_graphics.pnml"
+#include "src/dmu/nzj2_jinlun_unilaminar_item.pnml"
+#include "src/dmu/nzj2_jinlun_double_decker_graphics.pnml"
+#include "src/dmu/nzj2_jinlun_double_decker_item.pnml"
 
 // 25kV AC EMU
 #include "src/25-emu/djj1_graphics.pnml"

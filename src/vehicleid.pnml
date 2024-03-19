@@ -116,6 +116,12 @@ item (FEAT_TRAINS, rw22aircon, 2115) {}
 item (FEAT_TRAINS, ca23aircon, 2116) {}
 item (FEAT_TRAINS, ca23, 2117) {}
 item (FEAT_TRAINS, tz, 2118) {}
+// JinLun DMU Series code by Babel
+item (FEAT_TRAINS, yz25dt_jinlun, 2119) {}
+item (FEAT_TRAINS, yw25dt_jinlun, 2120) {}
+item (FEAT_TRAINS, rw25dt_jinlun, 2121) {}
+item (FEAT_TRAINS, syz25dt_jinlun, 2122) {}
+item (FEAT_TRAINS, srz25dt_jinlun, 2123) {}
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 #define id_range_wagons 0x0C00..0x0FFF
@@ -199,6 +205,8 @@ item (FEAT_TRAINS, _6y2, 6160) {}
 //DMU, available ID range: 8192-9215 (hex 0x2000..0x23FF)
 #define id_range_dmu 0x2000..0x23FF
 item (FEAT_TRAINS, ndj3, 8192) {}
+item (FEAT_TRAINS, nzj2_jinlun_1, 8193) {}
+item (FEAT_TRAINS, nzj2_jinlun_2, 8194) {}
 
 //25kV AC EMU, available ID range: 9216-10239 (hex 0x2400..0x27FF)
 #define id_range_25_emu 0x2000..0x23FF
@@ -232,7 +240,7 @@ item (FEAT_TRAINS, crh380al, 9238) {}
 
 //750V DC EMU, available ID range: 11264-12287 (hex 0x2C00..0x2FFF)
 #define id_range_750_emu 0x2C00..0x2BFF
-
+//Maybe can use for MTR?--Babel
 
 //Third Rail EMU, available ID range: 11288-13311 (hex 0x3000..0x33FF)
 #define id_range_third_emu 0x3000..0x33FF

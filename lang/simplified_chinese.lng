@@ -105,6 +105,12 @@ STR_NAME_KD25K          :KD25K (空调发电车)
 STR_NAME_KD25Z          :KD25Z (空调发电车)
 STR_NAME_KD25T          :KD25T (空调发电车)
 
+STR_NAME_YZ25DT_JINLUN  :YZ25DT (金轮号动车组) (客车)
+STR_NAME_YW25DT_JINLUN  :YW25DT (金轮号动车组) (客车)
+STR_NAME_RW25DT_JINLUN  :RW25DT (金轮号动车组) (客车)
+STR_NAME_SYZ25DT_JINLUN :SYZ25DT (金轮号动车组) (客车)
+STR_NAME_SRZ25DT_JINLUN :SRZ25DT (金轮号动车组) (客车)
+
 STR_NAME_C62            :C62 (敞车)
 STR_NAME_C64            :C64 (敞车)
 STR_NAME_C70            :C70 (敞车)
@@ -163,6 +169,8 @@ STR_NAME_HXD1D          :HXD1D (电力)
 STR_NAME_HXD3C          :HXD3C (电力)
 STR_NAME_HXD3D          :HXD3D (电力)
 
+STR_NAME_NZJ2_JINLUN_UNILAMINAR     :NZJ2 "金轮号" (单层) (内燃动车)
+STR_NAME_NZJ2_JINLUN_DOUBLE_DECKER  :NZJ2 "金轮号" (双层) (内燃动车)
 STR_NAME_NDJ3           :NDJ3 "长城号" (内燃动车)
 STR_NAME_DJJ1           :DJJ1 "蓝箭" (电力动车)
 STR_NAME_CR200JA        :CR200J-A (电力动车)
@@ -263,6 +271,12 @@ STR_FULL_NAME_KD25K          :{BLACK}全称：{GOLD}25米快速型空调发电�
 STR_FULL_NAME_KD25Z          :{BLACK}全称：{GOLD}25米准高速空调发电车
 STR_FULL_NAME_KD25T          :{BLACK}全称：{GOLD}25米提速型空调发电车
 
+STR_FULL_NAME_YZ25DT_JINLUN  :{BLACK}全称：{GOLD}“金轮号”内燃动车组25米单层硬座拖车
+STR_FULL_NAME_YW25DT_JINLUN  :{BLACK}全称：{GOLD}“金轮号”内燃动车组25米单层硬卧拖车
+STR_FULL_NAME_RW25DT_JINLUN  :{BLACK}全称：{GOLD}“金轮号”内燃动车组25米单层软卧拖车
+STR_FULL_NAME_SYZ25DT_JINLUN :{BLACK}全称：{GOLD}“金轮号”内燃动车组25米双层硬座拖车
+STR_FULL_NAME_SRZ25DT_JINLUN :{BLACK}全称：{GOLD}“金轮号”内燃动车组25米双层软座拖车
+
 STR_FULL_NAME_DF             :{BLACK}全称：{GOLD}东风型内燃机车
 STR_FULL_NAME_DF4            :{BLACK}全称：{GOLD}东风4型内燃机车
 STR_FULL_NAME_DF4B           :{BLACK}全称：{GOLD}东风4B型内燃机车
@@ -347,6 +361,7 @@ STR_SCA25KHD_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{GOLD}西安
 STR_TZ_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{ORANGE}橙色{GOLD}涂装，{GOLD}京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装
 STR_KD25K_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{LTBLUE}沪芦列车{GOLD}涂装，西安铁路局涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}目前仅有广九铁路子涂装
+STR_25DT_JINLUN_LIVERY_AVAILABILITY :{BLACK}可供选择的涂装: {GOLD}早期涂装 (2010年之前)，晚期涂装(2010年以后)
 
 STR_G60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带 (未完成)
 STR_GN70_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{BLACK}黑色{GOLD}加随机颜色条带 (未完成)
@@ -478,6 +493,8 @@ STR_XIZI                : - 西子号涂装
 STR_BEIJING             : - 北京铁路局
 STR_WRU                 : - 武汉铁路技术学院涂装
 STR_BEIJING2SHANGHAI    : - 北京至上海13/14次直快涂装
+STR_LATER               : - 后期涂装
+STR_EARLIER             : - 早期涂装
 
 STR_PROTOTYPE           : - 原型
 STR_JINGTONG            : - 京通号涂装
@@ -492,6 +509,8 @@ STR_JINSHAN             : - 金山铁路涂装
 STR_GUANGQING           : - 广清城际涂装
 STR_FOSHAN              : - 佛肇城际涂装 
 STR_XIAOYONG            : - 萧甬铁路涂装
+
+STR_JINLUN_25DT         :{BLUE}金{WHITE}轮{RED}号{GOLD}内燃动车组所使用的拖车
 
 STR_COMFORT_144         :{BLACK}舒适度：{GOLD}144
 STR_COMFORT_160         :{BLACK}舒适度：{GOLD}160
@@ -548,6 +567,7 @@ STR_CRH6F_CAN_ATTACH_WAGON          :{BLACK}匹配的车厢：仅有{GOLD}二等
 STR_NJ2_CONSIST                     :{BLACK}构成：{GOLD}2-4节重联
 STR_DF11G_CONSIST                   :{BLACK}构成：{GOLD}两节重联 (普通)，或一节在头部提供动力，另一节在尾部供电 (“拆猪”，最高速度 120 km/h, 功率 4133 公制马力)
 STR_NDJ3_CONSIST                    :{BLACK}构成：{GOLD}头尾各一节，中间加挂至少四节车厢
+STR_JINLUN_LOCOMOTIVE_CONSIST       :{BLACK}构成：{GOLD}头尾各一节，仅可挂载"{BLUE}金{WHITE}轮{RED}号{RED}"25DT车厢
 STR_DJJ1_CONSIST                    :{BLACK}构成：{GOLD}头部一节，或头尾各一节，中间加挂至少四节车厢
 STR_CRH5A_CONSIST                   :{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车 1495 公制马力
 STR_CR400AF_CONSIST                 :{BLACK}构成：{GOLD}5-17节； n 节构成中动力车节数为 int(n/2) ，拖车节数为 int((n+1)/2)

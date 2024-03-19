@@ -357,3 +357,11 @@ switch (FEAT_TRAINS, SELF, too_many_graphics_12, position_in_articulated_veh % 3
     1: spriteset_too_many_12;
     empty_sprites;
 }
+
+//For JINLUN DMU
+switch (FEAT_TRAINS, SELF, switch_25dt_jinlun_cargo_subtype, cargo_subtype) {
+    0: return string(STR_BUILD_YEAR);
+    1: return string(STR_LATER);
+    2: return string(STR_EARLIER);
+    return CB_RESULT_NO_TEXT;
+}

@@ -104,6 +104,11 @@ STR_NAME_SCA25Z         :SCA25Z (Restaurant Car)
 STR_NAME_SRZXL25Z       :SRZXL25Z (Luggage Car)
 STR_NAME_SYW25          :SYW25 (Passenger Coach)
 STR_NAME_SRW25          :SRW25 (Passenger Coach)
+STR_NAME_YZ25DT_JINLUN  :YZ25DT (JINLUN DMU) (Passenger Coach)
+STR_NAME_YW25DT_JINLUN  :YW25DT (JINLUN DMU) (Passenger Coach)
+STR_NAME_RW25DT_JINLUN  :RW25DT (JINLUN DMU) (Passenger Coach)
+STR_NAME_SYZ25DT_JINLUN :SYZ25DT (JINLUN DMU) (Passenger Coach)
+STR_NAME_SRZ25DT_JINLUN :SRZ25DT (JINLUN DMU) (Passenger Coach)
 
 STR_NAME_C62            :C62 (Gondola)
 STR_NAME_C64            :C64 (Gondola)
@@ -163,6 +168,8 @@ STR_NAME_HXD1D          :HXD1D (Electric)
 STR_NAME_HXD3C          :HXD3C (Electric)
 STR_NAME_HXD3D          :HXD3D (Electric)
 
+STR_NAME_NZJ2_JINLUN_UNILAMINAR     :NZJ2 "JINLUN" (UNILAMINAR) (DMU)
+STR_NAME_NZJ2_JINLUN_DOUBLE_DECKER  :NZJ2 "JINLUN" (DOUBLE DECKER) (DMU)
 STR_NAME_NDJ3           :NDJ3 "Great Wall" (DMU)
 STR_NAME_DJJ1           :DJJ1 "Blue Arrow" (EMU)
 STR_NAME_CR200JA        :CR200J-A (EMU)
@@ -263,6 +270,12 @@ STR_FULL_NAME_SRZXL25Z       :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Double 
 STR_FULL_NAME_SYW25          :{BLACK}Full Name: {GOLD}25m Double Decker Hard Sleeper Passenger Coach
 STR_FULL_NAME_SRW25          :{BLACK}Full Name: {GOLD}25m Double Decker Soft Sleeper Passenger Coach
 
+STR_FULL_NAME_YZ25DT_JINLUN  :{BLACK}Full Name: {GOLD}25m Unilaminar Hard Seat Passenger Trail Car of "Jinlun" DMU
+STR_FULL_NAME_YW25DT_JINLUN  :{BLACK}Full Name: {GOLD}25m Unilaminar Hard Sleeper Passenger Trail Car of "Jinlun" DMU
+STR_FULL_NAME_RW25DT_JINLUN  :{BLACK}Full Name: {GOLD}25m Unilaminar Soft Sleeper Passenger Trail Car of "Jinlun" DMU
+STR_FULL_NAME_SYZ25DT_JINLUN :{BLACK}Full Name: {GOLD}25m Double Decker Hard Seat Passenger Trail Car of "Jinlun" DMU
+STR_FULL_NAME_SRZ25DT_JINLUN :{BLACK}Full Name: {GOLD}25m Double Decker Hard Seat Passenger Trail Car of "Jinlun" DMU
+
 STR_FULL_NAME_DF             :{BLACK}Full Name: {GOLD}Dongfeng Diesel Locomotive
 STR_FULL_NAME_DF4            :{BLACK}Full Name: {GOLD}Dongfeng 4 Diesel Locomotive
 STR_FULL_NAME_DF4B           :{BLACK}Full Name: {GOLD}Dongfeng 4B Diesel Locomotive
@@ -353,6 +366,7 @@ STR_SCA25KHD_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {GOLD}Xi'an
 STR_TZ_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {ORANGE}Orange {GOLD}Livery, {GOLD}Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery
 STR_KD25K_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}Only Guangzhou-Kowloon Sub-Livery available so far
+STR_25DT_JINLUN_LIVERY_AVAILABILITY :{BLACK}Livery Availability: {GOLD}Earlier Livery (Before 2010), Later Livery (After 2010)
 
 STR_G60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GRAY}Grey {GOLD}with Random-Colour Stripes (unfinished)
 STR_GN70_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished)
@@ -484,6 +498,8 @@ STR_GAOZU_GREEN         : - {DKGREEN}"Gaozu Green" {BLACK}(unfinished except 25T
 STR_BEIJING             : - Beijing Railway Bureau
 STR_WRU                 : - Wuhan Railway Vocational College of Technology Livery
 STR_BEIJING2SHANGHAI    : - Beijing-Shanghai Express Train Livery
+STR_LATER               : - Later Livery
+STR_EARLIER             : - Earlier Livery
 
 STR_PROTOTYPE           : - Prototype
 STR_JINGTONG            : - Beijing-Tongzhou Livery
@@ -498,6 +514,8 @@ STR_JINSHAN             : - Shanghai-Jinshan Livery
 STR_GUANGQING           : - Guangzhou-Qingyuan Livery
 STR_FOSHAN              : - Foshan Livery
 STR_XIAOYONG            : - Xiaoshan/Hangzhou-Ningbo Livery
+
+STR_JINLUN_25DT         :Coaches use for DMU {BLUE}"JIN{WHITE}LUN"
 
 STR_COMFORT_144         :{BLACK}Comfort: {GOLD}144
 STR_COMFORT_160         :{BLACK}Comfort: {GOLD}160
@@ -553,6 +571,7 @@ STR_CRH6F_CAN_ATTACH_WAGON          :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK
 
 STR_NJ2_CONSIST                     :{BLACK}Consist: {GOLD}2 to 4 sections
 STR_DF11G_CONSIST                   :{BLACK}Consist: {GOLD}2 sections joint together (Normal), or one section at head, another section at back ("Splitting Pig", max speed 120 km/h, power 4133 hpM)
+STR_JINLUN_LOCOMOTIVE_CONSIST       :{BLACK}Consist: {GOLD}One section at front, another section at back. Only can attch "{BLUE}JIN{WHITE}LUN{GOLD}" 25DT Series coaches.
 STR_NDJ3_CONSIST                    :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle
 STR_DJJ1_CONSIST                    :{BLACK}Consist: {GOLD}One section at front, with wagons attached; or one section at front, another section at back. At least 4 wagons
 STR_CRH5A_CONSIST                   :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car
