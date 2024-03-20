@@ -39,6 +39,7 @@ item (FEAT_TRAINS, _6y2) {
     graphics {
         // Menu
         additional_text:                switch_6y2_additional_text;
+        cargo_subtype_text:             switch_6y2_cargo_subtype;
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_6y2_graphics;
