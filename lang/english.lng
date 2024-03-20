@@ -168,8 +168,9 @@ STR_NAME_HXD1D          :HXD1D (Electric)
 STR_NAME_HXD3C          :HXD3C (Electric)
 STR_NAME_HXD3D          :HXD3D (Electric)
 
-STR_NAME_NZJ2_JINLUN_UNILAMINAR     :NZJ2 "JINLUN" (UNILAMINAR) (DMU)
-STR_NAME_NZJ2_JINLUN_DOUBLE_DECKER  :NZJ2 "JINLUN" (DOUBLE DECKER) (DMU)
+STR_NAME_NZJ1_XINSHUGUANG           :NZJ1 "Xinshuguang" (DMU)
+STR_NAME_NZJ2_JINLUN_UNILAMINAR     :NZJ2 "Jinlun" (UNILAMINAR) (DMU)
+STR_NAME_NZJ2_JINLUN_DOUBLE_DECKER  :NZJ2 "Jinlun" (DOUBLE DECKER) (DMU)
 STR_NAME_NDJ3           :NDJ3 "Great Wall" (DMU)
 STR_NAME_DJJ1           :DJJ1 "Blue Arrow" (EMU)
 STR_NAME_CR200JA        :CR200J-A (EMU)
@@ -557,21 +558,23 @@ STR_SELF_AIR_CONDITIONER            :{BLACK}With Air Conditioner Compartment {RE
 
 STR_DESC_PENGDAIKE                  :{BLACK}Passengers in Boxcars (Peng Dai Ke): From 1980s to 2008, to handle huge traffic amounts during the Spring Festival period, temporary trains where passengers crowding in boxcars had to be operated. This reflected a severe lack of railway transport resources at that time.
 
-STR_ATTACH_ALL_CRH_CR               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs
-STR_ATTACH_SLEEPER_MU               :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs
-STR_ATTACH_CR200J                   :{BLACK}Matching MUs: {GOLD}CR200J Series
-STR_NDJ3_CAN_ATTACH_WAGON           :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC{BLACK}, Second Class Capacity: 114, Comfort: 200
-STR_DJJ1_CAN_ATTACH_WAGON           :{BLACK}Matching Wagons: Only {GOLD}ZY{BLACK}, equivalent to Soft Seat, Comfort: 240
-STR_CR200J_CAN_ATTACH_WAGON         :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, WE, WY, WG
-STR_CRH_CAN_ATTACH_WAGON            :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC
-STR_CRH_SLEEPER_CAN_ATTACH_WAGON    :{BLACK}Matching Wagons: {GOLD}ZE, WY, WG, ZEC
-STR_CRH6A2_CAN_ATTACH_WAGON         :{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: 160), {GOLD}ZY
-STR_CRH6A3_CAN_ATTACH_WAGON         :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: 160
-STR_CRH6F_CAN_ATTACH_WAGON          :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places (Crowded), Comfort: 120
+STR_ATTACH_ALL_CRH_CR                   :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs
+STR_ATTACH_SLEEPER_MU                   :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs
+STR_ATTACH_CR200J                       :{BLACK}Matching MUs: {GOLD}CR200J Series
+STR_NZJ1_XINSHUGUANG_CAN_ATTACH_WAGON   :{BLACK}Matching Wagons: {GOLD}ZE{BLACK}, equivalent to Double-Decker Hard Seat, Capacity: 136, Comfort: 200; {GOLD}ZY{BLACK}, equivalent to Double-Decker Soft Seat, Capacity: 108, Comfort: 240
+STR_NDJ3_CAN_ATTACH_WAGON               :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC{BLACK}, Second Class Capacity: 114, Comfort: 200
+STR_DJJ1_CAN_ATTACH_WAGON               :{BLACK}Matching Wagons: Only {GOLD}ZY{BLACK}, equivalent to Soft Seat, Comfort: 240
+STR_CR200J_CAN_ATTACH_WAGON             :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, WE, WY, WG
+STR_CRH_CAN_ATTACH_WAGON                :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC
+STR_CRH_SLEEPER_CAN_ATTACH_WAGON        :{BLACK}Matching Wagons: {GOLD}ZE, WY, WG, ZEC
+STR_CRH6A2_CAN_ATTACH_WAGON             :{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: 160), {GOLD}ZY
+STR_CRH6A3_CAN_ATTACH_WAGON             :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: 160
+STR_CRH6F_CAN_ATTACH_WAGON              :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places (Crowded), Comfort: 120
 
 STR_NJ2_CONSIST                     :{BLACK}Consist: {GOLD}2 to 4 sections
 STR_DF11G_CONSIST                   :{BLACK}Consist: {GOLD}2 sections joint together (Normal), or one section at head, another section at back ("Splitting Pig", max speed 120 km/h, power 4133 hpM)
-STR_JINLUN_LOCOMOTIVE_CONSIST       :{BLACK}Consist: {GOLD}One section at front, another section at back. Only can attch "{BLUE}JIN{WHITE}LUN{GOLD}" 25DT Series coaches.
+STR_NZJ1_XINSHUGUANG_CONSIST        :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle
+STR_JINLUN_LOCOMOTIVE_CONSIST       :{BLACK}Consist: {GOLD}One section at front, another section at back. Only can attach "{BLUE}JIN{WHITE}LUN{GOLD}" 25DT Series coaches.
 STR_NDJ3_CONSIST                    :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle
 STR_DJJ1_CONSIST                    :{BLACK}Consist: {GOLD}One section at front, with wagons attached; or one section at front, another section at back. At least 4 wagons
 STR_CRH5A_CONSIST                   :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car

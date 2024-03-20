@@ -324,6 +324,8 @@
 // DMU
 #include "src/dmu/ndj3_graphics.pnml"
 #include "src/dmu/ndj3_item.pnml"
+#include "src/dmu/nzj1_xinshuguang_graphics.pnml"
+#include "src/dmu/nzj1_xinshuguang_item.pnml"
 #include "src/dmu/nzj2_jinlun_unilaminar_graphics.pnml"
 #include "src/dmu/nzj2_jinlun_unilaminar_item.pnml"
 #include "src/dmu/nzj2_jinlun_double_decker_graphics.pnml"

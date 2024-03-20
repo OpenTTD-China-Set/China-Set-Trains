@@ -207,6 +207,7 @@ item (FEAT_TRAINS, _6y2, 6160) {}
 item (FEAT_TRAINS, ndj3, 8192) {}
 item (FEAT_TRAINS, nzj2_jinlun_1, 8193) {}
 item (FEAT_TRAINS, nzj2_jinlun_2, 8194) {}
+item (FEAT_TRAINS, nzj1_xinshuguang, 8195) {}
 
 //25kV AC EMU, available ID range: 9216-10239 (hex 0x2400..0x27FF)
 #define id_range_25_emu 0x2000..0x23FF

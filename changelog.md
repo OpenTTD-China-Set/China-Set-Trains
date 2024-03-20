@@ -5,6 +5,12 @@ China Set: Trains Changelog
 
 ## Initial-0-2 Updates
 
+0.2.1.152 (20/3/2024)
+--------------------
+Add: NZJ2-Jinlun, 25DT-Jinlun (Single and double decker), NZJ1-Xinshuguang, DF, 6Y2, CRH380A, CRH380AL, CR400AF
+Fix #39: Unification of different colours of CR200J
+Fix #40: Low-axle-weight EMUs able to run on unelectrified tracks
+
 0.2.0.151 (2/3/2024)
 --------------------
 Fix #38: CRH1E unable to attach sleeper carriages
