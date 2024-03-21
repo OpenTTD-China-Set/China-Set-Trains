@@ -5,10 +5,14 @@ China Set: Trains Changelog
 
 ## Initial-0-2 Updates
 
-0.2.1.155 (21/3/2024)
+0.2.1.154 (21/3/2024)
 --------------------
 Add: YZ31, Jinwen Livery for DF4B, CA25G, KD25G and XL25G
 Fix #41: Description of 22-coaches
+
+0.2.1.153 (21/3/2024)
+--------------------
+Fix #41: It is probable to make locos of pushpull trains / Concentrated power MUs in the middle
 
 0.2.1.152 (20/3/2024)
 --------------------

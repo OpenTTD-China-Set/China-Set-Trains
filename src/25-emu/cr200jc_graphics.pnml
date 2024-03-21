@@ -17,10 +17,19 @@ spriteset (spriteset_cr200jc_front) {
 spriteset (spriteset_cr200jc_middle) {
     template_empty ()
 }
+spriteset (spriteset_cr200jc_middle_reversed) {
+    template_empty ()
+}
 spriteset (spriteset_cr200jc_cab) {
     template_empty ()
 }
 spriteset (spriteset_cr200jc_back) {
+    template_empty ()
+}
+spriteset (spriteset_cr200jc_cab_reconect) {
+    template_empty ()
+}
+spriteset (spriteset_cr200jc_cab_reconect_reversed) {
     template_empty ()
 }
 
@@ -31,11 +40,20 @@ alternative_sprites(spriteset_cr200jc_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) 
 alternative_sprites (spriteset_cr200jc_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200jc-t")
 }
+alternative_sprites (spriteset_cr200jc_middle_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "cr200jc-t")
+}
 alternative_sprites (spriteset_cr200jc_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200jc-tc")
 }
 alternative_sprites (spriteset_cr200jc_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200jc-m-b")
+}
+alternative_sprites (spriteset_cr200jc_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cr200jc-tc-c")
+}
+alternative_sprites (spriteset_cr200jc_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "cr200jc-tc-c")
 }
 
 switch (FEAT_TRAINS, SELF, cr200jcwagon, vehicle_type_id) {
@@ -50,10 +68,22 @@ switch (FEAT_TRAINS, SELF, switch_cr200jc_articulated_part, extra_callback_info1
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+//(((count_veh_id(9237) == 3) && (num_vehs_in_consist != 3)) || ((count_veh_id(9237) == 6) && (hasbit(bitmask_consist_info, 0) == 0))) && (((num_vehs_in_consist < 12) ^ (num_vehs_in_vehid_chain == 6)) || (num_vehs_in_consist > 72))
 
-switch (FEAT_TRAINS, SELF, switch_cr200jc_start_stop, (count_veh_id(9237) == 3) || ((count_veh_id(9237) == 6) && ((num_vehs_in_vehid_chain != 6) ^ (num_vehs_in_consist == 6)))) {
+switch (FEAT_TRAINS, SELF, swith_cr200jc_start_stop_short, (num_vehs_in_consist != 3) && (num_vehs_in_consist < 72)) {
     0: return string(STR_CR200JC_CONSIST);
     return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, swith_cr200jc_start_stop_long, (hasbit(bitmask_consist_info, 0) == 0) && (((num_vehs_in_consist > 12) || (num_vehs_in_consist == 6)) && (num_vehs_in_consist < 72))) {
+    0: return string(STR_CR200JC_CONSIST);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jc_start_stop, count_veh_id(9237)) {
+    3: swith_cr200jc_start_stop_short;
+    6: swith_cr200jc_start_stop_long;
+    return string(STR_CR200JC_CONSIST);
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jc_graphics_position_error_control, position_in_consist_from_end % 3) {
@@ -67,29 +97,44 @@ switch (FEAT_TRAINS, SELF, switch_cr200jc_graphics_front, position_in_consist) {
     switch_cr200jc_graphics_position_error_control;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr200jc_graphics, position_in_consist_from_end) {
+switch (FEAT_TRAINS, SELF, switch_cr200jc_graphics, (position_in_consist_from_end == 1) && (position_in_consist != 1)) {
     1: spriteset_cr200jc_back;
     switch_cr200jc_graphics_front;   
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jc_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_CR200J_CAN_ATTACH_WAGON), string(STR_CR200JC_NICKNAME), string(STR_RELIABILITY_8));
+    return string(STR_DESC_4, string(STR_CR200J_CAN_ATTACH_WAGON), string(STR_CR200JC_NICKNAME), string(STR_RELIABILITY_8), string(STR_CR200JC_CONSIST));
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr200jc_middle_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_cr200jc_middle;
-    empty_sprites;
+switch (FEAT_TRAINS, SELF, switch_cr200jc_cab_half, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) {
+    1: spriteset_cr200jc_cab_reconect;
+    spriteset_cr200jc_cab_reconect_reversed;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr200jc_cab_graphics, position_in_articulated_veh % 3) {
+switch (FEAT_TRAINS, SELF, switch_cr200jc_if_middle_wagon_reversed, ((position_in_consist / 3) + 1) > (num_vehs_in_consist / 6)) {
+    1: spriteset_cr200jc_middle_reversed;
+    spriteset_cr200jc_middle;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jc_middle_wagon_reconect, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
+    0: switch_cr200jc_if_middle_wagon_reversed;
+    switch_cr200jc_cab_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jc_length_class, count_veh_id(9237)) {
+    0: spriteset_cr200jc_middle;
+    switch_cr200jc_middle_wagon_reconect;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jc_if_wagon_end, position_in_consist_from_end == 1) {
     1: spriteset_cr200jc_cab;
-    empty_sprites;
+    switch_cr200jc_length_class;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr200jc_wagon_graphics, position_in_consist_from_end) {
-    0..2: switch_cr200jc_cab_graphics;
-    switch_cr200jc_middle_graphics;
-}
+switch (FEAT_TRAINS, SELF, switch_cr200jc_wagon_graphics, (position_in_consist_from_end % 3) == 1) {
+    1: switch_cr200jc_if_wagon_end;
+    empty_sprites;
+} 
 
 switch (FEAT_TRAINS, SELF, switch_cr200jc_wagon_length, position_in_consist_from_end) {
     switch_length_2_8_2;
@@ -199,9 +244,24 @@ switch (FEAT_TRAINS, SELF, switch_cr200jc_cab_capacity, vehicle_type_id) {
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr200jc_wagon_capacity, position_in_consist_from_end) {
-    0..2: switch_cr200jc_cab_capacity;
-    switch_cr200jc_middle_capacity;
+switch (FEAT_TRAINS, SELF, switch_cr200jc_wagon_capacity_if_reconect_cab, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
+    0: switch_cr200jc_middle_capacity;
+    switch_cr200jc_cab_capacity;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jc_wagon_capacity_reconect, (position_in_consist < 3) || (position_in_consist_from_end < 3)) {
+    0: switch_cr200jc_wagon_capacity_if_reconect_cab;
+    switch_cr200jc_cab_capacity;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jc_wagon_capacity_single, (position_in_consist < 3) || (position_in_consist_from_end < 3)) {
+    0: switch_cr200jc_middle_capacity;
+    switch_cr200jc_cab_capacity;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jc_wagon_capacity, count_veh_id(9237)) {
+    0: switch_cr200jc_wagon_capacity_single;
+    switch_cr200jc_wagon_capacity_reconect;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jc_wagon_cost, vehicle_type_id) {
