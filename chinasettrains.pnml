@@ -342,6 +342,8 @@
 #include "src/25-emu/cr200jb_item.pnml"
 #include "src/25-emu/cr200jc_graphics.pnml"
 #include "src/25-emu/cr200jc_item.pnml"
+#include "src/25-emu/cr200jcl_graphics.pnml"
+#include "src/25-emu/cr200jcl_item.pnml"
 #include "src/25-emu/crh1a_graphics.pnml"
 #include "src/25-emu/crh1a_item.pnml"
 #include "src/25-emu/crh1e_graphics.pnml"
