@@ -373,7 +373,7 @@ STR_TZ_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {ORANGE}Orange 
 STR_KD25K_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}Only Guangzhou-Kowloon Sub-Livery available so far
 STR_25DT_JINLUN_LIVERY_AVAILABILITY :{BLACK}Livery Availability: {GOLD}Earlier Livery (Before 2010), Later Livery (After 2010)
-STR_YZ31_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Sanshui-Maoming Railway Livery
+STR_YZ31_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Sanshui-Maoming Railway Livery (unfinished)
 
 STR_G60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GRAY}Grey {GOLD}with Random-Colour Stripes (unfinished)
 STR_GN70_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished)
