@@ -192,6 +192,14 @@ switch (FEAT_TRAINS, SELF, crhwagonsleeper, vehicle_type_id) {
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
+switch (FEAT_TRAINS, SELF, crhsleeperonly, vehicle_type_id) {
+    1024: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1037: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1039: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
 switch (FEAT_TRAINS, SELF, crhwagonsleeperxl, vehicle_type_id) {
     1024..1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     1038..1040: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
@@ -233,6 +241,21 @@ switch (FEAT_TRAINS, SELF, singlemu, vehicle_type_id) {
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
+switch (FEAT_TRAINS, SELF, onlyzezy, vehicle_type_id) {
+    1024..1025: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, onlyze, vehicle_type_id) {
+    1024: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, onlycrh6aa, vehicle_type_id) {
+    9230: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
 switch (FEAT_TRAINS, SELF, locowagon, vehicle_type_id) {
     1024..1051: return CB_RESULT_ATTACH_DISALLOW;
     8192..14335: return CB_RESULT_ATTACH_DISALLOW;
@@ -248,6 +271,20 @@ switch (FEAT_TRAINS, SELF, switch_visual_effect_and_powered, ((position_in_artic
 // MUs need at least 4 cars to start
 switch (FEAT_TRAINS, SELF, mu4car, num_vehs_in_consist < 12) {
     1: return string(STR_TOO_SHORT);
+    return CB_RESULT_NO_TEXT;
+}
+
+// MUs need at least 4 and at most 24 cars to start
+
+switch (FEAT_TRAINS, SELF, mu4to24car, (num_vehs_in_consist < 12) || (num_vehs_in_consist > 72)) {
+    1: return string(STR_MUST_BE_4_TO_24_CARS);
+    return CB_RESULT_NO_TEXT;
+}
+
+// MUs need at least 8 and at most 24 cars to start
+
+switch (FEAT_TRAINS, SELF, mu8to24car, (num_vehs_in_consist < 12) || (num_vehs_in_consist > 72)) {
+    1: return string(STR_MUST_BE_8_TO_24_CARS);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -319,4 +356,12 @@ switch (FEAT_TRAINS, SELF, mu5to17car, num_vehs_in_consist) {
 switch (FEAT_TRAINS, SELF, too_many_graphics_12, position_in_articulated_veh % 3) {
     1: spriteset_too_many_12;
     empty_sprites;
+}
+
+//For JINLUN DMU
+switch (FEAT_TRAINS, SELF, switch_25dt_jinlun_cargo_subtype, cargo_subtype) {
+    0: return string(STR_BUILD_YEAR);
+    1: return string(STR_LATER);
+    2: return string(STR_EARLIER);
+    return CB_RESULT_NO_TEXT;
 }

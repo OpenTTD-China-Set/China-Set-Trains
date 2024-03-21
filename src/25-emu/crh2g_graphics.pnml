@@ -1,0 +1,181 @@
+// Begin CRH2G
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_crh2g_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_crh2g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-emu", "crh2g-c")
+}
+
+// Vehicle
+spriteset (spriteset_crh2g_front) {
+    template_empty ()
+}
+spriteset (spriteset_crh2g_middle_m) {
+    template_empty ()
+}
+spriteset (spriteset_crh2g_middle_p) {
+    template_empty ()
+}
+spriteset (spriteset_crh2g_cab) {
+    template_empty ()
+}
+
+alternative_sprites (spriteset_crh2g_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh2g-c")
+}
+alternative_sprites (spriteset_crh2g_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh2g-m")
+}
+alternative_sprites (spriteset_crh2g_middle_p, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh2g-p")
+}
+alternative_sprites (spriteset_crh2g_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh2g-c")
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_articulated_part, extra_callback_info1) {
+    1..2: return crh2g;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_crh2g_front;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_head_capacity, position_in_articulated_veh % 3) {
+    1: return 48;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_additional_text, param_cargo_decay) {
+    return string(STR_DESC_4, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH2G_NICKNAME), string(STR_RELIABILITY_12), string(STR_CRH2G_CONSIST), string(STR_CRH2G_HEAD_SEAT));
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_short_graphics, (position_in_consist_from_end == position_in_consist) || (position_in_consist_from_end == position_in_consist + 3)) {
+    1: spriteset_crh2g_middle_p;
+    spriteset_crh2g_middle_m;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_long_graphics, (position_in_consist_from_end == position_in_consist + 12) || (position_in_consist_from_end == position_in_consist + 15) || (position_in_consist_from_end + 12 == position_in_consist) || (position_in_consist_from_end + 15 == position_in_consist)) {
+    1: spriteset_crh2g_middle_p;
+    spriteset_crh2g_middle_m;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_middle_graphics_1, num_vehs_in_consist) {
+    0..24: switch_crh2g_short_graphics;
+    switch_crh2g_long_graphics;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_middle_graphics, position_in_articulated_veh % 3) {
+    1: switch_crh2g_middle_graphics_1;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_wagon_graphics, position_in_consist_from_end) {
+    1: spriteset_crh2g_cab;
+    switch_crh2g_middle_graphics;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_wagon_length, position_in_consist_from_end) {
+    switch_length_2_8_2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_middle_capacity_1, vehicle_type_id) {
+    1024: return 90;
+    1025: return 64;
+    1027: return 32;
+    1028: return 24;
+    1035: return 63;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_middle_capacity, position_in_articulated_veh % 3) {
+    1: switch_crh2g_middle_capacity_1;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_cab_capacity_1, vehicle_type_id) {
+    1024: return 65;
+    1025: return 48;
+    1027: return 20;
+    1028: return 15;
+    1035: return 38;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_cab_capacity, position_in_articulated_veh % 3) {
+    1: switch_crh2g_cab_capacity_1;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_wagon_capacity, position_in_consist_from_end) {
+    0..2: switch_crh2g_cab_capacity;
+    switch_crh2g_middle_capacity;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_wagon_cost_power, vehicle_type_id) {
+    1024: return 59;
+    1025: return 63;
+    1027: return 67;
+    1028: return 68;
+    1035: return 79;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_wagon_running_power, vehicle_type_id) {
+    1024: return 48;
+    1025: return 51;
+    1027: return 56;
+    1028: return 57;
+    1035: return 52;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_wagon_cost_unpower, vehicle_type_id) {
+    1024: return 20;
+    1025: return 24;
+    1027: return 28;
+    1028: return 29;
+    1035: return 40;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_wagon_running_unpower, vehicle_type_id) {
+    1024: return 8;
+    1025: return 12;
+    1027: return 16;
+    1028: return 17;
+    1035: return 12;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_wagon_cost, vehicle_is_potentially_powered) {
+    1: switch_crh2g_wagon_cost_power;
+    switch_crh2g_wagon_cost_unpower;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_wagon_running, vehicle_is_potentially_powered) {
+    1: switch_crh2g_wagon_running_power;
+    switch_crh2g_wagon_running_unpower;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_wagon_power, position_in_consist % 24) {
+    0..2: return 0;
+    3..8: return 1550;
+    9..11: return 0;
+    12..14: return 1550;
+    15..17: return 0;
+    18..20: return 1550;
+    21..23: return 0;
+    return 0;
+} // T-M-M-T-M-T-M-T (again, TMMTTMMT IRL)
+
+switch (FEAT_TRAINS, SELF, switch_crh2g_wagon_traction, vehicle_is_potentially_powered) {
+    1: return int(0.14*255);
+    return 0;
+}

@@ -28,6 +28,7 @@ switch (FEAT_TRAINS, SELF, switch_df4bk_graphics_subtype, cargo_subtype) {
     2: spriteset_df4_ukraine;
     3: spriteset_df4_jtzc;
     4: spriteset_df4b_dprk;
+    5: spriteset_df4b_jinwen;
     spriteset_df4b_orange;
 }
 
@@ -37,6 +38,7 @@ switch (FEAT_TRAINS, SELF, switch_df4bk_cargo_subtype, cargo_subtype) {
     2: return string(STR_UKRAINE);
     3: return string(STR_DF4_JTZC);
     4: return string(STR_DF4B_DPRK);
+    5: return string(STR_JINWEN);
     return CB_RESULT_NO_TEXT;
 }
 
