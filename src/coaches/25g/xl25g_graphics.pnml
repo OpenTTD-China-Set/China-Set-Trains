@@ -14,8 +14,14 @@ alternative_sprites(spriteset_xl25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEP
 spriteset (spriteset_xl25g_original) {
     template_empty ()
 }
+spriteset (spriteset_xl25g_jinwen) {
+    template_empty ()
+}
 alternative_sprites(spriteset_xl25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "xl25g")
+}
+alternative_sprites(spriteset_xl25g_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "xl25g-jinwen")
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25g_articulated_part, extra_callback_info1) {
@@ -23,9 +29,20 @@ switch (FEAT_TRAINS, SELF, switch_xl25g_articulated_part, extra_callback_info1) 
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+switch (FEAT_TRAINS, SELF, switch_xl25g_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_JINWEN);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25g_graphics_subtype, cargo_subtype) {
+    0: spriteset_xl25g_original;
+    1: spriteset_xl25g_jinwen;
+}
+
 switch (FEAT_TRAINS, SELF, switch_xl25g_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_xl25g_original;
-    empty_sprites;   
+    1: switch_xl25g_graphics_subtype;
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25g_capacity, position_in_articulated_veh % 3) {
