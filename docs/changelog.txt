@@ -5,6 +5,10 @@ China Set: Trains Changelog
 
 ## Initial-0-2 Updates
 
+0.2.1.153 (21/3/2024)
+--------------------
+Fix #41: It is probable to make locos of pushpull trains / Concentrated power MUs in the middle
+
 0.2.1.152 (20/3/2024)
 --------------------
 Add: NZJ2-Jinlun, 25DT-Jinlun (Single and double decker), NZJ1-Xinshuguang, DF, 6Y2, CRH380A, CRH380AL, CR400AF

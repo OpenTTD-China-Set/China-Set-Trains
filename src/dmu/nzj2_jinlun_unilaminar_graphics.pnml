@@ -24,15 +24,20 @@ alternative_sprites(spriteset_nzj2_jinlun_1_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPT
     template_standard ("dmu", "nzj2-jinlun-1-r")
 }
 
-switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_start_stop, (count_veh_id(8193) == 6) && ((num_vehs_in_vehid_chain != 6) ^ (num_vehs_in_consist == 6))) {
+switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_start_stop, !hasbit(bitmask_consist_info, 0) && (count_veh_id(8193) == 6) && ((num_vehs_in_vehid_chain != 6) ^ (num_vehs_in_consist == 6))) {
     0: return string(STR_JINLUN_LOCOMOTIVE_CONSIST);
     return CB_RESULT_NO_TEXT;
 }
 
-switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_can_attach_wagon, vehicle_type_id) {
+switch (FEAT_TRAINS, SELF, nzj2_jinlun_1_wagon_right_consist, vehicle_type_id) {
     8193: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     2119..2123: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_can_attach_wagon, hasbit(bitmask_consist_info, 0)) {
+    1: return CB_RESULT_ATTACH_DISALLOW;
+    nzj2_jinlun_1_wagon_right_consist;
 }
 
 switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_articulated_part, extra_callback_info1) {

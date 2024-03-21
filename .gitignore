@@ -2,4 +2,6 @@
 .vscode
 *.grf
 *.nml
+*.tar
+chinasettrains-*
 custom_tags.txt
