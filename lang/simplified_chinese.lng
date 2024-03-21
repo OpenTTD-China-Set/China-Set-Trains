@@ -90,6 +90,7 @@ STR_NAME_RZ25T          :RZ25T (客车)
 STR_NAME_YW25T          :YW25T (客车)
 STR_NAME_RW25T          :RW25T (客车)
 STR_NAME_CA25T          :CA25T (餐车)
+STR_NAME_YZ31           :YZ31 (客车)
 STR_NAME_XL22           :XL22 (行李车)
 STR_NAME_XL25B          :XL25B (行李车)
 STR_NAME_XL25G          :XL25G (行李车)
@@ -139,7 +140,7 @@ STR_NAME_DF4D3000       :DF4D-3000 (内燃)
 STR_NAME_DF4D4000       :DF4D-4000 (内燃)
 STR_NAME_DF4D7000       :DF4D-7000 (内燃)
 STR_NAME_DF4DF          :DF4DF (内燃)
-STR_NAME_DF5            :DF5 (内燃) (调车用)
+STR_NAME_DF5            :DF5-1000 (内燃) (调车用)
 STR_NAME_DF7G           :DF7G (内燃) (调车用)
 STR_NAME_DF7G5000       :DF7G-5000 (内燃) (调车用)
 STR_NAME_DF7G8000       :DF7G-8000 (内燃) (调车用)
@@ -261,6 +262,7 @@ STR_FULL_NAME_RZ25T          :{BLACK}全称：{GOLD}25米提速型软座客车
 STR_FULL_NAME_YW25T          :{BLACK}全称：{GOLD}25米提速型硬卧客车
 STR_FULL_NAME_RW25T          :{BLACK}全称：{GOLD}25米提速型软卧客车
 STR_FULL_NAME_CA25T          :{BLACK}全称：{GOLD}25米提速型餐车
+STR_FULL_NAME_YZ31           :{BLACK}全称：{GOLD}31型硬座客车
 STR_FULL_NAME_XL22           :{BLACK}全称：{GOLD}22型行李车
 STR_FULL_NAME_XL25B          :{BLACK}全称：{GOLD}25米标准型行李车
 STR_FULL_NAME_XL25G          :{BLACK}全称：{GOLD}25米改进型行李车
@@ -282,7 +284,7 @@ STR_FULL_NAME_SRZ25DT_JINLUN :{BLACK}全称：{GOLD}“金轮号”内燃动车�
 STR_FULL_NAME_DF             :{BLACK}全称：{GOLD}东风型内燃机车
 STR_FULL_NAME_DF4            :{BLACK}全称：{GOLD}东风4型内燃机车
 STR_FULL_NAME_DF4B           :{BLACK}全称：{GOLD}东风4B型内燃机车
-STR_FULL_NAME_DF5            :{BLACK}全称：{GOLD}东风5型内燃机车
+STR_FULL_NAME_DF5            :{BLACK}全称：{GOLD}东风5型内燃机车1000系
 STR_FULL_NAME_DF4C           :{BLACK}全称：{GOLD}东风4C型内燃机车
 STR_FULL_NAME_DF4D           :{BLACK}全称：{GOLD}东风4D型内燃机车
 STR_FULL_NAME_DF4D7000       :{BLACK}全称：{GOLD}东风4D型内燃机车7000系
@@ -320,7 +322,7 @@ STR_FR_IMPORT                :法国进口车型
 STR_XL25T_SSPE_DESCRIPTION          :{BLACK}新时速运递公司使用的XL25T版本。
 
 STR_DF_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GOLD}黄色{GREEN}窗线{BLACK}涂装, {WHITE}白色{GREEN}窗线{BLACK}涂装
-STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿色涂装{GOLD}，{ORANGE}橘色涂装{BLACK}，{BLUE}京铁{YELLOW}资产{GOLD}涂装，{BLUE}“乌克兰”{YELLOW}涂装，{BLACK}工人先锋号，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装
+STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿色涂装{GOLD}，{ORANGE}橘色涂装{BLACK}，{BLUE}京铁{YELLOW}资产{GOLD}涂装，{BLUE}“乌克兰”{YELLOW}涂装，{BLACK}工人先锋号，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}
 STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BROWN}原版{GOLD}涂装，{GREEN}西户铁路{GOLD}涂装，{PURPLE}秦皇岛地方铁路{BLACK}涂装
 STR_DF4C_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：原版涂装，{GREEN}绿色{GOLD}涂装, “乌克兰”{BLUE}蓝{YELLOW}黄{GOLD}涂装
 STR_DF4D4000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BLUE}“乌克兰”{YELLOW}涂装{GOLD}，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装，峰峰矿区涂装，工人先锋号挂牌
@@ -338,8 +340,8 @@ STR_CRH6A3_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{GOLD}京通
 STR_CRH6AA_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{GOLD}珠三角城际，广珠城际，成都天府号 (有/无绿色条带)
 STR_CRH6F_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{GOLD}珠三角城际，金山铁路，萧甬铁路
 
-STR_22_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，武汉铁路技术学院涂装，京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装 (仅XL22，UZ22)
-STR_22AIRCON_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{GOLD}京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装, 青龙湖号{BLUE}蓝色-{WHITE}-白色{GOLD}涂装（未完成）
+STR_22_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，武汉铁路技术学院涂装，龙庆峡号{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装、{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，广九直通车涂装 (仅XL22，UZ22)
+STR_22AIRCON_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{GOLD}京沪直达特快{CREAM}奶油色-{BROWN}-棕红色、{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，广九直通车涂装, 
 STR_22B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装
 STR_25B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{BLUE}集{RED}通{WHITE}铁{BLUE}路{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_RW25B_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
@@ -352,6 +354,7 @@ STR_KD25G_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{RED}红{WHI
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}青藏铁路{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装
 STR_XL25T_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}青藏铁路{GOLD}涂装 (未完成)，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_KD25T_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：仅有{DKGREEN}青藏铁路{GOLD}涂装
+STR_YZ31_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，三茂铁路涂装
 STR_19K_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{RED}红{WHITE}白{GOLD}相间涂装
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_25Z_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}西子号{WHITE}列车{GOLD}涂装，{LTBLUE}石秦{WHITE}特慢{GOLD}涂装, {BLUE}广深{RED}铁{WHITE}路{GOLD}涂装
@@ -497,6 +500,9 @@ STR_WRU                 : - 武汉铁路技术学院涂装
 STR_BEIJING2SHANGHAI    : - 北京至上海13/14次直快涂装
 STR_LATER               : - 后期涂装
 STR_EARLIER             : - 早期涂装
+STR_LONGQINGXIA         : - 龙庆峡号涂装
+STR_SANMAO              : - 三茂铁路涂装
+STR_BEIJING2SHANGHAIALT : - 北京至上海21/22次直快涂装
 
 STR_PROTOTYPE           : - 原型
 STR_JINGTONG            : - 京通号涂装
@@ -514,6 +520,7 @@ STR_XIAOYONG            : - 萧甬铁路涂装
 
 STR_JINLUN_25DT         :{BLUE}金{WHITE}轮{RED}号{GOLD}内燃动车组所使用的拖车
 
+STR_COMFORT_108         :{BLACK}舒适度：{GOLD}108
 STR_COMFORT_144         :{BLACK}舒适度：{GOLD}144
 STR_COMFORT_160         :{BLACK}舒适度：{GOLD}160
 STR_COMFORT_192         :{BLACK}舒适度：{GOLD}192

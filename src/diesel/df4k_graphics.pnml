@@ -42,6 +42,9 @@ spriteset (spriteset_df4b_dprk) {
 spriteset (spriteset_df4bh_worker_pioneer) {
     template_empty ()
 }
+spriteset (spriteset_df4b_jinwen) {
+    template_empty ()
+}
 alternative_sprites(spriteset_df4_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4")
 }
@@ -65,6 +68,9 @@ alternative_sprites(spriteset_df4b_dprk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 }
 alternative_sprites(spriteset_df4bh_worker_pioneer, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4bh-worker-pioneer")
+}
+alternative_sprites(spriteset_df4b_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4b-jinwen")
 }
 
 switch (FEAT_TRAINS, SELF, switch_df4k_articulated_part, extra_callback_info1) {

@@ -116,12 +116,14 @@ item (FEAT_TRAINS, rw22aircon, 2115) {}
 item (FEAT_TRAINS, ca23aircon, 2116) {}
 item (FEAT_TRAINS, ca23, 2117) {}
 item (FEAT_TRAINS, tz, 2118) {}
+
 // JinLun DMU Series code by Babel
 item (FEAT_TRAINS, yz25dt_jinlun, 2119) {}
 item (FEAT_TRAINS, yw25dt_jinlun, 2120) {}
 item (FEAT_TRAINS, rw25dt_jinlun, 2121) {}
 item (FEAT_TRAINS, syz25dt_jinlun, 2122) {}
 item (FEAT_TRAINS, srz25dt_jinlun, 2123) {}
+item (FEAT_TRAINS, yz31, 2124) {}
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 #define id_range_wagons 0x0C00..0x0FFF

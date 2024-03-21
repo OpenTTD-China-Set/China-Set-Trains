@@ -194,6 +194,9 @@
 #include "src/coaches/25dt/srz25dt_jinlun_graphics.pnml"
 #include "src/coaches/25dt/srz25dt_jinlun_item.pnml"
 
+#include "src/coaches/31/yz31_graphics.pnml"
+#include "src/coaches/31/yz31_item.pnml"
+
 // Wagons
 #include "src/wagons/c62_graphics.pnml"
 #include "src/wagons/c62_item.pnml"

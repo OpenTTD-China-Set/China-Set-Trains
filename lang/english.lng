@@ -81,6 +81,7 @@ STR_NAME_RZ25T          :RZ25T (Passenger Coach)
 STR_NAME_YW25T          :YW25T (Passenger Coach)
 STR_NAME_RW25T          :RW25T (Passenger Coach)
 STR_NAME_CA25T          :CA25T (Restaurant Car)
+STR_NAME_YZ31           :YZ31 (Passenger Coach)
 STR_NAME_XL22           :XL22 (Luggage Car)
 STR_NAME_XL25B          :XL25B (Luggage Car)
 STR_NAME_XL25G          :XL25G (Luggage Car)
@@ -138,7 +139,8 @@ STR_NAME_DF4DF          :DF4DF (Diesel)
 STR_NAME_DF4D3000       :DF4D-3000 (Diesel)
 STR_NAME_DF4D4000       :DF4D-4000 (Diesel)
 STR_NAME_DF4D7000       :DF4D-7000 (Diesel)
-STR_NAME_DF5            :DF5 (Diesel Shunter)
+STR_NAME_DF5KZ          :DF5 (Diesel Shunter)
+STR_NAME_DF5            :DF5-1000 (Diesel Shunter)
 STR_NAME_DF7G           :DF7G (Diesel Shunter)
 STR_NAME_DF7G5000       :DF7G-5000 (Diesel Shunter)
 STR_NAME_DF7G8000       :DF7G-8000 (Diesel Shunter)
@@ -248,6 +250,7 @@ STR_FULL_NAME_YZ25T          :{BLACK}Full Name: {GOLD}25m Accelerated Hard Seat 
 STR_FULL_NAME_RZ25T          :{BLACK}Full Name: {GOLD}25m Accelerated Soft Seat Passenger Coach
 STR_FULL_NAME_YW25T          :{BLACK}Full Name: {GOLD}25m Accelerated Hard Sleeper Passenger Coach
 STR_FULL_NAME_RW25T          :{BLACK}Full Name: {GOLD}25m Accelerated Soft Sleeper Passenger Coach
+STR_FULL_NAME_YZ31           :{BLACK}Full Name: {GOLD}31 Type Hard Seat Passenger Coach
 STR_FULL_NAME_CA25T          :{BLACK}Full Name: {GOLD}25m Accelerated Restaurant Car
 STR_FULL_NAME_XL22           :{BLACK}Full Name: {GOLD}22 Type Luggage Car
 STR_FULL_NAME_XL25B          :{BLACK}Full Name: {GOLD}25m Standard Luggage Car
@@ -282,7 +285,8 @@ STR_FULL_NAME_DF             :{BLACK}Full Name: {GOLD}Dongfeng Diesel Locomotive
 STR_FULL_NAME_DF4            :{BLACK}Full Name: {GOLD}Dongfeng 4 Diesel Locomotive
 STR_FULL_NAME_DF4B           :{BLACK}Full Name: {GOLD}Dongfeng 4B Diesel Locomotive
 STR_FULL_NAME_DF4C           :{BLACK}Full Name: {GOLD}Dongfeng 4C Diesel Locomotive
-STR_FULL_NAME_DF5            :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive
+STR_FULL_NAME_DF5KZ          :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive Series
+STR_FULL_NAME_DF5            :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive 1000 Series
 STR_FULL_NAME_DF4D           :{BLACK}Full Name: {GOLD}Dongfeng 4D Diesel Locomotive
 STR_FULL_NAME_DF4D7000       :{BLACK}Full Name: {GOLD}Dongfeng 4D Diesel Locomotive 7000 Series
 STR_FULL_NAME_DF4DF          :{BLACK}Full Name: {GOLD}Dongfeng 4DF Diesel Locomotive
@@ -325,7 +329,7 @@ STR_DESC_2                          :{STRING}{}{STRING}
 STR_XL25T_SSPE_DESCRIPTION          :{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.
 
 STR_DF_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Yellow {GREEN}Line {BLACK}Livery, {WHITE}White {GREEN}Line {BLACK}Livery
-STR_DF4_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea, DF4B only), Worker Pioneer Livery (DF4B only), {BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery
+STR_DF4_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea, DF4B only), Worker Pioneer Livery (DF4B only), {BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery, Jinhua-Wenzhou Livery (DF4B only)
 STR_DF4C_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: Original Livery, {GREEN}GREEN {GOLD}Livery, {BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery
 STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {BROWN}Original {GOLD}Livery, {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {GOLD}Railway Livery and {PURPLE}Qinhuangdao Local Railway {GOLD}Livery
 STR_DF4D4000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {BLUE}4000-{YELLOW}Series {GOLD}Livery and {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, Fengfeng Mine Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea), Worker Pioneer Livery
@@ -343,8 +347,8 @@ STR_CRH6A3_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}Beijing-T
 STR_CRH6AA_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}Pearl River Delta, Guangzhou-Zhuhai, Tianfu (A nickname of Chengdu, meaning "Paradise") (with or without green stripes)
 STR_CRH6F_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {GOLD}Pearl River Delta, Shanghai-Jinshan, Xiaoshan/Hangzhou-Ningbo
 
-STR_22_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Wuhan Railway Vocational College Livery, Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery (XL22, UZ22)
-STR_22AIRCON_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {GOLD}Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery, {BLUE}"Qinglonghu"{GOLD} Livery (unfinished)
+STR_22_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Wuhan Railway Vocational College Livery, Sanshui-Maoming Livery (unfinish), "Longqingxia" Livery (unfinish), Beijing-Shanghai Direct Express Livery (XL22, UZ22), Guangzhou-Hongkong Livery (XL22, UZ22) (unfinish)
+STR_22AIRCON_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {GOLD}Beijing-Shanghai Direct Express Livery, Guangzhou-Hongkong Livery (unfinish)
 STR_22B_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery
 STR_25B_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_RW25B_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
@@ -369,6 +373,7 @@ STR_TZ_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {ORANGE}Orange 
 STR_KD25K_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}Only Guangzhou-Kowloon Sub-Livery available so far
 STR_25DT_JINLUN_LIVERY_AVAILABILITY :{BLACK}Livery Availability: {GOLD}Earlier Livery (Before 2010), Later Livery (After 2010)
+STR_YZ31_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Sanshui-Maoming Railway Livery
 
 STR_G60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GRAY}Grey {GOLD}with Random-Colour Stripes (unfinished)
 STR_GN70_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished)
@@ -499,9 +504,12 @@ STR_JINWEN              : - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLA
 STR_GAOZU_GREEN         : - {DKGREEN}"Gaozu Green" {BLACK}(unfinished except 25T)
 STR_BEIJING             : - Beijing Railway Bureau
 STR_WRU                 : - Wuhan Railway Vocational College of Technology Livery
-STR_BEIJING2SHANGHAI    : - Beijing-Shanghai Express Train Livery
+STR_BEIJING2SHANGHAI    : - Beijing-Shanghai Express Train Livery {CREAM}Cream-{BROWN}-Brown
 STR_LATER               : - Later Livery
 STR_EARLIER             : - Earlier Livery
+STR_LONGQINGXIA         : - "Longqingxia" Livery
+STR_SANMAO              : - Sanshui-Maoming Railway Livery
+STR_BEIJING2SHANGHAIALT : - Beijing-Shanghai Express Train Livery {BLUE}Blue-{WHITE}-White
 
 STR_PROTOTYPE           : - Prototype
 STR_JINGTONG            : - Beijing-Tongzhou Livery
@@ -519,6 +527,7 @@ STR_XIAOYONG            : - Xiaoshan/Hangzhou-Ningbo Livery
 
 STR_JINLUN_25DT         :Coaches use for DMU {BLUE}"JIN{WHITE}LUN"
 
+STR_COMFORT_108         :{BLACK}Comfort: {GOLD}108
 STR_COMFORT_144         :{BLACK}Comfort: {GOLD}144
 STR_COMFORT_160         :{BLACK}Comfort: {GOLD}160
 STR_COMFORT_192         :{BLACK}Comfort: {GOLD}192
