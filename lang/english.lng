@@ -614,7 +614,7 @@ STR_CR400AF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CR400BF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH6A2_HEAD_SEAT                :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH6A3_HEAD_SEAT                :{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places, Comfort: 160
-STR_CRH6F_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places (crowded), Comfort: 120
+STR_CRH6F_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places (crowded), Comfort: 140
 
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}Electricity Supply for cars: {GOLD}YES
 STR_ELECTRICITY_SUPPLY_NO           :{BLACK}Electricity Supply for cars: {RED}NO

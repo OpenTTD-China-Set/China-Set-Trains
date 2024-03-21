@@ -178,7 +178,7 @@ STR_NAME_CR200JA        :CR200J-A (电力动车)
 STR_NAME_CR200JAL       :CR200J-A (长编组) (电力动车)
 STR_NAME_CR200JB        :CR200J-B (电力动车)
 STR_NAME_CR200JC        :CR200J-C (电力动车)
-STR_NAME_CR200JC        :CR200J-C (长编组) (电力动车)
+STR_NAME_CR200JCL       :CR200J-C (长编组) (电力动车)
 STR_NAME_CRH1A          :CRH1A (电力动车)
 STR_NAME_CRH2A          :CRH2A (电力动车)
 STR_NAME_CRH3A          :CRH3A (电力动车)
@@ -609,7 +609,7 @@ STR_CR400BF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 STR_CR400AF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 STR_CRH6A2_HEAD_SEAT                :{BLACK}头车座席：{GOLD}一等座
 STR_CRH6A3_HEAD_SEAT                :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席，舒适度：160
-STR_CRH6F_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：120
+STR_CRH6F_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：140
 
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}机供：{GOLD}是
 STR_ELECTRICITY_SUPPLY_NO           :{BLACK}机供：{RED}否

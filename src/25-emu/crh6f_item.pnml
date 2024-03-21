@@ -55,7 +55,7 @@ item (FEAT_TRAINS, crh6f) {
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.2*255);
         cargo_capacity:                 switch_crh6f_head_capacity;
-        cargo_age_period:               120 << param_cargo_decay;
+        cargo_age_period:               140 << param_cargo_decay;
         cost_factor:                    65;
         running_cost_factor:            50 * runningcostfactor() + 20;
         purchase_running_cost_factor:   220;
