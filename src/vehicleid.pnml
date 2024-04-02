@@ -144,7 +144,8 @@ item (FEAT_TRAINS, b22, 3085) {}
 item (FEAT_TRAINS, l70, 3086) {}
 // 3087 coded by wuwu
 item (FEAT_TRAINS, nx70a, 3087) {}
-
+//
+item (FEAT_TRAINS, g50, 3088) {}
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
 

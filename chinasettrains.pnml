@@ -230,6 +230,8 @@
 #include "src/wagons/b22_item.pnml"
 #include "src/wagons/l70_graphics.pnml"
 #include "src/wagons/l70_item.pnml"
+#include "src/wagons/g50_graphics.pnml"
+#include "src/wagons/g50_item.pnml"
 
 // Another Function File
 #include "src/function2.pnml"
