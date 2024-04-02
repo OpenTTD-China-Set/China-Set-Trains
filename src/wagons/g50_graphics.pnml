@@ -1,0 +1,38 @@
+// Begin G50
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_g50_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_g50_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "g50")
+}
+
+// Vehicle
+spriteset (spriteset_g50) {
+    template_empty ()
+}
+alternative_sprites(spriteset_g50, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "g50")
+}
+
+switch (FEAT_TRAINS, SELF, switch_g50_articulated_part, extra_callback_info1) {
+    1..2: return g50;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_g50_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_g50;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_g50_capacity, position_in_articulated_veh % 3) {
+    1: return 50;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_g50_additional_text, param_cargo_decay) {
+    return string(STR_DESC_2, string(STR_DECAY_185));
+}
