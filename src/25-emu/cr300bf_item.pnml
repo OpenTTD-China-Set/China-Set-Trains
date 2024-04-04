@@ -1,0 +1,139 @@
+item (FEAT_TRAINS, cr300bf) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CR300BF);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2010,09,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   35;
+        track_type:                     SAAA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 48;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               400 << param_cargo_decay;
+
+        // Stats
+        speed:                          250 km/h;
+        power:                          1365 kW;
+        weight:                         54 ton;
+        tractive_effort_coefficient:    0.134;
+        cost_factor:                    71;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            56;
+        reliability_decay:              8;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_cr300bf_additional_text;
+        can_attach_wagon:               crhwagon;
+        start_stop:                     mu4to24car;
+
+        // Graphics
+        default:                        switch_cr300bf_front_graphics;
+        purchase:                       spriteset_cr300bf_purchase_original;
+        articulated_part:               switch_cr300bf_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        speed:                          250;
+        power:                          return 0;
+        purchase_power:                 return 1856; // HP
+        tractive_effort_coefficient:    return 0;
+        purchase_tractive_effort_coefficient: return int(0.134*255);
+        cargo_capacity:                 switch_cr300bf_head_capacity;
+        cargo_age_period:               20 * 5 * cafedecayfactor() << param_cargo_decay;
+        cost_factor:                    61;
+        running_cost_factor:            56 * runningcostfactor() * cafecostfactor() + 20;
+        purchase_running_cost_factor:   244;
+        purchase_cargo_capacity:        48/3;
+    }
+
+    // Multiple Unit Wagons
+    livery_override(zemuw) {
+        default:                        switch_cr300bf_wagon_graphics;
+        cargo_capacity:                 switch_cr300bf_wagon_capacity;
+        power:                          switch_cr300bf_wagon_power;
+        tractive_effort_coefficient:    switch_cr300bf_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         54;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    switch_cr300bf_wagon_cost;
+        running_cost_factor:            (switch_cr300bf_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(zymuw) {
+        default:                        switch_cr300bf_wagon_graphics;
+        cargo_capacity:                 switch_cr300bf_wagon_capacity;
+        power:                          switch_cr300bf_wagon_power;
+        tractive_effort_coefficient:    switch_cr300bf_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         54;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    switch_cr300bf_wagon_cost;
+        running_cost_factor:            (switch_cr300bf_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(zsmuw) {
+        default:                        switch_cr300bf_wagon_graphics;
+        cargo_capacity:                 switch_cr300bf_wagon_capacity;
+        power:                          switch_cr300bf_wagon_power;
+        tractive_effort_coefficient:    switch_cr300bf_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         54;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    switch_cr300bf_wagon_cost;
+        running_cost_factor:            (switch_cr300bf_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(swmuw) {
+        default:                        switch_cr300bf_wagon_graphics;
+        cargo_capacity:                 switch_cr300bf_wagon_capacity;
+        power:                          switch_cr300bf_wagon_power;
+        tractive_effort_coefficient:    switch_cr300bf_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         54;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    switch_cr300bf_wagon_cost;
+        running_cost_factor:            (switch_cr300bf_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(zecmuw) {
+        default:                        switch_cr300bf_wagon_graphics;
+        cargo_capacity:                 switch_cr300bf_wagon_capacity;
+        power:                          switch_cr300bf_wagon_power;
+        tractive_effort_coefficient:    switch_cr300bf_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         54;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    switch_cr300bf_wagon_cost;
+        running_cost_factor:            (switch_cr300bf_wagon_running() + crhspeedcost()) * runningcostfactor() + 50 + accostfactor(); // IT IS A RESTAURANT CAR!
+    }
+}
+
+// End CR300BF
+

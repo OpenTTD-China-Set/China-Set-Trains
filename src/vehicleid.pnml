@@ -144,7 +144,7 @@ item (FEAT_TRAINS, b22, 3085) {}
 item (FEAT_TRAINS, l70, 3086) {}
 // 3087 coded by wuwu
 item (FEAT_TRAINS, nx70a, 3087) {}
-//
+// 3088 coded by babel
 item (FEAT_TRAINS, g50, 3088) {}
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
@@ -238,6 +238,7 @@ item (FEAT_TRAINS, crh380a, 9236) {}
 item (FEAT_TRAINS, cr200jc, 9237) {}
 item (FEAT_TRAINS, crh380al, 9238) {}
 item (FEAT_TRAINS, cr200jcl, 9239) {}
+item (FEAT_TRAINS, cr300bf, 9240) {}
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
 #define id_range_1500_emu 0x2800..0x2BFF

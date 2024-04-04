@@ -199,6 +199,7 @@ STR_NAME_CRH6F          :CRH6F (电力动车)
 STR_NAME_CRH1E          :CRH1E (电力动车)
 STR_NAME_CRH380CL       :CRH380CL (电力动车)
 STR_NAME_CRH2G          :CRH2G (电力动车)
+STR_NAME_CR300BF        :CR300BF (电力动车)
 
 STR_NAME_ZEMUW          :动车组二等座车厢
 STR_NAME_ZYMUW          :动车组一等座车厢
@@ -412,7 +413,7 @@ STR_HXD1D_NICKNAME                  :{BLACK}昵称: {GOLD}红枣
 STR_HXD3C_NICKNAME                  :{BLACK}昵称: {GOLD}电狒狒
 STR_HXD3D_NICKNAME                  :{BLACK}昵称: {GOLD}番茄
 STR_NDJ3_NICKNAME                   :{BLACK}昵称：{WHITE}大白猪
-STR_CR200J_NICKNAME                 :{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方), {GREEN}“垃圾桶”{GOLD}(民间)
+STR_CR200J_NICKNAME                 :{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方),，{GREEN}“垃圾桶”{GOLD}(民间)
 STR_CR200JC_NICKNAME                :{BLACK}昵称：{RED}“A{WHITE}D{GREEN}桶”{GOLD}(民间)
 STR_CRH1A_NICKNAME                  :{BLACK}昵称：{GOLD}地铁
 STR_CRH1E_NICKNAME                  :{BLACK}昵称：{GOLD}睡地铁
@@ -428,6 +429,7 @@ STR_CRH380B_NICKNAME                :{BLACK}昵称：{GOLD}疯兔子
 STR_CRH380CL_NICKNAME               :{BLACK}昵称：{GOLD}大鲨鱼
 STR_CR400AF_NICKNAME                :{BLACK}昵称：{GOLD}红神龙
 STR_CR400BF_NICKNAME                :{BLACK}昵称：{GOLD}金凤凰
+STR_CR300BF_NICKNAME                :{BLACK}昵称：{LTBLUE}“蓝暖男”{GOLD}(官方),，{LTBLUE}“僵尸蓝”{GOLD}(民间)
 
 STR_ALIASNAME_DF                    :{BLACK}别名: {GOLD}巨龙，ND
 
@@ -601,6 +603,7 @@ STR_CRH6A2_CONSIST                  :{BLACK}构成：{GOLD}至少4节，其中8�
 STR_CRH6A3_CONSIST                  :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
 STR_CRH6AA_CONSIST                  :{BLACK}构成：{GOLD}4节固定编组 (Mc-Tp-Tp-Mc)，可重联
 STR_CRH6F_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
+STR_CR300BF_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾拖车，中间全为动力车。大于12节时以重联方式运行。
 
 STR_CRH1A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CRH1E_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
@@ -618,6 +621,7 @@ STR_CR400AF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 STR_CRH6A2_HEAD_SEAT                :{BLACK}头车座席：{GOLD}一等座
 STR_CRH6A3_HEAD_SEAT                :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席，舒适度：160
 STR_CRH6F_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：140
+STR_CR300BF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}机供：{GOLD}是
 STR_ELECTRICITY_SUPPLY_NO           :{BLACK}机供：{RED}否
