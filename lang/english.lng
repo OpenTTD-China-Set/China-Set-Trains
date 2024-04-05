@@ -199,6 +199,7 @@ STR_NAME_CRH6F          :CRH6F (EMU)
 STR_NAME_CRH1E          :CRH1E (EMU)
 STR_NAME_CRH380CL       :CRH380CL (EMU)
 STR_NAME_CRH2G          :CRH2G (EMU)
+STR_NAME_CR300BF        :CR300BF (EMU)
 
 STR_NAME_ZEMUW          :2nd-Class (ZE) MU Wagon
 STR_NAME_ZYMUW          :1st-Class (ZY) MU Wagon
@@ -435,6 +436,7 @@ STR_CRH380B_NICKNAME                :{BLACK}Nickname: {GOLD}Crazy Rabbit
 STR_CRH380CL_NICKNAME               :{BLACK}Nickname: {GOLD}Shark
 STR_CR400AF_NICKNAME                :{BLACK}Nickname: {GOLD}Red Loong
 STR_CR400BF_NICKNAME                :{BLACK}Nickname: {GOLD}Golden Phoenix
+STR_CR300BF_NICKNAME                :{BLACK}Nickname: {LTBLUE}"Blue Antidote" {GOLD}(Official), {LTBLUE}"Zoombie Blue" {GOLD}(Folk)
 
 STR_ALIASNAME_DF                    :{BLACK}Alias Name: {GOLD}Great Loong
 
@@ -608,6 +610,7 @@ STR_CRH6A2_CONSIST                  :{BLACK}Consist: {GOLD}At least 4 cars, with
 STR_CRH6A3_CONSIST                  :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
 STR_CRH6AA_CONSIST                  :{BLACK}Consist: {GOLD}Fixed consist of 4 cars (Mc-Tp-Tp-Mc), multiple sections available
 STR_CRH6F_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
+STR_CR300BF_CONSIST                 :{BLACK}Consist: {GOLD}At least 4 cars, with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12
 
 STR_CRH1A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH1E_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
@@ -625,6 +628,7 @@ STR_CR400BF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH6A2_HEAD_SEAT                :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH6A3_HEAD_SEAT                :{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places, Comfort: 160
 STR_CRH6F_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places (crowded), Comfort: 140
+STR_CR300BF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}Electricity Supply for cars: {GOLD}YES
 STR_ELECTRICITY_SUPPLY_NO           :{BLACK}Electricity Supply for cars: {RED}NO
