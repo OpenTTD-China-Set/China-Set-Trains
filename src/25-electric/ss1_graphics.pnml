@@ -1,0 +1,54 @@
+// Begin SS1
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_ss1_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_ss1_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-electric", "ss1")
+}
+
+// Vehicle
+spriteset (spriteset_ss1) {
+    template_empty ()
+}
+alternative_sprites(spriteset_ss1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss1")
+}
+//spriteset (spriteset_ss1_alternative) {
+//    template_empty ()
+//}
+//alternative_sprites(spriteset_ss1_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+//    template_standard ("25-electric", "ss1-alternative")
+//}
+
+switch (FEAT_TRAINS, SELF, switch_ss1_articulated_part, extra_callback_info1) {
+    1..2: return ss1;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss1_graphics_subtype, cargo_subtype) {
+//    1: spriteset_ss1_late;
+    spriteset_ss1;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss1_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+//    1: return string(STR_ALTERNATIVE);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss1_graphics, position_in_articulated_veh % 3) {
+    1: switch_ss1_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss1_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss1_additional_text, param_cargo_decay) {
+    return string(STR_DESC_4, string(STR_FULL_NAME_SS1), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_SS1_NICKNAME), string(STR_RELIABILITY_20));
+}

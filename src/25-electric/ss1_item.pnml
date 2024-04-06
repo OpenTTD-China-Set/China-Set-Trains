@@ -1,0 +1,61 @@
+item (FEAT_TRAINS, ss1) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_SS1);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1958,01,01);
+        model_life:                     60;
+        retire_early:                   30;
+        vehicle_life:                   30;
+        track_type:                     SACA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          90 km/h;
+        power:                          3900 kW;
+        weight:                         138 ton;
+        tractive_effort_coefficient:    0.360;
+        cost_factor:                    83;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            72;
+        reliability_decay:              20;
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_ss1_additional_text;
+        cargo_subtype_text:             switch_ss1_cargo_subtype;
+        can_attach_wagon:               locowagon;
+        // Graphics
+        default:                        switch_ss1_graphics;
+        purchase:                       spriteset_ss1_purchase_original;
+        articulated_part:               switch_ss1_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_6_2;
+        cargo_capacity:                 0;
+        cost_factor:                    72;
+        running_cost_factor:            65 * runningcostfactor();
+        purchase_running_cost_factor:   260;
+        purchase_cargo_capacity:        0;
+        bitmask_vehicle_info:           0;
+    }
+}
+
+// End SS1
+
