@@ -1,0 +1,59 @@
+item (FEAT_TRAINS, df11z) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_DF11Z);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2002,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          160 km/h;
+        power:                          7200 kW;
+        weight:                         291 ton;
+        tractive_effort_coefficient:    0.172;
+        cost_factor:                    127;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            104;
+        reliability_decay:              14;
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_df11z_additional_text;
+        can_attach_wagon:               locowagon;
+        // Graphics
+        default:                        switch_df11z_graphics;
+        purchase:                       spriteset_df11z_purchase_original;
+        articulated_part:               switch_df11z_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_6_2;
+        cargo_capacity:                 0;
+        cost_factor:                    135;
+        running_cost_factor:            100 * runningcostfactor();
+        purchase_running_cost_factor:   400;
+        purchase_cargo_capacity:        0;
+        bitmask_vehicle_info:           0;
+    }
+}
+
+// End DF11Z
+

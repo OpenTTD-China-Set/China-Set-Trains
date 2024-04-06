@@ -12,6 +12,7 @@ switch (FEAT_TRAINS, SELF, switch_df4h_graphics_subtype, cargo_subtype) {
     2: spriteset_df4b_green;
     3: spriteset_df4_ukraine;
     4: spriteset_df4_jtzc;
+    5: spriteset_df4_nenhei_railway;
     spriteset_df4_green;
 }
 
@@ -21,6 +22,7 @@ switch (FEAT_TRAINS, SELF, switch_df4h_cargo_subtype, cargo_subtype) {
     2: return string(STR_LATER_GREEN);
     3: return string(STR_UKRAINE);
     4: return string(STR_DF4_JTZC);
+    5: return string(STR_NENHEI);
     return CB_RESULT_NO_TEXT;
 }
 
