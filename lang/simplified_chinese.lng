@@ -135,12 +135,15 @@ STR_NAME_DF4K           :DF4 (内燃) (客运型)
 STR_NAME_DF4H           :DF4 (内燃) (货运型)
 STR_NAME_DF4BK          :DF4B (内燃) (客运型)
 STR_NAME_DF4BH          :DF4B (内燃) (货运型)
+STR_NAME_DF4BNB         :DF4B (内燃) (新头型)
 STR_NAME_DF4C           :DF4C (内燃)
 STR_NAME_DF4D0000       :DF4D-0000 (内燃)
 STR_NAME_DF4D3000       :DF4D-3000 (内燃)
 STR_NAME_DF4D4000       :DF4D-4000 (内燃)
 STR_NAME_DF4D7000       :DF4D-7000 (内燃)
 STR_NAME_DF4DF          :DF4DF (内燃)
+STR_NAME_DF4E           :DF4E (内燃)
+STR_NAME_DF5KZ          :DF5 (内燃) (调车用)
 STR_NAME_DF5            :DF5-1000 (内燃) (调车用)
 STR_NAME_DF7G           :DF7G (内燃) (调车用)
 STR_NAME_DF7G5000       :DF7G-5000 (内燃) (调车用)
@@ -150,8 +153,10 @@ STR_NAME_DFH7B          :DFH7B (内燃) (调车用)
 STR_NAME_DF8B           :DF8B (内燃)
 STR_NAME_DF11           :DF11 (内燃)
 STR_NAME_DF11G          :DF11G (内燃)
+STR_NAME_DF11Z          :DF11Z (内燃)
 STR_NAME_NJ2            :NJ2 (内燃)
 STR_NAME_HXN5B          :HXN5B (内燃)
+STR_NAME_SS1            :SS1 (电力)
 STR_NAME_SS3            :SS3 (电力)
 STR_NAME_SS3B           :SS3B (电力)
 STR_NAME_SS4            :SS4 (电力)
@@ -166,8 +171,10 @@ STR_NAME_SS7E           :SS7E (电力)
 STR_NAME_SS8            :SS8 (电力)
 STR_NAME_6Y2            :6Y2 (电力)
 STR_NAME_HXD1           :HXD1 (电力)
+STR_NAME_HXD11000       :HXD11000 (电力)
 STR_NAME_HXD1B          :HXD1B (电力)
 STR_NAME_HXD1D          :HXD1D (电力)
+STR_NAME_HXD1F          :HXD1F/FXD1B (电力)
 STR_NAME_HXD3C          :HXD3C (电力)
 STR_NAME_HXD3D          :HXD3D (电力)
 
@@ -299,7 +306,9 @@ STR_FULL_NAME_DFH7B          :{BLACK}全称：{GOLD}东方红7B型内燃机车
 STR_FULL_NAME_DF8B           :{BLACK}全称：{GOLD}东风8B型内燃机车
 STR_FULL_NAME_DF11           :{BLACK}全称：{GOLD}东风11型内燃机车
 STR_FULL_NAME_DF11G          :{BLACK}全称：{BLUE}东风11G型{WHITE}内燃机车
+STR_FULL_NAME_DF11Z          :{BLACK}全称：{GOLD}东风11Z型内燃机车
 STR_FULL_NAME_HXN5B          :{BLACK}全称：{GOLD}和谐内5B型内燃机车
+STR_FULL_NAME_SS1            :{BLACK}全称：{GOLD}韶山1型电力机车,1968年前曾命名为6Y1型电力机车
 STR_FULL_NAME_SS3            :{BLACK}全称：{GOLD}韶山3型电力机车
 STR_FULL_NAME_SS3B           :{BLACK}全称：{GOLD}韶山3B型电力机车
 STR_FULL_NAME_SS4            :{BLACK}全称：{GOLD}韶山4型电力机车
@@ -313,8 +322,10 @@ STR_FULL_NAME_SS7C           :{BLACK}全称：{GOLD}韶山7C型电力机车
 STR_FULL_NAME_SS7E           :{BLACK}全称：{GOLD}韶山7E型电力机车
 STR_FULL_NAME_SS8            :{BLACK}全称：{GOLD}韶山8型电力机车
 STR_FULL_NAME_HXD1           :{BLACK}全称：{GOLD}和谐1型电力机车
+STR_FULL_NAME_HXD11000       :{BLACK}全称：{GOLD}和谐1型电力机车1000系
 STR_FULL_NAME_HXD1B          :{BLACK}全称：{GOLD}和谐1B型电力机车
 STR_FULL_NAME_HXD1D          :{BLACK}全称：{GOLD}和谐1D型电力机车
+STR_FULL_NAME_HXD1F          :{BLACK}全称：{GOLD}和谐1F型电力机车,2018年改名为复兴电1B型电力机车
 STR_FULL_NAME_HXD3C          :{BLACK}全称：{GOLD}和谐3C型电力机车
 STR_FULL_NAME_HXD3D          :{BLACK}全称：{GOLD}和谐3D型电力机车
 
@@ -395,6 +406,7 @@ STR_DF8B_NICKNAME                   :{BLACK}昵称: {GOLD}芭比
 STR_DF11_NICKNAME                   :{BLACK}昵称: {GOLD}狮子
 STR_DF11G_NICKNAME                  :{BLACK}昵称: {GOLD}猪
 STR_HXN5B_NICKNAME                  :{BLACK}昵称: {GOLD}番茄炒蛋
+STR_SS1_NICKNAME                    :{BLACK}昵称: {BLUE}芍药
 STR_SS3_NICKNAME                    :{BLACK}昵称: {GOLD}三哥 (前期), 三爷 (老化后)
 STR_SS3B_NICKNAME                   :{BLACK}昵称: {GOLD}蓝鸟，大蓝鸟
 STR_SS4_NICKNAME                    :{BLACK}昵称: {BLUE}宝鸡蓝
@@ -453,9 +465,11 @@ STR_350_AVAILABLE       :可改装为最高速度 350 km/h，运营费用增加
 STR_350_380_AVAILABLE   :可改装为最高速度 350 或 380 km/h，运营费用增加
 
 STR_ORIGINAL            : - 原版涂装
+STR_REVERSE             : └ 翻转的涂装
 STR_ORANGE              :{ORANGE} - 橘色涂装
 STR_LATER_ORANGE        :{ORANGE} - 后期橘色涂装
 STR_GREEN               :{GREEN} - 绿色涂装
+STR_RED                 :{RED} - 红色涂装
 STR_LATER_GREEN         :{GREEN} - 后期绿色涂装
 STR_XIHU                : - {GREEN}西户铁路{BLACK}涂装
 STR_XIHU_REVERSE        : - {GREEN}西户铁路{BLACK}涂装，倒转方向
@@ -477,6 +491,21 @@ STR_DF_YELLOW           : - {GOLD}黄色{GREEN}窗线{BLACK}涂装
 STR_DF_WHITE            : - {WHITE}白色{GREEN}窗线{BLACK}涂装
 STR_6Y2_FACTORY         : - {BLUE}出厂{BLACK}涂装
 STR_6Y2_LATE            : - {GREEN}晚期{BLACK}涂装
+STR_NENHEI              : - {GOLD}嫩黑铁路涂装
+STR_SHENHUA             : - {GOLD}神华集团涂装
+STR_GUONENG             : - {GOLD}国家能源集团涂装
+STR_TAOWEI              : - {GOLD}桃威铁路涂装
+STR_CHUNLUO             : - {GOLD}春罗铁路涂装
+STR_GUANGXIYANHAI       : - {GOLD}广西沿海铁路涂装
+STR_XIANGDAO            : - {GOLD}象道集团涂装
+STR_XINCHANG            : - {GOLD}新长铁路涂装
+STR_STECOL              : - {GOLD}中国电建市政集团涂装
+STR_CHN2LAOS            : - {GOLD}中老铁路涂装
+STR_TIEFA               : - {GOLD}铁法能源涂装
+STR_WUJING              : - {GOLD}“武警”涂装
+STR_DF43110             : - {GOLD}系大{RED}红{GOLD}花的DF43110号机车
+STR_DONGBEI             : - {GOLD}东北地区适用过的涂装
+STR_MZD                 : - {GOLD}丰台机务段“学习毛泽东号模范机车组”
 
 STR_BUILD_YEAR          : - 根据建造年份选择设计
 STR_YW22_ORIGINAL       : - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
