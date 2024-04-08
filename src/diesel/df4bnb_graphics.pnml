@@ -1,0 +1,78 @@
+// Begin DF4BNB
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_df4bnb_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_df4bnb_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "df4bnb")
+}
+
+// Vehicle
+spriteset (spriteset_df4bnb) {
+    template_empty ()
+}
+spriteset (spriteset_df4bnb_reverse) {
+    template_empty ()
+}
+spriteset (spriteset_df4bnb_green) {
+    template_empty ()
+}
+spriteset (spriteset_df4bnb_ukraine) {
+    template_empty ()
+}
+spriteset (spriteset_df4bnb_wujing) {
+    template_empty ()
+}
+alternative_sprites(spriteset_df4bnb, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4bnb")
+}
+alternative_sprites(spriteset_df4bnb_reverse, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4bnb-reverse")
+}
+alternative_sprites(spriteset_df4bnb_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4bnb-green")
+}
+alternative_sprites(spriteset_df4bnb_ukraine, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4bnb-ukraine")
+}
+alternative_sprites(spriteset_df4bnb_wujing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4bnb-wujing")
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4bnb_articulated_part, extra_callback_info1) {
+    1..2: return df4bnb;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4bnb_graphics_subtype, cargo_subtype) {
+    1: spriteset_df4bnb_reverse;
+    2: spriteset_df4bnb_green;
+    3: spriteset_df4bnb_ukraine;
+    4: spriteset_df4bnb_wujing;
+    spriteset_df4bnb;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4bnb_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_REVERSE);
+    2: return string(STR_GREEN);
+    3: return string(STR_UKRAINE);
+    4: return string(STR_WUJING);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4bnb_graphics, position_in_articulated_veh % 3) {
+    1: switch_df4bnb_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4bnb_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4bnb_additional_text, param_cargo_decay) {
+    return string(STR_DESC_5, string(STR_FULL_NAME_DF4B), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF4_LIVERY_AVAILABILITY), string(STR_DF4B_NICKNAME), string(STR_RELIABILITY_14));
+}

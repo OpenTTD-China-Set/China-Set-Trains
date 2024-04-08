@@ -29,6 +29,11 @@ switch (FEAT_TRAINS, SELF, switch_df4bk_graphics_subtype, cargo_subtype) {
     3: spriteset_df4_jtzc;
     4: spriteset_df4b_dprk;
     5: spriteset_df4b_jinwen;
+    6: spriteset_df4_nenhei_railway;
+    7: spriteset_df4b_shenhua;
+    8: spriteset_df4b_guoneng;
+    9: spriteset_df4bk_taowei_railway;
+    10: spriteset_df4bk_aging;
     spriteset_df4b_orange;
 }
 
@@ -39,6 +44,11 @@ switch (FEAT_TRAINS, SELF, switch_df4bk_cargo_subtype, cargo_subtype) {
     3: return string(STR_DF4_JTZC);
     4: return string(STR_DF4B_DPRK);
     5: return string(STR_JINWEN);
+    6: return string(STR_NENHEI);
+    7: return string(STR_SHENHUA);
+    8: return string(STR_GUONENG);
+    9: return string(STR_TAOWEI);
+    10: return string(STR_DETERIORATE);
     return CB_RESULT_NO_TEXT;
 }
 

@@ -22,6 +22,19 @@ switch (FEAT_TRAINS, SELF, switch_df4bh_graphics_subtype, cargo_subtype) {
     4: spriteset_df4b_dprk;
     5: spriteset_df4bh_worker_pioneer;
     6: spriteset_df4b_jinwen;
+    7: spriteset_df4_nenhei_railway;
+    8: spriteset_df4b_shenhua;
+    9: spriteset_df4b_guoneng;
+    10: spriteset_df4bh_taowei_railway;
+    11: spriteset_df4bh_chunluo_railway;
+    12: spriteset_df4bh_guangxiyanhai_railway;
+    13: spriteset_df4bh_xiangdao_logistics;
+    14: spriteset_df4bh_xinchang_railway;
+    15: spriteset_df4bh_stecol;
+    16: spriteset_df4bh_laos;
+    17: spriteset_df4bh_tiefa;
+    18: spriteset_df4bh_wujing;
+    19: spriteset_df4bh_3110_dahonghua;
     spriteset_df4b_green;
 }
 
@@ -33,6 +46,19 @@ switch (FEAT_TRAINS, SELF, switch_df4bh_cargo_subtype, cargo_subtype) {
     4: return string(STR_DF4B_DPRK);
     5: return string(STR_WORKER_PIONEER);
     6: return string(STR_JINWEN);
+    7: return string(STR_NENHEI);
+    8: return string(STR_SHENHUA);
+    9: return string(STR_GUONENG);
+    10: return string(STR_TAOWEI);
+    11: return string(STR_CHUNLUO);
+    12: return string(STR_GUANGXIYANHAI);
+    13: return string(STR_XIANGDAO);
+    14: return string(STR_XINCHANG);
+    15: return string(STR_STECOL);
+    16: return string(STR_CHN2LAOS);
+    17: return string(STR_TIEFA);
+    18: return string(STR_WUJING);
+    19: return string(STR_DF43110);
     return CB_RESULT_NO_TEXT;
 }
 

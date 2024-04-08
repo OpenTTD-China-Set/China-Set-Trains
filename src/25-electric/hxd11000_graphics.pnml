@@ -1,0 +1,44 @@
+// Begin HXD11000
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_hxd11000_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_hxd11000_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-electric", "hxd11000-front")
+}
+
+// Vehicle
+spriteset (spriteset_hxd11000_front) {
+    template_empty ()
+}
+spriteset (spriteset_hxd11000_back) {
+    template_empty ()
+}
+alternative_sprites(spriteset_hxd11000_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "hxd11000-front")
+}
+alternative_sprites(spriteset_hxd11000_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "hxd11000-back")
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd11000_articulated_part, extra_callback_info1) {
+    1..5: return hxd11000;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd11000_graphics, position_in_articulated_veh % 6) {
+    1: spriteset_hxd11000_front;
+    4: spriteset_hxd11000_back;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd11000_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd11000_additional_text, param_cargo_decay) {
+    return string(STR_DESC_4, string(STR_FULL_NAME_HXD11000), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8));
+}

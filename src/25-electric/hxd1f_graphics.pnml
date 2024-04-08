@@ -1,0 +1,83 @@
+// Begin HXD1F
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_hxd1f_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_hxd1f_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-electric", "hxd1f-front")
+}
+
+// Vehicle
+spriteset (spriteset_hxd1f_front) {
+    template_empty ()
+}
+spriteset (spriteset_hxd1f_back) {
+    template_empty ()
+}
+spriteset (spriteset_fxd1b_front) {
+    template_empty ()
+}
+spriteset (spriteset_fxd1b_back) {
+    template_empty ()
+}
+alternative_sprites(spriteset_hxd1f_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "hxd1f-front")
+}
+alternative_sprites(spriteset_hxd1f_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "hxd1f-back")
+}
+alternative_sprites(spriteset_fxd1b_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "fxd1b-front")
+}
+alternative_sprites(spriteset_fxd1b_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "fxd1b-back")
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd1f_articulated_part, extra_callback_info1) {
+    1..5: return hxd1f;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd1f_cargo_subtype, cargo_subtype) {
+    0: return string(STR_BUILD_YEAR);
+    1: return string(STR_ORIGINAL);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd1f_livery_graphics, position_in_articulated_veh % 6) {
+    1: spriteset_hxd1f_front;
+    4: spriteset_hxd1f_back;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_fxd1b_livery_graphics, position_in_articulated_veh % 6) {
+    1: spriteset_fxd1b_front;
+    4: spriteset_fxd1b_back;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd1f_graphics_subtype_0, build_year) {
+    0..2017: switch_hxd1f_livery_graphics;
+    switch_fxd1b_livery_graphics;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd1f_graphics_subtype, cargo_subtype) {
+    0: switch_hxd1f_graphics_subtype_0;
+    1: switch_hxd1f_livery_graphics;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd1f_graphics, position_in_articulated_veh % 3) {
+    1: switch_hxd1f_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd1f_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxd1f_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_FULL_NAME_HXD1F), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8));
+}

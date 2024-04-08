@@ -40,6 +40,7 @@ item (FEAT_TRAINS, df5) {
     graphics {
         // Menu
         additional_text:                switch_df5_additional_text;
+        cargo_subtype_text:             switch_df5_cargo_subtype;
         can_attach_wagon:               locowagon;
 
         // Graphics
