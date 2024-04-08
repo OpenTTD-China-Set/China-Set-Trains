@@ -14,19 +14,63 @@ alternative_sprites(spriteset_df5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_df5_original) {
     template_empty ()
 }
+spriteset (spriteset_df5_red) {
+    template_empty ()
+}
+spriteset (spriteset_df5_yellow) {
+    template_empty ()
+}
+spriteset (spriteset_df5_qinhuangdao) {
+    template_empty ()
+}
+spriteset (spriteset_df5_prk) {
+    template_empty ()
+}
 alternative_sprites(spriteset_df5_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df5")
 }
-
+alternative_sprites(spriteset_df5_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df5-red")
+}
+alternative_sprites(spriteset_df5_yellow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df5-yellow")
+}
+alternative_sprites(spriteset_df5_qinhuangdao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df5-qinhuangdao")
+}
+alternative_sprites(spriteset_df5_prk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df5-prk")
+}
 
 switch (FEAT_TRAINS, SELF, switch_df5_articulated_part, extra_callback_info1) {
     1..2: return df5;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+switch (FEAT_TRAINS, SELF, switch_df5_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_RED);
+    2: return string(STR_ORANGE);
+    3: return string(STR_QINHUANGDAO);
+    4: return string(STR_DF4B_DPRK);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df5_graphics_subtype, cargo_subtype) {
+    0: spriteset_df5_original;
+    1: spriteset_df5_red;
+    2: spriteset_df5_yellow;
+    3: spriteset_df5_qinhuangdao;
+    4: spriteset_df5_prk;
+}
+
 switch (FEAT_TRAINS, SELF, switch_df5_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_df5_original;
+    1: switch_df5_graphics_subtype;
     empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_df5_capacity, position_in_articulated_veh % 3) {
+    return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df5_additional_text, param_cargo_decay) {

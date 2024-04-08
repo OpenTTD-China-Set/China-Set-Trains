@@ -120,6 +120,7 @@ STR_NAME_P62            :P62 (棚车)
 STR_NAME_P70            :P70 (棚车)
 STR_NAME_B6             :B6 (保温车)
 STR_NAME_B22            :B22 (保温车)
+STR_NAME_G50            :G50 (罐车)
 STR_NAME_G60            :G60 (罐车)
 STR_NAME_GN70           :GN70 (罐车)
 STR_NAME_N60            :N60 (平车)
@@ -134,12 +135,15 @@ STR_NAME_DF4K           :DF4 (内燃) (客运型)
 STR_NAME_DF4H           :DF4 (内燃) (货运型)
 STR_NAME_DF4BK          :DF4B (内燃) (客运型)
 STR_NAME_DF4BH          :DF4B (内燃) (货运型)
+STR_NAME_DF4BNB         :DF4B (内燃) (新头型)
 STR_NAME_DF4C           :DF4C (内燃)
 STR_NAME_DF4D0000       :DF4D-0000 (内燃)
 STR_NAME_DF4D3000       :DF4D-3000 (内燃)
 STR_NAME_DF4D4000       :DF4D-4000 (内燃)
 STR_NAME_DF4D7000       :DF4D-7000 (内燃)
 STR_NAME_DF4DF          :DF4DF (内燃)
+STR_NAME_DF4E           :DF4E (内燃)
+STR_NAME_DF5KZ          :DF5 (内燃) (调车用)
 STR_NAME_DF5            :DF5-1000 (内燃) (调车用)
 STR_NAME_DF7G           :DF7G (内燃) (调车用)
 STR_NAME_DF7G5000       :DF7G-5000 (内燃) (调车用)
@@ -149,8 +153,10 @@ STR_NAME_DFH7B          :DFH7B (内燃) (调车用)
 STR_NAME_DF8B           :DF8B (内燃)
 STR_NAME_DF11           :DF11 (内燃)
 STR_NAME_DF11G          :DF11G (内燃)
+STR_NAME_DF11Z          :DF11Z (内燃)
 STR_NAME_NJ2            :NJ2 (内燃)
 STR_NAME_HXN5B          :HXN5B (内燃)
+STR_NAME_SS1            :SS1/6Y1 (电力)
 STR_NAME_SS3            :SS3 (电力)
 STR_NAME_SS3B           :SS3B (电力)
 STR_NAME_SS4            :SS4 (电力)
@@ -165,8 +171,10 @@ STR_NAME_SS7E           :SS7E (电力)
 STR_NAME_SS8            :SS8 (电力)
 STR_NAME_6Y2            :6Y2 (电力)
 STR_NAME_HXD1           :HXD1 (电力)
+STR_NAME_HXD11000       :HXD1-1000 (电力)
 STR_NAME_HXD1B          :HXD1B (电力)
 STR_NAME_HXD1D          :HXD1D (电力)
+STR_NAME_HXD1F          :HXD1F/FXD1B (电力)
 STR_NAME_HXD3C          :HXD3C (电力)
 STR_NAME_HXD3D          :HXD3D (电力)
 
@@ -198,6 +206,7 @@ STR_NAME_CRH6F          :CRH6F (电力动车)
 STR_NAME_CRH1E          :CRH1E (电力动车)
 STR_NAME_CRH380CL       :CRH380CL (电力动车)
 STR_NAME_CRH2G          :CRH2G (电力动车)
+STR_NAME_CR300BF        :CR300BF (电力动车)
 
 STR_NAME_ZEMUW          :动车组二等座车厢
 STR_NAME_ZYMUW          :动车组一等座车厢
@@ -297,7 +306,9 @@ STR_FULL_NAME_DFH7B          :{BLACK}全称：{GOLD}东方红7B型内燃机车
 STR_FULL_NAME_DF8B           :{BLACK}全称：{GOLD}东风8B型内燃机车
 STR_FULL_NAME_DF11           :{BLACK}全称：{GOLD}东风11型内燃机车
 STR_FULL_NAME_DF11G          :{BLACK}全称：{BLUE}东风11G型{WHITE}内燃机车
+STR_FULL_NAME_DF11Z          :{BLACK}全称：{GOLD}东风11Z型内燃机车
 STR_FULL_NAME_HXN5B          :{BLACK}全称：{GOLD}和谐内5B型内燃机车
+STR_FULL_NAME_SS1            :{BLACK}全称：{GOLD}韶山1型电力机车,1968年前曾命名为6Y1型电力机车
 STR_FULL_NAME_SS3            :{BLACK}全称：{GOLD}韶山3型电力机车
 STR_FULL_NAME_SS3B           :{BLACK}全称：{GOLD}韶山3B型电力机车
 STR_FULL_NAME_SS4            :{BLACK}全称：{GOLD}韶山4型电力机车
@@ -311,8 +322,10 @@ STR_FULL_NAME_SS7C           :{BLACK}全称：{GOLD}韶山7C型电力机车
 STR_FULL_NAME_SS7E           :{BLACK}全称：{GOLD}韶山7E型电力机车
 STR_FULL_NAME_SS8            :{BLACK}全称：{GOLD}韶山8型电力机车
 STR_FULL_NAME_HXD1           :{BLACK}全称：{GOLD}和谐1型电力机车
+STR_FULL_NAME_HXD11000       :{BLACK}全称：{GOLD}和谐1型电力机车1000系
 STR_FULL_NAME_HXD1B          :{BLACK}全称：{GOLD}和谐1B型电力机车
 STR_FULL_NAME_HXD1D          :{BLACK}全称：{GOLD}和谐1D型电力机车
+STR_FULL_NAME_HXD1F          :{BLACK}全称：{GOLD}和谐1F型电力机车,2018年改名为复兴电1B型电力机车
 STR_FULL_NAME_HXD3C          :{BLACK}全称：{GOLD}和谐3C型电力机车
 STR_FULL_NAME_HXD3D          :{BLACK}全称：{GOLD}和谐3D型电力机车
 
@@ -354,7 +367,7 @@ STR_KD25G_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{RED}红{WHI
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}青藏铁路{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装
 STR_XL25T_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}青藏铁路{GOLD}涂装 (未完成)，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_KD25T_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：仅有{DKGREEN}青藏铁路{GOLD}涂装
-STR_YZ31_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，三茂铁路涂装
+STR_YZ31_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，三茂铁路涂装 (未完成)
 STR_19K_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{RED}红{WHITE}白{GOLD}相间涂装
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_25Z_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{BLUE}西子号{WHITE}列车{GOLD}涂装，{LTBLUE}石秦{WHITE}特慢{GOLD}涂装, {BLUE}广深{RED}铁{WHITE}路{GOLD}涂装
@@ -393,6 +406,7 @@ STR_DF8B_NICKNAME                   :{BLACK}昵称: {GOLD}芭比
 STR_DF11_NICKNAME                   :{BLACK}昵称: {GOLD}狮子
 STR_DF11G_NICKNAME                  :{BLACK}昵称: {GOLD}猪
 STR_HXN5B_NICKNAME                  :{BLACK}昵称: {GOLD}番茄炒蛋
+STR_SS1_NICKNAME                    :{BLACK}昵称: {BLUE}芍药
 STR_SS3_NICKNAME                    :{BLACK}昵称: {GOLD}三哥 (前期), 三爷 (老化后)
 STR_SS3B_NICKNAME                   :{BLACK}昵称: {GOLD}蓝鸟，大蓝鸟
 STR_SS4_NICKNAME                    :{BLACK}昵称: {BLUE}宝鸡蓝
@@ -411,7 +425,7 @@ STR_HXD1D_NICKNAME                  :{BLACK}昵称: {GOLD}红枣
 STR_HXD3C_NICKNAME                  :{BLACK}昵称: {GOLD}电狒狒
 STR_HXD3D_NICKNAME                  :{BLACK}昵称: {GOLD}番茄
 STR_NDJ3_NICKNAME                   :{BLACK}昵称：{WHITE}大白猪
-STR_CR200J_NICKNAME                 :{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方), {GREEN}“垃圾桶”{GOLD}(民间)
+STR_CR200J_NICKNAME                 :{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方),，{GREEN}“垃圾桶”{GOLD}(民间)
 STR_CR200JC_NICKNAME                :{BLACK}昵称：{RED}“A{WHITE}D{GREEN}桶”{GOLD}(民间)
 STR_CRH1A_NICKNAME                  :{BLACK}昵称：{GOLD}地铁
 STR_CRH1E_NICKNAME                  :{BLACK}昵称：{GOLD}睡地铁
@@ -427,6 +441,7 @@ STR_CRH380B_NICKNAME                :{BLACK}昵称：{GOLD}疯兔子
 STR_CRH380CL_NICKNAME               :{BLACK}昵称：{GOLD}大鲨鱼
 STR_CR400AF_NICKNAME                :{BLACK}昵称：{GOLD}红神龙
 STR_CR400BF_NICKNAME                :{BLACK}昵称：{GOLD}金凤凰
+STR_CR300BF_NICKNAME                :{BLACK}昵称：{LTBLUE}“蓝暖男”{GOLD}(官方),，{LTBLUE}“僵尸蓝”{GOLD}(民间)
 
 STR_ALIASNAME_DF                    :{BLACK}别名: {GOLD}巨龙，ND
 
@@ -450,9 +465,11 @@ STR_350_AVAILABLE       :可改装为最高速度 350 km/h，运营费用增加
 STR_350_380_AVAILABLE   :可改装为最高速度 350 或 380 km/h，运营费用增加
 
 STR_ORIGINAL            : - 原版涂装
+STR_REVERSE             : └ 翻转的涂装
 STR_ORANGE              :{ORANGE} - 橘色涂装
 STR_LATER_ORANGE        :{ORANGE} - 后期橘色涂装
 STR_GREEN               :{GREEN} - 绿色涂装
+STR_RED                 :{RED} - 红色涂装
 STR_LATER_GREEN         :{GREEN} - 后期绿色涂装
 STR_XIHU                : - {GREEN}西户铁路{BLACK}涂装
 STR_XIHU_REVERSE        : - {GREEN}西户铁路{BLACK}涂装，倒转方向
@@ -474,6 +491,21 @@ STR_DF_YELLOW           : - {GOLD}黄色{GREEN}窗线{BLACK}涂装
 STR_DF_WHITE            : - {WHITE}白色{GREEN}窗线{BLACK}涂装
 STR_6Y2_FACTORY         : - {BLUE}出厂{BLACK}涂装
 STR_6Y2_LATE            : - {GREEN}晚期{BLACK}涂装
+STR_NENHEI              : - {GOLD}嫩黑铁路涂装
+STR_SHENHUA             : - {GOLD}神华集团涂装
+STR_GUONENG             : - {GOLD}国家能源集团涂装
+STR_TAOWEI              : - {GOLD}桃威铁路涂装
+STR_CHUNLUO             : - {GOLD}春罗铁路涂装
+STR_GUANGXIYANHAI       : - {GOLD}广西沿海铁路涂装
+STR_XIANGDAO            : - {GOLD}象道集团涂装
+STR_XINCHANG            : - {GOLD}新长铁路涂装
+STR_STECOL              : - {GOLD}中国电建市政集团涂装
+STR_CHN2LAOS            : - {GOLD}中老铁路涂装
+STR_TIEFA               : - {GOLD}铁法能源涂装
+STR_WUJING              : - {GOLD}“武警”涂装
+STR_DF43110             : - {GOLD}系大{RED}红{GOLD}花的DF43110号机车
+STR_DONGBEI             : - {GOLD}东北地区适用过的涂装
+STR_MZD                 : - {GOLD}丰台机务段“学习毛泽东号模范机车组”
 
 STR_BUILD_YEAR          : - 根据建造年份选择设计
 STR_YW22_ORIGINAL       : - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
@@ -600,6 +632,7 @@ STR_CRH6A2_CONSIST                  :{BLACK}构成：{GOLD}至少4节，其中8�
 STR_CRH6A3_CONSIST                  :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
 STR_CRH6AA_CONSIST                  :{BLACK}构成：{GOLD}4节固定编组 (Mc-Tp-Tp-Mc)，可重联
 STR_CRH6F_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
+STR_CR300BF_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾拖车，中间全为动力车。大于12节时以重联方式运行。
 
 STR_CRH1A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CRH1E_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
@@ -617,6 +650,7 @@ STR_CR400AF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 STR_CRH6A2_HEAD_SEAT                :{BLACK}头车座席：{GOLD}一等座
 STR_CRH6A3_HEAD_SEAT                :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席，舒适度：160
 STR_CRH6F_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：140
+STR_CR300BF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}机供：{GOLD}是
 STR_ELECTRICITY_SUPPLY_NO           :{BLACK}机供：{RED}否

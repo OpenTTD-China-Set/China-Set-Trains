@@ -119,6 +119,7 @@ STR_NAME_P62            :P62 (Boxcar)
 STR_NAME_P70            :P70 (Boxcar)
 STR_NAME_B6             :B6 (Refrigerator Wagon)
 STR_NAME_B22            :B22 (Refrigerator Wagon)
+STR_NAME_G50            :G50 (Tanker)
 STR_NAME_G60            :G60 (Tanker)
 STR_NAME_GN70           :GN70 (Tanker)
 STR_NAME_N60            :N60 (Flatcar)
@@ -133,12 +134,14 @@ STR_NAME_DF4K           :DF4 (Diesel) (Passenger Type)
 STR_NAME_DF4H           :DF4 (Diesel) (Freight Type)
 STR_NAME_DF4BK          :DF4B (Diesel) (Passenger Type)
 STR_NAME_DF4BH          :DF4B (Diesel) (Freight Type)
+STR_NAME_DF4BNB         :DF4B (Diesel) (New Bodyshell)
 STR_NAME_DF4C           :DF4C (Diesel)
 STR_NAME_DF4D0000       :DF4D-0000 (Diesel)
 STR_NAME_DF4DF          :DF4DF (Diesel)
 STR_NAME_DF4D3000       :DF4D-3000 (Diesel)
 STR_NAME_DF4D4000       :DF4D-4000 (Diesel)
 STR_NAME_DF4D7000       :DF4D-7000 (Diesel)
+STR_NAME_DF4E           :DF4E (Diesel)
 STR_NAME_DF5KZ          :DF5 (Diesel Shunter)
 STR_NAME_DF5            :DF5-1000 (Diesel Shunter)
 STR_NAME_DF7G           :DF7G (Diesel Shunter)
@@ -149,8 +152,10 @@ STR_NAME_DFH7B          :DFH7B (Diesel)
 STR_NAME_DF8B           :DF8B (Diesel)
 STR_NAME_DF11           :DF11 (Diesel)
 STR_NAME_DF11G          :DF11G (Diesel)
+STR_NAME_DF11Z          :DF11Z (Diesel)
 STR_NAME_NJ2            :NJ2 (Diesel)
 STR_NAME_HXN5B          :HXN5B (Diesel)
+STR_NAME_SS1            :6Y1/SS1 (Electric)
 STR_NAME_SS3            :SS3 (Electric)
 STR_NAME_SS3B           :SS3B (Electric)
 STR_NAME_SS4            :SS4 (Electric)
@@ -165,8 +170,10 @@ STR_NAME_SS7E           :SS7E (Electric)
 STR_NAME_SS8            :SS8 (Electric)
 STR_NAME_6Y2            :6Y2 (Electric)
 STR_NAME_HXD1           :HXD1 (Electric)
+STR_NAME_HXD11000       :HXD1-1000 (Electric)
 STR_NAME_HXD1B          :HXD1B (Electric)
 STR_NAME_HXD1D          :HXD1D (Electric)
+STR_NAME_HXD1F          :HXD1F/FXD1B (Electric)
 STR_NAME_HXD3C          :HXD3C (Electric)
 STR_NAME_HXD3D          :HXD3D (Electric)
 
@@ -198,6 +205,7 @@ STR_NAME_CRH6F          :CRH6F (EMU)
 STR_NAME_CRH1E          :CRH1E (EMU)
 STR_NAME_CRH380CL       :CRH380CL (EMU)
 STR_NAME_CRH2G          :CRH2G (EMU)
+STR_NAME_CR300BF        :CR300BF (EMU)
 
 STR_NAME_ZEMUW          :2nd-Class (ZE) MU Wagon
 STR_NAME_ZYMUW          :1st-Class (ZY) MU Wagon
@@ -285,11 +293,13 @@ STR_FULL_NAME_DF             :{BLACK}Full Name: {GOLD}Dongfeng Diesel Locomotive
 STR_FULL_NAME_DF4            :{BLACK}Full Name: {GOLD}Dongfeng 4 Diesel Locomotive
 STR_FULL_NAME_DF4B           :{BLACK}Full Name: {GOLD}Dongfeng 4B Diesel Locomotive
 STR_FULL_NAME_DF4C           :{BLACK}Full Name: {GOLD}Dongfeng 4C Diesel Locomotive
-STR_FULL_NAME_DF5KZ          :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive Series
-STR_FULL_NAME_DF5            :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive 1000 Series
 STR_FULL_NAME_DF4D           :{BLACK}Full Name: {GOLD}Dongfeng 4D Diesel Locomotive
 STR_FULL_NAME_DF4D7000       :{BLACK}Full Name: {GOLD}Dongfeng 4D Diesel Locomotive 7000 Series
 STR_FULL_NAME_DF4DF          :{BLACK}Full Name: {GOLD}Dongfeng 4DF Diesel Locomotive
+STR_FULL_NAME_DF4E           :{BLACK}Full Name: {GOLD}Dongfeng 4E Diesel Locomotive
+STR_FULL_NAME_DF4BNB         :{BLACK}Full Name: {GOLD}Dongfeng 4B Diesel Locomotive with New Bodyshell
+STR_FULL_NAME_DF5KZ          :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive Series
+STR_FULL_NAME_DF5            :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive 1000 Series
 STR_FULL_NAME_DF7G           :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive
 STR_FULL_NAME_DF7G5000       :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive 5000 Series
 STR_FULL_NAME_DF7G8000       :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive 8000 Series
@@ -298,7 +308,9 @@ STR_FULL_NAME_DFH7B          :{BLACK}Full Name: {GOLD}Dongfanghong 7B Diesel Loc
 STR_FULL_NAME_DF8B           :{BLACK}Full Name: {GOLD}Dongfeng 8B Diesel Locomotive
 STR_FULL_NAME_DF11           :{BLACK}Full Name: {GOLD}Dongfeng 11 Diesel Locomotive
 STR_FULL_NAME_DF11G          :{BLACK}Full Name: {BLUE}Dongfeng 11G {WHITE}Diesel Locomotive
+STR_FULL_NAME_DF11Z          :{BLACK}Full Name: {GOLD}Dongfeng 11Z Diesel Locomotive
 STR_FULL_NAME_HXN5B          :{BLACK}Full Name: {GOLD}Hexienei 5B Diesel Locomotive
+STR_FULL_NAME_SS1            :{BLACK}Full Name: {GOLD}Shaoshan 1 Electric Locomotive (before 1968){}           6-Axle Ignitron 1-Type Electric Locomotive
 STR_FULL_NAME_SS3            :{BLACK}Full Name: {GOLD}Shaoshan 3 Electric Locomotive
 STR_FULL_NAME_SS3B           :{BLACK}Full Name: {GOLD}Shaoshan 3B Electric Locomotive
 STR_FULL_NAME_SS4            :{BLACK}Full Name: {GOLD}Shaoshan 4 Electric Locomotive
@@ -312,8 +324,10 @@ STR_FULL_NAME_SS7C           :{BLACK}Full Name: {GOLD}Shaoshan 7C Electric Locom
 STR_FULL_NAME_SS7E           :{BLACK}Full Name: {GOLD}Shaoshan 7E Electric Locomotive
 STR_FULL_NAME_SS8            :{BLACK}Full Name: {GOLD}Shaoshan 8 Electric Locomotive
 STR_FULL_NAME_HXD1           :{BLACK}Full Name: {GOLD}Hexie/Harmony 1 Electric Locomotive
+STR_FULL_NAME_HXD11000       :{BLACK}Full Name: {GOLD}Hexie/Harmony 1 Electric Locomotive 1000 Series
 STR_FULL_NAME_HXD1B          :{BLACK}Full Name: {GOLD}Hexie/Harmony 1B Electric Locomotive
 STR_FULL_NAME_HXD1D          :{BLACK}Full Name: {GOLD}Hexie/Harmony 1D Electric Locomotive
+STR_FULL_NAME_HXD1F          :{BLACK}Full Name: {GOLD}Hexie/Harmony 1F Electric Locomotive (before 2018){}           Fuxing/Revival 1B Electric Locomotive (after 2018)
 STR_FULL_NAME_HXD3C          :{BLACK}Full Name: {GOLD}Hexie/Harmony 3C Electric Locomotive
 STR_FULL_NAME_HXD3D          :{BLACK}Full Name: {GOLD}Hexie/Harmony 3D Electric Locomotive
 
@@ -373,7 +387,7 @@ STR_TZ_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {ORANGE}Orange 
 STR_KD25K_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}Only Guangzhou-Kowloon Sub-Livery available so far
 STR_25DT_JINLUN_LIVERY_AVAILABILITY :{BLACK}Livery Availability: {GOLD}Earlier Livery (Before 2010), Later Livery (After 2010)
-STR_YZ31_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Sanshui-Maoming Railway Livery
+STR_YZ31_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Sanshui-Maoming Railway Livery (unfinished)
 
 STR_G60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GRAY}Grey {GOLD}with Random-Colour Stripes (unfinished)
 STR_GN70_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished)
@@ -400,8 +414,9 @@ STR_DF8B_NICKNAME                   :{BLACK}Nickname: {GOLD}Barbie
 STR_DF11_NICKNAME                   :{BLACK}Nickname: {GOLD}Lion
 STR_DF11G_NICKNAME                  :{BLACK}Nickname: {GOLD}Pig
 STR_HXN5B_NICKNAME                  :{BLACK}Nickname: {GOLD}Scrambled egg with tomato
+STR_SS1_NICKNAME                    :{BLACK}Nickname: {GOLD}Peony
 STR_SS3_NICKNAME                    :{BLACK}Nickname: {GOLD}San'ge (New), Sanye (Old) {}{BLACK}Chinese Lesson: San - Three, Ge - Elder Brother, Ye - Grandfather or a general and respectful pronoun to old men
-STR_SS3B_NICKNAME                   :{BLACK}Nickname: {GOLD}Blue Bird
+STR_SS3B_NICKNAME                   :{BLACK}Nickname: {BLUE}Blue Bird
 STR_SS4_NICKNAME                    :{BLACK}Nickname: {BLUE}Baoji Blue
 STR_SS4G_NICKNAME                   :{BLACK}Nickname: {GOLD}Sige {}{BLACK}Chinese Lesson: Si - Four
 STR_SS5_NICKNAME                    :{BLACK}Nickname: {GOLD}Xiaowu (Little Five)
@@ -434,6 +449,7 @@ STR_CRH380B_NICKNAME                :{BLACK}Nickname: {GOLD}Crazy Rabbit
 STR_CRH380CL_NICKNAME               :{BLACK}Nickname: {GOLD}Shark
 STR_CR400AF_NICKNAME                :{BLACK}Nickname: {GOLD}Red Loong
 STR_CR400BF_NICKNAME                :{BLACK}Nickname: {GOLD}Golden Phoenix
+STR_CR300BF_NICKNAME                :{BLACK}Nickname: {LTBLUE}"Blue Antidote" {GOLD}(Official), {LTBLUE}"Zoombie Blue" {GOLD}(Folk)
 
 STR_ALIASNAME_DF                    :{BLACK}Alias Name: {GOLD}Great Loong
 
@@ -457,8 +473,10 @@ STR_350_AVAILABLE       :Refittable to Max Speed 350 km/h (Increasing running co
 STR_350_380_AVAILABLE   :Refittable to Max Speed 350 or 380 km/h (Increasing running costs)
 
 STR_ORIGINAL            : - Original Livery
+STR_REVERSE             : └ the Reverse of the Livery Above
 STR_ORANGE              :{ORANGE} - Orange Livery
 STR_GREEN               :{GREEN} - Green Livery
+STR_RED                 :{RED} - RED Livery
 STR_LATER_ORANGE        :{ORANGE} - Later Orange Livery
 STR_LATER_GREEN         :{GREEN} - Later Green Livery
 STR_XIHU                : - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery
@@ -481,6 +499,21 @@ STR_DF_YELLOW           : - {GOLD}Yellow {GREEN}Line {BLACK}Livery
 STR_DF_WHITE            : - {WHITE}White {GREEN}Line {BLACK}Livery
 STR_6Y2_FACTORY         : - {BLUE}Factory {BLACK}Livery
 STR_6Y2_LATE            : - {GREEN}Late {BLACK}Livery
+STR_NENHEI              : - {GOLD}Nenhei Railway Livery
+STR_SHENHUA             : - {GOLD}Shenhua Groups Livery
+STR_GUONENG             : - {GOLD}CHN Energy Livery
+STR_TAOWEI              : - {GOLD}Taowei Railway Livery
+STR_CHUNLUO             : - {GOLD}Chunluo Railway Livery
+STR_GUANGXIYANHAI       : - {GOLD}Guangxi Seaside Railway Livery
+STR_XIANGDAO            : - {GOLD}Xiangdao Groups Livery
+STR_XINCHANG            : - {GOLD}Xinchang Railway Livery
+STR_STECOL              : - {GOLD}STECOL Groups Livery
+STR_CHN2LAOS            : - {GOLD}China-Laos Railway Livery
+STR_TIEFA               : - {GOLD}Tiefa Energy Livery
+STR_WUJING              : - {GOLD}"Armed Police"Livery
+STR_DF43110             : - {GOLD}DF43110 with Decoration for Ceremony
+STR_DONGBEI             : - {GOLD}Livery Used in Northeast of China
+STR_MZD                 : - {GOLD}"Learn from Maozedong"
 
 STR_BUILD_YEAR          : - According to build year
 STR_YW22_ORIGINAL       : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240
@@ -607,6 +640,7 @@ STR_CRH6A2_CONSIST                  :{BLACK}Consist: {GOLD}At least 4 cars, with
 STR_CRH6A3_CONSIST                  :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
 STR_CRH6AA_CONSIST                  :{BLACK}Consist: {GOLD}Fixed consist of 4 cars (Mc-Tp-Tp-Mc), multiple sections available
 STR_CRH6F_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
+STR_CR300BF_CONSIST                 :{BLACK}Consist: {GOLD}At least 4 cars, with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12
 
 STR_CRH1A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH1E_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
@@ -624,6 +658,7 @@ STR_CR400BF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH6A2_HEAD_SEAT                :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH6A3_HEAD_SEAT                :{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places, Comfort: 160
 STR_CRH6F_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places (crowded), Comfort: 140
+STR_CR300BF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}Electricity Supply for cars: {GOLD}YES
 STR_ELECTRICITY_SUPPLY_NO           :{BLACK}Electricity Supply for cars: {RED}NO

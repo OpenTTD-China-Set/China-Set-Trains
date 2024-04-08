@@ -21,7 +21,7 @@ item (FEAT_TRAINS, yz31) {
         default_cargo_type:             PASS;
         ai_special_flag:                AI_FLAG_PASSENGER;
         cargo_capacity:                 108;
-        loading_speed:                  32 << param_loading_speed;
+        loading_speed:                  24 << param_loading_speed;
         cargo_age_period:               185 << param_cargo_decay;
 
         // Stats
@@ -36,7 +36,7 @@ item (FEAT_TRAINS, yz31) {
         // Menu
         additional_text:                switch_yz31_additional_text;
         can_attach_wagon:               locowagon;
-        cargo_subtype_text:             switch_yz31_cargo_subtype;
+//        cargo_subtype_text:             switch_yz31_cargo_subtype;
         
         // Graphics
         default:                        switch_yz31_graphics;

@@ -144,7 +144,8 @@ item (FEAT_TRAINS, b22, 3085) {}
 item (FEAT_TRAINS, l70, 3086) {}
 // 3087 coded by wuwu
 item (FEAT_TRAINS, nx70a, 3087) {}
-
+// 3088 coded by babel
+item (FEAT_TRAINS, g50, 3088) {}
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
 
@@ -177,6 +178,11 @@ item (FEAT_TRAINS, df8b, 5139) {}
 item (FEAT_TRAINS, df4df, 5140) {}
 // 5141 DF code by Babel
 item (FEAT_TRAINS, df, 5141) {}
+// 5142-45 code by wuwu
+item (FEAT_TRAINS, df11z, 5142) {}
+item (FEAT_TRAINS, df5kz, 5143) {}
+item (FEAT_TRAINS, df4e, 5144) {}
+item (FEAT_TRAINS, df4bnb, 5145) {}
 
 //25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
 #define id_range_25_electric 0x1800..0x1BFF
@@ -196,9 +202,13 @@ item (FEAT_TRAINS, ss7b, 6155) {}
 item (FEAT_TRAINS, ss7c, 6156) {}
 item (FEAT_TRAINS, ss7e, 6157) {}
 item (FEAT_TRAINS, ss3b, 6158) {}
-// 6159 coded by Babel
+// 6159-6160 coded by Babel
 item (FEAT_TRAINS, hxd1d, 6159) {}
 item (FEAT_TRAINS, _6y2, 6160) {}
+// 6161-6163 coded by wuwu
+item (FEAT_TRAINS, hxd11000, 6161) {}
+item (FEAT_TRAINS, hxd1f, 6162) {}
+item (FEAT_TRAINS, ss1, 6163) {}
 
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
 #define id_range_multi_loco 0x1C00..0x1FFF 
@@ -237,6 +247,7 @@ item (FEAT_TRAINS, crh380a, 9236) {}
 item (FEAT_TRAINS, cr200jc, 9237) {}
 item (FEAT_TRAINS, crh380al, 9238) {}
 item (FEAT_TRAINS, cr200jcl, 9239) {}
+item (FEAT_TRAINS, cr300bf, 9240) {}
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
 #define id_range_1500_emu 0x2800..0x2BFF
