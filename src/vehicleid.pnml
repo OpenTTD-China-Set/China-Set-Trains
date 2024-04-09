@@ -146,9 +146,10 @@ item (FEAT_TRAINS, l70, 3086) {}
 item (FEAT_TRAINS, nx70a, 3087) {}
 // 3088 coded by babel
 item (FEAT_TRAINS, g50, 3088) {}
+
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
-
+item (FEAT_TRAINS, sy, 4096) {}
 
 //Diesel, available ID range: 5120-6143 (hex 0x1400..0x17FF)
 #define id_range_diesel 0x1400..0x17FF

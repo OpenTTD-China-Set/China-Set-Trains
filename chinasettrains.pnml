@@ -237,7 +237,8 @@
 #include "src/function2.pnml"
 
 // Steam
-
+#include "src/steam/sy_graphics.pnml"
+#include "src/steam/sy_item.pnml"
 
 // Diesel
 #include "src/diesel/df_graphics.pnml"

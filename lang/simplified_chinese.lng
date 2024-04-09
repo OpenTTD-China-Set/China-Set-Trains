@@ -130,6 +130,8 @@ STR_NAME_JSQ5           :JSQ5 (汽车运输车)
 STR_NAME_JSQ6           :JSQ6 (汽车运输车)
 STR_NAME_L70            :L70 (粮食漏斗车)
 
+STR_NAME_SY             :SY (蒸汽)
+
 STR_NAME_DF             :DF (内燃)
 STR_NAME_DF4K           :DF4 (内燃) (客运型)
 STR_NAME_DF4H           :DF4 (内燃) (货运型)
@@ -289,6 +291,8 @@ STR_FULL_NAME_YW25DT_JINLUN  :{BLACK}全称：{GOLD}“金轮号”内燃动车�
 STR_FULL_NAME_RW25DT_JINLUN  :{BLACK}全称：{GOLD}“金轮号”内燃动车组25米单层软卧拖车
 STR_FULL_NAME_SYZ25DT_JINLUN :{BLACK}全称：{GOLD}“金轮号”内燃动车组25米双层硬座拖车
 STR_FULL_NAME_SRZ25DT_JINLUN :{BLACK}全称：{GOLD}“金轮号”内燃动车组25米双层软座拖车
+
+STR_FULL_NAME_SY             :{BLACK}全称：{GOLD}上游型蒸汽机车
 
 STR_FULL_NAME_DF             :{BLACK}全称：{GOLD}东风型内燃机车
 STR_FULL_NAME_DF4            :{BLACK}全称：{GOLD}东风4型内燃机车

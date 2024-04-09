@@ -5,10 +5,14 @@ China Set: Trains Changelog
 
 ## Initial-0-2 Updates
 
+0.2.2.156 (7/4/2024)
+--------------------
+Add: SY, CR300BF, DF4E, DF4B with new bodyshell, HXD1 1000 series, HXD1F, DF5KZ, DF11Z, SS1, a dozen of alternative liveries for DF4(B), DF5
+
 0.2.1.155 (21/3/2024)
 --------------------
 Add: YZ31, Jinwen Livery for DF4B, CA25G, KD25G and XL25G
-Fix #41: Description of 22-coaches
+Fix #42: Description of 22-coaches
 
 0.2.1.153 (21/3/2024)
 --------------------

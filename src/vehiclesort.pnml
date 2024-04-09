@@ -1,4 +1,5 @@
 sort (FEAT_TRAINS, [
+    sy,
     df,
     df4k,
     df4h,

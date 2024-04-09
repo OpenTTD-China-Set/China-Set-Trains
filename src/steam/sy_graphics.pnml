@@ -1,0 +1,42 @@
+// Begin SY
+
+// Graphics
+
+spriteset (spriteset_sy_purchase) {
+    template_purchase_empty ()
+}
+
+alternative_sprites(spriteset_sy_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("steam", "shangyou-whole")
+}
+
+spriteset (spriteset_sy_front) {
+    template_empty ()
+}
+
+spriteset (spriteset_sy_tender) {
+    template_empty ()
+}
+
+alternative_sprites(spriteset_sy_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("steam", "shangyou-front")
+}
+
+alternative_sprites(spriteset_sy_tender, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("steam", "shangyou-tender")
+}
+
+switch (FEAT_TRAINS, SELF, switch_sy_articulated_part, extra_callback_info1) {
+    1..2: return sy;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_sy_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_sy_front;
+    2: spriteset_sy_tender;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_sy_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_FULL_NAME_SY), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_12));
+}

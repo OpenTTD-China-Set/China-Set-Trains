@@ -129,6 +129,8 @@ STR_NAME_JSQ5           :JSQ5 (Vehicle Transporter)
 STR_NAME_JSQ6           :JSQ6 (Vehicle Transporter)
 STR_NAME_L70            :L70 (Hopper)
 
+STR_NAME_SY             :SY (Steam)
+
 STR_NAME_DF             :DF (Diesel)
 STR_NAME_DF4K           :DF4 (Diesel) (Passenger Type)
 STR_NAME_DF4H           :DF4 (Diesel) (Freight Type)
@@ -288,6 +290,8 @@ STR_FULL_NAME_YW25DT_JINLUN  :{BLACK}Full Name: {GOLD}25m Unilaminar Hard Sleepe
 STR_FULL_NAME_RW25DT_JINLUN  :{BLACK}Full Name: {GOLD}25m Unilaminar Soft Sleeper Passenger Trail Car of "Jinlun" DMU
 STR_FULL_NAME_SYZ25DT_JINLUN :{BLACK}Full Name: {GOLD}25m Double Decker Hard Seat Passenger Trail Car of "Jinlun" DMU
 STR_FULL_NAME_SRZ25DT_JINLUN :{BLACK}Full Name: {GOLD}25m Double Decker Hard Seat Passenger Trail Car of "Jinlun" DMU
+
+STR_FULL_NAME_SY             :{BLACK}Full Name: {GOLD}Shangyou {BLACK}(Meaning: Aiming High) {GOLD}Steam Locomotive
 
 STR_FULL_NAME_DF             :{BLACK}Full Name: {GOLD}Dongfeng Diesel Locomotive
 STR_FULL_NAME_DF4            :{BLACK}Full Name: {GOLD}Dongfeng 4 Diesel Locomotive
