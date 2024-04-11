@@ -1,0 +1,38 @@
+// Begin SS9
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_ss9_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_ss9_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-electric","ss9")
+}
+
+// Vehicle
+spriteset (spriteset_ss9_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_ss9_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric","ss9")
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_ss9_articulated_part, extra_callback_info1) {
+    1..2: return ss9;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss9_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_ss9_original;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss9_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss9_additional_text, param_cargo_decay) {
+    return string(STR_DESC_4, string(STR_FULL_NAME_SS9), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_SS9_NICKNAME), string(STR_RELIABILITY_6));
+}
