@@ -1,0 +1,57 @@
+item (FEAT_TRAINS, gn80) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_GN80);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2011,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   20;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_LIQUID, CC_HAZARDOUS);
+        non_refittable_cargo_classes:   bitmask(CC_REFRIGERATED);
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             DEFAULT_CARGO_FIRST_REFITTABLE;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 70;
+        loading_speed:                  4 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          100 km/h;
+        power:                          0 hp;
+        weight:                         25.6 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_gn80_additional_text;
+        can_attach_wagon:               locowagon;
+        
+        // Graphics
+        default:                        switch_gn80_graphics;
+        purchase:                       spriteset_gn80_purchase;
+        articulated_part:               switch_gn80_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_2_2;
+        cargo_capacity:                 switch_gn80_capacity;
+        cargo_age_period:               185 << param_cargo_decay;
+        cost_factor:                    6;
+        running_cost_factor:            5 * runningcostfactor();
+        purchase_running_cost_factor:   20;
+        purchase_cargo_capacity:        81/3;
+    }
+}
+
+// End GN80
+
