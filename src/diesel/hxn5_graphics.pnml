@@ -1,0 +1,66 @@
+// Begin HXN5
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_hxn5_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_hxn5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "hxn5")
+}
+
+// Vehicle
+spriteset (spriteset_hxn5_original) {
+    template_empty ()
+}
+spriteset (spriteset_hxn5_0001) {
+    template_empty ()
+}
+spriteset (spriteset_hxn5_reverse) {
+    template_empty ()
+}
+spriteset (spriteset_hxn5_0001_reverse) {
+    template_empty ()
+}
+alternative_sprites(spriteset_hxn5_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn5")
+}
+alternative_sprites(spriteset_hxn5_0001, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn5-0001")
+}
+alternative_sprites(spriteset_hxn5_reverse, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn5-reverse")
+}
+alternative_sprites(spriteset_hxn5_0001_reverse, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn5-0001-reverse")
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn5_articulated_part, extra_callback_info1) {
+    1..2: return hxn5;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn5_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_DESC_2, string(STR_REVERSE), string(STR_ORIGINAL));
+    2: return string(STR_HUANGJIGUANG);
+    3: return string(STR_DESC_2, string(STR_REVERSE), string(STR_HUANGJIGUANG));
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn5_graphics_subtype, cargo_subtype) {
+    0: spriteset_hxn5_original;
+    1: spriteset_hxn5_reverse;
+    2: spriteset_hxn5_0001;
+    3: spriteset_hxn5_0001_reverse;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn5_graphics, position_in_articulated_veh % 3) {
+    1: switch_hxn5_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn5_additional_text, param_cargo_decay) {
+    return string(STR_DESC_4, string(STR_FULL_NAME_HXN5), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_HXN5_NICKNAME), string(STR_RELIABILITY_8));
+}
