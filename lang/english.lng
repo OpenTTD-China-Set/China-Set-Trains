@@ -47,6 +47,11 @@ STR_NAME_CA23AIRCON     :CA23 (Passenger Coach) (Air-conditioned)
 STR_NAME_YZ22B          :YZ22B (Passenger Coach)
 STR_NAME_YW22B          :YW22B (Passenger Coach)
 STR_NAME_RW22B          :RW22B (Passenger Coach)
+STR_NAME_YZ25ML         :YZ25 (Mainline) (Passenger Coach)
+STR_NAME_RZ25ML         :RZ25 (Mainline) (Passenger Coach)
+STR_NAME_YW25ML         :YW25 (Mainline) (Passenger Coach)
+STR_NAME_RW25ML         :RW25 (Mainline) (Passenger Coach)
+STR_NAME_CA25ML         :CA25 (Mainline) (Restaurant Car)
 STR_NAME_YZ25B          :YZ25B (Passenger Coach)
 STR_NAME_RZ25B          :RZ25B (Passenger Coach)
 STR_NAME_YW25B          :YW25B (Passenger Coach)
@@ -83,6 +88,7 @@ STR_NAME_RW25T          :RW25T (Passenger Coach)
 STR_NAME_CA25T          :CA25T (Restaurant Car)
 STR_NAME_YZ31           :YZ31 (Passenger Coach)
 STR_NAME_XL22           :XL22 (Luggage Car)
+STR_NAME_XL25ML         :XL25 (Mainline) (Luggage Car)
 STR_NAME_XL25B          :XL25B (Luggage Car)
 STR_NAME_XL25G          :XL25G (Luggage Car)
 STR_NAME_XL25K          :XL25K (Luggage Car)
@@ -90,6 +96,7 @@ STR_NAME_XL25T          :XL25T (Luggage Car)
 STR_NAME_XL25T_SSPE     :XL25T-SSPE (Luggage Car)
 STR_NAME_UZ22           :UZ22 (Luggage Car)
 STR_NAME_TZ             :TZ (Air Conditioner Generator Car)
+STR_NAME_TZ2            :TZ2 (Air Conditioner Generator Car)
 STR_NAME_KD25G          :KD25G (Air Conditioner Generator Car)
 STR_NAME_KD25K          :KD25K (Air Conditioner Generator Car)
 STR_NAME_KD25Z          :KD25Z (Air Conditioner Generator Car)
@@ -115,13 +122,18 @@ STR_NAME_C62            :C62 (Gondola)
 STR_NAME_C64            :C64 (Gondola)
 STR_NAME_C70            :C70 (Gondola)
 STR_NAME_P60            :P60 (Boxcar)
+STR_NAME_P61            :P61 (Boxcar)
 STR_NAME_P62            :P62 (Boxcar)
+STR_NAME_P63            :P63 (Boxcar)
 STR_NAME_P70            :P70 (Boxcar)
+STR_NAME_PB             :PB (Boxcar)
 STR_NAME_B6             :B6 (Refrigerator Wagon)
 STR_NAME_B22            :B22 (Refrigerator Wagon)
+STR_NAME_G17            :G17 (Tanker)
 STR_NAME_G50            :G50 (Tanker)
 STR_NAME_G60            :G60 (Tanker)
 STR_NAME_GN70           :GN70 (Tanker)
+STR_NAME_GN80           :GN80 (Tanker)
 STR_NAME_N60            :N60 (Flatcar)
 STR_NAME_NX17           :NX17 (Flatcar)
 STR_NAME_NX70A          :NX70A (Flatcar)
@@ -155,7 +167,9 @@ STR_NAME_DF8B           :DF8B (Diesel)
 STR_NAME_DF11           :DF11 (Diesel)
 STR_NAME_DF11G          :DF11G (Diesel)
 STR_NAME_DF11Z          :DF11Z (Diesel)
+STR_NAME_ND5            :ND5 (Diesel)
 STR_NAME_NJ2            :NJ2 (Diesel)
+STR_NAME_HXN5           :HXN5 (Diesel)
 STR_NAME_HXN5B          :HXN5B (Diesel)
 STR_NAME_SS1            :6Y1/SS1 (Electric)
 STR_NAME_SS3            :SS3 (Electric)
@@ -168,8 +182,11 @@ STR_NAME_SS6B           :SS6B (Electric)
 STR_NAME_SS7            :SS7 (Electric)
 STR_NAME_SS7B           :SS7B (Electric)
 STR_NAME_SS7C           :SS7C (Electric)
+STR_NAME_SS7D           :SS7D (Electric)
 STR_NAME_SS7E           :SS7E (Electric)
 STR_NAME_SS8            :SS8 (Electric)
+STR_NAME_SS9            :SS9 (Electric)
+STR_NAME_SS9G           :SS9G (Electric)
 STR_NAME_6Y2            :6Y2 (Electric)
 STR_NAME_HXD1           :HXD1 (Electric)
 STR_NAME_HXD11000       :HXD1-1000 (Electric)
@@ -231,6 +248,11 @@ STR_FULL_NAME_CA23AIRCON     :{BLACK}Full Name: {GOLD}23 Type Restaurant Car (Ai
 STR_FULL_NAME_YZ22B          :{BLACK}Full Name: {GOLD}22B Type Hard Seat Passenger Coach
 STR_FULL_NAME_YW22B          :{BLACK}Full Name: {GOLD}22B Type Hard Sleeper Passenger Coach
 STR_FULL_NAME_RW22B          :{BLACK}Full Name: {GOLD}22B Type Soft Sleeper Passenger Coach
+STR_FULL_NAME_YZ25ML         :{BLACK}Full Name: {GOLD}25m Mainline Hard Seat Passenger Coach
+STR_FULL_NAME_RZ25ML         :{BLACK}Full Name: {GOLD}25m Mainline Soft Seat Passenger Coach
+STR_FULL_NAME_YW25ML         :{BLACK}Full Name: {GOLD}25m Mainline Hard Sleeper Passenger Coach
+STR_FULL_NAME_RW25ML         :{BLACK}Full Name: {GOLD}25m Mainline Soft Sleeper Passenger Coach
+STR_FULL_NAME_CA25ML         :{BLACK}Full Name: {GOLD}25m Mainline Restaurant Car
 STR_FULL_NAME_YZ25B          :{BLACK}Full Name: {GOLD}25m Standard Hard Seat Passenger Coach
 STR_FULL_NAME_RZ25B          :{BLACK}Full Name: {GOLD}25m Standard Soft Seat Passenger Coach
 STR_FULL_NAME_YW25B          :{BLACK}Full Name: {GOLD}25m Standard Hard Sleeper Passenger Coach
@@ -263,12 +285,14 @@ STR_FULL_NAME_RW25T          :{BLACK}Full Name: {GOLD}25m Accelerated Soft Sleep
 STR_FULL_NAME_YZ31           :{BLACK}Full Name: {GOLD}31 Type Hard Seat Passenger Coach
 STR_FULL_NAME_CA25T          :{BLACK}Full Name: {GOLD}25m Accelerated Restaurant Car
 STR_FULL_NAME_XL22           :{BLACK}Full Name: {GOLD}22 Type Luggage Car
+STR_FULL_NAME_XL25ML         :{BLACK}Full Name: {GOLD}25m Mainline Luggage Car
 STR_FULL_NAME_XL25B          :{BLACK}Full Name: {GOLD}25m Standard Luggage Car
 STR_FULL_NAME_XL25G          :{BLACK}Full Name: {GOLD}25m Improved Luggage Car
 STR_FULL_NAME_XL25K          :{BLACK}Full Name: {GOLD}25m Rapid Luggage Car
 STR_FULL_NAME_XL25T          :{BLACK}Full Name: {GOLD}25m Accelerated Luggage Car
 STR_FULL_NAME_UZ22           :{BLACK}Full Name: {GOLD}22 Type Railway Post Office
 STR_FULL_NAME_TZ             :{BLACK}Full Name: {GOLD}Special Purpose Car
+STR_FULL_NAME_TZ2            :{BLACK}Full Name: {GOLD}Special Purpose Car Type 2
 STR_FULL_NAME_KD25G          :{BLACK}Full Name: {GOLD}25m Improved Air Conditioner Generator Car
 STR_FULL_NAME_KD25K          :{BLACK}Full Name: {GOLD}25m Rapid Air Conditioner Generator Car
 STR_FULL_NAME_KD25Z          :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Air Conditioner Generator Car
@@ -313,7 +337,9 @@ STR_FULL_NAME_DF8B           :{BLACK}Full Name: {GOLD}Dongfeng 8B Diesel Locomot
 STR_FULL_NAME_DF11           :{BLACK}Full Name: {GOLD}Dongfeng 11 Diesel Locomotive
 STR_FULL_NAME_DF11G          :{BLACK}Full Name: {BLUE}Dongfeng 11G {WHITE}Diesel Locomotive
 STR_FULL_NAME_DF11Z          :{BLACK}Full Name: {GOLD}Dongfeng 11Z Diesel Locomotive
-STR_FULL_NAME_HXN5B          :{BLACK}Full Name: {GOLD}Hexienei 5B Diesel Locomotive
+STR_FULL_NAME_ND5            :{BLACK}Full Name: {GOLD}Neidian 5 Diesel Locomotive
+STR_FULL_NAME_HXN5           :{BLACK}Full Name: {GOLD}Hexie 5 Diesel Locomotive
+STR_FULL_NAME_HXN5B          :{BLACK}Full Name: {GOLD}Hexie 5B Diesel Locomotive
 STR_FULL_NAME_SS1            :{BLACK}Full Name: {GOLD}Shaoshan 1 Electric Locomotive (before 1968){}           6-Axle Ignitron 1-Type Electric Locomotive
 STR_FULL_NAME_SS3            :{BLACK}Full Name: {GOLD}Shaoshan 3 Electric Locomotive
 STR_FULL_NAME_SS3B           :{BLACK}Full Name: {GOLD}Shaoshan 3B Electric Locomotive
@@ -325,8 +351,11 @@ STR_FULL_NAME_SS6B           :{BLACK}Full Name: {GOLD}Shaoshan 6B Electric Locom
 STR_FULL_NAME_SS7            :{BLACK}Full Name: {GOLD}Shaoshan 7 Electric Locomotive
 STR_FULL_NAME_SS7B           :{BLACK}Full Name: {GOLD}Shaoshan 7B Electric Locomotive
 STR_FULL_NAME_SS7C           :{BLACK}Full Name: {GOLD}Shaoshan 7C Electric Locomotive
+STR_FULL_NAME_SS7D           :{BLACK}Full Name: {GOLD}Shaoshan 7D Electric Locomotive
 STR_FULL_NAME_SS7E           :{BLACK}Full Name: {GOLD}Shaoshan 7E Electric Locomotive
 STR_FULL_NAME_SS8            :{BLACK}Full Name: {GOLD}Shaoshan 8 Electric Locomotive
+STR_FULL_NAME_SS9            :{BLACK}Full Name: {GOLD}Shaoshan 9 Electric Locomotive
+STR_FULL_NAME_SS9G           :{BLACK}Full Name: {GOLD}Shaoshan 9G Electric Locomotive
 STR_FULL_NAME_HXD1           :{BLACK}Full Name: {GOLD}Hexie/Harmony 1 Electric Locomotive
 STR_FULL_NAME_HXD11000       :{BLACK}Full Name: {GOLD}Hexie/Harmony 1 Electric Locomotive 1000 Series
 STR_FULL_NAME_HXD1B          :{BLACK}Full Name: {GOLD}Hexie/Harmony 1B Electric Locomotive
@@ -392,15 +421,21 @@ STR_KD25K_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue-{RED
 STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}Only Guangzhou-Kowloon Sub-Livery available so far
 STR_25DT_JINLUN_LIVERY_AVAILABILITY :{BLACK}Livery Availability: {GOLD}Earlier Livery (Before 2010), Later Livery (After 2010)
 STR_YZ31_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Sanshui-Maoming Railway Livery (unfinished)
+STR_25ML_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {WHITE}White-{GREEN}-Green {GOLD}Livery, {RED}RED-{GREEN}-Green {GOLD}Livery (after 2003)
 
+STR_G17_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished)
 STR_G60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GRAY}Grey {GOLD}with Random-Colour Stripes (unfinished)
 STR_GN70_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished)
+STR_GN80_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished)
 STR_C62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_C70_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_P60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_P61_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (Black, Blue, Brown, Rustyred)
+STR_P63_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred)
 STR_P70_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_PB_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_N60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_NX17_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Random (Black, Brown)
 STR_NX70A_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {GOLD}Black Livery Only
@@ -417,6 +452,7 @@ STR_DFH7B_NICKNAME                  :{BLACK}Used in Panzhihua Steelworks, Sichua
 STR_DF8B_NICKNAME                   :{BLACK}Nickname: {GOLD}Barbie
 STR_DF11_NICKNAME                   :{BLACK}Nickname: {GOLD}Lion
 STR_DF11G_NICKNAME                  :{BLACK}Nickname: {GOLD}Pig
+STR_HXN5_NICKNAME                   :{BLACK}Nickname: {GOLD}Grasshopper
 STR_HXN5B_NICKNAME                  :{BLACK}Nickname: {GOLD}Scrambled egg with tomato
 STR_SS1_NICKNAME                    :{BLACK}Nickname: {GOLD}Peony
 STR_SS3_NICKNAME                    :{BLACK}Nickname: {GOLD}San'ge (New), Sanye (Old) {}{BLACK}Chinese Lesson: San - Three, Ge - Elder Brother, Ye - Grandfather or a general and respectful pronoun to old men
@@ -429,8 +465,11 @@ STR_SS6B_NICKNAME                   :{BLACK}Nickname: {GOLD}Yan Xiaoliu (a chara
 STR_SS7_NICKNAME                    :{BLACK}Nickname: {GOLD}Roast Chicken
 STR_SS7B_NICKNAME                   :{BLACK}Nickname: {GOLD}Cat
 STR_SS7C_NICKNAME                   :{BLACK}Nickname: {GOLD}Cat
+STR_SS7D_NICKNAME                   :{BLACK}Nickname: {GOLD}Transformer
 STR_SS7E_NICKNAME                   :{BLACK}Nickname: {GOLD}Beauty
 STR_SS8_NICKNAME                    :{BLACK}Nickname: {GOLD}Broom
+STR_SS9_NICKNAME                    :{BLACK}Nickname: {GOLD}Frog
+STR_SS9G_NICKNAME                   :{BLACK}Nickname: {GOLD}Shochu
 STR_HXD1_NICKNAME                   :{BLACK}Nickname: {GOLD}Smurf
 STR_HXD1B_NICKNAME                  :{BLACK}Nickname: {GOLD}River Crab
 STR_HXD1D_NICKNAME                  :{BLACK}Nickname: {GOLD}Jujube
@@ -518,6 +557,7 @@ STR_WUJING              : - {GOLD}"Armed Police"Livery
 STR_DF43110             : - {GOLD}DF43110 with Decoration for Ceremony
 STR_DONGBEI             : - {GOLD}Livery Used in Northeast of China
 STR_MZD                 : - {GOLD}"Learn from Maozedong"
+STR_HUANGJIGUANG        : - {GOLD}"Huangjiguang"
 
 STR_BUILD_YEAR          : - According to build year
 STR_YW22_ORIGINAL       : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240
@@ -547,6 +587,7 @@ STR_EARLIER             : - Earlier Livery
 STR_LONGQINGXIA         : - "Longqingxia" Livery
 STR_SANMAO              : - Sanshui-Maoming Railway Livery
 STR_BEIJING2SHANGHAIALT : - Beijing-Shanghai Express Train Livery {BLUE}Blue-{WHITE}-White
+STR_JY                  : - Wrecker Livery
 
 STR_PROTOTYPE           : - Prototype
 STR_JINGTONG            : - Beijing-Tongzhou Livery
