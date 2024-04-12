@@ -26,7 +26,7 @@ item (FEAT_TRAINS, ss7e) {
         cargo_age_period:               185 << param_cargo_decay;
 
         // Stats
-        speed:                          160 km/h;
+        speed:                          170 km/h;
         power:                          4800 kW;
         weight:                         126 ton;
         tractive_effort_coefficient:    0.198;
