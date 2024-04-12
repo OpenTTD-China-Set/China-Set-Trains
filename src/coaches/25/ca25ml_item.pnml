@@ -1,0 +1,59 @@
+item (FEAT_TRAINS, ca25ml) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CA25ML);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1981,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 118;
+        loading_speed:                  4 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          0 hp;
+        weight:                         47.5 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+        bitmask_vehicle_info:           bitmask(1);
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_ca25ml_additional_text;
+        can_attach_wagon:               locowagon;
+        
+        // Graphics
+        default:                        switch_ca25ml_graphics;
+        purchase:                       spriteset_ca25ml_purchase_original;
+        cargo_subtype_text:             switch_ca25ml_cargo_subtype;
+        articulated_part:               switch_ca25ml_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_ca25ml_capacity;
+        cargo_age_period:               (10 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    26;
+        running_cost_factor:            4 * runningcostfactor() + accostfactor() + 50; // IT IS A RESTAURANT CAR!
+        purchase_running_cost_factor:   70;
+        purchase_cargo_capacity:        48/3;
+    }
+}
+
+// End CA25ML
+

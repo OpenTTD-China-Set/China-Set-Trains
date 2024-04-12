@@ -18,6 +18,18 @@ spriteset (spriteset_ca23aircon_beijing2shanghai) {
 alternative_sprites(spriteset_ca23aircon_beijing2shanghai, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "ca23aircon")
 }
+spriteset (spriteset_ca23aircon_alternative) {
+    template_empty ()
+}
+alternative_sprites(spriteset_ca23aircon_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "ca23aircon-alternative")
+}
+spriteset (spriteset_ca23aircon_guangzhou) {
+    template_empty ()
+}
+alternative_sprites(spriteset_ca23aircon_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "ca23aircon-guangzhou")
+}
 
 switch (FEAT_TRAINS, SELF, switch_ca23aircon_articulated_part, extra_callback_info1) {
     1..2: return ca23aircon;
@@ -26,11 +38,15 @@ switch (FEAT_TRAINS, SELF, switch_ca23aircon_articulated_part, extra_callback_in
 
 switch (FEAT_TRAINS, SELF, switch_ca23aircon_cargo_subtype, cargo_subtype) {
     0: return string(STR_BEIJING2SHANGHAI);
+    1: return string(STR_BEIJING2SHANGHAIALT);
+    2: return string(STR_GUANGSHEN);   
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca23aircon_graphics_subtype, cargo_subtype) {
     0: spriteset_ca23aircon_beijing2shanghai;
+    1: spriteset_ca23aircon_alternative;
+    2: spriteset_ca23aircon_guangzhou;
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca23aircon_graphics, position_in_articulated_veh % 3) {

@@ -1,0 +1,38 @@
+// Begin SS7D
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_ss7d_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_ss7d_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-electric","ss7d")
+}
+
+// Vehicle
+spriteset (spriteset_ss7d_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_ss7d_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric","ss7d")
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_ss7d_articulated_part, extra_callback_info1) {
+    1..2: return ss7d;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss7d_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_ss7d_original;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss7d_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss7d_additional_text, param_cargo_decay) {
+    return string(STR_DESC_4, string(STR_FULL_NAME_SS7D), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_SS7D_NICKNAME), string(STR_RELIABILITY_8));
+}

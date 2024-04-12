@@ -1,0 +1,60 @@
+// Begin CA25ML
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_ca25ml_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_ca25ml_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "ca25ml-green")
+}
+
+// Vehicle
+spriteset (spriteset_ca25ml_original) {
+    template_empty ()
+}
+spriteset (spriteset_ca25ml_red) {
+    template_empty ()
+}
+alternative_sprites(spriteset_ca25ml_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "ca25ml-green")
+}
+alternative_sprites(spriteset_ca25ml_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "ca25ml-red")
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25ml_articulated_part, extra_callback_info1) {
+    1..2: return ca25ml;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25ml_cargo_subtype, cargo_subtype) {
+    0: string(STR_BUILD_YEAR);
+    1: string(STR_ORIGINAL);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25ml_graphics_subtype_0, build_year) {
+    0..2002: spriteset_ca25ml_original;
+    spriteset_ca25ml_red;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25ml_graphics_subtype, cargo_subtype) {
+    0: switch_ca25ml_graphics_subtype_0;
+    1: spriteset_ca25ml_original;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25ml_graphics, position_in_articulated_veh % 3) {
+    1: switch_ca25ml_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25ml_capacity, position_in_articulated_veh % 3) {
+    1: return 118;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25ml_additional_text, param_cargo_decay) {
+    return string(STR_DESC_4, string(STR_FULL_NAME_CA25ML), string(STR_CAFE_EFFECT), string(STR_25ML_LIVERY_AVAILABILITY), string(STR_COMFORT_160_CAFE));
+}

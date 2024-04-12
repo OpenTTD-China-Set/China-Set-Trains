@@ -1,0 +1,59 @@
+// Begin PB
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_pb_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_pb_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "pb")
+}
+
+// Vehicle
+spriteset (spriteset_pb_original) {
+    template_empty ()
+}
+alternative_sprites(spriteset_pb_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "pb")
+}
+
+random_switch (FEAT_TRAINS, SELF, random_pb_colour) {
+    1: spriteset_pb_original; // More colours waiting to be added
+}
+
+switch (FEAT_TRAINS, SELF, switch_pb_articulated_part, extra_callback_info1) {
+    1..2: return pb;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_pb_graphics, position_in_articulated_veh % 3) {
+    1: random_pb_colour;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_pb_capacity_cargo, cargo_type_in_veh) {
+    MAIL: return 140;
+    GOOD: return 105;
+    return 70;
+}
+
+switch (FEAT_TRAINS, SELF, switch_pb_capacity, position_in_articulated_veh % 3) {
+    1: switch_pb_capacity_cargo;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_pb_loading_speed, cargo_type_in_veh) {
+    MAIL: return 10;
+    GOOD: return 8;
+    return 6;
+}
+
+switch (FEAT_TRAINS, SELF, switch_pb_decay, cargo_type_in_veh) {
+    LVST: return 560;
+    return 185;
+}
+
+switch (FEAT_TRAINS, SELF, switch_pb_additional_text, param_cargo_decay) {
+    return string(STR_DESC_2, string(STR_PB_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR_NOPASS));
+}

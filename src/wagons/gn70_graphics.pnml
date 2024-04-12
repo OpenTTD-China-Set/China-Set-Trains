@@ -17,9 +17,16 @@ spriteset (spriteset_gn70_black) {
 alternative_sprites(spriteset_gn70_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "gn70")
 }
+spriteset (spriteset_gn70_red) {
+    template_empty ()
+}
+alternative_sprites(spriteset_gn70_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "gn70-red")
+}
 
 random_switch (FEAT_TRAINS, SELF, random_gn70_colour) {
-    1: spriteset_gn70_black; // More colours waiting to be added
+    1: spriteset_gn70_black;
+    1: spriteset_gn70_red;
 }
 
 switch (FEAT_TRAINS, SELF, switch_gn70_articulated_part, extra_callback_info1) {

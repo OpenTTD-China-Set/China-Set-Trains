@@ -1,0 +1,57 @@
+// Begin G17
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_g17_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_g17_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "g17")
+}
+
+// Vehicle
+spriteset (spriteset_g17_grey) {
+    template_empty ()
+}
+alternative_sprites(spriteset_g17_grey, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "g17")
+}
+spriteset (spriteset_g17_red) {
+    template_empty ()
+}
+alternative_sprites(spriteset_g17_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "g17-red")
+}
+spriteset (spriteset_g17_yellow) {
+    template_empty ()
+}
+alternative_sprites(spriteset_g17_yellow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "g17-yellow")
+}
+
+
+random_switch (FEAT_TRAINS, SELF, random_g17_colour) {
+    1: spriteset_g17_grey;
+    1: spriteset_g17_red;
+    1: spriteset_g17_yellow;
+}
+
+switch (FEAT_TRAINS, SELF, switch_g17_articulated_part, extra_callback_info1) {
+    1..2: return g17;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_g17_graphics, position_in_articulated_veh % 3) {
+    1: random_g17_colour;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_g17_capacity, position_in_articulated_veh % 3) {
+    1: return 52;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_g17_additional_text, param_cargo_decay) {
+    return string(STR_DESC_2, string(STR_G17_LIVERY_AVAILABILITY), string(STR_DECAY_185));
+}
