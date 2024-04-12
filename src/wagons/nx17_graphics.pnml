@@ -92,6 +92,36 @@ spriteset (spriteset_nx17_black_vehicle_tractor_full) {
 spriteset (spriteset_nx17_black_vehicle_tractor_half) {
     template_empty ()
 }
+spriteset (spriteset_nx17_black_car_blue_full) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_black_car_blue_half) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_black_car_brown_full) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_black_car_brown_half) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_black_car_grey_full) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_black_car_grey_half) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_black_car_red_full) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_black_car_red_half) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_black_car_white_full) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_black_car_white_half) {
+    template_empty ()
+}
 spriteset (spriteset_nx17_black_open_container_cr_livery_empty) {
     template_empty ()
 }
@@ -213,6 +243,36 @@ spriteset (spriteset_nx17_brown_vehicle_tractor_full) {
     template_empty ()
 }
 spriteset (spriteset_nx17_brown_vehicle_tractor_half) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_brown_car_blue_full) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_brown_car_blue_half) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_brown_car_brown_full) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_brown_car_brown_half) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_brown_car_grey_full) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_brown_car_grey_half) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_brown_car_red_full) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_brown_car_red_half) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_brown_car_white_full) {
+    template_empty ()
+}
+spriteset (spriteset_nx17_brown_car_white_half) {
     template_empty ()
 }
 spriteset (spriteset_nx17_brown_open_container_cr_livery_empty) {
@@ -338,6 +398,36 @@ alternative_sprites(spriteset_nx17_black_vehicle_tractor_full, ZOOM_LEVEL_IN_4X,
 alternative_sprites(spriteset_nx17_black_vehicle_tractor_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-vehicle-tractor-half")
 }
+alternative_sprites(spriteset_nx17_black_car_blue_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-car-blue-full")
+}
+alternative_sprites(spriteset_nx17_black_car_blue_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-car-blue-half")
+}
+alternative_sprites(spriteset_nx17_black_car_brown_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-car-brown-full")
+}
+alternative_sprites(spriteset_nx17_black_car_brown_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-car-brown-half")
+}
+alternative_sprites(spriteset_nx17_black_car_grey_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-car-grey-full")
+}
+alternative_sprites(spriteset_nx17_black_car_grey_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-car-grey-half")
+}
+alternative_sprites(spriteset_nx17_black_car_red_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-car-red-full")
+}
+alternative_sprites(spriteset_nx17_black_car_red_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-car-red-half")
+}
+alternative_sprites(spriteset_nx17_black_car_white_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-car-white-full")
+}
+alternative_sprites(spriteset_nx17_black_car_white_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-car-white-half")
+}
 alternative_sprites(spriteset_nx17_black_open_container_cr_livery_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-open-container-cr-livery-empty")
 }
@@ -460,6 +550,36 @@ alternative_sprites(spriteset_nx17_brown_vehicle_tractor_full, ZOOM_LEVEL_IN_4X,
 }
 alternative_sprites(spriteset_nx17_brown_vehicle_tractor_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-vehicle-tractor-half")
+}
+alternative_sprites(spriteset_nx17_brown_car_blue_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-brown-car-blue-full")
+}
+alternative_sprites(spriteset_nx17_brown_car_blue_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-brown-car-blue-half")
+}
+alternative_sprites(spriteset_nx17_brown_car_brown_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-brown-car-brown-full")
+}
+alternative_sprites(spriteset_nx17_brown_car_brown_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-brown-car-brown-half")
+}
+alternative_sprites(spriteset_nx17_brown_car_grey_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-brown-car-grey-full")
+}
+alternative_sprites(spriteset_nx17_brown_car_grey_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-brown-car-grey-half")
+}
+alternative_sprites(spriteset_nx17_brown_car_red_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-brown-car-red-full")
+}
+alternative_sprites(spriteset_nx17_brown_car_red_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-brown-car-red-half")
+}
+alternative_sprites(spriteset_nx17_brown_car_white_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-brown-car-white-full")
+}
+alternative_sprites(spriteset_nx17_brown_car_white_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx17-brown-car-white-half")
 }
 alternative_sprites(spriteset_nx17_brown_open_container_cr_livery_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-open-container-cr-livery-empty")
@@ -641,12 +761,22 @@ random_switch (FEAT_TRAINS, SELF, switch_nx17_black_vehicle_half) {
     1: spriteset_nx17_black_vehicle_bulldozer_half;
     1: spriteset_nx17_black_vehicle_excavator;
     1: spriteset_nx17_black_vehicle_tractor_half;
+    1: spriteset_nx17_black_car_blue_half;
+    1: spriteset_nx17_black_car_brown_half;
+    1: spriteset_nx17_black_car_grey_half;
+    1: spriteset_nx17_black_car_red_half;
+    1: spriteset_nx17_black_car_white_half;
 }
 
 random_switch (FEAT_TRAINS, SELF, switch_nx17_black_vehicle_full) {
     1: spriteset_nx17_black_vehicle_bulldozer_full;
     1: spriteset_nx17_black_vehicle_excavator;
     1: spriteset_nx17_black_vehicle_tractor_full;
+    1: spriteset_nx17_black_car_blue_full;
+    1: spriteset_nx17_black_car_brown_full;
+    1: spriteset_nx17_black_car_grey_full;
+    1: spriteset_nx17_black_car_red_full;
+    1: spriteset_nx17_black_car_white_full;
 }
 
 switch (FEAT_TRAINS, SELF, switch_nx17_black_vehicle_not_empty, cargo_count < 32) {
@@ -999,12 +1129,22 @@ random_switch (FEAT_TRAINS, SELF, switch_nx17_brown_vehicle_half) {
     1: spriteset_nx17_brown_vehicle_bulldozer_half;
     1: spriteset_nx17_brown_vehicle_excavator;
     1: spriteset_nx17_brown_vehicle_tractor_half;
+    1: spriteset_nx17_brown_car_blue_half;
+    1: spriteset_nx17_brown_car_brown_half;
+    1: spriteset_nx17_brown_car_grey_half;
+    1: spriteset_nx17_brown_car_red_half;
+    1: spriteset_nx17_brown_car_white_half;
 }
 
 random_switch (FEAT_TRAINS, SELF, switch_nx17_brown_vehicle_full) {
     1: spriteset_nx17_brown_vehicle_bulldozer_full;
     1: spriteset_nx17_brown_vehicle_excavator;
     1: spriteset_nx17_brown_vehicle_tractor_full;
+    1: spriteset_nx17_brown_car_blue_full;
+    1: spriteset_nx17_brown_car_brown_full;
+    1: spriteset_nx17_brown_car_grey_full;
+    1: spriteset_nx17_brown_car_red_full;
+    1: spriteset_nx17_brown_car_white_full;
 }
 
 switch (FEAT_TRAINS, SELF, switch_nx17_brown_vehicle_not_empty, cargo_count < 32) {

@@ -47,6 +47,11 @@ STR_NAME_CA23AIRCON     :CA23 (餐车) (加装空调)
 STR_NAME_YZ22B          :YZ22B (客车)
 STR_NAME_YW22B          :YW22B (客车)
 STR_NAME_RW22B          :RW22B (客车)
+STR_NAME_YZ25ML         :YZ25ML (客车)
+STR_NAME_RZ25ML         :RZ25ML (客车)
+STR_NAME_YW25ML         :YW25ML (客车)
+STR_NAME_RW25ML         :RW25ML (客车)
+STR_NAME_CA25ML         :CA25ML (客车)
 STR_NAME_YZ25B          :YZ25B (客车)
 STR_NAME_RZ25B          :RZ25B (客车)
 STR_NAME_YW25B          :YW25B (客车)
@@ -92,6 +97,7 @@ STR_NAME_RW25T          :RW25T (客车)
 STR_NAME_CA25T          :CA25T (餐车)
 STR_NAME_YZ31           :YZ31 (客车)
 STR_NAME_XL22           :XL22 (行李车)
+STR_NAME_XL25ML         :XL25ML (行李车)
 STR_NAME_XL25B          :XL25B (行李车)
 STR_NAME_XL25G          :XL25G (行李车)
 STR_NAME_XL25K          :XL25K (行李车)
@@ -101,6 +107,7 @@ STR_NAME_XL25T          :XL25T (行李车)
 STR_NAME_XL25T_SSPE     :XL25T-SSPE (行李车)
 STR_NAME_UZ22           :UZ22 (行李车)
 STR_NAME_TZ             :TZ (空调发电车)
+STR_NAME_TZ2            :TZ2 (空调发电车)
 STR_NAME_KD25G          :KD25G (空调发电车)
 STR_NAME_KD25K          :KD25K (空调发电车)
 STR_NAME_KD25Z          :KD25Z (空调发电车)
@@ -116,19 +123,26 @@ STR_NAME_C62            :C62 (敞车)
 STR_NAME_C64            :C64 (敞车)
 STR_NAME_C70            :C70 (敞车)
 STR_NAME_P60            :P60 (棚车)
+STR_NAME_P61            :P61 (棚车)
 STR_NAME_P62            :P62 (棚车)
+STR_NAME_P63            :P63 (棚车)
 STR_NAME_P70            :P70 (棚车)
+STR_NAME_PB             :PB (棚车)
 STR_NAME_B6             :B6 (保温车)
 STR_NAME_B22            :B22 (保温车)
+STR_NAME_G17            :G17 (罐车)
 STR_NAME_G50            :G50 (罐车)
 STR_NAME_G60            :G60 (罐车)
 STR_NAME_GN70           :GN70 (罐车)
+STR_NAME_GN80           :GN80 (罐车)
 STR_NAME_N60            :N60 (平车)
 STR_NAME_NX17           :NX17 (平车)
 STR_NAME_NX70A          :NX70A (平车)
 STR_NAME_JSQ5           :JSQ5 (汽车运输车)
 STR_NAME_JSQ6           :JSQ6 (汽车运输车)
 STR_NAME_L70            :L70 (粮食漏斗车)
+
+STR_NAME_SY             :SY (蒸汽)
 
 STR_NAME_DF             :DF (内燃)
 STR_NAME_DF4K           :DF4 (内燃) (客运型)
@@ -154,7 +168,9 @@ STR_NAME_DF8B           :DF8B (内燃)
 STR_NAME_DF11           :DF11 (内燃)
 STR_NAME_DF11G          :DF11G (内燃)
 STR_NAME_DF11Z          :DF11Z (内燃)
+STR_NAME_ND5            :ND5 (内燃)
 STR_NAME_NJ2            :NJ2 (内燃)
+STR_NAME_HXN5           :HXN5 (内燃)
 STR_NAME_HXN5B          :HXN5B (内燃)
 STR_NAME_SS1            :SS1/6Y1 (电力)
 STR_NAME_SS3            :SS3 (电力)
@@ -167,8 +183,11 @@ STR_NAME_SS6B           :SS6B (电力)
 STR_NAME_SS7            :SS7 (电力)
 STR_NAME_SS7B           :SS7B (电力)
 STR_NAME_SS7C           :SS7C (电力)
+STR_NAME_SS7D           :SS7D (电力)
 STR_NAME_SS7E           :SS7E (电力)
 STR_NAME_SS8            :SS8 (电力)
+STR_NAME_SS9            :SS9 (电力)
+STR_NAME_SS9G           :SS9G (电力)
 STR_NAME_6Y2            :6Y2 (电力)
 STR_NAME_HXD1           :HXD1 (电力)
 STR_NAME_HXD11000       :HXD1-1000 (电力)
@@ -230,6 +249,11 @@ STR_FULL_NAME_CA23AIRCON     :{BLACK}全称：{GOLD}23型餐车 (加装空调)
 STR_FULL_NAME_YZ22B          :{BLACK}全称：{GOLD}22B型硬座客车
 STR_FULL_NAME_YW22B          :{BLACK}全称：{GOLD}22B型硬卧客车
 STR_FULL_NAME_RW22B          :{BLACK}全称：{GOLD}22B型软卧客车
+STR_FULL_NAME_YZ25ML         :{BLACK}全称：{GOLD}干线25型硬座客车
+STR_FULL_NAME_RZ25ML         :{BLACK}全称：{GOLD}干线25型软座客车
+STR_FULL_NAME_YW25ML         :{BLACK}全称：{GOLD}干线25型硬卧客车
+STR_FULL_NAME_RW25ML         :{BLACK}全称：{GOLD}干线25型软卧客车
+STR_FULL_NAME_CA25ML         :{BLACK}全称：{GOLD}干线25型餐车
 STR_FULL_NAME_YZ25B          :{BLACK}全称：{GOLD}25米标准型硬座客车
 STR_FULL_NAME_RZ25B          :{BLACK}全称：{GOLD}25米标准型软座客车
 STR_FULL_NAME_YW25B          :{BLACK}全称：{GOLD}25米标准型硬卧客车
@@ -273,12 +297,14 @@ STR_FULL_NAME_RW25T          :{BLACK}全称：{GOLD}25米提速型软卧客车
 STR_FULL_NAME_CA25T          :{BLACK}全称：{GOLD}25米提速型餐车
 STR_FULL_NAME_YZ31           :{BLACK}全称：{GOLD}31型硬座客车
 STR_FULL_NAME_XL22           :{BLACK}全称：{GOLD}22型行李车
-STR_FULL_NAME_XL25B          :{BLACK}全称：{GOLD}25米标准型行李车
+STR_FULL_NAME_XL25B          :{BLACK}全称：{GOLD}干线25型行李车
+STR_FULL_NAME_XL25ML         :{BLACK}全称：{GOLD}25米标准型行李车
 STR_FULL_NAME_XL25G          :{BLACK}全称：{GOLD}25米改进型行李车
 STR_FULL_NAME_XL25K          :{BLACK}全称：{GOLD}25米快速型行李车
 STR_FULL_NAME_XL25T          :{BLACK}全称：{GOLD}25米提速型行李车
 STR_FULL_NAME_UZ22           :{BLACK}全称：{GOLD}22型邮政车
 STR_FULL_NAME_TZ             :{BLACK}全称：{GOLD}特种车
+STR_FULL_NAME_TZ2            :{BLACK}全称：{GOLD}2型特种车
 STR_FULL_NAME_KD25G          :{BLACK}全称：{GOLD}25米改进型空调发电车
 STR_FULL_NAME_KD25K          :{BLACK}全称：{GOLD}25米快速型空调发电车
 STR_FULL_NAME_KD25Z          :{BLACK}全称：{GOLD}25米准高速空调发电车
@@ -289,6 +315,8 @@ STR_FULL_NAME_YW25DT_JINLUN  :{BLACK}全称：{GOLD}“金轮号”内燃动车�
 STR_FULL_NAME_RW25DT_JINLUN  :{BLACK}全称：{GOLD}“金轮号”内燃动车组25米单层软卧拖车
 STR_FULL_NAME_SYZ25DT_JINLUN :{BLACK}全称：{GOLD}“金轮号”内燃动车组25米双层硬座拖车
 STR_FULL_NAME_SRZ25DT_JINLUN :{BLACK}全称：{GOLD}“金轮号”内燃动车组25米双层软座拖车
+
+STR_FULL_NAME_SY             :{BLACK}全称：{GOLD}上游型蒸汽机车
 
 STR_FULL_NAME_DF             :{BLACK}全称：{GOLD}东风型内燃机车
 STR_FULL_NAME_DF4            :{BLACK}全称：{GOLD}东风4型内燃机车
@@ -307,6 +335,8 @@ STR_FULL_NAME_DF8B           :{BLACK}全称：{GOLD}东风8B型内燃机车
 STR_FULL_NAME_DF11           :{BLACK}全称：{GOLD}东风11型内燃机车
 STR_FULL_NAME_DF11G          :{BLACK}全称：{BLUE}东风11G型{WHITE}内燃机车
 STR_FULL_NAME_DF11Z          :{BLACK}全称：{GOLD}东风11Z型内燃机车
+STR_FULL_NAME_ND5            :{BLACK}全称：{GOLD}内电5型内燃机车
+STR_FULL_NAME_HXN5           :{BLACK}全称：{GOLD}和谐内5型内燃机车
 STR_FULL_NAME_HXN5B          :{BLACK}全称：{GOLD}和谐内5B型内燃机车
 STR_FULL_NAME_SS1            :{BLACK}全称：{GOLD}韶山1型电力机车,1968年前曾命名为6Y1型电力机车
 STR_FULL_NAME_SS3            :{BLACK}全称：{GOLD}韶山3型电力机车
@@ -319,8 +349,11 @@ STR_FULL_NAME_SS6B           :{BLACK}全称：{GOLD}韶山6B型电力机车
 STR_FULL_NAME_SS7            :{BLACK}全称：{GOLD}韶山7型电力机车
 STR_FULL_NAME_SS7B           :{BLACK}全称：{GOLD}韶山7B型电力机车
 STR_FULL_NAME_SS7C           :{BLACK}全称：{GOLD}韶山7C型电力机车
+STR_FULL_NAME_SS7D           :{BLACK}全称：{GOLD}韶山7D型电力机车
 STR_FULL_NAME_SS7E           :{BLACK}全称：{GOLD}韶山7E型电力机车
 STR_FULL_NAME_SS8            :{BLACK}全称：{GOLD}韶山8型电力机车
+STR_FULL_NAME_SS9            :{BLACK}全称：{GOLD}韶山9型电力机车
+STR_FULL_NAME_SS9G           :{BLACK}全称：{GOLD}韶山9G型电力机车
 STR_FULL_NAME_HXD1           :{BLACK}全称：{GOLD}和谐1型电力机车
 STR_FULL_NAME_HXD11000       :{BLACK}全称：{GOLD}和谐1型电力机车1000系
 STR_FULL_NAME_HXD1B          :{BLACK}全称：{GOLD}和谐1B型电力机车
@@ -380,15 +413,21 @@ STR_TZ_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{ORANGE}橙�
 STR_KD25K_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{LTBLUE}沪芦列车{GOLD}涂装，西安铁路局涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}目前仅有广九铁路子涂装
 STR_25DT_JINLUN_LIVERY_AVAILABILITY :{BLACK}可供选择的涂装: {GOLD}早期涂装 (2010年之前)，晚期涂装(2010年以后)
+STR_25ML_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装: {GOLD}白底绿带涂装，类25G红色涂装 (2003年以后)
 
+STR_G17_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GRAY}黑色{GOLD}加随机颜色条带 (未完成)
 STR_G60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带 (未完成)
 STR_GN70_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{BLACK}黑色{GOLD}加随机颜色条带 (未完成)
+STR_GN80_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{BLACK}黑色{GOLD}加随机颜色条带 (未完成)
 STR_C62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_C70_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_P60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
+STR_P61_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_P62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (黑色，蓝色，铁锈色，棕色)
+STR_P63_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (黑色，铁锈色，棕色)
 STR_P70_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
+STR_PB_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_N60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_NX17_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}随机（黑色，棕色）
 STR_NX70A_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{GOLD}仅黑色
@@ -405,6 +444,7 @@ STR_DFH7B_NICKNAME                  :{BLACK}作为厂矿调机运用于攀枝花
 STR_DF8B_NICKNAME                   :{BLACK}昵称: {GOLD}芭比
 STR_DF11_NICKNAME                   :{BLACK}昵称: {GOLD}狮子
 STR_DF11G_NICKNAME                  :{BLACK}昵称: {GOLD}猪
+STR_HXN5_NICKNAME                   :{BLACK}昵称: {GOLD}蚱蜢
 STR_HXN5B_NICKNAME                  :{BLACK}昵称: {GOLD}番茄炒蛋
 STR_SS1_NICKNAME                    :{BLACK}昵称: {BLUE}芍药
 STR_SS3_NICKNAME                    :{BLACK}昵称: {GOLD}三哥 (前期), 三爷 (老化后)
@@ -417,8 +457,11 @@ STR_SS6B_NICKNAME                   :{BLACK}昵称: {GOLD}燕小六
 STR_SS7_NICKNAME                    :{BLACK}简介: {GOLD}为山区小转弯半径线路设计的通用电力机车，最大的特点是使用了B0-B0-B0轴式转向架布局。{BLACK}昵称{GOLD}烧鸡
 STR_SS7B_NICKNAME                   :{BLACK}简介: {GOLD}试制型25t轴重干线重载货运电力机车，产量仅2台，其中0001号机车于2005年因山体滑坡事故报废。{BLACK}昵称{GOLD}大脸猫
 STR_SS7C_NICKNAME                   :{BLACK}简介: {GOLD}客货运两用干线电力机车，昵称大脸猫（原版涂装）、{YELLOW}香蕉（黄色涂装）
+STR_SS7D_NICKNAME                   :{BLACK}昵称：{GOLD}金刚
 STR_SS7E_NICKNAME                   :{BLACK}简介: {GOLD}准高速干线电力机车，{BLACK}昵称{GOLD}美女
 STR_SS8_NICKNAME                    :{BLACK}昵称: {GOLD}扫把
+STR_SS9_NICKNAME                    :{BLACK}昵称：{GOLD}青蛙
+STR_SS9G_NICKNAME                   :{BLACK}昵称：{GOLD}烧酒
 STR_HXD1_NICKNAME                   :{BLACK}昵称: {GOLD}蓝精灵
 STR_HXD1B_NICKNAME                  :{BLACK}昵称: {GOLD}河蟹
 STR_HXD1D_NICKNAME                  :{BLACK}昵称: {GOLD}红枣
@@ -506,6 +549,7 @@ STR_WUJING              : - {GOLD}“武警”涂装
 STR_DF43110             : - {GOLD}系大{RED}红{GOLD}花的DF43110号机车
 STR_DONGBEI             : - {GOLD}东北地区适用过的涂装
 STR_MZD                 : - {GOLD}丰台机务段“学习毛泽东号模范机车组”
+STR_HUANGJIGUANG        : - {GOLD}“黄继光号”
 
 STR_BUILD_YEAR          : - 根据建造年份选择设计
 STR_YW22_ORIGINAL       : - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
@@ -535,6 +579,7 @@ STR_EARLIER             : - 早期涂装
 STR_LONGQINGXIA         : - 龙庆峡号涂装
 STR_SANMAO              : - 三茂铁路涂装
 STR_BEIJING2SHANGHAIALT : - 北京至上海21/22次直快涂装
+STR_JY                  : - 救援涂装
 
 STR_PROTOTYPE           : - 原型
 STR_JINGTONG            : - 京通号涂装
