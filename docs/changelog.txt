@@ -5,6 +5,10 @@ China Set: Trains Changelog
 
 ## Initial-0-2 Updates
 
+0.2.3.158 (14/4/2024)
+--------------------
+Fix #43: Jinlun MU cars not capable of 160 km/h when attaching on Jinlun 
+
 0.2.2.157 (11/4/2024)
 --------------------
 Add: SS7D, SS9, SS9G, ND5, HXN5, 25 Mainline Coach (YZ25ML, YW25ML, RW25ML, CA25ML, XL25ML, TZ2), G17, GN80, P61, P63, PB
