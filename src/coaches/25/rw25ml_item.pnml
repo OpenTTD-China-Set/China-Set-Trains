@@ -25,7 +25,7 @@ item (FEAT_TRAINS, rw25ml) {
         cargo_age_period:               444 << param_cargo_decay;
 
         // Stats
-        speed:                          140 km/h;
+        speed:                          120 km/h;
         power:                          0 hp;
         weight:                         47.3 ton;
         cost_factor:                    13;

@@ -1,7 +1,7 @@
 item (FEAT_TRAINS, tz2) {
     property {
         // Menu
-        name:                           string(STR_NAME_KD25K);
+        name:                           string(STR_NAME_TZ2);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         
@@ -46,7 +46,7 @@ item (FEAT_TRAINS, tz2) {
 
         // Stats
         length:                         switch_length_2_7_2;
-        cargo_capacity:                 switch_tz2_capacity;
+        cargo_capacity:                 0;
         cargo_age_period:               200 << param_cargo_decay;
         cost_factor:                    23;
         running_cost_factor:            6 * runningcostfactor() + 20;

@@ -9,7 +9,7 @@ China Set: Trains Changelog
 --------------------
 Add: SS7D, SS9, SS9G, ND5, HXN5, 25 Mainline Coach (YZ25ML, YW25ML, RW25ML, CA25ML, XL25ML, TZ2), G17, GN80, P61, P63, PB
 Add Alternative Livery: 22 Coach (Air-conditioned), XL25B, YZ22, GN70, NX17, NX70A
-Fix #42: SS7E 160km/h→170km/h
+Fix #42: SS7E 160km/h -> 170km/h
 
 0.2.2.156 (7/4/2024)
 --------------------
