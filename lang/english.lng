@@ -171,7 +171,7 @@ STR_NAME_ND5            :ND5 (Diesel)
 STR_NAME_NJ2            :NJ2 (Diesel)
 STR_NAME_HXN5           :HXN5 (Diesel)
 STR_NAME_HXN5B          :HXN5B (Diesel)
-STR_NAME_SS1            :6Y1/SS1 (Electric)
+STR_NAME_SS1            :SS1 (Electric)
 STR_NAME_SS3            :SS3 (Electric)
 STR_NAME_SS3B           :SS3B (Electric)
 STR_NAME_SS4            :SS4 (Electric)
@@ -192,9 +192,9 @@ STR_NAME_HXD1           :HXD1 (Electric)
 STR_NAME_HXD11000       :HXD1-1000 (Electric)
 STR_NAME_HXD1B          :HXD1B (Electric)
 STR_NAME_HXD1D          :HXD1D (Electric)
-STR_NAME_HXD1F          :HXD1F/FXD1B (Electric)
 STR_NAME_HXD3C          :HXD3C (Electric)
 STR_NAME_HXD3D          :HXD3D (Electric)
+STR_NAME_FXD1B          :FXD1B (Electric)
 
 STR_NAME_NZJ1_XINSHUGUANG           :NZJ1 "Xinshuguang" (DMU)
 STR_NAME_NZJ2_JINLUN_UNILAMINAR     :NZJ2 "Jinlun" (UNILAMINAR) (DMU)
@@ -340,7 +340,7 @@ STR_FULL_NAME_DF11Z          :{BLACK}Full Name: {GOLD}Dongfeng 11Z Diesel Locomo
 STR_FULL_NAME_ND5            :{BLACK}Full Name: {GOLD}Neidian 5 Diesel Locomotive
 STR_FULL_NAME_HXN5           :{BLACK}Full Name: {GOLD}Hexie 5 Diesel Locomotive
 STR_FULL_NAME_HXN5B          :{BLACK}Full Name: {GOLD}Hexie 5B Diesel Locomotive
-STR_FULL_NAME_SS1            :{BLACK}Full Name: {GOLD}Shaoshan 1 Electric Locomotive (before 1968){}           6-Axle Ignitron 1-Type Electric Locomotive
+STR_FULL_NAME_SS1            :{BLACK}Full Name: {GOLD}Shaoshan 1 Electric Locomotive
 STR_FULL_NAME_SS3            :{BLACK}Full Name: {GOLD}Shaoshan 3 Electric Locomotive
 STR_FULL_NAME_SS3B           :{BLACK}Full Name: {GOLD}Shaoshan 3B Electric Locomotive
 STR_FULL_NAME_SS4            :{BLACK}Full Name: {GOLD}Shaoshan 4 Electric Locomotive
@@ -360,7 +360,7 @@ STR_FULL_NAME_HXD1           :{BLACK}Full Name: {GOLD}Hexie/Harmony 1 Electric L
 STR_FULL_NAME_HXD11000       :{BLACK}Full Name: {GOLD}Hexie/Harmony 1 Electric Locomotive 1000 Series
 STR_FULL_NAME_HXD1B          :{BLACK}Full Name: {GOLD}Hexie/Harmony 1B Electric Locomotive
 STR_FULL_NAME_HXD1D          :{BLACK}Full Name: {GOLD}Hexie/Harmony 1D Electric Locomotive
-STR_FULL_NAME_HXD1F          :{BLACK}Full Name: {GOLD}Hexie/Harmony 1F Electric Locomotive (before 2018){}           Fuxing/Revival 1B Electric Locomotive (after 2018)
+STR_FULL_NAME_FXD1B          :{BLACK}Full Name: {GOLD}Fuxing/Revival 1B Electric Locomotive
 STR_FULL_NAME_HXD3C          :{BLACK}Full Name: {GOLD}Hexie/Harmony 3C Electric Locomotive
 STR_FULL_NAME_HXD3D          :{BLACK}Full Name: {GOLD}Hexie/Harmony 3D Electric Locomotive
 
@@ -495,6 +495,8 @@ STR_CR400BF_NICKNAME                :{BLACK}Nickname: {GOLD}Golden Phoenix
 STR_CR300BF_NICKNAME                :{BLACK}Nickname: {LTBLUE}"Blue Antidote" {GOLD}(Official), {LTBLUE}"Zoombie Blue" {GOLD}(Folk)
 
 STR_ALIASNAME_DF                    :{BLACK}Alias Name: {GOLD}Great Loong
+STR_ALIASNME_SS1                    :{BLACK}Alias Name: {GOLD}6Y1
+STR_ALIASNAME_FXD1B                 :{BLACK}Alias Name: {GOLD}HXD1F (Hexie/Harmony 1F Electric Locomotive)
 
 STR_RELIABILITY_32                  :{BLACK}Reliability decay speed: {GOLD}32
 STR_RELIABILITY_24                  :{BLACK}Reliability decay speed: {GOLD}24
