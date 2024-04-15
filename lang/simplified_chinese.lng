@@ -47,11 +47,11 @@ STR_NAME_CA23AIRCON     :CA23 (餐车) (加装空调)
 STR_NAME_YZ22B          :YZ22B (客车)
 STR_NAME_YW22B          :YW22B (客车)
 STR_NAME_RW22B          :RW22B (客车)
-STR_NAME_YZ25ML         :YZ25ML (客车)
-STR_NAME_RZ25ML         :RZ25ML (客车)
-STR_NAME_YW25ML         :YW25ML (客车)
-STR_NAME_RW25ML         :RW25ML (客车)
-STR_NAME_CA25ML         :CA25ML (客车)
+STR_NAME_YZ25ML         :YZ25 (干线) (客车)
+STR_NAME_RZ25ML         :RZ25 (干线) (客车)
+STR_NAME_YW25ML         :YW25 (干线) (客车)
+STR_NAME_RW25ML         :RW25 (干线) (客车)
+STR_NAME_CA25ML         :CA25 (干线) (客车)
 STR_NAME_YZ25B          :YZ25B (客车)
 STR_NAME_RZ25B          :RZ25B (客车)
 STR_NAME_YW25B          :YW25B (客车)
@@ -97,7 +97,7 @@ STR_NAME_RW25T          :RW25T (客车)
 STR_NAME_CA25T          :CA25T (餐车)
 STR_NAME_YZ31           :YZ31 (客车)
 STR_NAME_XL22           :XL22 (行李车)
-STR_NAME_XL25ML         :XL25ML (行李车)
+STR_NAME_XL25ML         :XL25 (干线) (行李车)
 STR_NAME_XL25B          :XL25B (行李车)
 STR_NAME_XL25G          :XL25G (行李车)
 STR_NAME_XL25K          :XL25K (行李车)
@@ -172,7 +172,7 @@ STR_NAME_ND5            :ND5 (内燃)
 STR_NAME_NJ2            :NJ2 (内燃)
 STR_NAME_HXN5           :HXN5 (内燃)
 STR_NAME_HXN5B          :HXN5B (内燃)
-STR_NAME_SS1            :SS1/6Y1 (电力)
+STR_NAME_SS1            :SS1 (电力)
 STR_NAME_SS3            :SS3 (电力)
 STR_NAME_SS3B           :SS3B (电力)
 STR_NAME_SS4            :SS4 (电力)
@@ -326,6 +326,7 @@ STR_FULL_NAME_DF4C           :{BLACK}全称：{GOLD}东风4C型内燃机车
 STR_FULL_NAME_DF4D           :{BLACK}全称：{GOLD}东风4D型内燃机车
 STR_FULL_NAME_DF4D7000       :{BLACK}全称：{GOLD}东风4D型内燃机车7000系
 STR_FULL_NAME_DF4DF          :{BLACK}全称：{GOLD}东风4DF型内燃机车
+STR_FULL_NAME_DF4E           :{BLACK}全称：{GOLD}东风4E型内燃机车
 STR_FULL_NAME_DF7G           :{BLACK}全称：{GOLD}东风7G型内燃机车
 STR_FULL_NAME_DF7G5000       :{BLACK}全称：{GOLD}东风7G型内燃机车5000系
 STR_FULL_NAME_DF7G8000       :{BLACK}全称：{GOLD}东风7G型内燃机车8000系
@@ -338,7 +339,7 @@ STR_FULL_NAME_DF11Z          :{BLACK}全称：{GOLD}东风11Z型内燃机车
 STR_FULL_NAME_ND5            :{BLACK}全称：{GOLD}内电5型内燃机车
 STR_FULL_NAME_HXN5           :{BLACK}全称：{GOLD}和谐内5型内燃机车
 STR_FULL_NAME_HXN5B          :{BLACK}全称：{GOLD}和谐内5B型内燃机车
-STR_FULL_NAME_SS1            :{BLACK}全称：{GOLD}韶山1型电力机车,1968年前曾命名为6Y1型电力机车
+STR_FULL_NAME_SS1            :{BLACK}全称：{GOLD}韶山1型电力机车
 STR_FULL_NAME_SS3            :{BLACK}全称：{GOLD}韶山3型电力机车
 STR_FULL_NAME_SS3B           :{BLACK}全称：{GOLD}韶山3B型电力机车
 STR_FULL_NAME_SS4            :{BLACK}全称：{GOLD}韶山4型电力机车
@@ -358,9 +359,9 @@ STR_FULL_NAME_HXD1           :{BLACK}全称：{GOLD}和谐1型电力机车
 STR_FULL_NAME_HXD11000       :{BLACK}全称：{GOLD}和谐1型电力机车1000系
 STR_FULL_NAME_HXD1B          :{BLACK}全称：{GOLD}和谐1B型电力机车
 STR_FULL_NAME_HXD1D          :{BLACK}全称：{GOLD}和谐1D型电力机车
-STR_FULL_NAME_HXD1F          :{BLACK}全称：{GOLD}和谐1F型电力机车,2018年改名为复兴电1B型电力机车
 STR_FULL_NAME_HXD3C          :{BLACK}全称：{GOLD}和谐3C型电力机车
 STR_FULL_NAME_HXD3D          :{BLACK}全称：{GOLD}和谐3D型电力机车
+STR_FULL_NAME_FXD1B          :{BLACK}全称：{GOLD}复兴1B型电力机车
 
 STR_US_IMPORT                :美国进口车型
 STR_FR_IMPORT                :法国进口车型
@@ -429,7 +430,7 @@ STR_P63_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机
 STR_P70_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_PB_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_N60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
-STR_NX17_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}随机（黑色，棕色）
+STR_NX17_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}随机(黑色，棕色)
 STR_NX70A_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{GOLD}仅黑色
 
 STR_DF_NICKNAME                     :{BLACK}昵称：{GOLD}老东风
@@ -456,7 +457,7 @@ STR_SS6_NICKNAME                    :{GOLD}在SS3型电力机车的基础上，�
 STR_SS6B_NICKNAME                   :{BLACK}昵称: {GOLD}燕小六
 STR_SS7_NICKNAME                    :{BLACK}简介: {GOLD}为山区小转弯半径线路设计的通用电力机车，最大的特点是使用了B0-B0-B0轴式转向架布局。{BLACK}昵称{GOLD}烧鸡
 STR_SS7B_NICKNAME                   :{BLACK}简介: {GOLD}试制型25t轴重干线重载货运电力机车，产量仅2台，其中0001号机车于2005年因山体滑坡事故报废。{BLACK}昵称{GOLD}大脸猫
-STR_SS7C_NICKNAME                   :{BLACK}简介: {GOLD}客货运两用干线电力机车，昵称大脸猫（原版涂装）、{YELLOW}香蕉（黄色涂装）
+STR_SS7C_NICKNAME                   :{BLACK}简介: {GOLD}客货运两用干线电力机车，昵称大脸猫(原版涂装)、{YELLOW}香蕉(黄色涂装)
 STR_SS7D_NICKNAME                   :{BLACK}昵称：{GOLD}金刚
 STR_SS7E_NICKNAME                   :{BLACK}简介: {GOLD}准高速干线电力机车，{BLACK}昵称{GOLD}美女
 STR_SS8_NICKNAME                    :{BLACK}昵称: {GOLD}扫把
@@ -487,6 +488,8 @@ STR_CR400BF_NICKNAME                :{BLACK}昵称：{GOLD}金凤凰
 STR_CR300BF_NICKNAME                :{BLACK}昵称：{LTBLUE}“蓝暖男”{GOLD}(官方),，{LTBLUE}“僵尸蓝”{GOLD}(民间)
 
 STR_ALIASNAME_DF                    :{BLACK}别名: {GOLD}巨龙，ND
+STR_ALIASNME_SS1                    :{BLACK}曾用名: {GOLD}6Y1
+STR_ALIASNAME_FXD1B                 :{BLACK}曾用名: {GOLD}HXD1F(和谐1F型电力机车)
 
 STR_RELIABILITY_32                  :{BLACK}可靠性下降速度：{GOLD}32
 STR_RELIABILITY_24                  :{BLACK}可靠性下降速度：{GOLD}24

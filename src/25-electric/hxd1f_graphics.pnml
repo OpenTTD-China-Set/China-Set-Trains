@@ -79,5 +79,5 @@ switch (FEAT_TRAINS, SELF, switch_hxd1f_capacity, position_in_articulated_veh % 
 }
 
 switch (FEAT_TRAINS, SELF, switch_hxd1f_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_FULL_NAME_HXD1F), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8));
+    return string(STR_DESC_3, string(STR_FULL_NAME_FXD1B), string(STR_ALIASNAME_FXD1B), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8));
 }

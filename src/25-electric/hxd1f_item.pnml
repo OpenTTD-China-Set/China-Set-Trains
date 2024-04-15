@@ -1,7 +1,7 @@
 item (FEAT_TRAINS, hxd1f) {
     property {
         // Menu
-        name:                           string(STR_NAME_HXD1F);
+        name:                           string(STR_NAME_FXD1B);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
