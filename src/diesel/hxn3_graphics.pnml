@@ -1,0 +1,90 @@
+// Begin HXN3
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_hxn3_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_hxn3_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "hxn3")
+}
+
+// Vehicle
+spriteset (spriteset_hxn3_original) {
+    template_empty ()
+}
+spriteset (spriteset_hxn3_crec_1st_construct_bureau) {
+    template_empty ()
+}
+spriteset (spriteset_hxn3_crec_3rd_construct_bureau) {
+    template_empty ()
+}
+spriteset (spriteset_hxn3_guoneng) {
+    template_empty ()
+}
+spriteset (spriteset_hxn3_guoneng_7014) {
+    template_empty ()
+}
+spriteset (spriteset_hxn3_huating_coal) {
+    template_empty ()
+}
+spriteset (spriteset_hxn3_laos) {
+    template_empty ()
+}
+alternative_sprites(spriteset_hxn3_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3")
+}
+alternative_sprites(spriteset_hxn3_crec_1st_construct_bureau, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3-crec-1st-construct-bureau")
+}
+alternative_sprites(spriteset_hxn3_crec_3rd_construct_bureau, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3-crec-3rd-construct-bureau")
+}
+alternative_sprites(spriteset_hxn3_guoneng, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3-guoneng")
+}
+alternative_sprites(spriteset_hxn3_guoneng_7014, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3-guoneng-7014")
+}
+alternative_sprites(spriteset_hxn3_huating_coal, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3-huating-coal")
+}
+alternative_sprites(spriteset_hxn3_laos, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3-laos")
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3_articulated_part, extra_callback_info1) {
+    1..2: return hxn3;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_ZHONGTIE_1_JU);
+    2: return string(STR_ZHONGTIE_3_JU);
+    3: return string(STR_GUONENG);
+    4: return string(STR_GUONENG_7014);
+    5: return string(STR_HUATING_COAL);
+    6: return string(STR_CHN2LAOS);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3_graphics_subtype, cargo_subtype) {
+    0: spriteset_hxn3_original;
+    1: spriteset_hxn3_crec_1st_construct_bureau;
+    2: spriteset_hxn3_crec_3rd_construct_bureau;
+    3: spriteset_hxn3_guoneng;
+    4: spriteset_hxn3_guoneng_7014;
+    5: spriteset_hxn3_huating_coal;
+    6: spriteset_hxn3_laos;    
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3_graphics, position_in_articulated_veh % 3) {
+    1: switch_hxn3_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_FULL_NAME_HXN3), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8));
+}
