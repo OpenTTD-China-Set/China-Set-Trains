@@ -45,7 +45,7 @@ item (FEAT_TRAINS, j5) {
         // Stats
         length:                         switch_length_2_5_2;
         cargo_capacity:                 switch_j5_capacity;
-        cargo_age_period:               400 << param_cargo_decay;
+        cargo_age_period:               800 << param_cargo_decay;
         cost_factor:                    19;
         running_cost_factor:            17 * runningcostfactor();
         purchase_running_cost_factor:   68;
