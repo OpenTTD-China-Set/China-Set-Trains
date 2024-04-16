@@ -1,0 +1,164 @@
+// Begin N5
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_n5_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_n5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "n5")
+}
+
+// Vehicle
+spriteset (spriteset_n5_original_empty) {
+    template_empty ()
+}
+spriteset (spriteset_n5_original_bucket_half) {
+    template_empty ()
+}
+spriteset (spriteset_n5_original_bucket_full) {
+    template_empty ()
+}
+spriteset (spriteset_n5_original_goods_33percent) {
+    template_empty ()
+}
+spriteset (spriteset_n5_original_goods_66percent) {
+    template_empty ()
+}
+spriteset (spriteset_n5_original_goods_full) {
+    template_empty ()
+}
+spriteset (spriteset_n5_original_metal_half) {
+    template_empty ()
+}
+spriteset (spriteset_n5_original_metal_full) {
+    template_empty ()
+}
+alternative_sprites(spriteset_n5_original_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "n5")
+}
+alternative_sprites(spriteset_n5_original_bucket_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "n5-bucket-half")
+}
+alternative_sprites(spriteset_n5_original_bucket_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "n5-bucket-full")
+}
+alternative_sprites(spriteset_n5_original_goods_33percent, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "n5-goods-33percent")
+}
+alternative_sprites(spriteset_n5_original_goods_66percent, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "n5-goods-66percent")
+}
+alternative_sprites(spriteset_n5_original_goods_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "n5-goods-full")
+}
+alternative_sprites(spriteset_n5_original_metal_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "n5-steel-half")
+}
+alternative_sprites(spriteset_n5_original_metal_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "n5-steel-full")
+}
+
+switch (FEAT_TRAINS, SELF, switch_n5_original_metal, cargo_count < 30) {
+    0: spriteset_n5_original_metal_full;
+    spriteset_n5_original_metal_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_n5_original_bucket, cargo_count < 30) {
+    0: spriteset_n5_original_bucket_full;
+    spriteset_n5_original_bucket_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_n5_original_goods_more_than_33_percent, cargo_count < 35) {
+    0: spriteset_n5_original_goods_full;
+    spriteset_n5_original_goods_66percent;
+}
+
+switch (FEAT_TRAINS, SELF, switch_n5_original_goods_more_than_0_percent, cargo_count < 20) {
+    0: switch_n5_original_goods_more_than_33_percent;
+    spriteset_n5_original_goods_33percent;
+}
+
+switch (FEAT_TRAINS, SELF, switch_n5_original_all_cargo, cargo_type_in_veh) {
+// the following list is shamelessly stolen from xUSSR
+    ALUM: switch_n5_original_metal;
+    COPR: switch_n5_original_metal;
+    CSTI: switch_n5_original_metal;
+    IRON: switch_n5_original_metal;
+    METL: switch_n5_original_metal;
+    PIPE: switch_n5_original_metal;
+    STEL: switch_n5_original_metal;
+    STAL: switch_n5_original_metal;
+    STST: switch_n5_original_metal;
+    STCB: switch_n5_original_metal;
+    STSE: switch_n5_original_metal;
+    STSH: switch_n5_original_metal;
+    STWR: switch_n5_original_metal;
+    ZINC: switch_n5_original_metal;
+    
+    EOIL: switch_n5_original_bucket;
+    FZDR: switch_n5_original_bucket;
+    WATR: switch_n5_original_bucket;
+    OIL_: switch_n5_original_bucket;
+    PETR: switch_n5_original_bucket;
+    RFPR: switch_n5_original_bucket;
+    BUBL: switch_n5_original_bucket;
+    COAT: switch_n5_original_bucket;
+    DYES: switch_n5_original_bucket;
+    NHNO: switch_n5_original_bucket;
+    PLAS: switch_n5_original_bucket;
+    PLST: switch_n5_original_bucket;
+    RUBR: switch_n5_original_bucket;
+    SOAP: switch_n5_original_bucket;
+    ACID: switch_n5_original_bucket;
+    CTAR: switch_n5_original_bucket;
+    LYE_: switch_n5_original_bucket;
+    C2H4: switch_n5_original_bucket;
+    CHLO: switch_n5_original_bucket;
+    FUEL: switch_n5_original_bucket;
+    H2__: switch_n5_original_bucket;
+    N7__: switch_n5_original_bucket;
+    NH3_: switch_n5_original_bucket;
+    O2__: switch_n5_original_bucket;
+
+    switch_n5_original_goods_more_than_0_percent;
+}
+
+switch (FEAT_TRAINS, SELF, switch_n5_original, cargo_count < 5) {
+    0: switch_n5_original_all_cargo;
+    spriteset_n5_original_empty;
+}
+
+random_switch (FEAT_TRAINS, SELF, random_n5_colour) {
+    1: switch_n5_original; // More colours waiting to be added
+}
+
+switch (FEAT_TRAINS, SELF, switch_n5_articulated_part, extra_callback_info1) {
+    1..2: return n5;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_n5_graphics, position_in_articulated_veh % 3) {
+    1: random_n5_colour;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_n5_capacity_cargo, cargo_type_in_veh) {
+    GOOD: return 75;
+    return 50;
+}
+
+switch (FEAT_TRAINS, SELF, switch_n5_capacity, position_in_articulated_veh % 3) {
+    1: switch_n5_capacity_cargo;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_n5_loading_speed, cargo_type_in_veh) {
+    GOOD: return 15;
+    return 10;
+}
+
+switch (FEAT_TRAINS, SELF, switch_n5_additional_text, param_cargo_decay) {
+    return string(STR_DESC_2, string(STR_N5_LIVERY_AVAILABILITY), string(STR_DECAY_185));
+}

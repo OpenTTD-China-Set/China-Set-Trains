@@ -1,0 +1,81 @@
+// Begin HXN3QZ
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_hxn3qz_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_hxn3qz_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "hxn3qz")
+}
+
+
+// Vehicle
+spriteset (spriteset_hxn3qz) {
+    template_empty ()
+}
+spriteset (spriteset_hxn3qz_back) {
+    template_empty ()
+}
+alternative_sprites(spriteset_hxn3qz, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3qz")
+}
+alternative_sprites(spriteset_hxn3qz_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3qz-back")
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3qz_articulated_part, extra_callback_info1) {
+    1..2: return hxn3qz;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3qz_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3qz_graphics_subtype_front, cargo_subtype) {
+    0: spriteset_hxn3qz;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3qz_graphics_subtype_back, cargo_subtype) {
+    0: spriteset_hxn3qz_back;
+}
+
+// "Splitting HXN3QZ"
+
+switch (FEAT_TRAINS, SELF, switch_hxn3qz_graphics_joint_front, position_in_vehid_chain % 6) {
+    1: switch_hxn3qz_graphics_subtype_front;
+    4: switch_hxn3qz_graphics_subtype_back;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3qz_graphics_joint, position_in_vehid_chain_from_end) {
+    1: switch_hxn3qz_graphics_subtype_back;
+    switch_hxn3qz_graphics_joint_front;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3qz_graphics_front, position_in_articulated_veh % 3) {
+    1: switch_hxn3qz_graphics_subtype_front;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3qz_graphics_split, position_in_consist_from_end) {
+    1: switch_hxn3qz_graphics_subtype_back;
+    switch_hxn3qz_graphics_front;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3qz_graphics, num_vehs_in_vehid_chain % 6) {
+    0: switch_hxn3qz_graphics_joint;
+    3: switch_hxn3qz_graphics_split;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3qz_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3qz_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8), string(STR_HXN3QZ_CONSIST));
+}

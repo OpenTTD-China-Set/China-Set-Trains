@@ -134,12 +134,14 @@ STR_NAME_G50            :G50 (Tanker)
 STR_NAME_G60            :G60 (Tanker)
 STR_NAME_GN70           :GN70 (Tanker)
 STR_NAME_GN80           :GN80 (Tanker)
+STR_NAME_N5             :N5 (Flatcar)
 STR_NAME_N60            :N60 (Flatcar)
 STR_NAME_NX17           :NX17 (Flatcar)
 STR_NAME_NX70A          :NX70A (Flatcar)
 STR_NAME_JSQ5           :JSQ5 (Vehicle Transporter)
 STR_NAME_JSQ6           :JSQ6 (Vehicle Transporter)
 STR_NAME_L70            :L70 (Hopper)
+STR_NAME_J5             :J5 (Livestock Wagon)
 
 STR_NAME_SY             :SY (Steam)
 
@@ -169,6 +171,8 @@ STR_NAME_DF11G          :DF11G (Diesel)
 STR_NAME_DF11Z          :DF11Z (Diesel)
 STR_NAME_ND5            :ND5 (Diesel)
 STR_NAME_NJ2            :NJ2 (Diesel)
+STR_NAME_HXN3           :HXN3 (Diesel)
+STR_NAME_HXN3QZ         :HXN3 (Diesel) (Plateau Type)
 STR_NAME_HXN5           :HXN5 (Diesel)
 STR_NAME_HXN5B          :HXN5B (Diesel)
 STR_NAME_SS1            :SS1 (Electric)
@@ -338,6 +342,7 @@ STR_FULL_NAME_DF11           :{BLACK}Full Name: {GOLD}Dongfeng 11 Diesel Locomot
 STR_FULL_NAME_DF11G          :{BLACK}Full Name: {BLUE}Dongfeng 11G {WHITE}Diesel Locomotive
 STR_FULL_NAME_DF11Z          :{BLACK}Full Name: {GOLD}Dongfeng 11Z Diesel Locomotive
 STR_FULL_NAME_ND5            :{BLACK}Full Name: {GOLD}Neidian 5 Diesel Locomotive
+STR_FULL_NAME_HXN3           :{BLACK}Full Name: {GOLD}Hexie 3 Diesel Locomotive
 STR_FULL_NAME_HXN5           :{BLACK}Full Name: {GOLD}Hexie 5 Diesel Locomotive
 STR_FULL_NAME_HXN5B          :{BLACK}Full Name: {GOLD}Hexie 5B Diesel Locomotive
 STR_FULL_NAME_SS1            :{BLACK}Full Name: {GOLD}Shaoshan 1 Electric Locomotive
@@ -436,6 +441,7 @@ STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (B
 STR_P63_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred)
 STR_P70_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_PB_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_N5_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_N60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_NX17_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Random (Black, Brown)
 STR_NX70A_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {GOLD}Black Livery Only
@@ -547,6 +553,7 @@ STR_6Y2_LATE            : - {GREEN}Late {BLACK}Livery
 STR_NENHEI              : - {GOLD}Nenhei Railway Livery
 STR_SHENHUA             : - {GOLD}Shenhua Groups Livery
 STR_GUONENG             : - {GOLD}CHN Energy Livery
+STR_GUONENG_7014        : - {GOLD}CHN Energy "Arbeiter" Livery
 STR_TAOWEI              : - {GOLD}Taowei Railway Livery
 STR_CHUNLUO             : - {GOLD}Chunluo Railway Livery
 STR_GUANGXIYANHAI       : - {GOLD}Guangxi Seaside Railway Livery
@@ -560,6 +567,9 @@ STR_DF43110             : - {GOLD}DF43110 with Decoration for Ceremony
 STR_DONGBEI             : - {GOLD}Livery Used in Northeast of China
 STR_MZD                 : - {GOLD}"Learn from Maozedong"
 STR_HUANGJIGUANG        : - {GOLD}"Huangjiguang"
+STR_HUATING_COAL        : - {GOLD}Huating Coal Livery
+STR_ZHONGTIE_1_JU       : - {GOLD}CREC 1st Construct Bureau
+STR_ZHONGTIE_3_JU       : - {GOLD}CREC 3rd Construct Bureau
 
 STR_BUILD_YEAR          : - According to build year
 STR_YW22_ORIGINAL       : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240
@@ -662,6 +672,7 @@ STR_CRH6A3_CAN_ATTACH_WAGON             :{BLACK}Matching Wagons: Only {GOLD}ZE{B
 STR_CRH6F_CAN_ATTACH_WAGON              :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places (Crowded), Comfort: 120
 
 STR_NJ2_CONSIST                     :{BLACK}Consist: {GOLD}2 to 4 sections
+STR_HXN3QZ_CONSIST                  :{BLACK}Consist: {GOLD}2 to 4 sections
 STR_DF11G_CONSIST                   :{BLACK}Consist: {GOLD}2 sections joint together (Normal), or one section at head, another section at back ("Splitting Pig", max speed 120 km/h, power 4133 hpM)
 STR_NZJ1_XINSHUGUANG_CONSIST        :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle
 STR_JINLUN_LOCOMOTIVE_CONSIST       :{BLACK}Consist: {GOLD}One section at front, another section at back. Only can attach "{BLUE}JIN{WHITE}LUN{GOLD}" 25DT Series coaches.
