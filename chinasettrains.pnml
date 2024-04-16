@@ -255,6 +255,10 @@
 #include "src/wagons/b22_item.pnml"
 #include "src/wagons/l70_graphics.pnml"
 #include "src/wagons/l70_item.pnml"
+#include "src/wagons/j5_graphics.pnml"
+#include "src/wagons/j5_item.pnml"
+#include "src/wagons/n5_graphics.pnml"
+#include "src/wagons/n5_item.pnml"
 
 // Another Function File
 #include "src/function2.pnml"
@@ -316,6 +320,10 @@
 #include "src/diesel/nd5_item.pnml"
 #include "src/diesel/nj2_graphics.pnml"
 #include "src/diesel/nj2_item.pnml"
+#include "src/diesel/hxn3_graphics.pnml"
+#include "src/diesel/hxn3_item.pnml"
+#include "src/diesel/hxn3qz_graphics.pnml"
+#include "src/diesel/hxn3qz_item.pnml"
 #include "src/diesel/hxn5_graphics.pnml"
 #include "src/diesel/hxn5_item.pnml"
 #include "src/diesel/hxn5b_graphics.pnml"
