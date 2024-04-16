@@ -48,7 +48,7 @@ item (FEAT_TRAINS, n5) {
         cargo_capacity:                 switch_n5_capacity;
         loading_speed:                  switch_n5_loading_speed() << param_loading_speed;
         cargo_age_period:               185 << param_cargo_decay;
-        cost_factor:                    4;
+        cost_factor:                    5;
         running_cost_factor:            3 * runningcostfactor();
         purchase_running_cost_factor:   12;
         purchase_cargo_capacity:        50/3;
