@@ -322,20 +322,20 @@ GRFID_FLAGS    ?= -m
 # Rules on how to generate filenames. Usually no need to change
 
 # Define how the displayed name and the filename of the bundled grf shall look like:
-# The result will either be
-# nightly build:                   mynewgrf-nightly-r51
-# a release build (tagged version): mynewgrf-0.1
-# followed by an M, if the source repository is not a clean version.
+# The result will be
+#                           mynewgrf-a.b.c.d
+# Where d is the REPO_REVISION which never decreases per compilation,
+#       c is the MINOR_VERSION which increases by 1 each release and decreases to 0 once b increases by 1,
+#       b is the MAJOR_VERSION which increases by 1 each "major" release and decreases to 0 once a increases by 1,
+#       a is the BREAKING_VERSION which increases by 1 only if something breakground happens to this NewGRF.
 
 # Common to all filenames
-# FILE_VERSION_STRING ?= $(shell [ -n "$(REPO_TAGS)" ] && echo "$(REPO_TAGS)$(REPO_MODIFIED)" || echo "$(REPO_BRANCH_STRING)$(NEWGRF_VERSION)$(REPO_MODIFIED)")
-# DIR_NAME           := $(shell [ -n "$(REPO_TAGS)" ] && echo $(BASE_FILENAME)-$(FILE_VERSION_STRING) || echo $(BASE_FILENAME))
-FILE_VERSION_STRING ?= $(shell echo $(REPO_VERSION_STRING))
-DIR_NAME		   := $(shell echo $(BASE_FILENAME)-$(FILE_VERSION_STRING))
-VERSIONED_FILENAME := $(BASE_FILENAME)-$(FILE_VERSION_STRING)
-DIR_NAME_SRC       := $(VERSIONED_FILENAME)-source
+FILE_VERSION_STRING ?= $(REPO_VERSION_STRING)
+DIR_NAME            := $(BASE_FILENAME)-$(FILE_VERSION_STRING)
+VERSIONED_FILENAME  := $(DIR_NAME)
+DIR_NAME_SRC        := $(VERSIONED_FILENAME)-source
 
-TAR_FILENAME       := $(shell if [[ ! -z "$(USE_VERSION)" ]]; then echo $(BASE_FILENAME)-$(FILE_VERSION_STRING); else echo $(DIR_NAME).tar; fi)
+TAR_FILENAME       := $(DIR_NAME).tar
 BZIP_FILENAME      := $(TAR_FILENAME).bz2
 GZIP_FILENAME      := $(TAR_FILENAME).gz
 XZ_FILENAME        := $(TAR_FILENAME).xz
