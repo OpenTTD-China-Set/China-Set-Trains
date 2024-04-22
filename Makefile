@@ -323,17 +323,17 @@ GRFID_FLAGS    ?= -m
 
 # Define how the displayed name and the filename of the bundled grf shall look like:
 # The result will be
-# 						mynewgrf-a.b.c.d
+#                           mynewgrf-a.b.c.d
 # Where d is the REPO_REVISION which never decreases per compilation,
-# 		c is the MINOR_VERSION which increases by 1 each release and decreases to 0 once b increases by 1,
-#		b is the MAJOR_VERSION which increases by 1 each "major" release and decreases to 0 once a increases by 1,
-#		a is the BREAKING_VERSION which increases by 1 only if something breakground happens to this NewGRF.
+#       c is the MINOR_VERSION which increases by 1 each release and decreases to 0 once b increases by 1,
+#       b is the MAJOR_VERSION which increases by 1 each "major" release and decreases to 0 once a increases by 1,
+#       a is the BREAKING_VERSION which increases by 1 only if something breakground happens to this NewGRF.
 
 # Common to all filenames
 FILE_VERSION_STRING ?= $(REPO_VERSION_STRING)
-DIR_NAME		   := $(BASE_FILENAME)-$(FILE_VERSION_STRING)
-VERSIONED_FILENAME := $(DIR_NAME)
-DIR_NAME_SRC       := $(VERSIONED_FILENAME)-source
+DIR_NAME            := $(BASE_FILENAME)-$(FILE_VERSION_STRING)
+VERSIONED_FILENAME  := $(DIR_NAME)
+DIR_NAME_SRC        := $(VERSIONED_FILENAME)-source
 
 TAR_FILENAME       := $(DIR_NAME).tar
 BZIP_FILENAME      := $(TAR_FILENAME).bz2
