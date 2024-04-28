@@ -5,6 +5,10 @@ China Set: Trains Changelog
 
 ## Initial-0-2 Updates
 
+0.2.3.160 (28/4/2024)
+--------------------
+Fix #44: CR200J-A wrong colour
+
 0.2.3.159 (16/4/2024)
 --------------------
 Add: HXN3, HXN3 (Plateau Type), N5, J5
