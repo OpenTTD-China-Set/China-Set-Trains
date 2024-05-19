@@ -1,0 +1,123 @@
+// Begin YZ22AIRCON
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_yz22aircon_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_yz22aircon_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "yz22aircon")
+}
+
+// Vehicle
+spriteset (spriteset_yz22aircon_beijing2shanghai) {
+    template_empty ()
+}
+alternative_sprites(spriteset_yz22aircon_beijing2shanghai, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "yz22aircon")
+}
+spriteset (spriteset_yz22aircon_alternative) {
+    template_empty ()
+}
+alternative_sprites(spriteset_yz22aircon_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "yz22aircon-alternative")
+}
+spriteset (spriteset_yz22aircon_guangzhou) {
+    template_empty ()
+}
+alternative_sprites(spriteset_yz22aircon_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "yz22aircon-guangzhou")
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz22aircon_articulated_part, extra_callback_info1) {
+    1..2: return yz22aircon;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz22aircon_cargo_subtype, cargo_subtype) {
+    0: return string(STR_BEIJING2SHANGHAI);
+    1: return string(STR_BEIJING2SHANGHAIALT);
+    2: return string(STR_GUANGSHEN);   
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz22aircon_graphics_subtype, cargo_subtype) {
+    0: spriteset_yz22aircon_beijing2shanghai;
+    1: spriteset_yz22aircon_alternative;
+    2: spriteset_yz22aircon_guangzhou;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz22aircon_graphics, position_in_articulated_veh % 3) {
+    1: switch_yz22aircon_graphics_subtype;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz22aircon_capacity, position_in_articulated_veh % 3) {
+    1: return 118;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz22aircon_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_FULL_NAME_YZ22AIRCON), string(STR_22AIRCON_LIVERY_AVAILABILITY), string(STR_COMFORT_160));
+}
+
+
+item (FEAT_TRAINS, yz22aircon) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_YZ22AIRCON);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1985,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 118;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          0 hp;
+        weight:                         42.5 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_yz22aircon_additional_text;
+        can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_yz22aircon_cargo_subtype;
+        
+        // Graphics
+        default:                        switch_yz22aircon_graphics;
+        purchase:                       spriteset_yz22aircon_purchase;
+        articulated_part:               switch_yz22aircon_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_7_2;
+        cargo_capacity:                 switch_yz22aircon_capacity;
+        cargo_age_period:               (10 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    8;
+        running_cost_factor:            6 * runningcostfactor() * cafecostfactor() + accostfactor();
+        purchase_running_cost_factor:   24;
+        purchase_cargo_capacity:        118/3;
+    }
+}
+
+// End YZ22AIRCON
+

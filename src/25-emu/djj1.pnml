@@ -1,0 +1,216 @@
+// Begin DJJ1
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_djj1_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_djj1_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-emu", "djj1-m")
+}
+
+// Vehicle
+spriteset (spriteset_djj1_front) {
+    template_empty ()
+}
+spriteset (spriteset_djj1_front_guangshen) {
+    template_empty ()
+}
+spriteset (spriteset_djj1_middle) {
+    template_empty ()
+}
+spriteset (spriteset_djj1_cab) {
+    template_empty ()
+}
+spriteset (spriteset_djj1_back) {
+    template_empty ()
+}
+spriteset (spriteset_djj1_back_guangshen) {
+    template_empty ()
+}
+
+alternative_sprites(spriteset_djj1_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "djj1-m")
+}
+alternative_sprites(spriteset_djj1_front_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "djj1-m-guangshen")
+}
+alternative_sprites (spriteset_djj1_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "djj1-t")
+}
+alternative_sprites (spriteset_djj1_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "djj1-c")
+}
+alternative_sprites (spriteset_djj1_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "djj1-m-b")
+}
+alternative_sprites (spriteset_djj1_back_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "djj1-m-b-guangshen")
+}
+
+switch (FEAT_TRAINS, SELF, switch_djj1_articulated_part, extra_callback_info1) {
+    1..2: return djj1;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, djj1wagon_right_consist, vehicle_type_id) {
+    1025: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    9224: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, djj1wagon, hasbit(bitmask_consist_info, 0)) {
+    1: return CB_RESULT_ATTACH_DISALLOW;
+    djj1wagon_right_consist;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djj1_start_stop, !hasbit(bitmask_consist_info, 0) && (num_vehs_in_consist >= 12) && ((position_in_consist < 3) || (position_in_consist_from_end < 3))) {
+    0: return string(STR_DJJ1_CONSIST);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, swtich_djj1_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_GUANGSHEN);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djj1_graphics_front_subtype, cargo_subtype) {
+    0: spriteset_djj1_front;
+    1: spriteset_djj1_front_guangshen;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djj1_graphics_back_subtype, cargo_subtype) {
+    0: spriteset_djj1_back;
+    1: spriteset_djj1_back_guangshen;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djj1_graphics_front, position_in_consist) {
+    1: switch_djj1_graphics_front_subtype;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djj1_graphics, position_in_consist_from_end) {
+    1: switch_djj1_graphics_back_subtype;
+    switch_djj1_graphics_front;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_djj1_additional_text, param_cargo_decay) {
+    return string(STR_DESC_4, string(STR_DJJ1_LIVERY_AVAILABILITY), string(STR_DJJ1_CAN_ATTACH_WAGON), string(STR_DJJ1_CONSIST), string(STR_RELIABILITY_24));
+}
+
+switch (FEAT_TRAINS, SELF, switch_djj1_middle_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_djj1_middle;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djj1_cab_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_djj1_cab;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djj1_wagon_graphics, position_in_consist_from_end) {
+    0..2: switch_djj1_cab_graphics;
+    switch_djj1_middle_graphics;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djj1_wagon_length, position_in_consist_from_end) {
+    switch_length_2_8_2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djj1_middle_capacity, position_in_articulated_veh % 3) {
+    1: return 78;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djj1_cab_capacity, position_in_articulated_veh % 3) {
+    1: return 35;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djj1_wagon_capacity, position_in_consist_from_end) {
+    0..2: switch_djj1_cab_capacity;
+    switch_djj1_middle_capacity;
+}
+
+
+
+item (FEAT_TRAINS, djj1) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_DJJ1);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2000,09,01);
+        model_life:                     30;
+        retire_early:                   20;
+        vehicle_life:                   15;
+        track_type:                     SACA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          200 km/h;
+        power:                          4800 kW;
+        weight:                         78 ton;
+        tractive_effort_coefficient:    0.276;
+        cost_factor:                    96;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            44;
+        reliability_decay:              24;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_djj1_additional_text;
+        can_attach_wagon:               djj1wagon;
+        start_stop:                     switch_djj1_start_stop;
+        cargo_subtype_text:             swtich_djj1_cargo_subtype;
+
+        // Graphics
+        default:                        switch_djj1_graphics;
+        purchase:                       spriteset_djj1_purchase_original;
+        articulated_part:               switch_djj1_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_6_2;
+        cargo_capacity:                 0;
+        cost_factor:                    85;
+        running_cost_factor:            81 * runningcostfactor() + 20;
+        purchase_running_cost_factor:   344;
+        purchase_cargo_capacity:        0;
+        bitmask_vehicle_info:           switch_pushpull_consist_correction;
+    }
+
+    // Multiple Unit Wagons
+    livery_override(zymuw) {
+        default:                        switch_djj1_wagon_graphics;
+        cargo_capacity:                 switch_djj1_wagon_capacity;
+        length:                         switch_djj1_wagon_length;
+        weight:                         44;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (12 * 4 * 5) << param_cargo_decay;
+        bitmask_vehicle_info:           0;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    9;
+        running_cost_factor:            8 * runningcostfactor() * 2 + 2; // NO CAFE, WITH AC
+    }
+}
+
+// End DJJ1
+

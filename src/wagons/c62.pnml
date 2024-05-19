@@ -1,0 +1,136 @@
+// Begin C62
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_c62_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_c62_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "c62")
+}
+
+// Vehicle
+spriteset (spriteset_c62_black_empty) {
+    template_empty ()
+}
+spriteset (spriteset_c62_black_coal_half) {
+    template_empty ()
+}
+spriteset (spriteset_c62_black_coal_full) {
+    template_empty ()
+}
+spriteset (spriteset_c62_black_cover) {
+    template_empty ()
+}
+alternative_sprites(spriteset_c62_black_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "c62")
+}
+alternative_sprites(spriteset_c62_black_coal_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "c62-coal-half")
+}
+alternative_sprites(spriteset_c62_black_coal_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "c62-coal-full")
+}
+alternative_sprites(spriteset_c62_black_cover, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "c62-cover")
+}
+
+switch (FEAT_TRAINS, SELF, switch_c62_black_coal, cargo_count < 40) {
+    0: spriteset_c62_black_coal_full;
+    spriteset_c62_black_coal_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c62_cargo, cargo_classes) {
+    bitmask(CC_COVERED): spriteset_c62_black_cover;
+    bitmask(CC_BULK): switch_c62_black_coal;
+    spriteset_c62_black_cover;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c62_black, cargo_count < 5) {
+    0: switch_c62_cargo;
+    spriteset_c62_black_empty;
+}
+
+random_switch (FEAT_TRAINS, SELF, random_c62_colour) {
+    1: switch_c62_black; // More colours waiting to be added
+}
+
+switch (FEAT_TRAINS, SELF, switch_c62_articulated_part, extra_callback_info1) {
+    1..2: return c62;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c62_graphics, position_in_articulated_veh % 3) {
+    1: random_c62_colour;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_c62_capacity, position_in_articulated_veh % 3) {
+    1: return 60;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c62_additional_text, param_cargo_decay) {
+    return string(STR_DESC_2, string(STR_C62_LIVERY_AVAILABILITY), string(STR_DECAY_185));
+}
+
+
+item (FEAT_TRAINS, c62) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_C62);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1971,01,01);
+        model_life:                     50;
+        retire_early:                   25;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_EXPRESS, CC_BULK, CC_PIECE_GOODS, CC_COVERED, CC_OVERSIZED);
+        non_refittable_cargo_classes:   bitmask(CC_PASSENGERS, CC_LIQUID, CC_HAZARDOUS);
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             DEFAULT_CARGO_FIRST_REFITTABLE;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 60;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          100 km/h;
+        power:                          0 hp;
+        weight:                         20.6 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_c62_additional_text;
+        can_attach_wagon:               locowagon;
+        
+        // Graphics
+        default:                        switch_c62_graphics;
+        purchase:                       spriteset_c62_purchase;
+        articulated_part:               switch_c62_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_2_2;
+        cargo_capacity:                 switch_c62_capacity;
+        cargo_age_period:               185 << param_cargo_decay;
+        cost_factor:                    5;
+        running_cost_factor:            4 * runningcostfactor();
+        purchase_running_cost_factor:   16;
+        purchase_cargo_capacity:        60/3;
+    }
+}
+
+// End C62
+

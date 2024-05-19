@@ -1,0 +1,123 @@
+// Begin DF4DF
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_df4df_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_df4df_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "df4df")
+}
+
+// Vehicle
+spriteset (spriteset_df4df_original) {
+    template_empty ()
+}
+spriteset (spriteset_df4df_alternative) {
+    template_empty ()
+}
+spriteset (spriteset_df4df_shudao) {
+    template_empty ()
+}
+alternative_sprites(spriteset_df4df_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4df")
+}
+alternative_sprites(spriteset_df4df_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4df-alternative")
+}
+alternative_sprites(spriteset_df4df_shudao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df4df-shudao")
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_df4df_articulated_part, extra_callback_info1) {
+    1..2: return df4df;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4df_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_ALTERNATIVE);
+    2: return string(STR_SHUDAO);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4df_graphics_subtype, cargo_subtype) {
+    0: spriteset_df4df_original;
+    1: spriteset_df4df_alternative;
+    2: spriteset_df4df_shudao;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4df_graphics, position_in_articulated_veh % 3) {
+    1: switch_df4df_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_df4df_additional_text, param_cargo_decay) {
+    return string(STR_DESC_5, string(STR_FULL_NAME_DF4DF), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_DF4DF_LIVERY_AVAILABILITY), string(STR_DF4D_NICKNAME), string(STR_RELIABILITY_16));
+}
+
+
+item (FEAT_TRAINS, df4df) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_DF4DF);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1999,01,01);
+        model_life:                     60;
+        retire_early:                   30;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          2425 kW;
+        weight:                         138 ton;
+        tractive_effort_coefficient:    0.279;
+        cost_factor:                    53;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            72;
+        reliability_decay:              16;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_df4df_additional_text;
+        cargo_subtype_text:             switch_df4df_cargo_subtype;
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_df4df_graphics;
+        purchase:                       spriteset_df4df_purchase;
+        articulated_part:               switch_df4df_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_6_2;
+        cargo_capacity:                 0;
+        cost_factor:                    66;
+        running_cost_factor:            53 * runningcostfactor() + 20;
+        purchase_running_cost_factor:   212;
+        purchase_cargo_capacity:        0;
+    }
+}
+
+// End DF4DF
+
