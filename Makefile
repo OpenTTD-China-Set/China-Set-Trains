@@ -104,6 +104,8 @@ ifdef MIN_NML_REVISION
 	NML_REVISION = $(shell $(NML) --version | head -n1 | cut -dr -f2 | cut -d: -f1)
 endif
 
+CC := gcc
+
 ifdef MAIN_SRC_FILE
 	CC             ?= cc
 	CC_FLAGS       ?= -C -E -nostdinc -x c-header

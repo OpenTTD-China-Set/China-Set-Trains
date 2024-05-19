@@ -1,0 +1,109 @@
+// Begin RW22
+
+// Graphics
+
+// // Purchase Menu
+// spriteset (spriteset_rw22_purchase_original) {
+//     template_purchase_empty ()
+// }
+// alternative_sprites(spriteset_rw22_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+//     template_purchase ("coaches", "rw22")
+// }
+
+// // Vehicle
+// spriteset (spriteset_rw22_original) {
+//     template_empty ()
+// }
+// alternative_sprites(spriteset_rw22_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+//     template_standard ("coaches", "rw22")
+// }
+
+switch (FEAT_TRAINS, SELF, switch_rw22_articulated_part, extra_callback_info1) {
+    1..2: return rw22;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw22_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_WRU);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw22_graphics_subtype, cargo_subtype) {
+    0: spriteset_22_original;
+    1: spriteset_22_wru;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw22_graphics, position_in_articulated_veh % 3) {
+    1: switch_rw22_graphics_subtype;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw22_capacity, position_in_articulated_veh % 3) {
+    1: return 32;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw22_additional_text, param_cargo_decay) {
+    return string(STR_DESC_4, string(STR_FULL_NAME_RW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_384), string(STR_NO_AIR_CONDITIONER));
+}
+
+
+item (FEAT_TRAINS, rw22) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_RW22);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1959,01,01);
+        model_life:                     35;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 32;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               444 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          0 hp;
+        weight:                         47 ton;
+        cost_factor:                    13;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            11;
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_rw22_additional_text;
+        can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_rw22_cargo_subtype;
+        
+        // Graphics
+        default:                        switch_rw22_graphics;
+        purchase:                       spriteset_22_purchase_original;
+        articulated_part:               switch_rw22_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_7_2;
+        cargo_capacity:                 switch_rw22_capacity;
+        cargo_age_period:               (24 * 4 * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    12;
+        running_cost_factor:            10 * runningcostfactor() * cafecostfactor() ;
+        purchase_running_cost_factor:   40;
+        purchase_cargo_capacity:        32/3;
+    }
+}
+
+// End RW22
+
