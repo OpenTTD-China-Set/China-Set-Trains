@@ -1,0 +1,115 @@
+// Begin SYZ25KLD
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_s25kld_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_s25kld_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "s25kld-luchaogang")
+}
+
+// Vehicle
+spriteset (spriteset_s25kld_luchaogang) {
+    template_empty ()
+}
+spriteset (spriteset_s25kld_liaodong) {
+    template_empty ()
+}
+alternative_sprites(spriteset_s25kld_luchaogang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "s25kld-luchaogang")
+}
+alternative_sprites (spriteset_s25kld_liaodong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "s25kld-liaodong")
+}
+
+switch (FEAT_TRAINS, SELF, switch_syz25kld_articulated_part, extra_callback_info1) {
+    1..2: return syz25kld;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_s25kld_graphics_subtype, cargo_subtype) {
+    0: spriteset_s25kld_luchaogang;
+    1: spriteset_s25kld_liaodong;
+}
+
+switch (FEAT_TRAINS, SELF, switch_s25kld_graphics, position_in_articulated_veh % 3) {
+    1: switch_s25kld_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_s25kld_cargo_subtype, cargo_subtype) {
+    0: return string(STR_LUCHAOGANG);
+    1: return string(STR_LIAODONG);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_syz25kld_capacity, position_in_articulated_veh % 3) {
+    1: return 148;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_syz25kld_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_FULL_NAME_SYZ25K), string(STR_S25KLD_LIVERY_AVAILABILITY), string(STR_COMFORT_160));
+}
+
+
+item (FEAT_TRAINS, syz25kld) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_SYZ25KLD);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1996,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 118;
+        loading_speed:                  12 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          140 km/h;
+        power:                          0 hp;
+        weight:                         52.1 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_syz25kld_additional_text;
+        can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_s25kld_cargo_subtype;
+        
+        // Graphics
+        default:                        switch_s25kld_graphics;
+        purchase:                       spriteset_s25kld_purchase;
+        articulated_part:               switch_syz25kld_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_syz25kld_capacity;
+        cargo_age_period:               (10 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    10;
+        running_cost_factor:            8 * runningcostfactor() * cafecostfactor() + accostfactor();
+        purchase_running_cost_factor:   32;
+        purchase_cargo_capacity:        148/3;
+    }
+}
+
+// End SYZ25KLD
+

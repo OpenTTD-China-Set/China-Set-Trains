@@ -1,0 +1,153 @@
+// Begin HXN3
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_hxn3_purchase) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_hxn3_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "hxn3")
+}
+
+// Vehicle
+spriteset (spriteset_hxn3_original) {
+    template_empty ()
+}
+spriteset (spriteset_hxn3_crec_1st_construct_bureau) {
+    template_empty ()
+}
+spriteset (spriteset_hxn3_crec_3rd_construct_bureau) {
+    template_empty ()
+}
+spriteset (spriteset_hxn3_guoneng) {
+    template_empty ()
+}
+spriteset (spriteset_hxn3_guoneng_7014) {
+    template_empty ()
+}
+spriteset (spriteset_hxn3_huating_coal) {
+    template_empty ()
+}
+spriteset (spriteset_hxn3_laos) {
+    template_empty ()
+}
+alternative_sprites(spriteset_hxn3_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3")
+}
+alternative_sprites(spriteset_hxn3_crec_1st_construct_bureau, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3-crec-1st-construct-bureau")
+}
+alternative_sprites(spriteset_hxn3_crec_3rd_construct_bureau, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3-crec-3rd-construct-bureau")
+}
+alternative_sprites(spriteset_hxn3_guoneng, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3-guoneng")
+}
+alternative_sprites(spriteset_hxn3_guoneng_7014, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3-guoneng-7014")
+}
+alternative_sprites(spriteset_hxn3_huating_coal, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3-huating-coal")
+}
+alternative_sprites(spriteset_hxn3_laos, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "hxn3-laos")
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3_articulated_part, extra_callback_info1) {
+    1..2: return hxn3;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_ZHONGTIE_1_JU);
+    2: return string(STR_ZHONGTIE_3_JU);
+    3: return string(STR_GUONENG);
+    4: return string(STR_GUONENG_7014);
+    5: return string(STR_HUATING_COAL);
+    6: return string(STR_CHN2LAOS);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3_graphics_subtype, cargo_subtype) {
+    0: spriteset_hxn3_original;
+    1: spriteset_hxn3_crec_1st_construct_bureau;
+    2: spriteset_hxn3_crec_3rd_construct_bureau;
+    3: spriteset_hxn3_guoneng;
+    4: spriteset_hxn3_guoneng_7014;
+    5: spriteset_hxn3_huating_coal;
+    6: spriteset_hxn3_laos;    
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3_graphics, position_in_articulated_veh % 3) {
+    1: switch_hxn3_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_hxn3_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_FULL_NAME_HXN3), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8));
+}
+
+
+item (FEAT_TRAINS, hxn3) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_HXN3);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2008,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          4660 kW;
+        weight:                         150 ton;
+        tractive_effort_coefficient:    0.422;
+        cost_factor:                    53;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            72;
+        reliability_decay:              8;
+        bitmask_vehicle_info:           0;
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_hxn3_additional_text;
+        cargo_subtype_text:             switch_hxn3_cargo_subtype;
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_hxn3_graphics;
+        purchase:                       spriteset_hxn3_purchase;
+        articulated_part:               switch_hxn3_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_7_2;
+        cargo_capacity:                 0;
+        cost_factor:                    98;
+        running_cost_factor:            83 * runningcostfactor();
+        purchase_running_cost_factor:   332;
+        purchase_cargo_capacity:        0;
+    }
+}
+
+// End HXN3
+

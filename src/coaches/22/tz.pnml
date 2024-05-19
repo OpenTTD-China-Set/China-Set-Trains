@@ -1,0 +1,131 @@
+// Begin TZ
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_tz_purchase_original) {
+    template_purchase_empty ()
+}
+alternative_sprites(spriteset_tz_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "tz")
+}
+
+// Vehicle
+spriteset (spriteset_tz_original) {
+    template_empty ()
+}
+spriteset (spriteset_tz_beijing2shanghai) {
+    template_empty ()
+}
+spriteset (spriteset_tz_beijing2shanghai_alternative) {
+    template_empty ()
+}
+spriteset (spriteset_tz_guangzhou) {
+    template_empty ()
+}
+alternative_sprites(spriteset_tz_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "tz")
+}
+alternative_sprites(spriteset_tz_beijing2shanghai, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "tz-beijing2shanghai")
+}
+alternative_sprites(spriteset_tz_beijing2shanghai_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "tz-beijing2shanghai-alternative")
+}
+alternative_sprites(spriteset_tz_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "tz-guangzhou")
+}
+
+switch (FEAT_TRAINS, SELF, switch_tz_articulated_part, extra_callback_info1) {
+    1..2: return tz;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_tz_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORANGE);
+    1: return string(STR_BEIJING2SHANGHAI);
+    2: return string(STR_BEIJING2SHANGHAIALT);
+    3: return string(STR_GUANGSHEN);    
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_tz_graphics_subtype, cargo_subtype) {
+    0: spriteset_tz_original;
+    1: spriteset_tz_beijing2shanghai;
+    2: spriteset_tz_beijing2shanghai_alternative;
+    3: spriteset_tz_guangzhou;
+}
+
+switch (FEAT_TRAINS, SELF, switch_tz_graphics, position_in_articulated_veh % 3) {
+    1: switch_tz_graphics_subtype;
+    empty_sprites;   
+}
+
+switch (FEAT_TRAINS, SELF, switch_tz_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_tz_additional_text, param_cargo_decay) {
+    return string(STR_DESC_3, string(STR_FULL_NAME_TZ), string(STR_TZ_LIVERY_AVAILABILITY), string(STR_AIR_CONDITIONER_EFFECT));
+}
+
+
+item (FEAT_TRAINS, tz) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_TZ);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1985,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 118;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          0 hp;
+        weight:                         60 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                switch_tz_additional_text;
+        can_attach_wagon:               locowagon;
+        
+        // Graphics
+        default:                        switch_tz_graphics;
+        purchase:                       spriteset_tz_purchase_original;
+        cargo_subtype_text:             switch_tz_cargo_subtype;
+        articulated_part:               switch_tz_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_7_2;
+        cargo_capacity:                 switch_tz_capacity;
+        cargo_age_period:               200 << param_cargo_decay;
+        cost_factor:                    23;
+        running_cost_factor:            5 * runningcostfactor() + 20;
+        purchase_running_cost_factor:   40;
+        purchase_cargo_capacity:        0;
+    }
+}
+
+// End TZ
+
