@@ -262,7 +262,7 @@ pip3 install nml
 
 # compiling
 make
-# alternatively, you could use "make -j" n where n should be no larger than your allocatable memory.
+# alternatively, you could use "make -j" n where n is the total number of parallel tasks you want to run at once.
 ```
 
 Using Windows (Scoop is advised here, but non-scoop compilations are also possible):
@@ -282,5 +282,5 @@ scoop install mingw
 
 # compiling
 make
-# alternatively, you could use "make -j n" where n should be no larger than your allocatable memory.
+# alternatively, you could use "make -j n" where n is the total number of parallel tasks you want to run at once.
 ```
