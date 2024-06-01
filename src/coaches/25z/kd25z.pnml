@@ -3,30 +3,18 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_kd25z_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_kd25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_kd25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches", "kd25z")
 }
 
 // Vehicle
-spriteset (spriteset_kd25z_xizi) {
-    template_empty ()
-}
-spriteset (spriteset_kd25z_beijing) {
-    template_empty ()
-}
-spriteset (spriteset_kd25z_guangzhou) {
-    template_empty ()
-}
-alternative_sprites(spriteset_kd25z_xizi, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_kd25z_xizi, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "kd25z")
 }
-alternative_sprites(spriteset_kd25z_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_kd25z_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "kd25z-beijing")
 }
-alternative_sprites(spriteset_kd25z_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_kd25z_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "kd25z-guangzhou")
 }
 
@@ -50,7 +38,7 @@ switch (FEAT_TRAINS, SELF, switch_kd25z_graphics_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_kd25z_graphics, position_in_articulated_veh % 3) {
     1: switch_kd25z_graphics_subtype;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25z_additional_text, param_cargo_decay) {
@@ -64,7 +52,7 @@ item (FEAT_TRAINS, kd25z) {
         name:                           string(STR_NAME_KD25Z);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1993,01,01);
@@ -97,7 +85,7 @@ item (FEAT_TRAINS, kd25z) {
         // Menu
         additional_text:                switch_kd25z_additional_text;
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_kd25z_graphics;
         purchase:                       spriteset_kd25z_purchase_original;

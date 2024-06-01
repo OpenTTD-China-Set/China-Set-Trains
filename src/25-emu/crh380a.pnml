@@ -3,55 +3,30 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_crh380a_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_crh380a_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh380a_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("25-emu", "crh380a-tc")
 }
 
 // Vehicle
-spriteset (spriteset_crh380a_front) {
-    template_empty ()
-}
-spriteset (spriteset_crh380a_middle_m) {
-    template_empty ()
-}
-spriteset (spriteset_crh380a_middle_p) {
-    template_empty ()
-}
-spriteset (spriteset_crh380a_middle_p_reversed) {
-    template_empty ()
-}
-spriteset (spriteset_crh380a_cab) {
-    template_empty ()
-}
-spriteset (spriteset_crh380a_cab_reconect) {
-    template_empty ()
-}
-spriteset (spriteset_crh380a_cab_reconect_reversed) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_crh380a_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh380a_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh380a-tc")
 }
-alternative_sprites (spriteset_crh380a_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh380a-t") 
+spriteset (spriteset_crh380a_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh380a-t")
 }
-alternative_sprites (spriteset_crh380a_middle_p, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh380a_middle_p, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh380a-tp")
 }
-alternative_sprites (spriteset_crh380a_middle_p_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh380a_middle_p_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh380a-tp")
 }
-alternative_sprites (spriteset_crh380a_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh380a_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh380a-tc")
 }
-alternative_sprites (spriteset_crh380a_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh380a_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh380a-tc-c")
 }
-alternative_sprites (spriteset_crh380a_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh380a_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh380a-tc-c")
 }
 
@@ -138,7 +113,7 @@ switch (FEAT_TRAINS, SELF, switch_crh380a_if_wagon_end, position_in_consist_from
 switch (FEAT_TRAINS, SELF, switch_crh380a_wagon_graphics, (position_in_consist_from_end % 3) == 1) {
     1: switch_crh380a_if_wagon_end;
     empty_sprites;
-} 
+}
 
 /* switch (FEAT_TRAINS, SELF, switch_crh380a_short_graphics, (position_in_consist_from_end == position_in_consist) || (position_in_consist_from_end == position_in_consist + 3)) {
     1: spriteset_crh380a_middle_p;
@@ -348,7 +323,7 @@ item (FEAT_TRAINS, crh380a) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2010,09,01);

@@ -3,25 +3,16 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_df11g_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_df11g_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df11g_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("diesel", "df11g")
 }
 
 
 // Vehicle
-spriteset (spriteset_df11g_leaping) {
-    template_empty ()
-}
-spriteset (spriteset_df11g_leaping_back_reversed) {
-    template_empty ()
-}
-alternative_sprites(spriteset_df11g_leaping, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df11g_leaping, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df11g")
 }
-alternative_sprites(spriteset_df11g_leaping_back_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df11g_leaping_back_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("diesel", "df11gbr")
 }
 
@@ -35,7 +26,7 @@ switch (FEAT_TRAINS, SELF, switch_df11g_articulated_part, extra_callback_info1) 
 switch (FEAT_TRAINS, SELF, switch_df11g_graphics_joint, position_in_vehid_chain % 6) {
     1: spriteset_df11g_leaping;
     4: spriteset_df11g_leaping_back_reversed;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df11g_graphics_front, position_in_articulated_veh % 3) {
@@ -79,10 +70,6 @@ switch (FEAT_TRAINS, SELF, switch_df11g_traction, num_vehs_in_vehid_chain % 6) {
     return int(0.143*255);
 }
 
-switch (FEAT_TRAINS, SELF, switch_df11g_capacity, position_in_articulated_veh % 3) {
-    return 0;
-}
-
 switch (FEAT_TRAINS, SELF, switch_df11g_additional_text, param_cargo_decay) {
     return string(STR_DESC_6, string(STR_FULL_NAME_DF11G), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_DF11G_NICKNAME), string(STR_RELIABILITY_6), string(STR_DF11G_CONSIST), string(STR_LEAPING_LIU_NEVER_DIES));
 }
@@ -95,7 +82,7 @@ item (FEAT_TRAINS, df11g) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2003,11,15);

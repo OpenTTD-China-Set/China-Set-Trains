@@ -3,18 +3,12 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_ss7e_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_ss7e_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ss7e_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("25-electric","ss7e")
 }
 
 // Vehicle
-spriteset (spriteset_ss7e_original) {
-    template_empty ()
-}
-alternative_sprites(spriteset_ss7e_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ss7e_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-electric","ss7e")
 }
 
@@ -26,11 +20,7 @@ switch (FEAT_TRAINS, SELF, switch_ss7e_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_ss7e_graphics, position_in_articulated_veh % 3) {
     1: spriteset_ss7e_original;
-    empty_sprites;   
-}
-
-switch (FEAT_TRAINS, SELF, switch_ss7e_capacity, position_in_articulated_veh % 3) {
-    return 0;
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_ss7e_additional_text, param_cargo_decay) {
@@ -46,7 +36,7 @@ item (FEAT_TRAINS, ss7e) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2001,12,01);

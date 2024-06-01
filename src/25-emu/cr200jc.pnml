@@ -3,56 +3,30 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_cr200jc_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_cr200jc_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr200jc_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("25-emu", "cr200jc-m")
 }
 
 // Vehicle
-spriteset (spriteset_cr200jc_front) {
-    template_empty ()
-}
-spriteset (spriteset_cr200jc_middle) {
-    template_empty ()
-}
-spriteset (spriteset_cr200jc_middle_reversed) {
-    template_empty ()
-}
-spriteset (spriteset_cr200jc_cab) {
-    template_empty ()
-}
-spriteset (spriteset_cr200jc_back) {
-    template_empty ()
-}
-spriteset (spriteset_cr200jc_cab_reconect) {
-    template_empty ()
-}
-spriteset (spriteset_cr200jc_cab_reconect_reversed) {
-    template_empty ()
-}
-
-
-alternative_sprites(spriteset_cr200jc_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr200jc_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200jc-m")
 }
-alternative_sprites (spriteset_cr200jc_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr200jc_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200jc-t")
 }
-alternative_sprites (spriteset_cr200jc_middle_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr200jc_middle_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "cr200jc-t")
 }
-alternative_sprites (spriteset_cr200jc_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr200jc_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200jc-tc")
 }
-alternative_sprites (spriteset_cr200jc_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr200jc_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200jc-m-b")
 }
-alternative_sprites (spriteset_cr200jc_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr200jc_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200jc-tc-c")
 }
-alternative_sprites (spriteset_cr200jc_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr200jc_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "cr200jc-tc-c")
 }
 
@@ -99,7 +73,7 @@ switch (FEAT_TRAINS, SELF, switch_cr200jc_graphics_front, position_in_consist) {
 
 switch (FEAT_TRAINS, SELF, switch_cr200jc_graphics, (position_in_consist_from_end == 1) && (position_in_consist != 1)) {
     1: spriteset_cr200jc_back;
-    switch_cr200jc_graphics_front;   
+    switch_cr200jc_graphics_front;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jc_additional_text, param_cargo_decay) {
@@ -134,7 +108,7 @@ switch (FEAT_TRAINS, SELF, switch_cr200jc_if_wagon_end, position_in_consist_from
 switch (FEAT_TRAINS, SELF, switch_cr200jc_wagon_graphics, (position_in_consist_from_end % 3) == 1) {
     1: switch_cr200jc_if_wagon_end;
     empty_sprites;
-} 
+}
 
 switch (FEAT_TRAINS, SELF, switch_cr200jc_wagon_length, position_in_consist_from_end) {
     switch_length_2_8_2;
@@ -297,7 +271,7 @@ item (FEAT_TRAINS, cr200jc) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2022,12,01);

@@ -3,64 +3,35 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_crh6a3_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_crh6a3_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a3_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("25-emu", "crh6a-c-jingtong-1")
 }
 
 // Vehicle
-spriteset (spriteset_crh6a3_front_jingtong) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a3_middle_m_jingtong) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a3_middle_p_jingtong) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a3_cab_jingtong) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_crh6a3_front_jingtong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a3_front_jingtong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-c-jingtong-1")
 }
-alternative_sprites (spriteset_crh6a3_middle_m_jingtong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a3_middle_m_jingtong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-m-3-jingtong")
 }
-alternative_sprites (spriteset_crh6a3_middle_p_jingtong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a3_middle_p_jingtong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-p-3-jingtong")
 }
-alternative_sprites (spriteset_crh6a3_cab_jingtong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a3_cab_jingtong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh6a-c-jingtong-2")
 }
 
 
-spriteset (spriteset_crh6a3_front_jinshan) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a3_middle_m_jinshan) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a3_middle_p_jinshan) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a3_cab_jinshan) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_crh6a3_front_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a3_front_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-c-jinshan-1")
 }
-alternative_sprites (spriteset_crh6a3_middle_m_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a3_middle_m_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-m-3-jinshan")
 }
-alternative_sprites (spriteset_crh6a3_middle_p_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a3_middle_p_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-p-3-jinshan")
 }
-alternative_sprites (spriteset_crh6a3_cab_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a3_cab_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh6a-c-jinshan-2")
 }
 
@@ -192,7 +163,7 @@ item (FEAT_TRAINS, crh6a3) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2017,01,01);

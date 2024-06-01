@@ -3,18 +3,12 @@
 // Graphics
 
 // // Purchase Menu
-// spriteset (spriteset_srz25bld_purchase_original) {
-//     template_purchase_empty ()
-// }
-// alternative_sprites(spriteset_srz25bld_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+// spriteset (spriteset_srz25bld_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 //     template_purchase ("coaches", "25b")
 // }
 
 // // Vehicle
-// spriteset (spriteset_srz25bld_original) {
-//     template_empty ()
-// }
-// alternative_sprites(spriteset_srz25bld_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+// spriteset (spriteset_srz25bld_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 //     template_standard ("coaches", "25b")
 // }
 
@@ -25,7 +19,7 @@ switch (FEAT_TRAINS, SELF, switch_srz25bld_articulated_part, extra_callback_info
 
 // switch (FEAT_TRAINS, SELF, switch_srz25bld_graphics, position_in_articulated_veh % 3) {
 //     1: spriteset_srz25bld_original;
-//     empty_sprites;   
+//     empty_sprites;
 // }
 
 switch (FEAT_TRAINS, SELF, switch_srz25bld_capacity, position_in_articulated_veh % 3) {
@@ -44,7 +38,7 @@ item (FEAT_TRAINS, srz25bld) {
         name:                           string(STR_NAME_SRZ25BLD);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1992,01,01);

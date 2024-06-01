@@ -3,30 +3,18 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_25t_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_25t_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_25t_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches", "25t")
 }
 
 // Vehicle
-spriteset (spriteset_25t_original) {
-    template_empty ()
-}
-spriteset (spriteset_25t_qingzang) {
-    template_empty ()
-}
-spriteset (spriteset_25t_gaozu) {
-    template_empty ()
-}
-alternative_sprites(spriteset_25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t")
 }
-alternative_sprites(spriteset_25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t-qingzang")
 }
-alternative_sprites(spriteset_25t_gaozu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_25t_gaozu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t-gaozu")
 }
 
@@ -57,7 +45,7 @@ switch (FEAT_TRAINS, SELF, switch_25t_graphics_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_25t_graphics, position_in_articulated_veh % 3) {
     1: switch_25t_graphics_subtype;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25t_capacity, position_in_articulated_veh % 3) {
@@ -76,7 +64,7 @@ item (FEAT_TRAINS, yz25t) {
         name:                           string(STR_NAME_YZ25T);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2002,01,01);
@@ -109,7 +97,7 @@ item (FEAT_TRAINS, yz25t) {
         additional_text:                switch_yz25t_additional_text;
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_25t_cargo_subtype;
-        
+
         // Graphics
         default:                        switch_25t_graphics;
         purchase:                       spriteset_25t_purchase_original;

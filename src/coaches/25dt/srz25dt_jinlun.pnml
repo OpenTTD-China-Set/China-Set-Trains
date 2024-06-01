@@ -3,24 +3,15 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_srz25dt_jinlun_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_srz25dt_jinlun_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_srz25dt_jinlun_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches","srz25dt-jinlun-2001")
 }
 
 // Vehicle
-spriteset (spriteset_srz25dt_jinlun_2001) {
-    template_empty ()
-}
-alternative_sprites(spriteset_srz25dt_jinlun_2001, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_srz25dt_jinlun_2001, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "srz25dt-jinlun-2001")
 }
-spriteset (spriteset_srz25dt_jinlun_2010) {
-    template_empty ()
-}
-alternative_sprites(spriteset_srz25dt_jinlun_2010, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_srz25dt_jinlun_2010, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "srz25dt-jinlun-2010")
 }
 
@@ -42,7 +33,7 @@ switch (FEAT_TRAINS, SELF, switch_srz25dt_jinlun_graphics_subtype, cargo_subtype
 
 switch (FEAT_TRAINS, SELF, switch_srz25dt_jinlun_graphics, position_in_articulated_veh % 3) {
     1: switch_srz25dt_jinlun_graphics_subtype;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_srz25dt_jinlun_capacity, position_in_articulated_veh % 3) {
@@ -61,7 +52,7 @@ item (FEAT_TRAINS, srz25dt_jinlun) {
         name:                           string(STR_NAME_SRZ25DT_JINLUN);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2001,07,01);
@@ -94,7 +85,7 @@ item (FEAT_TRAINS, srz25dt_jinlun) {
         additional_text:                switch_srz25dt_jinlun_additional_text;
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_25dt_jinlun_cargo_subtype;
-        
+
         // Graphics
         default:                        switch_srz25dt_jinlun_graphics;
         purchase:                       spriteset_srz25dt_jinlun_purchase;

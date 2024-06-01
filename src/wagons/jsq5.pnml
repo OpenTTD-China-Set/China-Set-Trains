@@ -3,18 +3,12 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_jsq5_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_jsq5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_jsq5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("wagons", "jsq5")
 }
 
 // Vehicle
-spriteset (spriteset_jsq5) {
-    template_empty ()
-}
-alternative_sprites(spriteset_jsq5, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_jsq5, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "jsq5")
 }
 
@@ -25,7 +19,7 @@ switch (FEAT_TRAINS, SELF, switch_jsq5_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_jsq5_graphics, position_in_articulated_veh % 3) {
     1: spriteset_jsq5;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_jsq5_capacity_cargo, cargo_type_in_veh) {
@@ -47,7 +41,7 @@ item (FEAT_TRAINS, jsq5) {
         name:                           string(STR_NAME_JSQ5);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2006,01,01);
@@ -79,7 +73,7 @@ item (FEAT_TRAINS, jsq5) {
         // Menu
         additional_text:                string(STR_DECAY_400);
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_jsq5_graphics;
         purchase:                       spriteset_jsq5_purchase;

@@ -3,37 +3,22 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_nj2_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_nj2_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nj2_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("diesel", "nj2-original")
 }
 
 
 // Vehicle
-spriteset (spriteset_nj2_original) {
-    template_empty ()
-}
-spriteset (spriteset_nj2_original_back) {
-    template_empty ()
-}
-spriteset (spriteset_nj2) {
-    template_empty ()
-}
-spriteset (spriteset_nj2_back) {
-    template_empty ()
-}
-alternative_sprites(spriteset_nj2_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nj2_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "nj2-original")
 }
-alternative_sprites(spriteset_nj2_original_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nj2_original_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "nj2-original-back")
 }
-alternative_sprites(spriteset_nj2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nj2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "nj2")
 }
-alternative_sprites(spriteset_nj2_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nj2_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "nj2-back")
 }
 
@@ -63,7 +48,7 @@ switch (FEAT_TRAINS, SELF, switch_nj2_graphics_subtype_back, cargo_subtype) {
 switch (FEAT_TRAINS, SELF, switch_nj2_graphics_joint_front, position_in_vehid_chain % 6) {
     1: switch_nj2_graphics_subtype_front;
     4: switch_nj2_graphics_subtype_back;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_nj2_graphics_joint, position_in_vehid_chain_from_end) {
@@ -87,14 +72,6 @@ switch (FEAT_TRAINS, SELF, switch_nj2_graphics, num_vehs_in_vehid_chain % 6) {
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_nj2_capacity, position_in_articulated_veh % 3) {
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_nj2_additional_text, param_cargo_decay) {
-    return string(STR_DESC_5, string(STR_US_IMPORT), string(STR_NJ2_LIVERY_AVAILABILITY), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8), string(STR_NJ2_CONSIST));
-}
-
 
 item (FEAT_TRAINS, nj2) {
     property {
@@ -103,7 +80,7 @@ item (FEAT_TRAINS, nj2) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2006,1,1);
@@ -136,7 +113,7 @@ item (FEAT_TRAINS, nj2) {
     }
     graphics {
         // Menu
-        additional_text:                        switch_nj2_additional_text;
+        additional_text:                        string(STR_DESC_5, string(STR_US_IMPORT), string(STR_NJ2_LIVERY_AVAILABILITY), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8), string(STR_NJ2_CONSIST));
         can_attach_wagon:                       locowagon;
         cargo_subtype_text:                     switch_nj2_cargo_subtype;
 

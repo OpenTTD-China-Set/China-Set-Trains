@@ -3,18 +3,12 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_rw19t_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_rw19t_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_rw19t_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches","rw19t")
 }
 
 // Vehicle
-spriteset (spriteset_rw19t) {
-    template_empty ()
-}
-alternative_sprites(spriteset_rw19t, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_rw19t, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "rw19t")
 }
 
@@ -25,7 +19,7 @@ switch (FEAT_TRAINS, SELF, switch_rw19t_articulated_part, extra_callback_info1) 
 
 switch (FEAT_TRAINS, SELF, switch_rw19t_graphics, position_in_articulated_veh % 3) {
     1: spriteset_rw19t;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw19t_capacity, position_in_articulated_veh % 3) {
@@ -44,7 +38,7 @@ item (FEAT_TRAINS, rw19t) {
         name:                           string(STR_NAME_RW19T);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2007,01,01);
@@ -76,7 +70,7 @@ item (FEAT_TRAINS, rw19t) {
         // Menu
         additional_text:                switch_rw19t_additional_text;
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_rw19t_graphics;
         purchase:                       spriteset_rw19t_purchase;

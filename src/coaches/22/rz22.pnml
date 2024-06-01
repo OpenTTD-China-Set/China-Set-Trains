@@ -3,18 +3,12 @@
 // Graphics
 
 // // Purchase Menu
-// spriteset (spriteset_rz22_purchase_original) {
-//     template_purchase_empty ()
-// }
-// alternative_sprites(spriteset_rz22_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+// spriteset (spriteset_rz22_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 //     template_purchase ("coaches", "22")
 // }
 
 // // Vehicle
-// spriteset (spriteset_rz22_original) {
-//     template_empty ()
-// }
-// alternative_sprites(spriteset_rz22_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+// spriteset (spriteset_rz22_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 //     template_standard ("coaches", "22")
 // }
 
@@ -55,7 +49,7 @@ item (FEAT_TRAINS, rz22) {
         name:                           string(STR_NAME_RZ22);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1976,01,01);

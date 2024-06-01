@@ -3,18 +3,12 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_l70_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_l70_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_l70_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("wagons", "l70")
 }
 
 // Vehicle
-spriteset (spriteset_l70) {
-    template_empty ()
-}
-alternative_sprites(spriteset_l70, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_l70, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "l70")
 }
 
@@ -25,7 +19,7 @@ switch (FEAT_TRAINS, SELF, switch_l70_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_l70_graphics, position_in_articulated_veh % 3) {
     1: spriteset_l70;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_l70_capacity_cargo, cargo_type_in_veh) {
@@ -45,7 +39,7 @@ item (FEAT_TRAINS, l70) {
         name:                           string(STR_NAME_L70);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2010,01,01);
@@ -77,7 +71,7 @@ item (FEAT_TRAINS, l70) {
         // Menu
         additional_text:                string(STR_DECAY_185);
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_l70_graphics;
         purchase:                       spriteset_l70_purchase;

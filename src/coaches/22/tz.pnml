@@ -3,36 +3,21 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_tz_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_tz_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_tz_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches", "tz")
 }
 
 // Vehicle
-spriteset (spriteset_tz_original) {
-    template_empty ()
-}
-spriteset (spriteset_tz_beijing2shanghai) {
-    template_empty ()
-}
-spriteset (spriteset_tz_beijing2shanghai_alternative) {
-    template_empty ()
-}
-spriteset (spriteset_tz_guangzhou) {
-    template_empty ()
-}
-alternative_sprites(spriteset_tz_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_tz_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "tz")
 }
-alternative_sprites(spriteset_tz_beijing2shanghai, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_tz_beijing2shanghai, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "tz-beijing2shanghai")
 }
-alternative_sprites(spriteset_tz_beijing2shanghai_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_tz_beijing2shanghai_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "tz-beijing2shanghai-alternative")
 }
-alternative_sprites(spriteset_tz_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_tz_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "tz-guangzhou")
 }
 
@@ -45,7 +30,7 @@ switch (FEAT_TRAINS, SELF, switch_tz_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORANGE);
     1: return string(STR_BEIJING2SHANGHAI);
     2: return string(STR_BEIJING2SHANGHAIALT);
-    3: return string(STR_GUANGSHEN);    
+    3: return string(STR_GUANGSHEN);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -58,11 +43,7 @@ switch (FEAT_TRAINS, SELF, switch_tz_graphics_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_tz_graphics, position_in_articulated_veh % 3) {
     1: switch_tz_graphics_subtype;
-    empty_sprites;   
-}
-
-switch (FEAT_TRAINS, SELF, switch_tz_capacity, position_in_articulated_veh % 3) {
-    return 0;
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_tz_additional_text, param_cargo_decay) {
@@ -76,7 +57,7 @@ item (FEAT_TRAINS, tz) {
         name:                           string(STR_NAME_TZ);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1985,01,01);
@@ -109,7 +90,7 @@ item (FEAT_TRAINS, tz) {
         // Menu
         additional_text:                switch_tz_additional_text;
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_tz_graphics;
         purchase:                       spriteset_tz_purchase_original;
@@ -118,7 +99,7 @@ item (FEAT_TRAINS, tz) {
 
         // Stats
         length:                         switch_length_2_7_2;
-        cargo_capacity:                 switch_tz_capacity;
+        cargo_capacity:                 0;
         cargo_age_period:               200 << param_cargo_decay;
         cost_factor:                    23;
         running_cost_factor:            5 * runningcostfactor() + 20;

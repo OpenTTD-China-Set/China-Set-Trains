@@ -3,43 +3,24 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_cr400bf_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_cr400bf_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr400bf_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("25-emu", "cr400bf-c")
 }
 
 // Vehicle
-spriteset (spriteset_cr400bf_front) {
-    template_empty ()
-}
-spriteset (spriteset_cr400bf_middle_m) {
-    template_empty ()
-}
-spriteset (spriteset_cr400bf_middle_t) {
-    template_empty ()
-}
-spriteset (spriteset_cr400bf_middle_tp) {
-    template_empty ()
-}
-spriteset (spriteset_cr400bf_cab) {
-    template_empty ()
-}
-
-alternative_sprites(spriteset_cr400bf_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr400bf_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr400bf-c")
 }
-alternative_sprites (spriteset_cr400bf_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr400bf_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr400bf-m")
 }
-alternative_sprites (spriteset_cr400bf_middle_t, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr400bf_middle_t, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr400bf-tp") // NON-RISING PANTOS NOT DONE YET
 }
-alternative_sprites (spriteset_cr400bf_middle_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr400bf_middle_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr400bf-tp")
 }
-alternative_sprites (spriteset_cr400bf_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr400bf_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "cr400bf-c")
 }
 
@@ -50,7 +31,7 @@ switch (FEAT_TRAINS, SELF, switch_cr400bf_articulated_part, extra_callback_info1
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_graphics, position_in_articulated_veh % 3) {
     1: spriteset_cr400bf_front;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_head_capacity, position_in_articulated_veh % 3) {
@@ -521,7 +502,7 @@ item (FEAT_TRAINS, cr400bf) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2016,08,15);

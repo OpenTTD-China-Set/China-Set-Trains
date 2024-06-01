@@ -5,3 +5,5 @@
 *.tar
 chinasettrains-*
 custom_tags.txt
+gfx/*/*.png
+gfx/*/8bpp/*.png

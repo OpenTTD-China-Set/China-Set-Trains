@@ -3,36 +3,21 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_c62_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_c62_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_c62_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("wagons", "c62")
 }
 
 // Vehicle
-spriteset (spriteset_c62_black_empty) {
-    template_empty ()
-}
-spriteset (spriteset_c62_black_coal_half) {
-    template_empty ()
-}
-spriteset (spriteset_c62_black_coal_full) {
-    template_empty ()
-}
-spriteset (spriteset_c62_black_cover) {
-    template_empty ()
-}
-alternative_sprites(spriteset_c62_black_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_c62_black_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "c62")
 }
-alternative_sprites(spriteset_c62_black_coal_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_c62_black_coal_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "c62-coal-half")
 }
-alternative_sprites(spriteset_c62_black_coal_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_c62_black_coal_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "c62-coal-full")
 }
-alternative_sprites(spriteset_c62_black_cover, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_c62_black_cover, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "c62-cover")
 }
 
@@ -63,16 +48,12 @@ switch (FEAT_TRAINS, SELF, switch_c62_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_c62_graphics, position_in_articulated_veh % 3) {
     1: random_c62_colour;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_c62_capacity, position_in_articulated_veh % 3) {
     1: return 60;
     return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_c62_additional_text, param_cargo_decay) {
-    return string(STR_DESC_2, string(STR_C62_LIVERY_AVAILABILITY), string(STR_DECAY_185));
 }
 
 
@@ -82,7 +63,7 @@ item (FEAT_TRAINS, c62) {
         name:                           string(STR_NAME_C62);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1971,01,01);
@@ -113,9 +94,9 @@ item (FEAT_TRAINS, c62) {
     }
     graphics {
         // Menu
-        additional_text:                switch_c62_additional_text;
+        additional_text:                string(STR_DESC_2, string(STR_C62_LIVERY_AVAILABILITY), string(STR_DECAY_185));
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_c62_graphics;
         purchase:                       spriteset_c62_purchase;

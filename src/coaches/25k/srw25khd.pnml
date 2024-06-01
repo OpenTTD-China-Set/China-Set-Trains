@@ -6,11 +6,8 @@
 
 
 // Vehicle
-spriteset (spriteset_srw25khd_xian) {
-    template_empty ()
-}
-alternative_sprites(spriteset_srw25khd_xian, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "srw25khd-xi'an")
+spriteset (spriteset_srw25khd_xian, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "srw25khd-xian")
 }
 
 switch (FEAT_TRAINS, SELF, switch_srw25khd_articulated_part, extra_callback_info1) {
@@ -25,7 +22,7 @@ switch (FEAT_TRAINS, SELF, switch_srw25khd_graphics_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_srw25khd_graphics, position_in_articulated_veh % 3) {
     1: switch_srw25khd_graphics_subtype;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_srw25khd_capacity, position_in_articulated_veh % 3) {
@@ -44,7 +41,7 @@ item (FEAT_TRAINS, srw25khd) {
         name:                           string(STR_NAME_SRW25KHD);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1999,01,01);
@@ -77,7 +74,7 @@ item (FEAT_TRAINS, srw25khd) {
         additional_text:                switch_srw25khd_additional_text;
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_s25khd_cargo_subtype;
-        
+
         // Graphics
         default:                        switch_srw25khd_graphics;
         purchase:                       spriteset_s25khd_purchase;

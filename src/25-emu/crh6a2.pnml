@@ -3,238 +3,125 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_crh6a2_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_crh6a2_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("25-emu", "crh6a-c-1")
 }
 
 // Vehicle
-spriteset (spriteset_crh6a2_front) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_m) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_p) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_cab) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_crh6a2_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-c-1")
 }
-alternative_sprites (spriteset_crh6a2_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-m-2")
 }
-alternative_sprites (spriteset_crh6a2_middle_p, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_p, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-p-2")
 }
-alternative_sprites (spriteset_crh6a2_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh6a-c-2")
 }
 
 
-spriteset (spriteset_crh6a2_front_guangshen) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_m_guangshen) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_p_guangshen) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_cab_guangshen) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_crh6a2_front_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_front_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-c-guangshen-1")
 }
-alternative_sprites (spriteset_crh6a2_middle_m_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_m_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-m-2-guangshen")
 }
-alternative_sprites (spriteset_crh6a2_middle_p_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_p_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-p-2-guangshen")
 }
-alternative_sprites (spriteset_crh6a2_cab_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_cab_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh6a-c-guangshen-2")
 }
 
 
-spriteset (spriteset_crh6a2_front_guangzhu) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_m_guangzhu) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_p_guangzhu) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_cab_guangzhu) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_crh6a2_front_guangzhu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_front_guangzhu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-c-guangzhu-1")
 }
-alternative_sprites (spriteset_crh6a2_middle_m_guangzhu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_m_guangzhu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-m-2-guangzhu")
 }
-alternative_sprites (spriteset_crh6a2_middle_p_guangzhu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_p_guangzhu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-p-2-guangzhu")
 }
-alternative_sprites (spriteset_crh6a2_cab_guangzhu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_cab_guangzhu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh6a-c-guangzhu-2")
 }
 
 
-spriteset (spriteset_crh6a2_front_tianfu) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_front_tianfu_green) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_m_tianfu) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_p_tianfu) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_cab_tianfu) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_cab_tianfu_green) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_crh6a2_front_tianfu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_front_tianfu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-c-tianfu-1")
 }
-alternative_sprites (spriteset_crh6a2_front_tianfu_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_front_tianfu_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-c-tianfu-green-1")
 }
-alternative_sprites (spriteset_crh6a2_middle_m_tianfu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_m_tianfu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-m-2-tianfu")
 }
-alternative_sprites (spriteset_crh6a2_middle_p_tianfu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_p_tianfu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-p-2-tianfu")
 }
-alternative_sprites (spriteset_crh6a2_cab_tianfu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_cab_tianfu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh6a-c-tianfu-2")
 }
-alternative_sprites (spriteset_crh6a2_cab_tianfu_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_cab_tianfu_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh6a-c-tianfu-green-2")
 }
 
 
-spriteset (spriteset_crh6a2_front_zhengjiao) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_m_zhengjiao) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_p_zhengjiao) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_cab_zhengjiao) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_crh6a2_front_zhengjiao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_front_zhengjiao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-c-zhengjiao-1")
 }
-alternative_sprites (spriteset_crh6a2_middle_m_zhengjiao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_m_zhengjiao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-m-2-zhengjiao")
 }
-alternative_sprites (spriteset_crh6a2_middle_p_zhengjiao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_p_zhengjiao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-p-2-zhengjiao")
 }
-alternative_sprites (spriteset_crh6a2_cab_zhengjiao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_cab_zhengjiao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh6a-c-zhengjiao-2")
 }
 
 
-spriteset (spriteset_crh6a2_front_zhuji) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_m_zhuji) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_p_zhuji) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_cab_zhuji) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_crh6a2_front_zhuji, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_front_zhuji, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-c-zhuji-1")
 }
-alternative_sprites (spriteset_crh6a2_middle_m_zhuji, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_m_zhuji, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-m-2-zhuji-1")
 }
-alternative_sprites (spriteset_crh6a2_middle_p_zhuji, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_p_zhuji, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-p-2-zhuji")
 }
-alternative_sprites (spriteset_crh6a2_cab_zhuji, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_cab_zhuji, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh6a-c-zhuji-2")
 }
 
 
-spriteset (spriteset_crh6a2_front_zhusanjiao_blue) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_m_zhusanjiao_blue) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_p_zhusanjiao_blue) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_cab_zhusanjiao_blue) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_crh6a2_front_zhusanjiao_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_front_zhusanjiao_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-c-zhusanjiao-blue-1")
 }
-alternative_sprites (spriteset_crh6a2_middle_m_zhusanjiao_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_m_zhusanjiao_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-m-2-zhusanjiao-blue")
 }
-alternative_sprites (spriteset_crh6a2_middle_p_zhusanjiao_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_p_zhusanjiao_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-p-2-zhusanjiao-blue")
 }
-alternative_sprites (spriteset_crh6a2_cab_zhusanjiao_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_cab_zhusanjiao_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh6a-c-zhusanjiao-blue-2")
 }
 
 
-spriteset (spriteset_crh6a2_front_zhusanjiao_orange) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_m_zhusanjiao_orange) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_middle_p_zhusanjiao_orange) {
-    template_empty ()
-}
-spriteset (spriteset_crh6a2_cab_zhusanjiao_orange) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_crh6a2_front_zhusanjiao_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_front_zhusanjiao_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-c-zhusanjiao-orange-1")
 }
-alternative_sprites (spriteset_crh6a2_middle_m_zhusanjiao_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_m_zhusanjiao_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-m-2-zhusanjiao-orange")
 }
-alternative_sprites (spriteset_crh6a2_middle_p_zhusanjiao_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_middle_p_zhusanjiao_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6a-p-2-zhusanjiao-orange")
 }
-alternative_sprites (spriteset_crh6a2_cab_zhusanjiao_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6a2_cab_zhusanjiao_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh6a-c-zhusanjiao-orange-2")
 }
 
@@ -434,7 +321,7 @@ item (FEAT_TRAINS, crh6a2) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2012,01,01);

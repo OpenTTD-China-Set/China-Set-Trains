@@ -3,24 +3,15 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_25b_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_25b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_25b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches", "25b")
 }
 
 // Vehicle
-spriteset (spriteset_25b_original) {
-    template_empty ()
-}
-spriteset (spriteset_25b_jitong) {
-    template_empty ()
-}
-alternative_sprites(spriteset_25b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_25b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25b")
 }
-alternative_sprites(spriteset_25b_jitong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_25b_jitong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25b-jitong")
 }
 
@@ -50,7 +41,7 @@ switch (FEAT_TRAINS, SELF, switch_25b_graphics_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_25b_graphics, position_in_articulated_veh % 3) {
     1: switch_25b_graphics_subtype;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25b_capacity, position_in_articulated_veh % 3) {
@@ -69,7 +60,7 @@ item (FEAT_TRAINS, yz25b) {
         name:                           string(STR_NAME_YZ25B);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1992,01,01);
@@ -101,7 +92,7 @@ item (FEAT_TRAINS, yz25b) {
         // Menu
         additional_text:                switch_yz25b_additional_text;
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_25b_graphics;
         purchase:                       spriteset_25b_purchase_original;

@@ -3,37 +3,21 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_crh1e_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_crh1e_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh1e_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("25-emu", "crh1e-c")
 }
 
 // Vehicle
-spriteset (spriteset_crh1e_front) {
-    template_empty ()
-}
-spriteset (spriteset_crh1e_middle_m) {
-    template_empty ()
-}
-spriteset (spriteset_crh1e_middle_p) {
-    template_empty ()
-}
-spriteset (spriteset_crh1e_cab) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_crh1e_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh1e_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh1e-c")
 }
-alternative_sprites (spriteset_crh1e_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh1e_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh1e-m")
 }
-alternative_sprites (spriteset_crh1e_middle_p, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh1e_middle_p, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh1e-p")
 }
-alternative_sprites (spriteset_crh1e_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh1e_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh1e-c")
 }
 
@@ -188,7 +172,7 @@ item (FEAT_TRAINS, crh1e) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2009,01,01);

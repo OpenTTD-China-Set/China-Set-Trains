@@ -3,43 +3,24 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_crh5a_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_crh5a_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh5a_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("25-emu", "crh5-mc")
 }
 
 // Vehicle
-spriteset (spriteset_crh5a_front) {
-    template_empty ()
-}
-spriteset (spriteset_crh5a_middle_m) {
-    template_empty ()
-}
-spriteset (spriteset_crh5a_middle_t) {
-    template_empty ()
-}
-spriteset (spriteset_crh5a_middle_tp) {
-    template_empty ()
-}
-spriteset (spriteset_crh5a_cab) {
-    template_empty ()
-}
-
-alternative_sprites(spriteset_crh5a_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh5a_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh5-mc")
 }
-alternative_sprites (spriteset_crh5a_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh5a_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh5-m")
 }
-alternative_sprites (spriteset_crh5a_middle_t, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh5a_middle_t, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh5-tp") // NON-RISING PANTO SPRITES UNFINISHED
 }
-alternative_sprites (spriteset_crh5a_middle_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh5a_middle_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh5-tp")
 }
-alternative_sprites (spriteset_crh5a_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh5a_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh5-mc")
 }
 
@@ -313,7 +294,7 @@ item (FEAT_TRAINS, crh5a) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2007,01,01);

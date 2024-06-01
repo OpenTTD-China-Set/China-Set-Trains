@@ -3,36 +3,21 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_nd5_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_nd5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nd5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("diesel", "nd5")
 }
 
 // Vehicle
-spriteset (spriteset_nd5_original) {
-    template_empty ()
-}
-spriteset (spriteset_nd5_late) {
-    template_empty ()
-}
-spriteset (spriteset_nd5_reverse) {
-    template_empty ()
-}
-spriteset (spriteset_nd5_late_reverse) {
-    template_empty ()
-}
-alternative_sprites(spriteset_nd5_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nd5_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "nd5")
 }
-alternative_sprites(spriteset_nd5_late, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nd5_late, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "nd5-late")
 }
-alternative_sprites(spriteset_nd5_reverse, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nd5_reverse, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "nd5-reverse")
 }
-alternative_sprites(spriteset_nd5_late_reverse, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nd5_late_reverse, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "nd5-late-reverse")
 }
 
@@ -58,7 +43,7 @@ switch (FEAT_TRAINS, SELF, switch_nd5_graphics_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_nd5_graphics, position_in_articulated_veh % 3) {
     1: switch_nd5_graphics_subtype;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_nd5_additional_text, param_cargo_decay) {
@@ -73,7 +58,7 @@ item (FEAT_TRAINS, nd5) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1984,01,01);

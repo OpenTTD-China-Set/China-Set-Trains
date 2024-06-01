@@ -3,24 +3,15 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_n60_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_n60_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_n60_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("wagons", "n60")
 }
 
 // Vehicle
-spriteset (spriteset_n60_original_empty) {
-    template_empty ()
-}
-spriteset (spriteset_n60_original_cover) {
-    template_empty ()
-}
-alternative_sprites(spriteset_n60_original_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_n60_original_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "n60")
 }
-alternative_sprites(spriteset_n60_original_cover, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_n60_original_cover, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "n60-cover")
 }
 
@@ -40,7 +31,7 @@ switch (FEAT_TRAINS, SELF, switch_n60_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_n60_graphics, position_in_articulated_veh % 3) {
     1: random_n60_colour;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_n60_capacity_cargo, cargo_type_in_veh) {
@@ -58,10 +49,6 @@ switch (FEAT_TRAINS, SELF, switch_n60_loading_speed, cargo_type_in_veh) {
     return 10;
 }
 
-switch (FEAT_TRAINS, SELF, switch_n60_additional_text, param_cargo_decay) {
-    return string(STR_DESC_2, string(STR_N60_LIVERY_AVAILABILITY), string(STR_DECAY_185));
-}
-
 
 item (FEAT_TRAINS, n60) {
     property {
@@ -69,7 +56,7 @@ item (FEAT_TRAINS, n60) {
         name:                           string(STR_NAME_N60);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1958,01,01);
@@ -100,9 +87,9 @@ item (FEAT_TRAINS, n60) {
     }
     graphics {
         // Menu
-        additional_text:                switch_n60_additional_text;
+        additional_text:                string(STR_DESC_2, string(STR_N60_LIVERY_AVAILABILITY), string(STR_DECAY_185));
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_n60_graphics;
         purchase:                       spriteset_n60_purchase;

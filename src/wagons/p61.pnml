@@ -3,18 +3,12 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_p61_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_p61_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_p61_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("wagons", "p61")
 }
 
 // Vehicle
-spriteset (spriteset_p61_black) {
-    template_empty ()
-}
-alternative_sprites(spriteset_p61_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_p61_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "p61")
 }
 
@@ -29,7 +23,7 @@ switch (FEAT_TRAINS, SELF, switch_p61_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_p61_graphics, position_in_articulated_veh % 3) {
     1: random_p61_colour;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_p61_capacity_pengdaike, (cargo_classes == bitmask(CC_PASSENGERS)) || (cargo_type_in_veh == YETI) || (cargo_type_in_veh == YETY)) {
@@ -67,10 +61,6 @@ switch (FEAT_TRAINS, SELF, switch_p61_decay, cargo_type_in_veh == LVST) {
     switch_p61_decay_pengdaike;
 }
 
-switch (FEAT_TRAINS, SELF, switch_p61_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_P61_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR), string(STR_DESC_PENGDAIKE));
-}
-
 
 item (FEAT_TRAINS, p61) {
     property {
@@ -78,7 +68,7 @@ item (FEAT_TRAINS, p61) {
         name:                           string(STR_NAME_P61);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1967,01,01);
@@ -108,9 +98,9 @@ item (FEAT_TRAINS, p61) {
     }
     graphics {
         // Menu
-        additional_text:                switch_p61_additional_text;
+        additional_text:                string(STR_DESC_3, string(STR_P61_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR), string(STR_DESC_PENGDAIKE));
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_p61_graphics;
         purchase:                       spriteset_p61_purchase_original;

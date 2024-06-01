@@ -3,25 +3,16 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_hxn3qz_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_hxn3qz_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_hxn3qz_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("diesel", "hxn3qz")
 }
 
 
 // Vehicle
-spriteset (spriteset_hxn3qz) {
-    template_empty ()
-}
-spriteset (spriteset_hxn3qz_back) {
-    template_empty ()
-}
-alternative_sprites(spriteset_hxn3qz, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_hxn3qz, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "hxn3qz")
 }
-alternative_sprites(spriteset_hxn3qz_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_hxn3qz_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "hxn3qz-back")
 }
 
@@ -48,7 +39,7 @@ switch (FEAT_TRAINS, SELF, switch_hxn3qz_graphics_subtype_back, cargo_subtype) {
 switch (FEAT_TRAINS, SELF, switch_hxn3qz_graphics_joint_front, position_in_vehid_chain % 6) {
     1: switch_hxn3qz_graphics_subtype_front;
     4: switch_hxn3qz_graphics_subtype_back;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_hxn3qz_graphics_joint, position_in_vehid_chain_from_end) {
@@ -72,10 +63,6 @@ switch (FEAT_TRAINS, SELF, switch_hxn3qz_graphics, num_vehs_in_vehid_chain % 6) 
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_hxn3qz_capacity, position_in_articulated_veh % 3) {
-    return 0;
-}
-
 switch (FEAT_TRAINS, SELF, switch_hxn3qz_additional_text, param_cargo_decay) {
     return string(STR_DESC_3, string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8), string(STR_HXN3QZ_CONSIST));
 }
@@ -88,7 +75,7 @@ item (FEAT_TRAINS, hxn3qz) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2014,1,1);
@@ -117,7 +104,7 @@ item (FEAT_TRAINS, hxn3qz) {
         running_cost_base:              RUNNING_COST_DIESEL;
         running_cost_factor:            35;
         reliability_decay:              8;
-        bitmask_vehicle_info:           bitmask(2);
+        bitmask_vehicle_info:           0;
     }
     graphics {
         // Menu

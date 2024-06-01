@@ -3,6 +3,12 @@ China Set: Trains Changelog
 
 # Initial-0 Updates
 
+## Initial-0-3 Updates
+
+0.3.0.160 (?/6/2024)
+--------------------
+GRF code optimisation
+
 ## Initial-0-2 Updates
 
 0.2.3.158 (14/4/2024)
@@ -300,7 +306,7 @@ Remove: all combined MU coach
 Change: sprites now attached to the front section of vehicles
 Change: cargo_age_period basis and display
 Change: half running_cost_base, double running_cost_factor for locomotives
-Change: CR200J1 cab 
+Change: CR200J1 cab
 Fix #9: sprite misalignments of C64
 
 ## Initial-0-0 Updates
