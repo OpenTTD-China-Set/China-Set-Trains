@@ -3,10 +3,7 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_df4bh_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_df4bh_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df4bh_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("diesel", "df4b")
 }
 
@@ -64,11 +61,7 @@ switch (FEAT_TRAINS, SELF, switch_df4bh_cargo_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_df4bh_graphics, position_in_articulated_veh % 3) {
     1: switch_df4bh_graphics_subtype;
-    empty_sprites;   
-}
-
-switch (FEAT_TRAINS, SELF, switch_df4bh_capacity, position_in_articulated_veh % 3) {
-    return 0;
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df4bh_additional_text, param_cargo_decay) {
@@ -83,7 +76,7 @@ item (FEAT_TRAINS, df4bh) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1984,01,01);

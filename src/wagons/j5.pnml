@@ -3,36 +3,21 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_j5_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_j5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_j5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("wagons", "j5")
 }
 
 // Vehicle
-spriteset (spriteset_j5) {
-    template_empty ()
-}
-spriteset (spriteset_j5_full) {
-    template_empty ()
-}
-spriteset (spriteset_j5_grey) {
-    template_empty ()
-}
-spriteset (spriteset_j5_grey_full) {
-    template_empty ()
-}
-alternative_sprites(spriteset_j5, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_j5, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "j5")
 }
-alternative_sprites(spriteset_j5_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_j5_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "j5-full")
 }
-alternative_sprites(spriteset_j5_grey, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_j5_grey, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "j5-grey")
 }
-alternative_sprites(spriteset_j5_grey_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_j5_grey_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "j5-grey-full")
 }
 
@@ -58,7 +43,7 @@ random_switch (FEAT_TRAINS, SELF, random_j5_colour) {
 
 switch (FEAT_TRAINS, SELF, switch_j5_graphics, position_in_articulated_veh % 3) {
     1: random_j5_colour;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_j5_capacity_cargo, cargo_type_in_veh) {
@@ -78,7 +63,7 @@ item (FEAT_TRAINS, j5) {
         name:                           string(STR_NAME_J5);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1984,01,01);
@@ -110,7 +95,7 @@ item (FEAT_TRAINS, j5) {
         // Menu
         additional_text:                string(STR_DECAY_800);
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_j5_graphics;
         purchase:                       spriteset_j5_purchase;

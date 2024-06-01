@@ -3,49 +3,27 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_djj1_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_djj1_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_djj1_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("25-emu", "djj1-m")
 }
 
 // Vehicle
-spriteset (spriteset_djj1_front) {
-    template_empty ()
-}
-spriteset (spriteset_djj1_front_guangshen) {
-    template_empty ()
-}
-spriteset (spriteset_djj1_middle) {
-    template_empty ()
-}
-spriteset (spriteset_djj1_cab) {
-    template_empty ()
-}
-spriteset (spriteset_djj1_back) {
-    template_empty ()
-}
-spriteset (spriteset_djj1_back_guangshen) {
-    template_empty ()
-}
-
-alternative_sprites(spriteset_djj1_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_djj1_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "djj1-m")
 }
-alternative_sprites(spriteset_djj1_front_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_djj1_front_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "djj1-m-guangshen")
 }
-alternative_sprites (spriteset_djj1_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_djj1_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "djj1-t")
 }
-alternative_sprites (spriteset_djj1_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_djj1_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "djj1-c")
 }
-alternative_sprites (spriteset_djj1_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_djj1_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "djj1-m-b")
 }
-alternative_sprites (spriteset_djj1_back_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_djj1_back_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "djj1-m-b-guangshen")
 }
 
@@ -93,7 +71,7 @@ switch (FEAT_TRAINS, SELF, switch_djj1_graphics_front, position_in_consist) {
 
 switch (FEAT_TRAINS, SELF, switch_djj1_graphics, position_in_consist_from_end) {
     1: switch_djj1_graphics_back_subtype;
-    switch_djj1_graphics_front;   
+    switch_djj1_graphics_front;
 }
 
 switch (FEAT_TRAINS, SELF, switch_djj1_additional_text, param_cargo_decay) {
@@ -143,7 +121,7 @@ item (FEAT_TRAINS, djj1) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2000,09,01);

@@ -3,31 +3,18 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_cr200jb_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_cr200jb_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr200jb_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("25-emu", "cr200j-b-m")
 }
 
 // Vehicle
-spriteset (spriteset_cr200jb_front) {
-    template_empty ()
-}
-spriteset (spriteset_cr200jb_middle) {
-    template_empty ()
-}
-spriteset (spriteset_cr200jb_cab) {
-    template_empty ()
-}
-
-alternative_sprites(spriteset_cr200jb_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr200jb_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200j-b-m")
 }
-alternative_sprites (spriteset_cr200jb_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr200jb_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200j-b-t")
 }
-alternative_sprites (spriteset_cr200jb_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_cr200jb_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200j-b-c")
 }
 
@@ -38,7 +25,7 @@ switch (FEAT_TRAINS, SELF, switch_cr200jb_articulated_part, extra_callback_info1
 
 switch (FEAT_TRAINS, SELF, switch_cr200jb_graphics, position_in_articulated_veh % 3) {
     1: spriteset_cr200jb_front;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jb_head_capacity, position_in_articulated_veh % 3) {
@@ -168,7 +155,7 @@ item (FEAT_TRAINS, cr200jb) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2020,04,01);

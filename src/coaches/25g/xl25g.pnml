@@ -3,24 +3,15 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_xl25g_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_xl25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_xl25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches", "xl25g")
 }
 
 // Vehicle
-spriteset (spriteset_xl25g_original) {
-    template_empty ()
-}
-spriteset (spriteset_xl25g_jinwen) {
-    template_empty ()
-}
-alternative_sprites(spriteset_xl25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_xl25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "xl25g")
 }
-alternative_sprites(spriteset_xl25g_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_xl25g_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "xl25g-jinwen")
 }
 
@@ -61,7 +52,7 @@ item (FEAT_TRAINS, xl25g) {
         name:                           string(STR_NAME_XL25G);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1996,01,01);
@@ -94,7 +85,7 @@ item (FEAT_TRAINS, xl25g) {
         additional_text:                switch_xl25g_additional_text;
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_xl25g_cargo_subtype;
-        
+
         // Graphics
         default:                        switch_xl25g_graphics;
         purchase:                       spriteset_xl25g_purchase_original;

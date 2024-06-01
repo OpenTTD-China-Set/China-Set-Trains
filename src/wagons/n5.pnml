@@ -3,60 +3,33 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_n5_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_n5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_n5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("wagons", "n5")
 }
 
 // Vehicle
-spriteset (spriteset_n5_original_empty) {
-    template_empty ()
-}
-spriteset (spriteset_n5_original_bucket_half) {
-    template_empty ()
-}
-spriteset (spriteset_n5_original_bucket_full) {
-    template_empty ()
-}
-spriteset (spriteset_n5_original_goods_33percent) {
-    template_empty ()
-}
-spriteset (spriteset_n5_original_goods_66percent) {
-    template_empty ()
-}
-spriteset (spriteset_n5_original_goods_full) {
-    template_empty ()
-}
-spriteset (spriteset_n5_original_metal_half) {
-    template_empty ()
-}
-spriteset (spriteset_n5_original_metal_full) {
-    template_empty ()
-}
-alternative_sprites(spriteset_n5_original_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_n5_original_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "n5")
 }
-alternative_sprites(spriteset_n5_original_bucket_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_n5_original_bucket_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "n5-bucket-half")
 }
-alternative_sprites(spriteset_n5_original_bucket_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_n5_original_bucket_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "n5-bucket-full")
 }
-alternative_sprites(spriteset_n5_original_goods_33percent, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_n5_original_goods_33percent, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "n5-goods-33percent")
 }
-alternative_sprites(spriteset_n5_original_goods_66percent, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_n5_original_goods_66percent, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "n5-goods-66percent")
 }
-alternative_sprites(spriteset_n5_original_goods_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_n5_original_goods_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "n5-goods-full")
 }
-alternative_sprites(spriteset_n5_original_metal_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_n5_original_metal_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "n5-steel-half")
 }
-alternative_sprites(spriteset_n5_original_metal_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_n5_original_metal_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "n5-steel-full")
 }
 
@@ -96,7 +69,7 @@ switch (FEAT_TRAINS, SELF, switch_n5_original_all_cargo, cargo_type_in_veh) {
     STSH: switch_n5_original_metal;
     STWR: switch_n5_original_metal;
     ZINC: switch_n5_original_metal;
-    
+
     EOIL: switch_n5_original_bucket;
     FZDR: switch_n5_original_bucket;
     WATR: switch_n5_original_bucket;
@@ -141,7 +114,7 @@ switch (FEAT_TRAINS, SELF, switch_n5_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_n5_graphics, position_in_articulated_veh % 3) {
     1: random_n5_colour;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_n5_capacity_cargo, cargo_type_in_veh) {
@@ -159,18 +132,13 @@ switch (FEAT_TRAINS, SELF, switch_n5_loading_speed, cargo_type_in_veh) {
     return 10;
 }
 
-switch (FEAT_TRAINS, SELF, switch_n5_additional_text, param_cargo_decay) {
-    return string(STR_DESC_2, string(STR_N5_LIVERY_AVAILABILITY), string(STR_DECAY_185));
-}
-
-
 item (FEAT_TRAINS, n5) {
     property {
         // Menu
         name:                           string(STR_NAME_N5);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1951,01,01);
@@ -201,9 +169,9 @@ item (FEAT_TRAINS, n5) {
     }
     graphics {
         // Menu
-        additional_text:                switch_n5_additional_text;
+        additional_text:                string(STR_DESC_2, string(STR_N5_LIVERY_AVAILABILITY), string(STR_DECAY_185));
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_n5_graphics;
         purchase:                       spriteset_n5_purchase;

@@ -3,36 +3,21 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_df4d0000_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_df4d0000_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df4d0000_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("diesel", "df4d-0000")
 }
 
 // Vehicle
-spriteset (spriteset_df4d0000_original) {
-    template_empty ()
-}
-spriteset (spriteset_df4d0000_xihu) {
-    template_empty ()
-}
-spriteset (spriteset_df4d0000_xihu_reversed) {
-    template_empty ()
-}
-spriteset (spriteset_df4d0000_qinhuangdao) {
-    template_empty ()
-}
-alternative_sprites(spriteset_df4d0000_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df4d0000_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4d-0000")
 }
-alternative_sprites(spriteset_df4d0000_xihu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df4d0000_xihu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4d-xihu")
 }
-alternative_sprites(spriteset_df4d0000_xihu_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df4d0000_xihu_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4d-xihu-r")
 }
-alternative_sprites(spriteset_df4d0000_qinhuangdao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df4d0000_qinhuangdao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4d-qinhuangdao")
 }
 
@@ -58,11 +43,7 @@ switch (FEAT_TRAINS, SELF, switch_df4d0000_graphics_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_df4d0000_graphics, position_in_articulated_veh % 3) {
     1: switch_df4d0000_graphics_subtype;
-    empty_sprites;   
-}
-
-switch (FEAT_TRAINS, SELF, switch_df4d0000_capacity, position_in_articulated_veh % 3) {
-    return 0;
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df4d0000_additional_text, param_cargo_decay) {
@@ -77,7 +58,7 @@ item (FEAT_TRAINS, df4d0000) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1997,01,01);

@@ -4,18 +4,12 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_ca23_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_ca23_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ca23_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches", "ca23")
 }
 
 // Vehicle
-spriteset (spriteset_ca23_original) {
-    template_empty ()
-}
-alternative_sprites(spriteset_ca23_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ca23_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "ca23")
 }
 
@@ -35,7 +29,7 @@ switch (FEAT_TRAINS, SELF, switch_ca23_graphics_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_ca23_graphics, position_in_articulated_veh % 3) {
     1: switch_ca23_graphics_subtype;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca23_capacity, position_in_articulated_veh % 3) {
@@ -54,7 +48,7 @@ item (FEAT_TRAINS, ca23) {
         name:                           string(STR_NAME_CA23);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1963,01,01);
@@ -88,7 +82,7 @@ item (FEAT_TRAINS, ca23) {
         additional_text:                switch_ca23_additional_text;
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_ca23_cargo_subtype;
-        
+
         // Graphics
         default:                        switch_ca23_graphics;
         purchase:                       spriteset_ca23_purchase_original;

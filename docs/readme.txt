@@ -39,7 +39,7 @@ It is developed by China Set Team, which can be found in Part 6.
 
 OpenTTD:
 see https://wiki.openttd.org/NewGRF
-  
+
 This NewGRF is available from the ingame Online Content.
 
 
@@ -60,7 +60,7 @@ in "Standard" mode, cargo age period varies depending on wagon types.
 
 ### 2.4 Usage
 
-Everything in this set is Mainland China rolling stock, in addition of 
+Everything in this set is Mainland China rolling stock, in addition of
 several wagon types from international/interregional connections.
 
 Locomotives and multiple units featuring refitting are for deciding the
@@ -217,7 +217,7 @@ forum topic: https://www.tt-forums.net/viewtopic.php?t=91092
 ### 7.3 General enquiries
 
 If you have any queries that cannot be asked in the forum topic, then
-contact John Franklin (JohnFranklin523) via Private Message at 
+contact John Franklin (JohnFranklin523) via Private Message at
 www.tt-forums.net.
 
 
@@ -238,7 +238,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along
-with this program; if not, please check 
+with this program; if not, please check
 https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 
@@ -246,13 +246,25 @@ https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 The source code can be obtained from GitHub.
 
-1. Install WSL (if you are on Windows)
+Using Linux or WSL:
+
+1. install gorender from https://github.com/mattkimber/gorender (might be complicated for non-ubuntu users);
 2. sudo apt install python3;
 3. sudo apt install python3-pip;
 4. sudo apt install make;
-5. pip3 install nml;
-6. Unzip China-Set-Trains folder downloaded;
-7. Shift-right-click (if you are on Windows) the China-Set-Trains folder;
-8. Click "Open Linux Shell";
-9. type "make";
-10. Compile success.
+5. pip3 install nml; (Notice: Compilation needs NML >= 0.7.5)
+6. cd to the local China-Set-Trains folder;
+7. type "make"; (If you want shorter compilation time, try "make -j n" where n should be no larger than the memory in GB your system has, or your system would breakdown)
+8. Compile success.
+
+Using Windows (Scoop is advised here, but non-scoop compilations are also possible):
+
+1. install scoop;
+2. scoop bucket add openttd https://github.com/WenSimEHRP/OpenTTD-Buckets;
+3. scoop install python@3.11.9 (versions >= 3.12 are unsupported presently);
+4. scoop install make;
+5. scoop install nml;
+6. scoop install gorender;
+7. cd to the local China-Set-Trains folder;
+8. type "make"; (If you want shorter compilation time, try "make -j n" where n should be no larger than the memory in GB your system has, or your system would breakdown)
+9. Compile success.

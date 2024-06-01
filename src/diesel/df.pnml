@@ -2,43 +2,23 @@
 
 // Graphics
 
-spriteset (spriteset_df_purchase) {
-    template_purchase_empty ()
-}
-
-alternative_sprites(spriteset_df_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("diesel", "df-b")
 }
 
-spriteset (spriteset_df_standard) {
-    template_empty ()
-}
-
-spriteset (spriteset_df_reversed) {
-    template_empty ()
-}
-
-alternative_sprites(spriteset_df_standard, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df_standard, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df-b")
 }
 
-alternative_sprites(spriteset_df_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df")
 }
 
-spriteset (spriteset_df_whiteline_standard) {
-    template_empty ()
-}
-
-spriteset (spriteset_df_whiteline_reversed) {
-    template_empty ()
-}
-
-alternative_sprites(spriteset_df_whiteline_standard, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df_whiteline_standard, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df-whiteline-b")
 }
 
-alternative_sprites(spriteset_df_whiteline_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df_whiteline_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df-whiteline")
 }
 
@@ -65,16 +45,12 @@ switch (FEAT_TRAINS, SELF, switch_df_cargo_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_df_direction, (position_in_consist != 1) && (position_in_consist_from_end == 1) || ((position_in_vehid_chain % 6) == 4)) {
     0: switch_df_graphics_subtype_defeat;
-    switch_df_graphics_subtype_reversed;   
+    switch_df_graphics_subtype_reversed;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df_graphics, position_in_articulated_veh % 3) {
     1: switch_df_direction;
-    empty_sprites;   
-}
-
-switch (FEAT_TRAINS, SELF, switch_df_capacity, position_in_articulated_veh % 3) {
-    return 0;
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df_additional_text, param_cargo_decay) {
@@ -89,7 +65,7 @@ item (FEAT_TRAINS, df) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1958,09,26);

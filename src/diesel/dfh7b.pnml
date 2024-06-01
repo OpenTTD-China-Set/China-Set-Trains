@@ -3,18 +3,12 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_dfh7b_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_dfh7b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_dfh7b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("diesel","dfh7b")
 }
 
 // Vehicle
-spriteset (spriteset_dfh7b_original) {
-    template_empty ()
-}
-alternative_sprites(spriteset_dfh7b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_dfh7b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel","dfh7b")
 }
 
@@ -26,7 +20,7 @@ switch (FEAT_TRAINS, SELF, switch_dfh7b_articulated_part, extra_callback_info1) 
 
 switch (FEAT_TRAINS, SELF, switch_dfh7b_graphics, position_in_articulated_veh % 3) {
     1: spriteset_dfh7b_original;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_dfh7b_additional_text, param_cargo_decay) {
@@ -42,7 +36,7 @@ item (FEAT_TRAINS, dfh7b) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1988,01,01);

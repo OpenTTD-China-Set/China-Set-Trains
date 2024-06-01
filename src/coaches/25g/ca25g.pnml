@@ -3,30 +3,18 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_ca25g_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_ca25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ca25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches", "ca25g")
 }
 
 // Vehicle
-spriteset (spriteset_ca25g_original) {
-    template_empty ()
-}
-alternative_sprites(spriteset_ca25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ca25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "ca25g")
 }
-spriteset (spriteset_ca25g_orange) {
-    template_empty ()
-}
-alternative_sprites(spriteset_ca25g_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ca25g_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "ca25g-orange")
 }
-spriteset (spriteset_ca25g_jinwen) {
-    template_empty ()
-}
-alternative_sprites(spriteset_ca25g_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ca25g_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "ca25g-jinwen")
 }
 
@@ -58,7 +46,7 @@ switch (FEAT_TRAINS, SELF, switch_ca25g_graphics_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_ca25g_graphics, position_in_articulated_veh % 3) {
     1: switch_ca25g_graphics_subtype;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca25g_capacity, position_in_articulated_veh % 3) {
@@ -77,7 +65,7 @@ item (FEAT_TRAINS, ca25g) {
         name:                           string(STR_NAME_CA25G);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1992,01,01);
@@ -111,7 +99,7 @@ item (FEAT_TRAINS, ca25g) {
         additional_text:                switch_ca25g_additional_text;
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_ca25g_cargo_subtype;
-        
+
         // Graphics
         default:                        switch_ca25g_graphics;
         purchase:                       spriteset_ca25g_purchase_original;

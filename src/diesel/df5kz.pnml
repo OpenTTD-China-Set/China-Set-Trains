@@ -3,30 +3,18 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_df5kz_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_df5kz_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df5kz_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("diesel", "df5kz")
 }
 
 // Vehicle
-spriteset (spriteset_df5kz_original) {
-    template_empty ()
-}
-spriteset (spriteset_df5kz_alternative) {
-    template_empty ()
-}
-spriteset (spriteset_df5kz_mzd) {
-    template_empty ()
-}
-alternative_sprites(spriteset_df5kz_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df5kz_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df5kz")
 }
-alternative_sprites(spriteset_df5kz_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df5kz_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df5kz-alternative")
 }
-alternative_sprites(spriteset_df5kz_mzd, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df5kz_mzd, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df5kz-mzd")
 }
 
@@ -50,11 +38,7 @@ switch (FEAT_TRAINS, SELF, switch_df5kz_graphics_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_df5kz_graphics, position_in_articulated_veh % 3) {
     1: switch_df5kz_graphics_subtype;
-    empty_sprites;   
-}
-
-switch (FEAT_TRAINS, SELF, switch_df5kz_capacity, position_in_articulated_veh % 3) {
-    return 0;
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df5kz_additional_text, param_cargo_decay) {
@@ -69,7 +53,7 @@ item (FEAT_TRAINS, df5kz) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1976,01,01);

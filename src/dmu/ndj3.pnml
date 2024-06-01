@@ -3,37 +3,21 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_ndj3_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_ndj3_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ndj3_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("dmu", "ndj3-m")
 }
 
 // Vehicle
-spriteset (spriteset_ndj3_front) {
-    template_empty ()
-}
-spriteset (spriteset_ndj3_middle) {
-    template_empty ()
-}
-spriteset (spriteset_ndj3_cafe) {
-    template_empty ()
-}
-spriteset (spriteset_ndj3_back) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_ndj3_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ndj3_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("dmu", "ndj3-m")
 }
-alternative_sprites (spriteset_ndj3_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ndj3_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("dmu", "ndj3-25dt")
 }
-alternative_sprites (spriteset_ndj3_cafe, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ndj3_cafe, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("dmu", "ndj3-ca25dt")
 }
-alternative_sprites (spriteset_ndj3_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ndj3_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("dmu", "ndj3-m-b")
 }
 
@@ -66,11 +50,7 @@ switch (FEAT_TRAINS, SELF, switch_ndj3_graphics_front, position_in_consist) {
 
 switch (FEAT_TRAINS, SELF, switch_ndj3_graphics, position_in_consist_from_end) {
     1: spriteset_ndj3_back;
-    switch_ndj3_graphics_front;   
-}
-
-switch (FEAT_TRAINS, SELF, switch_ndj3_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_NDJ3_NICKNAME), string(STR_NDJ3_CAN_ATTACH_WAGON), string(STR_NDJ3_CONSIST), string(STR_RELIABILITY_6));
+    switch_ndj3_graphics_front;
 }
 
 switch (FEAT_TRAINS, SELF, switch_ndj3_wagon_graphics, position_in_articulated_veh % 3) {
@@ -111,7 +91,7 @@ item (FEAT_TRAINS, ndj3) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2008,01,01);
@@ -144,7 +124,7 @@ item (FEAT_TRAINS, ndj3) {
     }
     graphics {
         // Menu
-        additional_text:                switch_ndj3_additional_text;
+        additional_text:                string(STR_DESC_4, string(STR_NDJ3_NICKNAME), string(STR_NDJ3_CAN_ATTACH_WAGON), string(STR_NDJ3_CONSIST), string(STR_RELIABILITY_6));
         can_attach_wagon:               ndj3wagon;
         start_stop:                     switch_ndj3_start_stop;
 

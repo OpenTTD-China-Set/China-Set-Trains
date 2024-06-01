@@ -3,24 +3,15 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_srz125z_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_srz125z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_srz125z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches", "srz125z")
 }
 
 // Vehicle
-spriteset (spriteset_srz125z_beijing) {
-    template_empty ()
-}
-spriteset (spriteset_srz125z_guangzhou) {
-    template_empty ()
-}
-alternative_sprites(spriteset_srz125z_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_srz125z_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches","srz125z")
 }
-alternative_sprites(spriteset_srz125z_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_srz125z_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "srz125z-guangzhou")
 }
 

@@ -3,624 +3,315 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_nx17_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_nx17_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("wagons", "nx17")
 }
 
 // Vehicle
-spriteset (spriteset_nx17_black_empty) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_container_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_container_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_cover) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_long_container_cr_livery) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_long_container_zih_livery) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_long_container_xiangang_livery) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_long_container_maersk_livery) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_long_container_evergreen_livery) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_container_msc_livery_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_container_msc_livery_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_metal_empty) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_metal_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_metal_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_tank_container_crct_livery_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_tank_container_crct_livery_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_tank_container_black_livery_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_tank_container_black_livery_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_tank_container_shanmei_livery_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_tank_container_shanmei_livery_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_tank_container_stg_livery_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_tank_container_stg_livery_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_vehicle_excavator) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_vehicle_bulldozer_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_vehicle_bulldozer_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_vehicle_tractor_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_vehicle_tractor_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_car_blue_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_car_blue_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_car_brown_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_car_brown_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_car_grey_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_car_grey_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_car_red_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_car_red_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_car_white_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_car_white_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_open_container_cr_livery_empty) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_open_container_cr_livery_tarpaulin) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_open_container_cr_livery_black_bulk_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_open_container_cr_livery_black_bulk_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_open_container_cr_livery_brown_bulk_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_open_container_cr_livery_brown_bulk_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_open_container_cr_livery_white_bulk_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_open_container_cr_livery_white_bulk_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_open_container_panjiang_livery_empty) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_open_container_panjiang_livery_black_bulk_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_open_container_panjiang_livery_black_bulk_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_wood_empty) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_wood_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_black_wood_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_empty) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_container_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_container_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_cover) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_long_container_cr_livery) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_long_container_zih_livery) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_long_container_xiangang_livery) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_long_container_maersk_livery) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_long_container_evergreen_livery) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_container_msc_livery_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_container_msc_livery_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_metal_empty) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_metal_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_metal_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_tank_container_crct_livery_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_tank_container_crct_livery_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_tank_container_black_livery_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_tank_container_black_livery_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_tank_container_shanmei_livery_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_tank_container_shanmei_livery_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_tank_container_stg_livery_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_tank_container_stg_livery_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_vehicle_excavator) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_vehicle_bulldozer_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_vehicle_bulldozer_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_vehicle_tractor_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_vehicle_tractor_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_car_blue_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_car_blue_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_car_brown_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_car_brown_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_car_grey_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_car_grey_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_car_red_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_car_red_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_car_white_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_car_white_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_open_container_cr_livery_empty) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_open_container_cr_livery_tarpaulin) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_open_container_cr_livery_black_bulk_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_open_container_cr_livery_black_bulk_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_open_container_cr_livery_brown_bulk_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_open_container_cr_livery_brown_bulk_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_open_container_cr_livery_white_bulk_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_open_container_cr_livery_white_bulk_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_open_container_panjiang_livery_empty) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_open_container_panjiang_livery_black_bulk_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_open_container_panjiang_livery_black_bulk_full) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_wood_empty) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_wood_half) {
-    template_empty ()
-}
-spriteset (spriteset_nx17_brown_wood_full) {
-    template_empty ()
-}
-alternative_sprites(spriteset_nx17_black_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17")
 }
-alternative_sprites(spriteset_nx17_black_container_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_container_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-container-half")
 }
-alternative_sprites(spriteset_nx17_black_container_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_container_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-container-full")
 }
-alternative_sprites(spriteset_nx17_black_cover, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_cover, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-cover")
 }
-alternative_sprites(spriteset_nx17_black_container_msc_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_container_msc_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-container-msc-livery-half")
 }
-alternative_sprites(spriteset_nx17_black_container_msc_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_container_msc_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-container-msc-livery-full")
 }
-alternative_sprites(spriteset_nx17_black_long_container_zih_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_long_container_zih_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-long-container-zih-livery")
 }
-alternative_sprites(spriteset_nx17_black_long_container_xiangang_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_long_container_xiangang_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-long-container-xiangang-livery")
 }
-alternative_sprites(spriteset_nx17_black_long_container_evergreen_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_long_container_evergreen_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-long-container-evergreen-livery")
 }
-alternative_sprites(spriteset_nx17_black_long_container_maersk_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_long_container_maersk_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-long-container-maersk-livery")
 }
-alternative_sprites(spriteset_nx17_black_long_container_cr_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_long_container_cr_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-long-container-cr-livery")
 }
-alternative_sprites(spriteset_nx17_black_metal_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_metal_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-metal-empty")
 }
-alternative_sprites(spriteset_nx17_black_metal_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_metal_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-metal-half")
 }
-alternative_sprites(spriteset_nx17_black_metal_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_metal_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-metal-full")
 }
-alternative_sprites(spriteset_nx17_black_tank_container_crct_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_tank_container_crct_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-tank-container-crct-livery-full")
 }
-alternative_sprites(spriteset_nx17_black_tank_container_crct_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_tank_container_crct_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-tank-container-crct-livery-half")
 }
-alternative_sprites(spriteset_nx17_black_tank_container_black_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_tank_container_black_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-tank-container-black-livery-full")
 }
-alternative_sprites(spriteset_nx17_black_tank_container_black_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_tank_container_black_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-tank-container-black-livery-half")
 }
-alternative_sprites(spriteset_nx17_black_tank_container_shanmei_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_tank_container_shanmei_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-tank-container-shanmei-livery-full")
 }
-alternative_sprites(spriteset_nx17_black_tank_container_shanmei_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_tank_container_shanmei_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-tank-container-shanmei-livery-half")
 }
-alternative_sprites(spriteset_nx17_black_tank_container_stg_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_tank_container_stg_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-tank-container-stg-livery-full")
 }
-alternative_sprites(spriteset_nx17_black_tank_container_stg_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_tank_container_stg_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-tank-container-stg-livery-half")
 }
-alternative_sprites(spriteset_nx17_black_vehicle_excavator, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_vehicle_excavator, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-vehicle-excavator")
 }
-alternative_sprites(spriteset_nx17_black_vehicle_bulldozer_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_vehicle_bulldozer_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-vehicle-bulldozer-full")
 }
-alternative_sprites(spriteset_nx17_black_vehicle_bulldozer_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_vehicle_bulldozer_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-vehicle-bulldozer-half")
 }
-alternative_sprites(spriteset_nx17_black_vehicle_tractor_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_vehicle_tractor_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-vehicle-tractor-full")
 }
-alternative_sprites(spriteset_nx17_black_vehicle_tractor_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_vehicle_tractor_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-vehicle-tractor-half")
 }
-alternative_sprites(spriteset_nx17_black_car_blue_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_car_blue_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-car-blue-full")
 }
-alternative_sprites(spriteset_nx17_black_car_blue_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_car_blue_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-car-blue-half")
 }
-alternative_sprites(spriteset_nx17_black_car_brown_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_car_brown_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-car-brown-full")
 }
-alternative_sprites(spriteset_nx17_black_car_brown_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_car_brown_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-car-brown-half")
 }
-alternative_sprites(spriteset_nx17_black_car_grey_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_car_grey_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-car-grey-full")
 }
-alternative_sprites(spriteset_nx17_black_car_grey_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_car_grey_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-car-grey-half")
 }
-alternative_sprites(spriteset_nx17_black_car_red_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_car_red_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-car-red-full")
 }
-alternative_sprites(spriteset_nx17_black_car_red_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_car_red_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-car-red-half")
 }
-alternative_sprites(spriteset_nx17_black_car_white_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_car_white_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-car-white-full")
 }
-alternative_sprites(spriteset_nx17_black_car_white_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_car_white_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-car-white-half")
 }
-alternative_sprites(spriteset_nx17_black_open_container_cr_livery_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_open_container_cr_livery_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-open-container-cr-livery-empty")
 }
-alternative_sprites(spriteset_nx17_black_open_container_cr_livery_tarpaulin, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_open_container_cr_livery_tarpaulin, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-open-container-cr-livery-tarpaulin")
 }
-alternative_sprites(spriteset_nx17_black_open_container_cr_livery_black_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_open_container_cr_livery_black_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-open-container-cr-livery-black-bulk-half")
 }
-alternative_sprites(spriteset_nx17_black_open_container_cr_livery_black_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_open_container_cr_livery_black_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-open-container-cr-livery-black-bulk-full")
 }
-alternative_sprites(spriteset_nx17_black_open_container_cr_livery_brown_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_open_container_cr_livery_brown_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-open-container-cr-livery-brown-bulk-half")
 }
-alternative_sprites(spriteset_nx17_black_open_container_cr_livery_brown_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_open_container_cr_livery_brown_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-open-container-cr-livery-brown-bulk-full")
 }
-alternative_sprites(spriteset_nx17_black_open_container_cr_livery_white_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_open_container_cr_livery_white_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-open-container-cr-livery-white-bulk-half")
 }
-alternative_sprites(spriteset_nx17_black_open_container_cr_livery_white_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_open_container_cr_livery_white_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-open-container-cr-livery-white-bulk-full")
 }
-alternative_sprites(spriteset_nx17_black_open_container_panjiang_livery_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_open_container_panjiang_livery_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-open-container-panjiang-livery-empty")
 }
-alternative_sprites(spriteset_nx17_black_open_container_panjiang_livery_black_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_open_container_panjiang_livery_black_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-open-container-panjiang-livery-black-bulk-half")
 }
-alternative_sprites(spriteset_nx17_black_open_container_panjiang_livery_black_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_open_container_panjiang_livery_black_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-open-container-panjiang-livery-black-bulk-full")
 }
-alternative_sprites(spriteset_nx17_black_wood_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_wood_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-wood-empty")
 }
-alternative_sprites(spriteset_nx17_black_wood_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_wood_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-wood-half")
 }
-alternative_sprites(spriteset_nx17_black_wood_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_black_wood_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-wood-full")
 }
-alternative_sprites(spriteset_nx17_brown_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown")
 }
-alternative_sprites(spriteset_nx17_brown_container_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_container_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-container-half")
 }
-alternative_sprites(spriteset_nx17_brown_container_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_container_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-container-full")
 }
-alternative_sprites(spriteset_nx17_brown_cover, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_cover, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-cover")
 }
-alternative_sprites(spriteset_nx17_brown_container_msc_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_container_msc_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-container-msc-livery-half")
 }
-alternative_sprites(spriteset_nx17_brown_container_msc_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_container_msc_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-container-msc-livery-full")
 }
-alternative_sprites(spriteset_nx17_brown_long_container_zih_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_long_container_zih_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-long-container-zih-livery")
 }
-alternative_sprites(spriteset_nx17_brown_long_container_xiangang_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_long_container_xiangang_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-long-container-xiangang-livery")
 }
-alternative_sprites(spriteset_nx17_brown_long_container_evergreen_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_long_container_evergreen_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-long-container-evergreen-livery")
 }
-alternative_sprites(spriteset_nx17_brown_long_container_maersk_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_long_container_maersk_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-long-container-maersk-livery")
 }
-alternative_sprites(spriteset_nx17_brown_long_container_cr_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_long_container_cr_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-long-container-cr-livery")
 }
-alternative_sprites(spriteset_nx17_brown_metal_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_metal_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-metal-empty")
 }
-alternative_sprites(spriteset_nx17_brown_metal_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_metal_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-metal-half")
 }
-alternative_sprites(spriteset_nx17_brown_metal_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_metal_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-metal-full")
 }
-alternative_sprites(spriteset_nx17_brown_tank_container_crct_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_tank_container_crct_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-tank-container-crct-livery-full")
 }
-alternative_sprites(spriteset_nx17_brown_tank_container_crct_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_tank_container_crct_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-tank-container-crct-livery-half")
 }
-alternative_sprites(spriteset_nx17_brown_tank_container_black_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_tank_container_black_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-tank-container-black-livery-full")
 }
-alternative_sprites(spriteset_nx17_brown_tank_container_black_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_tank_container_black_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-tank-container-black-livery-half")
 }
-alternative_sprites(spriteset_nx17_brown_tank_container_shanmei_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_tank_container_shanmei_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-tank-container-shanmei-livery-full")
 }
-alternative_sprites(spriteset_nx17_brown_tank_container_shanmei_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_tank_container_shanmei_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-tank-container-shanmei-livery-half")
 }
-alternative_sprites(spriteset_nx17_brown_tank_container_stg_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_tank_container_stg_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-tank-container-stg-livery-full")
 }
-alternative_sprites(spriteset_nx17_brown_tank_container_stg_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_tank_container_stg_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-tank-container-stg-livery-half")
 }
-alternative_sprites(spriteset_nx17_brown_vehicle_excavator, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_vehicle_excavator, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-vehicle-excavator")
 }
-alternative_sprites(spriteset_nx17_brown_vehicle_bulldozer_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_vehicle_bulldozer_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-vehicle-bulldozer-full")
 }
-alternative_sprites(spriteset_nx17_brown_vehicle_bulldozer_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_vehicle_bulldozer_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-vehicle-bulldozer-half")
 }
-alternative_sprites(spriteset_nx17_brown_vehicle_tractor_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_vehicle_tractor_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-vehicle-tractor-full")
 }
-alternative_sprites(spriteset_nx17_brown_vehicle_tractor_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_vehicle_tractor_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-vehicle-tractor-half")
 }
-alternative_sprites(spriteset_nx17_brown_car_blue_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_car_blue_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-car-blue-full")
 }
-alternative_sprites(spriteset_nx17_brown_car_blue_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_car_blue_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-car-blue-half")
 }
-alternative_sprites(spriteset_nx17_brown_car_brown_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_car_brown_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-car-brown-full")
 }
-alternative_sprites(spriteset_nx17_brown_car_brown_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_car_brown_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-car-brown-half")
 }
-alternative_sprites(spriteset_nx17_brown_car_grey_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_car_grey_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-car-grey-full")
 }
-alternative_sprites(spriteset_nx17_brown_car_grey_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_car_grey_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-car-grey-half")
 }
-alternative_sprites(spriteset_nx17_brown_car_red_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_car_red_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-car-red-full")
 }
-alternative_sprites(spriteset_nx17_brown_car_red_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_car_red_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-car-red-half")
 }
-alternative_sprites(spriteset_nx17_brown_car_white_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_car_white_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-car-white-full")
 }
-alternative_sprites(spriteset_nx17_brown_car_white_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_car_white_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-car-white-half")
 }
-alternative_sprites(spriteset_nx17_brown_open_container_cr_livery_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_open_container_cr_livery_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-open-container-cr-livery-empty")
 }
-alternative_sprites(spriteset_nx17_brown_open_container_cr_livery_tarpaulin, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_open_container_cr_livery_tarpaulin, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-open-container-cr-livery-tarpaulin")
 }
-alternative_sprites(spriteset_nx17_brown_open_container_cr_livery_black_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_open_container_cr_livery_black_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-open-container-cr-livery-black-bulk-half")
 }
-alternative_sprites(spriteset_nx17_brown_open_container_cr_livery_black_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_open_container_cr_livery_black_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-open-container-cr-livery-black-bulk-full")
 }
-alternative_sprites(spriteset_nx17_brown_open_container_cr_livery_brown_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_open_container_cr_livery_brown_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-open-container-cr-livery-brown-bulk-half")
 }
-alternative_sprites(spriteset_nx17_brown_open_container_cr_livery_brown_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_open_container_cr_livery_brown_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-open-container-cr-livery-brown-bulk-full")
 }
-alternative_sprites(spriteset_nx17_brown_open_container_cr_livery_white_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_open_container_cr_livery_white_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-open-container-cr-livery-white-bulk-half")
 }
-alternative_sprites(spriteset_nx17_brown_open_container_cr_livery_white_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_open_container_cr_livery_white_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-open-container-cr-livery-white-bulk-full")
 }
-alternative_sprites(spriteset_nx17_brown_open_container_panjiang_livery_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_open_container_panjiang_livery_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-open-container-panjiang-livery-empty")
 }
-alternative_sprites(spriteset_nx17_brown_open_container_panjiang_livery_black_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_open_container_panjiang_livery_black_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-open-container-panjiang-livery-black-bulk-half")
 }
-alternative_sprites(spriteset_nx17_brown_open_container_panjiang_livery_black_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_open_container_panjiang_livery_black_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-open-container-panjiang-livery-black-bulk-full")
 }
-alternative_sprites(spriteset_nx17_brown_wood_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_wood_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-wood-empty")
 }
-alternative_sprites(spriteset_nx17_brown_wood_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_wood_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-wood-half")
 }
-alternative_sprites(spriteset_nx17_brown_wood_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nx17_brown_wood_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "nx17-brown-wood-full")
 }
 
@@ -902,7 +593,7 @@ switch (FEAT_TRAINS, SELF, switch_nx17_black_all_cargo, cargo_type_in_veh) {
 
     SULP: switch_nx17_black_covered_bulk;
     FERT: switch_nx17_black_covered_bulk;
-    PEAT: switch_nx17_black_covered_bulk; 
+    PEAT: switch_nx17_black_covered_bulk;
     SALT: switch_nx17_black_covered_bulk;
     SAND: switch_nx17_black_covered_bulk;
     SCMT: switch_nx17_black_covered_bulk;
@@ -1270,7 +961,7 @@ switch (FEAT_TRAINS, SELF, switch_nx17_brown_all_cargo, cargo_type_in_veh) {
 
     SULP: switch_nx17_brown_covered_bulk;
     FERT: switch_nx17_brown_covered_bulk;
-    PEAT: switch_nx17_brown_covered_bulk; 
+    PEAT: switch_nx17_brown_covered_bulk;
     SALT: switch_nx17_brown_covered_bulk;
     SAND: switch_nx17_brown_covered_bulk;
     SCMT: switch_nx17_brown_covered_bulk;
@@ -1393,11 +1084,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_loading_speed, cargo_type_in_veh) {
     return 10;
 }
 
-switch (FEAT_TRAINS, SELF, switch_nx17_additional_text, param_cargo_decay) {
-    return string(STR_DESC_2, string(STR_NX17_LIVERY_AVAILABILITY), string(STR_DECAY_185));
-}
-
-
 
 item (FEAT_TRAINS, nx17) {
     property {
@@ -1405,7 +1091,7 @@ item (FEAT_TRAINS, nx17) {
         name:                           string(STR_NAME_NX17);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1998,01,01);
@@ -1435,9 +1121,9 @@ item (FEAT_TRAINS, nx17) {
     }
     graphics {
         // Menu
-        additional_text:                switch_nx17_additional_text;
+        additional_text:                string(STR_DESC_2, string(STR_NX17_LIVERY_AVAILABILITY), string(STR_DECAY_185));
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_nx17_graphics;
         purchase:                       spriteset_nx17_purchase;

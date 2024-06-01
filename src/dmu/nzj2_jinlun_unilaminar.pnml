@@ -3,24 +3,15 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_nzj2_jinlun_1_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_nzj2_jinlun_1_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nzj2_jinlun_1_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("dmu", "nzj2-jinlun-1")
 }
 
 // Vehicle
-spriteset (spriteset_nzj2_jinlun_1_original) {
-    template_empty ()
-}
-alternative_sprites(spriteset_nzj2_jinlun_1_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nzj2_jinlun_1_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("dmu", "nzj2-jinlun-1")
 }
-spriteset (spriteset_nzj2_jinlun_1_reversed) {
-    template_empty ()
-}
-alternative_sprites(spriteset_nzj2_jinlun_1_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_nzj2_jinlun_1_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("dmu", "nzj2-jinlun-1-r")
 }
 
@@ -42,25 +33,17 @@ switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_articulated_part, extra_callback
 
 switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_graphics_if_error, position_in_consist_from_end != 1) {
     1: spriteset_erroremu;
-    spriteset_nzj2_jinlun_1_reversed;   
+    spriteset_nzj2_jinlun_1_reversed;
 }
 
 switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_direction, position_in_consist == 1) {
     1: spriteset_nzj2_jinlun_1_original;
-    switch_nzj2_jinlun_1_graphics_if_error;   
+    switch_nzj2_jinlun_1_graphics_if_error;
 }
 
 switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_graphics, position_in_articulated_veh % 3) {
     1: switch_nzj2_jinlun_1_direction;
-    empty_sprites;   
-}
-
-switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_capacity, position_in_articulated_veh % 3) {
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_JINLUN_LOCOMOTIVE_CONSIST), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_RELIABILITY_20));
+    empty_sprites;
 }
 
 
@@ -71,7 +54,7 @@ item (FEAT_TRAINS, nzj2_jinlun_1) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2001,07,01);
@@ -105,7 +88,7 @@ item (FEAT_TRAINS, nzj2_jinlun_1) {
     }
     graphics {
         // Menu
-        additional_text:                        switch_nzj2_jinlun_1_additional_text;
+        additional_text:                        string(STR_DESC_3, string(STR_JINLUN_LOCOMOTIVE_CONSIST), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_RELIABILITY_20));
         can_attach_wagon:                       switch_nzj2_jinlun_1_can_attach_wagon;
         start_stop:                             switch_nzj2_jinlun_1_start_stop;
         // Graphics

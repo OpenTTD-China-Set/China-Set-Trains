@@ -3,54 +3,30 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_hxn3_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_hxn3_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_hxn3_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("diesel", "hxn3")
 }
 
 // Vehicle
-spriteset (spriteset_hxn3_original) {
-    template_empty ()
-}
-spriteset (spriteset_hxn3_crec_1st_construct_bureau) {
-    template_empty ()
-}
-spriteset (spriteset_hxn3_crec_3rd_construct_bureau) {
-    template_empty ()
-}
-spriteset (spriteset_hxn3_guoneng) {
-    template_empty ()
-}
-spriteset (spriteset_hxn3_guoneng_7014) {
-    template_empty ()
-}
-spriteset (spriteset_hxn3_huating_coal) {
-    template_empty ()
-}
-spriteset (spriteset_hxn3_laos) {
-    template_empty ()
-}
-alternative_sprites(spriteset_hxn3_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_hxn3_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "hxn3")
 }
-alternative_sprites(spriteset_hxn3_crec_1st_construct_bureau, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_hxn3_crec_1st_construct_bureau, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "hxn3-crec-1st-construct-bureau")
 }
-alternative_sprites(spriteset_hxn3_crec_3rd_construct_bureau, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_hxn3_crec_3rd_construct_bureau, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "hxn3-crec-3rd-construct-bureau")
 }
-alternative_sprites(spriteset_hxn3_guoneng, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_hxn3_guoneng, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "hxn3-guoneng")
 }
-alternative_sprites(spriteset_hxn3_guoneng_7014, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_hxn3_guoneng_7014, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "hxn3-guoneng-7014")
 }
-alternative_sprites(spriteset_hxn3_huating_coal, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_hxn3_huating_coal, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "hxn3-huating-coal")
 }
-alternative_sprites(spriteset_hxn3_laos, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_hxn3_laos, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "hxn3-laos")
 }
 
@@ -77,12 +53,12 @@ switch (FEAT_TRAINS, SELF, switch_hxn3_graphics_subtype, cargo_subtype) {
     3: spriteset_hxn3_guoneng;
     4: spriteset_hxn3_guoneng_7014;
     5: spriteset_hxn3_huating_coal;
-    6: spriteset_hxn3_laos;    
+    6: spriteset_hxn3_laos;
 }
 
 switch (FEAT_TRAINS, SELF, switch_hxn3_graphics, position_in_articulated_veh % 3) {
     1: switch_hxn3_graphics_subtype;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_hxn3_additional_text, param_cargo_decay) {
@@ -97,7 +73,7 @@ item (FEAT_TRAINS, hxn3) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2008,01,01);

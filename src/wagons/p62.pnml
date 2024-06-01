@@ -3,60 +3,33 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_p62_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_p62_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_p62_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("wagons", "p62")
 }
 
 // Vehicle
-spriteset (spriteset_p62_black) {
-    template_empty ()
-}
-spriteset (spriteset_p62_blue) {
-    template_empty ()
-}
-spriteset (spriteset_p62_damaged_severe) {
-    template_empty ()
-}
-spriteset (spriteset_p62_lightblack) {
-    template_empty ()
-}
-spriteset (spriteset_p62_lightblack_damaged) {
-    template_empty ()
-}
-spriteset (spriteset_p62_rustyred) {
-    template_empty ()
-}
-spriteset (spriteset_p62_rustyred_damaged) {
-    template_empty ()
-}
-spriteset (spriteset_p62_brown) {
-    template_empty ()
-}
-alternative_sprites(spriteset_p62_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_p62_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "p62")
 }
-alternative_sprites(spriteset_p62_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_p62_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "p62-blue")
 }
-alternative_sprites(spriteset_p62_damaged_severe, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_p62_damaged_severe, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "p62-damaged-severe")
 }
-alternative_sprites(spriteset_p62_lightblack, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_p62_lightblack, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "p62-lightblack")
 }
-alternative_sprites(spriteset_p62_lightblack_damaged, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_p62_lightblack_damaged, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "p62-lightblack-damaged")
 }
-alternative_sprites(spriteset_p62_rustyred, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_p62_rustyred, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "p62-rustyred")
 }
-alternative_sprites(spriteset_p62_rustyred_damaged, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_p62_rustyred_damaged, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "p62-rustyred-damaged")
 }
-alternative_sprites(spriteset_p62_brown, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_p62_brown, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "p62-brown")
 }
 
@@ -78,7 +51,7 @@ switch (FEAT_TRAINS, SELF, switch_p62_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_p62_graphics, position_in_articulated_veh % 3) {
     1: random_p62_colour;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_p62_capacity_pengdaike, (cargo_classes == bitmask(CC_PASSENGERS)) || (cargo_type_in_veh == YETI) || (cargo_type_in_veh == YETY)) {
@@ -116,10 +89,6 @@ switch (FEAT_TRAINS, SELF, switch_p62_decay, cargo_type_in_veh == LVST) {
     switch_p62_decay_pengdaike;
 }
 
-switch (FEAT_TRAINS, SELF, switch_p62_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_P62_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR), string(STR_DESC_PENGDAIKE));
-}
-
 
 item (FEAT_TRAINS, p62) {
     property {
@@ -127,7 +96,7 @@ item (FEAT_TRAINS, p62) {
         name:                           string(STR_NAME_P62);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1980,01,01);
@@ -157,9 +126,9 @@ item (FEAT_TRAINS, p62) {
     }
     graphics {
         // Menu
-        additional_text:                switch_p62_additional_text;
+        additional_text:                string(STR_DESC_3, string(STR_P62_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR), string(STR_DESC_PENGDAIKE));
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_p62_graphics;
         purchase:                       spriteset_p62_purchase_original;

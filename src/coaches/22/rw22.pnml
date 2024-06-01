@@ -3,18 +3,12 @@
 // Graphics
 
 // // Purchase Menu
-// spriteset (spriteset_rw22_purchase_original) {
-//     template_purchase_empty ()
-// }
-// alternative_sprites(spriteset_rw22_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+// spriteset (spriteset_rw22_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 //     template_purchase ("coaches", "rw22")
 // }
 
 // // Vehicle
-// spriteset (spriteset_rw22_original) {
-//     template_empty ()
-// }
-// alternative_sprites(spriteset_rw22_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+// spriteset (spriteset_rw22_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 //     template_standard ("coaches", "rw22")
 // }
 
@@ -55,7 +49,7 @@ item (FEAT_TRAINS, rw22) {
         name:                           string(STR_NAME_RW22);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1959,01,01);
@@ -88,7 +82,7 @@ item (FEAT_TRAINS, rw22) {
         additional_text:                switch_rw22_additional_text;
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_rw22_cargo_subtype;
-        
+
         // Graphics
         default:                        switch_rw22_graphics;
         purchase:                       spriteset_22_purchase_original;

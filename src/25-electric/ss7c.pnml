@@ -3,24 +3,15 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_ss7c_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_ss7c_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ss7c_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("25-electric","ss7c")
 }
 
 // Vehicle
-spriteset (spriteset_ss7c_original) {
-    template_empty ()
-}
-spriteset (spriteset_ss7c_banana) {
-    template_empty ()
-}
-alternative_sprites(spriteset_ss7c_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ss7c_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-electric","ss7c")
 }
-alternative_sprites(spriteset_ss7c_banana, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ss7c_banana, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-electric", "ss7c-banana")
 }
 
@@ -42,11 +33,7 @@ switch (FEAT_TRAINS, SELF, switch_ss7c_graphics_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_ss7c_graphics, position_in_articulated_veh % 3) {
     1: switch_ss7c_graphics_subtype;
-    empty_sprites;   
-}
-
-switch (FEAT_TRAINS, SELF, switch_ss7c_capacity, position_in_articulated_veh % 3) {
-    return 0;
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_ss7c_additional_text, param_cargo_decay) {
@@ -62,7 +49,7 @@ item (FEAT_TRAINS, ss7c) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1998,08,01);

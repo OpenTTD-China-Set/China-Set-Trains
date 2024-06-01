@@ -3,30 +3,18 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_yw22aircon_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_yw22aircon_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_yw22aircon_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches", "yw22aircon")
 }
 
 // Vehicle
-spriteset (spriteset_yw22aircon_beijing2shanghai) {
-    template_empty ()
-}
-alternative_sprites(spriteset_yw22aircon_beijing2shanghai, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_yw22aircon_beijing2shanghai, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "yw22aircon")
 }
-spriteset (spriteset_yw22aircon_alternative) {
-    template_empty ()
-}
-alternative_sprites(spriteset_yw22aircon_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_yw22aircon_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "yw22aircon-alternative")
 }
-spriteset (spriteset_yw22aircon_guangzhou) {
-    template_empty ()
-}
-alternative_sprites(spriteset_yw22aircon_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_yw22aircon_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "yw22aircon-guangzhou")
 }
 
@@ -38,7 +26,7 @@ switch (FEAT_TRAINS, SELF, switch_yw22aircon_articulated_part, extra_callback_in
 switch (FEAT_TRAINS, SELF, switch_yw22aircon_cargo_subtype, cargo_subtype) {
     0: return string(STR_BEIJING2SHANGHAI);
     1: return string(STR_BEIJING2SHANGHAIALT);
-    2: return string(STR_GUANGSHEN);  
+    2: return string(STR_GUANGSHEN);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -69,7 +57,7 @@ item (FEAT_TRAINS, yw22aircon) {
         name:                           string(STR_NAME_YW22AIRCON);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1985,01,01);
@@ -102,7 +90,7 @@ item (FEAT_TRAINS, yw22aircon) {
         additional_text:                switch_yw22aircon_additional_text;
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_yw22aircon_cargo_subtype;
-        
+
         // Graphics
         default:                        switch_yw22aircon_graphics;
         purchase:                       spriteset_yw22aircon_purchase;

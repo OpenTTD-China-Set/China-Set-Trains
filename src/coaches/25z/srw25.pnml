@@ -3,18 +3,12 @@
 // Graphics
 
 // Purchase Menu
-    spriteset (spriteset_srw25_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_srw25_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_srw25_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches","srw25")
 }
 
 // Vehicle
-spriteset (spriteset_srw25_original) {
-    template_empty ()
-}
-alternative_sprites(spriteset_srw25_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_srw25_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches","srw25")
 }
 
@@ -25,7 +19,7 @@ switch (FEAT_TRAINS, SELF, switch_srw25_articulated_part, extra_callback_info1) 
 
 switch (FEAT_TRAINS, SELF, switch_srw25_graphics, position_in_articulated_veh % 3) {
     1: spriteset_srw25_original;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_srw25_capacity, position_in_articulated_veh % 3) {

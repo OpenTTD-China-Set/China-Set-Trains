@@ -3,42 +3,24 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_df5_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_df5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("diesel", "df5")
 }
 
 // Vehicle
-spriteset (spriteset_df5_original) {
-    template_empty ()
-}
-spriteset (spriteset_df5_red) {
-    template_empty ()
-}
-spriteset (spriteset_df5_yellow) {
-    template_empty ()
-}
-spriteset (spriteset_df5_qinhuangdao) {
-    template_empty ()
-}
-spriteset (spriteset_df5_prk) {
-    template_empty ()
-}
-alternative_sprites(spriteset_df5_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df5_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df5")
 }
-alternative_sprites(spriteset_df5_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df5_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df5-red")
 }
-alternative_sprites(spriteset_df5_yellow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df5_yellow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df5-yellow")
 }
-alternative_sprites(spriteset_df5_qinhuangdao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df5_qinhuangdao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df5-qinhuangdao")
 }
-alternative_sprites(spriteset_df5_prk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_df5_prk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df5-prk")
 }
 
@@ -66,11 +48,7 @@ switch (FEAT_TRAINS, SELF, switch_df5_graphics_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_df5_graphics, position_in_articulated_veh % 3) {
     1: switch_df5_graphics_subtype;
-    empty_sprites;   
-}
-
-switch (FEAT_TRAINS, SELF, switch_df5_capacity, position_in_articulated_veh % 3) {
-    return 0;
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df5_additional_text, param_cargo_decay) {
@@ -85,7 +63,7 @@ item (FEAT_TRAINS, df5) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1984,01,01);

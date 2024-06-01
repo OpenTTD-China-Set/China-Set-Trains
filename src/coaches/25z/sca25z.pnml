@@ -3,18 +3,12 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_sca25z_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_sca25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_sca25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches", "sca25z")
 }
 
 // Vehicle
-spriteset (spriteset_sca25z_original) {
-    template_empty ()
-}
-alternative_sprites(spriteset_sca25z_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_sca25z_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "sca25z")
 }
 
@@ -25,7 +19,7 @@ switch (FEAT_TRAINS, SELF, switch_sca25z_articulated_part, extra_callback_info1)
 
 switch (FEAT_TRAINS, SELF, switch_sca25z_graphics, position_in_articulated_veh % 3) {
     1: spriteset_sca25z_original;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_sca25z_capacity, position_in_articulated_veh % 3) {
@@ -44,7 +38,7 @@ item (FEAT_TRAINS, sca25z) {
         name:                           string(STR_NAME_SCA25Z);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1993,01,01);
@@ -77,7 +71,7 @@ item (FEAT_TRAINS, sca25z) {
         // Menu
         additional_text:                switch_sca25z_additional_text;
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_sca25z_graphics;
         purchase:                       spriteset_sca25z_purchase_original;

@@ -3,18 +3,12 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_pb_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_pb_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_pb_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("wagons", "pb")
 }
 
 // Vehicle
-spriteset (spriteset_pb_original) {
-    template_empty ()
-}
-alternative_sprites(spriteset_pb_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_pb_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "pb")
 }
 
@@ -29,7 +23,7 @@ switch (FEAT_TRAINS, SELF, switch_pb_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_pb_graphics, position_in_articulated_veh % 3) {
     1: random_pb_colour;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_pb_capacity_cargo, cargo_type_in_veh) {
@@ -54,10 +48,6 @@ switch (FEAT_TRAINS, SELF, switch_pb_decay, cargo_type_in_veh) {
     return 185;
 }
 
-switch (FEAT_TRAINS, SELF, switch_pb_additional_text, param_cargo_decay) {
-    return string(STR_DESC_2, string(STR_PB_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR_NOPASS));
-}
-
 
 item (FEAT_TRAINS, pb) {
     property {
@@ -65,7 +55,7 @@ item (FEAT_TRAINS, pb) {
         name:                           string(STR_NAME_PB);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2006,01,01);
@@ -95,9 +85,9 @@ item (FEAT_TRAINS, pb) {
     }
     graphics {
         // Menu
-        additional_text:                switch_pb_additional_text;
+        additional_text:                string(STR_DESC_2, string(STR_PB_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR_NOPASS));
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_pb_graphics;
         purchase:                       spriteset_pb_purchase_original;

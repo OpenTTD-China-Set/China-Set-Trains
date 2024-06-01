@@ -3,91 +3,49 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_crh6f_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_crh6f_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6f_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("25-emu", "crh6f-c-foshan")
 }
 
 // Vehicle
-spriteset (spriteset_crh6f_front_foshan) {
-    template_empty ()
-}
-spriteset (spriteset_crh6f_middle_m_foshan) {
-    template_empty ()
-}
-spriteset (spriteset_crh6f_middle_p_foshan) {
-    template_empty ()
-}
-spriteset (spriteset_crh6f_cab_foshan) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_crh6f_front_foshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6f_front_foshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6f-c-foshan")
 }
-alternative_sprites (spriteset_crh6f_middle_m_foshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6f_middle_m_foshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6f-m-foshan")
 }
-alternative_sprites (spriteset_crh6f_middle_p_foshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6f_middle_p_foshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6f-p-foshan")
 }
-alternative_sprites (spriteset_crh6f_cab_foshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6f_cab_foshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh6f-c-foshan")
 }
 
 
-spriteset (spriteset_crh6f_front_jinshan) {
-    template_empty ()
-}
-spriteset (spriteset_crh6f_middle_m_jinshan) {
-    template_empty ()
-}
-spriteset (spriteset_crh6f_middle_p_jinshan) {
-    template_empty ()
-}
-spriteset (spriteset_crh6f_cab_jinshan) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_crh6f_front_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6f_front_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6f-c-jinshan")
 }
-alternative_sprites (spriteset_crh6f_middle_m_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6f_middle_m_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6f-m-jinshan")
 }
-alternative_sprites (spriteset_crh6f_middle_p_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6f_middle_p_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6f-p-jinshan")
 }
-alternative_sprites (spriteset_crh6f_cab_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6f_cab_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh6f-c-jinshan")
 }
 
 
-spriteset (spriteset_crh6f_front_xiaoyong) {
-    template_empty ()
-}
-spriteset (spriteset_crh6f_middle_m_xiaoyong) {
-    template_empty ()
-}
-spriteset (spriteset_crh6f_middle_p_xiaoyong) {
-    template_empty ()
-}
-spriteset (spriteset_crh6f_cab_xiaoyong) {
-    template_empty ()
-}
-
-alternative_sprites (spriteset_crh6f_front_xiaoyong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6f_front_xiaoyong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6f-c-xiaoyong")
 }
-alternative_sprites (spriteset_crh6f_middle_m_xiaoyong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6f_middle_m_xiaoyong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6f-m-xiaoyong")
 }
-alternative_sprites (spriteset_crh6f_middle_p_xiaoyong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6f_middle_p_xiaoyong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh6f-p-xiaoyong")
 }
-alternative_sprites (spriteset_crh6f_cab_xiaoyong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_crh6f_cab_xiaoyong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh6f-c-xiaoyong")
 }
 
@@ -216,7 +174,7 @@ item (FEAT_TRAINS, crh6f) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2013,07,01);

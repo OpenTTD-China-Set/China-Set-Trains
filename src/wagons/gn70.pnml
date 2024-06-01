@@ -3,24 +3,15 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_gn70_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_gn70_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_gn70_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("wagons", "gn70")
 }
 
 // Vehicle
-spriteset (spriteset_gn70_black) {
-    template_empty ()
-}
-alternative_sprites(spriteset_gn70_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_gn70_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "gn70")
 }
-spriteset (spriteset_gn70_red) {
-    template_empty ()
-}
-alternative_sprites(spriteset_gn70_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_gn70_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "gn70-red")
 }
 
@@ -36,16 +27,12 @@ switch (FEAT_TRAINS, SELF, switch_gn70_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_gn70_graphics, position_in_articulated_veh % 3) {
     1: random_gn70_colour;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_gn70_capacity, position_in_articulated_veh % 3) {
     1: return 70;
     return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_gn70_additional_text, param_cargo_decay) {
-    return string(STR_DESC_2, string(STR_GN70_LIVERY_AVAILABILITY), string(STR_DECAY_185));
 }
 
 
@@ -55,7 +42,7 @@ item (FEAT_TRAINS, gn70) {
         name:                           string(STR_NAME_GN70);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2005,01,01);
@@ -85,9 +72,9 @@ item (FEAT_TRAINS, gn70) {
     }
     graphics {
         // Menu
-        additional_text:                switch_gn70_additional_text;
+        additional_text:                string(STR_DESC_2, string(STR_GN70_LIVERY_AVAILABILITY), string(STR_DECAY_185));
         can_attach_wagon:               locowagon;
-        
+
         // Graphics
         default:                        switch_gn70_graphics;
         purchase:                       spriteset_gn70_purchase;

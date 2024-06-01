@@ -3,30 +3,18 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_ca25z_purchase_original) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_ca25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ca25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches", "ca25z")
 }
 
 // Vehicle
-spriteset (spriteset_ca25z_beijing) {
-    template_empty ()
-}
-spriteset (spriteset_ca25z_guangzhou) {
-    template_empty ()
-}
-spriteset (spriteset_ca25z_beijing_blue) {
-    template_empty ()
-}
-alternative_sprites(spriteset_ca25z_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ca25z_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "ca25z")
 }
-alternative_sprites(spriteset_ca25z_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ca25z_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "ca25z-guangzhou")
 }
-alternative_sprites (spriteset_ca25z_beijing_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_ca25z_beijing_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "ca25z-beijing-blue")
 }
 
@@ -69,7 +57,7 @@ item (FEAT_TRAINS, ca25z) {
         name:                           string(STR_NAME_CA25Z);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1993,01,01);
@@ -103,7 +91,7 @@ item (FEAT_TRAINS, ca25z) {
         additional_text:                switch_ca25z_additional_text;
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_ca25z_cargo_subtype;
-        
+
         // Graphics
         default:                        switch_ca25z_graphics;
         purchase:                       spriteset_ca25z_purchase_original;

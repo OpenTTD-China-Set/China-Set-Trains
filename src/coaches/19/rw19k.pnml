@@ -3,36 +3,21 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_rw19k_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_rw19k_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_rw19k_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches","rw19k-blue-folddoor")
 }
 
 // Vehicle
-spriteset (spriteset_rw19k_blue_folddoor) {
-    template_empty ()
-}
-spriteset (spriteset_rw19k_red_folddoor) {
-    template_empty ()
-}
-spriteset (spriteset_rw19k_blue_plugdoor) {
-    template_empty ()
-}
-spriteset (spriteset_rw19k_red_plugdoor) {
-    template_empty ()
-}
-alternative_sprites(spriteset_rw19k_blue_folddoor, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_rw19k_blue_folddoor, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "rw19k-blue-folddoor")
 }
-alternative_sprites(spriteset_rw19k_red_folddoor, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_rw19k_red_folddoor, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "rw19k-red-folddoor")
 }
-alternative_sprites(spriteset_rw19k_blue_plugdoor, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_rw19k_blue_plugdoor, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "rw19k-blue-plugdoor")
 }
-alternative_sprites(spriteset_rw19k_red_plugdoor, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_rw19k_red_plugdoor, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "rw19k-red-plugdoor")
 }
 
@@ -58,7 +43,7 @@ switch (FEAT_TRAINS, SELF, switch_rw19k_graphics_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_rw19k_graphics, position_in_articulated_veh % 3) {
     1: switch_rw19k_graphics_subtype;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw19k_cargo_subtype, cargo_subtype) {
@@ -83,7 +68,7 @@ item (FEAT_TRAINS, rw19k) {
         name:                           string(STR_NAME_RW19K);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1997,01,01);
@@ -116,7 +101,7 @@ item (FEAT_TRAINS, rw19k) {
         additional_text:                switch_rw19k_additional_text;
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_rw19k_cargo_subtype;
-        
+
         // Graphics
         default:                        switch_rw19k_graphics;
         purchase:                       spriteset_rw19k_purchase;

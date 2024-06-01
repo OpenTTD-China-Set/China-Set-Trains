@@ -7,15 +7,6 @@ switch (FEAT_TRAINS, SELF, switch_wemuw_articulated_part, extra_callback_info1) 
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_wemuw_capacity, position_in_articulated_veh % 3) {
-    1: return 0;
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_wemuw_additional_text, param_cargo_decay) {
-    return string(STR_DESC_2, string(STR_ATTACH_CR200J), string(STR_COMFORT_480));
-}
-
 
 item (FEAT_TRAINS, wemuw) {
     property {
@@ -23,7 +14,7 @@ item (FEAT_TRAINS, wemuw) {
         name:                           string(STR_NAME_WEMUW);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1990,01,01);
@@ -40,20 +31,20 @@ item (FEAT_TRAINS, wemuw) {
         default_cargo_type:             PASS;
         ai_special_flag:                AI_FLAG_PASSENGER;
         cargo_capacity:                 90;                         //depending on the mu
-        loading_speed:                  8 << param_loading_speed;   
+        loading_speed:                  8 << param_loading_speed;
         cargo_age_period:               300 << param_cargo_decay;
 
         // Stats
         speed:                          0 km/h;                 //depending on the mu
         power:                          0 hp;                   //depending on the mu
         weight:                         50 ton;                 //depending on the mu
-        cost_factor:                    24;                     
-        running_cost_base:              RUNNING_COST_ELECTRIC;  
+        cost_factor:                    24;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            6;                      //depending on the mu
     }
     graphics {
         // Menu
-        additional_text:                switch_wemuw_additional_text;
+        additional_text:                string(STR_DESC_2, string(STR_ATTACH_CR200J), string(STR_COMFORT_480));
         can_attach_wagon:               muhead;
 
         // Graphics
@@ -63,7 +54,7 @@ item (FEAT_TRAINS, wemuw) {
 
         // Stats
         length:                         switch_length_2_8_2;
-        cargo_capacity:                 switch_wemuw_capacity;
+        cargo_capacity:                 0;
         cargo_age_period:               (24 * 5 * cafedecayfactor()) << param_cargo_decay;
         cost_factor:                    24;
         running_cost_factor:            6 * runningcostfactor() * cafecostfactor() + accostfactor();

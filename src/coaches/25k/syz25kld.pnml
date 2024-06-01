@@ -3,24 +3,15 @@
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_s25kld_purchase) {
-    template_purchase_empty ()
-}
-alternative_sprites(spriteset_s25kld_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_s25kld_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("coaches", "s25kld-luchaogang")
 }
 
 // Vehicle
-spriteset (spriteset_s25kld_luchaogang) {
-    template_empty ()
-}
-spriteset (spriteset_s25kld_liaodong) {
-    template_empty ()
-}
-alternative_sprites(spriteset_s25kld_luchaogang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_s25kld_luchaogang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "s25kld-luchaogang")
 }
-alternative_sprites (spriteset_s25kld_liaodong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_s25kld_liaodong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "s25kld-liaodong")
 }
 
@@ -36,7 +27,7 @@ switch (FEAT_TRAINS, SELF, switch_s25kld_graphics_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_s25kld_graphics, position_in_articulated_veh % 3) {
     1: switch_s25kld_graphics_subtype;
-    empty_sprites;   
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_s25kld_cargo_subtype, cargo_subtype) {
@@ -61,7 +52,7 @@ item (FEAT_TRAINS, syz25kld) {
         name:                           string(STR_NAME_SYZ25KLD);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1996,01,01);
@@ -94,7 +85,7 @@ item (FEAT_TRAINS, syz25kld) {
         additional_text:                switch_syz25kld_additional_text;
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_s25kld_cargo_subtype;
-        
+
         // Graphics
         default:                        switch_s25kld_graphics;
         purchase:                       spriteset_s25kld_purchase;
