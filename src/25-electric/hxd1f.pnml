@@ -59,10 +59,6 @@ switch (FEAT_TRAINS, SELF, switch_hxd1f_graphics, position_in_articulated_veh % 
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_hxd1f_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_FULL_NAME_FXD1B), string(STR_ALIASNAME_FXD1B), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8));
-}
-
 
 item (FEAT_TRAINS, hxd1f) {
     property {
@@ -103,7 +99,7 @@ item (FEAT_TRAINS, hxd1f) {
     }
     graphics {
         // Menu
-        additional_text:                switch_hxd1f_additional_text;
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_FXD1B), string(STR_ALIASNAME_FXD1B), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8));
         cargo_subtype_text:             switch_hxd1f_cargo_subtype;
         can_attach_wagon:               locowagon;
         // Graphics

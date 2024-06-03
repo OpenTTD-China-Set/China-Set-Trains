@@ -61,10 +61,6 @@ switch (FEAT_TRAINS, SELF, switch_hxn3_graphics, position_in_articulated_veh % 3
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_hxn3_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_FULL_NAME_HXN3), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8));
-}
-
 
 item (FEAT_TRAINS, hxn3) {
     property {
@@ -106,7 +102,7 @@ item (FEAT_TRAINS, hxn3) {
     }
     graphics {
         // Menu
-        additional_text:                switch_hxn3_additional_text;
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_HXN3), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8));
         cargo_subtype_text:             switch_hxn3_cargo_subtype;
         can_attach_wagon:               locowagon;
 

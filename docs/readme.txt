@@ -248,23 +248,39 @@ The source code can be obtained from GitHub.
 
 Using Linux or WSL:
 
-1. install gorender from https://github.com/mattkimber/gorender (might be complicated for non-ubuntu users);
-2. sudo apt install python3;
-3. sudo apt install python3-pip;
-4. sudo apt install make;
-5. pip3 install nml; (Notice: Compilation needs NML >= 0.7.5)
-6. cd to the local China-Set-Trains folder;
-7. type "make"; (If you want shorter compilation time, try "make -j n" where n should be no larger than the memory in GB your system has, or your system would breakdown)
-8. Compile success.
+```bash
+#!/bin/bash
+# you'll have to install gorender from https://github.com/mattkimber/gorender
+# here we use apt for demo
+
+# dependencies
+sudo apt install python3
+sudo apt install python3-pip
+sudo apt install make
+pip3 install nml
+# we would also need gcc, but that should be already included in most distros
+
+# compiling
+make
+# alternatively, you could use "make -j" n where n is the total number of parallel tasks you want to run at once.
+```
 
 Using Windows (Scoop is advised here, but non-scoop compilations are also possible):
 
-1. install scoop;
-2. scoop bucket add openttd https://github.com/WenSimEHRP/OpenTTD-Buckets;
-3. scoop install python@3.11.9 (versions >= 3.12 are unsupported presently);
-4. scoop install make;
-5. scoop install nml;
-6. scoop install gorender;
-7. cd to the local China-Set-Trains folder;
-8. type "make"; (If you want shorter compilation time, try "make -j n" where n should be no larger than the memory in GB your system has, or your system would breakdown)
-9. Compile success.
+```powershell
+# we suggest you to use scoop; you can get scoop @ https://scoop.sh
+
+# dependencies
+scoop bucket add main
+scoop bucket add openttd https://github.com/WenSimEHRP/OpenTTD-Bucket
+scoop install python
+scoop install make
+scoop install openttd/nml
+scoop install openttd/gorender
+# we would need the gcc compiler in from mingw
+scoop install mingw
+
+# compiling
+make
+# alternatively, you could use "make -j n" where n is the total number of parallel tasks you want to run at once.
+```

@@ -57,10 +57,6 @@ switch (FEAT_TRAINS, SELF, switch_rw19k_capacity, position_in_articulated_veh % 
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_rw19k_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_FULL_NAME_RW19K), string(STR_19K_LIVERY_AVAILABILITY), string(STR_COMFORT_640));
-}
-
 
 item (FEAT_TRAINS, rw19k) {
     property {
@@ -98,7 +94,7 @@ item (FEAT_TRAINS, rw19k) {
     }
     graphics {
         // Menu
-        additional_text:                switch_rw19k_additional_text;
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RW19K), string(STR_19K_LIVERY_AVAILABILITY), string(STR_COMFORT_640));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_rw19k_cargo_subtype;
 

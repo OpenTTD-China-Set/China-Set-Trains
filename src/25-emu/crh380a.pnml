@@ -46,11 +46,6 @@ switch (FEAT_TRAINS, SELF, switch_crh380a_head_capacity, position_in_articulated
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh380a_additional_text, param_cargo_decay) {
-    return string(STR_DESC_6, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH380A_NICKNAME), string(STR_RELIABILITY_12), string(STR_CRH380A_CONSIST), string(STR_CRH380A_HEAD_SEAT), string(STR_350_380_AVAILABLE));
-}
-
-
 switch (FEAT_TRAINS, SELF, switch_crh380a_middle_wagon_three_quarters, ((position_in_consist / 3) + 1) == (num_vehs_in_consist * 3 / 12)) {
     1: spriteset_crh380a_middle_p;
     spriteset_crh380a_middle_p_reversed;
@@ -356,7 +351,7 @@ item (FEAT_TRAINS, crh380a) {
     }
     graphics {
         // Menu
-        additional_text:                switch_crh380a_additional_text;
+        additional_text:                string(STR_DESC_6, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH380A_NICKNAME), string(STR_RELIABILITY_12), string(STR_CRH380A_CONSIST), string(STR_CRH380A_HEAD_SEAT), string(STR_350_380_AVAILABLE));
         can_attach_wagon:               crhwagon;
         start_stop:                     mu4to24car;
         cargo_subtype_text:             switch_crh380_cargo_subtype;

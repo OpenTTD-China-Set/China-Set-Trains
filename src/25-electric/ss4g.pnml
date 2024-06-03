@@ -26,10 +26,6 @@ switch (FEAT_TRAINS, SELF, switch_ss4g_graphics, position_in_articulated_veh % 6
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_ss4g_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_FULL_NAME_SS4G), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_SS4G_NICKNAME), string(STR_RELIABILITY_8));
-}
-
 
 item (FEAT_TRAINS, ss4g) {
     property {
@@ -70,7 +66,7 @@ item (FEAT_TRAINS, ss4g) {
     }
     graphics {
         // Menu
-        additional_text:                switch_ss4g_additional_text;
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SS4G), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_SS4G_NICKNAME), string(STR_RELIABILITY_8));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_ss4g_graphics;

@@ -120,7 +120,7 @@ GRFID          ?= grfid
 GRFID_FLAGS    ?= -m
 
 # Common to all filenames
-DIR_NAME            := $(BASE_FILENAME)-$(VERSION_STRING)
+DIR_NAME            := $(FILE_NAME)-$(REPO_VERSION_STRING)
 DIR_NAME_SRC        := $(DIR_NAME)-source
 
 TAR_FILENAME       := $(DIR_NAME).tar
@@ -138,13 +138,11 @@ MD5_SRC_FILENAME   ?= $(DIR_NAME).check.md5
 
 # Bundle directory
 $(DIR_NAME): $(BUNDLE_FILES)
-	$(_E) "[BUNDLE] $@"
 	$(_V) if [ -e $@ ]; then rm -rf $@; fi
 	$(_V) mkdir $@
-	$(_V) -for i in $(BUNDLE_FILES); do cp $(CP_FLAGS) $$i $@; done
+	$(_V) for i in $(BUNDLE_FILES); do cp $(CP_FLAGS) $$i $@; done
 
 $(DIR_NAME).tar: $(DIR_NAME)
-	$(_E) "[BUNDLE TAR] $@"
 	$(_V) $(TAR) $(TAR_FLAGS) $@ $<
 
 bundle_tar: $(DIR_NAME).tar

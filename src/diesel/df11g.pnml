@@ -70,10 +70,6 @@ switch (FEAT_TRAINS, SELF, switch_df11g_traction, num_vehs_in_vehid_chain % 6) {
     return int(0.143*255);
 }
 
-switch (FEAT_TRAINS, SELF, switch_df11g_additional_text, param_cargo_decay) {
-    return string(STR_DESC_6, string(STR_FULL_NAME_DF11G), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_DF11G_NICKNAME), string(STR_RELIABILITY_6), string(STR_DF11G_CONSIST), string(STR_LEAPING_LIU_NEVER_DIES));
-}
-
 
 item (FEAT_TRAINS, df11g) {
     property {
@@ -115,7 +111,7 @@ item (FEAT_TRAINS, df11g) {
     }
     graphics {
         // Menu
-        additional_text:                        switch_df11g_additional_text;
+        additional_text:                        string(STR_DESC_6, string(STR_FULL_NAME_DF11G), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_DF11G_NICKNAME), string(STR_RELIABILITY_6), string(STR_DF11G_CONSIST), string(STR_LEAPING_LIU_NEVER_DIES));
         can_attach_wagon:                       locowagon;
 
         // Graphics

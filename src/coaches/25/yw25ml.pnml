@@ -46,10 +46,6 @@ switch (FEAT_TRAINS, SELF, switch_yw25ml_capacity, position_in_articulated_veh %
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_yw25ml_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_FULL_NAME_YW25ML), string(STR_25ML_LIVERY_AVAILABILITY), string(STR_COMFORT_288));
-}
-
 
 item (FEAT_TRAINS, yw25ml) {
     property {
@@ -87,7 +83,7 @@ item (FEAT_TRAINS, yw25ml) {
     }
     graphics {
         // Menu
-        additional_text:                switch_yw25ml_additional_text;
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YW25ML), string(STR_25ML_LIVERY_AVAILABILITY), string(STR_COMFORT_288));
         can_attach_wagon:               locowagon;
 
         // Graphics

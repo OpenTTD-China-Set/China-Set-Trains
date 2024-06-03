@@ -272,7 +272,7 @@ Using Windows (Scoop is advised here, but non-scoop compilations are also possib
 
 # dependencies
 scoop bucket add main
-scoop bucket add openttd https://github.com/WenSimEHRP/OpenTTD-Buckets
+scoop bucket add openttd https://github.com/WenSimEHRP/OpenTTD-Bucket
 scoop install python
 scoop install make
 scoop install openttd/nml

@@ -23,11 +23,6 @@ switch (FEAT_TRAINS, SELF, switch_df7g_graphics, position_in_articulated_veh % 3
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_df7g_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_FULL_NAME_DF7G), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF7G_NICKNAME), string(STR_RELIABILITY_20));
-}
-
-
 
 item (FEAT_TRAINS, df7g) {
     property {
@@ -69,7 +64,7 @@ item (FEAT_TRAINS, df7g) {
     }
     graphics {
         // Menu
-        additional_text:                switch_df7g_additional_text;
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_DF7G), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF7G_NICKNAME), string(STR_RELIABILITY_20));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_df7g_graphics;

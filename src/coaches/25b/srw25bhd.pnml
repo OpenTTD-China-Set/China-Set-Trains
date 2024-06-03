@@ -10,10 +10,6 @@ switch (FEAT_TRAINS, SELF, switch_srw25bhd_capacity, position_in_articulated_veh
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_srw25bhd_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_FULL_NAME_SRW25B), string(STR_S25BHD_LIVERY_AVAILABILITY), string(STR_COMFORT_384));
-}
-
 
 item (FEAT_TRAINS, srw25bhd) {
     property {
@@ -21,7 +17,7 @@ item (FEAT_TRAINS, srw25bhd) {
         name:                           string(STR_NAME_SRW25BHD);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        
+
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1994,01,01);
@@ -51,10 +47,10 @@ item (FEAT_TRAINS, srw25bhd) {
     }
     graphics {
         // Menu
-        additional_text:                switch_srw25bhd_additional_text;
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SRW25B), string(STR_S25BHD_LIVERY_AVAILABILITY), string(STR_COMFORT_384));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_s25bhd_cargo_subtype;
-        
+
         // Graphics
         default:                        switch_s25bhd_graphics;
         purchase:                       spriteset_s25bhd_purchase_original;

@@ -46,10 +46,6 @@ switch (FEAT_TRAINS, SELF, switch_rw22aircon_capacity, position_in_articulated_v
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_rw22aircon_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_FULL_NAME_RW22AIRCON), string(STR_22AIRCON_LIVERY_AVAILABILITY), string(STR_COMFORT_384));
-}
-
 
 item (FEAT_TRAINS, rw22aircon) {
     property {
@@ -87,7 +83,7 @@ item (FEAT_TRAINS, rw22aircon) {
     }
     graphics {
         // Menu
-        additional_text:                switch_rw22aircon_additional_text;
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RW22AIRCON), string(STR_22AIRCON_LIVERY_AVAILABILITY), string(STR_COMFORT_384));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_rw22aircon_cargo_subtype;
 
