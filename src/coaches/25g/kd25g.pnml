@@ -59,10 +59,6 @@ switch (FEAT_TRAINS, SELF, switch_kd25g_graphics, position_in_articulated_veh % 
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_kd25g_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_FULL_NAME_KD25G), string(STR_KD25G_LIVERY_AVAILABILITY), string(STR_AIR_CONDITIONER_EFFECT));
-}
-
 
 item (FEAT_TRAINS, kd25g) {
     property {
@@ -101,7 +97,7 @@ item (FEAT_TRAINS, kd25g) {
     }
     graphics {
         // Menu
-        additional_text:                switch_kd25g_additional_text;
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25G), string(STR_KD25G_LIVERY_AVAILABILITY), string(STR_AIR_CONDITIONER_EFFECT));
         can_attach_wagon:               locowagon;
 
         // Graphics

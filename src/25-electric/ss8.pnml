@@ -22,10 +22,6 @@ switch (FEAT_TRAINS, SELF, switch_ss8_graphics, position_in_articulated_veh % 3)
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_ss8_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_FULL_NAME_SS8), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_SS8_NICKNAME), string(STR_RELIABILITY_10));
-}
-
 
 item (FEAT_TRAINS, ss8) {
     property {
@@ -67,7 +63,7 @@ item (FEAT_TRAINS, ss8) {
     }
     graphics {
         // Menu
-        additional_text:                switch_ss8_additional_text;
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SS8), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_SS8_NICKNAME), string(STR_RELIABILITY_10));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_ss8_graphics;

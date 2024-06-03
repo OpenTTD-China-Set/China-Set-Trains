@@ -37,10 +37,6 @@ switch (FEAT_TRAINS, SELF, switch_ca23_capacity, position_in_articulated_veh % 3
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_ca23_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_FULL_NAME_CA23), string(STR_CAFE_EFFECT), string(STR_22AIRCON_LIVERY_AVAILABILITY), string(STR_COMFORT_144_CAFE));
-}
-
 
 item (FEAT_TRAINS, ca23) {
     property {
@@ -79,7 +75,7 @@ item (FEAT_TRAINS, ca23) {
     }
     graphics {
         // Menu
-        additional_text:                switch_ca23_additional_text;
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_CA23), string(STR_CAFE_EFFECT), string(STR_22AIRCON_LIVERY_AVAILABILITY), string(STR_COMFORT_144_CAFE));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_ca23_cargo_subtype;
 

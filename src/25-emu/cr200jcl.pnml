@@ -57,10 +57,6 @@ switch (FEAT_TRAINS, SELF, switch_cr200jcl_graphics, position_in_consist_from_en
     switch_cr200jcl_graphics_front;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr200jcl_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_CR200J_CAN_ATTACH_WAGON), string(STR_CR200JC_NICKNAME), string(STR_RELIABILITY_8), string(STR_CR200JCL_CONSIST));
-}
-
 switch (FEAT_TRAINS, SELF, switch_cr200jcl_middle_graphics, position_in_articulated_veh % 3) {
     1: spriteset_cr200jc_middle;
     empty_sprites;
@@ -177,7 +173,7 @@ item (FEAT_TRAINS, cr200jcl) {
     }
     graphics {
         // Menu
-        additional_text:                switch_cr200jcl_additional_text;
+        additional_text:                string(STR_DESC_4, string(STR_CR200J_CAN_ATTACH_WAGON), string(STR_CR200JC_NICKNAME), string(STR_RELIABILITY_8), string(STR_CR200JCL_CONSIST));
         can_attach_wagon:               cr200jclwagon;
         start_stop:                     switch_cr200jcl_start_stop;
 

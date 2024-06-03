@@ -46,10 +46,6 @@ switch (FEAT_TRAINS, SELF, switch_ca25z_capacity, position_in_articulated_veh % 
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_ca25z_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_FULL_NAME_CA25Z), string(STR_CAFE_EFFECT), string(STR_25Z_LIVERY_AVAILABILITY), string(STR_COMFORT_192_CAFE));
-}
-
 
 item (FEAT_TRAINS, ca25z) {
     property {
@@ -88,7 +84,7 @@ item (FEAT_TRAINS, ca25z) {
     }
     graphics {
         // Menu
-        additional_text:                switch_ca25z_additional_text;
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_CA25Z), string(STR_CAFE_EFFECT), string(STR_25Z_LIVERY_AVAILABILITY), string(STR_COMFORT_192_CAFE));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_ca25z_cargo_subtype;
 

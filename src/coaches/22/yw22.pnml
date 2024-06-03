@@ -74,10 +74,6 @@ switch (FEAT_TRAINS, SELF, switch_yw22_cargo_decay, cargo_subtype) {
     return 18 * 4;
 }
 
-switch (FEAT_TRAINS, SELF, switch_yw22_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_YW22), string(STR_NO_AIR_CONDITIONER));
-}
-
 
 item (FEAT_TRAINS, yw22) {
     property {
@@ -115,7 +111,7 @@ item (FEAT_TRAINS, yw22) {
     }
     graphics {
         // Menu
-        additional_text:                switch_yw22_additional_text;
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_YW22), string(STR_NO_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
 
         // Graphics

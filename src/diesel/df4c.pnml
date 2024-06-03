@@ -41,10 +41,6 @@ switch (FEAT_TRAINS, SELF, switch_df4c_graphics, position_in_articulated_veh % 3
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_df4c_additional_text, param_cargo_decay) {
-    return string(STR_DESC_5, string(STR_FULL_NAME_DF4C), string(STR_ALIASNAME_DF), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF4C_LIVERY_AVAILABILITY), string(STR_DF4C_NICKNAME), string(STR_RELIABILITY_16));
-}
-
 
 item (FEAT_TRAINS, df4c) {
     property {
@@ -87,7 +83,7 @@ item (FEAT_TRAINS, df4c) {
     }
     graphics {
         // Menu
-        additional_text:                switch_df4c_additional_text;
+        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_DF4C), string(STR_ALIASNAME_DF), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF4C_LIVERY_AVAILABILITY), string(STR_DF4C_NICKNAME), string(STR_RELIABILITY_16));
         cargo_subtype_text:             switch_df4c_cargo_subtype;
         can_attach_wagon:               locowagon;
 

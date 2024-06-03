@@ -39,10 +39,6 @@ switch (FEAT_TRAINS, SELF, switch_cr400af_head_capacity, position_in_articulated
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr400af_additional_text, param_cargo_decay) {
-    return string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CR400AF_NICKNAME), string(STR_RELIABILITY_5), string(STR_CR400AF_CONSIST), string(STR_CR400AF_HEAD_SEAT));
-}
-
 switch (FEAT_TRAINS, SELF, switch_cr400af_5_middle_graphics, position_in_consist) {
     4: spriteset_cr400af_middle_m;
     7: spriteset_cr400af_middle_m;
@@ -535,7 +531,7 @@ item (FEAT_TRAINS, cr400af) {
     }
     graphics {
         // Menu
-        additional_text:                switch_cr400af_additional_text;
+        additional_text:                string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CR400AF_NICKNAME), string(STR_RELIABILITY_5), string(STR_CR400AF_CONSIST), string(STR_CR400AF_HEAD_SEAT));
         can_attach_wagon:               crhwagon;
         start_stop:                     mu5to17car;
         // Graphics

@@ -96,10 +96,6 @@ switch (FEAT_TRAINS, SELF, switch_crh6f_head_capacity, position_in_articulated_v
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh6f_additional_text, param_cargo_decay) {
-    return string(STR_DESC_5, string(STR_CRH6F_CAN_ATTACH_WAGON), string(STR_CRH6F_NICKNAME), string(STR_CRH6F_LIVERY_AVAILABILITY), string(STR_RELIABILITY_6), string(STR_CRH6F_CONSIST), string(STR_CRH6F_HEAD_SEAT));
-}
-
 switch (FEAT_TRAINS, SELF, switch_crh6f_short_graphics, (position_in_consist_from_end == position_in_consist) || (position_in_consist_from_end == position_in_consist + 3)) {
     1: switch_crh6f_middle_p;
     switch_crh6f_middle_m;
@@ -207,7 +203,7 @@ item (FEAT_TRAINS, crh6f) {
     }
     graphics {
         // Menu
-        additional_text:                switch_crh6f_additional_text;
+        additional_text:                string(STR_DESC_5, string(STR_CRH6F_CAN_ATTACH_WAGON), string(STR_CRH6F_NICKNAME), string(STR_CRH6F_LIVERY_AVAILABILITY), string(STR_RELIABILITY_6), string(STR_CRH6F_CONSIST), string(STR_CRH6F_HEAD_SEAT));
         can_attach_wagon:               onlyze;
         start_stop:                     mu4car;
         cargo_subtype_text:             switch_crh6f_cargo_subtype;

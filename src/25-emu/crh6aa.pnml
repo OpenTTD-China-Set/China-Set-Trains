@@ -159,10 +159,6 @@ switch (FEAT_TRAINS, SELF, switch_crh6aa_section_capacity, position_in_articulat
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh6aa_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_RELIABILITY_6), string(STR_CRH6AA_LIVERY_AVAILABILITY), string(STR_CRH6AA_CONSIST), string(STR_COMFORT_160));
-}
-
 
 item (FEAT_TRAINS, crh6aa) {
     property {
@@ -204,7 +200,7 @@ item (FEAT_TRAINS, crh6aa) {
     }
     graphics {
         // Menu
-        additional_text:                switch_crh6aa_additional_text;
+        additional_text:                string(STR_DESC_4, string(STR_RELIABILITY_6), string(STR_CRH6AA_LIVERY_AVAILABILITY), string(STR_CRH6AA_CONSIST), string(STR_COMFORT_160));
         can_attach_wagon:               onlycrh6aa;
         start_stop:                     mu4car;
         cargo_subtype_text:             switch_crh6aa_cargo_subtype;

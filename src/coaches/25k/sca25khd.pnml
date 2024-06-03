@@ -27,10 +27,6 @@ switch (FEAT_TRAINS, SELF, switch_sca25khd_capacity, position_in_articulated_veh
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_sca25khd_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_FULL_NAME_SCA25K), string(STR_SCA25KHD_LIVERY_AVAILABILITY), string(STR_COMFORT_160_CAFE), string(STR_CAFE_EFFECT));
-}
-
 
 item (FEAT_TRAINS, sca25khd) {
     property {
@@ -69,7 +65,7 @@ item (FEAT_TRAINS, sca25khd) {
     }
     graphics {
         // Menu
-        additional_text:                switch_sca25khd_additional_text;
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SCA25K), string(STR_SCA25KHD_LIVERY_AVAILABILITY), string(STR_COMFORT_160_CAFE), string(STR_CAFE_EFFECT));
         can_attach_wagon:               locowagon;
 
         // Graphics

@@ -27,10 +27,6 @@ switch (FEAT_TRAINS, SELF, switch_srz25kld_capacity, position_in_articulated_veh
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_srz25kld_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_FULL_NAME_SRZ25K), string(STR_S25KLD_LIVERY_AVAILABILITY), string(STR_COMFORT_192));
-}
-
 
 item (FEAT_TRAINS, srz25kld) {
     property {
@@ -68,7 +64,7 @@ item (FEAT_TRAINS, srz25kld) {
     }
     graphics {
         // Menu
-        additional_text:                switch_srz25kld_additional_text;
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SRZ25K), string(STR_S25KLD_LIVERY_AVAILABILITY), string(STR_COMFORT_192));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_s25kld_cargo_subtype;
 

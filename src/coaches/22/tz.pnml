@@ -46,10 +46,6 @@ switch (FEAT_TRAINS, SELF, switch_tz_graphics, position_in_articulated_veh % 3) 
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_tz_additional_text, param_cargo_decay) {
-    return string(STR_DESC_3, string(STR_FULL_NAME_TZ), string(STR_TZ_LIVERY_AVAILABILITY), string(STR_AIR_CONDITIONER_EFFECT));
-}
-
 
 item (FEAT_TRAINS, tz) {
     property {
@@ -88,7 +84,7 @@ item (FEAT_TRAINS, tz) {
     }
     graphics {
         // Menu
-        additional_text:                switch_tz_additional_text;
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_TZ), string(STR_TZ_LIVERY_AVAILABILITY), string(STR_AIR_CONDITIONER_EFFECT));
         can_attach_wagon:               locowagon;
 
         // Graphics

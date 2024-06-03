@@ -23,10 +23,6 @@ switch (FEAT_TRAINS, SELF, switch_df11_graphics, position_in_articulated_veh % 3
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_df11_additional_text, param_cargo_decay) {
-    return string(STR_DESC_4, string(STR_FULL_NAME_DF11), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF11_NICKNAME), string(STR_RELIABILITY_10));
-}
-
 
 item (FEAT_TRAINS, df11) {
     property {
@@ -69,7 +65,7 @@ item (FEAT_TRAINS, df11) {
     }
     graphics {
         // Menu
-        additional_text:                switch_df11_additional_text;
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_DF11), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF11_NICKNAME), string(STR_RELIABILITY_10));
         can_attach_wagon:               locowagon;
 
         // Graphics
