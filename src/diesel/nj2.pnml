@@ -1,0 +1,136 @@
+// Begin NJ2
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_nj2_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "nj2-original")
+}
+
+
+// Vehicle
+spriteset (spriteset_nj2_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "nj2-original")
+}
+spriteset (spriteset_nj2_original_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "nj2-original-back")
+}
+spriteset (spriteset_nj2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "nj2")
+}
+spriteset (spriteset_nj2_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "nj2-back")
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_articulated_part, extra_callback_info1) {
+    1..2: return nj2;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_QINGZANG);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_graphics_subtype_front, cargo_subtype) {
+    0: spriteset_nj2_original;
+    1: spriteset_nj2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_graphics_subtype_back, cargo_subtype) {
+    0: spriteset_nj2_original_back;
+    1: spriteset_nj2_back;
+}
+
+// "Splitting NJ2"
+
+switch (FEAT_TRAINS, SELF, switch_nj2_graphics_joint_front, position_in_vehid_chain % 6) {
+    1: switch_nj2_graphics_subtype_front;
+    4: switch_nj2_graphics_subtype_back;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_graphics_joint, position_in_vehid_chain_from_end) {
+    1: switch_nj2_graphics_subtype_back;
+    switch_nj2_graphics_joint_front;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_graphics_front, position_in_articulated_veh % 3) {
+    1: switch_nj2_graphics_subtype_front;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_graphics_split, position_in_consist_from_end) {
+    1: switch_nj2_graphics_subtype_back;
+    switch_nj2_graphics_front;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nj2_graphics, num_vehs_in_vehid_chain % 6) {
+    0: switch_nj2_graphics_joint;
+    3: switch_nj2_graphics_split;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, nj2) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_NJ2);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2006,1,1);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          2560 kW;
+        weight:                         138 ton;
+        tractive_effort_coefficient:    0.395;
+        cost_factor:                    93;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            35;
+        reliability_decay:              8;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                        string(STR_DESC_5, string(STR_US_IMPORT), string(STR_NJ2_LIVERY_AVAILABILITY), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8), string(STR_NJ2_CONSIST));
+        can_attach_wagon:                       locowagon;
+        cargo_subtype_text:                     switch_nj2_cargo_subtype;
+
+        // Graphics
+        default:                                switch_nj2_graphics;
+        purchase:                               spriteset_nj2_purchase;
+        articulated_part:                       switch_nj2_articulated_part;
+
+        // Stats
+        length:                                 switch_length_2_6_2;
+        cargo_capacity:                         0;
+        cost_factor:                            81;
+        running_cost_factor:                    57 * runningcostfactor();
+        purchase_running_cost_factor:           228;
+        purchase_cargo_capacity:                0;
+    }
+}
+
+// End NJ2
+

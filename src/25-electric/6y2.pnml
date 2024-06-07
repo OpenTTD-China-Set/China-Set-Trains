@@ -1,0 +1,105 @@
+// Begin 6y2
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_6y2_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-electric", "6y2")
+}
+
+// Vehicle
+spriteset (spriteset_6y2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "6y2")
+}
+spriteset (spriteset_6y2_factory, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "6y2-factory")
+}
+spriteset (spriteset_6y2_late, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "6y2-late")
+}
+
+switch (FEAT_TRAINS, SELF, switch_6y2_articulated_part, extra_callback_info1) {
+    1..2: return _6y2;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_6y2_graphics_subtype, cargo_subtype) {
+    1: spriteset_6y2_factory;
+    2: spriteset_6y2_late;
+    spriteset_6y2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_6y2_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_6Y2_FACTORY);
+    2: return string(STR_6Y2_LATE);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_6y2_graphics, position_in_articulated_veh % 3) {
+    1: switch_6y2_graphics_subtype;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, _6y2) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_6Y2);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1960,07,01);
+        model_life:                     60;
+        retire_early:                   20;
+        vehicle_life:                   40;
+        track_type:                     SACA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          100 km/h;
+        power:                          4620 kW;
+        weight:                         138 ton;
+        tractive_effort_coefficient:    0.377;
+        cost_factor:                    83;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            72;
+        reliability_decay:              12;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_FR_IMPORT), string(STR_ELECTRICITY_SUPPLY_NO),  string(STR_6Y2_LIVERY_AVAILABILITY),string(STR_RELIABILITY_12));
+        cargo_subtype_text:             switch_6y2_cargo_subtype;
+        can_attach_wagon:               locowagon;
+        // Graphics
+        default:                        switch_6y2_graphics;
+        purchase:                       spriteset_6y2_purchase_original;
+        articulated_part:               switch_6y2_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_6_2;
+        cargo_capacity:                 0;
+        cost_factor:                    83;
+        running_cost_factor:            72 * runningcostfactor();
+        purchase_running_cost_factor:   288;
+        purchase_cargo_capacity:        0;
+        bitmask_vehicle_info:           0;
+    }
+}
+
+// End 6Y2
+

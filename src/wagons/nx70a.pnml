@@ -1,0 +1,623 @@
+// Begin NX70A
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_nx70a_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "nx70a")
+}
+
+// Vehicle
+spriteset (spriteset_nx70a_black_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a")
+}
+spriteset (spriteset_nx70a_black_container_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-container-half")
+}
+spriteset (spriteset_nx70a_black_container_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-container-full")
+}
+spriteset (spriteset_nx70a_black_cover, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-cover")
+}
+spriteset (spriteset_nx70a_black_container_msc_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-container-msc-livery-half")
+}
+spriteset (spriteset_nx70a_black_container_msc_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-container-msc-livery-full")
+}
+spriteset (spriteset_nx70a_black_long_container_zih_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-long-container-zih-livery")
+}
+spriteset (spriteset_nx70a_black_long_container_xiangang_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-long-container-xiangang-livery")
+}
+spriteset (spriteset_nx70a_black_long_container_evergreen_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-long-container-evergreen-livery")
+}
+spriteset (spriteset_nx70a_black_long_container_maersk_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-long-container-maersk-livery")
+}
+spriteset (spriteset_nx70a_black_long_container_cr_livery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-long-container-cr-livery")
+}
+spriteset (spriteset_nx70a_black_metal_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-metal-empty")
+}
+spriteset (spriteset_nx70a_black_metal_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-metal-half")
+}
+spriteset (spriteset_nx70a_black_metal_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-metal-full")
+}
+spriteset (spriteset_nx70a_black_tank_container_crct_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-tank-container-crct-livery-full")
+}
+spriteset (spriteset_nx70a_black_tank_container_crct_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-tank-container-crct-livery-half")
+}
+spriteset (spriteset_nx70a_black_tank_container_black_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-tank-container-black-livery-full")
+}
+spriteset (spriteset_nx70a_black_tank_container_black_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-tank-container-black-livery-half")
+}
+spriteset (spriteset_nx70a_black_tank_container_shanmei_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-tank-container-shanmei-livery-full")
+}
+spriteset (spriteset_nx70a_black_tank_container_shanmei_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-tank-container-shanmei-livery-half")
+}
+spriteset (spriteset_nx70a_black_tank_container_stg_livery_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-tank-container-stg-livery-full")
+}
+spriteset (spriteset_nx70a_black_tank_container_stg_livery_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-tank-container-stg-livery-half")
+}
+spriteset (spriteset_nx70a_black_vehicle_excavator, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-vehicle-excavator")
+}
+spriteset (spriteset_nx70a_black_vehicle_bulldozer_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-vehicle-bulldozer-full")
+}
+spriteset (spriteset_nx70a_black_vehicle_bulldozer_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-vehicle-bulldozer-half")
+}
+spriteset (spriteset_nx70a_black_vehicle_tractor_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-vehicle-tractor-full")
+}
+spriteset (spriteset_nx70a_black_vehicle_tractor_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-vehicle-tractor-half")
+}
+spriteset (spriteset_nx70a_black_car_blue_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-car-blue-full")
+}
+spriteset (spriteset_nx70a_black_car_blue_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-car-blue-half")
+}
+spriteset (spriteset_nx70a_black_car_brown_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-car-brown-full")
+}
+spriteset (spriteset_nx70a_black_car_brown_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-car-brown-half")
+}
+spriteset (spriteset_nx70a_black_car_grey_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-car-grey-full")
+}
+spriteset (spriteset_nx70a_black_car_grey_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-car-grey-half")
+}
+spriteset (spriteset_nx70a_black_car_red_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-car-red-full")
+}
+spriteset (spriteset_nx70a_black_car_red_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-car-red-half")
+}
+spriteset (spriteset_nx70a_black_car_white_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-car-white-full")
+}
+spriteset (spriteset_nx70a_black_car_white_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-car-white-half")
+}
+spriteset (spriteset_nx70a_black_open_container_cr_livery_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-open-container-cr-livery-empty")
+}
+spriteset (spriteset_nx70a_black_open_container_cr_livery_tarpaulin, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-open-container-cr-livery-tarpaulin")
+}
+spriteset (spriteset_nx70a_black_open_container_cr_livery_black_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-open-container-cr-livery-black-bulk-half")
+}
+spriteset (spriteset_nx70a_black_open_container_cr_livery_black_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-open-container-cr-livery-black-bulk-full")
+}
+spriteset (spriteset_nx70a_black_open_container_cr_livery_brown_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-open-container-cr-livery-brown-bulk-half")
+}
+spriteset (spriteset_nx70a_black_open_container_cr_livery_brown_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-open-container-cr-livery-brown-bulk-full")
+}
+spriteset (spriteset_nx70a_black_open_container_cr_livery_white_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-open-container-cr-livery-white-bulk-half")
+}
+spriteset (spriteset_nx70a_black_open_container_cr_livery_white_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-open-container-cr-livery-white-bulk-full")
+}
+spriteset (spriteset_nx70a_black_open_container_panjiang_livery_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-open-container-panjiang-livery-empty")
+}
+spriteset (spriteset_nx70a_black_open_container_panjiang_livery_black_bulk_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-open-container-panjiang-livery-black-bulk-half")
+}
+spriteset (spriteset_nx70a_black_open_container_panjiang_livery_black_bulk_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-open-container-panjiang-livery-black-bulk-full")
+}
+spriteset (spriteset_nx70a_black_wood_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-wood-empty")
+}
+spriteset (spriteset_nx70a_black_wood_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-wood-half")
+}
+spriteset (spriteset_nx70a_black_wood_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "nx70a-wood-full")
+}
+
+// start alternative colour nx70a_black
+random_switch (FEAT_TRAINS, SELF, switch_nx70a_black_container_half) {
+    1: spriteset_nx70a_black_container_msc_livery_half;
+    1: spriteset_nx70a_black_container_half;
+    1: spriteset_nx70a_black_long_container_zih_livery;
+    1: spriteset_nx70a_black_long_container_xiangang_livery;
+    1: spriteset_nx70a_black_long_container_evergreen_livery;
+    1: spriteset_nx70a_black_long_container_maersk_livery;
+    1: spriteset_nx70a_black_long_container_cr_livery;
+}
+
+random_switch (FEAT_TRAINS, SELF, switch_nx70a_black_container_full) {
+    1: spriteset_nx70a_black_container_msc_livery_full;
+    1: spriteset_nx70a_black_container_full;
+    1: spriteset_nx70a_black_long_container_zih_livery;
+    1: spriteset_nx70a_black_long_container_xiangang_livery;
+    1: spriteset_nx70a_black_long_container_evergreen_livery;
+    1: spriteset_nx70a_black_long_container_maersk_livery;
+    1: spriteset_nx70a_black_long_container_cr_livery;
+}
+
+random_switch (FEAT_TRAINS, SELF, switch_nx70a_black_tank_container_half) {
+    1: spriteset_nx70a_black_tank_container_crct_livery_half;
+    1: spriteset_nx70a_black_tank_container_black_livery_half;
+    1: spriteset_nx70a_black_tank_container_shanmei_livery_half;
+    1: spriteset_nx70a_black_tank_container_stg_livery_half;
+}
+
+random_switch (FEAT_TRAINS, SELF, switch_nx70a_black_tank_container_full) {
+    1: spriteset_nx70a_black_tank_container_crct_livery_full;
+    1: spriteset_nx70a_black_tank_container_black_livery_full;
+    1: spriteset_nx70a_black_tank_container_shanmei_livery_full;
+    1: spriteset_nx70a_black_tank_container_stg_livery_full;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_container_not_empty, cargo_count < 32) {
+    0: switch_nx70a_black_container_full;
+    switch_nx70a_black_container_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_container, cargo_count < 5) {
+    0: switch_nx70a_black_container_not_empty;
+    spriteset_nx70a_black_empty;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_tank_container_not_empty, cargo_count < 32) {
+    0: switch_nx70a_black_tank_container_full;
+    switch_nx70a_black_tank_container_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_tank_container, cargo_count < 5) {
+    0: switch_nx70a_black_tank_container_not_empty;
+    spriteset_nx70a_black_empty;
+}
+
+random_switch (FEAT_TRAINS, SELF, switch_nx70a_black_open_container_tarpaulin) {
+    1: spriteset_nx70a_black_open_container_cr_livery_tarpaulin;
+// More liveries waiting to be added
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_covered_bulk, cargo_count < 5) {
+    0: switch_nx70a_black_open_container_tarpaulin;
+    spriteset_nx70a_black_empty;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_cargo, cargo_classes) {
+    bitmask(CC_PIECE_GOODS): switch_nx70a_black_container;
+    bitmask(CC_EXPRESS): switch_nx70a_black_container;
+    bitmask(CC_MAIL): switch_nx70a_black_container;
+    bitmask(CC_BULK): switch_nx70a_black_open_container_tarpaulin;
+    bitmask(CC_LIQUID): switch_nx70a_black_tank_container;
+    spriteset_nx70a_black_cover;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black, cargo_count < 5) {
+    0: switch_nx70a_black_cargo;
+    spriteset_nx70a_black_empty;
+}
+
+// start cargotype metal
+
+// metal needs extra tools to be fixed on flatbeds
+// so flatbed wagon "nx70a" need alternative sprites even when it is empty
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_metal_not_empty, cargo_count < 32) {
+    0: spriteset_nx70a_black_metal_full;
+    spriteset_nx70a_black_metal_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_metal, cargo_count < 5) {
+    0: switch_nx70a_black_metal_not_empty;
+    spriteset_nx70a_black_metal_empty;
+}
+// end cargotype metal
+
+// start cargotype farm and engineer supplies
+random_switch (FEAT_TRAINS, SELF, switch_nx70a_black_supplies_half) {
+    3: spriteset_nx70a_black_vehicle_bulldozer_half;
+    3: spriteset_nx70a_black_vehicle_excavator;
+    3: spriteset_nx70a_black_vehicle_tractor_half;
+    1: spriteset_nx70a_black_container_msc_livery_half;
+    1: spriteset_nx70a_black_container_half;
+    1: spriteset_nx70a_black_long_container_zih_livery;
+    1: spriteset_nx70a_black_long_container_xiangang_livery;
+    1: spriteset_nx70a_black_long_container_evergreen_livery;
+    1: spriteset_nx70a_black_long_container_maersk_livery;
+    1: spriteset_nx70a_black_long_container_cr_livery;
+}
+
+random_switch (FEAT_TRAINS, SELF, switch_nx70a_black_supplies_full) {
+    3: spriteset_nx70a_black_vehicle_bulldozer_full;
+    3: spriteset_nx70a_black_vehicle_excavator;
+    3: spriteset_nx70a_black_vehicle_tractor_full;
+    1: spriteset_nx70a_black_container_msc_livery_full;
+    1: spriteset_nx70a_black_container_full;
+    1: spriteset_nx70a_black_long_container_zih_livery;
+    1: spriteset_nx70a_black_long_container_xiangang_livery;
+    1: spriteset_nx70a_black_long_container_evergreen_livery;
+    1: spriteset_nx70a_black_long_container_maersk_livery;
+    1: spriteset_nx70a_black_long_container_cr_livery;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_supplies_not_empty, cargo_count < 32) {
+    0: switch_nx70a_black_supplies_full;
+    switch_nx70a_black_supplies_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_supplies, cargo_count < 5) {
+    0: switch_nx70a_black_supplies_not_empty;
+    spriteset_nx70a_black_empty;
+}
+// end cargotype farm and engineer supplies
+
+// start cargotype vehicle
+random_switch (FEAT_TRAINS, SELF, switch_nx70a_black_vehicle_half) {
+    1: spriteset_nx70a_black_vehicle_bulldozer_half;
+    1: spriteset_nx70a_black_vehicle_excavator;
+    1: spriteset_nx70a_black_vehicle_tractor_half;
+    1: spriteset_nx70a_black_car_blue_half;
+    1: spriteset_nx70a_black_car_brown_half;
+    1: spriteset_nx70a_black_car_grey_half;
+    1: spriteset_nx70a_black_car_red_half;
+    1: spriteset_nx70a_black_car_white_half;
+}
+
+random_switch (FEAT_TRAINS, SELF, switch_nx70a_black_vehicle_full) {
+    1: spriteset_nx70a_black_vehicle_bulldozer_full;
+    1: spriteset_nx70a_black_vehicle_excavator;
+    1: spriteset_nx70a_black_vehicle_tractor_full;
+    1: spriteset_nx70a_black_car_blue_full;
+    1: spriteset_nx70a_black_car_brown_full;
+    1: spriteset_nx70a_black_car_grey_full;
+    1: spriteset_nx70a_black_car_red_full;
+    1: spriteset_nx70a_black_car_white_full;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_vehicle_not_empty, cargo_count < 32) {
+    0: switch_nx70a_black_vehicle_full;
+    switch_nx70a_black_vehicle_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_vehicle, cargo_count < 5) {
+    0: switch_nx70a_black_vehicle_not_empty;
+    spriteset_nx70a_black_empty;
+}
+// end cargotype vehicle
+
+// start cargotype black bulk (MNO2, COAL, COKE)
+
+random_switch (FEAT_TRAINS, SELF, switch_nx70a_black_open_container_black_bulk_empty) {
+    1: spriteset_nx70a_black_open_container_cr_livery_empty;
+    1: spriteset_nx70a_black_open_container_panjiang_livery_empty;
+}
+
+random_switch (FEAT_TRAINS, SELF, switch_nx70a_black_open_container_black_bulk_half) {
+    1: spriteset_nx70a_black_open_container_cr_livery_black_bulk_half;
+    1: spriteset_nx70a_black_open_container_panjiang_livery_black_bulk_half;
+}
+
+random_switch (FEAT_TRAINS, SELF, switch_nx70a_black_open_container_black_bulk_full) {
+    1: spriteset_nx70a_black_open_container_cr_livery_black_bulk_full;
+    1: spriteset_nx70a_black_open_container_panjiang_livery_black_bulk_full;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_open_container_black_bulk_not_empty, cargo_count < 32) {
+    0: switch_nx70a_black_open_container_black_bulk_full;
+    switch_nx70a_black_open_container_black_bulk_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_open_container_black_bulk, cargo_count < 5) {
+    0: switch_nx70a_black_open_container_black_bulk_not_empty;
+    switch_nx70a_black_open_container_black_bulk_empty;
+}
+// end cargotype black bulk (MNO2, COAL, COKE)
+
+// start cargotype brown bulk
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_open_container_brown_bulk_not_empty, cargo_count < 32) {
+    0: spriteset_nx70a_black_open_container_cr_livery_brown_bulk_full;
+    spriteset_nx70a_black_open_container_cr_livery_brown_bulk_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_open_container_brown_bulk, cargo_count < 5) {
+    0: switch_nx70a_black_open_container_brown_bulk_not_empty;
+    spriteset_nx70a_black_open_container_cr_livery_empty;
+}
+// end cargotype brown bulk
+
+// start cargotype white bulk
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_open_container_white_bulk_not_empty, cargo_count < 32) {
+    0: spriteset_nx70a_black_open_container_cr_livery_white_bulk_full;
+    spriteset_nx70a_black_open_container_cr_livery_white_bulk_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_open_container_white_bulk, cargo_count < 5) {
+    0: switch_nx70a_black_open_container_white_bulk_not_empty;
+    spriteset_nx70a_black_open_container_cr_livery_empty;
+}
+// end cargotype white bulk
+
+// start cargotype log
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_wood_not_empty, cargo_count < 32) {
+    0: spriteset_nx70a_black_wood_full;
+    spriteset_nx70a_black_wood_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_wood, cargo_count < 5) {
+    0: switch_nx70a_black_wood_not_empty;
+    spriteset_nx70a_black_wood_empty;
+}
+// end cargotype log
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_black_all_cargo, cargo_type_in_veh) {
+// the following list is shamelessly stolen from xUSSR
+    ALUM: switch_nx70a_black_metal;
+    COPR: switch_nx70a_black_metal;
+    CSTI: switch_nx70a_black_metal;
+    IRON: switch_nx70a_black_metal;
+    METL: switch_nx70a_black_metal;
+    PIPE: switch_nx70a_black_metal;
+    STEL: switch_nx70a_black_metal;
+    STAL: switch_nx70a_black_metal;
+    STST: switch_nx70a_black_metal;
+    STCB: switch_nx70a_black_metal;
+    STSE: switch_nx70a_black_metal;
+    STSH: switch_nx70a_black_metal;
+    STWR: switch_nx70a_black_metal;
+    ZINC: switch_nx70a_black_metal;
+
+    FMSP: switch_nx70a_black_supplies;
+    ENSP: switch_nx70a_black_supplies;
+
+    VEHI: switch_nx70a_black_vehicle;
+
+    MNO2: switch_nx70a_black_open_container_black_bulk;
+    COAL: switch_nx70a_black_open_container_black_bulk;
+    COKE: switch_nx70a_black_open_container_black_bulk;
+
+    CLAY: switch_nx70a_black_open_container_brown_bulk;
+    AORE: switch_nx70a_black_open_container_brown_bulk;
+    CORE: switch_nx70a_black_open_container_brown_bulk;
+    IORE: switch_nx70a_black_open_container_brown_bulk;
+    PORE: switch_nx70a_black_open_container_brown_bulk;
+    RCYC: switch_nx70a_black_open_container_brown_bulk;
+    SCRP: switch_nx70a_black_open_container_brown_bulk;
+    SLAG: switch_nx70a_black_open_container_brown_bulk;
+    WSTE: switch_nx70a_black_open_container_brown_bulk;
+    BDMT: switch_nx70a_black_open_container_brown_bulk;
+    BRCK: switch_nx70a_black_open_container_brown_bulk;
+
+    LIME: switch_nx70a_black_open_container_white_bulk;
+    PHOS: switch_nx70a_black_open_container_white_bulk;
+    GRVL: switch_nx70a_black_open_container_white_bulk;
+    KAOL: switch_nx70a_black_open_container_white_bulk;
+
+    TWOD: switch_nx70a_black_wood;
+    WOOD: switch_nx70a_black_wood;
+
+    SULP: switch_nx70a_black_covered_bulk;
+    FERT: switch_nx70a_black_covered_bulk;
+    PEAT: switch_nx70a_black_covered_bulk;
+    SALT: switch_nx70a_black_covered_bulk;
+    SAND: switch_nx70a_black_covered_bulk;
+    SCMT: switch_nx70a_black_covered_bulk;
+    ALO_: switch_nx70a_black_covered_bulk;
+    CBLK: switch_nx70a_black_covered_bulk;
+    CMNT: switch_nx70a_black_covered_bulk;
+    KAOL: switch_nx70a_black_covered_bulk;
+    POTA: switch_nx70a_black_covered_bulk;
+    QLME: switch_nx70a_black_covered_bulk;
+    SASH: switch_nx70a_black_covered_bulk;
+    CERE: switch_nx70a_black_covered_bulk;
+    CTCD: switch_nx70a_black_covered_bulk;
+    GRAI: switch_nx70a_black_covered_bulk;
+    MAIZ: switch_nx70a_black_covered_bulk;
+    OLSD: switch_nx70a_black_covered_bulk;
+    TOFF: switch_nx70a_black_covered_bulk;
+    WHEA: switch_nx70a_black_covered_bulk;
+    NITR: switch_nx70a_black_covered_bulk;
+
+    COCO: switch_nx70a_black_container;
+    ENSP: switch_nx70a_black_container;
+    FOCA: switch_nx70a_black_container;
+    GOOD: switch_nx70a_black_container;
+    MNSP: switch_nx70a_black_container;
+    POWR: switch_nx70a_black_container;
+    TYRE: switch_nx70a_black_container;
+    VBOD: switch_nx70a_black_container;
+    VENG: switch_nx70a_black_container;
+    VPTS: switch_nx70a_black_container;
+    BEER: switch_nx70a_black_container;
+    COLA: switch_nx70a_black_container;
+    FISH: switch_nx70a_black_container;
+    FOOD: switch_nx70a_black_container;
+    FRUT: switch_nx70a_black_container;
+    FRVG: switch_nx70a_black_container;
+    MILK: switch_nx70a_black_container;
+    BEAN: switch_nx70a_black_container;
+    CASS: switch_nx70a_black_container;
+    FICR: switch_nx70a_black_container;
+    JAVA: switch_nx70a_black_container;
+    NUTS: switch_nx70a_black_container;
+    RSGR: switch_nx70a_black_container;
+    SGBT: switch_nx70a_black_container;
+    SGCN: switch_nx70a_black_container;
+    SUGR: switch_nx70a_black_container;
+    SWET: switch_nx70a_black_container;
+    WOOL: switch_nx70a_black_container;
+    BOOM: switch_nx70a_black_container;
+    CERA: switch_nx70a_black_container;
+    GLAS: switch_nx70a_black_container;
+    PAPR: switch_nx70a_black_container;
+    PPAR: switch_nx70a_black_container;
+    TOYS: switch_nx70a_black_container;
+    DIAM: switch_nx70a_black_container;
+    GOLD: switch_nx70a_black_container;
+    MAIL: switch_nx70a_black_container;
+    VALU: switch_nx70a_black_container;
+
+    LVST: switch_nx70a_black_container;// I don't know which kind of wagon is propered, so just container.
+
+    EOIL: switch_nx70a_black_tank_container;
+    FZDR: switch_nx70a_black_tank_container;
+    WATR: switch_nx70a_black_tank_container;
+    OIL_: switch_nx70a_black_tank_container;
+    PETR: switch_nx70a_black_tank_container;
+    RFPR: switch_nx70a_black_tank_container;
+    BUBL: switch_nx70a_black_tank_container;
+    COAT: switch_nx70a_black_tank_container;
+    DYES: switch_nx70a_black_tank_container;
+    NHNO: switch_nx70a_black_tank_container;
+    PLAS: switch_nx70a_black_tank_container;
+    PLST: switch_nx70a_black_tank_container;
+    RUBR: switch_nx70a_black_tank_container;
+    SOAP: switch_nx70a_black_tank_container;
+    ACID: switch_nx70a_black_tank_container;
+    CTAR: switch_nx70a_black_tank_container;
+    LYE_: switch_nx70a_black_tank_container;
+    C2H4: switch_nx70a_black_tank_container;
+    CHLO: switch_nx70a_black_tank_container;
+    FUEL: switch_nx70a_black_tank_container;
+    H2__: switch_nx70a_black_tank_container;
+    N7__: switch_nx70a_black_tank_container;
+    NH3_: switch_nx70a_black_tank_container;
+    O2__: switch_nx70a_black_tank_container;
+
+    switch_nx70a_black;
+}
+// end alternative colour nx70a_black
+
+
+random_switch (FEAT_TRAINS, SELF, random_nx70a_colour) {
+    1: switch_nx70a_black_all_cargo; // waiting for more colours
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_articulated_part, extra_callback_info1) {
+    1..2: return nx70a;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_graphics, position_in_articulated_veh % 3) {
+    1: random_nx70a_colour;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_capacity_cargo, cargo_type_in_veh) {
+    MAIL: return 120;
+    GOOD: return 90;
+    return 60;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_capacity, position_in_articulated_veh % 3) {
+    1: switch_nx70a_capacity_cargo;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nx70a_loading_speed, cargo_type_in_veh) {
+    MAIL: return 15;
+    GOOD: return 15;
+    return 10;
+}
+
+
+item (FEAT_TRAINS, nx70a) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_NX70A);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2009,06,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_MAIL, CC_EXPRESS, CC_BULK, CC_PIECE_GOODS, CC_COVERED, CC_OVERSIZED, CC_LIQUID, CC_HAZARDOUS);
+        non_refittable_cargo_classes:   bitmask(CC_PASSENGERS);
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [YETI, YETY];
+        refit_cost:                     0;
+        default_cargo_type:             DEFAULT_CARGO_FIRST_REFITTABLE;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 70;
+        loading_speed:                  10 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          0 hp;
+        weight:                         23.8 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_2, string(STR_NX70A_LIVERY_AVAILABILITY), string(STR_DECAY_185));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_nx70a_graphics;
+        purchase:                       spriteset_nx70a_purchase;
+        articulated_part:               switch_nx70a_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_2_2;
+        cargo_capacity:                 switch_nx70a_capacity;
+        loading_speed:                  switch_nx70a_loading_speed() << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+        cost_factor:                    6;
+        running_cost_factor:            4 * runningcostfactor();
+        purchase_running_cost_factor:   16;
+        purchase_cargo_capacity:        70/3;
+    }
+}
+
+// End NX70A
+

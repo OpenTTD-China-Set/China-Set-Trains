@@ -1,0 +1,111 @@
+// Begin KD25K
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_kd25k_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "kd25k")
+}
+
+// Vehicle
+spriteset (spriteset_kd25k_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "kd25k")
+}
+spriteset (spriteset_kd25k_luchaogang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "kd25k-luchaogang")
+}
+spriteset (spriteset_kd25k_xian, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "kd25k-xian")
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25k_articulated_part, extra_callback_info1) {
+    1..2: return kd25k;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25k_cargo_subtype, cargo_subtype) {
+    0: return string(STR_BUILD_YEAR);
+    1: return string(STR_BLUE_RED_WHITE);
+    2: return string(STR_LUCHAOGANG);
+    3: return string(STR_XIAN);
+    4: return string(STR_GAOZU_GREEN);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25k_build_year_sprite, current_year) {
+    spriteset_kd25k_original; // Unfinished
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25k_graphics_subtype, cargo_subtype) {
+    0: switch_kd25k_build_year_sprite;
+    1: spriteset_kd25k_original;
+    2: spriteset_kd25k_luchaogang;
+    3: spriteset_kd25k_xian;
+    4: spriteset_kd25k_original; // Will change to "spriteset_kd25k_gaozu" once the "gaozu green" sprite is finished
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25k_graphics, position_in_articulated_veh % 3) {
+    1: switch_kd25k_graphics_subtype;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, kd25k) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_KD25K);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1996,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 118;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          140 km/h;
+        power:                          0 hp;
+        weight:                         62 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25K), string(STR_KD25K_LIVERY_AVAILABILITY), string(STR_AIR_CONDITIONER_EFFECT));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_kd25k_graphics;
+        purchase:                       spriteset_kd25k_purchase_original;
+        cargo_subtype_text:             switch_kd25k_cargo_subtype;
+        articulated_part:               switch_kd25k_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_7_2;
+        cargo_capacity:                 0;
+        cargo_age_period:               200 << param_cargo_decay;
+        cost_factor:                    23;
+        running_cost_factor:            6 * runningcostfactor() + 20;
+        purchase_running_cost_factor:   44;
+        purchase_cargo_capacity:        0;
+    }
+}
+
+// End KD25K
+

@@ -1,0 +1,102 @@
+// Begin YZ25DT_JINLUN
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_yz25dt_jinlun_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches","yz25dt-jinlun-2001")
+}
+
+// Vehicle
+spriteset (spriteset_yz25dt_jinlun_2001, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "yz25dt-jinlun-2001")
+}
+spriteset (spriteset_yz25dt_jinlun_2010, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "yz25dt-jinlun-2010")
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25dt_jinlun_articulated_part, extra_callback_info1) {
+    1..2: return yz25dt_jinlun;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25dt_jinlun_graphics_subtype_defeat, build_year) {
+    0..2009: spriteset_yz25dt_jinlun_2001;
+    spriteset_yz25dt_jinlun_2010;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25dt_jinlun_graphics_subtype, cargo_subtype) {
+    1: spriteset_yz25dt_jinlun_2001;
+    2: spriteset_yz25dt_jinlun_2010;
+    switch_yz25dt_jinlun_graphics_subtype_defeat;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25dt_jinlun_graphics, position_in_articulated_veh % 3) {
+    1: switch_yz25dt_jinlun_graphics_subtype;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25dt_jinlun_capacity, position_in_articulated_veh % 3) {
+    1: return 98;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, yz25dt_jinlun) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_YZ25DT_JINLUN);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2001,07,01);
+        model_life:                     15;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 98;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          140 km/h;
+        power:                          0 hp;
+        weight:                         47 ton;
+        cost_factor:                    7;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            5;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YZ25DT_JINLUN), string(STR_JINLUN_25DT), string(STR_25DT_JINLUN_LIVERY_AVAILABILITY), string(STR_COMFORT_160));
+        can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_25dt_jinlun_cargo_subtype;
+
+        // Graphics
+        default:                        switch_yz25dt_jinlun_graphics;
+        purchase:                       spriteset_yz25dt_jinlun_purchase;
+        articulated_part:               switch_yz25dt_jinlun_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_yz25dt_jinlun_capacity;
+        cargo_age_period:               (10 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    7;
+        running_cost_factor:            5 * runningcostfactor() * cafecostfactor() + accostfactor();
+        purchase_running_cost_factor:   20;
+        purchase_cargo_capacity:        98/3;
+    }
+}
+
+// End YZ25DT_JINLUN
+

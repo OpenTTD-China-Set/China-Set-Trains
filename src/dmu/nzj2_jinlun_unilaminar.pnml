@@ -1,0 +1,165 @@
+// Begin NZJ2_JINLUN_UNILAMINAR
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_nzj2_jinlun_1_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("dmu", "nzj2-jinlun-1")
+}
+
+// Vehicle
+spriteset (spriteset_nzj2_jinlun_1_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu", "nzj2-jinlun-1")
+}
+spriteset (spriteset_nzj2_jinlun_1_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu", "nzj2-jinlun-1-r")
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_start_stop, !hasbit(bitmask_consist_info, 0) && (count_veh_id(8193) == 6) && ((num_vehs_in_vehid_chain != 6) ^ (num_vehs_in_consist == 6))) {
+    0: return string(STR_JINLUN_LOCOMOTIVE_CONSIST);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_can_attach_wagon, vehicle_type_id) {
+    8193: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    2119..2123: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_articulated_part, extra_callback_info1) {
+    1..2: return nzj2_jinlun_1;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_graphics_if_error, position_in_consist_from_end != 1) {
+    1: spriteset_erroremu;
+    spriteset_nzj2_jinlun_1_reversed;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_direction, position_in_consist == 1) {
+    1: spriteset_nzj2_jinlun_1_original;
+    switch_nzj2_jinlun_1_graphics_if_error;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_graphics, position_in_articulated_veh % 3) {
+    1: switch_nzj2_jinlun_1_direction;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, nzj2_jinlun_1) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_NZJ2_JINLUN_UNILAMINAR);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2001,07,01);
+        model_life:                     60;
+        retire_early:                   50;
+        vehicle_life:                   20;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          160 km/h;
+        power:                          2400 kW;
+        weight:                         135 ton;
+        tractive_effort_coefficient:    0.245;
+        cost_factor:                    72;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            57;
+        reliability_decay:              20;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                        string(STR_DESC_3, string(STR_JINLUN_LOCOMOTIVE_CONSIST), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_RELIABILITY_20));
+        can_attach_wagon:                       switch_nzj2_jinlun_1_can_attach_wagon;
+        start_stop:                             switch_nzj2_jinlun_1_start_stop;
+        // Graphics
+        default:                                switch_nzj2_jinlun_1_graphics;
+        purchase:                               spriteset_nzj2_jinlun_1_purchase;
+        articulated_part:                       switch_nzj2_jinlun_1_articulated_part;
+
+        // Stats
+        length:                                 switch_length_2_6_2;
+        cargo_capacity:                         0;
+        cost_factor:                            72;
+        running_cost_factor:                    57 * runningcostfactor() + 20;
+        purchase_running_cost_factor:           248;
+        purchase_cargo_capacity:                0;
+        bitmask_vehicle_info:                   switch_pushpull_consist_correction;
+    }
+    // livery_override(yz25dt_jinlun) {
+    //     speed:                                  return 0;
+    //     cargo_subtype_text:                     switch_25dt_jinlun_cargo_subtype;
+    //     default:                                switch_yz25dt_jinlun_graphics;
+    //     purchase:                               spriteset_yz25dt_jinlun_purchase;
+    //     articulated_part:                       switch_yz25dt_jinlun_articulated_part;
+    //     length:                                 switch_length_2_8_2;
+    //     cargo_capacity:                         switch_yz25dt_jinlun_capacity;
+    //     cargo_age_period:                       (10 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+    //     running_cost_factor:                    5 * runningcostfactor() * cafecostfactor() + accostfactor();
+    // }
+    // livery_override(yw25dt_jinlun) {
+    //     speed:                                  return 0;
+    //     cargo_subtype_text:                     switch_25dt_jinlun_cargo_subtype;
+    //     default:                                switch_yw25dt_jinlun_graphics;
+    //     purchase:                               spriteset_yw25dt_jinlun_purchase;
+    //     articulated_part:                       switch_yw25dt_jinlun_articulated_part;
+    //     length:                                 switch_length_2_8_2;
+    //     cargo_capacity:                         switch_yw25dt_jinlun_capacity;
+    //     cargo_age_period:                       (18 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+    //     running_cost_factor:                    8 * runningcostfactor() * cafecostfactor() + accostfactor();
+    // }
+    // livery_override(rw25dt_jinlun) {
+    //     speed:                                  return 0;
+    //     cargo_subtype_text:                     switch_25dt_jinlun_cargo_subtype;
+    //     default:                                switch_rw25dt_jinlun_graphics;
+    //     purchase:                               spriteset_rw25dt_jinlun_purchase;
+    //     articulated_part:                       switch_rw25dt_jinlun_articulated_part;
+    //     length:                                 switch_length_2_8_2;
+    //     cargo_capacity:                         switch_rw25dt_jinlun_capacity;
+    //     cargo_age_period:                       (24 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+    //     running_cost_factor:                    10 * runningcostfactor() * cafecostfactor() + accostfactor();
+    // }
+    // livery_override(syz25dt_jinlun) {
+    //     speed:                                  return 0;
+    //     cargo_subtype_text:                     switch_25dt_jinlun_cargo_subtype;
+    //     default:                                switch_syz25dt_jinlun_graphics;
+    //     purchase:                               spriteset_syz25dt_jinlun_purchase;
+    //     articulated_part:                       switch_syz25dt_jinlun_articulated_part;
+    //     length:                                 switch_length_2_8_2;
+    //     cargo_capacity:                         switch_syz25dt_jinlun_capacity;
+    //     cargo_age_period:                       (10 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+    //     running_cost_factor:                    6 * runningcostfactor() * cafecostfactor() + accostfactor();
+    // }
+    // livery_override(srz25dt_jinlun) {
+    //     speed:                                  return 0;
+    //     cargo_subtype_text:                     switch_25dt_jinlun_cargo_subtype;
+    //     default:                                switch_srz25dt_jinlun_graphics;
+    //     purchase:                               spriteset_srz25dt_jinlun_purchase;
+    //     articulated_part:                       switch_srz25dt_jinlun_articulated_part;
+    //     length:                                 switch_length_2_8_2;
+    //     cargo_capacity:                         switch_srz25dt_jinlun_capacity;
+    //     cargo_age_period:                       (12 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+    //     running_cost_factor:                    6 * runningcostfactor() * cafecostfactor() + accostfactor();
+    // }
+}
+
+// End DF11G

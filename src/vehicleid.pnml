@@ -161,6 +161,8 @@ item (FEAT_TRAINS, gn80, 3090) {}
 item (FEAT_TRAINS, p61, 3091) {}
 item (FEAT_TRAINS, p63, 3092) {}
 item (FEAT_TRAINS, pb, 3093) {}
+item (FEAT_TRAINS, j5, 3094) {}
+item (FEAT_TRAINS, n5, 3095) {}
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
@@ -201,6 +203,8 @@ item (FEAT_TRAINS, df4e, 5144) {}
 item (FEAT_TRAINS, df4bnb, 5145) {}
 item (FEAT_TRAINS, nd5, 5146) {}
 item (FEAT_TRAINS, hxn5, 5147) {}
+item (FEAT_TRAINS, hxn3, 5148) {}
+item (FEAT_TRAINS, hxn3qz, 5149) {}
 
 //25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
 #define id_range_25_electric 0x1800..0x1BFF

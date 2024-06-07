@@ -1,5 +1,3 @@
-All files in \voxel\files folder are originated from Timberwolf
-
 DF11G
 By John Franklin
 Originated from BR Class 43 "IC 125" by Timberwolf
@@ -54,7 +52,7 @@ P60, P62, P70, NX17, N60, GN70, C70
 By Babel
 
 HXD1B
-By wuwu and Babel 
+By wuwu and Babel
 
 SS3, SS4, SS8, DF4D-0000, DF4D-xihu, DF5, DF11, NJ2 (Qingzang)
 By Babel

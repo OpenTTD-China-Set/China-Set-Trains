@@ -1,0 +1,112 @@
+// Begin RZ125Z
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_rz125z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "rz125z")
+}
+
+// Vehicle
+spriteset (spriteset_rz125z_xizi, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "rz125z")
+}
+spriteset (spriteset_rz125z_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "rz125z-beijing")
+}
+spriteset (spriteset_rz125z_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "rz125z-guangzhou")
+}
+spriteset (spriteset_rz125z_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "rz125z-green")
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz125z_articulated_part, extra_callback_info1) {
+    1..2: return rz125z;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz125z_cargo_subtype, cargo_subtype) {
+    0: return string(STR_XIZI);
+    1: return string(STR_BEIJING);
+    2: return string(STR_GUANGSHEN);
+    3: return string(STR_GAOZU_GREEN);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz125z_graphics_subtype, cargo_subtype) {
+    0: spriteset_rz125z_xizi;
+    1: spriteset_rz125z_beijing;
+    2: spriteset_rz125z_guangzhou;
+    3: spriteset_rz125z_green;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz125z_graphics, position_in_articulated_veh % 3) {
+    1: switch_rz125z_graphics_subtype;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz125z_capacity, position_in_articulated_veh % 3) {
+    1: return 80;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, rz125z) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_RZ125Z);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1993,01,01);
+        model_life:                     30;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 96;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               222 << param_cargo_decay;
+
+        // Stats
+        speed:                          140 km/h;
+        power:                          0 hp;
+        weight:                         46.9 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RZ125Z), string(STR_25Z_LIVERY_AVAILABILITY), string(STR_COMFORT_256));
+        can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_rz125z_cargo_subtype;
+
+        // Graphics
+        default:                        switch_rz125z_graphics;
+        purchase:                       spriteset_rz125z_purchase_original;
+        articulated_part:               switch_rz125z_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_rz125z_capacity;
+        cargo_age_period:               (16 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    11;
+        running_cost_factor:            10 * runningcostfactor() * cafecostfactor() + accostfactor();
+        purchase_running_cost_factor:   40;
+        purchase_cargo_capacity:        80/3;
+    }
+}
+
+// End RZ125Z

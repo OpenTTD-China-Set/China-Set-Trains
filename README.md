@@ -39,7 +39,7 @@ It is developed by China Set Team, which can be found in Part 6.
 
 OpenTTD:
 see https://wiki.openttd.org/NewGRF
-  
+
 This NewGRF is available from the ingame Online Content.
 
 
@@ -60,7 +60,7 @@ in "Standard" mode, cargo age period varies depending on wagon types.
 
 ### 2.4 Usage
 
-Everything in this set is Mainland China rolling stock, in addition of 
+Everything in this set is Mainland China rolling stock, in addition of
 several wagon types from international/interregional connections.
 
 Locomotives and multiple units featuring refitting are for deciding the
@@ -217,7 +217,7 @@ forum topic: https://www.tt-forums.net/viewtopic.php?t=91092
 ### 7.3 General enquiries
 
 If you have any queries that cannot be asked in the forum topic, then
-contact John Franklin (JohnFranklin523) via Private Message at 
+contact John Franklin (JohnFranklin523) via Private Message at
 www.tt-forums.net.
 
 
@@ -238,7 +238,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along
-with this program; if not, please check 
+with this program; if not, please check
 https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 
@@ -246,13 +246,41 @@ https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 The source code can be obtained from GitHub.
 
-1. Install WSL (if you are on Windows)
-2. sudo apt install python3;
-3. sudo apt install python3-pip;
-4. sudo apt install make;
-5. pip3 install nml;
-6. Unzip China-Set-Trains folder downloaded;
-7. Shift-right-click (if you are on Windows) the China-Set-Trains folder;
-8. Click "Open Linux Shell";
-9. type "make";
-10. Compile success.
+Using Linux or WSL:
+
+```bash
+#!/bin/bash
+# you'll have to install gorender from https://github.com/mattkimber/gorender
+# here we use apt for demo
+
+# dependencies
+sudo apt install python3
+sudo apt install python3-pip
+sudo apt install make
+pip3 install nml
+# we would also need gcc, but that should be already included in most distros
+
+# compiling
+make
+# alternatively, you could use "make -j" n where n is the total number of parallel tasks you want to run at once.
+```
+
+Using Windows (Scoop is advised here, but non-scoop compilations are also possible):
+
+```powershell
+# we suggest you to use scoop; you can get scoop @ https://scoop.sh
+
+# dependencies
+scoop bucket add main
+scoop bucket add openttd https://github.com/WenSimEHRP/OpenTTD-Bucket
+scoop install python
+scoop install make
+scoop install openttd/nml
+scoop install openttd/gorender
+# we would need the gcc compiler in from mingw
+scoop install mingw
+
+# compiling
+make
+# alternatively, you could use "make -j n" where n is the total number of parallel tasks you want to run at once.
+```

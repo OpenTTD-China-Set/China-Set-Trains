@@ -1,0 +1,88 @@
+// Begin SCA25Z
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_sca25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "sca25z")
+}
+
+// Vehicle
+spriteset (spriteset_sca25z_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "sca25z")
+}
+
+switch (FEAT_TRAINS, SELF, switch_sca25z_articulated_part, extra_callback_info1) {
+    1..2: return sca25z;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_sca25z_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_sca25z_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_sca25z_capacity, position_in_articulated_veh % 3) {
+    1: return 60;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, sca25z) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_SCA25Z);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1993,01,01);
+        model_life:                     30;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 60;
+        loading_speed:                  4 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          140 km/h;
+        power:                          0 hp;
+        weight:                         50.1 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+        bitmask_vehicle_info:           bitmask(1);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SCA25Z), string(STR_CAFE_EFFECT), string(STR_S25Z_LIVERY_AVAILABILITY), string(STR_COMFORT_192_CAFE));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_sca25z_graphics;
+        purchase:                       spriteset_sca25z_purchase_original;
+        articulated_part:               switch_sca25z_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_sca25z_capacity;
+        cargo_age_period:               (12 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    29;
+        running_cost_factor:            7 * runningcostfactor() + accostfactor() + 50; // IT IS A RESTAURANT CAR!
+        purchase_running_cost_factor:   78;
+        purchase_cargo_capacity:        60/3;
+    }
+}
+
+// End SCA25Z
+

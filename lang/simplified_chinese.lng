@@ -135,12 +135,14 @@ STR_NAME_G50            :G50 (罐车)
 STR_NAME_G60            :G60 (罐车)
 STR_NAME_GN70           :GN70 (罐车)
 STR_NAME_GN80           :GN80 (罐车)
+STR_NAME_N5             :N5 (平车)
 STR_NAME_N60            :N60 (平车)
 STR_NAME_NX17           :NX17 (平车)
 STR_NAME_NX70A          :NX70A (平车)
 STR_NAME_JSQ5           :JSQ5 (汽车运输车)
 STR_NAME_JSQ6           :JSQ6 (汽车运输车)
 STR_NAME_L70            :L70 (粮食漏斗车)
+STR_NAME_J5             :J5 (家畜运输车)
 
 STR_NAME_SY             :SY (蒸汽)
 
@@ -170,8 +172,11 @@ STR_NAME_DF11G          :DF11G (内燃)
 STR_NAME_DF11Z          :DF11Z (内燃)
 STR_NAME_ND5            :ND5 (内燃)
 STR_NAME_NJ2            :NJ2 (内燃)
+STR_NAME_HXN3           :HXN3 (内燃)
+STR_NAME_HXN3QZ         :HXN3 (内燃) (高原型)
 STR_NAME_HXN5           :HXN5 (内燃)
 STR_NAME_HXN5B          :HXN5B (内燃)
+
 STR_NAME_SS1            :SS1 (电力)
 STR_NAME_SS3            :SS3 (电力)
 STR_NAME_SS3B           :SS3B (电力)
@@ -337,6 +342,7 @@ STR_FULL_NAME_DF11           :{BLACK}全称：{GOLD}东风11型内燃机车
 STR_FULL_NAME_DF11G          :{BLACK}全称：{BLUE}东风11G型{WHITE}内燃机车
 STR_FULL_NAME_DF11Z          :{BLACK}全称：{GOLD}东风11Z型内燃机车
 STR_FULL_NAME_ND5            :{BLACK}全称：{GOLD}内电5型内燃机车
+STR_FULL_NAME_HXN3           :{BLACK}全称：{GOLD}和谐内3型内燃机车
 STR_FULL_NAME_HXN5           :{BLACK}全称：{GOLD}和谐内5型内燃机车
 STR_FULL_NAME_HXN5B          :{BLACK}全称：{GOLD}和谐内5B型内燃机车
 STR_FULL_NAME_SS1            :{BLACK}全称：{GOLD}韶山1型电力机车
@@ -429,6 +435,7 @@ STR_P62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机
 STR_P63_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (黑色，铁锈色，棕色)
 STR_P70_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_PB_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
+STR_N5_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_N60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_NX17_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}随机(黑色，棕色)
 STR_NX70A_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{GOLD}仅黑色
@@ -540,6 +547,7 @@ STR_6Y2_LATE            : - {GREEN}晚期{BLACK}涂装
 STR_NENHEI              : - {GOLD}嫩黑铁路涂装
 STR_SHENHUA             : - {GOLD}神华集团涂装
 STR_GUONENG             : - {GOLD}国家能源集团涂装
+STR_GUONENG_7014        : - {GOLD}国家能源集团"工人号"涂装
 STR_TAOWEI              : - {GOLD}桃威铁路涂装
 STR_CHUNLUO             : - {GOLD}春罗铁路涂装
 STR_GUANGXIYANHAI       : - {GOLD}广西沿海铁路涂装
@@ -553,6 +561,9 @@ STR_DF43110             : - {GOLD}系大{RED}红{GOLD}花的DF43110号机车
 STR_DONGBEI             : - {GOLD}东北地区适用过的涂装
 STR_MZD                 : - {GOLD}丰台机务段“学习毛泽东号模范机车组”
 STR_HUANGJIGUANG        : - {GOLD}“黄继光号”
+STR_HUATING_COAL        : - {GOLD}华亭煤业集团涂装
+STR_ZHONGTIE_1_JU       : - {GOLD}中国中铁第一工程局涂装
+STR_ZHONGTIE_3_JU       : - {GOLD}中国中铁第三工程局涂装
 
 STR_BUILD_YEAR          : - 根据建造年份选择设计
 STR_YW22_ORIGINAL       : - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
@@ -655,6 +666,7 @@ STR_CRH6A3_CAN_ATTACH_WAGON             :{BLACK}匹配的车厢：仅有{GOLD}�
 STR_CRH6F_CAN_ATTACH_WAGON              :{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：120
 
 STR_NJ2_CONSIST                     :{BLACK}构成：{GOLD}2-4节重联
+STR_HXN3QZ_CONSIST                  :{BLACK}构成：{GOLD}2-4节重联
 STR_DF11G_CONSIST                   :{BLACK}构成：{GOLD}两节重联 (普通)，或一节在头部提供动力，另一节在尾部供电 (“拆猪”，最高速度 120 km/h, 功率 4133 公制马力)
 STR_NDJ3_CONSIST                    :{BLACK}构成：{GOLD}头尾各一节，中间加挂至少四节车厢
 STR_NZJ1_XINSHUGUANG_CONSIST        :{BLACK}构成：{GOLD}头尾各一节，中间加挂至少四节车厢

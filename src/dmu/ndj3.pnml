@@ -1,0 +1,186 @@
+// Begin NDJ3
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_ndj3_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("dmu", "ndj3-m")
+}
+
+// Vehicle
+spriteset (spriteset_ndj3_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu", "ndj3-m")
+}
+spriteset (spriteset_ndj3_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu", "ndj3-25dt")
+}
+spriteset (spriteset_ndj3_cafe, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu", "ndj3-ca25dt")
+}
+spriteset (spriteset_ndj3_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu", "ndj3-m-b")
+}
+
+switch (FEAT_TRAINS, SELF, switch_ndj3_articulated_part, extra_callback_info1) {
+    1..2: return ndj3;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, ndj3wagon_right_consist, vehicle_type_id) {
+    1024..1025: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    8192: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, ndj3wagon, hasbit(bitmask_consist_info, 0)) {
+    1: return CB_RESULT_ATTACH_DISALLOW;
+    ndj3wagon_right_consist;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ndj3_start_stop, !hasbit(bitmask_consist_info, 0) && (num_vehs_in_consist >= 12) && (count_veh_id(8192) == 6) && ((position_in_consist < 3) || (position_in_consist_from_end < 3))) {
+    0: return string(STR_NDJ3_CONSIST);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ndj3_graphics_front, position_in_consist) {
+    1: spriteset_ndj3_front;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ndj3_graphics, position_in_consist_from_end) {
+    1: spriteset_ndj3_back;
+    switch_ndj3_graphics_front;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ndj3_wagon_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_ndj3_middle;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ndj3_cafe_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_ndj3_cafe;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ndj3_wagon_length, position_in_consist_from_end) {
+    switch_length_2_8_2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ndj3_ze_capacity, position_in_articulated_veh % 3) {
+    1: return 114;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ndj3_zy_capacity, position_in_articulated_veh % 3) {
+    1: return 64;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ndj3_zec_capacity, position_in_articulated_veh % 3) {
+    1: return 32;
+    return 0;
+}
+
+
+
+item (FEAT_TRAINS, ndj3) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_NDJ3);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2008,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          160 km/h;
+        power:                          2120 kW;
+        weight:                         126 ton;
+        tractive_effort_coefficient:    0.152;
+        cost_factor:                    96;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            44;
+        reliability_decay:              6;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_NDJ3_NICKNAME), string(STR_NDJ3_CAN_ATTACH_WAGON), string(STR_NDJ3_CONSIST), string(STR_RELIABILITY_6));
+        can_attach_wagon:               ndj3wagon;
+        start_stop:                     switch_ndj3_start_stop;
+
+        // Graphics
+        default:                        switch_ndj3_graphics;
+        purchase:                       spriteset_ndj3_purchase_original;
+        articulated_part:               switch_ndj3_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_6_2;
+        cargo_capacity:                 0;
+        cost_factor:                    81;
+        running_cost_factor:            59 * runningcostfactor() + 20;
+        purchase_running_cost_factor:   256;
+        purchase_cargo_capacity:        0;
+        bitmask_vehicle_info:           switch_pushpull_consist_correction;
+    }
+
+    // Multiple Unit Wagons
+    livery_override(zemuw) {
+        default:                        switch_ndj3_wagon_graphics;
+        cargo_capacity:                 switch_ndj3_ze_capacity;
+        length:                         switch_ndj3_wagon_length;
+        weight:                         49;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (10 * cafedecayfactor() * 5) << param_cargo_decay;
+        bitmask_vehicle_info:           0;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    25;
+        running_cost_factor:            11 * runningcostfactor() * cafecostfactor() + 2; // WITH AC
+    }
+    livery_override(zymuw) {
+        default:                        switch_ndj3_wagon_graphics;
+        cargo_capacity:                 switch_ndj3_zy_capacity;
+        length:                         switch_ndj3_wagon_length;
+        weight:                         49;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (20 * cafedecayfactor() * 5) << param_cargo_decay;
+        bitmask_vehicle_info:           0;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    29;
+        running_cost_factor:            15 * runningcostfactor() * cafecostfactor() + 2; // WITH AC
+    }
+    livery_override(zecmuw) {
+        default:                        switch_ndj3_cafe_graphics;
+        cargo_capacity:                 switch_ndj3_zec_capacity;
+        length:                         switch_ndj3_wagon_length;
+        weight:                         49;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (10 * cafedecayfactor() * 5) << param_cargo_decay;
+        bitmask_vehicle_info:           0;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    42;
+        running_cost_factor:            13 * runningcostfactor() + 2 + 50; // IT IS A RESTAURANT CAR
+    }
+}
+
+// End NDJ3
+

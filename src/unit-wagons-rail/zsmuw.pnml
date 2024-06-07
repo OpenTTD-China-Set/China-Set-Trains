@@ -1,0 +1,67 @@
+// Begin ZSMUW
+
+// Graphics
+
+switch (FEAT_TRAINS, SELF, switch_zsmuw_articulated_part, extra_callback_info1) {
+    1..2: return zsmuw;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+item (FEAT_TRAINS, zsmuw) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_ZSMUW);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1990,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SAAN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 90;                         //depending on the mu
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               300 << param_cargo_decay;
+
+        // Stats
+        speed:                          0 km/h;                 //depending on the mu
+        power:                          0 hp;                   //depending on the mu
+        weight:                         50 ton;                 //depending on the mu
+        cost_factor:                    24;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;                      //depending on the mu
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_2, string(STR_ATTACH_ALL_CRH_CR), string(STR_COMFORT_640));
+        can_attach_wagon:               muhead;
+
+        // Graphics
+        default:                        switch_crhmuw_graphics;
+        purchase:                       spriteset_crhmuw_purchase_original;
+        articulated_part:               switch_zsmuw_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 0;
+        cargo_age_period:               (32 * 5 * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    24;
+        running_cost_factor:            6 * runningcostfactor() * cafecostfactor() + accostfactor();
+        purchase_running_cost_factor:   30;
+        purchase_cargo_capacity:        30/3;
+    }
+}
+
+// End ZSMUW
+

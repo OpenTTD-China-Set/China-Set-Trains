@@ -1,0 +1,160 @@
+// Begin NZJ1_Xinshuguang ("New Twilight")
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_nzj1_xinshuguang_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("dmu", "nzj17000")
+}
+
+// Vehicle
+spriteset (spriteset_nzj1_xinshuguang_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu", "nzj17000")
+}
+spriteset (spriteset_nzj1_xinshuguang_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu", "s25dt-xinshuguang")
+}
+spriteset (spriteset_nzj1_xinshuguang_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu", "nzj17000-reverse")
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_articulated_part, extra_callback_info1) {
+    1..2: return nzj1_xinshuguang;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, nzj1_xinshuguang_wagon_right_consist, vehicle_type_id) {
+    1024..1025: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    8195: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, nzj1_xinshuguang_wagon, hasbit(bitmask_consist_info, 0)) {
+    1: return CB_RESULT_ATTACH_DISALLOW;
+    nzj1_xinshuguang_wagon_right_consist;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_start_stop, !hasbit(bitmask_consist_info, 0) && (num_vehs_in_consist >= 12) && (count_veh_id(8195) == 6) && ((position_in_consist < 3) || (position_in_consist_from_end < 3))) {
+    0: return string(STR_NZJ1_XINSHUGUANG_CONSIST);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_graphics_front, position_in_consist) {
+    1: spriteset_nzj1_xinshuguang_front;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_graphics, position_in_consist_from_end) {
+    1: spriteset_nzj1_xinshuguang_back;
+    switch_nzj1_xinshuguang_graphics_front;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_wagon_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_nzj1_xinshuguang_middle;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_wagon_length, position_in_consist_from_end) {
+    switch_length_2_8_2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_ze_capacity, position_in_articulated_veh % 3) {
+    1: return 136;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_zy_capacity, position_in_articulated_veh % 3) {
+    1: return 108;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, nzj1_xinshuguang) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_NZJ1_XINSHUGUANG);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1998,01,01);
+        model_life:                     50;
+        vehicle_life:                   20;
+        retire_early:                   15;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          180 km/h;
+        power:                          1980 kW;
+        weight:                         115 ton;
+        tractive_effort_coefficient:    0.1335;
+        cost_factor:                    96;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            44;
+        reliability_decay:              16;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_NZJ1_XINSHUGUANG_CAN_ATTACH_WAGON), string(STR_NZJ1_XINSHUGUANG_CONSIST), string(STR_RELIABILITY_16));
+        can_attach_wagon:               nzj1_xinshuguang_wagon;
+        start_stop:                     switch_nzj1_xinshuguang_start_stop;
+
+        // Graphics
+        default:                        switch_nzj1_xinshuguang_graphics;
+        purchase:                       spriteset_nzj1_xinshuguang_purchase_original;
+        articulated_part:               switch_nzj1_xinshuguang_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_6_2;
+        cargo_capacity:                 0;
+        cost_factor:                    68;
+        running_cost_factor:            53 * runningcostfactor() + 20;
+        purchase_running_cost_factor:   232;
+        purchase_cargo_capacity:        0;
+        bitmask_vehicle_info:           switch_pushpull_consist_correction;
+    }
+
+    // Multiple Unit Wagons
+    livery_override(zemuw) {
+        default:                        switch_nzj1_xinshuguang_wagon_graphics;
+        cargo_capacity:                 switch_nzj1_xinshuguang_ze_capacity;
+        length:                         switch_nzj1_xinshuguang_wagon_length;
+        weight:                         53;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (10 * 4 * 5) << param_cargo_decay;
+        bitmask_vehicle_info:           0;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    16;
+        running_cost_factor:            7 * runningcostfactor() + 2; // WITH AC
+    }
+    livery_override(zymuw) {
+        default:                        switch_nzj1_xinshuguang_wagon_graphics;
+        cargo_capacity:                 switch_nzj1_xinshuguang_zy_capacity;
+        length:                         switch_nzj1_xinshuguang_wagon_length;
+        weight:                         53;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (20 * 4 * 5) << param_cargo_decay;
+        bitmask_vehicle_info:           0;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    17;
+        running_cost_factor:            8 * runningcostfactor() + 2; // WITH AC
+    }
+}
+
+// End NZJ1_Xinshuguang
+
