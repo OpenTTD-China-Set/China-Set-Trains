@@ -17,9 +17,7 @@ spriteset (spriteset_df5_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_df5_yellow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df5-yellow")
 }
-spriteset (spriteset_df5_qinhuangdao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df5-qinhuangdao")
-}
+
 spriteset (spriteset_df5_prk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df5-prk")
 }
@@ -33,7 +31,6 @@ switch (FEAT_TRAINS, SELF, switch_df5_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGINAL);
     1: return string(STR_RED);
     2: return string(STR_ORANGE);
-    3: return string(STR_QINHUANGDAO);
     4: return string(STR_DF4B_DPRK);
     return CB_RESULT_NO_TEXT;
 }
@@ -42,7 +39,6 @@ switch (FEAT_TRAINS, SELF, switch_df5_graphics_subtype, cargo_subtype) {
     0: spriteset_df5_original;
     1: spriteset_df5_red;
     2: spriteset_df5_yellow;
-    3: spriteset_df5_qinhuangdao;
     4: spriteset_df5_prk;
 }
 

@@ -54,7 +54,7 @@ CUSTOM_TAGS	   ?= custom_tags.txt
 
 $(CUSTOM_TAGS): ./Makefile.dist
 	$(GCC) -E -x c -o $@ $<
-	$(_V) echo "VERSION_STRING :$(REPO_VERSION_STRING)" >> $@
+	$(_V) echo VERSION_STRING :$(REPO_VERSION_STRING) >> $@
 
 lng: $(CUSTOM_TAGS)
 

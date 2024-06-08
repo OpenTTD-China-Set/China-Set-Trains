@@ -17,12 +17,8 @@ spriteset (spriteset_df4d4000_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_df4d4000_ckd4a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4d4000-ckd4a")
 }
-spriteset (spriteset_df4d4000_fengfeng, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4d4000-fengfeng")
-}
-spriteset (spriteset_df4d4000_worker_pioneer, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4d4000-worker-pioneer")
-}
+
+
 
 
 
@@ -35,8 +31,6 @@ switch (FEAT_TRAINS, SELF, switch_df4d4000_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGINAL);
     1: return string(STR_JINWEN);
     2: return string(STR_DF4D4000_DPRK);
-    3: return string(STR_FENGFENG);
-    4: return string(STR_WORKER_PIONEER);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -44,8 +38,6 @@ switch (FEAT_TRAINS, SELF, switch_df4d4000_graphics_subtype, cargo_subtype) {
     0: spriteset_df4d4000_original;
     1: spriteset_df4d4000_jinwen;
     2: spriteset_df4d4000_ckd4a;
-    3: spriteset_df4d4000_fengfeng;
-    4: spriteset_df4d4000_worker_pioneer;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df4d4000_graphics, position_in_articulated_veh % 3) {
