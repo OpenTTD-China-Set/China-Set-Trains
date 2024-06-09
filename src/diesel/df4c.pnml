@@ -11,9 +11,7 @@ spriteset (spriteset_df4c_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_df4c_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4c")
 }
-spriteset (spriteset_df4c_henanxinzheng, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4c-henan-xinzheng")
-}
+
 spriteset (spriteset_df4c_ukraine, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4c-ukraine")
 }
@@ -25,15 +23,13 @@ switch (FEAT_TRAINS, SELF, switch_df4c_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_df4c_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGINAL);
-    1: return string(STR_HENAN_XINZHENG);
-    2: return string(STR_UKRAINE);
+    1: return string(STR_UKRAINE);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df4c_graphics_subtype, cargo_subtype) {
     0: spriteset_df4c_original;
-    1: spriteset_df4c_henanxinzheng;
-    2: spriteset_df4c_ukraine;
+    1: spriteset_df4c_ukraine;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df4c_graphics, position_in_articulated_veh % 3) {

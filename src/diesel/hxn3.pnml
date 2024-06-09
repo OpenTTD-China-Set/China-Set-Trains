@@ -27,15 +27,15 @@ switch (FEAT_TRAINS, SELF, switch_hxn3_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_hxn3_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGINAL);
-    3: return string(STR_GUONENG);
-    6: return string(STR_CHN2LAOS);
+    1: return string(STR_GUONENG);
+    2: return string(STR_CHN2LAOS);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_hxn3_graphics_subtype, cargo_subtype) {
     0: spriteset_hxn3_original;
-    3: spriteset_hxn3_guoneng;
-    6: spriteset_hxn3_laos;
+    1: spriteset_hxn3_guoneng;
+    2: spriteset_hxn3_laos;
 }
 
 switch (FEAT_TRAINS, SELF, switch_hxn3_graphics, position_in_articulated_veh % 3) {

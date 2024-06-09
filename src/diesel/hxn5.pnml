@@ -11,14 +11,9 @@ spriteset (spriteset_hxn5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_hxn5_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "hxn5")
 }
-spriteset (spriteset_hxn5_0001, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "hxn5-0001")
-}
+
 spriteset (spriteset_hxn5_reverse, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "hxn5-reverse")
-}
-spriteset (spriteset_hxn5_0001_reverse, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "hxn5-0001-reverse")
 }
 
 switch (FEAT_TRAINS, SELF, switch_hxn5_articulated_part, extra_callback_info1) {
@@ -29,16 +24,12 @@ switch (FEAT_TRAINS, SELF, switch_hxn5_articulated_part, extra_callback_info1) {
 switch (FEAT_TRAINS, SELF, switch_hxn5_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGINAL);
     1: return string(STR_DESC_2, string(STR_REVERSE), string(STR_ORIGINAL));
-    2: return string(STR_HUANGJIGUANG);
-    3: return string(STR_DESC_2, string(STR_REVERSE), string(STR_HUANGJIGUANG));
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_hxn5_graphics_subtype, cargo_subtype) {
     0: spriteset_hxn5_original;
     1: spriteset_hxn5_reverse;
-    2: spriteset_hxn5_0001;
-    3: spriteset_hxn5_0001_reverse;
 }
 
 switch (FEAT_TRAINS, SELF, switch_hxn5_graphics, position_in_articulated_veh % 3) {

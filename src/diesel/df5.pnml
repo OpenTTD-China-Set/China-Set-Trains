@@ -31,7 +31,7 @@ switch (FEAT_TRAINS, SELF, switch_df5_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGINAL);
     1: return string(STR_RED);
     2: return string(STR_ORANGE);
-    4: return string(STR_DF4B_DPRK);
+    3: return string(STR_DF4B_DPRK);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -39,7 +39,7 @@ switch (FEAT_TRAINS, SELF, switch_df5_graphics_subtype, cargo_subtype) {
     0: spriteset_df5_original;
     1: spriteset_df5_red;
     2: spriteset_df5_yellow;
-    4: spriteset_df5_prk;
+    3: spriteset_df5_prk;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df5_graphics, position_in_articulated_veh % 3) {
