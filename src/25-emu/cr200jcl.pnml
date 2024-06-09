@@ -37,7 +37,7 @@ switch (FEAT_TRAINS, SELF, switch_cr200jcl_articulated_part, extra_callback_info
 
 
 switch (FEAT_TRAINS, SELF, switch_cr200jcl_start_stop, ((count_veh_id(9239) == 6) && ((num_vehs_in_vehid_chain != 6) ^ (num_vehs_in_consist == 6))) && (num_vehs_in_consist <= 72) && (hasbit(bitmask_consist_info, 0) == 0)) {
-    0: return string(STR_CR200JCL_CONSIST);
+    0: return string(STR_CR200JL_CONSIST);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -173,7 +173,7 @@ item (FEAT_TRAINS, cr200jcl) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_CR200J_CAN_ATTACH_WAGON), string(STR_CR200JC_NICKNAME), string(STR_RELIABILITY_8), string(STR_CR200JCL_CONSIST));
+        additional_text:                string(STR_DESC_4, string(STR_CR200J_CAN_ATTACH_WAGON), string(STR_CR200JC_NICKNAME), string(STR_RELIABILITY_8), string(STR_CR200JL_CONSIST));
         can_attach_wagon:               cr200jclwagon;
         start_stop:                     switch_cr200jcl_start_stop;
 
