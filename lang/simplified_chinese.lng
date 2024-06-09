@@ -151,7 +151,6 @@ STR_NAME_DF4K           :DF4 (内燃) (客运型)
 STR_NAME_DF4H           :DF4 (内燃) (货运型)
 STR_NAME_DF4BK          :DF4B (内燃) (客运型)
 STR_NAME_DF4BH          :DF4B (内燃) (货运型)
-STR_NAME_DF4BNB         :DF4B (内燃) (新头型)
 STR_NAME_DF4C           :DF4C (内燃)
 STR_NAME_DF4D0000       :DF4D-0000 (内燃)
 STR_NAME_DF4D3000       :DF4D-3000 (内燃)
@@ -198,7 +197,7 @@ STR_NAME_HXD1           :HXD1 (电力)
 STR_NAME_HXD11000       :HXD1-1000 (电力)
 STR_NAME_HXD1B          :HXD1B (电力)
 STR_NAME_HXD1D          :HXD1D (电力)
-STR_NAME_HXD1F          :HXD1F/FXD1B (电力)
+STR_NAME_FXD1B          :FXD1B (电力)
 STR_NAME_HXD3C          :HXD3C (电力)
 STR_NAME_HXD3D          :HXD3D (电力)
 
@@ -326,6 +325,7 @@ STR_FULL_NAME_SY             :{BLACK}全称：{GOLD}上游型蒸汽机车
 STR_FULL_NAME_DF             :{BLACK}全称：{GOLD}东风型内燃机车
 STR_FULL_NAME_DF4            :{BLACK}全称：{GOLD}东风4型内燃机车
 STR_FULL_NAME_DF4B           :{BLACK}全称：{GOLD}东风4B型内燃机车
+STR_FULL_NAME_DF5KZ          :{BLACK}全称：{GOLD}东风5型内燃机车
 STR_FULL_NAME_DF5            :{BLACK}全称：{GOLD}东风5型内燃机车1000系
 STR_FULL_NAME_DF4C           :{BLACK}全称：{GOLD}东风4C型内燃机车
 STR_FULL_NAME_DF4D           :{BLACK}全称：{GOLD}东风4D型内燃机车
@@ -375,13 +375,13 @@ STR_FR_IMPORT                :法国进口车型
 STR_XL25T_SSPE_DESCRIPTION          :{BLACK}新时速运递公司使用的XL25T版本。
 
 STR_DF_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GOLD}黄色{GREEN}窗线{BLACK}涂装, {WHITE}白色{GREEN}窗线{BLACK}涂装
-STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿色涂装{GOLD}，{ORANGE}橘色涂装{BLACK}，{BLUE}京铁{YELLOW}资产{GOLD}涂装，{BLUE}“乌克兰”{YELLOW}涂装，{BLACK}工人先锋号，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}
-STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BROWN}原版{GOLD}涂装，{GREEN}西户铁路{GOLD}涂装，{PURPLE}秦皇岛地方铁路{BLACK}涂装
+STR_DF4_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿色涂装{GOLD}，{ORANGE}橘色涂装{BLACK}，{BLUE}“乌克兰”{YELLOW}涂装，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}
+STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BROWN}原版{GOLD}涂装，{GREEN}西户铁路{GOLD}涂装
 STR_DF4C_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：原版涂装，{GREEN}绿色{GOLD}涂装, “乌克兰”{BLUE}蓝{YELLOW}黄{GOLD}涂装
-STR_DF4D4000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BLUE}“乌克兰”{YELLOW}涂装{GOLD}，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装，峰峰矿区涂装，工人先锋号挂牌
-STR_DF4DF_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：原版涂装，{BLUE}蜀道集团{GOLD}涂装
-STR_DF7G5000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BLUE}平煤{WHITE}集团{GOLD}涂装，原版涂装
-STR_DF8B_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}原版涂装，{GREEN}宝日希勒煤矿{GOLD}涂装
+STR_DF4D4000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{BLUE}“乌克兰”{YELLOW}涂装{GOLD}，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装
+STR_DF4DF_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：原版涂装
+STR_DF7G5000_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：原版涂装
+STR_DF8B_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}原版涂装
 STR_NJ2_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{WHITE}原色{GOLD}涂装，{DKGREEN}青藏铁路{GOLD}涂装
 
 STR_SS7C_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}大脸猫涂装，{YELLOW}香蕉{GOLD}涂装
@@ -393,7 +393,7 @@ STR_CRH6A3_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{GOLD}京通
 STR_CRH6AA_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{GOLD}珠三角城际，广珠城际，成都天府号 (有/无绿色条带)
 STR_CRH6F_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{GOLD}珠三角城际，金山铁路，萧甬铁路
 
-STR_22_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，武汉铁路技术学院涂装，龙庆峡号{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装、{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，广九直通车涂装 (仅XL22，UZ22)
+STR_22_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，武汉铁路技术学院涂装 (仅客车)，龙庆峡号{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装、{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，广九直通车涂装 (仅XL22，UZ22)
 STR_22AIRCON_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{GOLD}京沪直达特快{CREAM}奶油色-{BROWN}-棕红色、{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，广九直通车涂装, 
 STR_22B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装
 STR_25B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{BLUE}集{RED}通{WHITE}铁{BLUE}路{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
@@ -528,42 +528,30 @@ STR_XIHU                : - {GREEN}西户铁路{BLACK}涂装
 STR_XIHU_REVERSE        : - {GREEN}西户铁路{BLACK}涂装，倒转方向
 STR_DF4D_7000           : - {GREEN}7000{YELLOW}系{BLACK}涂装
 STR_SS7C_BANANA         : - {YELLOW}黄色{BLACK}涂装
-STR_DF4_JTZC            : - {YELLOW}京铁{BLUE}资产{BLACK}涂装
+
 STR_UKRAINE             : - {YELLOW}“乌克兰”{BLUE}涂装
-STR_PINGMEI             : - {BLUE}平煤{WHITE}集团{BLACK}涂装
+
 STR_DF4B_DPRK           : - {BLUE}蓝{DKGREEN}绿{BLACK}相间涂装
-STR_WORKER_PIONEER      : - 工人先锋号挂牌
-STR_FENGFENG            : - 峰峰矿区涂装
+
 STR_DF4D4000_DPRK       : - {BLUE}蓝{DKGREEN}绿{BLACK}相间涂装
-STR_QINHUANGDAO         : - {PURPLE}秦皇岛地方铁路{BLACK}涂装
-STR_BAORIXILE           : - {GREEN}宝日希勒煤矿{BLACK}涂装
-STR_HENAN_XINZHENG      : - {GREEN}河南新郑铁路{BLACK}涂装
-STR_SHUDAO              : - {DKBLUE}蜀道集团{BLACK}涂装
+STR_DF4BN_ORIGINAL      : - {BLUE}新头型DF4B
+STR_DF4BN_REVERSE       : - {BLUE}新头型DF4B (反转)
+
 STR_ALTERNATIVE         : - 另一种原版涂装
 STR_DF_YELLOW           : - {GOLD}黄色{GREEN}窗线{BLACK}涂装
 STR_DF_WHITE            : - {WHITE}白色{GREEN}窗线{BLACK}涂装
 STR_6Y2_FACTORY         : - {BLUE}出厂{BLACK}涂装
 STR_6Y2_LATE            : - {GREEN}晚期{BLACK}涂装
-STR_NENHEI              : - {GOLD}嫩黑铁路涂装
+
 STR_SHENHUA             : - {GOLD}神华集团涂装
 STR_GUONENG             : - {GOLD}国家能源集团涂装
-STR_GUONENG_7014        : - {GOLD}国家能源集团"工人号"涂装
-STR_TAOWEI              : - {GOLD}桃威铁路涂装
-STR_CHUNLUO             : - {GOLD}春罗铁路涂装
-STR_GUANGXIYANHAI       : - {GOLD}广西沿海铁路涂装
-STR_XIANGDAO            : - {GOLD}象道集团涂装
-STR_XINCHANG            : - {GOLD}新长铁路涂装
-STR_STECOL              : - {GOLD}中国电建市政集团涂装
+
 STR_CHN2LAOS            : - {GOLD}中老铁路涂装
-STR_TIEFA               : - {GOLD}铁法能源涂装
+
 STR_WUJING              : - {GOLD}“武警”涂装
 STR_DF43110             : - {GOLD}系大{RED}红{GOLD}花的DF43110号机车
-STR_DONGBEI             : - {GOLD}东北地区适用过的涂装
-STR_MZD                 : - {GOLD}丰台机务段“学习毛泽东号模范机车组”
-STR_HUANGJIGUANG        : - {GOLD}“黄继光号”
-STR_HUATING_COAL        : - {GOLD}华亭煤业集团涂装
-STR_ZHONGTIE_1_JU       : - {GOLD}中国中铁第一工程局涂装
-STR_ZHONGTIE_3_JU       : - {GOLD}中国中铁第三工程局涂装
+
+
 
 STR_BUILD_YEAR          : - 根据建造年份选择设计
 STR_YW22_ORIGINAL       : - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
@@ -591,7 +579,6 @@ STR_BEIJING2SHANGHAI    : - 北京至上海13/14次直快涂装
 STR_LATER               : - 后期涂装
 STR_EARLIER             : - 早期涂装
 STR_LONGQINGXIA         : - 龙庆峡号涂装
-STR_SANMAO              : - 三茂铁路涂装
 STR_BEIJING2SHANGHAIALT : - 北京至上海21/22次直快涂装
 STR_JY                  : - 救援涂装
 

@@ -11,9 +11,7 @@ spriteset (spriteset_yz31_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) 
 spriteset (spriteset_yz31_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "yz31")
 }
-spriteset (spriteset_yz31_sanmao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "yz31-sanmao")
-}
+
 
 switch (FEAT_TRAINS, SELF, switch_yz31_articulated_part, extra_callback_info1) {
     1..2: return yz31;
@@ -22,13 +20,11 @@ switch (FEAT_TRAINS, SELF, switch_yz31_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_yz31_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGINAL);
-    1: return string(STR_SANMAO);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz31_graphics_subtype, cargo_subtype) {
     0: spriteset_yz31_original;
-    1: spriteset_yz31_sanmao;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz31_graphics, position_in_articulated_veh % 3) {

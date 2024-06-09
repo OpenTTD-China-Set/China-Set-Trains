@@ -22,7 +22,6 @@ switch (FEAT_TRAINS, SELF, switch_df4e_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_df4e_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGINAL);
-    1: return string(STR_LATER_GREEN);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -32,15 +31,9 @@ switch (FEAT_TRAINS, SELF, switch_df4e_livery_graphics, position_in_articulated_
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_2df4b_livery_graphics, position_in_articulated_veh % 6) {
-    1: spriteset_df4b_green;
-    4: spriteset_df4b_green;
-    empty_sprites;
-}
 
 switch (FEAT_TRAINS, SELF, switch_df4e_graphics_subtype, cargo_subtype) {
     0: switch_df4e_livery_graphics;
-    1: switch_2df4b_livery_graphics;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df4e_graphics, position_in_articulated_veh % 3) {

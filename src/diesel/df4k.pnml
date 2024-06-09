@@ -15,9 +15,7 @@ spriteset (spriteset_df4_purchase_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_df4_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4")
 }
-spriteset (spriteset_df4_nenhei_railway, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4-nenhei-railway")
-}
+
 spriteset (spriteset_df4_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4-early-orange")
 }
@@ -30,60 +28,27 @@ spriteset (spriteset_df4b_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_df4_ukraine, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4-ukraine")
 }
-spriteset (spriteset_df4_jtzc, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4-jtzc")
-}
+
 spriteset (spriteset_df4b_dprk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4b-dprk")
 }
-//spriteset (spriteset_df4bd_worker_pioneer, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-//    template_standard ("diesel", "df4bd-worker-pioneer")
-//}
-spriteset (spriteset_df4bh_worker_pioneer, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4bh-worker-pioneer")
-}
-spriteset (spriteset_df4bh_chunluo_railway, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4bh-chunluo-railway")
-}
-spriteset (spriteset_df4bh_guangxiyanhai_railway, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4bh-guangxiyanhai-railway")
-}
-spriteset (spriteset_df4bh_taowei_railway, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4bh-taowei-railway")
-}
-spriteset (spriteset_df4bh_xiangdao_logistics, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4bh-xiangdao-logistics")
-}
-spriteset (spriteset_df4bh_xinchang_railway, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4bh-xinchang-railway")
-}
-spriteset (spriteset_df4bh_3110_dahonghua, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4bh-3110-dahonghua")
-}
+
+
 spriteset (spriteset_df4bh_laos, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4bh-laos")
 }
-spriteset (spriteset_df4bh_stecol, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4bh-stecol")
-}
-spriteset (spriteset_df4bh_tiefa, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4bh-tiefa")
-}
+
 spriteset (spriteset_df4bh_wujing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4bh-wujing")
 }
 spriteset (spriteset_df4bk_aging, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4bk-aging")
 }
-spriteset (spriteset_df4bk_taowei_railway, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4bk-taowei-railway")
-}
+
 spriteset (spriteset_df4b_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4b-jinwen")
 }
-spriteset (spriteset_df4b_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4b-alternative")
-}
+
 spriteset (spriteset_df4b_shenhua, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4b-shenhua")
 }
@@ -100,8 +65,6 @@ switch (FEAT_TRAINS, SELF, switch_df4k_graphics_subtype, cargo_subtype) {
     1: spriteset_df4_green;
     2: spriteset_df4b_orange;
     3: spriteset_df4_ukraine;
-    4: spriteset_df4_jtzc;
-    5: spriteset_df4_nenhei_railway;
     spriteset_df4_orange;
 }
 
@@ -110,8 +73,6 @@ switch (FEAT_TRAINS, SELF, switch_df4k_cargo_subtype, cargo_subtype) {
     1: return string(STR_GREEN);
     2: return string(STR_LATER_ORANGE);
     3: return string(STR_UKRAINE);
-    4: return string(STR_DF4_JTZC);
-    5: return string(STR_NENHEI);
     return CB_RESULT_NO_TEXT;
 }
 

@@ -150,7 +150,6 @@ STR_NAME_DF4K           :DF4 (Diesel) (Passenger Type)
 STR_NAME_DF4H           :DF4 (Diesel) (Freight Type)
 STR_NAME_DF4BK          :DF4B (Diesel) (Passenger Type)
 STR_NAME_DF4BH          :DF4B (Diesel) (Freight Type)
-STR_NAME_DF4BNB         :DF4B (Diesel) (New Bodyshell)
 STR_NAME_DF4C           :DF4C (Diesel)
 STR_NAME_DF4D0000       :DF4D-0000 (Diesel)
 STR_NAME_DF4DF          :DF4DF (Diesel)
@@ -329,7 +328,6 @@ STR_FULL_NAME_DF4D           :{BLACK}Full Name: {GOLD}Dongfeng 4D Diesel Locomot
 STR_FULL_NAME_DF4D7000       :{BLACK}Full Name: {GOLD}Dongfeng 4D Diesel Locomotive 7000 Series
 STR_FULL_NAME_DF4DF          :{BLACK}Full Name: {GOLD}Dongfeng 4DF Diesel Locomotive
 STR_FULL_NAME_DF4E           :{BLACK}Full Name: {GOLD}Dongfeng 4E Diesel Locomotive
-STR_FULL_NAME_DF4BNB         :{BLACK}Full Name: {GOLD}Dongfeng 4B Diesel Locomotive with New Bodyshell
 STR_FULL_NAME_DF5KZ          :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive Series
 STR_FULL_NAME_DF5            :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive 1000 Series
 STR_FULL_NAME_DF7G           :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive
@@ -381,13 +379,13 @@ STR_DESC_2                          :{STRING}{}{STRING}
 STR_XL25T_SSPE_DESCRIPTION          :{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.
 
 STR_DF_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Yellow {GREEN}Line {BLACK}Livery, {WHITE}White {GREEN}Line {BLACK}Livery
-STR_DF4_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea, DF4B only), Worker Pioneer Livery (DF4B only), {BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery, Jinhua-Wenzhou Livery (DF4B only)
+STR_DF4_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea, DF4B only),{BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery, Jinhua-Wenzhou Livery (DF4B only)
 STR_DF4C_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: Original Livery, {GREEN}GREEN {GOLD}Livery, {BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery
-STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {BROWN}Original {GOLD}Livery, {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {GOLD}Railway Livery and {PURPLE}Qinhuangdao Local Railway {GOLD}Livery
-STR_DF4D4000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {BLUE}4000-{YELLOW}Series {GOLD}Livery and {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, Fengfeng Mine Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea), Worker Pioneer Livery
-STR_DF4DF_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: Original Livery, {DKBLUE}Shudao Groups {GOLD}Livery
-STR_DF7G5000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: Original Livery and {BLUE}Pingmei {WHITE}Group {BLACK}Livery
-STR_DF8B_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: Original Livery and {GREEN}Baorixile Coal Mine {BLACK}Livery
+STR_DF4D0000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {BROWN}Original {GOLD}Livery, {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {GOLD}Railway Livery
+STR_DF4D4000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {BLUE}4000-{YELLOW}Series {GOLD}Livery and {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea)
+STR_DF4DF_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: Original Livery
+STR_DF7G5000_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: Original Livery
+STR_DF8B_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: Original Livery
 STR_NJ2_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {WHITE}Original {GOLD}and {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery
 
 STR_SS7C_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Original Livery, {YELLOW}Banana Yellow {GOLD}Livery
@@ -399,7 +397,7 @@ STR_CRH6A3_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}Beijing-T
 STR_CRH6AA_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}Pearl River Delta, Guangzhou-Zhuhai, Tianfu (A nickname of Chengdu, meaning "Paradise") (with or without green stripes)
 STR_CRH6F_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {GOLD}Pearl River Delta, Shanghai-Jinshan, Xiaoshan/Hangzhou-Ningbo
 
-STR_22_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Wuhan Railway Vocational College Livery, Sanshui-Maoming Livery (unfinish), "Longqingxia" Livery (unfinish), Beijing-Shanghai Direct Express Livery (XL22, UZ22), Guangzhou-Hongkong Livery (XL22, UZ22) (unfinish)
+STR_22_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Wuhan Railway Vocational College Livery (only coaches), Sanshui-Maoming Livery (unfinish), "Longqingxia" Livery (unfinish), Beijing-Shanghai Direct Express Livery (XL22, UZ22), Guangzhou-Hongkong Livery (XL22, UZ22) (unfinish)
 STR_22AIRCON_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {GOLD}Beijing-Shanghai Direct Express Livery, Guangzhou-Hongkong Livery (unfinish)
 STR_22B_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery
 STR_25B_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
@@ -534,42 +532,30 @@ STR_XIHU                : - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Li
 STR_XIHU_REVERSE        : - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery, reversed
 STR_DF4D_7000           : - {GREEN}7000-{YELLOW}Series {BLACK}Livery
 STR_SS7C_BANANA         : - {YELLOW}Banana Yellow {BLACK}Livery
-STR_DF4_JTZC            : - {YELLOW}Beijing {BLUE}Railway Bureau {BLACK}Livery
+
 STR_UKRAINE             : - {YELLOW}Yellow {BLACK}and {BLUE}Blue {BLACK}Livery
-STR_PINGMEI             : - {BLUE}Pingmei (Pingdingshan Coal Mine) {WHITE}Group {BLACK}Livery
+
 STR_DF4B_DPRK           : - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery
-STR_WORKER_PIONEER      : - Worker Pioneer Livery
-STR_FENGFENG            : - Fengfeng Mine Livery
+
 STR_DF4D4000_DPRK       : - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery
-STR_QINHUANGDAO         : - {PURPLE}Qinhuangdao Local Railway {GOLD}Livery
-STR_BAORIXILE           : - {PURPLE}Baorixile Coal Mine {GOLD}Livery
-STR_HENAN_XINZHENG      : - {GREEN}Henan Xinzheng Railway {GOLD}Livery
-STR_SHUDAO              : - {DKBLUE}Shudao Group {GOLD}Livery
+STR_DF4BN_ORIGINAL      : - {BLUE}DF4B With New Bodyshell
+STR_DF4BN_REVERSE       : - {BLUE}DF4B With New Bodyshell (Reversed)
+
 STR_ALTERNATIVE         : - Alternative Original Livery
 STR_DF_YELLOW           : - {GOLD}Yellow {GREEN}Line {BLACK}Livery
 STR_DF_WHITE            : - {WHITE}White {GREEN}Line {BLACK}Livery
 STR_6Y2_FACTORY         : - {BLUE}Factory {BLACK}Livery
 STR_6Y2_LATE            : - {GREEN}Late {BLACK}Livery
-STR_NENHEI              : - {GOLD}Nenhei Railway Livery
+
 STR_SHENHUA             : - {GOLD}Shenhua Groups Livery
 STR_GUONENG             : - {GOLD}CHN Energy Livery
-STR_GUONENG_7014        : - {GOLD}CHN Energy "Arbeiter" Livery
-STR_TAOWEI              : - {GOLD}Taowei Railway Livery
-STR_CHUNLUO             : - {GOLD}Chunluo Railway Livery
-STR_GUANGXIYANHAI       : - {GOLD}Guangxi Seaside Railway Livery
-STR_XIANGDAO            : - {GOLD}Xiangdao Groups Livery
-STR_XINCHANG            : - {GOLD}Xinchang Railway Livery
-STR_STECOL              : - {GOLD}STECOL Groups Livery
+
 STR_CHN2LAOS            : - {GOLD}China-Laos Railway Livery
-STR_TIEFA               : - {GOLD}Tiefa Energy Livery
+
 STR_WUJING              : - {GOLD}"Armed Police"Livery
 STR_DF43110             : - {GOLD}DF43110 with Decoration for Ceremony
-STR_DONGBEI             : - {GOLD}Livery Used in Northeast of China
-STR_MZD                 : - {GOLD}"Learn from Maozedong"
-STR_HUANGJIGUANG        : - {GOLD}"Huangjiguang"
-STR_HUATING_COAL        : - {GOLD}Huating Coal Livery
-STR_ZHONGTIE_1_JU       : - {GOLD}CREC 1st Construct Bureau
-STR_ZHONGTIE_3_JU       : - {GOLD}CREC 3rd Construct Bureau
+
+
 
 STR_BUILD_YEAR          : - According to build year
 STR_YW22_ORIGINAL       : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240
@@ -597,7 +583,6 @@ STR_BEIJING2SHANGHAI    : - Beijing-Shanghai Express Train Livery {CREAM}Cream-{
 STR_LATER               : - Later Livery
 STR_EARLIER             : - Earlier Livery
 STR_LONGQINGXIA         : - "Longqingxia" Livery
-STR_SANMAO              : - Sanshui-Maoming Railway Livery
 STR_BEIJING2SHANGHAIALT : - Beijing-Shanghai Express Train Livery {BLUE}Blue-{WHITE}-White
 STR_JY                  : - Wrecker Livery
 

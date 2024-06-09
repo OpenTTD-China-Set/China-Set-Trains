@@ -158,7 +158,6 @@
 #include "src/diesel/df4k.pnml"
 #include "src/diesel/df4bk.pnml"
 #include "src/diesel/df4bh.pnml"
-#include "src/diesel/df4bnb.pnml"
 #include "src/diesel/df4c.pnml"
 #include "src/diesel/df4d0000.pnml"
 #include "src/diesel/df4d3000.pnml"
