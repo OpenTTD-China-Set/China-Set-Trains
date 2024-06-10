@@ -7,7 +7,7 @@ spriteset (spriteset_cr200jal_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32B
     template_purchase ("25-emu", "cr200j-m")
 }
 
-// Vehicle
+/* // Vehicle
 
 spriteset (spriteset_cr200jal_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200j-m")
@@ -18,8 +18,65 @@ spriteset (spriteset_cr200jal_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_cr200jal_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "cr200j-mr")
 }
+ */
+switch (FEAT_TRAINS, SELF, cr200jalwagon, vehicle_type_id) {
+    1024..1037: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1039: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    9219: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
 
 switch (FEAT_TRAINS, SELF, switch_cr200jal_articulated_part, extra_callback_info1) {
+    1..2: return cr200jal;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_cr200jal_start_stop, ((count_veh_id(9219) == 6) && ((num_vehs_in_vehid_chain != 6) ^ (num_vehs_in_consist == 6))) && (num_vehs_in_consist <= 72) && (hasbit(bitmask_consist_info, 0) == 0)) {
+    0: return string(STR_CR200JL_CONSIST);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jal_graphics_position_error_control, position_in_consist_from_end % 3) {
+    0: empty_sprites;
+    2: empty_sprites;
+    spriteset_erroremu;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jal_graphics_front, position_in_consist) {
+    1: spriteset_cr200ja_front;
+    switch_cr200jal_graphics_position_error_control;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jal_graphics, position_in_consist_from_end) {
+    1: spriteset_cr200ja_back;
+    switch_cr200jal_graphics_front;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jal_middle_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_cr200ja_middle;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jal_cab_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_cr200ja_cab;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jal_wagon_graphics, position_in_consist_from_end) {
+    0..2: switch_cr200jal_cab_graphics;
+    switch_cr200jal_middle_graphics;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jal_wagon_length, position_in_consist_from_end) {
+    switch_length_2_8_2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jal_head_capacity, position_in_articulated_veh % 3) {
+    return 0;
+}
+
+/* switch (FEAT_TRAINS, SELF, switch_cr200jal_articulated_part, extra_callback_info1) {
     1..5: return cr200jal;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
@@ -45,9 +102,7 @@ switch (FEAT_TRAINS, SELF, switch_cr200jal_head_length, position_in_consist_from
     switch_cr200jal_front_length;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr200jal_head_capacity, position_in_articulated_veh % 3) {
-    return 0;
-}
+
 
 switch (FEAT_TRAINS, SELF, switch_cr200jal_middle_graphics, position_in_articulated_veh % 3) {
     1: spriteset_cr200jal_middle;
@@ -67,7 +122,9 @@ switch (FEAT_TRAINS, SELF, switch_cr200jal_wagon_graphics, position_in_consist_f
 switch (FEAT_TRAINS, SELF, switch_cr200jal_wagon_length, position_in_consist_from_end) {
     0..2: switch_length_2_6_2;
     switch_length_2_8_2;
-}
+} */
+
+
 
 switch (FEAT_TRAINS, SELF, switch_cr200jal_middle_capacity_ze, position_in_articulated_veh % 3) {
     1: return 98;
@@ -187,8 +244,8 @@ item (FEAT_TRAINS, cr200jal) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_CR200J_CAN_ATTACH_WAGON), string(STR_CR200J_NICKNAME), string(STR_RELIABILITY_20));
-        can_attach_wagon:               cr200jwagon;
+        additional_text:                string(STR_DESC_4, string(STR_CR200J_CAN_ATTACH_WAGON), string(STR_CR200J_NICKNAME), string(STR_RELIABILITY_20), string(STR_CR200JL_CONSIST));
+        can_attach_wagon:               cr200jalwagon;
         start_stop:                     mu8car;
         // Graphics
         default:                        switch_cr200jal_graphics;
@@ -196,7 +253,7 @@ item (FEAT_TRAINS, cr200jal) {
         articulated_part:               switch_cr200jal_articulated_part;
 
         // Stats
-        length:                         switch_cr200jal_head_length;
+        length:                         switch_length_2_6_2;
         cargo_capacity:                 switch_cr200jal_head_capacity;
         cost_factor:                    139;
         running_cost_factor:            124 * runningcostfactor() + 20;
