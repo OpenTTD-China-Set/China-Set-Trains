@@ -18,8 +18,9 @@ FILE_NAME	  ?= mynewgrf
 VOX_DIR 	  ?= gfx
 DOC_FILES	  ?= docs/changelog.txt docs/readme.txt docs/license.txt
 CUSTOM_TAGS   ?= custom_tags.txt
+PALETTE 	  ?= ttd_palette.json
 
-GORENDER 	?= renderobject --palette "ttd_palette.json" -overwrite
+GORENDER 	?= renderobject -overwrite
 NMLC 		?= nmlc -c
 GCC 		:= gcc
 MANIFEST 	:= manifest.json
@@ -38,8 +39,8 @@ VOX_MASK_FILES = $(addsuffix _mask.png, $(basename $(VOX_FILES)))
 VOX_GENREATED_FILES = $(VOX_8BPP_FILES) $(VOX_32BPP_FILES) $(VOX_MASK_FILES)
 
 %_8bpp.png %_32bpp.png %_mask.png: %.vox
-	@echo "Rendering, manifest = $(MANIFEST), $<"
-	@$(GORENDER) -m $(MANIFEST) $<
+	@echo "Rendering, manifest = $(MANIFEST), palette = $(dir $<)/$(PALETTE), $<"
+	@$(GORENDER) -m $(MANIFEST) --palette $(dir $<)/$(PALETTE) $<
 
 # sprites
 sprites: $(VOX_GENREATED_FILES)
@@ -81,7 +82,6 @@ clean_png:
 	@find $(VOX_DIR)/ -name '*.png' -type f -delete
 
 clean_bundle:
-	$(_E) "[CLEAN BUNDLE]"
 	$(_V) -rm -rf $(DIR_NAME)
 	$(_V) -rm -rf $(DIR_NAME).tar
 	$(_V) -rm -rf $(DIR_NAME).tar.zip
@@ -90,7 +90,6 @@ clean_bundle:
 	$(_V) -rm -rf $(DIR_NAME).tar.xz
 
 clean_bundle_src:
-	$(_E) "[CLEAN BUNDLE SRC]"
 	$(_V) -rm -rf $(DIR_NAME_SRC)
 	$(_V) -rm -rf $(DIR_NAME_SRC).tar
 	$(_V) -rm -rf Makefile.fordist
@@ -133,7 +132,6 @@ MD5_SRC_FILENAME   ?= $(DIR_NAME).check.md5
 
 # Creating file with checksum
 %.md5: $(GRF_FILE)
-	$(_E) "[GRFID] $@"
 	$(_V) $(GRFID) $(GRFID_FLAGS) $< > $@
 
 # Bundle directory
@@ -148,20 +146,16 @@ $(DIR_NAME).tar: $(DIR_NAME)
 bundle_tar: $(DIR_NAME).tar
 bundle_zip: $(ZIP_FILENAME)
 %.zip: $(DIR_NAME).tar
-	$(_E) "[BUNDLE ZIP] $@"
 	$(_V) $(ZIP) $(ZIP_FLAGS) $@ $< >/dev/null
 bundle_bzip: $(DIR_NAME).tar.bz2
 %.tar.bz2: %.tar
-	$(_E) "[BUNDLE BZIP] $@"
 	$(_V) $(BZIP) $(BZIP_FLAGS) $^
 bundle_gzip: $(DIR_NAME).tar.gz
 # gzip has no option -k, so we cat the tar to keep it
 %.tar.gz: %.tar
-	$(_E) "[BUNDLE GZIP] $@"
 	$(_V) cat $^ | $(GZIP) $(GZIP_FLAGS) > $@
 bundle_xz: $(DIR_NAME).tar.xz
 %.tar.xz: %.tar
-	$(_E) "[BUNDLE XZ] $@"
 	$(_V) $(XZ) $(XZ_FLAGS) $^
 
 ################################################################
@@ -176,7 +170,6 @@ bundle_xsrc: $(DIR_NAME_SRC).tar.xz
 bundle_zsrc: $(DIR_NAME_SRC).tar.zip
 
 maintainer-clean::
-	$(_E) "[MAINTAINER-CLEAN BUNDLE SRC]"
 	$(_V) -rm -rf $(MD5_SRC_FILENAME)
 
 
