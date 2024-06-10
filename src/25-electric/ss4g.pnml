@@ -34,6 +34,7 @@ item (FEAT_TRAINS, ss4g) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
+        variant_group:					6150;
 
         // Availability
         climates_available:             ALL_CLIMATES;

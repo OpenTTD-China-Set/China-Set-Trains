@@ -41,6 +41,7 @@ item (FEAT_TRAINS, jsq6) {
         name:                           string(STR_NAME_JSQ6);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					3082;
 
         // Availability
         climates_available:             ALL_CLIMATES;

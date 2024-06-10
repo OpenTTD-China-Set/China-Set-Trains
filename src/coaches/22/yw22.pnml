@@ -81,6 +81,7 @@ item (FEAT_TRAINS, yw22) {
         name:                           string(STR_NAME_YW22);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					2070;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -88,6 +89,7 @@ item (FEAT_TRAINS, yw22) {
         model_life:                     35;
         vehicle_life:                   30;
         track_type:                     SACN;
+        
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
@@ -113,6 +115,7 @@ item (FEAT_TRAINS, yw22) {
         // Menu
         additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_YW22), string(STR_NO_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
+
 
         // Graphics
         default:                        switch_yw22_graphics;

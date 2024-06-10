@@ -12,16 +12,39 @@ spriteset (spriteset_dfh7_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel","dfh7")
 }
 
+// Purchase Menu
+spriteset (spriteset_dfh7b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel","dfh7b")
+}
+
+// Vehicle
+spriteset (spriteset_dfh7b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel","dfh7b")
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_dfh7_cargo_subtype, cargo_subtype) {
+    0: return string(STR_DFH7);
+    1: return string(STR_DFH7B);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_dfh7_graphics_subtype, cargo_subtype) {
+    0: spriteset_dfh7_original;
+    1: spriteset_dfh7b_original;
+}
+
+switch (FEAT_TRAINS, SELF, switch_dfh7_graphics, position_in_articulated_veh % 3) {
+    1: switch_dfh7_graphics_subtype;
+    empty_sprites;
+}
+
 
 switch (FEAT_TRAINS, SELF, switch_dfh7_articulated_part, extra_callback_info1) {
     1..2: return dfh7;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_dfh7_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_dfh7_original;
-    empty_sprites;
-}
 
 
 item (FEAT_TRAINS, dfh7) {
@@ -65,6 +88,7 @@ item (FEAT_TRAINS, dfh7) {
     graphics {
         // Menu
         additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_DFH7), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DFH7_NICKNAME), string(STR_RELIABILITY_24));
+        cargo_subtype_text:             switch_dfh7_cargo_subtype;
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_dfh7_graphics;

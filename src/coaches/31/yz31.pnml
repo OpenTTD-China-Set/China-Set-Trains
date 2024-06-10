@@ -44,6 +44,7 @@ item (FEAT_TRAINS, yz31) {
         name:                           string(STR_NAME_YZ31);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					2070;
 
         // Availability
         climates_available:             ALL_CLIMATES;

@@ -74,7 +74,7 @@ item (FEAT_TRAINS, yz22aircon) {
         cargo_age_period:               185 << param_cargo_decay;
 
         // Stats
-        speed:                          120 km/h;
+        speed:                          100 km/h;
         power:                          0 hp;
         weight:                         42.5 ton;
         cost_factor:                    8;
