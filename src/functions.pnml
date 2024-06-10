@@ -5,7 +5,7 @@ switch (FEAT_TRAINS, PARENT, func_is_reversed, vehicle_is_reversed) {return;}
 
 // Running cost factor depending on speed
 
-switch (FEAT_TRAINS, SELF, runningcostfactor, (current_speed/max_speed)) {return;}
+switch (FEAT_TRAINS, SELF, runningcostfactor, (1 + current_speed * 5 / max_speed)) {return;}
 
 
 // For High-Speed Hexie EMUs, speed is limited to 310 km/h IRL, but they can go up to 350 even 380, but with increased running costs
