@@ -24,8 +24,8 @@ spriteset (spriteset_dfh7b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 
 
 switch (FEAT_TRAINS, SELF, switch_dfh7_cargo_subtype, cargo_subtype) {
-    0: return string(STR_ORIGINAL);
-    1: return string(STR_UKRAINE);
+    0: return string(STR_DFH7);
+    1: return string(STR_DFH7B);
     return CB_RESULT_NO_TEXT;
 }
 
