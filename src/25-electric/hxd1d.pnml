@@ -30,6 +30,7 @@ item (FEAT_TRAINS, hxd1d) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
+        variant_group:					6149;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -51,7 +52,7 @@ item (FEAT_TRAINS, hxd1d) {
         cargo_age_period:               185 << param_cargo_decay;
 
         // Stats
-        speed:                          170 km/h;
+        speed:                          160 km/h;
         power:                          7200 kW;
         weight:                         126 ton;
         tractive_effort_coefficient:    0.34;

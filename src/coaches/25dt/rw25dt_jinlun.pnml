@@ -48,6 +48,7 @@ item (FEAT_TRAINS, rw25dt_jinlun) {
         name:                           string(STR_NAME_RW25DT_JINLUN);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					2119;
 
         // Availability
         climates_available:             ALL_CLIMATES;

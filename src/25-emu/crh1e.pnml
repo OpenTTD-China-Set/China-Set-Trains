@@ -168,6 +168,7 @@ item (FEAT_TRAINS, crh1e) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
+        variant_group:					9225;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -204,6 +205,8 @@ item (FEAT_TRAINS, crh1e) {
         additional_text:                string(STR_DESC_5, string(STR_CRH_SLEEPER_CAN_ATTACH_WAGON), string(STR_CRH1E_NICKNAME), string(STR_RELIABILITY_8), string(STR_CRH1E_CONSIST), string(STR_CRH1E_HEAD_SEAT));
         can_attach_wagon:               crhsleeperonly;
         start_stop:                     mu4car;
+        
+        
         // Graphics
         default:                        switch_crh1e_graphics;
         purchase:                       spriteset_crh1e_purchase_original;

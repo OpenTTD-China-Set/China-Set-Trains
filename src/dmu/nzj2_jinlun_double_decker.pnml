@@ -54,6 +54,7 @@ item (FEAT_TRAINS, nzj2_jinlun_2) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
+        variant_group:					8193;
 
         // Availability
         climates_available:             ALL_CLIMATES;

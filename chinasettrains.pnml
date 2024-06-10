@@ -171,7 +171,6 @@
 #include "src/diesel/df7g5000.pnml"
 #include "src/diesel/df7g8000.pnml"
 #include "src/diesel/dfh7.pnml"
-#include "src/diesel/dfh7b.pnml"
 #include "src/diesel/df8b.pnml"
 #include "src/diesel/df11.pnml"
 #include "src/diesel/df11g.pnml"

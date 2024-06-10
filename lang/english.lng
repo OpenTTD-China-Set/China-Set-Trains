@@ -163,7 +163,6 @@ STR_NAME_DF7G           :DF7G (Diesel Shunter)
 STR_NAME_DF7G5000       :DF7G-5000 (Diesel Shunter)
 STR_NAME_DF7G8000       :DF7G-8000 (Diesel Shunter)
 STR_NAME_DFH7           :DFH7 (Diesel)
-STR_NAME_DFH7B          :DFH7B (Diesel)
 STR_NAME_DF8B           :DF8B (Diesel)
 STR_NAME_DF11           :DF11 (Diesel)
 STR_NAME_DF11G          :DF11G (Diesel)
@@ -334,7 +333,6 @@ STR_FULL_NAME_DF7G           :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomot
 STR_FULL_NAME_DF7G5000       :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive 5000 Series
 STR_FULL_NAME_DF7G8000       :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive 8000 Series
 STR_FULL_NAME_DFH7           :{BLACK}Full Name: {GOLD}Dongfanghong 7 Diesel Locomotive
-STR_FULL_NAME_DFH7B          :{BLACK}Full Name: {GOLD}Dongfanghong 7B Diesel Locomotive
 STR_FULL_NAME_DF8B           :{BLACK}Full Name: {GOLD}Dongfeng 8B Diesel Locomotive
 STR_FULL_NAME_DF11           :{BLACK}Full Name: {GOLD}Dongfeng 11 Diesel Locomotive
 STR_FULL_NAME_DF11G          :{BLACK}Full Name: {BLUE}Dongfeng 11G {WHITE}Diesel Locomotive
@@ -585,6 +583,9 @@ STR_EARLIER             : - Earlier Livery
 STR_LONGQINGXIA         : - "Longqingxia" Livery
 STR_BEIJING2SHANGHAIALT : - Beijing-Shanghai Express Train Livery {BLUE}Blue-{WHITE}-White
 STR_JY                  : - Wrecker Livery
+STR_DFH7                : - DFH7
+STR_DFH7B               : - DFH7B
+
 
 STR_PROTOTYPE           : - Prototype
 STR_JINGTONG            : - Beijing-Tongzhou Livery

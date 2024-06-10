@@ -14,7 +14,7 @@ item (FEAT_TRAINS, swmuw) {
         name:                           string(STR_NAME_SWMUW);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-
+        variant_group:					1024;
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1990,01,01);
