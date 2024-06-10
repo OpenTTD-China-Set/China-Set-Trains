@@ -34,6 +34,7 @@ item (FEAT_TRAINS, srw25) {
         name:                           string(STR_NAME_SRW25);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					2104;
 
         // Availability
         climates_available:             ALL_CLIMATES;

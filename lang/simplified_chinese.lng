@@ -164,7 +164,6 @@ STR_NAME_DF7G           :DF7G (内燃) (调车用)
 STR_NAME_DF7G5000       :DF7G-5000 (内燃) (调车用)
 STR_NAME_DF7G8000       :DF7G-8000 (内燃) (调车用)
 STR_NAME_DFH7           :DFH7 (内燃) (调车用)
-STR_NAME_DFH7B          :DFH7B (内燃) (调车用)
 STR_NAME_DF8B           :DF8B (内燃)
 STR_NAME_DF11           :DF11 (内燃)
 STR_NAME_DF11G          :DF11G (内燃)
@@ -336,7 +335,6 @@ STR_FULL_NAME_DF7G           :{BLACK}全称：{GOLD}东风7G型内燃机车
 STR_FULL_NAME_DF7G5000       :{BLACK}全称：{GOLD}东风7G型内燃机车5000系
 STR_FULL_NAME_DF7G8000       :{BLACK}全称：{GOLD}东风7G型内燃机车8000系
 STR_FULL_NAME_DFH7           :{BLACK}全称：{GOLD}东方红7型内燃机车
-STR_FULL_NAME_DFH7B          :{BLACK}全称：{GOLD}东方红7B型内燃机车
 STR_FULL_NAME_DF8B           :{BLACK}全称：{GOLD}东风8B型内燃机车
 STR_FULL_NAME_DF11           :{BLACK}全称：{GOLD}东风11型内燃机车
 STR_FULL_NAME_DF11G          :{BLACK}全称：{BLUE}东风11G型{WHITE}内燃机车
