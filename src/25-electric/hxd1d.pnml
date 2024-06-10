@@ -52,7 +52,7 @@ item (FEAT_TRAINS, hxd1d) {
         cargo_age_period:               185 << param_cargo_decay;
 
         // Stats
-        speed:                          170 km/h;
+        speed:                          160 km/h;
         power:                          7200 kW;
         weight:                         126 ton;
         tractive_effort_coefficient:    0.34;
