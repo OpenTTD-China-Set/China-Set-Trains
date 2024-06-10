@@ -4,89 +4,9 @@
 switch (FEAT_TRAINS, PARENT, func_is_reversed, vehicle_is_reversed) {return;}
 
 // Running cost factor depending on speed
-switch (FEAT_TRAINS, SELF, runningcost60, current_speed) {
-    0: return 1;
-    1..3: return 2;
-    4..6: return 3;
-    7..10: return 4;
-    return 5;
-}
-switch (FEAT_TRAINS, SELF, runningcost80, current_speed) {
-    0: return 1;
-    1..5: return 2;
-    6..12: return 3;
-    13..20: return 4;
-    return 5;
-}
-switch (FEAT_TRAINS, SELF, runningcost120, current_speed) {
-    0: return 1;
-    1..8: return 2;
-    9..19: return 3;
-    20..30: return 4;
-    return 5;
-}
-switch (FEAT_TRAINS, SELF, runningcost160, current_speed) {
-    0: return 1;
-    1..12: return 2;
-    13..26: return 3;
-    27..40: return 4;
-    return 5;
-}
-switch (FEAT_TRAINS, SELF, runningcost200, current_speed) {
-    0: return 1;
-    1..15: return 2;
-    16..32: return 3;
-    33..50: return 4;
-    return 5;
-}
-switch (FEAT_TRAINS, SELF, runningcost250, current_speed) {
-    0: return 1;
-    1..18: return 2;
-    19..39: return 3;
-    40..60: return 4;
-    return 5;
-}
-switch (FEAT_TRAINS, SELF, runningcost280, current_speed) {
-    0: return 1;
-    1..21: return 2;
-    22..45: return 3;
-    46..70: return 4;
-    return 5;
-}
-switch (FEAT_TRAINS, SELF, runningcost300, current_speed) {
-    0: return 1;
-    1..24: return 2;
-    25..52: return 3;
-    53..80: return 4;
-    return 5;
-}
-switch (FEAT_TRAINS, SELF, runningcost350, current_speed) {
-    0: return 1;
-    1..27: return 2;
-    28..58: return 3;
-    59..90: return 4;
-    return 5;
-}
-switch (FEAT_TRAINS, SELF, runningcost400, current_speed) {
-    0: return 1;
-    1..30: return 2;
-    31..65: return 3;
-    66..100: return 4;
-    return 5;
-}
 
-switch (FEAT_TRAINS, SELF, runningcostfactor, max_speed) {
-    0..20: runningcost60;                   // < 75 km/h
-    21..30: runningcost80;          	    // 75-110 km/h
-    31..40: runningcost120; 		       	// 110-145 km/h
-    41..50: runningcost160;                 // 145-180 km/h
-    51..60: runningcost200;                 // 180-220 km/h
-    61..70: runningcost250;                 // 220-255 km/h
-    71..80: runningcost280;                 // 255-290 km/h
-    81..90: runningcost300;                 // 290-325 km/h
-    91..100: runningcost350;                // 325-360 km/h      
-    runningcost400;                         // > 360 km/h
-}
+switch (FEAT_TRAINS, SELF, runningcostfactor, (current_speed/max_speed)) {return;}
+
 
 // For High-Speed Hexie EMUs, speed is limited to 310 km/h IRL, but they can go up to 350 even 380, but with increased running costs
 switch (FEAT_TRAINS, SELF, switch_crh_c_cargo_subtype, cargo_subtype) {
@@ -126,7 +46,7 @@ switch (FEAT_TRAINS, SELF, crh380costpower, vehicle_is_potentially_powered) {
 switch (FEAT_TRAINS, PARENT, crhspeedcost, max_speed) {
     0..87: return 0;
     88..98: crh350costpower;
-    crh380costpower; 
+    crh380costpower;
 }
 
 /*
@@ -139,7 +59,7 @@ bitmask(2): air condition generator car
 bitmask(3): conductor car
 bitmask(4): brake van
 
-For example, 
+For example,
 bitmask_vehicle_info:           bitmask(1, 3);
 
 */
@@ -151,7 +71,7 @@ switch (FEAT_TRAINS, SELF, switch_pushpull_consist_correction, ((position_in_con
     return bitmask(0, 2);
 }
 
-// Another running cost factor depending on the existence of restaurant car - changed in v0.0.8 - now halves the runing costs of passenger cars instead of elimination 
+// Another running cost factor depending on the existence of restaurant car - changed in v0.0.8 - now halves the runing costs of passenger cars instead of elimination
 switch (FEAT_TRAINS, PARENT, cafecostfactor, hasbit(bitmask_consist_info, 1)) {
     1: return 1;
     return 2;
@@ -352,7 +272,7 @@ switch (FEAT_TRAINS, SELF, mu5to17car, num_vehs_in_consist) {
         1: return 3;
         return 2;
     }
-    
+
 // Standard 2-2-2 Length
     switch (FEAT_TRAINS, SELF, switch_length_2_2_2, position_in_articulated_veh % 3) {
         1: return 2;
@@ -365,7 +285,7 @@ switch (FEAT_TRAINS, SELF, mu5to17car, num_vehs_in_consist) {
         1: return 6;
         return 4;
     }
-/* End Functions */ 
+/* End Functions */
 
 
 switch (FEAT_TRAINS, SELF, too_many_graphics_12, position_in_articulated_veh % 3) {
