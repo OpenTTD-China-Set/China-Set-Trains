@@ -180,7 +180,7 @@ item (FEAT_TRAINS, djj1) {
         can_attach_wagon:               muhead;
         cargo_age_period:               (12 * 4 * 5) << param_cargo_decay;
         bitmask_vehicle_info:           0;
-        articulated_part:               switch_crh_wagon_articulated_part;
+        articulated_part:               switch_zymuw_articulated_part;
         cost_factor:                    9;
         running_cost_factor:            8 * runningcostfactor() * 2 + 2; // NO CAFE, WITH AC
     }

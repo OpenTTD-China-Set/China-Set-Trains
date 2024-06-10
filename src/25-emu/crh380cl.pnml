@@ -221,7 +221,7 @@ item (FEAT_TRAINS, crh380cl) {
         can_attach_wagon:               muhead;
         cargo_age_period:               (12 * 5 * cafedecayfactor()) << param_cargo_decay;
         bitmask_vehicle_info:           switch_crh_wagon_bitmask;
-        articulated_part:               switch_crh_wagon_articulated_part;
+        articulated_part:               switch_zemuw_articulated_part;
         cost_factor:                    switch_crh380cl_wagon_cost;
         running_cost_factor:            (switch_crh380cl_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
     }
@@ -235,7 +235,7 @@ item (FEAT_TRAINS, crh380cl) {
         can_attach_wagon:               muhead;
         cargo_age_period:               (20 * 5 * cafedecayfactor()) << param_cargo_decay;
         bitmask_vehicle_info:           switch_crh_wagon_bitmask;
-        articulated_part:               switch_crh_wagon_articulated_part;
+        articulated_part:               switch_zymuw_articulated_part;
         cost_factor:                    switch_crh380cl_wagon_cost;
         running_cost_factor:            (switch_crh380cl_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
     }
@@ -249,7 +249,7 @@ item (FEAT_TRAINS, crh380cl) {
         can_attach_wagon:               muhead;
         cargo_age_period:               (32 * 5 * cafedecayfactor()) << param_cargo_decay;
         bitmask_vehicle_info:           switch_crh_wagon_bitmask;
-        articulated_part:               switch_crh_wagon_articulated_part;
+        articulated_part:               switch_zsmuw_articulated_part;
         cost_factor:                    switch_crh380cl_wagon_cost;
         running_cost_factor:            (switch_crh380cl_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
     }
@@ -263,7 +263,7 @@ item (FEAT_TRAINS, crh380cl) {
         can_attach_wagon:               muhead;
         cargo_age_period:               (36 * 5 * cafedecayfactor()) << param_cargo_decay;
         bitmask_vehicle_info:           switch_crh_wagon_bitmask;
-        articulated_part:               switch_crh_wagon_articulated_part;
+        articulated_part:               switch_swmuw_articulated_part;
         cost_factor:                    switch_crh380cl_wagon_cost;
         running_cost_factor:            (switch_crh380cl_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
     }
@@ -277,7 +277,7 @@ item (FEAT_TRAINS, crh380cl) {
         can_attach_wagon:               muhead;
         cargo_age_period:               (12 * 5 * 5) << param_cargo_decay;
         bitmask_vehicle_info:           switch_crh_wagon_bitmask;
-        articulated_part:               switch_crh_wagon_articulated_part;
+        articulated_part:               switch_zecmuw_articulated_part;
         cost_factor:                    switch_crh380cl_wagon_cost;
         running_cost_factor:            (switch_crh380cl_wagon_running() + crhspeedcost()) * runningcostfactor() + 50 + accostfactor(); // IT IS A RESTAURANT CAR!
     }
