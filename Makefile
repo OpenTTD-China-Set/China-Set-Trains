@@ -50,20 +50,21 @@ NML_FILE 	   ?= $(FILE_NAME).nml
 INDEX_FILE 	   ?= $(FILE_NAME).pnml
 GRF_FILE 	   ?= $(FILE_NAME).grf
 CODE_FILES 	   ?= $(INDEX_FILE)
-LNG_FILES	   ?= lng
 CUSTOM_TAGS	   ?= custom_tags.txt
+TEMP_DIR	   ?= temp
 
 $(CUSTOM_TAGS): ./Makefile.dist
 	$(GCC) -E -x c -o $@ $<
 	$(_V) echo VERSION_STRING :$(REPO_VERSION_STRING) >> $@
 
-lng: $(CUSTOM_TAGS)
-
 $(NML_FILE): $(CUSTOM_TAGS) $(CODE_FILES) $(VOX_GENREATED_FILES)
 	$(GCC) -E -x c -D REPO_REVISION=$(REPO_REVISION) -D VERSION_STRING=$(REPO_VERSION_STRING) -o $@ $(INDEX_FILE)
 
-$(GRF_FILE): $(NML_FILE) lng
+$(GRF_FILE): $(NML_FILE) $(CUSTOM_TAGS)
 	$(NMLC) $<
+	if [ ! -d $(TEMP_DIR) ]; then mkdir $(TEMP_DIR); fi
+	mv -f $(NML_FILE) $(TEMP_DIR)/$(NML_FILE)
+	mv -f $(CUSTOM_TAGS) $(TEMP_DIR)/$(CUSTOM_TAGS)
 
 # Rule to run nmlc when the NML file changes
 code: $(GRF_FILE)
