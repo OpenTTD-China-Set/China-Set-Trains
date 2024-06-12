@@ -247,10 +247,43 @@ switch (FEAT_TRAINS, SELF, switch_cr300bf_wagon_running, vehicle_is_potentially_
     switch_cr300bf_wagon_running_unpower;
 }
 
-
-switch (FEAT_TRAINS, SELF, switch_cr300bf_wagon_power, (position_in_consist % 6 == 4)) {
+//power
+/* switch (FEAT_TRAINS, SELF, switch_cr300bf_wagon_power, (position_in_consist % 6 == 4)) {
     0: return 1856;
     return 0;
+} */
+
+switch (FEAT_TRAINS, SELF, switch_cr300bf_if_middle_wagon_is_tp_pw, (((position_in_consist / 3) + 1) == (num_vehs_in_consist * 11 / 48) || (((position_in_consist / 3) - 2) == (num_vehs_in_consist * 11 / 48))) || (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 16) || (((position_in_consist / 3) - 2) == (num_vehs_in_consist / 16)))) {
+    0: return 1856;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr300bf_middle_wagon_reconect_pw, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
+    1: return 0;
+    switch_cr300bf_if_middle_wagon_is_tp_pw;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_cr300bf_if_middle_wagon_tp_meddium_pw, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 8)) || (((position_in_consist / 3) - 2) == (num_vehs_in_consist / 8))) {
+    0: return 1856;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr300bf_if_middle_wagon_tp_short_pw, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) {
+    0: return 1856;
+    return 0;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_cr300bf_length_class_pw, num_vehs_in_consist / 3) {
+    2..6:   switch_cr300bf_if_middle_wagon_tp_short_pw;
+    7..12:  switch_cr300bf_if_middle_wagon_tp_meddium_pw;
+    switch_cr300bf_middle_wagon_reconect_pw;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr300bf_wagon_power, position_in_consist_from_end) {
+    0..2: return 0;
+    switch_cr300bf_length_class_pw;
 }
 
 
@@ -271,7 +304,7 @@ item (FEAT_TRAINS, cr300bf) {
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2010,09,01);
+        introduction_date:              date(2020,09,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   35;
         track_type:                     SAAA;

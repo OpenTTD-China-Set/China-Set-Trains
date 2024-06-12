@@ -209,24 +209,31 @@ STR_NAME_CR200JB        :CR200J-B (EMU)
 STR_NAME_CR200JC        :CR200J-C (EMU)
 STR_NAME_CR200JCL       :CR200J-C (Long Version) (EMU)
 STR_NAME_CRH1A          :CRH1A (EMU)
+STR_NAME_CRH1E          :CRH1E (EMU)
 STR_NAME_CRH2A          :CRH2A (EMU)
-STR_NAME_CRH3A          :CRH3A (EMU)
-STR_NAME_CRH5A          :CRH5A (EMU)
+STR_NAME_CRH2B          :CRH2B (Long Version) (EMU)
 STR_NAME_CRH2C          :CRH2C (EMU)
+STR_NAME_CRH2E          :CRH2E (EMU)
+STR_NAME_CRH2G          :CRH2G (EMU)
+STR_NAME_CRH3A          :CRH3A (EMU)
 STR_NAME_CRH3C          :CRH3C (EMU)
+STR_NAME_CRH5A          :CRH5A (EMU)
 STR_NAME_CRH380A        :CRH380A (EMU)
 STR_NAME_CRH380AL       :CRH380AL (Long Version) (EMU)
 STR_NAME_CRH380B        :CRH380B (EMU)
+STR_NAME_CRH380CL       :CRH380CL (EMU)
+STR_NAME_CRH380D        :CRH380D (EMU)
+STR_NAME_CR300BF        :CR300BF (EMU)
 STR_NAME_CR400AF        :CR400AF (EMU)
 STR_NAME_CR400BF        :CR400BF (EMU)
 STR_NAME_CRH6A2         :CRH6A (2-Door Version) (EMU)
 STR_NAME_CRH6A3         :CRH6A (3-Door Version) (EMU)
 STR_NAME_CRH6AA         :CRH6A-A (Section) (EMU)
 STR_NAME_CRH6F          :CRH6F (EMU)
-STR_NAME_CRH1E          :CRH1E (EMU)
-STR_NAME_CRH380CL       :CRH380CL (EMU)
-STR_NAME_CRH2G          :CRH2G (EMU)
-STR_NAME_CR300BF        :CR300BF (EMU)
+
+
+
+
 
 STR_NAME_ZEMUW          :2nd-Class (ZE) MU Wagon
 STR_NAME_ZYMUW          :1st-Class (ZY) MU Wagon
@@ -483,7 +490,9 @@ STR_CR200JC_NICKNAME                :{BLACK}Nickname: {GREEN}"AD Bin" {GOLD}(Fol
 STR_CRH1A_NICKNAME                  :{BLACK}Nickname: {GOLD}Metro {BLACK}(due to its high acceleration)                   
 STR_CRH1E_NICKNAME                  :{BLACK}Nickname: {GOLD}Sleeping Metro {BLACK}(due to its sleeper identity)
 STR_CRH2A_NICKNAME                  :{BLACK}Nickname: {GOLD}Hairtail
+STR_CRH2B_NICKNAME                  :{BLACK}Nickname: {GOLD}Long Hairtail
 STR_CRH2C_NICKNAME                  :{BLACK}Nickname: {GOLD}Crazy Hairtail
+STR_CRH2E_NICKNAME                  :{BLACK}Nickname: {GOLD}Sleeper Hairtail
 STR_CRH2G_NICKNAME                  :{BLACK}Nickname: {GOLD}Advanced Black Face
 STR_CRH3A_NICKNAME                  :{BLACK}Nickname: {GOLD}Golden Eyes
 STR_CRH3C_NICKNAME                  :{BLACK}Nickname: {GOLD}Rabbit
@@ -492,6 +501,7 @@ STR_CRH6F_NICKNAME                  :{BLACK}Nickname: {GOLD}Real Metro
 STR_CRH380A_NICKNAME                :{BLACK}Nickname: {GOLD}Big Rat
 STR_CRH380B_NICKNAME                :{BLACK}Nickname: {GOLD}Crazy Rabbit
 STR_CRH380CL_NICKNAME               :{BLACK}Nickname: {GOLD}Shark
+STR_CRH380D_NICKNAME                :{BLACK}Nickname: {GOLD}Crazy Metro
 STR_CR400AF_NICKNAME                :{BLACK}Nickname: {GOLD}Red Loong
 STR_CR400BF_NICKNAME                :{BLACK}Nickname: {GOLD}Golden Phoenix
 STR_CR300BF_NICKNAME                :{BLACK}Nickname: {LTBLUE}"Blue Antidote" {GOLD}(Official), {LTBLUE}"Zoombie Blue" {GOLD}(Folk)
@@ -669,8 +679,10 @@ STR_CR400AF_CONSIST                 :{BLACK}Consist: {GOLD}5 to 17 cars; int(n/2
 STR_CR400BF_CONSIST                 :{BLACK}Consist: {GOLD}5 to 17 cars; int(n/2) motorised cars and int((n+1)/2) trailers in an n-car consist.
 STR_CR200J_CONSIST                  :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, with wagons attached; or one section at front, another section at back. Will run as coupled when cars more than 12
 STR_CR200JL_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, another section at back. 
-STR_CRH2A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, half of which (ceiling up) are motorised cars
-STR_CRH2C_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with head and cab trailers, all middle cars motorised
+STR_CRH2A_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12
+STR_CRH2B_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars
+STR_CRH2C_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12
+STR_CRH2E_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars
 STR_CRH2G_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, half of which (ceiling up) are motorised cars
 STR_CRH3A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
 STR_CRH1A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars
@@ -680,16 +692,19 @@ STR_CRH380A_CONSIST                 :{BLACK}Consist: {GOLD}At least 4 cars, with
 STR_CRH380AL_CONSIST                :{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised
 STR_CRH380B_CONSIST                 :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
 STR_CRH380CL_CONSIST                :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
+STR_CRH380D_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars;, all middle cars motorised expect cab and pantograph. Will run as coupled when cars more than 12
 STR_CRH6A2_CONSIST                  :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
 STR_CRH6A3_CONSIST                  :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
 STR_CRH6AA_CONSIST                  :{BLACK}Consist: {GOLD}Fixed consist of 4 cars (Mc-Tp-Tp-Mc), multiple sections available
 STR_CRH6F_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
-STR_CR300BF_CONSIST                 :{BLACK}Consist: {GOLD}At least 4 cars, with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12
+STR_CR300BF_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars;, all middle cars motorised expect cab and pantograph. Will run as coupled when cars more than 12
 
 STR_CRH1A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH1E_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
 STR_CRH2A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
+STR_CRH2B_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
 STR_CRH2C_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
+STR_CRH2E_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
 STR_CRH2G_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH3A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH3C_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
@@ -697,6 +712,7 @@ STR_CRH5A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH380A_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH380B_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH380CL_HEAD_SEAT              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH380D_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CR400AF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CR400BF_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH6A2_HEAD_SEAT                :{BLACK}Head Seat: {GOLD}1st-Class (ZY)

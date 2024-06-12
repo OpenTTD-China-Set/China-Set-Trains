@@ -1,0 +1,436 @@
+// Begin CRH380D
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_crh380d_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-emu", "crh380d-c")
+}
+
+// Vehicle
+spriteset (spriteset_crh380d_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh380d-c")
+}
+spriteset (spriteset_crh380d_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh380d-t")
+}
+spriteset (spriteset_crh380d_middle_p, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh380d-tp")
+}
+spriteset (spriteset_crh380d_middle_p_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh380d-tp")
+}
+spriteset (spriteset_crh380d_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh380d-c")
+}
+spriteset (spriteset_crh380d_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh380d-c-c")
+}
+spriteset (spriteset_crh380d_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh380d-c-c")
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_articulated_part, extra_callback_info1) {
+    1..2: return crh380d;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_front_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_crh380d_front;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_head_capacity, position_in_articulated_veh % 3) {
+    1: return 32;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_middle_wagon_back_tp, ((position_in_consist / 3) == ((num_vehs_in_consist / 6) + 1))) {
+    1: spriteset_crh380d_middle_p;
+    spriteset_crh380d_middle_p_reversed;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_middle_wagon_front_tp, (((position_in_consist / 3) + 1) == 2 )) {
+    1: spriteset_crh380d_middle_p;
+    spriteset_crh380d_middle_p_reversed;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_middle_wagon_is_which_tp, ((((position_in_consist_from_end / 3) + 1) == 2 ) || ((position_in_consist / 3) == ((num_vehs_in_consist / 6) + 1)))) {
+    1: switch_crh380d_middle_wagon_back_tp;
+    switch_crh380d_middle_wagon_front_tp;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_if_middle_wagon_is_tp, ((((position_in_consist / 3) + 1) == 2 ) || (((position_in_consist / 3) + 1) == ((num_vehs_in_consist / 6) - 1))) || ((((position_in_consist_from_end / 3) + 1) == 2 ) || ((position_in_consist / 3) == ((num_vehs_in_consist / 6) + 1)))) {
+    1: switch_crh380d_middle_wagon_is_which_tp;
+    spriteset_crh380d_middle_m;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_middle_wagon_half_long, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) {
+    1: spriteset_crh380d_cab_reconect;
+    spriteset_crh380d_cab_reconect_reversed;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_middle_wagon_reconect, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
+    1: switch_crh380d_middle_wagon_half_long;
+    switch_crh380d_if_middle_wagon_is_tp;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_middle_wagon_tp_meddium, ((position_in_consist / 3) + 1) == 2 ) {
+    1: spriteset_crh380d_middle_p;
+    spriteset_crh380d_middle_p_reversed;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_if_middle_wagon_tp_meddium, (((position_in_consist / 3) + 1) == 2 ) || (((position_in_consist_from_end / 3) + 1 ) == 2 )) {
+    1: switch_crh380d_middle_wagon_tp_meddium;
+    spriteset_crh380d_middle_m;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_if_middle_wagon_tp_short, ((position_in_consist / 3) + 1) == 2 ) {
+    1: spriteset_crh380d_middle_p;
+    spriteset_crh380d_middle_m;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_length_class, num_vehs_in_consist / 3) {
+    2..6:   switch_crh380d_if_middle_wagon_tp_short;
+    7..12:  switch_crh380d_if_middle_wagon_tp_meddium;
+    switch_crh380d_middle_wagon_reconect;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_if_wagon_end, position_in_consist_from_end == 1) {
+    1: spriteset_crh380d_cab;
+    switch_crh380d_length_class;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_graphics, (position_in_consist_from_end % 3) == 1) {
+    1: switch_crh380d_if_wagon_end;
+    empty_sprites;
+}
+//capacity
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_middle_capacity_ze, position_in_articulated_veh % 3) {
+    1: return 85;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_middle_capacity_zy, position_in_articulated_veh % 3) {
+    1: return 60;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_middle_capacity_zs, position_in_articulated_veh % 3) {
+    1: return 30;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_middle_capacity_sw, position_in_articulated_veh % 3) {
+    1: return 15;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_middle_capacity_zec, position_in_articulated_veh % 3) {
+    1: return 59;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_middle_capacity, vehicle_type_id) {
+    1024: switch_crh380d_middle_capacity_ze;
+    1025: switch_crh380d_middle_capacity_zy;
+    1027: switch_crh380d_middle_capacity_zs;
+    1028: switch_crh380d_middle_capacity_sw;
+    1035: switch_crh380d_middle_capacity_zec;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_cab_capacity_ze, position_in_articulated_veh % 3) {
+    1: return 65;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_cab_capacity_zy, position_in_articulated_veh % 3) {
+    1: return 48;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_cab_capacity_zs, position_in_articulated_veh % 3) {
+    1: return 24;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_cab_capacity_sw, position_in_articulated_veh % 3) {
+    1: return 12;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_cab_capacity_zec, position_in_articulated_veh % 3) {
+    1: return 23;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_cab_capacity, vehicle_type_id) {
+    1024: switch_crh380d_cab_capacity_ze;
+    1025: switch_crh380d_cab_capacity_zy;
+    1027: switch_crh380d_cab_capacity_zs;
+    1028: switch_crh380d_cab_capacity_sw;
+    1035: switch_crh380d_cab_capacity_zec;
+    return 0;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_capacity_if_reconect_cab, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
+    0: switch_crh380d_middle_capacity;
+    switch_crh380d_cab_capacity;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_capacity_reconect, (position_in_consist < 3) || (position_in_consist_from_end < 3)) {
+    0: switch_crh380d_wagon_capacity_if_reconect_cab;
+    switch_crh380d_cab_capacity;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_capacity_single, (position_in_consist < 3) || (position_in_consist_from_end < 3)) {
+    0: switch_crh380d_middle_capacity;
+    switch_crh380d_cab_capacity;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_capacity, num_vehs_in_consist / 3) {
+    2..12: switch_crh380d_wagon_capacity_single;
+    switch_crh380d_wagon_capacity_reconect;
+}
+//Cost
+
+/* switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_cost_power, vehicle_type_id) {
+    1024: return 60;
+    1025: return 60;
+    1027: return 60;
+    1028: return 60;
+    1035: return 60;
+    return 0;
+} */
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_running_power, vehicle_type_id) {
+    1024: return 70;
+    1025: return 74;
+    1027: return 78;
+    1028: return 79;
+    1035: return 79;
+    return 0;
+}
+
+/* switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_cost_unpower, vehicle_type_id) {
+    1024: return 10;
+    1025: return 10;
+    1027: return 10;
+    1028: return 10;
+    1035: return 10;
+    return 0;
+}
+ */
+switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_running_unpower, vehicle_type_id) {
+    1024: return 13;
+    1025: return 16;
+    1027: return 21;
+    1028: return 21;
+    1035: return 12;
+    return 0;
+}
+
+/* switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_cost, vehicle_is_potentially_powered) {
+    1: switch_crh380d_wagon_cost_power;
+    switch_crh380d_wagon_cost_unpower;
+} */
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_running, vehicle_is_potentially_powered) {
+    1: switch_crh380d_wagon_running_power;
+    switch_crh380d_wagon_running_unpower;
+}
+
+
+/* switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_power, (position_in_consist % 6 == 4)) {
+    0: return 3263;
+    return 0;
+} */
+//power
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_if_middle_wagon_is_tp_pw, (((position_in_consist / 3) + 1) == 2 || (((position_in_consist / 3) + 1) == ((num_vehs_in_consist / 6) - 1))) || ((((position_in_consist_from_end / 3) + 1) == 2) || (((position_in_consist / 3) + 1) == ((num_vehs_in_consist / 6) + 2)))) {
+    0: return 3263;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_middle_wagon_reconect_pw, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
+    1: return 0;
+    switch_crh380d_if_middle_wagon_is_tp_pw;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_if_middle_wagon_tp_meddium_pw, (((position_in_consist / 3) + 1) == 2) || (((position_in_consist_from_end / 3) + 1) == 2)) {
+    0: return 3263;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_if_middle_wagon_tp_short_pw, ((position_in_consist / 3) + 1) == 2) {
+    0: return 3263;
+    return 0;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_length_class_pw, num_vehs_in_consist / 3) {
+    2..6:   switch_crh380d_if_middle_wagon_tp_short_pw;
+    7..12:  switch_crh380d_if_middle_wagon_tp_meddium_pw;
+    switch_crh380d_middle_wagon_reconect_pw;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_power, position_in_consist_from_end) {
+    0..2: return 0;
+    switch_crh380d_length_class_pw;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_traction, vehicle_is_potentially_powered) {
+    1: return int(0.114*255);
+    return 0;
+}
+
+
+item (FEAT_TRAINS, crh380d) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CRH380D);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2012,06,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   25;
+        track_type:                     SAAA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 65;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               400 << param_cargo_decay;
+
+        // Stats
+        speed:                          310 km/h;
+        power:                          2400 kW;
+        weight:                         58 ton;
+        tractive_effort_coefficient:    0.114;
+        cost_factor:                    85;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            70;
+        reliability_decay:              5;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_6, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH380D_NICKNAME), string(STR_CRH380D_CONSIST), string(STR_RELIABILITY_5), string(STR_CRH380D_HEAD_SEAT));
+        can_attach_wagon:               crhwagon;
+        start_stop:                     mu4to24car;
+        cargo_subtype_text:             switch_crh380_cargo_subtype;
+
+        // Graphics
+        default:                        switch_crh380d_front_graphics;
+        purchase:                       spriteset_crh380d_purchase_original;
+        articulated_part:               switch_crh380d_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        speed:                          switch_crh380_speed;
+        power:                          return 0;
+        purchase_power:                 return 3263; // HP
+        tractive_effort_coefficient:    return 0;
+        purchase_tractive_effort_coefficient: return int(0.114*255);
+        cargo_capacity:                 switch_crh380d_head_capacity;
+        cargo_age_period:               20 * 5 * cafedecayfactor() << param_cargo_decay;
+        cost_factor:                    85;
+        running_cost_factor:            70 * runningcostfactor() * cafecostfactor() + 20;
+        purchase_running_cost_factor:   300;
+        purchase_cargo_capacity:        65/3;
+    }
+
+    // Multiple Unit Wagons
+    livery_override(zemuw) {
+        default:                        switch_crh380d_wagon_graphics;
+        cargo_capacity:                 switch_crh380d_wagon_capacity;
+        power:                          switch_crh380d_wagon_power;
+        tractive_effort_coefficient:    switch_crh380d_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         58;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+/*         cost_factor:                    switch_crh380d_wagon_cost; */
+        running_cost_factor:            (switch_crh380d_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(zymuw) {
+        default:                        switch_crh380d_wagon_graphics;
+        cargo_capacity:                 switch_crh380d_wagon_capacity;
+        power:                          switch_crh380d_wagon_power;
+        tractive_effort_coefficient:    switch_crh380d_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         58;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+/*         cost_factor:                    switch_crh380d_wagon_cost; */
+        running_cost_factor:            (switch_crh380d_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(zsmuw) {
+        default:                        switch_crh380d_wagon_graphics;
+        cargo_capacity:                 switch_crh380d_wagon_capacity;
+        power:                          switch_crh380d_wagon_power;
+        tractive_effort_coefficient:    switch_crh380d_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         58;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+/*         cost_factor:                    switch_crh380d_wagon_cost; */
+        running_cost_factor:            (switch_crh380d_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(swmuw) {
+        default:                        switch_crh380d_wagon_graphics;
+        cargo_capacity:                 switch_crh380d_wagon_capacity;
+        power:                          switch_crh380d_wagon_power;
+        tractive_effort_coefficient:    switch_crh380d_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         58;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+/*         cost_factor:                    switch_crh380d_wagon_cost; */
+        running_cost_factor:            (switch_crh380d_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(zecmuw) {
+        default:                        switch_crh380d_wagon_graphics;
+        cargo_capacity:                 switch_crh380d_wagon_capacity;
+        power:                          switch_crh380d_wagon_power;
+        tractive_effort_coefficient:    switch_crh380d_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         58;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+/*         cost_factor:                    switch_crh380d_wagon_cost; */
+        running_cost_factor:            (switch_crh380d_wagon_running() + crhspeedcost()) * runningcostfactor() + 50 + accostfactor(); // IT IS A RESTAURANT CAR!
+    }
+}
+
+// End CRH380D
+
