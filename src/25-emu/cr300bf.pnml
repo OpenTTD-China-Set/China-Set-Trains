@@ -254,7 +254,7 @@ switch (FEAT_TRAINS, SELF, switch_cr300bf_wagon_running_unpower, vehicle_type_id
     1035: return 22;
     return 0;
 }
-/* 
+/*
 switch (FEAT_TRAINS, SELF, switch_cr300bf_wagon_cost, vehicle_is_potentially_powered) {
     1: switch_cr300bf_wagon_cost_power;
     switch_cr300bf_wagon_cost_unpower;

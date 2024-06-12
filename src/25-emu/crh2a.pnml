@@ -132,7 +132,7 @@ switch (FEAT_TRAINS, SELF, switch_crh2a_wagon_graphics, (position_in_consist_fro
     1: switch_crh2a_if_wagon_end;
     empty_sprites;
 }
-/* 
+/*
 
 switch (FEAT_TRAINS, SELF, switch_crh2a_short_graphics, (position_in_consist_from_end == position_in_consist) || (position_in_consist_from_end == position_in_consist + 3)) {
     1: spriteset_crh2a_middle_p;

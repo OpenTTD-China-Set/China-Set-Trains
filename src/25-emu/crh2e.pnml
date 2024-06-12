@@ -97,7 +97,7 @@ switch (FEAT_TRAINS, SELF, switch_crh2e_wagon_length, position_in_consist_from_e
     switch_length_2_8_2;
 }
 
-/* 
+/*
 switch (FEAT_TRAINS, SELF, switch_crh2e_middle_capacity_ze, position_in_articulated_veh % 3) {
     1: return 100;
     return 0;
