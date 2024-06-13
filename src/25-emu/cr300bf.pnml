@@ -249,12 +249,12 @@ switch (FEAT_TRAINS, SELF, switch_cr300bf_wagon_running, vehicle_is_potentially_
 
 //power
 /* switch (FEAT_TRAINS, SELF, switch_cr300bf_wagon_power, (position_in_consist % 6 == 4)) {
-    0: return 1856;
+    0: return 1830;
     return 0;
 } */
 
 switch (FEAT_TRAINS, SELF, switch_cr300bf_if_middle_wagon_is_tp_pw, (((position_in_consist / 3) + 1) == (num_vehs_in_consist * 11 / 48) || (((position_in_consist / 3) - 2) == (num_vehs_in_consist * 11 / 48))) || (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 16) || (((position_in_consist / 3) - 2) == (num_vehs_in_consist / 16)))) {
-    0: return 1856;
+    0: return 1830;
     return 0;
 }
 
@@ -265,12 +265,12 @@ switch (FEAT_TRAINS, SELF, switch_cr300bf_middle_wagon_reconect_pw, (((position_
 
 
 switch (FEAT_TRAINS, SELF, switch_cr300bf_if_middle_wagon_tp_meddium_pw, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 8)) || (((position_in_consist / 3) - 2) == (num_vehs_in_consist / 8))) {
-    0: return 1856;
+    0: return 1830;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr300bf_if_middle_wagon_tp_short_pw, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) {
-    0: return 1856;
+    0: return 1830;
     return 0;
 }
 
@@ -347,7 +347,7 @@ item (FEAT_TRAINS, cr300bf) {
         length:                         switch_length_2_8_2;
         speed:                          250;
         power:                          return 0;
-        purchase_power:                 return 1856; // HP
+        purchase_power:                 return 1830; // HP
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.134*255);
         cargo_capacity:                 switch_cr300bf_head_capacity;

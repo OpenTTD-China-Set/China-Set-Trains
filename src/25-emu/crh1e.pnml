@@ -139,19 +139,19 @@ switch (FEAT_TRAINS, SELF, switch_crh1e_wagon_running, vehicle_is_potentially_po
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh1e_wagon_power, position_in_consist % 48) {
-    0..2: return 1441;
+    0..2: return 1421;
     3..5: return 0;
-    6..11: return 1441;
+    6..11: return 1421;
     12..14: return 0;
-    15..17: return 1441;
+    15..17: return 1421;
     18..20: return 0;
-    21..26: return 1441;
+    21..26: return 1421;
     27..29: return 0;
-    30..32: return 1441;
+    30..32: return 1421;
     33..35: return 0;
-    36..41: return 1441;
+    36..41: return 1421;
     42..44: return 0;
-    45..47: return 1441;
+    45..47: return 1421;
     return 0;
 }
 

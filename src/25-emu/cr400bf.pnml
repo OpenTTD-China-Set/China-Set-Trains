@@ -360,111 +360,111 @@ switch (FEAT_TRAINS, SELF, switch_cr400bf_wagon_running, vehicle_is_potentially_
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_5_wagon_power, position_in_consist) {
-    3..8: return 3447; //2nd-3rd
+    3..8: return 3399; //2nd-3rd
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_6_wagon_power, position_in_consist) {
-    3..8: return 3447; //2nd-3rd
-    12..14: return 3447; //5th
+    3..8: return 3399; //2nd-3rd
+    12..14: return 3399; //5th
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_7_wagon_power, position_in_consist) {
-    3..5: return 3447; //2nd
-    9..11: return 3447; //4th
-    15..17: return 3447; //6th
+    3..5: return 3399; //2nd
+    9..11: return 3399; //4th
+    15..17: return 3399; //6th
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_8_wagon_power, position_in_consist) {
-    3..5: return 3447; //2nd
-    9..14: return 3447; //4-5th
-    18..20: return 3447; //7th
+    3..5: return 3399; //2nd
+    9..14: return 3399; //4-5th
+    18..20: return 3399; //7th
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_9_wagon_power, position_in_consist) {
     //same as 8
-    3..5: return 3447; //2nd
-    9..14: return 3447; //4-5th
-    18..20: return 3447; //7th
+    3..5: return 3399; //2nd
+    9..14: return 3399; //4-5th
+    18..20: return 3399; //7th
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_10_wagon_power, position_in_consist) {
-    3..5: return 3447; //2nd
-    9..14: return 3447; //4-5th
-    18..20: return 3447; //7th
-    24..26: return 3447; //9th
+    3..5: return 3399; //2nd
+    9..14: return 3399; //4-5th
+    18..20: return 3399; //7th
+    24..26: return 3399; //9th
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_11_wagon_power, position_in_consist) {
-    3..5: return 3447; //2nd
-    9..11: return 3447; //4th
-    15..17: return 3447; //6th
-    21..23: return 3447; //8th
-    27..29: return 3447; //10th
+    3..5: return 3399; //2nd
+    9..11: return 3399; //4th
+    15..17: return 3399; //6th
+    21..23: return 3399; //8th
+    27..29: return 3399; //10th
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_12_wagon_power, position_in_consist) {
-    3..5: return 3447; //2nd
-    9..11: return 3447; //4th
-    15..20: return 3447; //6-7th
-    24..26: return 3447; //9th
-    30..32: return 3447; //11th
+    3..5: return 3399; //2nd
+    9..11: return 3399; //4th
+    15..20: return 3399; //6-7th
+    24..26: return 3399; //9th
+    30..32: return 3399; //11th
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_13_wagon_power, position_in_consist) {
-    3..5: return 3447; //2nd
-    9..11: return 3447; //4th
-    15..17: return 3447; //6th
-    21..23: return 3447; //8th
-    27..29: return 3447; //10th
-    33..35: return 3447; //12th
+    3..5: return 3399; //2nd
+    9..11: return 3399; //4th
+    15..17: return 3399; //6th
+    21..23: return 3399; //8th
+    27..29: return 3399; //10th
+    33..35: return 3399; //12th
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_14_wagon_power, position_in_consist) {
-    3..5: return 3447; //2nd
-    9..11: return 3447; //4th
-    18..23: return 3447; //7-8th
-    27..32: return 3447; //10-11th
-    36..38: return 3447; //13th
+    3..5: return 3399; //2nd
+    9..11: return 3399; //4th
+    18..23: return 3399; //7-8th
+    27..32: return 3399; //10-11th
+    36..38: return 3399; //13th
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_15_wagon_power, position_in_consist) {
-    3..5: return 3447; //2nd
-    9..11: return 3447; //4th
-    18..20: return 3447; //7th
-    24..26: return 3447; //9th
-    30..35: return 3447; //11-12th
-    39..41: return 3447; //14th
+    3..5: return 3399; //2nd
+    9..11: return 3399; //4th
+    18..20: return 3399; //7th
+    24..26: return 3399; //9th
+    30..35: return 3399; //11-12th
+    39..41: return 3399; //14th
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_16_wagon_power, position_in_consist) {
-    3..5: return 3447; //2nd
-    9..14: return 3447; //4-5th
-    18..20: return 3447; //7th
-    27..29: return 3447; //10th
-    33..38: return 3447; //12-13th
-    42..44: return 3447; //15th
+    3..5: return 3399; //2nd
+    9..14: return 3399; //4-5th
+    18..20: return 3399; //7th
+    27..29: return 3399; //10th
+    33..38: return 3399; //12-13th
+    42..44: return 3399; //15th
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_17_wagon_power, position_in_consist) {
     //same as 16
-    3..5: return 3447; //2nd
-    9..14: return 3447; //4-5th
-    18..20: return 3447; //7th
-    27..29: return 3447; //10th
-    33..38: return 3447; //12-13th
-    42..44: return 3447; //15th
+    3..5: return 3399; //2nd
+    9..14: return 3399; //4-5th
+    18..20: return 3399; //7th
+    27..29: return 3399; //10th
+    33..38: return 3399; //12-13th
+    42..44: return 3399; //15th
     return 0;
 }
 
@@ -543,7 +543,7 @@ item (FEAT_TRAINS, cr400bf) {
         length:                         switch_length_2_8_2;
         cargo_capacity:                 switch_cr400bf_head_capacity;
         power:                          return 0;
-        purchase_power:                 return 3447;
+        purchase_power:                 return 3399;
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.118*255);
         cargo_age_period:               (20 * 5 * cafedecayfactor()) << param_cargo_decay;

@@ -246,19 +246,19 @@ switch (FEAT_TRAINS, SELF, switch_crh2c_wagon_running, vehicle_is_potentially_po
 }
 
 /* switch (FEAT_TRAINS, SELF, switch_crh2c_wagon_power, (position_in_consist <= 3) || (position_in_consist_from_end <= 3)) {
-    0: return 1886; // 1886 HP = 1387 KW
+    0: return 1860; // 1860 HP = 1387 KW
     return 0;
 } */
 
 
 switch (FEAT_TRAINS, SELF, switch_crh2c_middle_wagon_reconect_pw, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
     1: return 0;
-    return 1886;
+    return 1860;
 }
 
 
 switch (FEAT_TRAINS, SELF, switch_crh2c_wagon_power_not_cab, num_vehs_in_consist / 3) {
-    2..12: return 1886;// 1886 HP = 1387 KW
+    2..12: return 1860;// 1860 HP = 1387 KW
     switch_crh2c_middle_wagon_reconect_pw;
 }
 
@@ -329,7 +329,7 @@ item (FEAT_TRAINS, crh2c) {
         length:                         switch_length_2_8_2;
         speed:                          switch_crh_c_speed;
         power:                          return 0;
-        purchase_power:                 return 1886; // HP
+        purchase_power:                 return 1860; // HP
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.0825*255);
         cargo_capacity:                 switch_crh2c_head_capacity;

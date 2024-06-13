@@ -295,11 +295,11 @@ switch (FEAT_TRAINS, SELF, switch_crh6a2_wagon_running, vehicle_is_potentially_p
 
 switch (FEAT_TRAINS, SELF, switch_crh6a2_wagon_power, position_in_consist % 24) {
     0..2: return 0;
-    3..8: return 1482;
+    3..8: return 1462;
     9..11: return 0;
-    12..14: return 1482;
+    12..14: return 1462;
     15..17: return 0;
-    18..20: return 1482;
+    18..20: return 1462;
     21..23: return 0;
     return 0;
 } // T-M-M-T-M-T-M-T (IRL: TMMTTMMT, but compromise for gameplay)
@@ -363,7 +363,7 @@ item (FEAT_TRAINS, crh6a2) {
         // Stats
         length:                         switch_length_2_8_2;
         power:                          return 0;
-        purchase_power:                 return 1482;
+        purchase_power:                 return 1462;
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.16*255);
         cargo_capacity:                 switch_crh6a2_head_capacity;

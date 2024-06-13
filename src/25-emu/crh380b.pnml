@@ -145,7 +145,7 @@ switch (FEAT_TRAINS, SELF, switch_crh380b_wagon_running, vehicle_is_potentially_
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh380b_wagon_power, position_in_consist % 6) {
-    0..2: return 3127;
+    0..2: return 3084;
     return 0;
 }
 

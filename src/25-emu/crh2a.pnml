@@ -309,7 +309,7 @@ switch (FEAT_TRAINS, SELF, switch_crh2a_wagon_running, vehicle_is_potentially_po
 
 //power
 switch (FEAT_TRAINS, SELF, switch_crh2a_wagon_long_pw, position_in_consist % 12) {
-    3..8: return 1550; // 1550 HP = 1140 KW
+    3..8: return 1529; // 1529 HP = 1140 KW
     return 0;
 }
 
@@ -319,7 +319,7 @@ switch (FEAT_TRAINS, SELF, switch_crh2a_middle_wagon_reconect_pw, (((position_in
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh2a_wagon_short_pw, position_in_consist % 12) {
-    3..8: return 1550; // 1550 HP = 1140 KW
+    3..8: return 1529; // 1529 HP = 1140 KW
     return 0;
 }
 

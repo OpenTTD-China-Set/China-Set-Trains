@@ -234,7 +234,7 @@ item (FEAT_TRAINS, cr200jal) {
 
         // Stats
         speed:                          160 km/h;
-        power:                          11200 kW;
+        power:                          5600 kW;
         weight:                         156 ton;
         tractive_effort_coefficient:    0.314;
         cost_factor:                    96;

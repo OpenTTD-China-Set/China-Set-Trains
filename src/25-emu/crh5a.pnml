@@ -229,43 +229,43 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_running, vehicle_is_potentially_po
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_4_wagon_power, position_in_consist) {
-    0..2: return 1495;
-    3..5: return 1495;
-    9..11: return 1495;
+    0..2: return 1475;
+    3..5: return 1475;
+    9..11: return 1475;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_8_wagon_power, position_in_consist) {
-    0..2: return 1495;
-    3..5: return 1495;
-    9..11: return 1495;
-    18..20: return 1495;
-    21..23: return 1495;
+    0..2: return 1475;
+    3..5: return 1475;
+    9..11: return 1475;
+    18..20: return 1475;
+    21..23: return 1475;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_12_wagon_power, position_in_consist) {
-    0..2: return 1495;
-    3..5: return 1495;
-    9..11: return 1495;
-    15..17: return 1495;
-    24..26: return 1495;
-    30..32: return 1495;
-    33..35: return 1495;
+    0..2: return 1475;
+    3..5: return 1475;
+    9..11: return 1475;
+    15..17: return 1475;
+    24..26: return 1475;
+    30..32: return 1475;
+    33..35: return 1475;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_16_wagon_power, position_in_consist) {
-    0..2: return 1495;
-    3..5: return 1495;
-    9..11: return 1495;
-    18..20: return 1495;
-    21..23: return 1495;
-    24..26: return 1495;
-    27..29: return 1495;
-    33..35: return 1495;
-    42..44: return 1495;
-    45..47: return 1495;
+    0..2: return 1475;
+    3..5: return 1475;
+    9..11: return 1475;
+    18..20: return 1475;
+    21..23: return 1475;
+    24..26: return 1475;
+    27..29: return 1475;
+    33..35: return 1475;
+    42..44: return 1475;
+    45..47: return 1475;
     return 0;
 }
 
@@ -312,7 +312,7 @@ item (FEAT_TRAINS, crh5a) {
 
         // Stats
         speed:                          250 km/h;
-        power:                          1495 hpM;
+        power:                          1475 hpM;
         weight:                         52.8 ton;
         tractive_effort_coefficient:    0.117;
         cost_factor:                    61;

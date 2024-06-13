@@ -249,13 +249,13 @@ switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_running, vehicle_is_potentially_
 
 
 /* switch (FEAT_TRAINS, SELF, switch_crh380d_wagon_power, (position_in_consist % 6 == 4)) {
-    0: return 3263;
+    0: return 3218;
     return 0;
 } */
 //power
 
 switch (FEAT_TRAINS, SELF, switch_crh380d_if_middle_wagon_is_tp_pw, (((position_in_consist / 3) + 1) == 2 || (((position_in_consist / 3) + 1) == ((num_vehs_in_consist / 6) - 1))) || ((((position_in_consist_from_end / 3) + 1) == 2) || (((position_in_consist / 3) + 1) == ((num_vehs_in_consist / 6) + 2)))) {
-    0: return 3263;
+    0: return 3218;
     return 0;
 }
 
@@ -266,12 +266,12 @@ switch (FEAT_TRAINS, SELF, switch_crh380d_middle_wagon_reconect_pw, (((position_
 
 
 switch (FEAT_TRAINS, SELF, switch_crh380d_if_middle_wagon_tp_meddium_pw, (((position_in_consist / 3) + 1) == 2) || (((position_in_consist_from_end / 3) + 1) == 2)) {
-    0: return 3263;
+    0: return 3218;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh380d_if_middle_wagon_tp_short_pw, ((position_in_consist / 3) + 1) == 2) {
-    0: return 3263;
+    0: return 3218;
     return 0;
 }
 
@@ -348,7 +348,7 @@ item (FEAT_TRAINS, crh380d) {
         length:                         switch_length_2_8_2;
         speed:                          switch_crh380_speed;
         power:                          return 0;
-        purchase_power:                 return 3263; // HP
+        purchase_power:                 return 3218; // HP
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.114*255);
         cargo_capacity:                 switch_crh380d_head_capacity;
