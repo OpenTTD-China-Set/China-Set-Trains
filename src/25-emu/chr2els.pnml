@@ -41,24 +41,41 @@ switch (FEAT_TRAINS, SELF, switch_crh2els_graphics, position_in_articulated_veh 
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh2els_head_capacity, position_in_articulated_veh % 3) {
-    1: return 65;
+    1: return 40;
     return 0;
 }
 //GFX
-
-switch (FEAT_TRAINS, SELF, switch_crh2els_middle_wagon_tp_long, ((position_in_consist / 3) + 1 == 4) || ((position_in_consist_from_end / 3) + 1 == 4)) {
-    1: spriteset_crh2els_middle_p;
+switch (FEAT_TRAINS, SELF, switch_crh2els_if_middle_ca, vehicle_type_id) {
+    1035: spriteset_crh2els_middle_ca;
     spriteset_crh2els_middle_m;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh2els_if_middle_wagon_tp_short, (position_in_consist / 3) + 1 == (num_vehs_in_consist / 6)) {
-    1: spriteset_crh2els_middle_p;
-    spriteset_crh2els_middle_m;
+switch (FEAT_TRAINS, SELF, switch_crh2els_middle_wagon_tp_long_back, (position_in_consist_from_end / 3) + 1) {
+    4: spriteset_crh2els_middle_p_b;
+    5: spriteset_crh2els_middle_p_a;
+    switch_crh2els_if_middle_ca;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2els_middle_wagon_tp_long_front, (position_in_consist / 3) + 1) {
+    4: spriteset_crh2els_middle_p_a;
+    5: spriteset_crh2els_middle_p_b;
+    switch_crh2els_if_middle_ca;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2els_if_middle_wagon_tp_front_or_back, (position_in_consist / 3) + 1 >= (num_vehs_in_consist / 6)) {
+    1: switch_crh2els_middle_wagon_tp_long_front;
+    switch_crh2els_if_middle_ca;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2els_if_middle_wagon_tp_short, (position_in_consist / 3) + 2 - (num_vehs_in_consist / 6)) {
+    0: spriteset_crh2els_middle_p_a;
+    1: spriteset_crh2els_middle_p_b;
+    switch_crh2els_if_middle_ca;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh2els_length_class, num_vehs_in_consist / 3) {
     2..12: switch_crh2els_if_middle_wagon_tp_short;
-    switch_crh2els_middle_wagon_tp_long;
+    switch_crh2els_if_middle_wagon_tp_front_or_back;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh2els_if_wagon_end, position_in_consist_from_end == 1) {
@@ -152,7 +169,7 @@ item (FEAT_TRAINS, crh2els) {
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2008,12,21);
+        introduction_date:              date(2017,03,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   20;
         track_type:                     SAAA;
@@ -167,13 +184,13 @@ item (FEAT_TRAINS, crh2els) {
         ai_special_flag:                AI_FLAG_PASSENGER;
         cargo_capacity:                 1;
         loading_speed:                  8 << param_loading_speed;
-        cargo_age_period:               240 << param_cargo_decay;
+        cargo_age_period:               640 << param_cargo_decay;
 
         // Stats
         speed:                          250 km/h;
-        power:                          1140 kW;
+        power:                          1200 kW;
         weight:                         51 ton;
-        tractive_effort_coefficient:    0.108;
+        tractive_effort_coefficient:    0.075;
         cost_factor:                    45;
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            50;
@@ -194,7 +211,7 @@ item (FEAT_TRAINS, crh2els) {
         length:                         switch_length_2_8_2;
         cargo_capacity:                 switch_crh2els_head_capacity;
         power:                          return 0;
-        purchase_power:                 return 1529;
+        purchase_power:                 return 1609;
         tractive_effort_coefficient:    return 0;
         cargo_age_period:               12 * 5 * cafedecayfactor() << param_cargo_decay;
         cost_factor:                    50;
@@ -215,7 +232,6 @@ item (FEAT_TRAINS, crh2els) {
         cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
         bitmask_vehicle_info:           switch_crh_wagon_bitmask;
         articulated_part:               switch_crh_wagon_articulated_part;
-/*         cost_factor:                    switch_crh2els_wagon_cost; */
         running_cost_factor:            switch_crh2els_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
     }
     livery_override(zecmuw) {
@@ -229,9 +245,9 @@ item (FEAT_TRAINS, crh2els) {
         cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
         bitmask_vehicle_info:           switch_crh_wagon_bitmask;
         articulated_part:               switch_crh_wagon_articulated_part;
-/*         cost_factor:                    switch_crh2els_wagon_cost; */
+        cargo_age_period:               (800) << param_cargo_decay;//餐车效果
         running_cost_factor:            switch_crh2els_wagon_running() * runningcostfactor() + 50 + accostfactor(); // IT IS A RESTAURANT CAR!
     }
 }
 
-// End crh2els
+// End CRH2ELS
