@@ -65,6 +65,7 @@ sort (FEAT_TRAINS, [
     crh2c,
     crh2e,
     crh2g,
+    crh2els,
     crh3a,
     crh3c,
     crh5a,

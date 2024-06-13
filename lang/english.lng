@@ -683,7 +683,7 @@ STR_CRH2A_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; half of
 STR_CRH2B_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars
 STR_CRH2C_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12
 STR_CRH2E_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars
-STR_CRH2G_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, half of which (ceiling up) are motorised cars
+STR_CRH2G_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12
 STR_CRH3A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
 STR_CRH1A_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars
 STR_CRH1E_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars

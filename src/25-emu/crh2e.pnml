@@ -311,7 +311,7 @@ item (FEAT_TRAINS, crh2e) {
         // Menu
         additional_text:                string(STR_DESC_5, string(STR_CRH_SLEEPER_CAN_ATTACH_WAGON), string(STR_CRH2E_NICKNAME), string(STR_RELIABILITY_20), string(STR_CRH2E_CONSIST), string(STR_CRH2E_HEAD_SEAT));
         can_attach_wagon:               crhsleeperonly;
-        start_stop:                     mu4car;
+        start_stop:                     mu4to24car;
         // Graphics
         default:                        switch_crh2e_graphics;
         purchase:                       spriteset_crh2e_purchase_original;

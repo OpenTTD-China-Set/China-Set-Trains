@@ -664,18 +664,18 @@ STR_HXN3QZ_CONSIST                  :{BLACK}构成：{GOLD}2-4节重联
 STR_DF11G_CONSIST                   :{BLACK}构成：{GOLD}两节重联 (普通)，或一节在头部提供动力，另一节在尾部供电 (“拆猪”，最高速度 120 km/h, 功率 4133 公制马力)
 STR_NDJ3_CONSIST                    :{BLACK}构成：{GOLD}头尾各一节，中间加挂至少四节车厢
 STR_NZJ1_XINSHUGUANG_CONSIST        :{BLACK}构成：{GOLD}头尾各一节，中间加挂至少四节车厢
-STR_JINLUN_LOCOMOTIVE_CONSIST       :{BLACK}构成：{GOLD}头尾各一节，仅可挂载"{BLUE}金{WHITE}轮{RED}号{RED}"25DT车厢
+STR_JINLUN_LOCOMOTIVE_CONSIST       :{BLACK}构成：{GOLD}头尾各一节，仅可挂载"{BLUE}金{WHITE}轮{RED}号{GOLD}"25DT车厢
 STR_DJJ1_CONSIST                    :{BLACK}构成：{GOLD}头部一节，或头尾各一节，中间加挂至少四节车厢
 STR_CRH5A_CONSIST                   :{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车 1495 公制马力
 STR_CR400AF_CONSIST                 :{BLACK}构成：{GOLD}5-17节； n 节构成中动力车节数为 int(n/2) ，拖车节数为 int((n+1)/2)
 STR_CR400BF_CONSIST                 :{BLACK}构成：{GOLD}5-17节； n 节构成中动力车节数为 int(n/2) ，拖车节数为 int((n+1)/2)
 STR_CR200J_CONSIST                  :{BLACK}构成：{GOLD}4-24节：动力车头部一节，或头尾各一节；当有两辆机车时节数超过11将重联运行
 STR_CR200JL_CONSIST                 :{BLACK}构成：{GOLD}4-24节：动力车头尾各一节
-STR_CRH2A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，半数车厢为动力车
-STR_CRH2B_CONSIST                   :{BLACK}构成：{GOLD}至少4节，半数车厢为动力车
-STR_CRH2C_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾拖车，中间全为动力车
-STR_CRH2E_CONSIST                   :{BLACK}构成：{GOLD}至少4节，半数车厢为动力车
-STR_CRH2G_CONSIST                   :{BLACK}构成：{GOLD}至少4节，半数 (向上取整) 车厢为动力车
+STR_CRH2A_CONSIST                   :{BLACK}构成：{GOLD}4-24节：半数车厢为动力车。大于12节时以重联方式运行
+STR_CRH2B_CONSIST                   :{BLACK}构成：{GOLD}4-24节：半数车厢为动力车
+STR_CRH2C_CONSIST                   :{BLACK}构成：{GOLD}4-24节：头尾拖车，中间全为动力车。大于12节时以重联方式运行
+STR_CRH2E_CONSIST                   :{BLACK}构成：{GOLD}4-24节：半数车厢为动力车
+STR_CRH2G_CONSIST                   :{BLACK}构成：{GOLD}4-24节：半数 (向上取整) 车厢为动力车。大于12节时以重联方式运行
 STR_CRH1A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为5M3T，16节标准编组为10M6T
 STR_CRH1E_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为5M3T，16节标准编组为10M6T
 STR_CRH3A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
@@ -684,12 +684,12 @@ STR_CRH380A_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾拖�
 STR_CRH380AL_CONSIST                :{BLACK}构成：{GOLD}8-24节；头尾拖车，中间全为动力车
 STR_CRH380B_CONSIST                 :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
 STR_CRH380CL_CONSIST                :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
-STR_CRH380D_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行。
+STR_CRH380D_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行
 STR_CRH6A2_CONSIST                  :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
 STR_CRH6A3_CONSIST                  :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
 STR_CRH6AA_CONSIST                  :{BLACK}构成：{GOLD}4节固定编组 (Mc-Tp-Tp-Mc)，可重联
 STR_CRH6F_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
-STR_CR300BF_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行。
+STR_CR300BF_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行
 
 STR_CRH1A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CRH1E_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
