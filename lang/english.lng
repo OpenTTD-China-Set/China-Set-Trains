@@ -683,6 +683,7 @@ STR_CRH5A_CONSIST                   :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 
 STR_CR400AF_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars; all middle cars motorised expect cab and pantograph. Will run as coupled when cars more than 12
 STR_CR400AFAB_CONSIST               :{BLACK}Consist: {GOLD}4 to 24 cars; all middle cars motorised expect cab and pantograph
 STR_CR400BF_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars; all middle cars motorised expect cab and pantograph. Will run as coupled when cars more than 12
+STR_CR400BFAB_CONSIST               :{BLACK}Consist: {GOLD}4 to 24 cars; all middle cars motorised expect cab and pantograph
 STR_CR200J_CONSIST                  :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, with wagons attached; or one section at front, another section at back. Will run as coupled when cars more than 12
 STR_CR200JL_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, another section at back. 
 STR_CRH2A_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12

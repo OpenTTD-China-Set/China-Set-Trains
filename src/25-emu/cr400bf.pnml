@@ -265,7 +265,7 @@ item (FEAT_TRAINS, cr400bf) {
 
         // Stats
         speed:                          350 km/h;
-        power:                          9750/4 kW;
+        power:                          2535 kW;
         weight:                         58 ton;
         tractive_effort_coefficient:    0.119;
         cost_factor:                    89;
