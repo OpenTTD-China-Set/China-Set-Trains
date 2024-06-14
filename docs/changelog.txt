@@ -5,9 +5,18 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.0.163 (14/6/2024)
+--------------------
+Completed the CRH2 Series:
+    - Increase CRH2A, CRH2C, CRh2G
+    - Add CRH2B, CRH2E, CRH2E(Longitudinal Sleeper)
+Fix: power of EMUs
+
+
 0.3.0.161 & 162 (10/6/2024)
 --------------------
 Add: purchase menu variants
+Add: CRH380D
 Remove: some subtypes of DF4 series and other locomotives (legacy of DF43110)
 Remove: DF4BNB an DFH7B
 Simplify code of running costs
