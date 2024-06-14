@@ -215,6 +215,7 @@ STR_NAME_CRH2B          :CRH2B (Long Version) (EMU)
 STR_NAME_CRH2C          :CRH2C (EMU)
 STR_NAME_CRH2E          :CRH2E (EMU)
 STR_NAME_CRH2G          :CRH2G (EMU)
+STR_NAME_CRH2ELS        :CRH2E (Longitudinal Sleeper) (EMU)
 STR_NAME_CRH3A          :CRH3A (EMU)
 STR_NAME_CRH3C          :CRH3C (EMU)
 STR_NAME_CRH5A          :CRH5A (EMU)
@@ -663,6 +664,7 @@ STR_DJJ1_CAN_ATTACH_WAGON               :{BLACK}Matching Wagons: Only {GOLD}ZY{B
 STR_CR200J_CAN_ATTACH_WAGON             :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, WE, WY, WG
 STR_CRH_CAN_ATTACH_WAGON                :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC
 STR_CRH_SLEEPER_CAN_ATTACH_WAGON        :{BLACK}Matching Wagons: {GOLD}ZE, WY, WG, ZEC
+STR_CRH_LSLEEPER_CAN_ATTACH_WAGON       :{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)
 STR_CRH6A2_CAN_ATTACH_WAGON             :{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: 160), {GOLD}ZY
 STR_CRH6A3_CAN_ATTACH_WAGON             :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: 160
 STR_CRH6F_CAN_ATTACH_WAGON              :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places (Crowded), Comfort: 120
@@ -706,6 +708,7 @@ STR_CRH2B_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
 STR_CRH2C_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
 STR_CRH2E_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
 STR_CRH2G_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH2ELS_HEAD_SEAT               :{BLACK}Head Seat: {GOLD}1st-Class Sleeprt (WY)
 STR_CRH3A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH3C_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
 STR_CRH5A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)

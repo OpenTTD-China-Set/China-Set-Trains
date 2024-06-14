@@ -217,6 +217,7 @@ STR_NAME_CRH2B          :CRH2B (长编组) (电力动车)
 STR_NAME_CRH2C          :CRH2C (电力动车)
 STR_NAME_CRH2E          :CRH2E (电力动车)
 STR_NAME_CRH2G          :CRH2G (电力动车)
+STR_NAME_CRH2ELS        :CRH2E (纵向卧铺) (电力动车)
 STR_NAME_CRH3A          :CRH3A (电力动车)
 STR_NAME_CRH3C          :CRH3C (电力动车)
 STR_NAME_CRH5A          :CRH5A (电力动车)
@@ -655,6 +656,7 @@ STR_DJJ1_CAN_ATTACH_WAGON               :{BLACK}匹配的车厢：仅有{GOLD}�
 STR_CR200J_CAN_ATTACH_WAGON             :{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
 STR_CRH_CAN_ATTACH_WAGON                :{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
 STR_CRH_SLEEPER_CAN_ATTACH_WAGON        :{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造
+STR_CRH_LSLEEPER_CAN_ATTACH_WAGON        :{BLACK}匹配的车厢：{GOLD}一等卧、二等/餐车合造 (实为软卧/餐车合造车)
 STR_CRH6A2_CAN_ATTACH_WAGON             :{BLACK}匹配的车厢：{GOLD}二等座{BLACK} (带站席，舒适度：160)、{GOLD}一等座
 STR_CRH6A3_CAN_ATTACH_WAGON             :{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：160
 STR_CRH6F_CAN_ATTACH_WAGON              :{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：120
@@ -676,6 +678,7 @@ STR_CRH2B_CONSIST                   :{BLACK}构成：{GOLD}4-24节：半数车�
 STR_CRH2C_CONSIST                   :{BLACK}构成：{GOLD}4-24节：头尾拖车，中间全为动力车。大于12节时以重联方式运行
 STR_CRH2E_CONSIST                   :{BLACK}构成：{GOLD}4-24节：半数车厢为动力车
 STR_CRH2G_CONSIST                   :{BLACK}构成：{GOLD}4-24节：半数 (向上取整) 车厢为动力车。大于12节时以重联方式运行
+STR_CRH2ELS_CONSIST                 :{BLACK}构成：{GOLD}4-24节：半数车厢为动力车
 STR_CRH1A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为5M3T，16节标准编组为10M6T
 STR_CRH1E_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为5M3T，16节标准编组为10M6T
 STR_CRH3A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
@@ -698,6 +701,7 @@ STR_CRH2B_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
 STR_CRH2C_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
 STR_CRH2E_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
 STR_CRH2G_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
+STR_CRH2ELS_HEAD_SEAT               :{BLACK}头车座席：{GOLD}动卧
 STR_CRH3A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CRH3C_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
 STR_CRH5A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座

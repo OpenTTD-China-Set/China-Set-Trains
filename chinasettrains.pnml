@@ -230,6 +230,7 @@
 #include "src/25-emu/crh2b.pnml"
 #include "src/25-emu/crh2c.pnml"
 #include "src/25-emu/crh2e.pnml"
+#include "src/25-emu/crh2els.pnml"
 #include "src/25-emu/crh2g.pnml"
 #include "src/25-emu/crh3c.pnml"
 #include "src/25-emu/crh3a.pnml"

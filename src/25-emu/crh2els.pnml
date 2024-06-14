@@ -19,10 +19,10 @@ spriteset (spriteset_crh2els_middle_ca, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 }
 
 spriteset (spriteset_crh2els_middle_p_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh2els-p-a")
+    template_standard ("25-emu", "crh2els-tp-a")
 }
 spriteset (spriteset_crh2els_middle_p_b, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh2els-p-b")
+    template_standard ("25-emu", "crh2els-tp-b")
 }
 spriteset (spriteset_crh2els_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh2els-c")
@@ -62,9 +62,9 @@ switch (FEAT_TRAINS, SELF, switch_crh2els_middle_wagon_tp_long_front, (position_
     switch_crh2els_if_middle_ca;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh2els_if_middle_wagon_tp_front_or_back, (position_in_consist / 3) + 1 >= (num_vehs_in_consist / 6)) {
+switch (FEAT_TRAINS, SELF, switch_crh2els_if_middle_wagon_tp_front_or_back, (position_in_consist / 3) + 1 <= (num_vehs_in_consist / 6)) {
     1: switch_crh2els_middle_wagon_tp_long_front;
-    switch_crh2els_if_middle_ca;
+    switch_crh2els_middle_wagon_tp_long_back;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh2els_if_middle_wagon_tp_short, (position_in_consist / 3) + 2 - (num_vehs_in_consist / 6)) {
@@ -194,12 +194,12 @@ item (FEAT_TRAINS, crh2els) {
         cost_factor:                    45;
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            50;
-        reliability_decay:              20;
+        reliability_decay:              12;
         bitmask_vehicle_info:           bitmask(2);
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_CRH_LSLEEPER_CAN_ATTACH_WAGON), string(STR_CRH2ELS_NICKNAME), string(STR_RELIABILITY_20), string(STR_CRH2ELS_CONSIST), string(STR_CRH2ELS_HEAD_SEAT));
+        additional_text:                string(STR_DESC_5, string(STR_CRH_LSLEEPER_CAN_ATTACH_WAGON), string(STR_CRH2G_NICKNAME), string(STR_RELIABILITY_12), string(STR_CRH2E_CONSIST), string(STR_CRH2ELS_HEAD_SEAT));
         can_attach_wagon:               crh_wagons_longitudinal_sleeper;
         start_stop:                     mu4car;
         // Graphics
@@ -242,7 +242,6 @@ item (FEAT_TRAINS, crh2els) {
         length:                         switch_crh2els_wagon_length;
         weight:                         51;
         can_attach_wagon:               muhead;
-        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
         bitmask_vehicle_info:           switch_crh_wagon_bitmask;
         articulated_part:               switch_crh_wagon_articulated_part;
         cargo_age_period:               (800) << param_cargo_decay;//餐车效果
