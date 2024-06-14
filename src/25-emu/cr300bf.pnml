@@ -306,7 +306,7 @@ item (FEAT_TRAINS, cr300bf) {
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2020,09,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
-        vehicle_life:                   35;
+        vehicle_life:                   30;
         track_type:                     SAAA;
 
         // Cargo

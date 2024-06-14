@@ -4,12 +4,12 @@
 
 // Purchase Menu
 spriteset (spriteset_cr400bf_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("25-emu", "cr400bf-c")
+    template_purchase ("25-emu", "cr400bf-tc")
 }
 
 // Vehicle
 spriteset (spriteset_cr400bf_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr400bf-c")
+    template_standard ("25-emu", "cr400bf-tc")
 }
 spriteset (spriteset_cr400bf_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr400bf-m")
@@ -21,7 +21,7 @@ spriteset (spriteset_cr400bf_middle_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr400bf-tp")
 }
 spriteset (spriteset_cr400bf_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr400bf-c")
+    template_reversed ("25-emu", "cr400bf-tc")
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_articulated_part, extra_callback_info1) {

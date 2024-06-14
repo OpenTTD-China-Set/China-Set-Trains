@@ -517,6 +517,7 @@ STR_RELIABILITY_10                  :{BLACK}可靠性下降速度：{GOLD}10
 STR_RELIABILITY_8                   :{BLACK}可靠性下降速度：{GOLD}8
 STR_RELIABILITY_6                   :{BLACK}可靠性下降速度：{GOLD}6
 STR_RELIABILITY_5                   :{BLACK}可靠性下降速度：{GOLD}5
+STR_RELIABILITY_3                   :{BLACK}可靠性下降速度：{GOLD}3
 
 STR_310_KMH             : - 最高速度 310 km/h
 STR_350_KMH             : - 最高速度 350 km/h，运营费用增加

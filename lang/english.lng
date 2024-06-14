@@ -522,6 +522,7 @@ STR_RELIABILITY_10                  :{BLACK}Reliability decay speed: {GOLD}10
 STR_RELIABILITY_8                   :{BLACK}Reliability decay speed: {GOLD}8
 STR_RELIABILITY_6                   :{BLACK}Reliability decay speed: {GOLD}6
 STR_RELIABILITY_5                   :{BLACK}Reliability decay speed: {GOLD}5
+STR_RELIABILITY_3                   :{BLACK}Reliability decay speed: {GOLD}3
 
 STR_310_KMH             : - Max Speed 310 km/h
 STR_350_KMH             : - Max Speed 350 km/h, Running Costs Increase
@@ -677,7 +678,7 @@ STR_JINLUN_LOCOMOTIVE_CONSIST       :{BLACK}Consist: {GOLD}One section at front,
 STR_NDJ3_CONSIST                    :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle
 STR_DJJ1_CONSIST                    :{BLACK}Consist: {GOLD}One section at front, with wagons attached; or one section at front, another section at back. At least 4 wagons
 STR_CRH5A_CONSIST                   :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car
-STR_CR400AF_CONSIST                 :{BLACK}Consist: {GOLD}5 to 17 cars; int(n/2) motorised cars and int((n+1)/2) trailers in an n-car consist.
+STR_CR400AF_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars; all middle cars motorised expect cab and pantograph. Will run as coupled when cars more than 12
 STR_CR400BF_CONSIST                 :{BLACK}Consist: {GOLD}5 to 17 cars; int(n/2) motorised cars and int((n+1)/2) trailers in an n-car consist.
 STR_CR200J_CONSIST                  :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, with wagons attached; or one section at front, another section at back. Will run as coupled when cars more than 12
 STR_CR200JL_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, another section at back. 
@@ -694,12 +695,12 @@ STR_CRH380A_CONSIST                 :{BLACK}Consist: {GOLD}At least 4 cars, with
 STR_CRH380AL_CONSIST                :{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised
 STR_CRH380B_CONSIST                 :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
 STR_CRH380CL_CONSIST                :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
-STR_CRH380D_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars;, all middle cars motorised expect cab and pantograph. Will run as coupled when cars more than 12
+STR_CRH380D_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars; all middle cars motorised expect cab and pantograph. Will run as coupled when cars more than 12
 STR_CRH6A2_CONSIST                  :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
 STR_CRH6A3_CONSIST                  :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
 STR_CRH6AA_CONSIST                  :{BLACK}Consist: {GOLD}Fixed consist of 4 cars (Mc-Tp-Tp-Mc), multiple sections available
 STR_CRH6F_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
-STR_CR300BF_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars;, all middle cars motorised expect cab and pantograph. Will run as coupled when cars more than 12
+STR_CR300BF_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars; all middle cars motorised expect cab and pantograph. Will run as coupled when cars more than 12
 
 STR_CRH1A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH1E_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
