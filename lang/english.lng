@@ -679,7 +679,7 @@ STR_NDJ3_CONSIST                    :{BLACK}Consist: {GOLD}One section at front,
 STR_DJJ1_CONSIST                    :{BLACK}Consist: {GOLD}One section at front, with wagons attached; or one section at front, another section at back. At least 4 wagons
 STR_CRH5A_CONSIST                   :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car
 STR_CR400AF_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars; all middle cars motorised expect cab and pantograph. Will run as coupled when cars more than 12
-STR_CR400BF_CONSIST                 :{BLACK}Consist: {GOLD}5 to 17 cars; int(n/2) motorised cars and int((n+1)/2) trailers in an n-car consist.
+STR_CR400BF_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars; all middle cars motorised expect cab and pantograph. Will run as coupled when cars more than 12
 STR_CR200J_CONSIST                  :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, with wagons attached; or one section at front, another section at back. Will run as coupled when cars more than 12
 STR_CR200JL_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, another section at back. 
 STR_CRH2A_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12

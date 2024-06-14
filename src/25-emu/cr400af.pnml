@@ -616,7 +616,7 @@ switch (FEAT_TRAINS, SELF, switch_cr400af_wagon_power, position_in_consist_from_
 
 
 switch (FEAT_TRAINS, SELF, switch_cr400af_wagon_traction, vehicle_is_potentially_powered) {
-    1: return int(0.129*255);
+    1: return int(0.133*255);
     return 0;
 }
 
@@ -652,10 +652,10 @@ item (FEAT_TRAINS, cr400af) {
         speed:                          350 km/h;
         power:                          9750/4 kW;
         weight:                         54 ton;
-        tractive_effort_coefficient:    0.129;
+        tractive_effort_coefficient:    0.133;
         cost_factor:                    88;
         running_cost_base:              RUNNING_COST_ELECTRIC;
-        running_cost_factor:            30;
+        running_cost_factor:            73;
         reliability_decay:              5;
         bitmask_vehicle_info:           bitmask(2);
     }
@@ -675,7 +675,7 @@ item (FEAT_TRAINS, cr400af) {
         power:                          return 0;
         purchase_power:                 return 3269;
         tractive_effort_coefficient:    return 0;
-        purchase_tractive_effort_coefficient: return int(0.129*255);
+        purchase_tractive_effort_coefficient: return int(0.133*255);
         cargo_age_period:               (20 * 5 * cafedecayfactor()) << param_cargo_decay;
         cost_factor:                    88;
         running_cost_factor:            73 * runningcostfactor() * cafecostfactor() + 20;
