@@ -226,7 +226,9 @@ STR_NAME_CRH380CL       :CRH380CL (EMU)
 STR_NAME_CRH380D        :CRH380D (EMU)
 STR_NAME_CR300BF        :CR300BF (EMU)
 STR_NAME_CR400AF        :CR400AF (EMU)
+STR_NAME_CR400AFAB      :CR400AF-A/B (Long Version) (EMU)
 STR_NAME_CR400BF        :CR400BF (EMU)
+STR_NAME_CR400BFAB      :CR400BF-A/B (Long Version) (EMU)
 STR_NAME_CRH6A2         :CRH6A (2-Door Version) (EMU)
 STR_NAME_CRH6A3         :CRH6A (3-Door Version) (EMU)
 STR_NAME_CRH6AA         :CRH6A-A (Section) (EMU)
@@ -679,6 +681,7 @@ STR_NDJ3_CONSIST                    :{BLACK}Consist: {GOLD}One section at front,
 STR_DJJ1_CONSIST                    :{BLACK}Consist: {GOLD}One section at front, with wagons attached; or one section at front, another section at back. At least 4 wagons
 STR_CRH5A_CONSIST                   :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car
 STR_CR400AF_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars; all middle cars motorised expect cab and pantograph. Will run as coupled when cars more than 12
+STR_CR400AFAB_CONSIST               :{BLACK}Consist: {GOLD}4 to 24 cars; all middle cars motorised expect cab and pantograph
 STR_CR400BF_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars; all middle cars motorised expect cab and pantograph. Will run as coupled when cars more than 12
 STR_CR200J_CONSIST                  :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, with wagons attached; or one section at front, another section at back. Will run as coupled when cars more than 12
 STR_CR200JL_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, another section at back. 
