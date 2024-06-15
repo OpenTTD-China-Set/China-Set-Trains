@@ -5,13 +5,20 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.0.164 (15/6/2024)
+--------------------
+Completed the CR400AF Series:
+    - Increase CR400AF
+    - Add CR400AF-A/B, CR400AF-C/Z/S, CR400AF-AZ/BZ/BS
+Increase CR400BF
+Add: CR400BF-A/B
+
 0.3.0.163 (14/6/2024)
 --------------------
 Completed the CRH2 Series:
     - Increase CRH2A, CRH2C, CRH2G
     - Add CRH2B, CRH2E, CRH2E(Longitudinal Sleeper)
 Fix #44: power of EMUs
-
 
 0.3.0.161 & 162 (10/6/2024)
 --------------------
