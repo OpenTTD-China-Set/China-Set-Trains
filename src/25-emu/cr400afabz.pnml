@@ -291,7 +291,7 @@ item (FEAT_TRAINS, cr400afabz) {
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2017,12,01);
+        introduction_date:              date(2021,05,17);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   35;
         track_type:                     SABA;
