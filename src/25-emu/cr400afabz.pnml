@@ -275,7 +275,7 @@ switch (FEAT_TRAINS, SELF, switch_cr400afabz_wagon_power, position_in_consist_fr
 
 
 switch (FEAT_TRAINS, SELF, switch_cr400afabz_wagon_traction, vehicle_is_potentially_powered) {
-    1: return int(0.133*255);
+    1: return int(0.126*255);
     return 0;
 }
 
