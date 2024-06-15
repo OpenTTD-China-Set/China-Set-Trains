@@ -10,7 +10,7 @@ China Set: Trains Changelog
 Completed the CRH2 Series:
     - Increase CRH2A, CRH2C, CRH2G
     - Add CRH2B, CRH2E, CRH2E(Longitudinal Sleeper)
-Fix: power of EMUs
+Fix #44: power of EMUs
 
 
 0.3.0.161 & 162 (10/6/2024)
