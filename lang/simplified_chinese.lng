@@ -672,10 +672,8 @@ STR_NZJ1_XINSHUGUANG_CONSIST        :{BLACK}构成：{GOLD}头尾各一节，中
 STR_JINLUN_LOCOMOTIVE_CONSIST       :{BLACK}构成：{GOLD}头尾各一节，仅可挂载"{BLUE}金{WHITE}轮{RED}号{GOLD}"25DT车厢
 STR_DJJ1_CONSIST                    :{BLACK}构成：{GOLD}头部一节，或头尾各一节，中间加挂至少四节车厢
 STR_CRH5A_CONSIST                   :{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车 1495 公制马力
-STR_CR400AF_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行
-STR_CR400AFAB_CONSIST               :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车
-STR_CR400BF_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行
-STR_CR400BFAB_CONSIST               :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车
+STR_CR400_CONSIST                   :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行
+STR_CR400_AB_CONSIST                :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车
 STR_CR200J_CONSIST                  :{BLACK}构成：{GOLD}4-24节：动力车头部一节，或头尾各一节；当有两辆机车时节数超过11将重联运行
 STR_CR200JL_CONSIST                 :{BLACK}构成：{GOLD}4-24节：动力车头尾各一节
 STR_CRH2A_CONSIST                   :{BLACK}构成：{GOLD}4-24节：半数车厢为动力车。大于12节时以重联方式运行
@@ -714,8 +712,7 @@ STR_CRH380A_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 STR_CRH380B_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 STR_CRH380CL_HEAD_SEAT              :{BLACK}头车座席：{GOLD}一等座
 STR_CRH380D_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
-STR_CR400BF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
-STR_CR400AF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
+STR_CR400_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CRH6A2_HEAD_SEAT                :{BLACK}头车座席：{GOLD}一等座
 STR_CRH6A3_HEAD_SEAT                :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席，舒适度：160
 STR_CRH6F_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：140

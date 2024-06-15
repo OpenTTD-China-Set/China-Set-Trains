@@ -243,6 +243,7 @@
 #include "src/25-emu/cr300bf.pnml"
 #include "src/25-emu/cr400af.pnml"
 #include "src/25-emu/cr400afab.pnml"
+#include "src/25-emu/cr400afz.pnml"
 #include "src/25-emu/cr400bf.pnml"
 #include "src/25-emu/cr400bfab.pnml"
 #include "src/25-emu/crh6a2.pnml"
