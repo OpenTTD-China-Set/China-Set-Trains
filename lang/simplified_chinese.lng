@@ -226,6 +226,7 @@ STR_NAME_CRH380AL       :CRH380AL (长编组) (电力动车)
 STR_NAME_CRH380B        :CRH380B (电力动车)
 STR_NAME_CRH380CL       :CRH380CL (电力动车)
 STR_NAME_CRH380D        :CRH380D (电力动车)
+STR_NAME_CR300AF        :CR300AF (电力动车)
 STR_NAME_CR300BF        :CR300BF (电力动车)
 STR_NAME_CR400AF        :CR400AF (电力动车)
 STR_NAME_CR400AFAB      :CR400AF-A/B (长编组) (电力动车)
@@ -504,6 +505,7 @@ STR_CRH380CL_NICKNAME               :{BLACK}昵称：{GOLD}大鲨鱼
 STR_CRH380D_NICKNAME                :{BLACK}昵称：{GOLD}疯地铁
 STR_CR400AF_NICKNAME                :{BLACK}昵称：{GOLD}红神龙
 STR_CR400BF_NICKNAME                :{BLACK}昵称：{GOLD}金凤凰
+STR_CR300AF_NICKNAME                :{BLACK}昵称：{LTBLUE}蓝妹妹
 STR_CR300BF_NICKNAME                :{BLACK}昵称：{LTBLUE}“蓝暖男”{GOLD}(官方),，{LTBLUE}“僵尸蓝”{GOLD}(民间)
 
 STR_ALIASNAME_DF                    :{BLACK}别名: {GOLD}巨龙，ND
@@ -699,7 +701,7 @@ STR_CRH6A2_CONSIST                  :{BLACK}构成：{GOLD}至少4节，其中8�
 STR_CRH6A3_CONSIST                  :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
 STR_CRH6AA_CONSIST                  :{BLACK}构成：{GOLD}4节固定编组 (Mc-Tp-Tp-Mc)，可重联
 STR_CRH6F_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
-STR_CR300BF_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行
+STR_CR300_CONSIST                   :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行
 
 STR_CRH1A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CRH1E_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
@@ -721,7 +723,7 @@ STR_CR400_Z_HEAD_SEAT               :{BLACK}头车座席：{GOLD}商务座 (复�
 STR_CRH6A2_HEAD_SEAT                :{BLACK}头车座席：{GOLD}一等座
 STR_CRH6A3_HEAD_SEAT                :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席，舒适度：160
 STR_CRH6F_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：140
-STR_CR300BF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
+STR_CR300_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}机供：{GOLD}是
 STR_ELECTRICITY_SUPPLY_NO           :{BLACK}机供：{RED}否

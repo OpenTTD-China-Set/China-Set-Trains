@@ -353,9 +353,9 @@ item (FEAT_TRAINS, crh380d) {
         purchase_tractive_effort_coefficient: return int(0.114*255);
         cargo_capacity:                 switch_crh380d_head_capacity;
         cargo_age_period:               20 * 5 * cafedecayfactor() << param_cargo_decay;
-        cost_factor:                    85;
-        running_cost_factor:            70 * runningcostfactor() * cafecostfactor() + 20;
-        purchase_running_cost_factor:   300;
+        cost_factor:                    88;
+        running_cost_factor:            73 * runningcostfactor() * cafecostfactor() + 20;
+        purchase_running_cost_factor:   312;
         purchase_cargo_capacity:        65/3;
     }
 

@@ -240,6 +240,7 @@
 #include "src/25-emu/crh380b.pnml"
 #include "src/25-emu/crh380cl.pnml"
 #include "src/25-emu/crh380d.pnml"
+#include "src/25-emu/cr300af.pnml"
 #include "src/25-emu/cr300bf.pnml"
 #include "src/25-emu/cr400af.pnml"
 #include "src/25-emu/cr400afab.pnml"
