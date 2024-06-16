@@ -145,7 +145,7 @@ switch (FEAT_TRAINS, SELF, switch_crh380b_wagon_running, vehicle_is_potentially_
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh380b_wagon_power, position_in_consist % 6) {
-    0..2: return 3127;
+    0..2: return 3084;
     return 0;
 }
 
@@ -167,7 +167,7 @@ item (FEAT_TRAINS, crh380b) {
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2011,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
-        vehicle_life:                   35;
+        vehicle_life:                   25;
         track_type:                     SABA;
 
         // Cargo

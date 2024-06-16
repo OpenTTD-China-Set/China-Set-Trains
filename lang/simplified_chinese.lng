@@ -211,24 +211,36 @@ STR_NAME_CR200JB        :CR200J-B (电力动车)
 STR_NAME_CR200JC        :CR200J-C (电力动车)
 STR_NAME_CR200JCL       :CR200J-C (长编组) (电力动车)
 STR_NAME_CRH1A          :CRH1A (电力动车)
+STR_NAME_CRH1E          :CRH1E (电力动车)
 STR_NAME_CRH2A          :CRH2A (电力动车)
-STR_NAME_CRH3A          :CRH3A (电力动车)
-STR_NAME_CRH5A          :CRH5A (电力动车)
+STR_NAME_CRH2B          :CRH2B (长编组) (电力动车)
 STR_NAME_CRH2C          :CRH2C (电力动车)
+STR_NAME_CRH2E          :CRH2E (电力动车)
+STR_NAME_CRH2G          :CRH2G (电力动车)
+STR_NAME_CRH2ELS        :CRH2E (纵向卧铺) (电力动车)
+STR_NAME_CRH3A          :CRH3A (电力动车)
 STR_NAME_CRH3C          :CRH3C (电力动车)
+STR_NAME_CRH5A          :CRH5A (电力动车)
 STR_NAME_CRH380A        :CRH380A (电力动车)
 STR_NAME_CRH380AL       :CRH380AL (长编组) (电力动车)
 STR_NAME_CRH380B        :CRH380B (电力动车)
+STR_NAME_CRH380CL       :CRH380CL (电力动车)
+STR_NAME_CRH380D        :CRH380D (电力动车)
+STR_NAME_CR300AF        :CR300AF (电力动车)
+STR_NAME_CR300BF        :CR300BF (电力动车)
 STR_NAME_CR400AF        :CR400AF (电力动车)
+STR_NAME_CR400AFAB      :CR400AF-A/B (长编组) (电力动车)
+STR_NAME_CR400AFZ       :CR400AF-C/Z/S (智能动车)
+STR_NAME_CR400AFABZ     :CR400AF-AZ/BZ/BS (智能动车)
 STR_NAME_CR400BF        :CR400BF (电力动车)
+STR_NAME_CR400BFAB      :CR400AF-A/B (长编组) (电力动车)
 STR_NAME_CRH6A2         :CRH6A (二门版) (电力动车)
 STR_NAME_CRH6A3         :CRH6A (三门版) (电力动车)
 STR_NAME_CRH6AA         :CRH6A-A (整节) (电力动车)
 STR_NAME_CRH6F          :CRH6F (电力动车)
-STR_NAME_CRH1E          :CRH1E (电力动车)
-STR_NAME_CRH380CL       :CRH380CL (电力动车)
-STR_NAME_CRH2G          :CRH2G (电力动车)
-STR_NAME_CR300BF        :CR300BF (电力动车)
+
+
+
 
 STR_NAME_ZEMUW          :动车组二等座车厢
 STR_NAME_ZYMUW          :动车组一等座车厢
@@ -445,8 +457,6 @@ STR_DF4C_NICKNAME                   :{BLACK}昵称: {GOLD}蓝猫
 STR_DF4D_NICKNAME                   :{BLACK}昵称: {GOLD}老虎
 STR_DF4D7000_NICKNAME               :{BLACK}昵称: {GOLD}柳州虎
 STR_DF7G_NICKNAME                   :{BLACK}昵称: {GOLD}乞丐
-STR_DFH7_NICKNAME                   :{BLACK}作为厂矿调机运用于鞍山钢铁，性能和DFH7B基本没有区别
-STR_DFH7B_NICKNAME                  :{BLACK}作为厂矿调机运用于攀枝花钢铁，性能和DFH7基本没有区别
 STR_DF8B_NICKNAME                   :{BLACK}昵称: {GOLD}芭比
 STR_DF11_NICKNAME                   :{BLACK}昵称: {GOLD}狮子
 STR_DF11G_NICKNAME                  :{BLACK}昵称: {GOLD}猪
@@ -479,7 +489,9 @@ STR_CR200JC_NICKNAME                :{BLACK}昵称：{RED}“A{WHITE}D{GREEN}桶
 STR_CRH1A_NICKNAME                  :{BLACK}昵称：{GOLD}地铁
 STR_CRH1E_NICKNAME                  :{BLACK}昵称：{GOLD}睡地铁
 STR_CRH2A_NICKNAME                  :{BLACK}昵称：{GOLD}带鱼
+STR_CRH2B_NICKNAME                  :{BLACK}昵称：{GOLD}长带鱼
 STR_CRH2C_NICKNAME                  :{BLACK}昵称：{GOLD}疯带鱼
+STR_CRH2E_NICKNAME                  :{BLACK}昵称：{GOLD}睡带鱼
 STR_CRH2G_NICKNAME                  :{BLACK}昵称: {GOLD}先进黑脸
 STR_CRH3A_NICKNAME                  :{BLACK}昵称：{GOLD}黄金眼
 STR_CRH3C_NICKNAME                  :{BLACK}昵称：{GOLD}兔子
@@ -488,8 +500,10 @@ STR_CRH6F_NICKNAME                  :{BLACK}昵称：{GOLD}真地铁
 STR_CRH380A_NICKNAME                :{BLACK}昵称：{GOLD}大老鼠
 STR_CRH380B_NICKNAME                :{BLACK}昵称：{GOLD}疯兔子
 STR_CRH380CL_NICKNAME               :{BLACK}昵称：{GOLD}大鲨鱼
+STR_CRH380D_NICKNAME                :{BLACK}昵称：{GOLD}疯地铁
 STR_CR400AF_NICKNAME                :{BLACK}昵称：{GOLD}红神龙
 STR_CR400BF_NICKNAME                :{BLACK}昵称：{GOLD}金凤凰
+STR_CR300AF_NICKNAME                :{BLACK}昵称：{LTBLUE}蓝妹妹
 STR_CR300BF_NICKNAME                :{BLACK}昵称：{LTBLUE}“蓝暖男”{GOLD}(官方),，{LTBLUE}“僵尸蓝”{GOLD}(民间)
 
 STR_ALIASNAME_DF                    :{BLACK}别名: {GOLD}巨龙，ND
@@ -507,6 +521,7 @@ STR_RELIABILITY_10                  :{BLACK}可靠性下降速度：{GOLD}10
 STR_RELIABILITY_8                   :{BLACK}可靠性下降速度：{GOLD}8
 STR_RELIABILITY_6                   :{BLACK}可靠性下降速度：{GOLD}6
 STR_RELIABILITY_5                   :{BLACK}可靠性下降速度：{GOLD}5
+STR_RELIABILITY_3                   :{BLACK}可靠性下降速度：{GOLD}3
 
 STR_310_KMH             : - 最高速度 310 km/h
 STR_350_KMH             : - 最高速度 350 km/h，运营费用增加
@@ -646,6 +661,7 @@ STR_DJJ1_CAN_ATTACH_WAGON               :{BLACK}匹配的车厢：仅有{GOLD}�
 STR_CR200J_CAN_ATTACH_WAGON             :{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
 STR_CRH_CAN_ATTACH_WAGON                :{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
 STR_CRH_SLEEPER_CAN_ATTACH_WAGON        :{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造
+STR_CRH_LSLEEPER_CAN_ATTACH_WAGON        :{BLACK}匹配的车厢：{GOLD}一等卧、二等/餐车合造 (实为软卧/餐车合造车)
 STR_CRH6A2_CAN_ATTACH_WAGON             :{BLACK}匹配的车厢：{GOLD}二等座{BLACK} (带站席，舒适度：160)、{GOLD}一等座
 STR_CRH6A3_CAN_ATTACH_WAGON             :{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：160
 STR_CRH6F_CAN_ATTACH_WAGON              :{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：120
@@ -655,16 +671,21 @@ STR_HXN3QZ_CONSIST                  :{BLACK}构成：{GOLD}2-4节重联
 STR_DF11G_CONSIST                   :{BLACK}构成：{GOLD}两节重联 (普通)，或一节在头部提供动力，另一节在尾部供电 (“拆猪”，最高速度 120 km/h, 功率 4133 公制马力)
 STR_NDJ3_CONSIST                    :{BLACK}构成：{GOLD}头尾各一节，中间加挂至少四节车厢
 STR_NZJ1_XINSHUGUANG_CONSIST        :{BLACK}构成：{GOLD}头尾各一节，中间加挂至少四节车厢
-STR_JINLUN_LOCOMOTIVE_CONSIST       :{BLACK}构成：{GOLD}头尾各一节，仅可挂载"{BLUE}金{WHITE}轮{RED}号{RED}"25DT车厢
+STR_JINLUN_LOCOMOTIVE_CONSIST       :{BLACK}构成：{GOLD}头尾各一节，仅可挂载"{BLUE}金{WHITE}轮{RED}号{GOLD}"25DT车厢
 STR_DJJ1_CONSIST                    :{BLACK}构成：{GOLD}头部一节，或头尾各一节，中间加挂至少四节车厢
 STR_CRH5A_CONSIST                   :{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车 1495 公制马力
-STR_CR400AF_CONSIST                 :{BLACK}构成：{GOLD}5-17节； n 节构成中动力车节数为 int(n/2) ，拖车节数为 int((n+1)/2)
-STR_CR400BF_CONSIST                 :{BLACK}构成：{GOLD}5-17节； n 节构成中动力车节数为 int(n/2) ，拖车节数为 int((n+1)/2)
+STR_CR400_CONSIST                   :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行
+STR_CR400_AB_CONSIST                :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车
+STR_CR400_Z_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行。智能动车运行费用更低
+STR_CR400_AB_Z_CONSIST              :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。智能动车运行费用更低
 STR_CR200J_CONSIST                  :{BLACK}构成：{GOLD}4-24节：动力车头部一节，或头尾各一节；当有两辆机车时节数超过11将重联运行
 STR_CR200JL_CONSIST                 :{BLACK}构成：{GOLD}4-24节：动力车头尾各一节
-STR_CRH2A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，半数 (向上取整) 车厢为动力车
-STR_CRH2C_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾拖车，中间全为动力车
-STR_CRH2G_CONSIST                   :{BLACK}构成：{GOLD}至少4节，半数 (向上取整) 车厢为动力车
+STR_CRH2A_CONSIST                   :{BLACK}构成：{GOLD}4-24节：半数车厢为动力车。大于12节时以重联方式运行
+STR_CRH2B_CONSIST                   :{BLACK}构成：{GOLD}4-24节：半数车厢为动力车
+STR_CRH2C_CONSIST                   :{BLACK}构成：{GOLD}4-24节：头尾拖车，中间全为动力车。大于12节时以重联方式运行
+STR_CRH2E_CONSIST                   :{BLACK}构成：{GOLD}4-24节：半数车厢为动力车
+STR_CRH2G_CONSIST                   :{BLACK}构成：{GOLD}4-24节：半数 (向上取整) 车厢为动力车。大于12节时以重联方式运行
+STR_CRH2ELS_CONSIST                 :{BLACK}构成：{GOLD}4-24节：半数车厢为动力车
 STR_CRH1A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为5M3T，16节标准编组为10M6T
 STR_CRH1E_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为5M3T，16节标准编组为10M6T
 STR_CRH3A_CONSIST                   :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
@@ -673,29 +694,34 @@ STR_CRH380A_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾拖�
 STR_CRH380AL_CONSIST                :{BLACK}构成：{GOLD}8-24节；头尾拖车，中间全为动力车
 STR_CRH380B_CONSIST                 :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
 STR_CRH380CL_CONSIST                :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
+STR_CRH380D_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行
 STR_CRH6A2_CONSIST                  :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
 STR_CRH6A3_CONSIST                  :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
 STR_CRH6AA_CONSIST                  :{BLACK}构成：{GOLD}4节固定编组 (Mc-Tp-Tp-Mc)，可重联
 STR_CRH6F_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
-STR_CR300BF_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾拖车，中间全为动力车。大于12节时以重联方式运行。
+STR_CR300_CONSIST                   :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行
 
 STR_CRH1A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CRH1E_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
 STR_CRH2A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
+STR_CRH2B_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
 STR_CRH2C_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
+STR_CRH2E_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
 STR_CRH2G_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
+STR_CRH2ELS_HEAD_SEAT               :{BLACK}头车座席：{GOLD}动卧
 STR_CRH3A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CRH3C_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座
 STR_CRH5A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CRH380A_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 STR_CRH380B_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
 STR_CRH380CL_HEAD_SEAT              :{BLACK}头车座席：{GOLD}一等座
-STR_CR400BF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
-STR_CR400AF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
+STR_CRH380D_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
+STR_CR400_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
+STR_CR400_Z_HEAD_SEAT               :{BLACK}头车座席：{GOLD}商务座 (复兴号智能动车组标准)
 STR_CRH6A2_HEAD_SEAT                :{BLACK}头车座席：{GOLD}一等座
 STR_CRH6A3_HEAD_SEAT                :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席，舒适度：160
 STR_CRH6F_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：140
-STR_CR300BF_HEAD_SEAT               :{BLACK}头车座席：{GOLD}一等座
+STR_CR300_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 
 STR_ELECTRICITY_SUPPLY_YES          :{BLACK}机供：{GOLD}是
 STR_ELECTRICITY_SUPPLY_NO           :{BLACK}机供：{RED}否

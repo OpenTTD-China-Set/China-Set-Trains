@@ -144,7 +144,7 @@ item (FEAT_TRAINS, cr200jcl) {
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2022,12,01);
+        introduction_date:              date(2023,11,08);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
         track_type:                     SACA;

@@ -186,7 +186,7 @@ switch (FEAT_TRAINS, SELF, switch_crh380al_wagon_running, vehicle_is_potentially
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh380al_wagon_power, (position_in_consist < 3) || (position_in_consist_from_end < 3)) {
-    0: return 2067; // 2067 HP = 1520 KW
+    0: return 2038; // 2038 HP = 1520 KW
     return 0;
 }
 
@@ -209,7 +209,7 @@ item (FEAT_TRAINS, crh380al) {
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2010,10,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
-        vehicle_life:                   35;
+        vehicle_life:                   25;
         track_type:                     SAAA;
 
         // Cargo
@@ -251,7 +251,7 @@ item (FEAT_TRAINS, crh380al) {
         length:                         switch_length_2_8_2;
         speed:                          switch_crh380_speed;
         power:                          return 0;
-        purchase_power:                 return 2067; // HP
+        purchase_power:                 return 2038; // HP
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.083*255);
         cargo_capacity:                 switch_crh380al_head_capacity;
