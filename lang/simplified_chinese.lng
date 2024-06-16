@@ -37,7 +37,7 @@ STR_USED_WITH_DYNAMIC_ENGINES       :请切换至控制台模式, 键入 "settin
 STR_NAME_YZ22           :YZ22 (客车)
 STR_NAME_RZ22           :RZ22 (客车)
 STR_NAME_YW22           :YW22 (客车) (早期型)
-STR_NAME_YW22           :YW22 (客车) (后期型)
+STR_NAME_YW221966       :YW22 (客车) (后期型)
 STR_NAME_RW22           :RW22 (客车)
 STR_NAME_YZ22AIRCON     :YZ22 (客车) (加装空调)
 STR_NAME_RZ22AIRCON     :RZ22 (客车) (加装空调)
