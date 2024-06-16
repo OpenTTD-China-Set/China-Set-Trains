@@ -36,7 +36,8 @@ STR_USED_WITH_DYNAMIC_ENGINES       :请切换至控制台模式, 键入 "settin
 
 STR_NAME_YZ22           :YZ22 (客车)
 STR_NAME_RZ22           :RZ22 (客车)
-STR_NAME_YW22           :YW22 (客车)
+STR_NAME_YW22           :YW22 (客车) (早期型)
+STR_NAME_YW22           :YW22 (客车) (后期型)
 STR_NAME_RW22           :RW22 (客车)
 STR_NAME_YZ22AIRCON     :YZ22 (客车) (加装空调)
 STR_NAME_RZ22AIRCON     :RZ22 (客车) (加装空调)
@@ -404,7 +405,7 @@ STR_CRH6AA_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{GOLD}珠三
 STR_CRH6F_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{GOLD}珠三角城际，金山铁路，萧甬铁路
 
 STR_22_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，武汉铁路技术学院涂装 (仅客车)，龙庆峡号{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装、{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，广九直通车涂装 (仅XL22，UZ22)
-STR_22AIRCON_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{GOLD}京沪直达特快{CREAM}奶油色-{BROWN}-棕红色、{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，广九直通车涂装, 
+STR_22AIRCON_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{GOLD}京沪直达特快{CREAM}奶油色-{BROWN}-棕红色、{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，广九直通车涂装,
 STR_22B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装
 STR_25B_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{BLUE}集{RED}通{WHITE}铁{BLUE}路{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_RW25B_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
@@ -606,10 +607,12 @@ STR_ZHUSANJIAO_BLUE     : - 珠三角城际涂装(蓝)
 STR_ZHUSANJIAO_ORANGE   : - 珠三角城际涂装(橙)
 STR_JINSHAN             : - 金山铁路涂装
 STR_GUANGQING           : - 广清城际涂装
-STR_FOSHAN              : - 佛肇城际涂装 
+STR_FOSHAN              : - 佛肇城际涂装
 STR_XIAOYONG            : - 萧甬铁路涂装
 
 STR_JINLUN_25DT         :{BLUE}金{WHITE}轮{RED}号{GOLD}内燃动车组所使用的拖车
+
+STR_COMFORT             :{BLACK}舒适度：{GOLD}{COMMA}
 
 STR_COMFORT_108         :{BLACK}舒适度：{GOLD}108
 STR_COMFORT_144         :{BLACK}舒适度：{GOLD}144
@@ -619,8 +622,6 @@ STR_COMFORT_256         :{BLACK}舒适度：{GOLD}256
 STR_COMFORT_288         :{BLACK}舒适度：{GOLD}288
 STR_COMFORT_320         :{BLACK}舒适度：{GOLD}320
 STR_COMFORT_384         :{BLACK}舒适度：{GOLD}384
-
-STR_COMFORT_YW22        :{BLACK}舒适度：{GOLD}240{BLACK}，1966年起可改装为定员60，舒适度288
 
 STR_COMFORT_144_CAFE    :{BLACK}舒适度：{GOLD}144{BLACK}，但由于餐车作用，运营时至少为180
 STR_COMFORT_160_CAFE    :{BLACK}舒适度：{GOLD}160{BLACK}，但由于餐车作用，运营时至少为200
@@ -674,10 +675,10 @@ STR_NZJ1_XINSHUGUANG_CONSIST        :{BLACK}构成：{GOLD}头尾各一节，中
 STR_JINLUN_LOCOMOTIVE_CONSIST       :{BLACK}构成：{GOLD}头尾各一节，仅可挂载"{BLUE}金{WHITE}轮{RED}号{GOLD}"25DT车厢
 STR_DJJ1_CONSIST                    :{BLACK}构成：{GOLD}头部一节，或头尾各一节，中间加挂至少四节车厢
 STR_CRH5A_CONSIST                   :{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车 1495 公制马力
-STR_CR400_CONSIST                   :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行
-STR_CR400_AB_CONSIST                :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车
-STR_CR400_Z_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行。智能动车运行费用更低
-STR_CR400_AB_Z_CONSIST              :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。智能动车运行费用更低
+STR_CR400_CONSIST                   :{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 T-M-T-M-M-T-M-T。大于12节时以重联方式运行
+STR_CR400_AB_CONSIST                :{BLACK}构成：{GOLD}4-24节；16 节标准编组时为 2*(T-M-T-M-M-T-M-T)
+STR_CR400_Z_CONSIST                 :{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 T-M-T-M-M-T-M-T。大于12节时以重联方式运行。智能动车运行费用更低
+STR_CR400_AB_Z_CONSIST              :{BLACK}构成：{GOLD}4-24节；16 节标准编组时为 2*(T-M-T-M-M-T-M-T)。智能动车运行费用更低
 STR_CR200J_CONSIST                  :{BLACK}构成：{GOLD}4-24节：动力车头部一节，或头尾各一节；当有两辆机车时节数超过11将重联运行
 STR_CR200JL_CONSIST                 :{BLACK}构成：{GOLD}4-24节：动力车头尾各一节
 STR_CRH2A_CONSIST                   :{BLACK}构成：{GOLD}4-24节：半数车厢为动力车。大于12节时以重联方式运行
@@ -694,12 +695,12 @@ STR_CRH380A_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾拖�
 STR_CRH380AL_CONSIST                :{BLACK}构成：{GOLD}8-24节；头尾拖车，中间全为动力车
 STR_CRH380B_CONSIST                 :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
 STR_CRH380CL_CONSIST                :{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
-STR_CRH380D_CONSIST                 :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行
+STR_CRH380D_CONSIST                 :{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 M-T-M-T-T-M-T-M。大于12节时以重联方式运行
 STR_CRH6A2_CONSIST                  :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
 STR_CRH6A3_CONSIST                  :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
 STR_CRH6AA_CONSIST                  :{BLACK}构成：{GOLD}4节固定编组 (Mc-Tp-Tp-Mc)，可重联
 STR_CRH6F_CONSIST                   :{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
-STR_CR300_CONSIST                   :{BLACK}构成：{GOLD}4-24节；头尾及带受电弓车拖车，其余为动力车。大于12节时以重联方式运行
+STR_CR300_CONSIST                   :{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 T-M-T-M-M-T-M-T。大于12节时以重联方式运行
 
 STR_CRH1A_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}一等座
 STR_CRH1E_HEAD_SEAT                 :{BLACK}头车座席：{GOLD}二等座

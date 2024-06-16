@@ -5,7 +5,31 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
-0.3.0.160 (?/6/2024)
+0.3.0.164 (16/6/2024)
+--------------------
+Completed the CR400AF Series:
+    - Refurbish CR400AF
+    - Add CR400AF-A/B, CR400AF-C/Z/S, CR400AF-AZ/BZ/BS
+Refurbish: CR400BF
+Add: CR400BF-A/B, CR300AF
+
+0.3.0.163 (14/6/2024)
+--------------------
+Completed the CRH2 Series:
+    - Refurbish CRH2A, CRH2C, CRH2G
+    - Add CRH2B, CRH2E, CRH2E (Longitudinal Sleeper)
+Fix #44: power of EMUs
+
+0.3.0.161 & 162 (10/6/2024)
+--------------------
+Add: purchase menu variants
+Add: CRH380D
+Refurbish: CR200J Series
+Remove: some subtypes of DF4 series and other locomotives (legacy of DF43110)
+Remove: DF4BNB and DFH7B
+Simplify code of running costs
+
+0.3.0.160 (1/6/2024)
 --------------------
 GRF code optimisation
 
