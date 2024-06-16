@@ -42,8 +42,7 @@ spriteset (spriteset_cr200ja_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_
 }
 
 switch (FEAT_TRAINS, SELF, cr200jawagon, vehicle_type_id) {
-    1024..1037: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1039: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024..1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     9216: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     return CB_RESULT_ATTACH_DISALLOW;
 }
@@ -345,7 +344,7 @@ item (FEAT_TRAINS, cr200ja) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_CR200J_CAN_ATTACH_WAGON), string(STR_CR200J_NICKNAME), string(STR_RELIABILITY_20), string(STR_CR200J_CONSIST));
+        additional_text:                string(STR_DESC_4, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CR200J_NICKNAME), string(STR_RELIABILITY_20), string(STR_CR200J_CONSIST));
         can_attach_wagon:               cr200jawagon;
         start_stop:                     mu4car;
         // Graphics

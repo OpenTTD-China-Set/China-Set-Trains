@@ -31,8 +31,7 @@ spriteset (spriteset_cr200jc_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_
 }
 
 switch (FEAT_TRAINS, SELF, cr200jcwagon, vehicle_type_id) {
-    1024..1037: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1039: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024..1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     9237: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     return CB_RESULT_ATTACH_DISALLOW;
 }
@@ -271,7 +270,7 @@ item (FEAT_TRAINS, cr200jc) {
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2022,12,01);
+        introduction_date:              date(2022,12,12);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
         track_type:                     SACA;
@@ -301,7 +300,7 @@ item (FEAT_TRAINS, cr200jc) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_CR200J_CAN_ATTACH_WAGON), string(STR_CR200JC_NICKNAME), string(STR_RELIABILITY_8), string(STR_CR200J_CONSIST));
+        additional_text:                string(STR_DESC_4, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CR200JC_NICKNAME), string(STR_RELIABILITY_8), string(STR_CR200J_CONSIST));
         can_attach_wagon:               cr200jcwagon;
         start_stop:                     switch_cr200jc_start_stop;
 
