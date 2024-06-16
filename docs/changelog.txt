@@ -5,6 +5,14 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.0.166 (16/6/2024)
+--------------------
+Fix #46: CRH2E (Longitudinal Sleeper) capacity
+
+0.3.0.165 (16/6/2024)
+--------------------
+Fix #45: Simplified Chinese language file unattached
+
 0.3.0.164 (16/6/2024)
 --------------------
 Completed the CR400AF Series:

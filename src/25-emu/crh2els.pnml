@@ -94,8 +94,8 @@ switch (FEAT_TRAINS, SELF, switch_crh2els_wagon_length, position_in_consist_from
 
 
 switch (FEAT_TRAINS, SELF, switch_crh2els_middle_capacity_1, vehicle_type_id) {
-    1035: return 30;
-    1037: return 40;
+    1035: return 20;
+    1037: return 60;
     return 0;
 }
 
@@ -105,8 +105,8 @@ switch (FEAT_TRAINS, SELF, switch_crh2els_middle_capacity, position_in_articulat
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh2els_cab_capacity_1, vehicle_type_id) {
-    1035: return 16;
-    1037: return 32;
+    1035: return 8;
+    1037: return 40;
     return 0;
 }
 
