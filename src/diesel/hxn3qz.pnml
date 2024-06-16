@@ -52,7 +52,7 @@ switch (FEAT_TRAINS, SELF, switch_hxn3qz_graphics_front, position_in_articulated
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_hxn3qz_graphics_split, position_in_consist_from_end) {
+switch (FEAT_TRAINS, SELF, switch_hxn3qz_graphics_split, (position_in_consist_from_end == 1) && (num_vehs_in_consist > 3)) {
     1: switch_hxn3qz_graphics_subtype_back;
     switch_hxn3qz_graphics_front;
 }

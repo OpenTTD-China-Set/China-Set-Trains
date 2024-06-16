@@ -17,29 +17,20 @@ switch (FEAT_TRAINS, SELF, switch_yw22_articulated_part, extra_callback_info1) {
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_yw22_cargo_subtype_pre_1966, cargo_subtype) {
-    0: return string(STR_BUILD_YEAR);
-    1: return string(STR_YW22_ORIGINAL);
-    return CB_RESULT_NO_TEXT;
+switch (FEAT_TRAINS, SELF, switch_yw221966_articulated_part, extra_callback_info1) {
+    1..2: return yw221966;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_yw22_cargo_subtype_post_1966, cargo_subtype) {
-    0..1: switch_yw22_cargo_subtype_pre_1966;
-    2: return string(STR_YW22_1966);
-    3: return string(STR_WRU);
+switch (FEAT_TRAINS, SELF, switch_yw22_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_WRU);
     return CB_RESULT_NO_TEXT;
-}
-
-switch (FEAT_TRAINS, SELF, switch_yw22_cargo_subtype, current_year) {
-    0..1965: switch_yw22_cargo_subtype_pre_1966;
-    switch_yw22_cargo_subtype_post_1966;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw22_graphics_subtype, cargo_subtype) {
     0: spriteset_22_original;
-    1: spriteset_22_original;
-    2: spriteset_22_original;
-    3: spriteset_22_wru;
+    1: spriteset_22_wru;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw22_graphics, position_in_articulated_veh % 3) {
@@ -47,31 +38,14 @@ switch (FEAT_TRAINS, SELF, switch_yw22_graphics, position_in_articulated_veh % 3
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_yw22_capacity_subtype_0, build_year) {
-    0..1965: return 77;
-    return 60;
-}
-
-switch (FEAT_TRAINS, SELF, switch_yw22_capacity_subtype, cargo_subtype) {
-    0: switch_yw22_capacity_subtype_0;
-    1: return 77;
-    return 60;
-}
-
 switch (FEAT_TRAINS, SELF, switch_yw22_capacity, position_in_articulated_veh % 3) {
-    1: switch_yw22_capacity_subtype;
+    1: return 77;
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_yw22_cargo_decay_subtype_0, build_year) {
-    0..1965: return 15 * 4;
-    return 18 * 4;
-}
-
-switch (FEAT_TRAINS, SELF, switch_yw22_cargo_decay, cargo_subtype) {
-    0: switch_yw22_cargo_decay_subtype_0;
-    1: return 15 * 4;
-    return 18 * 4;
+switch (FEAT_TRAINS, SELF, switch_yw221966_capacity, position_in_articulated_veh % 3) {
+    1: return 60;
+    return 0;
 }
 
 
@@ -89,7 +63,7 @@ item (FEAT_TRAINS, yw22) {
         model_life:                     35;
         vehicle_life:                   30;
         track_type:                     SACN;
-        
+
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
@@ -113,7 +87,7 @@ item (FEAT_TRAINS, yw22) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_YW22), string(STR_NO_AIR_CONDITIONER));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT, 300), string(STR_NO_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
 
 
@@ -126,13 +100,76 @@ item (FEAT_TRAINS, yw22) {
         // Stats
         length:                         switch_length_2_7_2;
         cargo_capacity:                 switch_yw22_capacity;
-        cargo_age_period:               (switch_yw22_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        cargo_age_period:               (15 * 4 * cafedecayfactor()) << param_cargo_decay;
         cost_factor:                    10;
         running_cost_factor:            7 * runningcostfactor() * cafecostfactor(); // NO AIR CONDITIONER
         purchase_running_cost_factor:   28;
-        purchase_cargo_capacity:        switch_yw22_capacity_subtype_0() / 3;
+        purchase_cargo_capacity:        77 / 3;
     }
 }
 
 // End YW22
 
+
+// Begin YW221966
+
+item (FEAT_TRAINS, yw221966) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_YW221966);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					2072;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1966,01,01);
+        model_life:                     35;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 66;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               370 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          0 hp;
+        weight:                         45 ton;
+        cost_factor:                    13;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            10;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT, 360), string(STR_NO_AIR_CONDITIONER));
+        can_attach_wagon:               locowagon;
+
+
+        // Graphics
+        default:                        switch_yw22_graphics;
+        purchase:                       spriteset_22_purchase_original;
+        articulated_part:               switch_yw221966_articulated_part;
+        cargo_subtype_text:             switch_yw22_cargo_subtype;
+
+        // Stats
+        length:                         switch_length_2_7_2;
+        cargo_capacity:                 switch_yw221966_capacity;
+        cargo_age_period:               (18 * 4 * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    10;
+        running_cost_factor:            7 * runningcostfactor() * cafecostfactor(); // NO AIR CONDITIONER
+        purchase_running_cost_factor:   28;
+        purchase_cargo_capacity:        60 / 3;
+    }
+}
+
+// End YW221966

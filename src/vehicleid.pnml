@@ -133,6 +133,7 @@ item (FEAT_TRAINS, yw25ml, 2127) {}
 item (FEAT_TRAINS, rw25ml, 2128) {}
 item (FEAT_TRAINS, ca25ml, 2129) {}
 item (FEAT_TRAINS, xl25ml, 2130) {}
+item (FEAT_TRAINS, yw221966, 2131) {}
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 #define id_range_wagons 0x0C00..0x0FFF
@@ -236,7 +237,7 @@ item (FEAT_TRAINS, ss9, 6165) {}
 item (FEAT_TRAINS, ss9g, 6166) {}
 
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
-#define id_range_multi_loco 0x1C00..0x1FFF 
+#define id_range_multi_loco 0x1C00..0x1FFF
 
 
 //DMU, available ID range: 8192-9215 (hex 0x2000..0x23FF)
