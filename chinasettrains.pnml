@@ -212,6 +212,7 @@
 
 
 // DMU
+#include "src/dmu/nc3.pnml"
 #include "src/dmu/ndj3.pnml"
 #include "src/dmu/nzj1_xinshuguang.pnml"
 #include "src/dmu/nzj2_jinlun_unilaminar.pnml"

@@ -1,0 +1,258 @@
+// Begin NC3
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_nc3_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("dmu", "nc3-mc")
+}
+
+// Vehicle
+spriteset (spriteset_nc3_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu", "nc3-mc")
+}
+spriteset (spriteset_nc3_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("dmu", "nc3-t")
+}
+spriteset (spriteset_nc3_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu", "nc3-mc-r")
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_articulated_part, extra_callback_info1) {
+    1..2: return nc3;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_nc3_graphics, position_in_consist % 3) {
+    1: spriteset_nc3_front;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_graphics_1, position_in_consist % 3) {
+    1: spriteset_nc3_middle;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_graphics_2, (position_in_consist / 3) + 1) {
+    4: spriteset_nc3_back;
+    5: spriteset_nc3_front;
+    spriteset_nc3_middle;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_graphics_3, (position_in_consist / 3) + 1) {
+    4: spriteset_nc3_back;
+    5: spriteset_nc3_front;
+    8: spriteset_nc3_back;
+    9: spriteset_nc3_front;
+    spriteset_nc3_middle;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_graphics_4, (position_in_consist / 3) + 1) {
+    4: spriteset_nc3_back;
+    5: spriteset_nc3_front;
+    8: spriteset_nc3_back;
+    9: spriteset_nc3_front;
+    12: spriteset_nc3_back;
+    13: spriteset_nc3_front;
+    spriteset_nc3_middle;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_nc3_wagon_graphics_length, num_vehs_in_consist / 3) {
+    1..5: switch_nc3_graphics_1;
+    6..9: switch_nc3_graphics_2;
+    10..13: switch_nc3_graphics_3;
+    switch_nc3_graphics_4;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_wagon_end, position_in_consist_from_end) {
+    1: spriteset_nc3_back;
+    switch_nc3_wagon_graphics_length;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_wagon_graphics, position_in_consist % 3) {
+    1: switch_nc3_wagon_end;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_wagon_length, position_in_consist_from_end) {
+    switch_length_2_7_2;
+}
+
+//cap
+switch (FEAT_TRAINS, SELF, switch_nc3_head_capacity, position_in_consist % 3) {
+    1: return 78;
+    return 0;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_nc3_cap_1, position_in_consist % 3) {
+    return 78;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_cap_2, (position_in_consist / 3) + 1) {
+    4..5: return 118;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_cap_3, (position_in_consist / 3) + 1) {
+    4..5: return 118;
+    8..9: return 118;
+    return 78;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_cap_4, (position_in_consist / 3) + 1) {
+    4..5: return 118;
+    8..9: return 118;
+    12..13: return 118;
+    return 78;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_nc3_wagon_cap_length, num_vehs_in_consist / 3) {
+    1..5: switch_nc3_cap_1;
+    6..9: switch_nc3_cap_2;
+    10..13: switch_nc3_cap_3;
+    switch_nc3_cap_4;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_ze_capacity_pw, (position_in_consist_from_end / 3) + 1) {
+    1: return 78;
+    switch_nc3_wagon_cap_length;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_nc3_ze_capacity, position_in_consist % 3) {
+    1: switch_nc3_ze_capacity_pw;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_wagon_traction, vehicle_is_potentially_powered) {
+    1: return int(0.094*255);
+    return 0;
+}
+switch (FEAT_TRAINS, SELF, switch_nc3_wagon_weight, vehicle_is_potentially_powered) {
+    1: return 58;
+    return 45;
+}
+//power
+
+/* switch (FEAT_TRAINS, SELF, switch_nc3_wagon_power, ) {
+    1: return 78;
+    return 118;
+} */
+switch (FEAT_TRAINS, SELF, switch_nc3_pw_1, position_in_consist % 3) {
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_pw_2, (position_in_consist / 3) + 1) {
+    4..5: return 493;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_pw_3, (position_in_consist / 3) + 1) {
+    4..5: return 493;
+    8..9: return 493;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_pw_4, (position_in_consist / 3) + 1) {
+    4..5: return 493;
+    8..9: return 493;
+    12..13: return 493;
+    return 0;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_nc3_wagon_pw_length, num_vehs_in_consist / 3) {
+    1..5: switch_nc3_pw_1;
+    6..9: switch_nc3_pw_2;
+    10..13: switch_nc3_pw_3;
+    switch_nc3_pw_4;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nc3_wagon_power, (position_in_consist_from_end / 3) + 1) {
+    1: return 493;
+    switch_nc3_wagon_pw_length;
+}
+
+
+
+item (FEAT_TRAINS, nc3) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_NC3);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1962,01,01);
+        model_life:                     40;
+        vehicle_life:                   25;
+        retire_early:                   15;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          128 km/h;
+        power:                          368 kW;
+        weight:                         58 ton;
+        tractive_effort_coefficient:    0.094;
+        cost_factor:                    37;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            27;
+        reliability_decay:              16;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_NC3_CAN_ATTACH_WAGON), string(STR_NC3_CONSIST), string(STR_HU_IMPORT), string(STR_RELIABILITY_16));
+        can_attach_wagon:               onlyze;
+        start_stop:                     mu2to16car;
+
+        // Graphics
+        default:                        switch_nc3_graphics;
+        purchase:                       spriteset_nc3_purchase_original;
+        articulated_part:               switch_nc3_articulated_part;
+        cargo_capacity:                 switch_nc3_head_capacity;
+
+        // Stats
+        length:                         switch_length_2_7_2;
+        cost_factor:                    37;
+        running_cost_factor:            27 * runningcostfactor();
+        purchase_running_cost_factor:   108;
+        purchase_cargo_capacity:        78/3;
+    }
+
+    // Multiple Unit Wagons
+    livery_override(zemuw) {
+        default:                        switch_nc3_wagon_graphics;
+        cargo_capacity:                 switch_nc3_ze_capacity;
+        length:                         switch_nc3_wagon_length;
+        power:                          switch_nc3_wagon_power;
+        tractive_effort_coefficient:    switch_nc3_wagon_traction;
+        weight:                         switch_nc3_wagon_weight;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (185) << param_cargo_decay;
+        bitmask_vehicle_info:           0;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    16;
+        running_cost_factor:            7 * runningcostfactor() + 2; // WITH AC
+    }
+}
+
+// End Nc3
