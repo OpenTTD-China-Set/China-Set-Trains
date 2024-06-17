@@ -199,6 +199,7 @@ STR_NAME_HXD3C          :HXD3C (Electric)
 STR_NAME_HXD3D          :HXD3D (Electric)
 STR_NAME_FXD1B          :FXD1B (Electric)
 
+STR_NAME_NC3           :NC3 (DMU)
 STR_NAME_NZJ1_XINSHUGUANG           :NZJ1 "Xinshuguang" (DMU)
 STR_NAME_NZJ2_JINLUN_UNILAMINAR     :NZJ2 "Jinlun" (UNILAMINAR) (DMU)
 STR_NAME_NZJ2_JINLUN_DOUBLE_DECKER  :NZJ2 "Jinlun" (DOUBLE DECKER) (DMU)
@@ -381,6 +382,7 @@ STR_FULL_NAME_HXD3D          :{BLACK}Full Name: {GOLD}Hexie/Harmony 3D Electric 
 
 STR_US_IMPORT                :Imported from United States
 STR_FR_IMPORT                :Imported from France
+STR_HU_IMPORT                :Imported from Hungary
 
 STR_DESC_6                          :{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}
 STR_DESC_5                          :{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}
@@ -674,10 +676,12 @@ STR_CRH_LSLEEPER_CAN_ATTACH_WAGON       :{BLACK}Matching Wagons: {GOLD}WY, ZEC(A
 STR_CRH6A2_CAN_ATTACH_WAGON             :{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: 160), {GOLD}ZY
 STR_CRH6A3_CAN_ATTACH_WAGON             :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: 160
 STR_CRH6F_CAN_ATTACH_WAGON              :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places (Crowded), Comfort: 120
+STR_NC3_CAN_ATTACH_WAGON                 :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, Comfort: 185
 
 STR_NJ2_CONSIST                     :{BLACK}Consist: {GOLD}2 to 4 sections
 STR_HXN3QZ_CONSIST                  :{BLACK}Consist: {GOLD}2 to 4 sections
 STR_DF11G_CONSIST                   :{BLACK}Consist: {GOLD}2 sections joint together (Normal), or one section at head, another section at back ("Splitting Pig", max speed 120 km/h, power 4133 hpM)
+STR_NC3_CONSIST                     :{BLACK}Consist: {GOLD}2 to 16 cars; cabs aew powerd
 STR_NZJ1_XINSHUGUANG_CONSIST        :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle
 STR_JINLUN_LOCOMOTIVE_CONSIST       :{BLACK}Consist: {GOLD}One section at front, another section at back. Only can attach "{BLUE}JIN{WHITE}LUN{GOLD}" 25DT Series coaches.
 STR_NDJ3_CONSIST                    :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle

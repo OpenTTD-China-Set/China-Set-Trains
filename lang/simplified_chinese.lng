@@ -201,6 +201,7 @@ STR_NAME_FXD1B          :FXD1B (电力)
 STR_NAME_HXD3C          :HXD3C (电力)
 STR_NAME_HXD3D          :HXD3D (电力)
 
+STR_NAME_NC3            :NC3 (内燃动车)
 STR_NAME_NZJ1_XINSHUGUANG           :NZJ1 "新曙光号" (内燃动车)
 STR_NAME_NZJ2_JINLUN_UNILAMINAR     :NZJ2 "金轮号" (单层) (内燃动车)
 STR_NAME_NZJ2_JINLUN_DOUBLE_DECKER  :NZJ2 "金轮号" (双层) (内燃动车)
@@ -382,6 +383,7 @@ STR_FULL_NAME_FXD1B          :{BLACK}全称：{GOLD}复兴1B型电力机车
 
 STR_US_IMPORT                :美国进口车型
 STR_FR_IMPORT                :法国进口车型
+STR_HU_IMPORT                :匈牙利进口车型
 
 STR_XL25T_SSPE_DESCRIPTION          :{BLACK}新时速运递公司使用的XL25T版本。
 
@@ -662,14 +664,16 @@ STR_DJJ1_CAN_ATTACH_WAGON               :{BLACK}匹配的车厢：仅有{GOLD}�
 STR_CR200J_CAN_ATTACH_WAGON             :{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
 STR_CRH_CAN_ATTACH_WAGON                :{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
 STR_CRH_SLEEPER_CAN_ATTACH_WAGON        :{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造
-STR_CRH_LSLEEPER_CAN_ATTACH_WAGON        :{BLACK}匹配的车厢：{GOLD}一等卧、二等/餐车合造 (实为软卧/餐车合造车)
+STR_CRH_LSLEEPER_CAN_ATTACH_WAGON       :{BLACK}匹配的车厢：{GOLD}一等卧、二等/餐车合造 (实为软卧/餐车合造车)
 STR_CRH6A2_CAN_ATTACH_WAGON             :{BLACK}匹配的车厢：{GOLD}二等座{BLACK} (带站席，舒适度：160)、{GOLD}一等座
 STR_CRH6A3_CAN_ATTACH_WAGON             :{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：160
 STR_CRH6F_CAN_ATTACH_WAGON              :{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：120
+STR_NC3_CAN_ATTACH_WAGON                :{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}，舒适度：185
 
 STR_NJ2_CONSIST                     :{BLACK}构成：{GOLD}2-4节重联
 STR_HXN3QZ_CONSIST                  :{BLACK}构成：{GOLD}2-4节重联
 STR_DF11G_CONSIST                   :{BLACK}构成：{GOLD}两节重联 (普通)，或一节在头部提供动力，另一节在尾部供电 (“拆猪”，最高速度 120 km/h, 功率 4133 公制马力)
+STR_NC3_CONSIST                     :{BLACK}构成：{GOLD}2-16节；控制车带动力
 STR_NDJ3_CONSIST                    :{BLACK}构成：{GOLD}头尾各一节，中间加挂至少四节车厢
 STR_NZJ1_XINSHUGUANG_CONSIST        :{BLACK}构成：{GOLD}头尾各一节，中间加挂至少四节车厢
 STR_JINLUN_LOCOMOTIVE_CONSIST       :{BLACK}构成：{GOLD}头尾各一节，仅可挂载"{BLUE}金{WHITE}轮{RED}号{GOLD}"25DT车厢
