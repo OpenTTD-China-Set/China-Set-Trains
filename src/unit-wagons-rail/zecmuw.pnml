@@ -18,7 +18,7 @@ item (FEAT_TRAINS, zecmuw) {
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(1990,01,01);
+        introduction_date:              date(1950,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
         track_type:                     SAAN;
@@ -62,6 +62,7 @@ item (FEAT_TRAINS, zecmuw) {
         running_cost_factor:            6 * runningcostfactor();
         purchase_running_cost_factor:   36;
         purchase_cargo_capacity:        45/3;
+        visual_effect_and_powered:      return 0;
     }
 }
 

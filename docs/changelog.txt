@@ -48,6 +48,10 @@ GRF code optimisation
 
 ## Initial-0-2 Updates
 
+0.2.3.159 (16/4/2024)
+--------------------
+Add: HXN3, J5, N5
+
 0.2.3.158 (14/4/2024)
 --------------------
 Fix #43: Some language display problems

@@ -681,7 +681,7 @@ STR_NC3_CAN_ATTACH_WAGON                 :{BLACK}Matching Wagons: Only {GOLD}ZE{
 STR_NJ2_CONSIST                     :{BLACK}Consist: {GOLD}2 to 4 sections
 STR_HXN3QZ_CONSIST                  :{BLACK}Consist: {GOLD}2 to 4 sections
 STR_DF11G_CONSIST                   :{BLACK}Consist: {GOLD}2 sections joint together (Normal), or one section at head, another section at back ("Splitting Pig", max speed 120 km/h, power 4133 hpM)
-STR_NC3_CONSIST                     :{BLACK}Consist: {GOLD}2 to 16 cars; cabs aew powerd
+STR_NC3_CONSIST                     :{BLACK}Consist: {GOLD}2 to 16 cars; cabs are powered
 STR_NZJ1_XINSHUGUANG_CONSIST        :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle
 STR_JINLUN_LOCOMOTIVE_CONSIST       :{BLACK}Consist: {GOLD}One section at front, another section at back. Only can attach "{BLUE}JIN{WHITE}LUN{GOLD}" 25DT Series coaches.
 STR_NDJ3_CONSIST                    :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle
@@ -742,5 +742,6 @@ STR_TOO_SHORT                       :TOO SHORT!
 STR_ONLY_TWO_SECTIONS               :This locomotive must be in a consist of two sections to run.
 STR_MUST_BE_4_8_12_16_CARS          :This MU must be in a consist of 4, 8, 12 or 16 cars to run.
 STR_MUST_BE_5_TO_17_CARS            :This MU must be in a consist of 5 to 17 cars to run.
+STR_MUST_BE_2_TO_16_CARS            :This MU must be in a consist of 2 to 16 cars to run.
 STR_MUST_BE_4_TO_24_CARS            :This MU must be in a consist of 4 to 24 cars to run.
 STR_MUST_BE_8_TO_24_CARS            :This MU must be in a consist of 8 to 24 cars to run.
