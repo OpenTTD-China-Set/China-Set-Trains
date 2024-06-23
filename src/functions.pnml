@@ -3,6 +3,11 @@
 
 switch (FEAT_TRAINS, PARENT, func_is_reversed, vehicle_is_reversed) {return;}
 
+switch (FEAT_TRAINS, SELF, switch_dmu_visual_power, vehicle_is_potentially_powered) {
+    1: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 0, ENABLE_WAGON_POWER);
+    visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}
+
 // Running cost factor depending on speed
 
 switch (FEAT_TRAINS, SELF, runningcostfactor, (1 + current_speed * 5 / max_speed)) {return;}
@@ -210,7 +215,7 @@ switch (FEAT_TRAINS, SELF, mu4car, num_vehs_in_consist < 12) {
 // MUs need at least 2 and at most 16 cars to start
 
 switch (FEAT_TRAINS, SELF, mu2to16car, (num_vehs_in_consist < 6) || (num_vehs_in_consist > 48)) {
-    1: return string(STR_MUST_BE_4_TO_24_CARS);
+    1: return string(STR_MUST_BE_2_TO_16_CARS);
     return CB_RESULT_NO_TEXT;
 }
 
