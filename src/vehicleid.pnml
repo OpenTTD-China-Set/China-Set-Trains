@@ -134,6 +134,8 @@ item (FEAT_TRAINS, rw25ml, 2128) {}
 item (FEAT_TRAINS, ca25ml, 2129) {}
 item (FEAT_TRAINS, xl25ml, 2130) {}
 item (FEAT_TRAINS, yw221966, 2131) {}
+// uz25t code by Babel
+item (FEAT_TRAINS, uz25t, 2132) {}
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 #define id_range_wagons 0x0C00..0x0FFF

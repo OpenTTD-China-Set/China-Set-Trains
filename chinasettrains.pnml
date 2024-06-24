@@ -96,6 +96,7 @@
 #include "src/coaches/25t/ca25t.pnml"
 #include "src/coaches/25t/xl25t.pnml"
 #include "src/coaches/25t/xl25t_sspe.pnml"
+#include "src/coaches/25t/uz25t.pnml"
 #include "src/coaches/25t/kd25t.pnml"
 #include "src/coaches/19/rw19t.pnml"
 

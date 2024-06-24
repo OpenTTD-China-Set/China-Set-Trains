@@ -32,6 +32,9 @@ STR_PARAM_STANDARD          :Standard
 STR_PARAM_LONG              :Long
 STR_PARAM_VERY_LONG         :Very Long
 
+STR_PARAM_GAOZULV           :25m Passenger Coaches build after 2014 are {DKGREEN}"Gaozu Geeen"{BLACK} in defeaut
+STR_PARAM_GAOZULV_DESC      :Choose weather to print{DKGREEN} Canarium Green (also called "Gaozu Geeen"){BLACK} to 25m Passenger Coaches build after 2014 in defeaut
+
 STR_USED_WITH_DYNAMIC_ENGINES       :This GRF needs dynamic_engines to be turned on. Open console, and type "setting dynamic_engines 1".
 
 STR_NAME_YZ22           :YZ22 (Passenger Coach)
@@ -96,6 +99,7 @@ STR_NAME_XL25K          :XL25K (Luggage Car)
 STR_NAME_XL25T          :XL25T (Luggage Car)
 STR_NAME_XL25T_SSPE     :XL25T-SSPE (Luggage Car)
 STR_NAME_UZ22           :UZ22 (Luggage Car)
+STR_NAME_UZ25T          :UZ25T (Luggage Car)
 STR_NAME_TZ             :TZ (Air Conditioner Generator Car)
 STR_NAME_TZ2            :TZ2 (Air Conditioner Generator Car)
 STR_NAME_KD25G          :KD25G (Air Conditioner Generator Car)
@@ -309,6 +313,7 @@ STR_FULL_NAME_XL25G          :{BLACK}Full Name: {GOLD}25m Improved Luggage Car
 STR_FULL_NAME_XL25K          :{BLACK}Full Name: {GOLD}25m Rapid Luggage Car
 STR_FULL_NAME_XL25T          :{BLACK}Full Name: {GOLD}25m Accelerated Luggage Car
 STR_FULL_NAME_UZ22           :{BLACK}Full Name: {GOLD}22 Type Railway Post Office
+STR_FULL_NAME_UZ25T          :{BLACK}Full Name: {GOLD}25m Accelerated Railway Post Office
 STR_FULL_NAME_TZ             :{BLACK}Full Name: {GOLD}Special Purpose Car
 STR_FULL_NAME_TZ2            :{BLACK}Full Name: {GOLD}Special Purpose Car Type 2
 STR_FULL_NAME_KD25G          :{BLACK}Full Name: {GOLD}25m Improved Air Conditioner Generator Car
@@ -424,7 +429,10 @@ STR_25G_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {RED}Red {GOLD}
 STR_CA25G_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_KD25G_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an-Huxian Railway Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery (unfinished), {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery
+STR_BSP25T_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery, Made by BSP Livery
+STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery, Made by BSP Livery
 STR_XL25T_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery (unfinished), {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_UZ25T_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_KD25T_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: Only {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery
 STR_19K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
@@ -436,7 +444,6 @@ STR_S25KHD_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}Xianxing 
 STR_SCA25KHD_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {GOLD}Xi'an
 STR_TZ_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {ORANGE}Orange {GOLD}Livery, {GOLD}Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery
 STR_KD25K_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}Only Guangzhou-Kowloon Sub-Livery available so far
 STR_25DT_JINLUN_LIVERY_AVAILABILITY :{BLACK}Livery Availability: {GOLD}Earlier Livery (Before 2010), Later Livery (After 2010)
 STR_YZ31_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Sanshui-Maoming Railway Livery (unfinished)
 STR_25ML_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {WHITE}White-{GREEN}-Green {GOLD}Livery, {RED}RED-{GREEN}-Green {GOLD}Livery (after 2003)

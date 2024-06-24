@@ -7,8 +7,8 @@ China Set: Trains Changelog
 
 0.3.1.167 (17/6/2024)
 --------------------
-Add: NC3
-Refurbish: HXD1D
+Add: NC3, P80, UZ25T
+Refurbish: HXD1D, 25T, PB
 
 0.3.0.166 (16/6/2024)
 --------------------

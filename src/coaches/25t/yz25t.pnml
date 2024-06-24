@@ -31,11 +31,14 @@ switch (FEAT_TRAINS, SELF, switch_yz25t_cargo_subtype, cargo_subtype) {
     return CB_RESULT_NO_TEXT;
 }
 
-switch (FEAT_TRAINS, SELF, switch_yz25t_graphics_subtype_0, build_year) {
-    0..2014: spriteset_yz25t_original;
+switch (FEAT_TRAINS, SELF, switch_yz25t_graphics_subtype_year_depend, build_year) {
+     0..2014: spriteset_yz25t_original;
     spriteset_25t_gaozu;
 }
-
+switch (FEAT_TRAINS, SELF, switch_yz25t_graphics_subtype_0, param_gaozulv) {
+    1: switch_yz25t_graphics_subtype_year_depend;
+    spriteset_yz25t_original;
+}
 switch (FEAT_TRAINS, SELF, switch_yz25t_graphics_subtype, cargo_subtype) {
     0: switch_yz25t_graphics_subtype_0;
     1: spriteset_yz25t_original;

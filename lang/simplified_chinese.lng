@@ -32,6 +32,9 @@ STR_PARAM_STANDARD          :标准
 STR_PARAM_LONG              :较长
 STR_PARAM_VERY_LONG         :很长
 
+STR_PARAM_GAOZULV           :2014年后建造的25型客车默认刷{DKGREEN}绿
+STR_PARAM_GAOZULV_DESC      :决定2014年后建造的25型客车是否默认刷{DKGREEN}绿
+
 STR_USED_WITH_DYNAMIC_ENGINES       :请切换至控制台模式, 键入 "setting dynamic_engines 1", 否则您无法游玩中国包.
 
 STR_NAME_YZ22           :YZ22 (客车)
@@ -432,7 +435,6 @@ STR_S25KHD_LIVERY_AVAILABILITY      :{BLACK}可供选择的涂装：{GOLD}先行
 STR_SCA25KHD_LIVERY_AVAILABILITY    :{BLACK}可供选择的涂装：{GOLD}西安铁路局
 STR_TZ_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{ORANGE}橙色{GOLD}涂装，{GOLD}京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装
 STR_KD25K_LIVERY_AVAILABILITY       :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{LTBLUE}沪芦列车{GOLD}涂装，西安铁路局涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
-STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}目前仅有广九铁路子涂装
 STR_25DT_JINLUN_LIVERY_AVAILABILITY :{BLACK}可供选择的涂装: {GOLD}早期涂装 (2010年之前)，晚期涂装(2010年以后)
 STR_25ML_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装: {GOLD}白底绿带涂装，类25G红色涂装 (2003年以后)
 
