@@ -128,6 +128,7 @@ STR_NAME_P61            :P61 (棚车)
 STR_NAME_P62            :P62 (棚车)
 STR_NAME_P63            :P63 (棚车)
 STR_NAME_P70            :P70 (棚车)
+STR_NAME_P80            :P80 (棚车)
 STR_NAME_PB             :PB (棚车)
 STR_NAME_B6             :B6 (保温车)
 STR_NAME_B22            :B22 (保温车)
@@ -447,7 +448,6 @@ STR_P61_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机
 STR_P62_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (黑色，蓝色，铁锈色，棕色)
 STR_P63_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (黑色，铁锈色，棕色)
 STR_P70_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
-STR_PB_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_N5_LIVERY_AVAILABILITY          :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_N60_LIVERY_AVAILABILITY         :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_NX17_LIVERY_AVAILABILITY        :{BLACK}可供选择的涂装：{GOLD}随机(黑色，棕色)
@@ -597,6 +597,7 @@ STR_EARLIER             : - 早期涂装
 STR_LONGQINGXIA         : - 龙庆峡号涂装
 STR_BEIJING2SHANGHAIALT : - 北京至上海21/22次直快涂装
 STR_JY                  : - 救援涂装
+STR_BSP25T              : - BSP制造
 
 STR_PROTOTYPE           : - 原型
 STR_JINGTONG            : - 京通号涂装

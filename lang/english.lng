@@ -127,6 +127,7 @@ STR_NAME_P61            :P61 (Boxcar)
 STR_NAME_P62            :P62 (Boxcar)
 STR_NAME_P63            :P63 (Boxcar)
 STR_NAME_P70            :P70 (Boxcar)
+STR_NAME_P80            :P80 (Boxcar)
 STR_NAME_PB             :PB (Boxcar)
 STR_NAME_B6             :B6 (Refrigerator Wagon)
 STR_NAME_B22            :B22 (Refrigerator Wagon)
@@ -452,7 +453,6 @@ STR_P61_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (u
 STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (Black, Blue, Brown, Rustyred)
 STR_P63_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred)
 STR_P70_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
-STR_PB_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_N5_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_N60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_NX17_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Random (Black, Brown)
@@ -571,7 +571,8 @@ STR_CHN2LAOS            : - {GOLD}China-Laos Railway Livery
 
 STR_WUJING              : - {GOLD}"Armed Police"Livery
 STR_DF43110             : - {GOLD}DF43110 with Decoration for Ceremony
-
+STR_DFH7                : - DFH7
+STR_DFH7B               : - DFH7B
 
 
 STR_BUILD_YEAR          : - According to build year
@@ -602,8 +603,8 @@ STR_EARLIER             : - Earlier Livery
 STR_LONGQINGXIA         : - "Longqingxia" Livery
 STR_BEIJING2SHANGHAIALT : - Beijing-Shanghai Express Train Livery {BLUE}Blue-{WHITE}-White
 STR_JY                  : - Wrecker Livery
-STR_DFH7                : - DFH7
-STR_DFH7B               : - DFH7B
+STR_BSP25T              : - Made by BSP
+
 
 
 STR_PROTOTYPE           : - Prototype

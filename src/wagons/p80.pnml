@@ -1,0 +1,109 @@
+// Begin P80
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_p80_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "p80")
+}
+
+// Vehicle
+spriteset (spriteset_p80_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p80")
+}
+
+random_switch (FEAT_TRAINS, SELF, random_p80_colour) {
+    1: spriteset_p80_black; // More colours waiting to be added
+}
+
+switch (FEAT_TRAINS, SELF, switch_p80_articulated_part, extra_callback_info1) {
+    1..2: return p80;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p80_graphics, position_in_articulated_veh % 3) {
+    1: random_p80_colour;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p80_capacity_cargo, cargo_type_in_veh) {
+    MAIL: return 160;
+    GOOD: return 120;
+    return 80;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p80_capacity, position_in_articulated_veh % 3) {
+    1: switch_p80_capacity_cargo;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p80_loading_speed, cargo_type_in_veh) {
+    MAIL: return 10;
+    GOOD: return 8;
+    return 6;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p80_decay, cargo_type_in_veh) {
+    LVST: return 560;
+    return 185;
+}
+
+
+item (FEAT_TRAINS, p80) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_P80);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					3075;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2015,01,13);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SADN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_MAIL, CC_ARMOURED, CC_EXPRESS, CC_PIECE_GOODS, CC_COVERED);
+        non_refittable_cargo_classes:   bitmask(CC_LIQUID, CC_HAZARDOUS, CC_OVERSIZED);
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [YETI, YETY];
+        refit_cost:                     0;
+        default_cargo_type:             GOOD;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 80;
+        loading_speed:                  6 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          0 hp;
+        weight:                         226 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_2, string(STR_DECAY_BOXCAR_NOPASS));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_p80_graphics;
+        purchase:                       spriteset_p80_purchase_original;
+        articulated_part:               switch_p80_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_5_2;
+        cargo_capacity:                 switch_p80_capacity;
+        loading_speed:                  switch_p80_loading_speed() << param_loading_speed;
+        cargo_age_period:               switch_p80_decay() << param_cargo_decay;
+        cost_factor:                    6;
+        running_cost_factor:            5 * runningcostfactor();
+        purchase_running_cost_factor:   20;
+        purchase_cargo_capacity:        80/3;
+    }
+}
+
+// End P80
