@@ -27,22 +27,22 @@ switch (FEAT_TRAINS, SELF, switch_p50_articulated_part, extra_callback_info1) {
 }
 
 random_switch (FEAT_TRAINS, SELF, random_p50_colour_early) {
-    15: spriteset_p50_black; 
+    15: spriteset_p50_black;
     10: spriteset_p50_brown;
     1: spriteset_p50_rustyred;
 }
 random_switch (FEAT_TRAINS, SELF, random_p50_colour_middium) {
-    10: spriteset_p50_black; 
+    10: spriteset_p50_black;
     10: spriteset_p50_brown;
     5: spriteset_p50_rustyred;
 }
 random_switch (FEAT_TRAINS, SELF, random_p50_colour_late) {
-    10: spriteset_p50_black; 
+    10: spriteset_p50_black;
     10: spriteset_p50_brown;
     10: spriteset_p50_rustyred;
 }
 switch (FEAT_TRAINS, SELF, random_p50_colour_year, current_year - 1955) {
-    0..15: random_p50_colour_early; 
+    0..15: random_p50_colour_early;
     16..30: random_p50_colour_middium;
     random_p50_colour_late;
 }
