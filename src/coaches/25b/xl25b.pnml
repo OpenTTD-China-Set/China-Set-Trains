@@ -28,7 +28,7 @@ switch (FEAT_TRAINS, SELF, switch_xl25b_cargo_subtype, cargo_subtype) {
     1: return string(STR_ORIGINAL);
     2: return string(STR_RED_WHITE);
     3: return string(STR_GAOZU_GREEN);
-    4: return string(STR_JY);
+    4: return string(STR_RESCUE);
     return CB_RESULT_NO_TEXT;
 }
 

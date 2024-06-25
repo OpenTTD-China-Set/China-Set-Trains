@@ -24,9 +24,9 @@ spriteset (spriteset_p70_brown, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 
 random_switch (FEAT_TRAINS, SELF, random_p70_colour) {
     1: spriteset_p70_black; 
-    2: spriteset_p70_rustyred;
-    3: spriteset_p70_blue;
-    4: spriteset_p70_brown;
+    1: spriteset_p70_rustyred;
+    1: spriteset_p70_blue;
+    1: spriteset_p70_brown;
 }
 
 switch (FEAT_TRAINS, SELF, switch_p70_articulated_part, extra_callback_info1) {
@@ -68,7 +68,7 @@ item (FEAT_TRAINS, p70) {
         name:                           string(STR_NAME_P70);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					3075;
+        variant_group:					3098;
 
         // Availability
         climates_available:             ALL_CLIMATES;

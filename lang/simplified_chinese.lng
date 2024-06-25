@@ -598,7 +598,7 @@ STR_LATER               : - 后期涂装
 STR_EARLIER             : - 早期涂装
 STR_LONGQINGXIA         : - 龙庆峡号涂装
 STR_BEIJING2SHANGHAIALT : - 北京至上海21/22次直快涂装
-STR_JY                  : - 救援涂装
+STR_RESCUE              : - 救援涂装
 STR_BSP25T              : - BSP制造
 
 STR_PROTOTYPE           : - 原型

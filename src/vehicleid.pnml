@@ -169,6 +169,7 @@ item (FEAT_TRAINS, n5, 3095) {}
 // 3096 coded by babel
 item (FEAT_TRAINS, p80, 3096) {}
 item (FEAT_TRAINS, p65, 3097) {}
+item (FEAT_TRAINS, p50, 3098) {}
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF

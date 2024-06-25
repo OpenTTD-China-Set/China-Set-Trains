@@ -126,6 +126,7 @@ STR_NAME_SRZ25DT_JINLUN :SRZ25DT (JINLUN DMU) (Passenger Coach)
 STR_NAME_C62            :C62 (Gondola)
 STR_NAME_C64            :C64 (Gondola)
 STR_NAME_C70            :C70 (Gondola)
+STR_NAME_P50            :P50 (Boxcar)
 STR_NAME_P60            :P60 (Boxcar)
 STR_NAME_P61            :P61 (Boxcar)
 STR_NAME_P62            :P62 (Boxcar)
@@ -456,6 +457,7 @@ STR_GN80_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {BLACK}Black {G
 STR_C62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_C70_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_P50_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred), Wreck Livery
 STR_P60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_P61_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (Black, Blue, Brown, Rustyred)
@@ -579,11 +581,11 @@ STR_GUONENG             : - {GOLD}CHN Energy Livery
 STR_CHN2LAOS            : - {GOLD}China-Laos Railway Livery
 
 STR_WUJING              : - {GOLD}"Armed Police"Livery
-STR_DF43110             : - {GOLD}DF43110 with Decoration for Ceremony
 STR_DFH7                : - DFH7
 STR_DFH7B               : - DFH7B
 
 
+STR_RANDOM_COLOR        : - Ramdom Color
 STR_BUILD_YEAR          : - According to build year
 STR_YW22_ORIGINAL       : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240
 STR_YW22_1966           : - 1966 Design - Capacity 60, Comfort 288
@@ -611,8 +613,9 @@ STR_LATER               : - Later Livery
 STR_EARLIER             : - Earlier Livery
 STR_LONGQINGXIA         : - "Longqingxia" Livery
 STR_BEIJING2SHANGHAIALT : - Beijing-Shanghai Express Train Livery {BLUE}Blue-{WHITE}-White
-STR_JY                  : - Wrecker Livery
+STR_RESCUE              : - Wrecker Livery
 STR_BSP25T              : - Made by BSP
+
 
 
 

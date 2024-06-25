@@ -125,6 +125,7 @@
 #include "src/wagons/c62.pnml"
 #include "src/wagons/c64.pnml"
 #include "src/wagons/c70.pnml"
+#include "src/wagons/p50.pnml"
 #include "src/wagons/p60.pnml"
 #include "src/wagons/p61.pnml"
 #include "src/wagons/p62.pnml"

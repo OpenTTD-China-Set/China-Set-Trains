@@ -26,7 +26,7 @@ switch (FEAT_TRAINS, SELF, switch_yz22_articulated_part, extra_callback_info1) {
 switch (FEAT_TRAINS, SELF, switch_yz22_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGINAL);
     1: return string(STR_WRU);
-    2: return string(STR_JY);
+    2: return string(STR_RESCUE);
     return CB_RESULT_NO_TEXT;
 }
 
