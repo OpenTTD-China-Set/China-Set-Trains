@@ -4,16 +4,29 @@
 
 // Purchase Menu
 spriteset (spriteset_p70_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("wagons", "p70")
+    template_purchase ("wagons", "p70-black")
 }
 
 // Vehicle
 spriteset (spriteset_p70_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("wagons", "p70")
+    template_standard ("wagons", "p70-black")
+}
+spriteset (spriteset_p70_rustyred, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p70-rustyred")
+}
+spriteset (spriteset_p70_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p70-blue")
+}
+spriteset (spriteset_p70_brown, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p70-brown")
 }
 
+
 random_switch (FEAT_TRAINS, SELF, random_p70_colour) {
-    1: spriteset_p70_black; // More colours waiting to be added
+    1: spriteset_p70_black; 
+    2: spriteset_p70_rustyred;
+    3: spriteset_p70_blue;
+    4: spriteset_p70_brown;
 }
 
 switch (FEAT_TRAINS, SELF, switch_p70_articulated_part, extra_callback_info1) {
