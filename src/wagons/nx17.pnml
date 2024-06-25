@@ -1052,10 +1052,29 @@ switch (FEAT_TRAINS, SELF, switch_nx17_brown_all_cargo, cargo_type_in_veh) {
 
 // end alternative colour nx17_brown
 
-random_switch (FEAT_TRAINS, SELF, random_nx17_colour) {
+/* random_switch (FEAT_TRAINS, SELF, random_nx17_colour) {
     1: switch_nx17_black_all_cargo;
     1: switch_nx17_brown_all_cargo; // 2 colours is enough
+} */
+// 2 colours is enough
+random_switch (FEAT_TRAINS, SELF, random_nx17_colour_early) {
+    20: switch_nx17_black_all_cargo; 
+    1: switch_nx17_brown_all_cargo;
 }
+random_switch (FEAT_TRAINS, SELF, random_nx17_colour_middium) {
+    20: switch_nx17_black_all_cargo; 
+    5: switch_nx17_brown_all_cargo;
+}
+random_switch (FEAT_TRAINS, SELF, random_nx17_colour_late) {
+    10: switch_nx17_black_all_cargo; 
+    10: switch_nx17_brown_all_cargo;
+}
+switch (FEAT_TRAINS, SELF, random_nx17_colour, current_year - 1997) {
+    0..15: random_nx17_colour_early; 
+    16..30: random_nx17_colour_middium;
+    random_nx17_colour_late;
+}
+
 
 switch (FEAT_TRAINS, SELF, switch_nx17_articulated_part, extra_callback_info1) {
     1..2: return nx17;
