@@ -4,12 +4,15 @@
 
 // Purchase Menu
 spriteset (spriteset_ca25t_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "ca25t1")
+    template_purchase ("coaches", "ca25t")
 }
 
 // Vehicle
 spriteset (spriteset_ca25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "ca25t1")
+    template_standard ("coaches", "ca25t")
+}
+spriteset (spriteset_bspca25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "bspca25t")
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca25t_articulated_part, extra_callback_info1) {
@@ -17,8 +20,28 @@ switch (FEAT_TRAINS, SELF, switch_ca25t_articulated_part, extra_callback_info1) 
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_ca25t_graphics, position_in_articulated_veh % 3) {
+switch (FEAT_TRAINS, SELF, switch_ca25t_cargo_subtype, cargo_subtype) {
+    0: string(STR_BUILD_YEAR);
+    1: string(STR_ORIGINAL);
+    2: string(STR_BSP25T);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25t_graphics_subtype_0, build_year) {
+    0..2014: spriteset_ca25t_original;
+    spriteset_ca25t_original;
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_ca25t_graphics_subtype, cargo_subtype) {
+    0: switch_ca25t_graphics_subtype_0;
     1: spriteset_ca25t_original;
+    2: spriteset_bspca25t_original;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25t_graphics, position_in_articulated_veh % 3) {
+    1: switch_ca25t_graphics_subtype;
     empty_sprites;
 }
 
@@ -68,6 +91,7 @@ item (FEAT_TRAINS, ca25t) {
         // Menu
         additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_CA25T), string(STR_CAFE_EFFECT), string(STR_CA25T_LIVERY_AVAILABILITY), string(STR_COMFORT_160_CAFE));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_ca25t_cargo_subtype;
 
         // Graphics
         default:                        switch_ca25t_graphics;

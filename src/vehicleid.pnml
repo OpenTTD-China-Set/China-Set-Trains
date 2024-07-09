@@ -134,6 +134,8 @@ item (FEAT_TRAINS, rw25ml, 2128) {}
 item (FEAT_TRAINS, ca25ml, 2129) {}
 item (FEAT_TRAINS, xl25ml, 2130) {}
 item (FEAT_TRAINS, yw221966, 2131) {}
+// uz25t code by Babel
+item (FEAT_TRAINS, uz25t, 2132) {}
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 #define id_range_wagons 0x0C00..0x0FFF
@@ -164,6 +166,10 @@ item (FEAT_TRAINS, p63, 3092) {}
 item (FEAT_TRAINS, pb, 3093) {}
 item (FEAT_TRAINS, j5, 3094) {}
 item (FEAT_TRAINS, n5, 3095) {}
+// 3096 coded by babel
+item (FEAT_TRAINS, p80, 3096) {}
+item (FEAT_TRAINS, p65, 3097) {}
+item (FEAT_TRAINS, p50, 3098) {}
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF

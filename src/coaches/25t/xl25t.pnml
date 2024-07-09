@@ -11,16 +11,48 @@ spriteset (spriteset_xl25t_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP)
 spriteset (spriteset_xl25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "xl25t")
 }
+spriteset (spriteset_bspxl25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "bspxl25t")
+}
 
 switch (FEAT_TRAINS, SELF, switch_xl25t_articulated_part, extra_callback_info1) {
     1..2: return xl25t;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_xl25t_graphics, position_in_articulated_veh % 3) {
+
+switch (FEAT_TRAINS, SELF, switch_xl25t_cargo_subtype, cargo_subtype) {
+    0: string(STR_BUILD_YEAR);
+    1: string(STR_ORIGINAL);
+    2: string(STR_BSP25T);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25t_graphics_subtype_year_depend, build_year) {
+    0..2014: spriteset_xl25t_original;
+    spriteset_xl25t_original;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_xl25t_graphics_subtype_0, param_gaozulv) {
+    1: switch_xl25t_graphics_subtype_year_depend;
+    spriteset_xl25t_original;
+}
+/* switch (FEAT_TRAINS, SELF, switch_xl25t_graphics, position_in_articulated_veh % 3) {
     1: spriteset_xl25t_original;
     empty_sprites;
+} */
+switch (FEAT_TRAINS, SELF, switch_xl25t_graphics_subtype, cargo_subtype) {
+    0: switch_xl25t_graphics_subtype_0;
+    1: spriteset_xl25t_original;
+    2: spriteset_bspxl25t_original;
 }
+
+switch (FEAT_TRAINS, SELF, switch_xl25t_graphics, position_in_articulated_veh % 3) {
+    1: switch_xl25t_graphics_subtype;
+    empty_sprites;
+}
+
 
 switch (FEAT_TRAINS, SELF, switch_xl25t_capacity, position_in_articulated_veh % 3) {
     1: return 71;
@@ -46,7 +78,7 @@ item (FEAT_TRAINS, xl25t) {
         // Cargo
         refittable_cargo_classes:       bitmask(CC_MAIL, CC_ARMOURED);
         non_refittable_cargo_classes:   0;
-        cargo_allow_refit:              [MAIL];
+        cargo_allow_refit:              [MAIL, VALU, GOLD, DIAM];
         cargo_disallow_refit:           [];
         refit_cost:                     0;
         default_cargo_type:             MAIL;
@@ -67,6 +99,7 @@ item (FEAT_TRAINS, xl25t) {
         // Menu
         additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_XL25T), string(STR_XL25T_LIVERY_AVAILABILITY), string(STR_DECAY_200));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_xl25t_cargo_subtype;
 
         // Graphics
         default:                        switch_xl25t_graphics;

@@ -32,6 +32,9 @@ STR_PARAM_STANDARD          :Standard
 STR_PARAM_LONG              :Long
 STR_PARAM_VERY_LONG         :Very Long
 
+STR_PARAM_GAOZULV           :25m Passenger Coaches build after 2014 are {DKGREEN}"Gaozu Geeen"{BLACK} in defeaut
+STR_PARAM_GAOZULV_DESC      :Choose weather to print{DKGREEN} Canarium Green (also called "Gaozu Geeen"){BLACK} to 25m Passenger Coaches build after 2014 in defeaut
+
 STR_USED_WITH_DYNAMIC_ENGINES       :This GRF needs dynamic_engines to be turned on. Open console, and type "setting dynamic_engines 1".
 
 STR_NAME_YZ22           :YZ22 (Passenger Coach)
@@ -96,6 +99,7 @@ STR_NAME_XL25K          :XL25K (Luggage Car)
 STR_NAME_XL25T          :XL25T (Luggage Car)
 STR_NAME_XL25T_SSPE     :XL25T-SSPE (Luggage Car)
 STR_NAME_UZ22           :UZ22 (Luggage Car)
+STR_NAME_UZ25T          :UZ25T (Luggage Car)
 STR_NAME_TZ             :TZ (Air Conditioner Generator Car)
 STR_NAME_TZ2            :TZ2 (Air Conditioner Generator Car)
 STR_NAME_KD25G          :KD25G (Air Conditioner Generator Car)
@@ -122,11 +126,14 @@ STR_NAME_SRZ25DT_JINLUN :SRZ25DT (JINLUN DMU) (Passenger Coach)
 STR_NAME_C62            :C62 (Gondola)
 STR_NAME_C64            :C64 (Gondola)
 STR_NAME_C70            :C70 (Gondola)
+STR_NAME_P50            :P50 (Boxcar)
 STR_NAME_P60            :P60 (Boxcar)
 STR_NAME_P61            :P61 (Boxcar)
 STR_NAME_P62            :P62 (Boxcar)
 STR_NAME_P63            :P63 (Boxcar)
+STR_NAME_P65            :P65 (Boxcar)
 STR_NAME_P70            :P70 (Boxcar)
+STR_NAME_P80            :P80 (Boxcar)
 STR_NAME_PB             :PB (Boxcar)
 STR_NAME_B6             :B6 (Refrigerator Wagon)
 STR_NAME_B22            :B22 (Refrigerator Wagon)
@@ -308,6 +315,7 @@ STR_FULL_NAME_XL25G          :{BLACK}Full Name: {GOLD}25m Improved Luggage Car
 STR_FULL_NAME_XL25K          :{BLACK}Full Name: {GOLD}25m Rapid Luggage Car
 STR_FULL_NAME_XL25T          :{BLACK}Full Name: {GOLD}25m Accelerated Luggage Car
 STR_FULL_NAME_UZ22           :{BLACK}Full Name: {GOLD}22 Type Railway Post Office
+STR_FULL_NAME_UZ25T          :{BLACK}Full Name: {GOLD}25m Accelerated Railway Post Office
 STR_FULL_NAME_TZ             :{BLACK}Full Name: {GOLD}Special Purpose Car
 STR_FULL_NAME_TZ2            :{BLACK}Full Name: {GOLD}Special Purpose Car Type 2
 STR_FULL_NAME_KD25G          :{BLACK}Full Name: {GOLD}25m Improved Air Conditioner Generator Car
@@ -423,7 +431,10 @@ STR_25G_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {RED}Red {GOLD}
 STR_CA25G_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_KD25G_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an-Huxian Railway Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery (unfinished), {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_25T_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery
+STR_BSP25T_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery, Made by BSP Livery
+STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery, Made by BSP Livery
 STR_XL25T_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery (unfinished), {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_UZ25T_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
 STR_KD25T_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: Only {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery
 STR_19K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery
 STR_25K_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
@@ -435,7 +446,6 @@ STR_S25KHD_LIVERY_AVAILABILITY      :{BLACK}Livery Availability: {GOLD}Xianxing 
 STR_SCA25KHD_LIVERY_AVAILABILITY    :{BLACK}Livery Availability: {GOLD}Xi'an
 STR_TZ_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {ORANGE}Orange {GOLD}Livery, {GOLD}Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery
 STR_KD25K_LIVERY_AVAILABILITY       :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_CA25T_LIVERY_AVAILABILITY       :{BLACK}Only Guangzhou-Kowloon Sub-Livery available so far
 STR_25DT_JINLUN_LIVERY_AVAILABILITY :{BLACK}Livery Availability: {GOLD}Earlier Livery (Before 2010), Later Livery (After 2010)
 STR_YZ31_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Sanshui-Maoming Railway Livery (unfinished)
 STR_25ML_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {WHITE}White-{GREEN}-Green {GOLD}Livery, {RED}RED-{GREEN}-Green {GOLD}Livery (after 2003)
@@ -447,12 +457,13 @@ STR_GN80_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {BLACK}Black {G
 STR_C62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_C64_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_C70_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_P50_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred), Wreck Livery
 STR_P60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_P61_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_P62_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (Black, Blue, Brown, Rustyred)
 STR_P63_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred)
-STR_P70_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
-STR_PB_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_P65_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {DKGREEN}China Post{GOLD}, Black (unfinished)
+STR_P70_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (Black, Blue, Brown, Rustyred)
 STR_N5_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_N60_LIVERY_AVAILABILITY         :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_NX17_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Random (Black, Brown)
@@ -570,10 +581,11 @@ STR_GUONENG             : - {GOLD}CHN Energy Livery
 STR_CHN2LAOS            : - {GOLD}China-Laos Railway Livery
 
 STR_WUJING              : - {GOLD}"Armed Police"Livery
-STR_DF43110             : - {GOLD}DF43110 with Decoration for Ceremony
+STR_DFH7                : - DFH7
+STR_DFH7B               : - DFH7B
 
 
-
+STR_RANDOM_COLOR        : - Ramdom Color
 STR_BUILD_YEAR          : - According to build year
 STR_YW22_ORIGINAL       : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240
 STR_YW22_1966           : - 1966 Design - Capacity 60, Comfort 288
@@ -601,9 +613,10 @@ STR_LATER               : - Later Livery
 STR_EARLIER             : - Earlier Livery
 STR_LONGQINGXIA         : - "Longqingxia" Livery
 STR_BEIJING2SHANGHAIALT : - Beijing-Shanghai Express Train Livery {BLUE}Blue-{WHITE}-White
-STR_JY                  : - Wrecker Livery
-STR_DFH7                : - DFH7
-STR_DFH7B               : - DFH7B
+STR_RESCUE              : - Wrecker Livery
+STR_BSP25T              : - Made by BSP
+
+
 
 
 STR_PROTOTYPE           : - Prototype

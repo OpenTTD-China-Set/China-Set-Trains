@@ -3,24 +3,50 @@
 // Graphics
 
 // // Purchase Menu
-// spriteset (spriteset_yw25t_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-//     template_purchase ("coaches", "25t")
-// }
+spriteset (spriteset_yw25t_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "yw25t")
+}
 
-// // Vehicle
-// spriteset (spriteset_yw25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-//     template_12_standard ("coaches", "25t")
-// }
+// Vehicle
+spriteset (spriteset_yw25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "yw25t")
+}
+
 
 switch (FEAT_TRAINS, SELF, switch_yw25t_articulated_part, extra_callback_info1) {
     1..2: return yw25t;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-// switch (FEAT_TRAINS, SELF, switch_yw25t_graphics, position_in_articulated_veh % 3) {
-//     0: spriteset_yw25t_original;
-//     empty_sprites;
-// }
+switch (FEAT_TRAINS, SELF, switch_yw25t_cargo_subtype, cargo_subtype) {
+    0: string(STR_BUILD_YEAR);
+    1: string(STR_ORIGINAL);
+    2: string(STR_QINGZANG);
+    3: string(STR_GAOZU_GREEN);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yw25t_graphics_subtype_year_depend, build_year) {
+     0..2014: spriteset_yw25t_original;
+    spriteset_25t_gaozu;
+}
+switch (FEAT_TRAINS, SELF, switch_yw25t_graphics_subtype_0, param_gaozulv) {
+    1: switch_yw25t_graphics_subtype_year_depend;
+    spriteset_yw25t_original;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yw25t_graphics_subtype, cargo_subtype) {
+    0: switch_yw25t_graphics_subtype_0;
+    1: spriteset_yw25t_original;
+    2: spriteset_25t_qingzang;
+    3: spriteset_25t_gaozu;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yw25t_graphics, position_in_articulated_veh % 3) {
+    1: switch_yw25t_graphics_subtype;
+    empty_sprites;
+}
+
 
 switch (FEAT_TRAINS, SELF, switch_yw25t_capacity, position_in_articulated_veh % 3) {
     1: return 66;
@@ -67,11 +93,11 @@ item (FEAT_TRAINS, yw25t) {
         // Menu
         additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YW25T), string(STR_25T_LIVERY_AVAILABILITY), string(STR_COMFORT_288));
         can_attach_wagon:               locowagon;
-        cargo_subtype_text:             switch_25t_cargo_subtype;
+        cargo_subtype_text:             switch_yw25t_cargo_subtype;
 
         // Graphics
-        default:                        switch_25t_graphics;
-        purchase:                       spriteset_25t_purchase_original;
+        default:                        switch_yw25t_graphics;
+        purchase:                       spriteset_yw25t_purchase_original;
         articulated_part:               switch_yw25t_articulated_part;
 
         // Stats

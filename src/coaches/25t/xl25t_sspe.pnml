@@ -44,9 +44,9 @@ item (FEAT_TRAINS, xl25t_sspe) {
         track_type:                     SACN;
 
         // Cargo
-        refittable_cargo_classes:       bitmask(CC_MAIL);
+        refittable_cargo_classes:       bitmask(CC_MAIL, CC_ARMOURED);
         non_refittable_cargo_classes:   0;
-        cargo_allow_refit:              [MAIL];
+        cargo_allow_refit:              [MAIL, VALU, GOLD, DIAM];
         cargo_disallow_refit:           [];
         refit_cost:                     0;
         default_cargo_type:             MAIL;

@@ -1,0 +1,165 @@
+// Begin P50
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_p50_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "p50-black")
+}
+
+// Vehicle
+spriteset (spriteset_p50_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p50-black")
+}
+spriteset (spriteset_p50_rustyred, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p50-rustyred")
+}
+spriteset (spriteset_p50_brown, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p50-brown")
+}
+spriteset (spriteset_p50_rescue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p50-rescue")
+}
+
+switch (FEAT_TRAINS, SELF, switch_p50_articulated_part, extra_callback_info1) {
+    1..2: return p50;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+random_switch (FEAT_TRAINS, SELF, random_p50_colour_early) {
+    15: spriteset_p50_black;
+    10: spriteset_p50_brown;
+    1: spriteset_p50_rustyred;
+}
+random_switch (FEAT_TRAINS, SELF, random_p50_colour_middium) {
+    10: spriteset_p50_black;
+    10: spriteset_p50_brown;
+    5: spriteset_p50_rustyred;
+}
+random_switch (FEAT_TRAINS, SELF, random_p50_colour_late) {
+    10: spriteset_p50_black;
+    10: spriteset_p50_brown;
+    10: spriteset_p50_rustyred;
+}
+switch (FEAT_TRAINS, SELF, random_p50_colour_year, current_year - 1955) {
+    0..15: random_p50_colour_early;
+    16..30: random_p50_colour_middium;
+    random_p50_colour_late;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_p50_cargo_subtype, cargo_subtype) {
+    0: return string(STR_RANDOM_COLOR);
+    1: return string(STR_RESCUE);
+    return CB_RESULT_NO_TEXT;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_p50_graphics_subtype, cargo_subtype) {
+    0: random_p50_colour_year;
+    1: spriteset_p50_rescue;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p50_graphics, position_in_articulated_veh % 3) {
+    1: switch_p50_graphics_subtype;
+    empty_sprites;
+}
+
+//cap
+
+
+switch (FEAT_TRAINS, SELF, switch_p50_capacity_pengdaike, (cargo_classes == bitmask(CC_PASSENGERS)) || (cargo_type_in_veh == YETI) || (cargo_type_in_veh == YETY)) {
+    1: return 160;
+    return 50;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p50_capacity_cargo, cargo_classes == bitmask(CC_MAIL)) {
+    1: return 100;
+    switch_p50_capacity_pengdaike;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p50_capacity, position_in_articulated_veh % 3) {
+    1: switch_p50_capacity_cargo;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p50_loading_speed_pengdaike, (cargo_classes == bitmask(CC_PASSENGERS)) || (cargo_type_in_veh == YETI) || (cargo_type_in_veh == YETY)) {
+    1: return 12;
+    return 6;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p50_loading_speed, cargo_classes == bitmask(CC_MAIL)) {
+    1: return 8;
+    switch_p50_loading_speed_pengdaike;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p50_decay_pengdaike, (cargo_classes == bitmask(CC_PASSENGERS)) || (cargo_type_in_veh == YETI) || (cargo_type_in_veh == YETY)) {
+    1: return 80;
+    return 185;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p50_decay, cargo_type_in_veh == LVST) {
+    1: return 560;
+    switch_p50_decay_pengdaike;
+}
+
+
+item (FEAT_TRAINS, p50) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_P50);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1956,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS, CC_MAIL, CC_ARMOURED, CC_EXPRESS, CC_PIECE_GOODS, CC_COVERED);
+        non_refittable_cargo_classes:   bitmask(CC_LIQUID, CC_HAZARDOUS, CC_OVERSIZED);
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [TOUR];
+        refit_cost:                     0;
+        default_cargo_type:             GOOD;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 50;
+        loading_speed:                  6 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          80 km/h;
+        power:                          0 hp;
+        weight:                         21.6 ton;
+        cost_factor:                    5;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            4;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_P50_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR), string(STR_DESC_PENGDAIKE));
+        can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_p50_cargo_subtype;
+
+        // Graphics
+        default:                        switch_p50_graphics;
+        purchase:                       spriteset_p50_purchase_original;
+        articulated_part:               switch_p50_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_3_2;
+        cargo_capacity:                 switch_p50_capacity;
+        loading_speed:                  switch_p50_loading_speed() << param_loading_speed;
+        cargo_age_period:               switch_p50_decay() << param_cargo_decay;
+        cost_factor:                    5;
+        running_cost_factor:            4 * runningcostfactor();
+        purchase_running_cost_factor:   16;
+        purchase_cargo_capacity:        50/3;
+    }
+}
+
+// End P50

@@ -33,7 +33,7 @@ spriteset (spriteset_p62_brown, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "p62-brown")
 }
 
-random_switch (FEAT_TRAINS, SELF, random_p62_colour) {
+/* random_switch (FEAT_TRAINS, SELF, random_p62_colour) {
     1: spriteset_p62_black; // More colours waiting to be added
     1: spriteset_p62_blue;
     1: spriteset_p62_damaged_severe;
@@ -42,7 +42,43 @@ random_switch (FEAT_TRAINS, SELF, random_p62_colour) {
     1: spriteset_p62_rustyred;
     1: spriteset_p62_rustyred_damaged;
     1: spriteset_p62_brown;
+} */
+random_switch (FEAT_TRAINS, SELF, random_p62_colour_early) {
+    20: spriteset_p62_black; // More colours waiting to be added
+    6: spriteset_p62_blue;
+    1: spriteset_p62_damaged_severe;
+    12: spriteset_p62_lightblack;
+    1: spriteset_p62_lightblack_damaged;
+    1: spriteset_p62_rustyred;
+    1: spriteset_p62_rustyred_damaged;
+    12: spriteset_p62_brown;
 }
+random_switch (FEAT_TRAINS, SELF, random_p62_colour_middium) {
+    20: spriteset_p62_black; // More colours waiting to be added
+    4: spriteset_p62_blue;
+    4: spriteset_p62_damaged_severe;
+    15: spriteset_p62_lightblack;
+    5: spriteset_p62_lightblack_damaged;
+    15: spriteset_p62_rustyred;
+    2: spriteset_p62_rustyred_damaged;
+    15: spriteset_p62_brown;
+}
+random_switch (FEAT_TRAINS, SELF, random_p62_colour_late) {
+    10: spriteset_p62_black; // More colours waiting to be added
+    1: spriteset_p62_blue;
+    5: spriteset_p62_damaged_severe;
+    10: spriteset_p62_lightblack;
+    5: spriteset_p62_lightblack_damaged;
+    10: spriteset_p62_rustyred;
+    5: spriteset_p62_rustyred_damaged;
+    10: spriteset_p62_brown;
+}
+switch (FEAT_TRAINS, SELF, random_p62_colour, current_year - 1979) {
+    0..15: random_p62_colour_early; 
+    16..30: random_p62_colour_middium;
+    random_p62_colour_late;
+}
+
 
 switch (FEAT_TRAINS, SELF, switch_p62_articulated_part, extra_callback_info1) {
     1..2: return p62;
@@ -96,7 +132,7 @@ item (FEAT_TRAINS, p62) {
         name:                           string(STR_NAME_P62);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					3075;
+        variant_group:					3098;
 
         // Availability
         climates_available:             ALL_CLIMATES;
