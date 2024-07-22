@@ -1,5 +1,7 @@
 # China Set: Trains README
 
+READ IN ENGLISH | [CHINESE](./README-zh.md)
+
 1. General Information
 2. Building
 3. Credits
@@ -50,6 +52,7 @@ List of available parameters:
 
 The source is available on [GitHub](https://github.com/OpenTTD-China-Set/China-Set-Trains).\
 These tools are required to build the GRF:
+
 - nml
 - make
 - gcc
@@ -103,6 +106,7 @@ make
 ## 3. Credits
 
 Contributors (in alphabetical order):
+
 - Ahyangyi
 - babel
 - ctx
@@ -120,6 +124,7 @@ Contributors (in alphabetical order):
 - wuwu (kaitokiwa)
 
 Thanks to:
+
 - andythenorth
 - Belaja Lilija
 - Emperor Jake
@@ -128,7 +133,6 @@ Thanks to:
 - planetmaker
 - Simo333
 - Timberwolf
-- 
 - 2cc Trainset Team
 - Finnish Trainset Team
 - JP+ Team
@@ -140,6 +144,7 @@ OpenTTD Developers; and Chris Sawyer.
 
 ## 4. License
 
+```text
 China Set: Trains
 
 Copyright (C) 2023 China Set Team
@@ -157,3 +162,4 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License along
 with this program; if not, please check
 https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+```
