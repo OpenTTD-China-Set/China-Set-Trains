@@ -1,3 +1,7 @@
+switch (FEAT_TRAINS, SELF, switch_cr200jb_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_CR200_FAMILY);
+    return CB_RESULT_NO_TEXT;
+}
 // Begin CR200JB
 
 // Graphics
@@ -317,6 +321,8 @@ item (FEAT_TRAINS, cr200jb) {
         running_cost_factor:            89 * runningcostfactor() + 20;
         purchase_running_cost_factor:   376;
         purchase_cargo_capacity:        0;
+        name: switch_cr200jb_name;
+
     }
 
     // Multiple Unit Wagons

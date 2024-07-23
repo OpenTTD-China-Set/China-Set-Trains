@@ -1,3 +1,7 @@
+switch (FEAT_TRAINS, SELF, switch_df4d4000_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_DF4D_FAMILY);
+    return CB_RESULT_NO_TEXT;
+}
 // Begin DF4D4000
 
 // Graphics
@@ -104,6 +108,8 @@ item (FEAT_TRAINS, df4d4000) {
         running_cost_factor:            60 * runningcostfactor();
         purchase_running_cost_factor:   240;
         purchase_cargo_capacity:        0;
+        name: switch_df4d4000_name;
+
     }
 }
 
