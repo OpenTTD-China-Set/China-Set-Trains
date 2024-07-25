@@ -1,3 +1,7 @@
+switch (FEAT_TRAINS, SELF, switch_rw19k_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_25K_FAMILY);
+    return CB_RESULT_NO_TEXT;
+}
 // Begin RW19K
 
 // Graphics
@@ -112,6 +116,8 @@ item (FEAT_TRAINS, rw19k) {
         running_cost_factor:            14 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   56;
         purchase_cargo_capacity:        16/3;
+        name: switch_rw19k_name;
+
     }
 }
 

@@ -1,3 +1,7 @@
+switch (FEAT_TRAINS, SELF, switch_cr400afab_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_CR400_FAMILY);
+    return CB_RESULT_NO_TEXT;
+}
 // Begin CR400AFAB
 
 
@@ -294,6 +298,8 @@ item (FEAT_TRAINS, cr400afab) {
         running_cost_factor:            73 * runningcostfactor() * cafecostfactor() + 20;
         purchase_running_cost_factor:   312;
         purchase_cargo_capacity:        36/3;
+        name: switch_cr400afab_name;
+
     }
 
     // Multiple Unit Wagons
