@@ -1,5 +1,8 @@
 // Begin NZJ2_JINLUN_UNILAMINAR
-
+switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_NZJ2_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
 // Graphics
 
 // Purchase Menu
@@ -104,6 +107,7 @@ item (FEAT_TRAINS, nzj2_jinlun_1) {
         purchase_running_cost_factor:           248;
         purchase_cargo_capacity:                0;
         bitmask_vehicle_info:                   switch_pushpull_consist_correction;
+        name:                                   switch_nzj2_jinlun_1_name;
     }
     // livery_override(yz25dt_jinlun) {
     //     speed:                                  return 0;

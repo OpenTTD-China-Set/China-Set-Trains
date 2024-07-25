@@ -1,4 +1,9 @@
-// Begin NZJ2_JINLUN_DOUBLE_DECKER
+//Begin NZJ2_JINLUN_DOUBLE_DECKER
+switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_2_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_NZJ2_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+
 
 // Graphics
 
@@ -105,6 +110,8 @@ item (FEAT_TRAINS, nzj2_jinlun_2) {
         purchase_running_cost_factor:           264;
         purchase_cargo_capacity:                0;
         bitmask_vehicle_info:                   switch_pushpull_consist_correction;
+        name:                                   switch_nzj2_jinlun_2_name;
+
     }
     // livery_override(yz25dt_jinlun) {
     //     speed:                                  return 0;

@@ -1,4 +1,9 @@
-// Begin YW25ML
+//Begin YW25ML
+switch (FEAT_TRAINS, SELF, switch_yw25ml_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_25_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+
 
 // Graphics
 
@@ -101,6 +106,8 @@ item (FEAT_TRAINS, yw25ml) {
         running_cost_factor:            9 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   36;
         purchase_cargo_capacity:        66/3;
+        name:                           switch_yw25ml_name;
+
     }
 }
 

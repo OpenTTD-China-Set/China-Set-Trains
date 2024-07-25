@@ -1,4 +1,9 @@
-// Begin YW22B
+//Begin YW22B
+switch (FEAT_TRAINS, SELF, switch_yw22b_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_22B_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+
 
 // Graphics
 
@@ -81,6 +86,8 @@ item (FEAT_TRAINS, yw22b) {
         running_cost_factor:            7 * runningcostfactor() * cafecostfactor(); // NO AIR CONDITIONER
         purchase_running_cost_factor:   28;
         purchase_cargo_capacity:        60/3;
+        name:                           switch_yw22b_name;
+
     }
 }
 

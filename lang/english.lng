@@ -39,7 +39,8 @@ STR_USED_WITH_DYNAMIC_ENGINES       :This GRF needs dynamic_engines to be turned
 
 STR_NAME_YZ22           :YZ22 (Passenger Coach)
 STR_NAME_RZ22           :RZ22 (Passenger Coach)
-STR_NAME_YW22           :YW22 (Passenger Coach) (Early Version)
+STR_NAME_YW22           :YW22 (Passenger Coach)
+STR_NAME_YW22EARLY      :YW22 (Passenger Coach) (Early Version)
 STR_NAME_YW221966       :YW22 (Passenger Coach) (Late Version)
 STR_NAME_RW22           :RW22 (Passenger Coach)
 STR_NAME_YZ22AIRCON     :YZ22 (Passenger Coach) (Air-conditioned)
@@ -350,7 +351,7 @@ STR_FULL_NAME_DF4D           :{BLACK}Full Name: {GOLD}Dongfeng 4D Diesel Locomot
 STR_FULL_NAME_DF4D7000       :{BLACK}Full Name: {GOLD}Dongfeng 4D Diesel Locomotive 7000 Series
 STR_FULL_NAME_DF4DF          :{BLACK}Full Name: {GOLD}Dongfeng 4DF Diesel Locomotive
 STR_FULL_NAME_DF4E           :{BLACK}Full Name: {GOLD}Dongfeng 4E Diesel Locomotive
-STR_FULL_NAME_DF5KZ          :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive Series
+STR_FULL_NAME_DF5KZ          :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive 
 STR_FULL_NAME_DF5            :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive 1000 Series
 STR_FULL_NAME_DF7G           :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive
 STR_FULL_NAME_DF7G5000       :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive 5000 Series
@@ -387,6 +388,68 @@ STR_FULL_NAME_HXD1D          :{BLACK}Full Name: {GOLD}Hexie/Harmony 1D Electric 
 STR_FULL_NAME_FXD1B          :{BLACK}Full Name: {GOLD}Fuxing/Revival 1B Electric Locomotive
 STR_FULL_NAME_HXD3C          :{BLACK}Full Name: {GOLD}Hexie/Harmony 3C Electric Locomotive
 STR_FULL_NAME_HXD3D          :{BLACK}Full Name: {GOLD}Hexie/Harmony 3D Electric Locomotive
+
+
+
+STR_DF4_SERIES                  :DF4 Series (Diesel Locomotive)
+STR_DF4D_SERIES                 :DF4D Series (Diesel Locomotive)
+STR_DF5_SERIES                  :DF5 Series (Diesel Locomotive)
+STR_DF7G_SERIES                 :DF7G Series (Diesel Locomotive)
+STR_SS4_SERIES                  :SS4 Series (Electric Locomotive)
+STR_SS6_SERIES                  :SS4 Series (Electric Locomotive)
+STR_SS7_SERIES                  :SS4 Series (Electric Locomotive)
+STR_SS9_SERIES                  :SS4 Series (Electric Locomotive)
+
+STR_HXD1_SERIES                 :HXD1 Series (Electric Locomotive)
+STR_HXD2_SERIES                 :HXD2 Series (Electric Locomotive)
+STR_HXD3_SERIES                 :HXD3 Series (Electric Locomotive)
+STR_HXN3_SERIES                 :HXN3 Series (Diesel Locomotive)
+STR_HXN5_SERIES                 :HXN5 Series (Diesel Locomotive)
+
+STR_NZJ2_SERIES                 :NZJ2 Series (DMU)
+STR_CRH1_SERIES                 :CRH1 Series (EMU)
+STR_CRH2_SERIES                 :CRH2 Series (EMU)
+STR_CRH3_SERIES                 :CRH3 Series (EMU)
+STR_CRH5_SERIES                 :CRH5 Series (EMU)
+STR_CRH6_SERIES                 :CRH6 Series (EMU)
+STR_CRH380A_SERIES              :CRH380A Series (EMU)
+STR_CRH380B_SERIES              :CRH380B Series (EMU)
+STR_CR200J_SERIES               :CR200J Series (EMU)
+STR_CR400AF_SERIES              :CR400AF Series (EMU)
+STR_CR400BF_SERIES              :CR400BF Series (EMU)
+
+STR_21_SERIES                   :Type 21 Series Coaches
+STR_22_SERIES                   :Type 22 Series Coaches
+STR_22_AIRCON_SERIES            :Type 22 Series Air-conditioned Coaches
+STR_22B_SERIES                  :Type 22B Series Coaches
+STR_24_DDR_SERIES               :Type 24 Series Coaches (DDR)
+STR_25_SERIES                   :Type 25 Series Coaches
+STR_S25_SERIES                  :Type S25 Series Coaches
+STR_25_HK_SERIES                :Type 25 Series Canton-Kowloon Railway Coaches
+STR_25B_SERIES                  :Type 25B Series Coaches
+STR_S25BLD_SERIES               :Type S25B Series Coaches (Low-Door)
+STR_S25BHD_SERIES               :Type S25B Series Coaches (High-Door)
+STR_25G_SERIES                  :Type 25G Series Coaches
+STR_25Z_SERIES                  :Type 25Z Series Coaches
+STR_S25Z_SERIES                 :Type S25Z Series Coaches 
+STR_25K_SERIES                  :Type 25K Series Coaches
+STR_S25KLD_SERIES               :Type S25K Series Coaches (Low-Door)
+STR_S25KHD_SERIES               :Type S25K Series Coaches (High-Door)
+STR_25T_SERIES                  :Type 25T Series Coaches
+
+STR_25DT_JINLUN_SERIES          :NZJ2 JINLUN DMU Wagons
+
+STR_MU_WAGON                    :MU Wagons
+
+STR_BOXCAR                      :Boxcar
+STR_FLATCAR                     :Flatcar
+STR_TANKER                      :Tanker
+STR_GONDOLA                     :Gondola
+STR_REFRIGERATOR_WAGON          :Refrigerator Wagon
+STR_VIHICLE_TRANSPORTER         :Vihicle Transporter
+
+
+
 
 STR_US_IMPORT                :Imported from United States
 STR_FR_IMPORT                :Imported from France

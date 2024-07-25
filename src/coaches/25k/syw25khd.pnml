@@ -1,4 +1,9 @@
-// Begin SYW25KHD
+//Begin SYW25KHD
+switch (FEAT_TRAINS, SELF, switch_syw25khd_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_S25KHD_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+
 
 // Graphics
 
@@ -85,6 +90,8 @@ item (FEAT_TRAINS, syw25khd) {
         running_cost_factor:            11 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   44;
         purchase_cargo_capacity:        80/3;
+        name:                            switch_syw25khd_name;
+
     }
 }
 
