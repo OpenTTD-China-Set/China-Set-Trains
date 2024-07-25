@@ -110,7 +110,7 @@ item (FEAT_TRAINS, n60) {
         running_cost_factor:            3 * runningcostfactor();
         purchase_running_cost_factor:   12;
         purchase_cargo_capacity:        60/3;
-        name:                            switch_n60_name;
+        name:                           switch_n60_name;
 
     }
 }
