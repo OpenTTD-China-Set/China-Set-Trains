@@ -1,4 +1,9 @@
-// Begin YW22AIRCON
+//Begin YW22AIRCON
+switch (FEAT_TRAINS, SELF, switch_yw22aircon_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_22_AIRCON_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+
 
 // Graphics
 
@@ -101,6 +106,8 @@ item (FEAT_TRAINS, yw22aircon) {
         running_cost_factor:            9 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   36;
         purchase_cargo_capacity:        60/3;
+        name:                           switch_yw22aircon_name;
+
     }
 }
 

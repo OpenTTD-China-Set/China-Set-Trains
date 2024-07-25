@@ -1,5 +1,8 @@
 // Begin HXN3
-
+switch (FEAT_TRAINS, SELF, switch_hxn3_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_HXN3_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
 // Graphics
 
 // Purchase Menu
@@ -100,6 +103,7 @@ item (FEAT_TRAINS, hxn3) {
         running_cost_factor:            83 * runningcostfactor();
         purchase_running_cost_factor:   332;
         purchase_cargo_capacity:        0;
+        name:                           switch_hxn3_name;
     }
 }
 

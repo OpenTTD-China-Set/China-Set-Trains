@@ -1,4 +1,9 @@
-// Begin SS6B
+//Begin SS6B
+switch (FEAT_TRAINS, SELF, switch_ss6b_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_SS6_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+
 
 // Graphics
 
@@ -80,6 +85,8 @@ item (FEAT_TRAINS, ss6b) {
         purchase_running_cost_factor:   304;
         purchase_cargo_capacity:        0;
         bitmask_vehicle_info:           0;
+        name:                            switch_ss6b_name;
+
     }
 }
 

@@ -1,4 +1,9 @@
-// Begin SRZXL25Z
+//Begin SRZXL25Z
+switch (FEAT_TRAINS, SELF, switch_srzxl25z_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_S25Z_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+
 
 // Graphics
 
@@ -81,6 +86,8 @@ item (FEAT_TRAINS, srzxl25z) {
         running_cost_factor:            6 * runningcostfactor();
         purchase_running_cost_factor:   24;
         purchase_cargo_capacity:        92/3;
+        name:                            switch_srzxl25z_name;
+
     }
 }
 

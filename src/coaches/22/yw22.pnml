@@ -1,5 +1,13 @@
 // Begin YW22
-
+switch (FEAT_TRAINS, SELF, switch_yw22_name_purchase, getbits(extra_callback_info1, 8, 8)) { 
+    0: return string(STR_22_SERIES);
+    1: return string(STR_NAME_YW22);
+    return CB_RESULT_NO_TEXT; 
+} 
+switch (FEAT_TRAINS, SELF, switch_yw22_name, getbits(extra_callback_info1, 0, 8)) { 
+  0x20: switch_yw22_name_purchase; 
+  return CB_RESULT_NO_TEXT;
+  }
 // Graphics
 
 // // Purchase Menu
@@ -52,7 +60,7 @@ switch (FEAT_TRAINS, SELF, switch_yw221966_capacity, position_in_articulated_veh
 item (FEAT_TRAINS, yw22) {
     property {
         // Menu
-        name:                           string(STR_NAME_YW22);
+        name:                           string(STR_NAME_YW22EARLY);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         variant_group:					2070;
@@ -105,6 +113,7 @@ item (FEAT_TRAINS, yw22) {
         running_cost_factor:            7 * runningcostfactor() * cafecostfactor(); // NO AIR CONDITIONER
         purchase_running_cost_factor:   28;
         purchase_cargo_capacity:        77 / 3;
+        name:                           switch_yw22_name;
     }
 }
 
@@ -169,6 +178,7 @@ item (FEAT_TRAINS, yw221966) {
         running_cost_factor:            7 * runningcostfactor() * cafecostfactor(); // NO AIR CONDITIONER
         purchase_running_cost_factor:   28;
         purchase_cargo_capacity:        60 / 3;
+        name:                           switch_yw22_name;
     }
 }
 

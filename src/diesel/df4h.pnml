@@ -1,5 +1,8 @@
 // Begin DF4H
-
+switch (FEAT_TRAINS, SELF, switch_df4h_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_DF4_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
 // Graphics
 
 switch (FEAT_TRAINS, SELF, switch_df4h_articulated_part, extra_callback_info1) {
@@ -85,6 +88,7 @@ item (FEAT_TRAINS, df4h) {
         running_cost_factor:            51 * runningcostfactor();
         purchase_running_cost_factor:   204;
         purchase_cargo_capacity:        0;
+        name:                           switch_df4h_name;
     }
 }
 
