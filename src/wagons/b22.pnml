@@ -1,7 +1,3 @@
-switch (FEAT_TRAINS, SELF, switch_b22_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_B22_FAMILY);
-    return CB_RESULT_NO_TEXT;
-}
 // Begin B22
 
 // Graphics
@@ -100,8 +96,6 @@ item (FEAT_TRAINS, b22) {
         running_cost_factor:            33 * runningcostfactor();
         purchase_running_cost_factor:   132;
         purchase_cargo_capacity:        switch_b22_capacity_cargo() * 4 / 15;
-        name: switch_b22_name;
-
     }
 }
 

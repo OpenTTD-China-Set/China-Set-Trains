@@ -1,7 +1,3 @@
-switch (FEAT_TRAINS, SELF, switch_sca25z_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_25ZS_FAMILY);
-    return CB_RESULT_NO_TEXT;
-}
 // Begin SCA25Z
 
 // Graphics
@@ -86,8 +82,6 @@ item (FEAT_TRAINS, sca25z) {
         running_cost_factor:            7 * runningcostfactor() + accostfactor() + 50; // IT IS A RESTAURANT CAR!
         purchase_running_cost_factor:   78;
         purchase_cargo_capacity:        60/3;
-        name: switch_sca25z_name;
-
     }
 }
 
