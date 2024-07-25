@@ -1,7 +1,3 @@
-switch (FEAT_TRAINS, SELF, switch_crh3c_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_CRH3_FAMILY);
-    return CB_RESULT_NO_TEXT;
-}
 // Begin crh3c
 
 // Graphics
@@ -218,8 +214,6 @@ item (FEAT_TRAINS, crh3c) {
         running_cost_factor:            (63 + crhspeedcost()) * runningcostfactor() * cafecostfactor() + 20;
         purchase_running_cost_factor:   272;
         purchase_cargo_capacity:        72/3;
-        name: switch_crh3c_name;
-
     }
 
     // Multiple Unit Wagons

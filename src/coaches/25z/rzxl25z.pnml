@@ -1,7 +1,3 @@
-switch (FEAT_TRAINS, SELF, switch_rzxl25z_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_25Z_FAMILY);
-    return CB_RESULT_NO_TEXT;
-}
 // Begin RZXL25Z
 
 // Graphics
@@ -85,8 +81,6 @@ item (FEAT_TRAINS, rzxl25z) {
         running_cost_factor:            6 * runningcostfactor();
         purchase_running_cost_factor:   24;
         purchase_cargo_capacity:        71/3;
-        name: switch_rzxl25z_name;
-
     }
 }
 
