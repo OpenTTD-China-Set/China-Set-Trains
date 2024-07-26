@@ -220,7 +220,7 @@ item (FEAT_TRAINS, crh6a3) {
         running_cost_factor:            47 * runningcostfactor() + 20;
         purchase_running_cost_factor:   208;
         purchase_cargo_capacity:        150/3;
-        name:                            switch_crh6a3_name;
+        name:                           switch_crh6a3_name;
 
     }
 

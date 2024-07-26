@@ -265,7 +265,7 @@ item (FEAT_TRAINS, cr200jal) {
         running_cost_factor:            124 * runningcostfactor() + 20;
         purchase_running_cost_factor:   516;
         purchase_cargo_capacity:        0;
-        name:                            switch_cr200jal_name;
+        name:                           switch_cr200jal_name;
 
     }
 

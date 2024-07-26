@@ -1,5 +1,8 @@
 // Begin CR400BF
-
+switch (FEAT_TRAINS, SELF, switch_cr400bf_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_CR400BF_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
 // Graphics
 
 // Purchase Menu
@@ -296,6 +299,7 @@ item (FEAT_TRAINS, cr400bf) {
         running_cost_factor:            74 * runningcostfactor() * cafecostfactor() + 20;
         purchase_running_cost_factor:   316;
         purchase_cargo_capacity:        36/3;
+        name:                           switch_cr400bf_name;
     }
 
     // Multiple Unit Wagons
