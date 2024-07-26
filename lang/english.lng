@@ -219,7 +219,9 @@ STR_NAME_CR200JB        :CR200J-B (EMU)
 STR_NAME_CR200JC        :CR200J-C (EMU)
 STR_NAME_CR200JCL       :CR200J-C (Long Version) (EMU)
 STR_NAME_CRH1A          :CRH1A (EMU)
+STR_NAME_CRH1B          :CRH1B (Long Version) (EMU)
 STR_NAME_CRH1E          :CRH1E (EMU)
+STR_NAME_CRH1AA         :CRH1A-A (EMU)
 STR_NAME_CRH2A          :CRH2A (EMU)
 STR_NAME_CRH2B          :CRH2B (Long Version) (EMU)
 STR_NAME_CRH2C          :CRH2C (EMU)
@@ -568,8 +570,10 @@ STR_HXD3D_NICKNAME                  :{BLACK}Nickname: {GOLD}Tomato
 STR_NDJ3_NICKNAME                   :{BLACK}Nickname: {WHITE}White Pig
 STR_CR200J_NICKNAME                 :{BLACK}Nickname: {GREEN}"Hulk" {GOLD}(Official), {GREEN}"Trash Bin" {GOLD}(Folk)
 STR_CR200JC_NICKNAME                :{BLACK}Nickname: {GREEN}"AD Bin" {GOLD}(Folk)
-STR_CRH1A_NICKNAME                  :{BLACK}Nickname: {GOLD}Metro {BLACK}(due to its high acceleration)
-STR_CRH1E_NICKNAME                  :{BLACK}Nickname: {GOLD}Sleeping Metro {BLACK}(due to its sleeper identity)
+STR_CRH1A_NICKNAME                  :{BLACK}Nickname: {GOLD}Metro 
+STR_CRH1B_NICKNAME                  :{BLACK}Nickname: {GOLD}Long Metro 
+STR_CRH1E_NICKNAME                  :{BLACK}Nickname: {GOLD}Sleeping Metro 
+STR_CRH1AA_NICKNAME                 :{BLACK}Nickname: {GOLD}Cute Metro 
 STR_CRH2A_NICKNAME                  :{BLACK}Nickname: {GOLD}Hairtail
 STR_CRH2B_NICKNAME                  :{BLACK}Nickname: {GOLD}Long Hairtail
 STR_CRH2C_NICKNAME                  :{BLACK}Nickname: {GOLD}Crazy Hairtail
@@ -770,7 +774,9 @@ STR_CR400_AB_Z_CONSIST              :{BLACK}Consist: {GOLD}4 to 24 cars; with 16
 STR_CR200J_CONSIST                  :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, with wagons attached; or one section at front, another section at back. Will run as coupled when cars more than 12
 STR_CR200JL_CONSIST                 :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, another section at back.
 STR_CRH1A_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars. Will run as coupled when cars more than 12
+STR_CRH1B_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars
 STR_CRH1E_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars
+STR_CRH1AA_CONSIST                  :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars. Will run as coupled when cars more than 12
 STR_CRH2A_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12
 STR_CRH2B_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars
 STR_CRH2C_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12
@@ -790,7 +796,9 @@ STR_CRH6F_CONSIST                   :{BLACK}Consist: {GOLD}At least 4 cars, with
 STR_CR300_CONSIST                   :{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12
 
 STR_CRH1A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH1B_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH1E_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
+STR_CRH1AA_HEAD_SEAT                :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
 STR_CRH2A_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
 STR_CRH2B_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
 STR_CRH2C_HEAD_SEAT                 :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
