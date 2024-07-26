@@ -31,7 +31,7 @@ switch (FEAT_TRAINS, SELF, switch_crh1b_head_capacity, position_in_articulated_v
 //GFX
 
 
-switch (FEAT_TRAINS, SELF, switch_crh1b_middle_wagon_long_p_back, (position_in_consist / 3) + 1) {
+switch (FEAT_TRAINS, SELF, switch_crh1b_middle_wagon_long_p_back, (position_in_consist_from_end / 3) + 1) {
     2: spriteset_crh1a_middle_p;
     5: spriteset_crh1a_middle_p;
     spriteset_crh1a_middle_m;

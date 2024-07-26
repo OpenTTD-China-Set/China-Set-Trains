@@ -22,6 +22,9 @@ spriteset (spriteset_crh1e_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_crh1e_middle_p, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh1e-p")
 }
+spriteset (spriteset_crh1e_middle_p_r, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh1e-p")
+}
 spriteset (spriteset_crh1e_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh1e-c")
 }
@@ -41,7 +44,7 @@ switch (FEAT_TRAINS, SELF, switch_crh1e_head_capacity, position_in_articulated_v
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh1e_short_graphics, (position_in_consist_from_end == position_in_consist) || (position_in_consist_from_end == position_in_consist + 3)) {
+/* switch (FEAT_TRAINS, SELF, switch_crh1e_short_graphics, (position_in_consist_from_end == position_in_consist) || (position_in_consist_from_end == position_in_consist + 3)) {
     1: spriteset_crh1e_middle_p;
     spriteset_crh1e_middle_m;
 }
@@ -64,7 +67,48 @@ switch (FEAT_TRAINS, SELF, switch_crh1e_middle_graphics, position_in_articulated
 switch (FEAT_TRAINS, SELF, switch_crh1e_wagon_graphics, position_in_consist_from_end) {
     1: spriteset_crh1e_cab;
     switch_crh1e_middle_graphics;
+} */
+
+
+switch (FEAT_TRAINS, SELF, switch_crh1e_middle_wagon_long_p_back, (position_in_consist_from_end / 3) + 1) {
+    2: spriteset_crh1e_middle_p_r;
+    5: spriteset_crh1e_middle_p_r;
+    spriteset_crh1e_middle_m;
 }
+
+switch (FEAT_TRAINS, SELF, switch_crh1e_middle_wagon_long, (position_in_consist / 3) + 1) {
+    2: spriteset_crh1e_middle_p;
+    5: spriteset_crh1e_middle_p;
+    switch_crh1e_middle_wagon_long_p_back;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh1e_middle_wagon_short_p, (position_in_consist_from_end / 3) + 1) {
+    2: spriteset_crh1e_middle_p;
+    spriteset_crh1e_middle_m;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh1e_middle_wagon_short, (position_in_consist / 3) + 1) {
+    2: spriteset_crh1e_middle_p_r;
+    switch_crh1e_middle_wagon_short_p;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh1e_graphics_length, num_vehs_in_consist / 3) {
+    2..12:   switch_crh1e_middle_wagon_short;
+    switch_crh1e_middle_wagon_long;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh1e_wagon_graphics_cab, position_in_consist_from_end) {
+    1: spriteset_crh1e_cab;
+    switch_crh1e_graphics_length;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh1e_wagon_graphics, position_in_articulated_veh % 3) {
+    1: switch_crh1e_wagon_graphics_cab;
+    empty_sprites;
+}
+
+
 
 switch (FEAT_TRAINS, SELF, switch_crh1e_wagon_length, position_in_consist_from_end) {
     switch_length_2_8_2;
