@@ -265,7 +265,7 @@ item (FEAT_TRAINS, crh380al) {
         running_cost_factor:            (54 + crhspeedcost()) * runningcostfactor() * cafecostfactor() + 20;
         purchase_running_cost_factor:   236;
         purchase_cargo_capacity:        36/3;
-        name:                            switch_crh380al_name;
+        name:                           switch_crh380al_name;
 
     }
 

@@ -219,7 +219,7 @@ item (FEAT_TRAINS, crh3c) {
         running_cost_factor:            (63 + crhspeedcost()) * runningcostfactor() * cafecostfactor() + 20;
         purchase_running_cost_factor:   272;
         purchase_cargo_capacity:        72/3;
-        name:                            switch_crh3c_name;
+        name:                           switch_crh3c_name;
 
     }
 

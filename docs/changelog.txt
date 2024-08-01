@@ -5,12 +5,16 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
-0.3.1.167 (25/6/2024)
+0.3.1.167 (27/7/2024)
 --------------------
 Add: NC3, P80, UZ25T, P50，P65
 Renewl the sprites of HXD1D, 25T
 Wagons with aging liveries now have new feature: The probabilities of aging liveries will change by years
 Fix #47: The Cargo Tyoe of PB
+Completed the CRH1 Series:
+    - Refurbish CRH1A
+    - Add CRH1B, CRH1A-A
+    - Fix #48: Fix the power of CRH1E
 
 
 0.3.0.166 (16/6/2024)

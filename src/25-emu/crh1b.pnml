@@ -1,0 +1,289 @@
+// Begin CRH1B
+switch (FEAT_TRAINS, SELF, switch_crh1b_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_CRH1_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_crh1b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-emu", "crh1a-c")
+}
+
+// Vehicle
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_articulated_part, extra_callback_info1) {
+    1..2: return crh1b;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_crh1a_front;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_head_capacity, position_in_articulated_veh % 3) {
+    1: return 64;
+    return 0;
+}
+
+//GFX
+
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_middle_wagon_long_p_back, (position_in_consist_from_end / 3) + 1) {
+    2: spriteset_crh1a_middle_p;
+    5: spriteset_crh1a_middle_p;
+    spriteset_crh1a_middle_m;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_middle_wagon_long, (position_in_consist / 3) + 1) {
+    2: spriteset_crh1a_middle_p_r;
+    5: spriteset_crh1a_middle_p_r;
+    switch_crh1b_middle_wagon_long_p_back;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_middle_wagon_short_p, (position_in_consist_from_end / 3) + 1) {
+    2: spriteset_crh1a_middle_p;
+    spriteset_crh1a_middle_m;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_middle_wagon_short, (position_in_consist / 3) + 1) {
+    2: spriteset_crh1a_middle_p_r;
+    switch_crh1b_middle_wagon_short_p;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_graphics_length, num_vehs_in_consist / 3) {
+    2..12:   switch_crh1b_middle_wagon_short;
+    switch_crh1b_middle_wagon_long;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_wagon_graphics_cab, position_in_consist_from_end) {
+    1: spriteset_crh1a_cab;
+    switch_crh1b_graphics_length;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_wagon_graphics, position_in_articulated_veh % 3) {
+    1: switch_crh1b_wagon_graphics_cab;
+    empty_sprites;
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_wagon_length, position_in_consist_from_end) {
+    switch_length_2_8_2;
+}
+
+//Cap
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_middle_capacity, vehicle_type_id) {
+    1024: return 92;
+    1025: return 71;
+    1027: return 42;
+    1028: return 24;
+    1035: return 72;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_cab_capacity, vehicle_type_id) {
+    1024: return 79;
+    1025: return 64;
+    1027: return 32;
+    1028: return 16;
+    1035: return 56;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_wagon_capacity_1, position_in_consist_from_end) {
+    1: switch_crh1b_cab_capacity;
+    switch_crh1b_middle_capacity;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_wagon_capacity, position_in_consist % 3) {
+    1: switch_crh1b_wagon_capacity_1;
+    return 0;
+}
+
+//Cost
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_wagon_running_power, vehicle_type_id) {
+    1024: return 46;
+    1025: return 50;
+    1027: return 54;
+    1028: return 55;
+    1035: return 50;
+    return 0;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_wagon_running_unpower, vehicle_type_id) {
+    1024: return 8;
+    1025: return 12;
+    1027: return 16;
+    1028: return 17;
+    1035: return 12;
+    return 0;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_wagon_running, vehicle_is_potentially_powered) {
+    1: switch_crh1b_wagon_running_power;
+    switch_crh1b_wagon_running_unpower;
+}
+
+
+//Power
+switch (FEAT_TRAINS, SELF, switch_crh1b_wagon_power, position_in_consist % 48) {
+    0..2: return 1421;
+    3..5: return 0;
+    6..11: return 1421;
+    12..14: return 0;
+    15..17: return 1421;
+    18..20: return 0;
+    21..26: return 1421;
+    27..29: return 0;
+    30..32: return 1421;
+    33..35: return 0;
+    36..41: return 1421;
+    42..44: return 0;
+    45..47: return 1421;
+    return 0;
+}
+
+
+
+
+switch (FEAT_TRAINS, SELF, switch_crh1b_wagon_traction, vehicle_is_potentially_powered) {
+    1: return int(0.125*255);
+    return 0;
+}
+
+
+item (FEAT_TRAINS, crh1b) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CRH1B);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        variant_group:					9225;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2009,03,05);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   20;
+        track_type:                     SABA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               400 << param_cargo_decay;
+
+        // Stats
+        speed:                          250 km/h;
+        power:                          1060 kW;
+        weight:                         52 ton;
+        tractive_effort_coefficient:    0.125;
+        cost_factor:                    62;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            26;
+        reliability_decay:              12;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH1B_NICKNAME), string(STR_RELIABILITY_12), string(STR_CRH1B_CONSIST), string(STR_CRH1B_HEAD_SEAT));
+        can_attach_wagon:               crhwagon;
+        start_stop:                     mu4to24car;
+        // Graphics
+        default:                        switch_crh1b_graphics;
+        purchase:                       spriteset_crh1b_purchase_original;
+        articulated_part:               switch_crh1b_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_crh1b_head_capacity;
+        cargo_age_period:               20 * 5 * cafedecayfactor() << param_cargo_decay;
+        cost_factor:                    62;
+        running_cost_factor:            50 * runningcostfactor() * cafecostfactor() + 20;
+        purchase_running_cost_factor:   220;
+        purchase_cargo_capacity:        64/3;
+        name:                           switch_crh1b_name;
+    }
+
+    // Multiple Unit Wagons
+    livery_override(zemuw) {
+        default:                        switch_crh1b_wagon_graphics;
+        cargo_capacity:                 switch_crh1b_wagon_capacity;
+        power:                          switch_crh1b_wagon_power;
+        tractive_effort_coefficient:    switch_crh1b_wagon_traction;
+        length:                         switch_crh1b_wagon_length;
+        weight:                         52;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        running_cost_factor:            switch_crh1b_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(zymuw) {
+        default:                        switch_crh1b_wagon_graphics;
+        cargo_capacity:                 switch_crh1b_wagon_capacity;
+        power:                          switch_crh1b_wagon_power;
+        tractive_effort_coefficient:    switch_crh1b_wagon_traction;
+        length:                         switch_crh1b_wagon_length;
+        weight:                         52;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        running_cost_factor:            switch_crh1b_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(zsmuw) {
+        default:                        switch_crh1b_wagon_graphics;
+        cargo_capacity:                 switch_crh1b_wagon_capacity;
+        power:                          switch_crh1b_wagon_power;
+        tractive_effort_coefficient:    switch_crh1b_wagon_traction;
+        length:                         switch_crh1b_wagon_length;
+        weight:                         52;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        running_cost_factor:            switch_crh1b_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(swmuw) {
+        default:                        switch_crh1b_wagon_graphics;
+        cargo_capacity:                 switch_crh1b_wagon_capacity;
+        power:                          switch_crh1b_wagon_power;
+        tractive_effort_coefficient:    switch_crh1b_wagon_traction;
+        length:                         switch_crh1b_wagon_length;
+        weight:                         52;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        running_cost_factor:            switch_crh1b_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(zecmuw) {
+        default:                        switch_crh1b_wagon_graphics;
+        cargo_capacity:                 switch_crh1b_wagon_capacity;
+        power:                          switch_crh1b_wagon_power;
+        tractive_effort_coefficient:    switch_crh1b_wagon_traction;
+        length:                         switch_crh1b_wagon_length;
+        weight:                         52;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        running_cost_factor:            switch_crh1b_wagon_running() * runningcostfactor() + 50 + accostfactor(); // IT IS A RESTAURANT CAR!
+    }
+}
