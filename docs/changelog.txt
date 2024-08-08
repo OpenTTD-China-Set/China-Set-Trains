@@ -5,6 +5,9 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.2.168 (8/8/2024)
+--------------------
+
 0.3.1.167 (8/8/2024)
 --------------------
 Add: NC3, P80, UZ25T, P50，P65
@@ -18,7 +21,6 @@ Completed the CRH1 Series:
 Add the CR400BF(Intelligent EMU) Series:
     - Add CR400BF-C, Cr400BF-Z/S, CR400BF-AZ/BZ/BS
 Fix #49: The capacity and running cost of CR400AF-AZ/BZ/BS
-
 
 0.3.0.166 (16/6/2024)
 --------------------
