@@ -244,11 +244,11 @@ switch (FEAT_TRAINS, SELF, switch_cr400afz_wagon_capacity, num_vehs_in_consist /
 
 
 switch (FEAT_TRAINS, SELF, switch_cr400afz_wagon_running_power, vehicle_type_id) {
-    1024: return 64;
-    1025: return 68;
-    1027: return 72;
-    1028: return 73;
-    1035: return 74;
+    1024: return 65;
+    1025: return 69;
+    1027: return 73;
+    1028: return 74;
+    1035: return 75;
     return 0;
 }
 
