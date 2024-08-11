@@ -53,7 +53,7 @@ item (FEAT_TRAINS, srz25bhd) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SRZ25B), string(STR_S25BHD_LIVERY_AVAILABILITY), string(STR_COMFORT_192));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SRZ25B), string(STR_S25BHD_LIVERY_AVAILABILITY), string(STR_COMFORT, 192));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_s25bhd_cargo_subtype;
 

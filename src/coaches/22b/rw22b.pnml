@@ -70,7 +70,7 @@ item (FEAT_TRAINS, rw22b) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_RW22B), string(STR_22B_LIVERY_AVAILABILITY), string(STR_COMFORT_384_AC), string(STR_SELF_AIR_CONDITIONER));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_RW22B), string(STR_22B_LIVERY_AVAILABILITY), string(STR_COMFORT_PREF, 384, string(STR_COMFORT_AC, 480)), string(STR_SELF_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
 
         // Graphics

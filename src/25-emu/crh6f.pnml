@@ -209,7 +209,7 @@ item (FEAT_TRAINS, crh6f) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_CRH6F_CAN_ATTACH_WAGON), string(STR_CRH6F_NICKNAME), string(STR_CRH6F_LIVERY_AVAILABILITY), string(STR_RELIABILITY_6), string(STR_CRH6F_CONSIST), string(STR_CRH6F_HEAD_SEAT));
+        additional_text:                string(STR_DESC_5, string(STR_CRH6F_CAN_ATTACH_WAGON), string(STR_CRH6F_NICKNAME), string(STR_CRH6F_LIVERY_AVAILABILITY), string(STR_RELIABILITY, 6), string(STR_CRH6F_CONSIST), string(STR_CRH6F_HEAD_SEAT));
         can_attach_wagon:               onlyze;
         start_stop:                     mu4car;
         cargo_subtype_text:             switch_crh6f_cargo_subtype;

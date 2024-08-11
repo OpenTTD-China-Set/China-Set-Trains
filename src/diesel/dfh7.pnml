@@ -87,7 +87,7 @@ item (FEAT_TRAINS, dfh7) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_DFH7), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_24));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_DFH7), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY, 24));
         cargo_subtype_text:             switch_dfh7_cargo_subtype;
         can_attach_wagon:               locowagon;
         // Graphics

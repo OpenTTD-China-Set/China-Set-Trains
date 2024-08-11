@@ -111,7 +111,7 @@ item (FEAT_TRAINS, df11g) {
     }
     graphics {
         // Menu
-        additional_text:                        string(STR_DESC_6, string(STR_FULL_NAME_DF11G), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_DF11G_NICKNAME), string(STR_RELIABILITY_6), string(STR_DF11G_CONSIST), string(STR_LEAPING_LIU_NEVER_DIES));
+        additional_text:                        string(STR_DESC_6, string(STR_FULL_NAME_DF11G), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_DF11G_NICKNAME), string(STR_RELIABILITY, 6), string(STR_DF11G_CONSIST), string(STR_LEAPING_LIU_NEVER_DIES));
         can_attach_wagon:                       locowagon;
 
         // Graphics

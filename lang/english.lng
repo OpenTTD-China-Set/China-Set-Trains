@@ -1,4 +1,5 @@
 ﻿##grflangid 0x01
+##plural 0
 
 STR_GRF_NAME        :China Set: Trains {VERSION_STRING}
 STR_GRF_DESC        :The Train sector of the China Set of OpenTTD.
@@ -16,18 +17,11 @@ STR_PARAM_PURCHASE_COST_DESC :Adjust vehicle purchase costs. Default is 25%.
 STR_PARAM_RUNNING_COST       :Running costs
 STR_PARAM_RUNNING_COST_DESC  :Adjust vehicle running costs. Default is 25%.
 
-STR_PARAM_DIVIDE_16 :6.25%
-STR_PARAM_DIVIDE_8  :12.5%
-STR_PARAM_DIVIDE_4  :25%
-STR_PARAM_DIVIDE_2  :50%
-STR_PARAM_NORMAL    :100%
-STR_PARAM_TIMES_2   :200%
-STR_PARAM_TIMES_4   :400%
-STR_PARAM_TIMES_8   :800%
-STR_PARAM_TIMES_16  :1600%
+STR_PERCENTAGE      :{COMMA}%
 
 STR_PARAM_CARGO_DECAY       :Cargo Age Period
 STR_PARAM_CARGO_DECAY_DESC  :Adjust cargo age period of coaches and wagons. "Long" is "Standard" doubled, while "Very Long" is "Long" doubled. Even in "Standard" mode, cargo age period varies.
+
 STR_PARAM_STANDARD          :Standard
 STR_PARAM_LONG              :Long
 STR_PARAM_VERY_LONG         :Very Long
@@ -353,7 +347,7 @@ STR_FULL_NAME_DF4D           :{BLACK}Full Name: {GOLD}Dongfeng 4D Diesel Locomot
 STR_FULL_NAME_DF4D7000       :{BLACK}Full Name: {GOLD}Dongfeng 4D Diesel Locomotive 7000 Series
 STR_FULL_NAME_DF4DF          :{BLACK}Full Name: {GOLD}Dongfeng 4DF Diesel Locomotive
 STR_FULL_NAME_DF4E           :{BLACK}Full Name: {GOLD}Dongfeng 4E Diesel Locomotive
-STR_FULL_NAME_DF5KZ          :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive 
+STR_FULL_NAME_DF5KZ          :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive
 STR_FULL_NAME_DF5            :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive 1000 Series
 STR_FULL_NAME_DF7G           :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive
 STR_FULL_NAME_DF7G5000       :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive 5000 Series
@@ -433,7 +427,7 @@ STR_S25BLD_SERIES               :Type S25B Series Coaches (Low-Door)
 STR_S25BHD_SERIES               :Type S25B Series Coaches (High-Door)
 STR_25G_SERIES                  :Type 25G Series Coaches
 STR_25Z_SERIES                  :Type 25Z Series Coaches
-STR_S25Z_SERIES                 :Type S25Z Series Coaches 
+STR_S25Z_SERIES                 :Type S25Z Series Coaches
 STR_25K_SERIES                  :Type 25K Series Coaches
 STR_S25KLD_SERIES               :Type S25K Series Coaches (Low-Door)
 STR_S25KHD_SERIES               :Type S25K Series Coaches (High-Door)
@@ -453,7 +447,7 @@ STR_VIHICLE_TRANSPORTER         :Vihicle Transporter
 
 
 
-STR_US_IMPORT                :Imported from United States
+STR_US_IMPORT                :Imported from the United States
 STR_FR_IMPORT                :Imported from France
 STR_HU_IMPORT                :Imported from Hungary
 
@@ -570,10 +564,10 @@ STR_HXD3D_NICKNAME                  :{BLACK}Nickname: {GOLD}Tomato
 STR_NDJ3_NICKNAME                   :{BLACK}Nickname: {WHITE}White Pig
 STR_CR200J_NICKNAME                 :{BLACK}Nickname: {GREEN}"Hulk" {GOLD}(Official), {GREEN}"Trash Bin" {GOLD}(Folk)
 STR_CR200JC_NICKNAME                :{BLACK}Nickname: {GREEN}"AD Bin" {GOLD}(Folk)
-STR_CRH1A_NICKNAME                  :{BLACK}Nickname: {GOLD}Metro 
-STR_CRH1B_NICKNAME                  :{BLACK}Nickname: {GOLD}Long Metro 
-STR_CRH1E_NICKNAME                  :{BLACK}Nickname: {GOLD}Sleeping Metro 
-STR_CRH1AA_NICKNAME                 :{BLACK}Nickname: {GOLD}Cute Metro 
+STR_CRH1A_NICKNAME                  :{BLACK}Nickname: {GOLD}Metro
+STR_CRH1B_NICKNAME                  :{BLACK}Nickname: {GOLD}Long Metro
+STR_CRH1E_NICKNAME                  :{BLACK}Nickname: {GOLD}Sleeping Metro
+STR_CRH1AA_NICKNAME                 :{BLACK}Nickname: {GOLD}Cute Metro
 STR_CRH2A_NICKNAME                  :{BLACK}Nickname: {GOLD}Hairtail
 STR_CRH2B_NICKNAME                  :{BLACK}Nickname: {GOLD}Long Hairtail
 STR_CRH2C_NICKNAME                  :{BLACK}Nickname: {GOLD}Crazy Hairtail
@@ -596,25 +590,21 @@ STR_ALIASNAME_DF                    :{BLACK}Alias Name: {GOLD}Great Loong
 STR_ALIASNME_SS1                    :{BLACK}Alias Name: {GOLD}6Y1
 STR_ALIASNAME_FXD1B                 :{BLACK}Alias Name: {GOLD}HXD1F (Hexie/Harmony 1F Electric Locomotive)
 
-STR_RELIABILITY_32                  :{BLACK}Reliability decay speed: {GOLD}32
-STR_RELIABILITY_24                  :{BLACK}Reliability decay speed: {GOLD}24
-STR_RELIABILITY_20                  :{BLACK}Reliability decay speed: {GOLD}20
-STR_RELIABILITY_16                  :{BLACK}Reliability decay speed: {GOLD}16
-STR_RELIABILITY_15                  :{BLACK}Reliability decay speed: {GOLD}15
-STR_RELIABILITY_14                  :{BLACK}Reliability decay speed: {GOLD}14
-STR_RELIABILITY_12                  :{BLACK}Reliability decay speed: {GOLD}12
-STR_RELIABILITY_10                  :{BLACK}Reliability decay speed: {GOLD}10
-STR_RELIABILITY_8                   :{BLACK}Reliability decay speed: {GOLD}8
-STR_RELIABILITY_6                   :{BLACK}Reliability decay speed: {GOLD}6
-STR_RELIABILITY_5                   :{BLACK}Reliability decay speed: {GOLD}5
-STR_RELIABILITY_3                   :{BLACK}Reliability decay speed: {GOLD}3
-
+STR_RELIABILITY                     :{BLACK}Reliability decay speed: {PUSH_COLOUR}{GOLD}{COMMA}{POP_COLOUR}
+# TODO
 STR_310_KMH             : - Max Speed 310 km/h
 STR_350_KMH             : - Max Speed 350 km/h, Running Costs Increase
 STR_380_KMH             : - Max Speed 380 km/h, Running Costs Greatly Increase
 
+STR_MAX_SPEED           : - Max Speed {VELOCITY}
+STR_MAX_SPEED_INCREASED : - Max Speed {VELOCITY} (Increasing running costs)
+STR_MAX_SPEED_DECREASED : - Max Speed {VELOCITY} (Decreasing running costs)
+
 STR_350_AVAILABLE       :Refittable to Max Speed 350 km/h (Increasing running costs)
 STR_350_380_AVAILABLE   :Refittable to Max Speed 350 or 380 km/h (Increasing running costs)
+
+STR_SPEED_AVAILABLE_1   :Refittable to Max Speed {VELOCITY} (Increasing running costs)
+STR_SPEED_AVAILABLE_2   :Refittable to Max Speed {VELOCITY} or {VELOCITY} (Increasing running costs)
 
 STR_ORIGINAL            : - Original Livery
 STR_REVERSE             : └ the Reverse of the Livery Above
@@ -702,38 +692,14 @@ STR_XIAOYONG            : - Xiaoshan/Hangzhou-Ningbo Livery
 
 STR_JINLUN_25DT         :Coaches use for DMU {BLUE}"JIN{WHITE}LUN"
 
-STR_COMFORT             :{BLACK}Comfort: {GOLD}{COMMA}
+STR_COMFORT             :{BLACK}Comfort: {PUSH_COLOUR}{GOLD}{COMMA}{POP_COLOUR}
+STR_COMFORT_PREF        :{BLACK}Comfort: {PUSH_COLOUR}{GOLD}{COMMA}{POP_COLOUR}{STRING}
+STR_COMFORT_CAFE        :, but at least {COMMA} in operation due to its restaurant identity
+STR_COMFORT_AC          :, but at least {COMMA} in operation due to the presence of air conditioner
 
-STR_COMFORT_108         :{BLACK}Comfort: {GOLD}108
-STR_COMFORT_144         :{BLACK}Comfort: {GOLD}144
-STR_COMFORT_160         :{BLACK}Comfort: {GOLD}160
-STR_COMFORT_192         :{BLACK}Comfort: {GOLD}192
-STR_COMFORT_256         :{BLACK}Comfort: {GOLD}256
-STR_COMFORT_288         :{BLACK}Comfort: {GOLD}288
-STR_COMFORT_320         :{BLACK}Comfort: {GOLD}320
-STR_COMFORT_384         :{BLACK}Comfort: {GOLD}384
-
-STR_COMFORT_144_CAFE    :{BLACK}Comfort: {GOLD}144 {BLACK}, but at least 180 in operation due to its restaurant identity
-STR_COMFORT_160_CAFE    :{BLACK}Comfort: {GOLD}160 {BLACK}, but at least 200 in operation due to its restaurant identity
-STR_COMFORT_192_CAFE    :{BLACK}Comfort: {GOLD}192 {BLACK}, but at least 240 in operation due to its restaurant identity
-STR_COMFORT_384_AC      :{BLACK}Comfort: {GOLD}384 {BLACK}, but at least 480 in operation due to the presence of air conditioner
-
-STR_COMFORT_240         :{BLACK}Comfort: {GOLD}240
-STR_COMFORT_400         :{BLACK}Comfort: {GOLD}400
-STR_COMFORT_480         :{BLACK}Comfort: {GOLD}480
-STR_COMFORT_640         :{BLACK}Comfort: {GOLD}640
-STR_COMFORT_720         :{BLACK}Comfort: {GOLD}720
-STR_COMFORT_800         :{BLACK}Comfort: {GOLD}800
-
-STR_COMFORT_240_CAFE    :{BLACK}Comfort: {GOLD}240 {BLACK}, but at least 300 in operation due to its restaurant identity
-
-STR_DECAY_185           :{BLACK}Cargo Age Period Factor: {GOLD}185
-STR_DECAY_200           :{BLACK}Cargo Age Period Factor: {GOLD}200
-STR_DECAY_400           :{BLACK}Cargo Age Period Factor: {GOLD}400
-STR_DECAY_800           :{BLACK}Cargo Age Period Factor: {GOLD}800
-STR_DECAY_1600          :{BLACK}Cargo Age Period Factor: {GOLD}1600
-STR_DECAY_BOXCAR        :{BLACK}Cargo Age Period Factor: {GOLD}185, Passengers 80, Livestock 560
-STR_DECAY_BOXCAR_NOPASS :{BLACK}Cargo Age Period Factor: {GOLD}185, Livestock 560, Unrefittable to Passengers
+STR_DECAY               :{BLACK}Cargo Age Period Factor: {PUSH_COLOUR}{GOLD}{COMMA}{POP_COLOUR}
+STR_DECAY_BOXCAR        :{BLACK}Cargo Age Period Factor: {PUSH_COLOUR}{GOLD}{COMMA}, Passengers {COMMA}, Livestock {COMMA}{POP_COLOUR}
+STR_DECAY_BOXCAR_NOPAX  :{BLACK}Cargo Age Period Factor: {PUSH_COLOUR}{GOLD}{COMMA}, Livestock {COMMA}, Unrefittable to Passengers{POP_COLOUR}
 
 STR_CAFE_EFFECT                     :{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Halves Running Costs of Non-Commuter Passenger Cars except Restaurant Cars, and Increases Cargo Age Period by 1/4
 STR_AIR_CONDITIONER_EFFECT          :{BLACK}Air Conditioner Effect: {GOLD}Attaching Air Conditioner Generator Car Increases Cargo Age Period of Most Passenger Cars Hauled by Locomotives without Electricity Supply
@@ -825,7 +791,4 @@ STR_ELECTRICITY_SUPPLY_NO           :{BLACK}Electricity Supply for cars: {RED}NO
 STR_TOO_SHORT                       :TOO SHORT!
 STR_ONLY_TWO_SECTIONS               :This locomotive must be in a consist of two sections to run.
 STR_MUST_BE_4_8_12_16_CARS          :This MU must be in a consist of 4, 8, 12 or 16 cars to run.
-STR_MUST_BE_5_TO_17_CARS            :This MU must be in a consist of 5 to 17 cars to run.
-STR_MUST_BE_2_TO_16_CARS            :This MU must be in a consist of 2 to 16 cars to run.
-STR_MUST_BE_4_TO_24_CARS            :This MU must be in a consist of 4 to 24 cars to run.
-STR_MUST_BE_8_TO_24_CARS            :This MU must be in a consist of 8 to 24 cars to run.
+STR_MUST_BE_RANGE_CARS              :This MU must be in a consist of {COMMA} to {COMMA} car{P "" s} to run.

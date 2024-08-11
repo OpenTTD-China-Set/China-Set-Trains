@@ -77,7 +77,7 @@ item (FEAT_TRAINS, ss1) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SS1), string(STR_ALIASNME_SS1), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_SS1_NICKNAME), string(STR_RELIABILITY_20));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SS1), string(STR_ALIASNME_SS1), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_SS1_NICKNAME), string(STR_RELIABILITY, 20));
         cargo_subtype_text:             switch_ss1_cargo_subtype;
         can_attach_wagon:               locowagon;
         // Graphics

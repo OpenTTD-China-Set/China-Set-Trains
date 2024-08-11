@@ -69,7 +69,7 @@ item (FEAT_TRAINS, hxn5b) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_HXN5B), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_HXN5B_NICKNAME), string(STR_RELIABILITY_14));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_HXN5B), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_HXN5B_NICKNAME), string(STR_RELIABILITY, 14));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_hxn5b_graphics;

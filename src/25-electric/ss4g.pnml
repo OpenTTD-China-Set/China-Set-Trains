@@ -72,7 +72,7 @@ item (FEAT_TRAINS, ss4g) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SS4G), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_SS4G_NICKNAME), string(STR_RELIABILITY_8));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SS4G), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_SS4G_NICKNAME), string(STR_RELIABILITY, 8));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_ss4g_graphics;

@@ -70,7 +70,7 @@ item (FEAT_TRAINS, xl25t_sspe) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_2, string(STR_XL25T_SSPE_DESCRIPTION), string(STR_DECAY_200));
+        additional_text:                string(STR_DESC_2, string(STR_XL25T_SSPE_DESCRIPTION), string(STR_DECAY, 200));
         can_attach_wagon:               locowagon;
 
         // Graphics

@@ -250,7 +250,7 @@ item (FEAT_TRAINS, cr200jal) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_CR200J_CAN_ATTACH_WAGON), string(STR_CR200J_NICKNAME), string(STR_RELIABILITY_20), string(STR_CR200JL_CONSIST));
+        additional_text:                string(STR_DESC_4, string(STR_CR200J_CAN_ATTACH_WAGON), string(STR_CR200J_NICKNAME), string(STR_RELIABILITY, 20), string(STR_CR200JL_CONSIST));
         can_attach_wagon:               cr200jalwagon;
         start_stop:                     mu8car;
         // Graphics

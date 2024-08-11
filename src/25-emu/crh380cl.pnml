@@ -149,6 +149,11 @@ switch (FEAT_TRAINS, SELF, switch_crh380cl_wagon_traction, vehicle_is_potentiall
     return 0;
 }
 
+switch (FEAT_TRAINS, SELF, switch_crh380cl_additional_text, [
+    STORE_TEMP(350 | 380 << 16, 0x100)
+]) {
+    string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH380CL_NICKNAME), string(STR_RELIABILITY, 5), string(STR_CRH380CL_CONSIST), string(STR_CRH380CL_HEAD_SEAT), string(STR_SPEED_AVAILABLE_2));
+}
 
 item (FEAT_TRAINS, crh380cl) {
     property {
@@ -190,7 +195,7 @@ item (FEAT_TRAINS, crh380cl) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH380CL_NICKNAME), string(STR_RELIABILITY_5), string(STR_CRH380CL_CONSIST), string(STR_CRH380CL_HEAD_SEAT), string(STR_350_380_AVAILABLE));
+        additional_text:                switch_crh380cl_additional_text;
         can_attach_wagon:               crhwagon;
         start_stop:                     mu4car;
         cargo_subtype_text:             switch_crh380_cargo_subtype;

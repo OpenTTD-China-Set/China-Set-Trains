@@ -82,7 +82,7 @@ item (FEAT_TRAINS, df7g5000) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_DF7G), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF7G5000_LIVERY_AVAILABILITY), string(STR_DF7G_NICKNAME), string(STR_RELIABILITY_16));
+        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_DF7G), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF7G5000_LIVERY_AVAILABILITY), string(STR_DF7G_NICKNAME), string(STR_RELIABILITY, 16));
         cargo_subtype_text:             switch_df7g5000_cargo_subtype;
         can_attach_wagon:               locowagon;
 

@@ -78,7 +78,7 @@ item (FEAT_TRAINS, b6) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DECAY_800);
+        additional_text:                string(STR_DECAY, 800);
         can_attach_wagon:               locowagon;
 
         // Graphics

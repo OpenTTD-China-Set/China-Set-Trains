@@ -320,7 +320,7 @@ item (FEAT_TRAINS, crh2g) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH2G_NICKNAME), string(STR_RELIABILITY_12), string(STR_CRH2G_CONSIST), string(STR_CRH2G_HEAD_SEAT));
+        additional_text:                string(STR_DESC_4, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH2G_NICKNAME), string(STR_RELIABILITY, 12), string(STR_CRH2G_CONSIST), string(STR_CRH2G_HEAD_SEAT));
         can_attach_wagon:               crhwagon;
         start_stop:                     mu4car;
         // Graphics
