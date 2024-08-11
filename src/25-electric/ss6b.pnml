@@ -36,7 +36,7 @@ item (FEAT_TRAINS, ss6b) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        variant_group:					6153;
+        variant_group:					ss6;
 
         // Availability
         climates_available:             ALL_CLIMATES;

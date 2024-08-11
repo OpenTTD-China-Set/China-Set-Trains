@@ -73,7 +73,7 @@ item (FEAT_TRAINS, rw25t) {
         name:                           string(STR_NAME_RW25T);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					2052;
+        variant_group:					yz25t;
 
         // Availability
         climates_available:             ALL_CLIMATES;

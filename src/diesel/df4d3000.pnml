@@ -36,7 +36,7 @@ item (FEAT_TRAINS, df4d3000) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        variant_group:					5123;
+        variant_group:					df4d0000;
 
         // Availability
         climates_available:             ALL_CLIMATES;

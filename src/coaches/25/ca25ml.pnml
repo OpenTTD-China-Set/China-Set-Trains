@@ -58,7 +58,7 @@ item (FEAT_TRAINS, ca25ml) {
         name:                           string(STR_NAME_CA25ML);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					2125;
+        variant_group:					yz25ml;
 
         // Availability
         climates_available:             ALL_CLIMATES;

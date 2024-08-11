@@ -39,7 +39,7 @@ item (FEAT_TRAINS, rz25b) {
         name:                           string(STR_NAME_RZ25B);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					2077;
+        variant_group:					yz25b;
 
         // Availability
         climates_available:             ALL_CLIMATES;

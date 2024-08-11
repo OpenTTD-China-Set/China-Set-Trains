@@ -49,7 +49,7 @@ item (FEAT_TRAINS, ca23) {
         name:                           string(STR_NAME_CA23);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					2070;
+        variant_group:					yz22;
 
         // Availability
         climates_available:             ALL_CLIMATES;

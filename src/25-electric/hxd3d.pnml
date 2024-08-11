@@ -35,7 +35,7 @@ item (FEAT_TRAINS, hxd3d) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        variant_group:					6144;
+        variant_group:					hxd3c;
 
         // Availability
         climates_available:             ALL_CLIMATES;

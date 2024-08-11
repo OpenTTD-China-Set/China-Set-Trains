@@ -190,11 +190,11 @@ switch (FEAT_TRAINS, SELF, switch_cr400afz_wagon_length, position_in_consist_fro
 
 
 switch (FEAT_TRAINS, SELF, switch_cr400afz_middle_capacity_id, vehicle_type_id) {
-    1024: return 93;
-    1025: return 62;
-    1027: return 38;
-    1028: return 25;
-    1035: return 73;
+    zemuw: return 93;
+    zymuw: return 62;
+    zsmuw: return 38;
+    swmuw: return 25;
+    zecmuw: return 73;
     return 0;
 }
 
@@ -205,11 +205,11 @@ switch (FEAT_TRAINS, SELF, switch_cr400afz_middle_capacity, position_in_articula
 
 
 switch (FEAT_TRAINS, SELF, switch_cr400afz_cab_capacity_id, vehicle_type_id) {
-    1024: return 63;
-    1025: return 42;
-    1027: return 28;
-    1028: return 20;
-    1035: return 50;
+    zemuw: return 63;
+    zymuw: return 42;
+    zsmuw: return 28;
+    swmuw: return 20;
+    zecmuw: return 50;
     return 0;
 }
 
@@ -244,21 +244,21 @@ switch (FEAT_TRAINS, SELF, switch_cr400afz_wagon_capacity, num_vehs_in_consist /
 
 
 switch (FEAT_TRAINS, SELF, switch_cr400afz_wagon_running_power, vehicle_type_id) {
-    1024: return 64;
-    1025: return 68;
-    1027: return 72;
-    1028: return 73;
-    1035: return 74;
+    zemuw: return 64;
+    zymuw: return 68;
+    zsmuw: return 72;
+    swmuw: return 73;
+    zecmuw: return 74;
     return 0;
 }
 
 
 switch (FEAT_TRAINS, SELF, switch_cr400afz_wagon_running_unpower, vehicle_type_id) {
-    1024: return 6;
-    1025: return 10;
-    1027: return 14;
-    1028: return 15;
-    1035: return 16;
+    zemuw: return 6;
+    zymuw: return 10;
+    zsmuw: return 14;
+    swmuw: return 15;
+    zecmuw: return 16;
     return 0;
 }
 
@@ -317,7 +317,7 @@ item (FEAT_TRAINS, cr400afz) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        variant_group:					9235;
+        variant_group:					cr400af;
 
         // Availability
         climates_available:             ALL_CLIMATES;

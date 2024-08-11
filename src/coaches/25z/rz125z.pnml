@@ -63,7 +63,7 @@ item (FEAT_TRAINS, rz125z) {
         name:                           string(STR_NAME_RZ125Z);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					2099;
+        variant_group:					rz225z;
 
         // Availability
         climates_available:             ALL_CLIMATES;

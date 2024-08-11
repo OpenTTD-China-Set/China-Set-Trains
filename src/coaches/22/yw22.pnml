@@ -63,7 +63,7 @@ item (FEAT_TRAINS, yw22) {
         name:                           string(STR_NAME_YW22EARLY);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					2070;
+        variant_group:					yz22;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -128,7 +128,7 @@ item (FEAT_TRAINS, yw221966) {
         name:                           string(STR_NAME_YW221966);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					2072;
+        variant_group:					yw22;
 
         // Availability
         climates_available:             ALL_CLIMATES;
