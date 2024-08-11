@@ -237,8 +237,8 @@ switch (FEAT_TRAINS, SELF, switch_crh6a2_wagon_length, position_in_consist_from_
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh6a2_middle_capacity_1, vehicle_type_id) {
-    1024: return 201;
-    1025: return 60;
+    zemuw: return 201;
+    zymuw: return 60;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh6a2_middle_capacity, position_in_articulated_veh % 3) {
@@ -247,8 +247,8 @@ switch (FEAT_TRAINS, SELF, switch_crh6a2_middle_capacity, position_in_articulate
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh6a2_cab_capacity_1, vehicle_type_id) {
-    1024: return 150;
-    1025: return 48;
+    zemuw: return 150;
+    zymuw: return 48;
     return 0;
 }
 
@@ -263,26 +263,26 @@ switch (FEAT_TRAINS, SELF, switch_crh6a2_wagon_capacity, position_in_consist_fro
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh6a2_wagon_cost_power, vehicle_type_id) {
-    1024: return 62;
-    1025: return 66;
+    zemuw: return 62;
+    zymuw: return 66;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh6a2_wagon_running_power, vehicle_type_id) {
-    1024: return 48;
-    1025: return 52;
+    zemuw: return 48;
+    zymuw: return 52;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh6a2_wagon_cost_unpower, vehicle_type_id) {
-    1024: return 23;
-    1025: return 27;
+    zemuw: return 23;
+    zymuw: return 27;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh6a2_wagon_running_unpower, vehicle_type_id) {
-    1024: return 9;
-    1025: return 13;
+    zemuw: return 9;
+    zymuw: return 13;
     return 0;
 }
 

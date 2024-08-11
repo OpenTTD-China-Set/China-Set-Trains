@@ -56,7 +56,7 @@ item (FEAT_TRAINS, pb) {
         name:                           string(STR_NAME_PB);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					3098;
+        variant_group:					p50;
 
         // Availability
         climates_available:             ALL_CLIMATES;

@@ -60,7 +60,7 @@ item (FEAT_TRAINS, df5) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        variant_group:					5143;
+        variant_group:					df5kz;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -84,7 +84,7 @@ item (FEAT_TRAINS, df5) {
 
         // Stats
         speed:                          80 km/h;
-        power:                          1040 kW;
+        power:                          wrcmuw kW;
         weight:                         138 ton;
         tractive_effort_coefficient:    0.322;
         cost_factor:                    53;

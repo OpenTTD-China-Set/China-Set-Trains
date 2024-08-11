@@ -45,8 +45,8 @@ spriteset (spriteset_cr200ja_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_
 }
 
 switch (FEAT_TRAINS, SELF, cr200jawagon, vehicle_type_id) {
-    1024..1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    9216: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    zemuw..zecmuw: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    cr200ja: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
@@ -67,7 +67,7 @@ switch (FEAT_TRAINS, SELF, swith_cr200ja_start_stop_long, (hasbit(bitmask_consis
     return CB_RESULT_NO_TEXT;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr200ja_start_stop, count_veh_id(9216)) {
+switch (FEAT_TRAINS, SELF, switch_cr200ja_start_stop, count_veh_id(cr200ja)) {
     3: swith_cr200ja_start_stop_short;
     6: swith_cr200ja_start_stop_long;
     return string(STR_CR200J_CONSIST);
@@ -104,7 +104,7 @@ switch (FEAT_TRAINS, SELF, switch_cr200ja_middle_wagon_reconect, (((position_in_
     switch_cr200ja_cab_half;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr200ja_length_class, count_veh_id(9216)) {
+switch (FEAT_TRAINS, SELF, switch_cr200ja_length_class, count_veh_id(cr200ja)) {
     0: spriteset_cr200ja_middle;
     switch_cr200ja_middle_wagon_reconect;
 }
@@ -197,14 +197,14 @@ switch (FEAT_TRAINS, SELF, switch_cr200ja_middle_capacity_wg, position_in_articu
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200ja_middle_capacity, vehicle_type_id) {
-    1024: switch_cr200ja_middle_capacity_ze;
-    1025: switch_cr200ja_middle_capacity_zy;
-    1027: switch_cr200ja_middle_capacity_zs;
-    1028: switch_cr200ja_middle_capacity_sw;
-    1035: switch_cr200ja_middle_capacity_zec;
-    1036: switch_cr200ja_middle_capacity_we;
-    1037: switch_cr200ja_middle_capacity_wy;
-    1039: switch_cr200ja_middle_capacity_wg;
+    zemuw: switch_cr200ja_middle_capacity_ze;
+    zymuw: switch_cr200ja_middle_capacity_zy;
+    zsmuw: switch_cr200ja_middle_capacity_zs;
+    swmuw: switch_cr200ja_middle_capacity_sw;
+    zecmuw: switch_cr200ja_middle_capacity_zec;
+    wemuw: switch_cr200ja_middle_capacity_we;
+    wymuw: switch_cr200ja_middle_capacity_wy;
+    wgmuw: switch_cr200ja_middle_capacity_wg;
     return 0;
 }
 
@@ -249,14 +249,14 @@ switch (FEAT_TRAINS, SELF, switch_cr200ja_cab_capacity_wg, position_in_articulat
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200ja_cab_capacity, vehicle_type_id) {
-    1024: switch_cr200ja_cab_capacity_ze;
-    1025: switch_cr200ja_cab_capacity_zy;
-    1027: switch_cr200ja_cab_capacity_zs;
-    1028: switch_cr200ja_cab_capacity_sw;
-    1035: switch_cr200ja_cab_capacity_zec;
-    1036: switch_cr200ja_cab_capacity_we;
-    1037: switch_cr200ja_cab_capacity_wy;
-    1039: switch_cr200ja_cab_capacity_wg;
+    zemuw: switch_cr200ja_cab_capacity_ze;
+    zymuw: switch_cr200ja_cab_capacity_zy;
+    zsmuw: switch_cr200ja_cab_capacity_zs;
+    swmuw: switch_cr200ja_cab_capacity_sw;
+    zecmuw: switch_cr200ja_cab_capacity_zec;
+    wemuw: switch_cr200ja_cab_capacity_we;
+    wymuw: switch_cr200ja_cab_capacity_wy;
+    wgmuw: switch_cr200ja_cab_capacity_wg;
     return 0;
 }
 
@@ -275,32 +275,32 @@ switch (FEAT_TRAINS, SELF, switch_cr200ja_wagon_capacity_single, (position_in_co
     switch_cr200ja_cab_capacity;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr200ja_wagon_capacity, count_veh_id(9216)) {
+switch (FEAT_TRAINS, SELF, switch_cr200ja_wagon_capacity, count_veh_id(cr200ja)) {
     0: switch_cr200ja_wagon_capacity_single;
     switch_cr200ja_wagon_capacity_reconect;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200ja_wagon_cost, vehicle_type_id) {
-    1024: return 13;
-    1025: return 16;
-    1027: return 20;
-    1028: return 21;
-    1035: return 31;
-    1036: return 18;
-    1037: return 21;
-    1039: return 22;
+    zemuw: return 13;
+    zymuw: return 16;
+    zsmuw: return 20;
+    swmuw: return 21;
+    zecmuw: return 31;
+    wemuw: return 18;
+    wymuw: return 21;
+    wgmuw: return 22;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200ja_wagon_running, vehicle_type_id) {
-    1024: return 7;
-    1025: return 11;
-    1027: return 15;
-    1028: return 16;
-    1035: return 10;
-    1036: return 12;
-    1037: return 15;
-    1039: return 17;
+    zemuw: return 7;
+    zymuw: return 11;
+    zsmuw: return 15;
+    swmuw: return 16;
+    zecmuw: return 10;
+    wemuw: return 12;
+    wymuw: return 15;
+    wgmuw: return 17;
     return 0;
 }
 

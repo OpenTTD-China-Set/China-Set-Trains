@@ -91,11 +91,11 @@ switch (FEAT_TRAINS, SELF, switch_cr400bfab_wagon_length, position_in_consist_fr
 
 
 switch (FEAT_TRAINS, SELF, switch_cr400bfab_middle_capacity_id, vehicle_type_id) {
-    1024: return 90;
-    1025: return 60;
-    1027: return 36;
-    1028: return 24;
-    1035: return 48;
+    zemuw: return 90;
+    zymuw: return 60;
+    zsmuw: return 36;
+    swmuw: return 24;
+    zecmuw: return 48;
     return 0;
 }
 
@@ -107,11 +107,11 @@ switch (FEAT_TRAINS, SELF, switch_cr400bfab_middle_capacity, position_in_articul
 
 
 switch (FEAT_TRAINS, SELF, switch_cr400bfab_cab_capacity_id, vehicle_type_id) {
-    1024: return 60;
-    1025: return 40;
-    1027: return 17;
-    1028: return 12;
-    1035: return 16;
+    zemuw: return 60;
+    zymuw: return 40;
+    zsmuw: return 17;
+    swmuw: return 12;
+    zecmuw: return 16;
     return 0;
 }
 
@@ -131,21 +131,21 @@ switch (FEAT_TRAINS, SELF, switch_cr400bfab_wagon_capacity, (position_in_consist
 
 
 switch (FEAT_TRAINS, SELF, switch_cr400bfab_wagon_running_power, vehicle_type_id) {
-    1024: return 72;
-    1025: return 75;
-    1027: return 79;
-    1028: return 81;
-    1035: return 81;
+    zemuw: return 72;
+    zymuw: return 75;
+    zsmuw: return 79;
+    swmuw: return 81;
+    zecmuw: return 81;
     return 0;
 }
 
 
 switch (FEAT_TRAINS, SELF, switch_cr400bfab_wagon_running_unpower, vehicle_type_id) {
-    1024: return 13;
-    1025: return 16;
-    1027: return 24;
-    1028: return 22;
-    1035: return 22;
+    zemuw: return 13;
+    zymuw: return 16;
+    zsmuw: return 24;
+    swmuw: return 22;
+    zecmuw: return 22;
     return 0;
 }
 
@@ -205,7 +205,7 @@ item (FEAT_TRAINS, cr400bfab) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        variant_group:					9218;
+        variant_group:					cr400bf;
 
         // Availability
         climates_available:             ALL_CLIMATES;

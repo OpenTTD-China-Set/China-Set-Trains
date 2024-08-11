@@ -135,11 +135,11 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_middle_capacity_zec, position_in_articul
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_middle_capacity, vehicle_type_id) {
-    1024: switch_crh5a_middle_capacity_ze;
-    1025: switch_crh5a_middle_capacity_zy;
-    1027: switch_crh5a_middle_capacity_zs;
-    1028: switch_crh5a_middle_capacity_sw;
-    1035: switch_crh5a_middle_capacity_zec;
+    zemuw: switch_crh5a_middle_capacity_ze;
+    zymuw: switch_crh5a_middle_capacity_zy;
+    zsmuw: switch_crh5a_middle_capacity_zs;
+    swmuw: switch_crh5a_middle_capacity_sw;
+    zecmuw: switch_crh5a_middle_capacity_zec;
     return 0;
 }
 
@@ -169,11 +169,11 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_cab_capacity_zec, position_in_articulate
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_cab_capacity, vehicle_type_id) {
-    1024: switch_crh5a_cab_capacity_ze;
-    1025: switch_crh5a_cab_capacity_zy;
-    1027: switch_crh5a_cab_capacity_zs;
-    1028: switch_crh5a_cab_capacity_sw;
-    1035: switch_crh5a_cab_capacity_zec;
+    zemuw: switch_crh5a_cab_capacity_ze;
+    zymuw: switch_crh5a_cab_capacity_zy;
+    zsmuw: switch_crh5a_cab_capacity_zs;
+    swmuw: switch_crh5a_cab_capacity_sw;
+    zecmuw: switch_crh5a_cab_capacity_zec;
     return 0;
 }
 
@@ -183,38 +183,38 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_capacity, position_in_consist_from
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_cost_power, vehicle_type_id) {
-    1024: return 55;
-    1025: return 59;
-    1027: return 63;
-    1028: return 64;
-    1035: return 73;
+    zemuw: return 55;
+    zymuw: return 59;
+    zsmuw: return 63;
+    swmuw: return 64;
+    zecmuw: return 73;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_running_power, vehicle_type_id) {
-    1024: return 46;
-    1025: return 50;
-    1027: return 54;
-    1028: return 55;
-    1035: return 49;
+    zemuw: return 46;
+    zymuw: return 50;
+    zsmuw: return 54;
+    swmuw: return 55;
+    zecmuw: return 49;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_cost_unpower, vehicle_type_id) {
-    1024: return 16;
-    1025: return 20;
-    1027: return 24;
-    1028: return 25;
-    1035: return 35;
+    zemuw: return 16;
+    zymuw: return 20;
+    zsmuw: return 24;
+    swmuw: return 25;
+    zecmuw: return 35;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_running_unpower, vehicle_type_id) {
-    1024: return 7;
-    1025: return 11;
-    1027: return 15;
-    1028: return 16;
-    1035: return 11;
+    zemuw: return 7;
+    zymuw: return 11;
+    zsmuw: return 15;
+    swmuw: return 16;
+    zecmuw: return 11;
     return 0;
 }
 

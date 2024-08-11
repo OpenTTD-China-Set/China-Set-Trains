@@ -20,14 +20,14 @@ spriteset (spriteset_nzj2_jinlun_2_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) 
     template_standard ("dmu", "nzj2-jinlun-2-r")
 }
 
-switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_2_start_stop, !hasbit(bitmask_consist_info, 0) && (count_veh_id(8194) == 6) && ((num_vehs_in_vehid_chain != 6) ^ (num_vehs_in_consist == 6))) {
+switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_2_start_stop, !hasbit(bitmask_consist_info, 0) && (count_veh_id(nzj2_jinlun_2) == 6) && ((num_vehs_in_vehid_chain != 6) ^ (num_vehs_in_consist == 6))) {
     0: return string(STR_JINLUN_LOCOMOTIVE_CONSIST);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_2_can_attach_wagon, vehicle_type_id) {
-    8194: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    2119..2123: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    nzj2_jinlun_2: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    yz25dt_jinlun..srz25dt_jinlun: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
@@ -59,7 +59,7 @@ item (FEAT_TRAINS, nzj2_jinlun_2) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        variant_group:					8193;
+        variant_group:					nzj2_jinlun_1;
 
         // Availability
         climates_available:             ALL_CLIMATES;

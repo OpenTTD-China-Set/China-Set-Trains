@@ -42,7 +42,7 @@ item (FEAT_TRAINS, srw25khd) {
         name:                           string(STR_NAME_SRW25KHD);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					2089;
+        variant_group:					syz25khd;
 
         // Availability
         climates_available:             ALL_CLIMATES;

@@ -2,54 +2,54 @@
 
 
 switch (FEAT_TRAINS, SELF, switch_crh_wagon_articulated_part, vehicle_type_id) {
-    1024: switch_zemuw_articulated_part;
-    1025: switch_zymuw_articulated_part;
-    1027: switch_zsmuw_articulated_part;
-    1028: switch_swmuw_articulated_part;
-    1035: switch_zecmuw_articulated_part;
+    zemuw: switch_zemuw_articulated_part;
+    zymuw: switch_zymuw_articulated_part;
+    zsmuw: switch_zsmuw_articulated_part;
+    swmuw: switch_swmuw_articulated_part;
+    zecmuw: switch_zecmuw_articulated_part;
     return;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh_wagon_cargo_decay, vehicle_type_id) {
-    1024: return 12 * 5;
-    1025: return 20 * 5;
-    1027: return 32 * 5;
-    1028: return 36 * 5;
-    1035: return 12 * 5;
+    zemuw: return 12 * 5;
+    zymuw: return 20 * 5;
+    zsmuw: return 32 * 5;
+    swmuw: return 36 * 5;
+    zecmuw: return 12 * 5;
     return;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh_wagon_bitmask, vehicle_type_id) {
-    1035: return bitmask(1);
+    zecmuw: return bitmask(1);
     return 0;
 }
 
 
 switch (FEAT_TRAINS, SELF, switch_cr200j_wagon_articulated_part, vehicle_type_id) {
-    1024: switch_zemuw_articulated_part;
-    1025: switch_zymuw_articulated_part;
-    1027: switch_zsmuw_articulated_part;
-    1028: switch_swmuw_articulated_part;
-    1035: switch_zecmuw_articulated_part;
-    1036: switch_wemuw_articulated_part;
-    1037: switch_wymuw_articulated_part;
-    1039: switch_wgmuw_articulated_part;
+    zemuw: switch_zemuw_articulated_part;
+    zymuw: switch_zymuw_articulated_part;
+    zsmuw: switch_zsmuw_articulated_part;
+    swmuw: switch_swmuw_articulated_part;
+    zecmuw: switch_zecmuw_articulated_part;
+    wemuw: switch_wemuw_articulated_part;
+    wymuw: switch_wymuw_articulated_part;
+    wgmuw: switch_wgmuw_articulated_part;
     return;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200j_wagon_cargo_decay, vehicle_type_id) {
-    1024: return 12 * 5;
-    1025: return 20 * 5;
-    1027: return 32 * 5;
-    1028: return 36 * 5;
-    1035: return 12 * 5;
-    1036: return 24 * 5;
-    1037: return 32 * 5;
-    1039: return 40 * 5;
+    zemuw: return 12 * 5;
+    zymuw: return 20 * 5;
+    zsmuw: return 32 * 5;
+    swmuw: return 36 * 5;
+    zecmuw: return 12 * 5;
+    wemuw: return 24 * 5;
+    wymuw: return 32 * 5;
+    wgmuw: return 40 * 5;
     return;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200j_wagon_bitmask, vehicle_type_id) {
-    1035: return bitmask(1);
+    zecmuw: return bitmask(1);
     return 0;
 }

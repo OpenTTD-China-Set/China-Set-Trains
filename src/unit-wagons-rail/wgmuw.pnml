@@ -19,7 +19,7 @@ item (FEAT_TRAINS, wgmuw) {
         name:                           string(STR_NAME_WGMUW);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					1024;
+        variant_group:					zemuw;
 
         // Availability
         climates_available:             ALL_CLIMATES;

@@ -72,11 +72,11 @@ switch (FEAT_TRAINS, SELF, switch_crh3c_wagon_graphics, position_in_consist_from
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh3c_middle_capacity_1, vehicle_type_id) {
-    1024: return 80;
-    1025: return 50;
-    1027: return 42;
-    1028: return 30;
-    1035: return 50;
+    zemuw: return 80;
+    zymuw: return 50;
+    zsmuw: return 42;
+    swmuw: return 30;
+    zecmuw: return 50;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh3c_middle_capacity, position_in_articulated_veh % 3) {
@@ -85,11 +85,11 @@ switch (FEAT_TRAINS, SELF, switch_crh3c_middle_capacity, position_in_articulated
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh3c_cab_capacity_1, vehicle_type_id) {
-    1024: return 72;
-    1025: return 42;
-    1027: return 36;
-    1028: return 24;
-    1035: return 32;
+    zemuw: return 72;
+    zymuw: return 42;
+    zsmuw: return 36;
+    swmuw: return 24;
+    zecmuw: return 32;
     return 0;
 }
 
@@ -104,38 +104,38 @@ switch (FEAT_TRAINS, SELF, switch_crh3c_wagon_capacity, position_in_consist_from
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh3c_wagon_cost_power, vehicle_type_id) {
-    1024: return 77;
-    1025: return 81;
-    1027: return 86;
-    1028: return 87;
-    1035: return 96;
+    zemuw: return 77;
+    zymuw: return 81;
+    zsmuw: return 86;
+    swmuw: return 87;
+    zecmuw: return 96;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh3c_wagon_running_power, vehicle_type_id) {
-    1024: return 63;
-    1025: return 67;
-    1027: return 72;
-    1028: return 73;
-    1035: return 67;
+    zemuw: return 63;
+    zymuw: return 67;
+    zsmuw: return 72;
+    swmuw: return 73;
+    zecmuw: return 67;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh3c_wagon_cost_unpower, vehicle_type_id) {
-    1024: return 22;
-    1025: return 26;
-    1027: return 31;
-    1028: return 32;
-    1035: return 41;
+    zemuw: return 22;
+    zymuw: return 26;
+    zsmuw: return 31;
+    swmuw: return 32;
+    zecmuw: return 41;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh3c_wagon_running_unpower, vehicle_type_id) {
-    1024: return 9;
-    1025: return 12;
-    1027: return 17;
-    1028: return 18;
-    1035: return 13;
+    zemuw: return 9;
+    zymuw: return 12;
+    zsmuw: return 17;
+    swmuw: return 18;
+    zecmuw: return 13;
     return 0;
 }
 
@@ -167,7 +167,7 @@ item (FEAT_TRAINS, crh3c) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        variant_group:					9222;
+        variant_group:					crh3a;
 
         // Availability
         climates_available:             ALL_CLIMATES;

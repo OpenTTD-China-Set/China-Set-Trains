@@ -126,20 +126,20 @@ switch (FEAT_TRAINS, SELF, switch_crh1a_wagon_length, position_in_consist_from_e
 //Cap
 
 switch (FEAT_TRAINS, SELF, switch_crh1a_middle_capacity, vehicle_type_id) {
-    1024: return 101;
-    1025: return 84;
-    1027: return 42;
-    1028: return 24;
-    1035: return 72;
+    zemuw: return 101;
+    zymuw: return 84;
+    zsmuw: return 42;
+    swmuw: return 24;
+    zecmuw: return 72;
 }
 
 
 switch (FEAT_TRAINS, SELF, switch_crh1a_cab_capacity, vehicle_type_id) {
-    1024: return 86;
-    1025: return 72;
-    1027: return 32;
-    1028: return 16;
-    1035: return 56;
+    zemuw: return 86;
+    zymuw: return 72;
+    zsmuw: return 32;
+    swmuw: return 16;
+    zecmuw: return 56;
     return 0;
 }
 
@@ -167,21 +167,21 @@ switch (FEAT_TRAINS, SELF, switch_crh1a_wagon_capacity, position_in_consist % 3)
 //Cost
 
 switch (FEAT_TRAINS, SELF, switch_crh1a_wagon_running_power, vehicle_type_id) {
-    1024: return 46;
-    1025: return 51;
-    1027: return 55;
-    1028: return 55;
-    1035: return 51;
+    zemuw: return 46;
+    zymuw: return 51;
+    zsmuw: return 55;
+    swmuw: return 55;
+    zecmuw: return 51;
     return 0;
 }
 
 
 switch (FEAT_TRAINS, SELF, switch_crh1a_wagon_running_unpower, vehicle_type_id) {
-    1024: return 9;
-    1025: return 13;
-    1027: return 17;
-    1028: return 17;
-    1035: return 13;
+    zemuw: return 9;
+    zymuw: return 13;
+    zsmuw: return 17;
+    swmuw: return 17;
+    zecmuw: return 13;
     return 0;
 }
 
