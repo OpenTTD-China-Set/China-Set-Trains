@@ -1,4 +1,3 @@
-// Begin ND5
 
 // Graphics
 
@@ -107,5 +106,4 @@ item (FEAT_TRAINS, nd5) {
     }
 }
 
-// End ND5
 

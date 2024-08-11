@@ -1,4 +1,3 @@
-// Begin DJJ1
 
 // Graphics
 
@@ -186,5 +185,4 @@ item (FEAT_TRAINS, djj1) {
     }
 }
 
-// End DJJ1
 

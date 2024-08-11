@@ -1,4 +1,3 @@
-// Begin SS1
 
 // Graphics
 
@@ -96,5 +95,4 @@ item (FEAT_TRAINS, ss1) {
     }
 }
 
-// End SS1
 

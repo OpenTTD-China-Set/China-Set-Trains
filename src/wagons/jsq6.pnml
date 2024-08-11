@@ -1,4 +1,3 @@
-//Begin JSQ6
 switch (FEAT_TRAINS, SELF, switch_jsq6_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
     0: return string(STR_VIHICLE_TRANSPORTER);
     return CB_RESULT_NO_TEXT;
@@ -98,5 +97,4 @@ item (FEAT_TRAINS, jsq6) {
     }
 }
 
-// End JSQ6
 

@@ -1,4 +1,3 @@
-//Begin GN80
 switch (FEAT_TRAINS, SELF, switch_gn80_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
     0: return string(STR_TANKER);
     return CB_RESULT_NO_TEXT;
@@ -95,5 +94,4 @@ item (FEAT_TRAINS, gn80) {
     }
 }
 
-// End GN80
 

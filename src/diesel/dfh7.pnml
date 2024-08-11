@@ -1,4 +1,3 @@
-// Begin DFH7
 
 // Graphics
 
@@ -106,4 +105,3 @@ item (FEAT_TRAINS, dfh7) {
     }
 }
 
-// End DFH7

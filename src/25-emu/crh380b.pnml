@@ -1,4 +1,3 @@
-// Begin crh380b
 
 // Graphics
 
@@ -288,5 +287,4 @@ item (FEAT_TRAINS, crh380b) {
     }
 }
 
-// End crh380b
 

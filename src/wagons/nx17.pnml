@@ -1,4 +1,3 @@
-//Begin NX17
 switch (FEAT_TRAINS, SELF, switch_nx17_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
     0: return string(STR_FLATCAR);
     return CB_RESULT_NO_TEXT;
@@ -412,7 +411,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_black_metal, cargo_count < 5) {
     0: switch_nx17_black_metal_not_empty;
     spriteset_nx17_black_metal_empty;
 }
-// end cargotype metal
 
 // start cargotype farm and engineer supplies
 random_switch (FEAT_TRAINS, SELF, switch_nx17_black_supplies_half) {
@@ -450,7 +448,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_black_supplies, cargo_count < 5) {
     0: switch_nx17_black_supplies_not_empty;
     spriteset_nx17_black_empty;
 }
-// end cargotype farm and engineer supplies
 
 // start cargotype vehicle
 random_switch (FEAT_TRAINS, SELF, switch_nx17_black_vehicle_half) {
@@ -484,7 +481,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_black_vehicle, cargo_count < 5) {
     0: switch_nx17_black_vehicle_not_empty;
     spriteset_nx17_black_empty;
 }
-// end cargotype vehicle
 
 // start cargotype black bulk (MNO2, COAL, COKE)
 
@@ -512,7 +508,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_black_open_container_black_bulk, cargo_co
     0: switch_nx17_black_open_container_black_bulk_not_empty;
     switch_nx17_black_open_container_black_bulk_empty;
 }
-// end cargotype black bulk (MNO2, COAL, COKE)
 
 // start cargotype brown bulk
 switch (FEAT_TRAINS, SELF, switch_nx17_black_open_container_brown_bulk_not_empty, cargo_count < 32) {
@@ -524,7 +519,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_black_open_container_brown_bulk, cargo_co
     0: switch_nx17_black_open_container_brown_bulk_not_empty;
     spriteset_nx17_black_open_container_cr_livery_empty;
 }
-// end cargotype brown bulk
 
 // start cargotype white bulk
 switch (FEAT_TRAINS, SELF, switch_nx17_black_open_container_white_bulk_not_empty, cargo_count < 32) {
@@ -536,7 +530,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_black_open_container_white_bulk, cargo_co
     0: switch_nx17_black_open_container_white_bulk_not_empty;
     spriteset_nx17_black_open_container_cr_livery_empty;
 }
-// end cargotype white bulk
 
 // start cargotype log
 switch (FEAT_TRAINS, SELF, switch_nx17_black_wood_not_empty, cargo_count < 32) {
@@ -548,7 +541,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_black_wood, cargo_count < 5) {
     0: switch_nx17_black_wood_not_empty;
     spriteset_nx17_black_wood_empty;
 }
-// end cargotype log
 
 switch (FEAT_TRAINS, SELF, switch_nx17_black_all_cargo, cargo_type_in_veh) {
 // the following list is shamelessly stolen from xUSSR
@@ -686,7 +678,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_black_all_cargo, cargo_type_in_veh) {
 
     switch_nx17_black;
 }
-// end alternative colour nx17_black
 
 // start alternative colour nx17_brown
 random_switch (FEAT_TRAINS, SELF, switch_nx17_brown_container_half) {
@@ -780,7 +771,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_brown_metal, cargo_count < 5) {
     0: switch_nx17_brown_metal_not_empty;
     spriteset_nx17_brown_metal_empty;
 }
-// end cargotype metal
 
 // start cargotype farm and engineer supplies
 random_switch (FEAT_TRAINS, SELF, switch_nx17_brown_supplies_half) {
@@ -818,7 +808,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_brown_supplies, cargo_count < 5) {
     0: switch_nx17_brown_supplies_not_empty;
     spriteset_nx17_brown_empty;
 }
-// end cargotype farm and engineer supplies
 
 // start cargotype vehicle
 random_switch (FEAT_TRAINS, SELF, switch_nx17_brown_vehicle_half) {
@@ -852,7 +841,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_brown_vehicle, cargo_count < 5) {
     0: switch_nx17_brown_vehicle_not_empty;
     spriteset_nx17_brown_empty;
 }
-// end cargotype vehicle
 
 // start cargotype black bulk (MNO2, COAL, COKE)
 
@@ -880,7 +868,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_brown_open_container_black_bulk, cargo_co
     0: switch_nx17_brown_open_container_black_bulk_not_empty;
     switch_nx17_brown_open_container_black_bulk_empty;
 }
-// end cargotype black bulk (MNO2, COAL, COKE)
 
 // start cargotype brown bulk
 switch (FEAT_TRAINS, SELF, switch_nx17_brown_open_container_brown_bulk_not_empty, cargo_count < 32) {
@@ -892,7 +879,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_brown_open_container_brown_bulk, cargo_co
     0: switch_nx17_brown_open_container_brown_bulk_not_empty;
     spriteset_nx17_brown_open_container_cr_livery_empty;
 }
-// end cargotype brown bulk
 
 // start cargotype white bulk
 switch (FEAT_TRAINS, SELF, switch_nx17_brown_open_container_white_bulk_not_empty, cargo_count < 32) {
@@ -904,7 +890,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_brown_open_container_white_bulk, cargo_co
     0: switch_nx17_brown_open_container_white_bulk_not_empty;
     spriteset_nx17_brown_open_container_cr_livery_empty;
 }
-// end cargotype white bulk
 
 // start cargotype log
 switch (FEAT_TRAINS, SELF, switch_nx17_brown_wood_not_empty, cargo_count < 32) {
@@ -916,7 +901,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_brown_wood, cargo_count < 5) {
     0: switch_nx17_brown_wood_not_empty;
     spriteset_nx17_brown_wood_empty;
 }
-// end cargotype log
 
 switch (FEAT_TRAINS, SELF, switch_nx17_brown_all_cargo, cargo_type_in_veh) {
 // the following list is shamelessly stolen from xUSSR
@@ -1055,7 +1039,6 @@ switch (FEAT_TRAINS, SELF, switch_nx17_brown_all_cargo, cargo_type_in_veh) {
     switch_nx17_brown;
 }
 
-// end alternative colour nx17_brown
 
 /* random_switch (FEAT_TRAINS, SELF, random_nx17_colour) {
     1: switch_nx17_black_all_cargo;
@@ -1168,5 +1151,4 @@ item (FEAT_TRAINS, nx17) {
     }
 }
 
-// End NX17
 

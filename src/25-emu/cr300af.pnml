@@ -1,4 +1,3 @@
-// Begin  CR300AF
 
 // Graphics
 
@@ -365,5 +364,4 @@ item (FEAT_TRAINS, cr300af) {
     }
 }
 
-// End cr300af
 

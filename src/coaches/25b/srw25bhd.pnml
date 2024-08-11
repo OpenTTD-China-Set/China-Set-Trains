@@ -1,4 +1,3 @@
-//Begin SRW25BHD
 switch (FEAT_TRAINS, SELF, switch_srw25bhd_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
     0: return string(STR_S25BHD_SERIES);
     return CB_RESULT_NO_TEXT;
@@ -75,5 +74,4 @@ item (FEAT_TRAINS, srw25bhd) {
     }
 }
 
-// End SRW25BHD
 

@@ -1,4 +1,3 @@
-// Begin SY
 
 // Graphics
 
@@ -86,5 +85,4 @@ item (FEAT_TRAINS, sy) {
     }
 }
 
-// End SY
 

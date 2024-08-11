@@ -1,4 +1,3 @@
-//Begin B22
 switch (FEAT_TRAINS, SELF, switch_b22_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
     0: return string(STR_REFRIGERATOR_WAGON);
     return CB_RESULT_NO_TEXT;
@@ -106,5 +105,4 @@ item (FEAT_TRAINS, b22) {
     }
 }
 
-// End B22
 

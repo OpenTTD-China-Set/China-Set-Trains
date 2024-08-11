@@ -1,4 +1,3 @@
-// Begin YZ22B
 switch (FEAT_TRAINS, SELF, switch_yz22b_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
     0: return string(STR_22B_SERIES);
     return CB_RESULT_NO_TEXT;
@@ -87,5 +86,4 @@ item (FEAT_TRAINS, yz22b) {
     }
 }
 
-// End YZ22B
 
