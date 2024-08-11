@@ -234,7 +234,7 @@ item (FEAT_TRAINS, crh1e) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_CRH_SLEEPER_CAN_ATTACH_WAGON), string(STR_CRH1E_NICKNAME), string(STR_RELIABILITY_8), string(STR_CRH1E_CONSIST), string(STR_CRH1E_HEAD_SEAT));
+        additional_text:                string(STR_DESC_5, string(STR_CRH_SLEEPER_CAN_ATTACH_WAGON), string(STR_CRH1E_NICKNAME), string(STR_RELIABILITY, 8), string(STR_CRH1E_CONSIST), string(STR_CRH1E_HEAD_SEAT));
         can_attach_wagon:               crhsleeperonly;
         start_stop:                     mu4car;
         

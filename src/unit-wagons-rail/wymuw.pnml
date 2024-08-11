@@ -50,7 +50,7 @@ item (FEAT_TRAINS, wymuw) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_2, string(STR_ATTACH_SLEEPER_MU), string(STR_COMFORT_640));
+        additional_text:                string(STR_DESC_2, string(STR_ATTACH_SLEEPER_MU), string(STR_COMFORT, 640));
         can_attach_wagon:               muhead;
 
         // Graphics

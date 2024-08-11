@@ -66,7 +66,7 @@ item (FEAT_TRAINS, df11z) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_DF11Z), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_14));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_DF11Z), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY, 14));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_df11z_graphics;

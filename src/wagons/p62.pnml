@@ -168,7 +168,7 @@ item (FEAT_TRAINS, p62) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_P62_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR), string(STR_DESC_PENGDAIKE));
+        additional_text:                string(STR_DESC_3, string(STR_P62_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR, 185, 80, 560), string(STR_DESC_PENGDAIKE));
         can_attach_wagon:               locowagon;
 
         // Graphics

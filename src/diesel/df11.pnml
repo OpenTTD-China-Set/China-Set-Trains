@@ -65,7 +65,7 @@ item (FEAT_TRAINS, df11) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_DF11), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF11_NICKNAME), string(STR_RELIABILITY_10));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_DF11), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF11_NICKNAME), string(STR_RELIABILITY, 10));
         can_attach_wagon:               locowagon;
 
         // Graphics

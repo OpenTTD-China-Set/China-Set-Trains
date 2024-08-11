@@ -69,7 +69,7 @@ item (FEAT_TRAINS, df7g8000) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_DF7G8000), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF7G_NICKNAME), string(STR_RELIABILITY_16));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_DF7G8000), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF7G_NICKNAME), string(STR_RELIABILITY, 16));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_df7g8000_graphics;

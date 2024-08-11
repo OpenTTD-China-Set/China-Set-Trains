@@ -72,7 +72,7 @@ item (FEAT_TRAINS, hxd11000) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_HXD11000), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_HXD11000), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY, 8));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_hxd11000_graphics;

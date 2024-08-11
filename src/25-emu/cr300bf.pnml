@@ -352,7 +352,7 @@ item (FEAT_TRAINS, cr300bf) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_6, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CR300BF_NICKNAME), string(STR_CR300_CONSIST), string(STR_RELIABILITY_5), string(STR_CR300_HEAD_SEAT));
+        additional_text:                string(STR_DESC_6, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CR300BF_NICKNAME), string(STR_CR300_CONSIST), string(STR_RELIABILITY, 5), string(STR_CR300_HEAD_SEAT));
         can_attach_wagon:               crhwagon;
         start_stop:                     mu4to24car;
 

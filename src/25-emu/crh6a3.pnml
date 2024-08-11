@@ -198,7 +198,7 @@ item (FEAT_TRAINS, crh6a3) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_CRH6A3_CAN_ATTACH_WAGON), string(STR_CRH6A3_LIVERY_AVAILABILITY), string(STR_RELIABILITY_8), string(STR_CRH6A3_CONSIST), string(STR_CRH6A3_HEAD_SEAT));
+        additional_text:                string(STR_DESC_4, string(STR_CRH6A3_CAN_ATTACH_WAGON), string(STR_CRH6A3_LIVERY_AVAILABILITY), string(STR_RELIABILITY, 8), string(STR_CRH6A3_CONSIST), string(STR_CRH6A3_HEAD_SEAT));
         can_attach_wagon:               onlyze;
         start_stop:                     mu4car;
         cargo_subtype_text:             switch_crh6a3_cargo_subtype;

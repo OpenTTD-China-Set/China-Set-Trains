@@ -63,7 +63,7 @@ item (FEAT_TRAINS, ss7e) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SS7E), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_SS7E_NICKNAME), string(STR_RELIABILITY_6));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SS7E), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_SS7E_NICKNAME), string(STR_RELIABILITY, 6));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_ss7e_graphics;

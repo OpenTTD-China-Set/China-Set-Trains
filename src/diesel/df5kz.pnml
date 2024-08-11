@@ -84,7 +84,7 @@ item (FEAT_TRAINS, df5kz) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_DF5KZ), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_20));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_DF5KZ), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY, 20));
         cargo_subtype_text:             switch_df5kz_cargo_subtype;
         can_attach_wagon:               locowagon;
 

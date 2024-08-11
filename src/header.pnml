@@ -15,10 +15,10 @@ grf {
             max_value: 3;
             def_value: 1;
             names: {
-                0: string(STR_PARAM_DIVIDE_2);
-                1: string(STR_PARAM_NORMAL);
-                2: string(STR_PARAM_TIMES_2);
-                3: string(STR_PARAM_TIMES_4);
+                0: string(STR_PERCENTAGE, 50);
+                1: string(STR_PERCENTAGE, 100);
+                2: string(STR_PERCENTAGE, 200);
+                3: string(STR_PERCENTAGE, 400);
             };
         }
     }
@@ -31,15 +31,15 @@ grf {
             max_value: 8;
             def_value: 2;
             names: {
-                0: string(STR_PARAM_DIVIDE_16);
-                1: string(STR_PARAM_DIVIDE_8);
-                2: string(STR_PARAM_DIVIDE_4);
-                3: string(STR_PARAM_DIVIDE_2);
-                4: string(STR_PARAM_NORMAL);
-                5: string(STR_PARAM_TIMES_2);
-                6: string(STR_PARAM_TIMES_4);
-                7: string(STR_PARAM_TIMES_8);
-                8: string(STR_PARAM_TIMES_16);
+                0: string(STR_PERCENTAGE, 6);
+                1: string(STR_PERCENTAGE, 12);
+                2: string(STR_PERCENTAGE, 25);
+                3: string(STR_PERCENTAGE, 50);
+                4: string(STR_PERCENTAGE, 100);
+                5: string(STR_PERCENTAGE, 200);
+                6: string(STR_PERCENTAGE, 400);
+                7: string(STR_PERCENTAGE, 800);
+                8: string(STR_PERCENTAGE, 1600);
             };
         }
     }
@@ -52,15 +52,15 @@ grf {
             max_value: 8;
             def_value: 2;
             names: {
-                0: string(STR_PARAM_DIVIDE_16);
-                1: string(STR_PARAM_DIVIDE_8);
-                2: string(STR_PARAM_DIVIDE_4);
-                3: string(STR_PARAM_DIVIDE_2);
-                4: string(STR_PARAM_NORMAL);
-                5: string(STR_PARAM_TIMES_2);
-                6: string(STR_PARAM_TIMES_4);
-                7: string(STR_PARAM_TIMES_8);
-                8: string(STR_PARAM_TIMES_16);
+                0: string(STR_PERCENTAGE, 6);
+                1: string(STR_PERCENTAGE, 12);
+                2: string(STR_PERCENTAGE, 25);
+                3: string(STR_PERCENTAGE, 50);
+                4: string(STR_PERCENTAGE, 100);
+                5: string(STR_PERCENTAGE, 200);
+                6: string(STR_PERCENTAGE, 400);
+                7: string(STR_PERCENTAGE, 800);
+                8: string(STR_PERCENTAGE, 1600);
             };
         }
     }

@@ -87,7 +87,7 @@ item (FEAT_TRAINS, hxn3) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_HXN3), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_HXN3), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY, 8));
         cargo_subtype_text:             switch_hxn3_cargo_subtype;
         can_attach_wagon:               locowagon;
 
