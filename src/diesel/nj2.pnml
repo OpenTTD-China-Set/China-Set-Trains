@@ -1,4 +1,3 @@
-// Begin NJ2
 
 // Graphics
 
@@ -132,5 +131,4 @@ item (FEAT_TRAINS, nj2) {
     }
 }
 
-// End NJ2
 

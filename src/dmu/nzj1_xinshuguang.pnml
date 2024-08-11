@@ -1,4 +1,3 @@
-// Begin NZJ1_Xinshuguang ("New Twilight")
 
 // Graphics
 
@@ -156,5 +155,4 @@ item (FEAT_TRAINS, nzj1_xinshuguang) {
     }
 }
 
-// End NZJ1_Xinshuguang
 

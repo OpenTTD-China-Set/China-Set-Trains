@@ -1,4 +1,3 @@
-//Begin P80
 switch (FEAT_TRAINS, SELF, switch_p80_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
     0: return string(STR_BOXCAR);
     return CB_RESULT_NO_TEXT;
@@ -113,4 +112,3 @@ item (FEAT_TRAINS, p80) {
     }
 }
 
-// End P80

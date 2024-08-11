@@ -1,4 +1,3 @@
-// Begin YW22
 switch (FEAT_TRAINS, SELF, switch_yw22_name_purchase, getbits(extra_callback_info1, 8, 8)) { 
     0: return string(STR_22_SERIES);
     1: return string(STR_NAME_YW22);
@@ -117,10 +116,8 @@ item (FEAT_TRAINS, yw22) {
     }
 }
 
-// End YW22
 
 
-// Begin YW221966
 
 item (FEAT_TRAINS, yw221966) {
     property {
@@ -182,4 +179,3 @@ item (FEAT_TRAINS, yw221966) {
     }
 }
 
-// End YW221966

@@ -1,4 +1,3 @@
-// Begin SS4
 
 // Graphics
 
@@ -85,5 +84,4 @@ item (FEAT_TRAINS, ss4) {
     }
 }
 
-// End SS4
 

@@ -1,4 +1,3 @@
-// Begin DF8B
 
 // Graphics
 
@@ -96,5 +95,4 @@ item (FEAT_TRAINS, df8b) {
     }
 }
 
-// End DF8B
 

@@ -1,4 +1,3 @@
-//Begin XL25G
 switch (FEAT_TRAINS, SELF, switch_xl25g_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
     0: return string(STR_25G_SERIES);
     return CB_RESULT_NO_TEXT;
@@ -106,5 +105,4 @@ item (FEAT_TRAINS, xl25g) {
     }
 }
 
-// End XL25G
 

@@ -1,4 +1,3 @@
-//Begin NZJ2_JINLUN_DOUBLE_DECKER
 switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_2_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
     0: return string(STR_NZJ2_SERIES);
     return CB_RESULT_NO_TEXT;
@@ -170,4 +169,3 @@ item (FEAT_TRAINS, nzj2_jinlun_2) {
     // }
 }
 
-// End NZJ2_JINLUN_DOUBLE_DECKER

@@ -1,4 +1,3 @@
-//Begin CA23AIRCON
 switch (FEAT_TRAINS, SELF, switch_ca23aircon_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
     0: return string(STR_22_AIRCON_SERIES);
     return CB_RESULT_NO_TEXT;
@@ -113,5 +112,4 @@ item (FEAT_TRAINS, ca23aircon) {
     }
 }
 
-// End CA23AIRCON
 
