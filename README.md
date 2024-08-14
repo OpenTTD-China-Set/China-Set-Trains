@@ -1,64 +1,16 @@
 # China Set: Trains README
 
+READ IN ENGLISH | [CHINESE](./README-zh.md)
 
-## 0 Contents
+1. General Information
+2. Building
+3. Credits
+4. License
 
-1. About
-2. General information
-    - Requirements
-    - Installation
-    - Parameter settings
-    - Usage
-3. Known issues
-4. Background information
-5. Frequently Asked Questions
-6. Credits
-7. Contact information
-    - Bug reports
-    - Other problems
-    - General enquiries
-8. License
-9. Obtaining the source
+## 1. General Information
 
-
-## 1 About
-
-China Set: Trains is the train sector of the China set of OpenTTD.
-It is developed by China Set Team, which can be found in Part 6.
-
-
-## 2 General information
-
-### 2.1 Requirements
-
-- OpenTTD 1.4.0-beta1 or nightly r26157, or higher
-- Not compatible with TTDPatch
-
-
-### 2.2 Installation
-
-OpenTTD:
-see https://wiki.openttd.org/NewGRF
-
-This NewGRF is available from the ingame Online Content.
-
-
-### 2.3 Parameter settings
-
-Purchase and running costs can be defined using NewGRF parametres.
-Default parametres are:
-
-Purchase cost setting: 25%
-
-Running cost setting: 25%
-
-Cargo age period, which affects the devaluing of cargo as time goes,
-can be extended using NewGRF parametres. Default is "Standard".
-"Long" is "Standard" doubled, while "Very Long" is "Long" Doubled. Even
-in "Standard" mode, cargo age period varies depending on wagon types.
-
-
-### 2.4 Usage
+China Set: Trains is the train sector of the China set of OpenTTD.\
+China Set: Trains is licensed under GPL v2.
 
 Everything in this set is Mainland China rolling stock, in addition of
 several wagon types from international/interregional connections.
@@ -87,164 +39,30 @@ livery.
 Wagon refitting behaves as in normal OpenTTD, there is cargo-specific
 graphics on major part of wagons.
 
+List of available parameters:
 
-## 3 Known issues
+| Name             | Function                        | Default value |
+|------------------|---------------------------------|---------------|
+| Loading speed    | Change wagon loading speed      | Normal        |
+| Purchase cost    | Change purchase cost            | 25%           |
+| Running cost     | Change running cost             | 25%           |
+| Cargo age period | Change the rate cargo gets aged | Standard      |
 
-Some wagons will appear too "tubeous" on consist. If you do notice too
-tubeous wagons on consist, please report them to the China Set Dev Team.
+## 2. Building
 
+The source is available on [GitHub](https://github.com/OpenTTD-China-Set/China-Set-Trains).\
+These tools are required to build the GRF:
 
-## 4 Background information
+- nml
+- make
+- gcc
+- gorender, or renderobject
 
-Information regarding rolling stock is provided from realiable sources.
-Errors may exist, do report them when encountered.
+You would need to render all models first, then you can build the GRF.
 
-
-## 5 Frequently Asked Questions
-
-Q: Why can't I use this in older versions of OpenTTD or TTDPatch?
-
-A: This NewGRF uses some features only available to OpenTTD r26157 and
-   newer. Furthermore, the most recent version of NML used to build this
-   NewGRF, produces GRF version 8. This is only supported by OpenTTD
-   r23166 and newer anyways.
-
-
-## 6 Credits
-
-Founder:
-- John Franklin
-
-Project leading and management:
-- John Franklin
-- Ahyangyi
-- babel
-- NACHN
-- wuwu (kaitokiwa)
-
-Information basis:
-- NACHN
-- wuwu (kaitokiwa)
-- babel
-- huanfeng
-- nengyeqing
-- Mikhail
-- Haiyan
-- FJZer0ich
-
-Graphics (see \docs\voxelsource.txt for details):
-- NACHN
-- FJZer0ich
-- babel
-- John Franklin
-- Mikhail
-- wuwu (kaitokiwa)
-- ctx
-- shentie106
-- Haiyan
-- EMB190
-- DF43110
-
-Code:
-- John Franklin, NML-based Coding
-- Ahyangyi, Co-operator
-- wuwu (kaitokiwa), Co-operator
-
-Translations:
-
-
-GoRender Tools:
-- Timberwolf (Matt Kimber)
-
-Makefile system (not by China Set Team):
-- planetmaker (Ingo von Borstel)
-
-Code Reference:
-- Timberwolf (Matt Kimber)
-- Finnish Trainset Team
-- JP+ Team
-  - KeepinItRail for JP+ Shinkansen
-- 2cc Trainset Team
-- xUSSR Team
-
-Helpers on Discord:
-- andythenorth
-- Emperor Jake
-- Belaja Lilija
-- Simo333
-- Garlic_Bread42
-- and more...
-
-Special thanks to:
-
-Everyone whom thanks is due;
-
-Patch Pack Developers, especially JGR;
-
-OpenTTD Developers;
-
-Chris Sawyer.
-
-
-## 7 Contact information
-
-### 7.1 Bug reports
-
-Please report any bugs you find at
-  bug tracker: https://github.com/JohnFranklin523/China-Set-Trains
-  or forum topic: http://www.tt-forums.net/viewtopic.php?t=91092
-
-Always included a detailed description of the bug, preferrably with
-screenshot and savegame. Also state the exact game version you're using,
-as well as the version of this NewGRF.
-
-If you have a savegame that includes NewGRFs not available on OpenTTD's
-Online Content, then please try to reproduce the bug in a new game
-which has all NewGRFs easily accessible.
-
-If you're using a patched version of the game, please try to reproduce
-the bug on an official game build. If you can't reproduce the bug, then
-don't report it here but in the forum topic of the patch(pack) instead.
-
-
-### 7.2 Other problems
-
-If you have any problems using this NewGRF that are not covered in the
-Frequently Asked Questions above, then you can ask your questions in the
-forum topic: https://www.tt-forums.net/viewtopic.php?t=91092
-
-
-### 7.3 General enquiries
-
-If you have any queries that cannot be asked in the forum topic, then
-contact John Franklin (JohnFranklin523) via Private Message at
-www.tt-forums.net.
-
-
-## 8 License
-
-China Set: Trains
-
-Copyright (C) 2023 China Set Team
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along
-with this program; if not, please check
-https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
-
-
-## 9 Obtaining the source
-
-The source code can be obtained from GitHub.
+>[!NOTE]
+>The first build will be slow since all models have to be rendered, which is a slow process.
+>You can use `make -j n` to speed up the process by running multiple tasks at once where `n` is the task limit.
 
 Using Linux or WSL:
 
@@ -283,4 +101,65 @@ scoop install mingw
 # compiling
 make
 # alternatively, you could use "make -j n" where n is the total number of parallel tasks you want to run at once.
+```
+
+## 3. Credits
+
+Contributors (in alphabetical order):
+
+- Ahyangyi
+- babel
+- ctx
+- DF43110
+- EMB190
+- FJZer0ich
+- Haiyan
+- huanfeng
+- John Franklin
+- Mikhail
+- NACHN
+- nengyeqing
+- shentie106
+- WenSim
+- wuwu (kaitokiwa)
+
+Thanks to:
+
+- andythenorth
+- Belaja Lilija
+- Emperor Jake
+- Garlic_Bread42
+- KeepinItRail
+- planetmaker
+- Simo333
+- Timberwolf
+- 2cc Trainset Team
+- Finnish Trainset Team
+- JP+ Team
+- xUSSR Team
+
+Special thanks to everyone whom thanks is due;
+Patch Pack Developers, especially JGR;
+OpenTTD Developers; and Chris Sawyer.
+
+## 4. License
+
+```text
+China Set: Trains
+
+Copyright (C) 2023 China Set Team
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, please check
+https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 ```
