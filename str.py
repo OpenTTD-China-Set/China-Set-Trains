@@ -17,7 +17,7 @@ with open("lang/english.lng", 'w', encoding='utf-8') as f:
         if strs[i][1] == None:
             f.write(strs[i][0]+"\n")
         else:
-            f.write(f"{strs[i][0]:48} {":"+strs[i][1]:<60}\n")
+            f.write(f"{strs[i][0]:48} {":"+strs[i][1]:<10}\n")
 
 def other_lang_generate(lang_name, lang_row, lang_code):
     with open("lang/"+lang_name+".lng", 'w', encoding='utf-8') as f:
@@ -29,7 +29,7 @@ def other_lang_generate(lang_name, lang_row, lang_code):
                 else:
                     pass
             else:
-                f.write(f"{strs[i][0]:48} {":"+strs[i][2]:<60}\n")
+                f.write(f"{strs[i][0]:48} {":"+strs[i][2]:<10}\n")
    
 other_lang_generate("simplified_chinese", 2, "0x56")
    

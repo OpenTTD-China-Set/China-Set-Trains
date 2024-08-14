@@ -83,7 +83,7 @@ item (FEAT_TRAINS, hxd1b) {
         purchase_running_cost_factor:   456;
         purchase_cargo_capacity:        0;
         bitmask_vehicle_info:           0;
-        name:                            switch_hxd1b_name;
+        name:                           switch_hxd1b_name;
 
     }
 }
