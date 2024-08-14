@@ -4,7 +4,7 @@ grf {
     desc:    string(STR_DESC_4, string(STR_GRF_DESC), string(STR_GRF_DESC_EXTRA), string(STR_GRF_DESC_README), string(STR_LEAPING_LIU_NEVER_DIES));
     url:     string(STR_GRF_URL);
     version: REPO_REVISION;
-    min_compatible_version: 167;
+    min_compatible_version: 168;
 
     param 0 {
         param_loading_speed {
