@@ -17,7 +17,7 @@ with open("lang/english.lng", 'w', encoding='utf-8') as f:
         if strs[i][1] == None:
             f.write(strs[i][0]+"\n")
         else:
-            f.write(f"{strs[i][0]:48} {":":<1} {strs[i][1]:<60}\n")
+            f.write(f"{strs[i][0]:48} {":"+strs[i][1]:<60}\n")
 
 with open("lang/simplified_chinese.lng", 'w', encoding='utf-8') as f:
     f.write("##grflangid 0x56"+"\n")
@@ -28,5 +28,5 @@ with open("lang/simplified_chinese.lng", 'w', encoding='utf-8') as f:
             else:
                 pass
         else:
-            f.write(f"{strs[i][0]:48} {":":<1} {strs[i][2]:<60}\n")
+            f.write(f"{strs[i][0]:48} {":"+strs[i][2]:<60}\n")
    
