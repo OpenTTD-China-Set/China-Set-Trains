@@ -51,7 +51,6 @@ INDEX_FILE 	   ?= $(FILE_NAME).pnml
 GRF_FILE 	   ?= $(FILE_NAME).grf
 CODE_FILES 	   ?= $(INDEX_FILE)
 CUSTOM_TAGS	   ?= custom_tags.txt
-TEMP_DIR	   ?= temp
 
 $(CUSTOM_TAGS): ./Makefile.dist
 	$(GCC) -E -x c -o $@ $<
@@ -62,9 +61,6 @@ $(NML_FILE): $(CUSTOM_TAGS) $(CODE_FILES) $(VOX_GENREATED_FILES)
 
 $(GRF_FILE): $(NML_FILE) $(CUSTOM_TAGS)
 	$(NMLC) $<
-	if [ ! -d $(TEMP_DIR) ]; then mkdir $(TEMP_DIR); fi
-	mv -f $(NML_FILE) $(TEMP_DIR)/$(NML_FILE)
-	mv -f $(CUSTOM_TAGS) $(TEMP_DIR)/$(CUSTOM_TAGS)
 
 # Rule to run nmlc when the NML file changes
 code: $(GRF_FILE)
@@ -74,15 +70,18 @@ clean: clean_grf clean_png clean_bundle clean_bundle_src
 
 clean_grf:
 	@echo "Cleaning GRF and NML files"
+	@echo "Warning: clean grf won't work when using powershell, please use bash instead."
 	@rm -f *.grf
 	@rm -f *.nml
 	@rm -f $(CUSTOM_TAGS)
 
 clean_png:
 	@echo "Cleaning PNG files"
+	@echo "Warning: clean png won't work when using powershell, please use bash instead."
 	@find $(VOX_DIR)/ -name '*.png' -type f -delete
 
 clean_bundle:
+	@echo "Warning: clean bundle won't work when using powershell, please use bash instead."
 	$(_V) -rm -rf $(DIR_NAME)
 	$(_V) -rm -rf $(DIR_NAME).tar
 	$(_V) -rm -rf $(DIR_NAME).tar.zip
@@ -138,7 +137,7 @@ MD5_SRC_FILENAME   ?= $(DIR_NAME).check.md5
 # Bundle directory
 $(DIR_NAME): $(BUNDLE_FILES)
 	$(_V) if [ -e $@ ]; then rm -rf $@; fi
-	$(_V) mkdir $@
+	$(_V) mkdir "$@"
 	$(_V) for i in $(BUNDLE_FILES); do cp $(CP_FLAGS) $$i $@; done
 
 $(DIR_NAME).tar: $(DIR_NAME)
