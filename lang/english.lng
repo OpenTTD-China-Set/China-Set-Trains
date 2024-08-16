@@ -124,6 +124,7 @@ STR_NAME_P60                                     :P60 (Boxcar)
 STR_NAME_P61                                     :P61 (Boxcar)
 STR_NAME_P62                                     :P62 (Boxcar)
 STR_NAME_P63                                     :P63 (Boxcar)
+STR_NAME_P64                                     :P64 (Boxcar)
 STR_NAME_P65                                     :P65 (Boxcar)
 STR_NAME_P70                                     :P70 (Boxcar)
 STR_NAME_P80                                     :P80 (Boxcar)
@@ -198,6 +199,7 @@ STR_NAME_HXD21000                                :HXD2-1000 (Electric)
 STR_NAME_HXD3C                                   :HXD3C (Electric)
 STR_NAME_HXD3D                                   :HXD3D (Electric)
 STR_NAME_FXD1B                                   :FXD1B (Electric)
+STR_NAME_CHA1C                                   :CHA1C (Hybrid)
 STR_NAME_NC3                                     :NC3 (DMU)
 STR_NAME_NZJ1_XINSHUGUANG                        :NZJ1 "Xinshuguang" (DMU)
 STR_NAME_NZJ2_JINLUN_UNILAMINAR                  :NZJ2 "Jinlun" (UNILAMINAR) (DMU)
@@ -440,6 +442,7 @@ STR_DESC_3                                       :{STRING}{}{STRING}{}{STRING}
 STR_DESC_2                                       :{STRING}{}{STRING}
 # Desc
 STR_XL25T_SSPE_DESCRIPTION                       :{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.
+STR_CHA1C_DESC                                   : {BLACK}Hybrid Locomotive. Use battery in non-electrifield railways as {BLUE}2000kw{BLACK},  and running as {RED}2400kw{BLACK} in 25kV AC railways
 # Livery Availability
 STR_DF_LIVERY_AVAILABILITY                       : {GOLD}Yellow {GREEN}Line {BLACK}Livery, {WHITE}White {GREEN}Line {BLACK}Livery
 STR_DF4_LIVERY_AVAILABILITY                      : {GREEN}Green {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea, DF4B only),{BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery, Jinhua-Wenzhou Livery (DF4B only)
@@ -499,6 +502,7 @@ STR_P60_LIVERY_AVAILABILITY                      : {GOLD}Random (unfinished)
 STR_P61_LIVERY_AVAILABILITY                      : {GOLD}Random (unfinished)
 STR_P62_LIVERY_AVAILABILITY                      : {GOLD}Random (Black, Blue, Brown, Rustyred)
 STR_P63_LIVERY_AVAILABILITY                      : {GOLD}Random (Black, Brown, Rustyred)
+STR_P64_LIVERY_AVAILABILITY                      : {GOLD}Random (Black, Brown, Rustyred)
 STR_P65_LIVERY_AVAILABILITY                      : {DKGREEN}China Post{GOLD}, Black (unfinished)
 STR_P70_LIVERY_AVAILABILITY                      : {GOLD}Random (Black, Blue, Brown, Rustyred)
 STR_N5_LIVERY_AVAILABILITY                       : {GOLD}Random (unfinished)
