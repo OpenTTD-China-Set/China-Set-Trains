@@ -6,5 +6,5 @@
 ~$*
 chinasettrains-*
 custom_tags.txt
-gfx/*/*.png
+gfx/**/*.png
 change*.py

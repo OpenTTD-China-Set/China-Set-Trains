@@ -427,6 +427,7 @@ STR_US_IMPORT                                    :美国进口车型
 STR_FR_IMPORT                                    :法国进口车型   
 STR_HU_IMPORT                                    :匈牙利进口车型  
 # Desc
+STR_JINLUN_25DT                                  :{BLUE}金{WHITE}轮{RED}号{GOLD}内燃动车组所使用的拖车
 STR_XL25T_SSPE_DESCRIPTION                       :{BLACK}新时速运递公司使用的XL25T版本。
 STR_CHA1C_DESC                                   : {BLACK}混合动力机车。在非电气化路段使用电池供电，功率为{BLUE}2000kw{BLACK}。在25kV交流供电铁路上功率为{RED}2400kw
 # Livery Availability
@@ -446,6 +447,8 @@ STR_CRH6A2_LIVERY_AVAILABILITY                   :{BLACK}可供选择的涂装�
 STR_CRH6A3_LIVERY_AVAILABILITY                   :{BLACK}可供选择的涂装：{GOLD}京通号，金山铁路
 STR_CRH6AA_LIVERY_AVAILABILITY                   :{BLACK}可供选择的涂装：{GOLD}珠三角城际，广珠城际，成都天府号 (有/无绿色条带)
 STR_CRH6F_LIVERY_AVAILABILITY                    :{BLACK}可供选择的涂装：{GOLD}珠三角城际，金山铁路，萧甬铁路
+STR_CR400BFC_LIVERY_AVAILABILITY                 :{BLACK}可供选择的涂装：{LTBLUE}冬奥涂装，{GOLD}原版涂装
+STR_CR400BFZ_LIVERY_AVAILABILITY                 :{BLACK}可供选择的涂装：{RED}原版龙凤{GOLD}呈祥涂装，{PURPLE}亚运涂装
 STR_22_LIVERY_AVAILABILITY                       :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，武汉铁路技术学院涂装 (仅客车)，龙庆峡号{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装、{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，广九直通车涂装 (仅XL22，UZ22)
 STR_22AIRCON_LIVERY_AVAILABILITY                 :{BLACK}可供选择的涂装：{GOLD}京沪直达特快{CREAM}奶油色-{BROWN}-棕红色、{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，广九直通车涂装,
 STR_22B_LIVERY_AVAILABILITY                      :{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装
@@ -458,7 +461,10 @@ STR_25G_LIVERY_AVAILABILITY                      :{BLACK}可供选择的涂装�
 STR_CA25G_LIVERY_AVAILABILITY                    :{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{ORANGE}橙色{GOLD}涂装，“高阻绿”{GOLD}涂装 (未完成)
 STR_KD25G_LIVERY_AVAILABILITY                    :{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{ORANGE}橙色{GOLD}涂装，{LTBLUE}沪芦列车{GOLD}涂装，西户铁路涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装 (未完成){DKGREEN}，“高阻绿”{GOLD}涂装 (未完成)
 STR_25T_LIVERY_AVAILABILITY                      :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}青藏铁路{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装
+STR_BSP25T_LIVERY_AVAILABILITY                   :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装，{DKGREEN}青藏铁路 {GOLD}涂装，{DKGREEN}"高祖绿" {GOLD}涂装，BSP25T涂装
+STR_CA25T_LIVERY_AVAILABILITY                    :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装，{DKGREEN}青藏铁路 {GOLD}涂装，{DKGREEN}"高祖绿" {GOLD}涂装，BSP25T涂装
 STR_XL25T_LIVERY_AVAILABILITY                    :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}青藏铁路{GOLD}涂装 (未完成)，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_UZ25T_LIVERY_AVAILABILITY                    :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (未完成)，{DKGREEN}"高祖绿" {GOLD}涂装
 STR_KD25T_LIVERY_AVAILABILITY                    :{BLACK}可供选择的涂装：仅有{DKGREEN}青藏铁路{GOLD}涂装
 STR_19K_LIVERY_AVAILABILITY                      :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{RED}红{WHITE}白{GOLD}相间涂装
 STR_25K_LIVERY_AVAILABILITY                      :{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
@@ -496,39 +502,39 @@ STR_NX70A_LIVERY_AVAILABILITY                    :{BLACK}可供选择的涂装�
 STR_DF_NICKNAME                                  :{BLACK}昵称：{GOLD}老东风
 STR_DF4_NICKNAME                                 :{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
 STR_DF4B_NICKNAME                                :{BLACK}改进后的内燃机使得该机车更加耐用。昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
-STR_DF4C_NICKNAME                                : {GOLD}蓝猫
-STR_DF4D_NICKNAME                                : {GOLD}老虎
-STR_DF4D7000_NICKNAME                            : {GOLD}柳州虎
-STR_DF7G_NICKNAME                                : {GOLD}乞丐
-STR_DF8B_NICKNAME                                : {GOLD}芭比
-STR_DF11_NICKNAME                                : {GOLD}狮子
-STR_DF11G_NICKNAME                               : {GOLD}猪 
-STR_HXN5_NICKNAME                                : {GOLD}蚱蜢
-STR_HXN5B_NICKNAME                               : {GOLD}番茄炒蛋
-STR_SS1_NICKNAME                                 : {BLUE}芍药
-STR_SS3_NICKNAME                                 : {GOLD}三哥 (前期), 三爷 (老化后)
-STR_SS3B_NICKNAME                                : {GOLD}蓝鸟，大蓝鸟
-STR_SS4_NICKNAME                                 : {BLUE}宝鸡蓝
-STR_SS4G_NICKNAME                                : {GOLD}四哥
-STR_SS5_NICKNAME                                 :{GOLD}试验型机车，产量仅2台。
-STR_SS6_NICKNAME                                 : {GOLD}小六
-STR_SS6B_NICKNAME                                : {GOLD}燕小六
-STR_SS7_NICKNAME                                 : {GOLD}为山区小转弯半径线路设计的通用电力机车，最大的特点是使用了B0-B0-B0轴式转向架布局。{BLACK}昵称{GOLD}烧鸡
-STR_SS7B_NICKNAME                                : {GOLD}试制型25t轴重干线重载货运电力机车，产量仅2台，其中0001号机车于2005年因山体滑坡事故报废。{BLACK}昵称{GOLD}大脸猫
-STR_SS7C_NICKNAME                                : {GOLD}客货运两用干线电力机车，昵称大脸猫(原版涂装)、{YELLOW}香蕉(黄色涂装)
-STR_SS7D_NICKNAME                                :{BLACK}昵称：{GOLD}金刚
-STR_SS7E_NICKNAME                                : {GOLD}准高速干线电力机车，{BLACK}昵称{GOLD}美女
-STR_SS8_NICKNAME                                 : {GOLD}扫把
+STR_DF4C_NICKNAME                                :{BLACK}昵称： {GOLD}蓝猫
+STR_DF4D_NICKNAME                                :{BLACK}昵称： {GOLD}老虎
+STR_DF4D7000_NICKNAME                            :{BLACK}昵称： {GOLD}柳州虎
+STR_DF7G_NICKNAME                                :{BLACK}昵称： {GOLD}乞丐
+STR_DF8B_NICKNAME                                :{BLACK}昵称： {GOLD}芭比
+STR_DF11_NICKNAME                                :{BLACK}昵称： {GOLD}狮子
+STR_DF11G_NICKNAME                               :{BLACK}昵称： {GOLD}猪
+STR_HXN5_NICKNAME                                :{BLACK}昵称： {GOLD}蚱蜢
+STR_HXN5B_NICKNAME                               :{BLACK}昵称： {GOLD}番茄炒蛋
+STR_SS1_NICKNAME                                 :{BLACK}昵称： {BLUE}芍药
+STR_SS3_NICKNAME                                 :{BLACK}昵称： {GOLD}三哥 (前期), 三爷 (老化后)
+STR_SS3B_NICKNAME                                :{BLACK}昵称： {GOLD}蓝鸟，大蓝鸟
+STR_SS4_NICKNAME                                 :{BLACK}昵称： {BLUE}宝鸡蓝
+STR_SS4G_NICKNAME                                :{BLACK}昵称： {GOLD}四哥
+STR_SS5_NICKNAME                                 :{BLACK}昵称：{GOLD}试验型机车，产量仅2台。
+STR_SS6_NICKNAME                                 :{BLACK}昵称： {GOLD}小六
+STR_SS6B_NICKNAME                                :{BLACK}昵称： {GOLD}燕小六
+STR_SS7_NICKNAME                                 :{BLACK}昵称： {GOLD}为山区小转弯半径线路设计的通用电力机车，最大的特点是使用了B0-B0-B0轴式转向架布局。{BLACK}昵称{GOLD}烧鸡
+STR_SS7B_NICKNAME                                :{BLACK}昵称： {GOLD}试制型25t轴重干线重载货运电力机车，产量仅2台，其中0001号机车于2005年因山体滑坡事故报废。{BLACK}昵称{GOLD}大脸猫
+STR_SS7C_NICKNAME                                :{BLACK}昵称： {GOLD}客货运两用干线电力机车，昵称大脸猫(原版涂装)、{YELLOW}香蕉(黄色涂装)
+STR_SS7D_NICKNAME                                :{BLACK}昵称：{BLACK}昵称：{GOLD}金刚
+STR_SS7E_NICKNAME                                :{BLACK}昵称： {GOLD}准高速干线电力机车，{BLACK}昵称{GOLD}美女
+STR_SS8_NICKNAME                                 :{BLACK}昵称： {GOLD}扫把
 STR_SS9_NICKNAME                                 :{BLACK}昵称：{GOLD}青蛙
 STR_SS9G_NICKNAME                                :{BLACK}昵称：{GOLD}烧酒
-STR_HXD1_NICKNAME                                : {GOLD}蓝精灵
-STR_HXD1B_NICKNAME                               : {GOLD}河蟹
-STR_HXD1D_NICKNAME                               : {GOLD}红枣
-STR_HXD2_NICKNAME                                : {GOLD}电河马
-STR_HXD3C_NICKNAME                               : {GOLD}电狒狒
-STR_HXD3D_NICKNAME                               : {GOLD}番茄
+STR_HXD1_NICKNAME                                :{BLACK}昵称： {GOLD}蓝精灵
+STR_HXD1B_NICKNAME                               :{BLACK}昵称： {GOLD}河蟹
+STR_HXD1D_NICKNAME                               :{BLACK}昵称： {GOLD}红枣
+STR_HXD2_NICKNAME                                :{BLACK}昵称： {GOLD}电河马
+STR_HXD3C_NICKNAME                               :{BLACK}昵称： {GOLD}电狒狒
+STR_HXD3D_NICKNAME                               :{BLACK}昵称： {GOLD}番茄
 STR_NDJ3_NICKNAME                                :{BLACK}昵称：{WHITE}大白猪
-STR_CR200J_NICKNAME                              :{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方),，{GREEN}“垃圾桶”{GOLD}(民间)
+STR_CR200J_NICKNAME                              :{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方)，{GREEN}“垃圾桶”{GOLD}(民间)
 STR_CR200JC_NICKNAME                             :{BLACK}昵称：{RED}“A{WHITE}D{GREEN}桶”{GOLD}(民间)
 STR_CRH1A_NICKNAME                               :{BLACK}昵称：{GOLD}地铁
 STR_CRH1B_NICKNAME                               :{BLACK}昵称：{GOLD}长地铁
@@ -549,12 +555,15 @@ STR_CRH380CL_NICKNAME                            :{BLACK}昵称：{GOLD}大鲨�
 STR_CRH380D_NICKNAME                             :{BLACK}昵称：{GOLD}疯地铁
 STR_CR400AF_NICKNAME                             :{BLACK}昵称：{GOLD}红神龙
 STR_CR400BF_NICKNAME                             :{BLACK}昵称：{GOLD}金凤凰
+STR_CR400_Z_NICKNAME                             :{BLACK}昵称：{GOLD}龙凤{RED}呈祥
+STR_CR400BFC_NICKNAME                            :{BLACK}冬奥涂装版昵称：{LTBLUE}瑞雪迎春
+STR_CR400BFZ_NICKNAME                            :{BLACK}昵称：{GOLD}龙凤{RED}呈祥{BLACK}，{PURPLE}茄子 (民间)/润泽江南 (官方) (亚运涂装)
 STR_CR300AF_NICKNAME                             :{BLACK}昵称：{LTBLUE}蓝妹妹
-STR_CR300BF_NICKNAME                             :{BLACK}昵称：{LTBLUE}“蓝暖男”{GOLD}(官方),，{LTBLUE}“僵尸蓝”{GOLD}(民间)
+STR_CR300BF_NICKNAME                             :{BLACK}昵称：{LTBLUE}“蓝暖男”{GOLD}(官方)，{LTBLUE}“僵尸蓝”{GOLD}(民间)
 # Alias Name
-STR_ALIASNAME_DF                                 : {GOLD}巨龙，ND
-STR_ALIASNME_SS1                                 : {GOLD}6Y1
-STR_ALIASNAME_FXD1B                              : {GOLD}HXD1F(和谐1F型电力机车)
+STR_ALIASNAME_DF                                 :{BLACK}曾用名：{GOLD}巨龙，ND
+STR_ALIASNME_SS1                                 :{BLACK}曾用名：{GOLD}6Y1
+STR_ALIASNAME_FXD1B                              :{BLACK}曾用名：{GOLD}HXD1F(和谐1F型电力机车)
 # Reliability
 STR_RELIABILITY_32                               :{BLACK}可靠性下降速度：{GOLD}32
 STR_RELIABILITY_24                               :{BLACK}可靠性下降速度：{GOLD}24
@@ -643,7 +652,8 @@ STR_JINSHAN                                      : - 金山铁路涂装
 STR_GUANGQING                                    : - 广清城际涂装
 STR_FOSHAN                                       : - 佛肇城际涂装
 STR_XIAOYONG                                     : - 萧甬铁路涂装
-STR_JINLUN_25DT                                  :{BLUE}金{WHITE}轮{RED}号{GOLD}内燃动车组所使用的拖车
+STR_ASIAGAME                                     : - {PURPLE}杭州亚运会"润泽江南"{BLACK}涂装
+STR_WINTER_OLYMPIC                               : - {LTBLUE}北京冬奥会"瑞雪迎春"{BLACK}涂装
 # Decay
 STR_COMFORT                                      :{BLACK}舒适度：{GOLD}{COMMA}
 STR_COMFORT_108                                  :{BLACK}舒适度：{GOLD}108

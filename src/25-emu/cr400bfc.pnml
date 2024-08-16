@@ -7,107 +7,222 @@ switch (FEAT_TRAINS, SELF, switch_cr400bfc_name, getbits(extra_callback_info1, 0
 
 // Purchase Menu
 spriteset (spriteset_cr400bfc_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("25-emu", "cr400bf-c-tc")
+    template_purchase ("25-emu/cr400bf-c", "cr400bf-c-tc-winterolympic01")
 }
 
 // Vehicle
 spriteset (spriteset_cr400bfc_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr400bf-c-tc")
+    template_standard ("25-emu/cr400bf-c", "cr400bf-c-tc")
 }
 spriteset (spriteset_cr400bfc_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr400bf-c-m")
+    template_standard ("25-emu/cr400bf-c", "cr400bf-c-m")
 }
 spriteset (spriteset_cr400bfc_middle_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr400bf-c-tp")
+    template_standard ("25-emu/cr400bf-c", "cr400bf-c-tp")
 }
 spriteset (spriteset_cr400bfc_middle_tp_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr400bf-c-tp")
+    template_reversed ("25-emu/cr400bf-c", "cr400bf-c-tp")
 }
 spriteset (spriteset_cr400bfc_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr400bf-c-tc")
+    template_reversed ("25-emu/cr400bf-c", "cr400bf-c-tc")
 }
 spriteset (spriteset_cr400bfc_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr400bf-c-tc-c")
+    template_reversed ("25-emu/cr400bf-c", "cr400bf-c-tc-c")
 }
 spriteset (spriteset_cr400bfc_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr400bf-c-tc-c")
+    template_standard ("25-emu/cr400bf-c", "cr400bf-c-tc-c")
 }
+
+spriteset (spriteset_cr400bfc_winterolympic_tc_01, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr400bf-c", "cr400bf-c-tc-winterolympic01")
+}
+spriteset (spriteset_cr400bfc_winterolympic_tc_01_c, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr400bf-c", "cr400bf-c-tc-winterolympic01-c")
+}
+spriteset (spriteset_cr400bfc_winterolympic_m_02, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr400bf-c", "cr400bf-c-m-winterolympic02")
+}
+spriteset (spriteset_cr400bfc_winterolympic_tp_03, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr400bf-c", "cr400bf-c-tp-winterolympic03")
+}
+spriteset (spriteset_cr400bfc_winterolympic_m_c_04, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr400bf-c", "cr400bf-c-m-c-winterolympic04")
+}
+spriteset (spriteset_cr400bfc_winterolympic_m_c_05, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr400bf-c", "cr400bf-c-m-c-winterolympic04")
+}
+spriteset (spriteset_cr400bfc_winterolympic_tp_06, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr400bf-c", "cr400bf-c-tp-winterolympic03")
+}
+spriteset (spriteset_cr400bfc_winterolympic_m_07, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr400bf-c", "cr400bf-c-m-winterolympic02")
+}
+spriteset (spriteset_cr400bfc_winterolympic_tc_08, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr400bf-c", "cr400bf-c-tc-winterolympic01")
+}
+spriteset (spriteset_cr400bfc_winterolympic_tc_08_c, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr400bf-c", "cr400bf-c-tc-winterolympic01-c")
+}
+
+
 
 switch (FEAT_TRAINS, SELF, switch_cr400bfc_articulated_part, extra_callback_info1) {
     1..2: return cr400bfc;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr400bfc_graphics, position_in_articulated_veh % 3) {
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_front, cargo_subtype) {
     1: spriteset_cr400bfc_front;
+    spriteset_cr400bfc_winterolympic_tc_01;
+}
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_graphics, position_in_articulated_veh % 3) {
+    1: switch_cr400bfc_front;
     empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bfc_head_capacity, position_in_articulated_veh % 3) {
-    1: return 36;
+    1: return 20;
     return 0;
+}
+
+switch (FEAT_TRAINS, SELF, swtich_cr400bfc_cargo_subtype, cargo_subtype) {
+    0: return string(STR_WINTER_OLYMPIC);
+    1: return string(STR_ORIGINAL);
+    return CB_RESULT_NO_TEXT;
 }
 
 //GFX
 
 
-switch (FEAT_TRAINS, SELF, switch_cr400bfc_middle_wagon_back_tp, ((position_in_consist / 3) + 1) == (num_vehs_in_consist * 11 / 48)) {
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_middle_wagon_back_tp_origin_livery, ((position_in_consist / 3) + 1) == (num_vehs_in_consist * 11 / 48)) {
     1: spriteset_cr400bfc_middle_tp;
     spriteset_cr400bfc_middle_tp_reversed;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr400bfc_middle_wagon_front_tp, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 16)) {
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_middle_wagon_front_tp_origin_livery, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 16)) {
     1: spriteset_cr400bfc_middle_tp;
     spriteset_cr400bfc_middle_tp_reversed;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr400bfc_middle_wagon_is_which_tp, ((position_in_consist / 3) + 1) == (num_vehs_in_consist * 11 / 48) || (((position_in_consist / 3) - 2) == (num_vehs_in_consist * 11 / 48))) {
-    1: switch_cr400bfc_middle_wagon_back_tp;
-    switch_cr400bfc_middle_wagon_front_tp;
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_middle_wagon_is_which_tp_origin_livery, ((position_in_consist / 3) + 1) == (num_vehs_in_consist * 11 / 48) || (((position_in_consist / 3) - 2) == (num_vehs_in_consist * 11 / 48))) {
+    1: switch_cr400bfc_middle_wagon_back_tp_origin_livery;
+    switch_cr400bfc_middle_wagon_front_tp_origin_livery;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr400bfc_if_middle_wagon_is_tp, (((position_in_consist / 3) + 1) == (num_vehs_in_consist * 11 / 48) || (((position_in_consist / 3) - 2) == (num_vehs_in_consist * 11 / 48))) || (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 16) || (((position_in_consist / 3) - 2) == (num_vehs_in_consist / 16)))) {
-    1: switch_cr400bfc_middle_wagon_is_which_tp;
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_if_middle_wagon_is_tp_origin_livery, (((position_in_consist / 3) + 1) == (num_vehs_in_consist * 11 / 48) || (((position_in_consist / 3) - 2) == (num_vehs_in_consist * 11 / 48))) || (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 16) || (((position_in_consist / 3) - 2) == (num_vehs_in_consist / 16)))) {
+    1: switch_cr400bfc_middle_wagon_is_which_tp_origin_livery;
     spriteset_cr400bfc_middle_m;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr400bfc_middle_wagon_half_long, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) {
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_middle_wagon_half_long_origin_livery, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) {
     1: spriteset_cr400bfc_cab_reconect;
     spriteset_cr400bfc_cab_reconect_reversed;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr400bfc_middle_wagon_reconect, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
-    1: switch_cr400bfc_middle_wagon_half_long;
-    switch_cr400bfc_if_middle_wagon_is_tp;
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_middle_wagon_reconect_origin_livery, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
+    1: switch_cr400bfc_middle_wagon_half_long_origin_livery;
+    switch_cr400bfc_if_middle_wagon_is_tp_origin_livery;
 }
 
 
-switch (FEAT_TRAINS, SELF, switch_cr400bfc_middle_wagon_tp_meddium, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 8)) {
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_middle_wagon_tp_meddium_origin_livery, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 8)) {
     1: spriteset_cr400bfc_middle_tp;
     spriteset_cr400bfc_middle_tp_reversed;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr400bfc_if_middle_wagon_tp_meddium, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 8)) || (((position_in_consist / 3) - 2) == (num_vehs_in_consist / 8))) {
-    1: switch_cr400bfc_middle_wagon_tp_meddium;
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_if_middle_wagon_tp_meddium_origin_livery, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 8)) || (((position_in_consist / 3) - 2) == (num_vehs_in_consist / 8))) {
+    1: switch_cr400bfc_middle_wagon_tp_meddium_origin_livery;
     spriteset_cr400bfc_middle_m;
 }
 
 
-switch (FEAT_TRAINS, SELF, switch_cr400bfc_if_middle_wagon_tp_short, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) {
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_if_middle_wagon_tp_short_origin_livery, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) {
     1: spriteset_cr400bfc_middle_tp;
     spriteset_cr400bfc_middle_m;
 }
 
 
-switch (FEAT_TRAINS, SELF, switch_cr400bfc_length_class, num_vehs_in_consist / 3) {
-    2..6:   switch_cr400bfc_if_middle_wagon_tp_short;
-    7..12:  switch_cr400bfc_if_middle_wagon_tp_meddium;
-    switch_cr400bfc_middle_wagon_reconect;
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_length_class_origin_livery, num_vehs_in_consist / 3) {
+    2..6:   switch_cr400bfc_if_middle_wagon_tp_short_origin_livery;
+    7..12:  switch_cr400bfc_if_middle_wagon_tp_meddium_origin_livery;
+    switch_cr400bfc_middle_wagon_reconect_origin_livery;
 }
 
+
+
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_if_middle_wagon_is_tp_front_winterolympic_livery, ((position_in_consist / 3) + 1) - (num_vehs_in_consist / 12) + 1) {
+    0: spriteset_cr400bfc_winterolympic_tp_03;
+    1: spriteset_cr400bfc_winterolympic_m_c_04;
+    2: spriteset_cr400bfc_winterolympic_m_c_05;
+    3: spriteset_cr400bfc_winterolympic_tp_06;
+    4..12: spriteset_cr400bfc_winterolympic_m_07;
+    spriteset_cr400bfc_winterolympic_m_02;
+}
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_if_middle_wagon_is_tp_back_winterolympic_livery, ((position_in_consist / 3) + 1) - (num_vehs_in_consist * 3 / 12) + 1) {
+    0: spriteset_cr400bfc_winterolympic_tp_03;
+    1: spriteset_cr400bfc_winterolympic_m_c_04;
+    2: spriteset_cr400bfc_winterolympic_m_c_05;
+    3: spriteset_cr400bfc_winterolympic_tp_06;
+    4..12: spriteset_cr400bfc_winterolympic_m_07;
+    spriteset_cr400bfc_winterolympic_m_02;
+}
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_if_middle_wagon_is_tp_winterolympic_livery, ((position_in_consist / 3) + 1) <= (num_vehs_in_consist / 6)) {
+    1: switch_cr400bfc_if_middle_wagon_is_tp_front_winterolympic_livery;
+    switch_cr400bfc_if_middle_wagon_is_tp_back_winterolympic_livery;
+}
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_middle_wagon_half_long_winterolympic_livery, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) {
+    1: spriteset_cr400bfc_winterolympic_tc_08_c;
+    spriteset_cr400bfc_winterolympic_tc_01_c;
+}
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_middle_wagon_reconect_winterolympic_livery, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
+    1: switch_cr400bfc_middle_wagon_half_long_winterolympic_livery;
+    switch_cr400bfc_if_middle_wagon_is_tp_winterolympic_livery;
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_if_middle_wagon_tp_meddium_winterolympic_livery, ((position_in_consist / 3) + 1) - (num_vehs_in_consist / 6) + 1) {
+    0: spriteset_cr400bfc_winterolympic_tp_03;
+    1: spriteset_cr400bfc_winterolympic_m_c_04;
+    2: spriteset_cr400bfc_winterolympic_m_c_05;
+    3: spriteset_cr400bfc_winterolympic_tp_06;
+    4..12: spriteset_cr400bfc_winterolympic_m_07;
+    spriteset_cr400bfc_winterolympic_m_02;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_if_middle_wagon_tp_short_back_winterolympic_livery, (position_in_consist_from_end / 3) + 1) {
+    3: spriteset_cr400bfc_winterolympic_tp_06;
+    spriteset_cr400bfc_winterolympic_m_07;
+}
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_if_middle_wagon_tp_short_front_winterolympic_livery, (position_in_consist / 3) + 1) {
+    2: spriteset_cr400bfc_winterolympic_tp_03;
+    spriteset_cr400bfc_winterolympic_m_02;
+}
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_if_middle_wagon_tp_short_winterolympic_livery, ((position_in_consist / 3) + 1) <= (num_vehs_in_consist / 6)) {
+    1: switch_cr400bfc_if_middle_wagon_tp_short_front_winterolympic_livery;
+    switch_cr400bfc_if_middle_wagon_tp_short_back_winterolympic_livery;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr400bfc_length_class_winterolympic_livery, num_vehs_in_consist / 3) {
+    2..6:   switch_cr400bfc_if_middle_wagon_tp_short_winterolympic_livery;
+    7..12:  switch_cr400bfc_if_middle_wagon_tp_meddium_winterolympic_livery;
+    switch_cr400bfc_middle_wagon_reconect_winterolympic_livery;
+}
+
+
+switch (FEAT_TRAINS, PARENT, switch_cr400bfc_cargo_type, cargo_subtype) {
+    1: switch_cr400bfc_length_class_origin_livery;
+    switch_cr400bfc_length_class_winterolympic_livery;
+}
+
+
+    switch (FEAT_TRAINS, PARENT, switch_cargo_subtype_cr400bfc_cab, cargo_subtype) {
+        1: spriteset_cr400bfc_cab;
+        spriteset_cr400bfc_winterolympic_tc_08;
+    }
 switch (FEAT_TRAINS, SELF, switch_cr400bfc_if_wagon_end, position_in_consist_from_end == 1) {
-    1: spriteset_cr400bfc_cab;
-    switch_cr400bfc_length_class;
+    1: switch_cargo_subtype_cr400bfc_cab;
+    switch_cr400bfc_cargo_type;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bfc_wagon_graphics, (position_in_consist_from_end % 3) == 1) {
@@ -126,7 +241,7 @@ switch (FEAT_TRAINS, SELF, switch_cr400bfc_middle_capacity_id, vehicle_type_id) 
     1025: return 60;
     1027: return 36;
     1028: return 24;
-    1035: return 63;
+    1035: return 48;
     return 0;
 }
 
@@ -141,7 +256,7 @@ switch (FEAT_TRAINS, SELF, switch_cr400bfc_cab_capacity_id, vehicle_type_id) {
     1025: return 40;
     1027: return 17;
     1028: return 12;
-    1035: return 24;
+    1035: return 20;
     return 0;
 }
 
@@ -177,7 +292,7 @@ switch (FEAT_TRAINS, SELF, switch_cr400bfc_wagon_running_power, vehicle_type_id)
     1025: return 69;
     1027: return 73;
     1028: return 72;
-    1035: return 72;
+    1035: return 71;
     return 0;
 }
 
@@ -265,7 +380,7 @@ item (FEAT_TRAINS, cr400bfc) {
         ai_special_flag:                AI_FLAG_PASSENGER;
         cargo_capacity:                 1;
         loading_speed:                  8 << param_loading_speed;
-        cargo_age_period:               400 << param_cargo_decay;
+        cargo_age_period:               720 << param_cargo_decay;
 
         // Stats
         speed:                          350 km/h;
@@ -280,9 +395,10 @@ item (FEAT_TRAINS, cr400bfc) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), /* string(STR_CR400BFC_NICKNAME), */ string(STR_RELIABILITY_3), string(STR_CR400_Z_CONSIST), string(STR_CR400_Z_HEAD_SEAT));
+        additional_text:                string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CR400BFC_NICKNAME), string(STR_RELIABILITY_3), string(STR_CR400_Z_CONSIST), string(STR_CR400_Z_HEAD_SEAT));
         can_attach_wagon:               crhwagon;
         start_stop:                     mu4to24car;
+        cargo_subtype_text:             swtich_cr400bfc_cargo_subtype;
         // Graphics
         default:                        switch_cr400bfc_graphics;
         purchase:                       spriteset_cr400bfc_purchase_original;
