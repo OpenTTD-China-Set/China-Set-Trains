@@ -115,6 +115,7 @@ STR_NAME_P60                                     :P60 (棚车)
 STR_NAME_P61                                     :P61 (棚车) 
 STR_NAME_P62                                     :P62 (棚车) 
 STR_NAME_P63                                     :P63 (棚车) 
+STR_NAME_P64                                     :P64 (棚车) 
 STR_NAME_P65                                     :P65 (棚车) 
 STR_NAME_P70                                     :P70 (棚车) 
 STR_NAME_P80                                     :P80 (棚车) 
@@ -189,6 +190,7 @@ STR_NAME_HXD21000                                :HXD2-1000 (电力)
 STR_NAME_HXD3C                                   :HXD3C (电力)
 STR_NAME_HXD3D                                   :HXD3D (电力)
 STR_NAME_FXD1B                                   :FXD1B (电力)
+STR_NAME_CHA1C                                   :CHA1C (混合动力)
 STR_NAME_NC3                                     :NC3 (内燃动车)
 STR_NAME_NZJ1_XINSHUGUANG                        :NZJ1 "新曙光号" (内燃动车)
 STR_NAME_NZJ2_JINLUN_UNILAMINAR                  :NZJ2 "金轮号" (单层) (内燃动车)
@@ -426,6 +428,7 @@ STR_FR_IMPORT                                    :法国进口车型
 STR_HU_IMPORT                                    :匈牙利进口车型  
 # Desc
 STR_XL25T_SSPE_DESCRIPTION                       :{BLACK}新时速运递公司使用的XL25T版本。
+STR_CHA1C_DESC                                   : {BLACK}混合动力机车。在非电气化路段使用电池供电，功率为{BLUE}2000kw{BLACK}。在25kV交流供电铁路上功率为{RED}2400kw
 # Livery Availability
 STR_DF_LIVERY_AVAILABILITY                       :{BLACK}可供选择的涂装：{GOLD}黄色{GREEN}窗线{BLACK}涂装, {WHITE}白色{GREEN}窗线{BLACK}涂装
 STR_DF4_LIVERY_AVAILABILITY                      :{BLACK}可供选择的涂装：{GREEN}绿色涂装{GOLD}，{ORANGE}橘色涂装{BLACK}，{BLUE}“乌克兰”{YELLOW}涂装，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}
@@ -482,6 +485,7 @@ STR_P60_LIVERY_AVAILABILITY                      :{BLACK}可供选择的涂装�
 STR_P61_LIVERY_AVAILABILITY                      :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_P62_LIVERY_AVAILABILITY                      :{BLACK}可供选择的涂装：{GOLD}随机 (黑色，蓝色，铁锈色，棕色)
 STR_P63_LIVERY_AVAILABILITY                      :{BLACK}可供选择的涂装：{GOLD}随机 (黑色，铁锈色，棕色)
+STR_P64_LIVERY_AVAILABILITY                      :{BLACK}可供选择的涂装：{GOLD}随机 (黑色，铁锈色，棕色，红色)
 STR_P65_LIVERY_AVAILABILITY                      :{DKGREEN}可供选择的涂装： 中国邮政{GOLD},黑色 (未完成)
 STR_P70_LIVERY_AVAILABILITY                      :{BLACK}可供选择的涂装：{GOLD}随机 (黑色，蓝色，铁锈色，棕色)
 STR_N5_LIVERY_AVAILABILITY                       :{BLACK}可供选择的涂装：{GOLD}随机 (未完成)

@@ -1,0 +1,116 @@
+//Begin CHA1C
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_cha1c_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("multipower-loco", "cha1c-a")
+}
+
+// Vehicle
+spriteset (spriteset_cha1c_electrified, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("multipower-loco", "cha1c-a")
+}
+spriteset (spriteset_cha1c_battery, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("multipower-loco", "cha1c-b")
+}
+
+switch (FEAT_TRAINS, SELF, switch_cha1c_articulated_part, extra_callback_info1) {
+    1..2: return cha1c;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS, SELF, switch_cha1c_gfx_railtype, tile_is_railtype("SACA")) {
+    1: spriteset_cha1c_electrified;
+    spriteset_cha1c_battery;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cha1c_graphics, position_in_articulated_veh % 3) {
+    1: switch_cha1c_gfx_railtype;
+    empty_sprites;
+}
+
+//Power
+switch(FEAT_TRAINS, SELF, switch_cha1c_power, tile_is_railtype("SACA")) {
+    1: return 3218;
+    return 2682;
+}
+
+switch(FEAT_TRAINS, SELF, switch_cha1c_visual_effect_and_powered_railtype, tile_is_railtype("SACA")) {
+    1: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 0, DISABLE_WAGON_POWER);
+    return visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}
+
+switch(FEAT_TRAINS, SELF, switch_cha1c_visual_effect_and_powered, (position_in_articulated_veh)) {
+    1: return visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    switch_cha1c_visual_effect_and_powered_railtype;
+}
+
+
+
+
+
+
+item (FEAT_TRAINS, cha1c) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CHA1C);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        visual_effect_and_powered:      visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 0, DISABLE_WAGON_POWER);
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2020,12,26);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          100 km/h;
+        power:                          2400 kW;
+        weight:                         150 ton;
+        tractive_effort_coefficient:    0.381;
+        cost_factor:                    85;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            61;
+        reliability_decay:              8;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_CHA1C_DESC),string(STR_ELECTRICITY_SUPPLY_YES), string(STR_RELIABILITY_8));
+        can_attach_wagon:               locowagon;
+        // Graphics
+        default:                        switch_cha1c_graphics;
+        purchase:                       spriteset_cha1c_purchase_original;
+        articulated_part:               switch_cha1c_articulated_part;
+        visual_effect_and_powered:      switch_cha1c_visual_effect_and_powered;
+
+        // Stats
+        length:                         switch_length_2_6_2;
+        cargo_capacity:                 0;
+        cost_factor:                    85;
+        running_cost_factor:            61 * runningcostfactor() + 20;
+        purchase_running_cost_factor:   264;
+        purchase_cargo_capacity:        0;
+        bitmask_vehicle_info:           airconditioner;
+        power:                          switch_cha1c_power;
+        purchase_power:                 return 3218;
+
+    }
+}
+
+// End CHA1C

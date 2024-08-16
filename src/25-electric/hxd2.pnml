@@ -62,9 +62,9 @@ item (FEAT_TRAINS, hxd2) {
         power:                          9600 kW;
         weight:                         184 ton;
         tractive_effort_coefficient:    0.388;
-        cost_factor:                    110;
+        cost_factor:                    146;
         running_cost_base:              RUNNING_COST_ELECTRIC;
-        running_cost_factor:            83;
+        running_cost_factor:            118;
         reliability_decay:              8;
     }
     graphics {
@@ -79,9 +79,9 @@ item (FEAT_TRAINS, hxd2) {
         // Stats
         length:                         switch_length_2_4_2;
         cargo_capacity:                 0;
-        cost_factor:                    110;
-        running_cost_factor:            83 * runningcostfactor();
-        purchase_running_cost_factor:   332;
+        cost_factor:                    146;
+        running_cost_factor:            118 * runningcostfactor();
+        purchase_running_cost_factor:   472;
         purchase_cargo_capacity:        0;
         bitmask_vehicle_info:           0;
         name:                           switch_hxd2_name;

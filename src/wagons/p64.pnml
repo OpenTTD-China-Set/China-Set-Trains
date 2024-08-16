@@ -1,0 +1,161 @@
+//Begin P64
+switch (FEAT_TRAINS, SELF, switch_p64_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_BOXCAR);
+    return CB_RESULT_NO_TEXT;
+}
+
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_p64_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "p64-black")
+}
+
+// Vehicle
+spriteset (spriteset_p64_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p64-black")
+}
+spriteset (spriteset_p64_rustyred, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p64-rustyred")
+}
+spriteset (spriteset_p64_brown, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p64-brown")
+}
+spriteset (spriteset_p64_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "p64-red")
+}
+
+random_switch (FEAT_TRAINS, SELF, random_p64_colour_early) {
+    15: spriteset_p64_black; // More colours waiting to be added
+    1: spriteset_p64_rustyred;
+    4: spriteset_p64_brown;
+    4: spriteset_p64_red;
+}
+
+random_switch (FEAT_TRAINS, SELF, random_p64_colour_middium) {
+    16: spriteset_p64_black; // More colours waiting to be added
+    4: spriteset_p64_rustyred;
+    8: spriteset_p64_brown;
+    8: spriteset_p64_red;
+}
+
+random_switch (FEAT_TRAINS, SELF, random_p64_colour_late) {
+    10: spriteset_p64_black; // More colours waiting to be added
+    10: spriteset_p64_rustyred;
+    8: spriteset_p64_brown;
+    8: spriteset_p64_red;
+}
+
+
+switch (FEAT_TRAINS, SELF, random_p64_colour, current_year - 1979) {
+    0..15: random_p64_colour_early; 
+    16..30: random_p64_colour_middium;
+    random_p64_colour_late;
+}
+switch (FEAT_TRAINS, SELF, switch_p64_articulated_part, extra_callback_info1) {
+    1..2: return p64;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p64_graphics, position_in_articulated_veh % 3) {
+    1: random_p64_colour;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p64_capacity_pengdaike, (cargo_classes == bitmask(CC_PASSENGERS)) || (cargo_type_in_veh == YETI) || (cargo_type_in_veh == YETY)) {
+    1: return 186;
+    return 58;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p64_capacity_cargo, cargo_classes == bitmask(CC_MAIL)) {
+    1: return 116;
+    switch_p64_capacity_pengdaike;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p64_capacity, position_in_articulated_veh % 3) {
+    1: switch_p64_capacity_cargo;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p64_loading_speed_pengdaike, (cargo_classes == bitmask(CC_PASSENGERS)) || (cargo_type_in_veh == YETI) || (cargo_type_in_veh == YETY)) {
+    1: return 12;
+    return 6;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p64_loading_speed, cargo_classes == bitmask(CC_MAIL)) {
+    1: return 8;
+    switch_p64_loading_speed_pengdaike;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p64_decay_pengdaike, (cargo_classes == bitmask(CC_PASSENGERS)) || (cargo_type_in_veh == YETI) || (cargo_type_in_veh == YETY)) {
+    1: return 80;
+    return 185;
+}
+
+switch (FEAT_TRAINS, SELF, switch_p64_decay, cargo_type_in_veh == LVST) {
+    1: return 560;
+    switch_p64_decay_pengdaike;
+}
+
+
+item (FEAT_TRAINS, p64) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_P64);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					3098;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1993,10,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS, CC_MAIL, CC_ARMOURED, CC_EXPRESS, CC_PIECE_GOODS, CC_COVERED);
+        non_refittable_cargo_classes:   bitmask(CC_LIQUID, CC_HAZARDOUS, CC_OVERSIZED);
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [TOUR];
+        refit_cost:                     0;
+        default_cargo_type:             GOOD;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 58;
+        loading_speed:                  6 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          100 km/h;
+        power:                          0 hp;
+        weight:                         24 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_P64_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR), string(STR_DESC_PENGDAIKE));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_p64_graphics;
+        purchase:                       spriteset_p64_purchase_original;
+        articulated_part:               switch_p64_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_4_2;
+        cargo_capacity:                 switch_p64_capacity;
+        loading_speed:                  switch_p64_loading_speed() << param_loading_speed;
+        cargo_age_period:               switch_p64_decay() << param_cargo_decay;
+        cost_factor:                    5;
+        running_cost_factor:            4 * runningcostfactor();
+        purchase_running_cost_factor:   16;
+        purchase_cargo_capacity:        58/3;
+        name:                            switch_p64_name;
+
+    }
+}
+
+// End P64
