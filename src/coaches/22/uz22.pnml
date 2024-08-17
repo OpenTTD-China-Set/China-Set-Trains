@@ -16,7 +16,9 @@ spriteset (spriteset_uz22_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) 
 spriteset (spriteset_uz22_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "uz22")
 }
-
+spriteset (spriteset_uz22_wru, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "uz22-wru")
+}
 spriteset (spriteset_uz22_beijing2shanghai, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "uz22-beijing2shanghai")
 }
@@ -37,6 +39,7 @@ switch (FEAT_TRAINS, SELF, switch_uz22_cargo_subtype, cargo_subtype) {
     1: return string(STR_BEIJING2SHANGHAI);
     2: return string(STR_BEIJING2SHANGHAIALT);
     3: return string(STR_GUANGSHEN);
+    4: return string(STR_WRU);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -45,6 +48,7 @@ switch (FEAT_TRAINS, SELF, switch_uz22_graphics_subtype, cargo_subtype) {
     1: spriteset_uz22_beijing2shanghai;
     2: spriteset_uz22_beijing2shanghai_alternative;
     3: spriteset_uz22_guangzhou;
+    4: spriteset_uz22_wru;
 }
 
 switch (FEAT_TRAINS, SELF, switch_uz22_graphics, position_in_articulated_veh % 3) {
