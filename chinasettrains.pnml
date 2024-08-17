@@ -191,6 +191,8 @@
 #include "src/25-electric/ss3.pnml"
 #include "src/25-electric/ss3b.pnml"
 #include "src/25-electric/ss4.pnml"
+#include "src/25-electric/ss4b.pnml"
+#include "src/25-electric/ss4c.pnml"
 #include "src/25-electric/ss4g.pnml"
 #include "src/25-electric/ss5.pnml"
 #include "src/25-electric/ss6.pnml"

@@ -186,6 +186,8 @@ STR_NAME_SS1                            :SS1 (Electric)
 STR_NAME_SS3                            :SS3 (Electric)
 STR_NAME_SS3B                           :SS3B (Electric)
 STR_NAME_SS4                            :SS4 (Electric)
+STR_NAME_SS4B                           :SS4B (Electric)
+STR_NAME_SS4C                           :SS4C (Electric)
 STR_NAME_SS4G                           :SS4G (Electric)
 STR_NAME_SS5                            :SS5 (Electric)
 STR_NAME_SS6                            :SS6 (Electric)
@@ -374,6 +376,8 @@ STR_FULL_NAME_SS1                       :{BLACK}Full Name: {GOLD}Shaoshan 1 Elec
 STR_FULL_NAME_SS3                       :{BLACK}Full Name: {GOLD}Shaoshan 3 Electric Locomotive
 STR_FULL_NAME_SS3B                      :{BLACK}Full Name: {GOLD}Shaoshan 3B Electric Locomotive
 STR_FULL_NAME_SS4                       :{BLACK}Full Name: {GOLD}Shaoshan 4 Electric Locomotive
+STR_FULL_NAME_SS4B                      :{BLACK}Full Name: {GOLD}Shaoshan 4B Electric Locomotive
+STR_FULL_NAME_SS4C                      :{BLACK}Full Name: {GOLD}Shaoshan 4C Electric Locomotive
 STR_FULL_NAME_SS4G                      :{BLACK}Full Name: {GOLD}Shaoshan 4G Electric Locomotive
 STR_FULL_NAME_SS5                       :{BLACK}Full Name: {GOLD}Shaoshan 5 Electric Locomotive
 STR_FULL_NAME_SS6                       :{BLACK}Full Name: {GOLD}Shaoshan 6 Electric Locomotive
@@ -616,28 +620,28 @@ STR_ORIGINAL                            : - Original Livery
 STR_REVERSE                             : └ the Reverse of the Livery Above
 STR_ORANGE                              :{ORANGE} - Orange Livery
 STR_GREEN                               :{GREEN} - Green Livery
-STR_RED                                 :{RED} - RED Livery
+STR_RED                                 :{RED} - Red Livery
+STR_WHITE                               :{WHITE} - White Livery
 STR_LATER_ORANGE                        :{ORANGE} - Later Orange Livery
 STR_LATER_GREEN                         :{GREEN} - Later Green Livery
 STR_XIHU                                : - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery
 STR_XIHU_REVERSE                        : - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery, reversed
 STR_DF4D_7000                           : - {GREEN}7000-{YELLOW}Series {BLACK}Livery
 STR_SS7C_BANANA                         : - {YELLOW}Banana Yellow {BLACK}Livery
-
+STR_BLUE                                : - {BLUE}Blue Livery
 STR_UKRAINE                             : - {YELLOW}Yellow {BLACK}and {BLUE}Blue {BLACK}Livery
-
+STR_FUZHOU                              : - Fuzhou Livery 
 STR_DF4B_DPRK                           : - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery
-
+STR_GRASSGREEN                          : - {DKGREEN}Dark Green Livery
 STR_DF4D4000_DPRK                       : - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery
 STR_DF4BN_ORIGINAL                      : - {BLUE}DF4B With New Bodyshell
 STR_DF4BN_REVERSE                       : - {BLUE}DF4B With New Bodyshell (Reversed)
-
 STR_ALTERNATIVE                         : - Alternative Original Livery
 STR_DF_YELLOW                           : - {GOLD}Yellow {GREEN}Line {BLACK}Livery
 STR_DF_WHITE                            : - {WHITE}White {GREEN}Line {BLACK}Livery
-STR_6Y2_FACTORY                         : - {BLUE}Factory {BLACK}Livery
+STR_FACTORY                             : - Factory Livery
 STR_6Y2_LATE                            : - {GREEN}Late {BLACK}Livery
-
+STR_SS4_BLUEROOF                        : - {WHITE}White {BLACK}Livery with {BLUE}Blue{BLACK} Roof
 STR_SHENHUA                             : - {GOLD}Shenhua Groups Livery
 STR_GUONENG                             : - {GOLD}CHN Energy Livery
 

@@ -19,18 +19,45 @@ spriteset (spriteset_ss4g_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_ss4g_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-electric", "ss4g-back")
 }
+spriteset (spriteset_ss4g_alternative_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss4g-alternative-front")
+}
+spriteset (spriteset_ss4g_alternative_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss4g-alternative-back")
+}
 
 switch (FEAT_TRAINS, SELF, switch_ss4g_articulated_part, extra_callback_info1) {
     1..5: return ss4g;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_ss4g_graphics, position_in_articulated_veh % 6) {
+switch (FEAT_TRAINS, SELF, switch_ss4g_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_ALTERNATIVE);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss4g_graphics_subtype_0, position_in_articulated_veh % 6) {
     1: spriteset_ss4g_front;
     4: spriteset_ss4g_back;
     empty_sprites;
 }
 
+switch (FEAT_TRAINS, SELF, switch_ss4g_graphics_subtype_1, position_in_articulated_veh % 6) {
+    1: spriteset_ss4g_alternative_front;
+    4: spriteset_ss4g_alternative_back;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss4g_graphics_subtype, cargo_subtype) {
+    0: switch_ss4g_graphics_subtype_0;
+    1: switch_ss4g_graphics_subtype_1;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss4g_graphics, position_in_articulated_veh % 3) {
+    1: switch_ss4g_graphics_subtype;
+    empty_sprites;
+}
 
 item (FEAT_TRAINS, ss4g) {
     property {
@@ -73,6 +100,7 @@ item (FEAT_TRAINS, ss4g) {
     graphics {
         // Menu
         additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SS4G), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_SS4G_NICKNAME), string(STR_RELIABILITY_8));
+        cargo_subtype_text:             switch_ss4g_cargo_subtype;
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_ss4g_graphics;
