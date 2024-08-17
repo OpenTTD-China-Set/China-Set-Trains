@@ -1,16 +1,9 @@
 import re, csv
 
-""" wb = openpyxl.load_workbook('docs/str.xlsx')
-ws = wb.active """
+
 
 strs = []
-""" for row in ws.iter_rows():
-    row_key = []
-    for cell in row:
-        row_key.append(cell.value)
-    strs.append(row_key)
-    print(row_key)
- """
+
 with open('docs/str.csv', mode='r', newline='', encoding='utf-8') as f:
     reader = csv.reader(f)
     for row in reader:
