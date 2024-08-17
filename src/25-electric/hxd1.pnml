@@ -1,5 +1,8 @@
 // Begin HXD1
-
+switch (FEAT_TRAINS, SELF, switch_hxd1_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_HXD1_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
 // Graphics
 
 // Purchase Menu
@@ -59,9 +62,9 @@ item (FEAT_TRAINS, hxd1) {
         power:                          9600 kW;
         weight:                         184 ton;
         tractive_effort_coefficient:    0.421;
-        cost_factor:                    127;
+        cost_factor:                    146;
         running_cost_base:              RUNNING_COST_ELECTRIC;
-        running_cost_factor:            104;
+        running_cost_factor:            118;
         reliability_decay:              8;
     }
     graphics {
@@ -76,11 +79,12 @@ item (FEAT_TRAINS, hxd1) {
         // Stats
         length:                         switch_length_2_4_2;
         cargo_capacity:                 0;
-        cost_factor:                    136;
-        running_cost_factor:            113 * runningcostfactor();
-        purchase_running_cost_factor:   452;
+        cost_factor:                    146;
+        running_cost_factor:            118 * runningcostfactor();
+        purchase_running_cost_factor:   472;
         purchase_cargo_capacity:        0;
         bitmask_vehicle_info:           0;
+        name:                           switch_hxd1_name;
     }
 }
 

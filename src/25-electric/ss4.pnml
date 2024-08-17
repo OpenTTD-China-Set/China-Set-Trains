@@ -14,15 +14,85 @@ spriteset (spriteset_ss4_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_ss4_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-electric", "ss4-back")
 }
+spriteset (spriteset_ss4_alternative_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss4-alternative-front")
+}
+spriteset (spriteset_ss4_alternative_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss4-alternative-back")
+}
+spriteset (spriteset_ss4_factory_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss4-factory-front")
+}
+spriteset (spriteset_ss4_factory_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss4-factory-back")
+}
+spriteset (spriteset_ss4_white_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss4-white-front")
+}
+spriteset (spriteset_ss4_white_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss4-white-back")
+}
+spriteset (spriteset_ss4_blueroof_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss4-blueroof-front")
+}
+spriteset (spriteset_ss4_blueroof_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss4-blueroof-back")
+}
 
 switch (FEAT_TRAINS, SELF, switch_ss4_articulated_part, extra_callback_info1) {
     1..5: return ss4;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_ss4_graphics, position_in_articulated_veh % 6) {
+switch (FEAT_TRAINS, SELF, switch_ss4_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_ALTERNATIVE);
+    2: return string(STR_FACTORY);
+    3: return string(STR_WHITE);
+    4: return string(STR_SS4_BLUEROOF);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss4_graphics_subtype_0, position_in_articulated_veh % 6) {
     1: spriteset_ss4_front;
     4: spriteset_ss4_back;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss4_graphics_subtype_1, position_in_articulated_veh % 6) {
+    1: spriteset_ss4_alternative_front;
+    4: spriteset_ss4_alternative_back;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss4_graphics_subtype_2, position_in_articulated_veh % 6) {
+    1: spriteset_ss4_factory_front;
+    4: spriteset_ss4_factory_back;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss4_graphics_subtype_3, position_in_articulated_veh % 6) {
+    1: spriteset_ss4_white_front;
+    4: spriteset_ss4_white_back;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss4_graphics_subtype_4, position_in_articulated_veh % 6) {
+    1: spriteset_ss4_blueroof_front;
+    4: spriteset_ss4_blueroof_back;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss4_graphics_subtype, cargo_subtype) {
+    0: switch_ss4_graphics_subtype_0;
+    1: switch_ss4_graphics_subtype_1;
+    2: switch_ss4_graphics_subtype_2;
+    3: switch_ss4_graphics_subtype_3;
+    4: switch_ss4_graphics_subtype_4;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss4_graphics, position_in_articulated_veh % 3) {
+    1: switch_ss4_graphics_subtype;
     empty_sprites;
 }
 
@@ -68,6 +138,7 @@ item (FEAT_TRAINS, ss4) {
     graphics {
         // Menu
         additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SS4), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_SS4_NICKNAME), string(STR_RELIABILITY_20));
+        cargo_subtype_text:             switch_ss4_cargo_subtype;
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_ss4_graphics;

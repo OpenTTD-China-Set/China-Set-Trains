@@ -130,6 +130,7 @@
 #include "src/wagons/p61.pnml"
 #include "src/wagons/p62.pnml"
 #include "src/wagons/p63.pnml"
+#include "src/wagons/p64.pnml"
 #include "src/wagons/p65.pnml"
 #include "src/wagons/p70.pnml"
 #include "src/wagons/p80.pnml"
@@ -191,6 +192,8 @@
 #include "src/25-electric/ss3.pnml"
 #include "src/25-electric/ss3b.pnml"
 #include "src/25-electric/ss4.pnml"
+#include "src/25-electric/ss4b.pnml"
+#include "src/25-electric/ss4c.pnml"
 #include "src/25-electric/ss4g.pnml"
 #include "src/25-electric/ss5.pnml"
 #include "src/25-electric/ss6.pnml"
@@ -208,12 +211,15 @@
 #include "src/25-electric/hxd11000.pnml"
 #include "src/25-electric/hxd1b.pnml"
 #include "src/25-electric/hxd1d.pnml"
+#include "src/25-electric/hxd2.pnml"
+#include "src/25-electric/hxd21000.pnml"
 #include "src/25-electric/hxd1f.pnml"
 #include "src/25-electric/hxd3c.pnml"
 #include "src/25-electric/hxd3d.pnml"
 
-// Multi Power Locomotive
 
+// Multi Power Locomotive
+#include "src/multipower-loco/cha1c.pnml"
 
 // DMU
 #include "src/dmu/nc3.pnml"
