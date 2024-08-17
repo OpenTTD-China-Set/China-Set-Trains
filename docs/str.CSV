@@ -12,7 +12,7 @@ STR_PARAM_PURCHASE_COST_DESC,Adjust vehicle purchase costs. Default is 25%.,调�
 STR_PARAM_RUNNING_COST,Running costs,运营费用
 STR_PARAM_RUNNING_COST_DESC,Adjust vehicle running costs. Default is 25%.,调整车辆运营费用。默认为25%。
 STR_PARAM_DIVIDE_16,6.25%,
-STR_PARAM_DIVIDE_8,12.50%,
+STR_PARAM_DIVIDE_8,12.5%,
 STR_PARAM_DIVIDE_4,25%,
 STR_PARAM_DIVIDE_2,50%,
 STR_PARAM_NORMAL,100%,
@@ -605,8 +605,9 @@ STR_ORIGINAL, - Original Livery, - 原版涂装
 STR_REVERSE, └ the Reverse of the Livery Above, └ 翻转的涂装
 STR_ORANGE,{ORANGE} - Orange Livery,{ORANGE} - 橘色涂装
 STR_GREEN,{GREEN} - Green Livery,{GREEN} - 绿色涂装
-STR_RED,{RED} - RED Livery,{RED} - 红色涂装
-STR_BLUE,{BLUE} - BLUE Livery,{BLUE} - 蓝色涂装
+STR_RED,{RED} - Red Livery,{RED} - 红色涂装
+STR_WHITE,{WHITE} - WhIte Livery,{WHITE} - 白色涂装
+STR_BLUE,{BLUE} - Blue Livery,{BLUE} - 蓝色涂装
 STR_GRASSGREEN,{DKGREEN} - Dark Green Livery,{DKGREEN} - 草绿色涂装
 STR_LATER_ORANGE,{ORANGE} - Later Orange Livery,{ORANGE} - 后期橘色涂装
 STR_LATER_GREEN,{GREEN} - Later Green Livery,{GREEN} - 后期绿色涂装
