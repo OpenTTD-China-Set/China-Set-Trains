@@ -11,17 +11,50 @@ spriteset (spriteset_ss3_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_ss3_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-electric", "ss3")
 }
+spriteset (spriteset_ss3_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss3-blue")
+}
+spriteset (spriteset_ss3_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss3-red")
+}
+spriteset (spriteset_ss3_grassgreen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss3-grassgreen")
+}
+spriteset (spriteset_ss3_fuzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss3-fuzhou")
+}
+spriteset (spriteset_ss3_shenhua, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss3-shenhua")
+}
 
 switch (FEAT_TRAINS, SELF, switch_ss3_articulated_part, extra_callback_info1) {
     1..2: return ss3;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_ss3_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_ss3_original;
-    empty_sprites;
+switch (FEAT_TRAINS, SELF, switch_ss3_graphics_subtype, cargo_subtype) {
+    1: spriteset_ss3_shenhua;
+    2: spriteset_ss3_blue;
+    3: spriteset_ss3_red;
+    4: spriteset_ss3_grassgreen;
+    5: spriteset_ss3_fuzhou;
+    spriteset_ss3_original;
 }
 
+switch (FEAT_TRAINS, SELF, switch_ss3_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_SHENHUA);
+    2: return string(STR_BLUE);
+    3: return string(STR_RED);
+    4: return string(STR_GRASSGREEN);
+    5: return string(STR_FUZHOU);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ss3_graphics, position_in_articulated_veh % 3) {
+    1: switch_ss3_graphics_subtype;
+    empty_sprites;
+}
 
 item (FEAT_TRAINS, ss3) {
     property {
@@ -64,6 +97,7 @@ item (FEAT_TRAINS, ss3) {
     graphics {
         // Menu
         additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SS3), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_SS3_NICKNAME), string(STR_RELIABILITY_10));
+        cargo_subtype_text:             switch_ss3_cargo_subtype;
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_ss3_graphics;

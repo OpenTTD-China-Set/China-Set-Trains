@@ -5,6 +5,11 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.1.169 (8/17/2024)
+--------------------
+Add: SS4B, SS4C
+Renewl the sprites of SS3, SS4, SS4G
+
 0.3.1.167 (8/8/2024)
 --------------------
 Add: NC3, P80, UZ25T, P50，P65
