@@ -7,7 +7,8 @@ China Set: Trains Changelog
 
 0.3.2.168 (8/8/2024)
 --------------------
-Add: HXD2, HXD2-1000
+Add: HXD2, HXD2-1000, CHA1C
+Add Livery: CR400BF-C Winter Olympic, CR400BF-Z Asia Game
 
 0.3.1.167 (8/8/2024)
 --------------------
