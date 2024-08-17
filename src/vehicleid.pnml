@@ -242,9 +242,11 @@ item (FEAT_TRAINS, ss1, 6163) {}
 item (FEAT_TRAINS, ss7d, 6164) {}
 item (FEAT_TRAINS, ss9, 6165) {}
 item (FEAT_TRAINS, ss9g, 6166) {}
-// 6167-6168 coded by Babel
-item (FEAT_TRAINS, hxd2, 6167) {}
-item (FEAT_TRAINS, hxd21000, 6168) {}
+item (FEAT_TRAINS, ss4b, 6167) {}
+item (FEAT_TRAINS, ss4c, 6168) {}
+// 6169-6170 coded by Babel
+item (FEAT_TRAINS, hxd2, 6169) {}
+item (FEAT_TRAINS, hxd21000, 6170) {}
 
 
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)

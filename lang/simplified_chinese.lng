@@ -168,6 +168,8 @@ STR_NAME_SS1                                     :SS1 (电力)
 STR_NAME_SS3                                     :SS3 (电力) 
 STR_NAME_SS3B                                    :SS3B (电力)
 STR_NAME_SS4                                     :SS4 (电力) 
+STR_NAME_SS4B                                    :SS4B (电力)
+STR_NAME_SS4C                                    :SS4C (电力)
 STR_NAME_SS4G                                    :SS4G (电力)
 STR_NAME_SS5                                     :SS5 (电力) 
 STR_NAME_SS6                                     :SS6 (电力) 
@@ -350,6 +352,8 @@ STR_FULL_NAME_SS1                                :{BLACK}全称：{GOLD}韶山1�
 STR_FULL_NAME_SS3                                :{BLACK}全称：{GOLD}韶山3型电力机车
 STR_FULL_NAME_SS3B                               :{BLACK}全称：{GOLD}韶山3B型电力机车
 STR_FULL_NAME_SS4                                :{BLACK}全称：{GOLD}韶山4型电力机车
+STR_FULL_NAME_SS4B                               :{BLACK}全称：{GOLD}韶山4B型电力机车
+STR_FULL_NAME_SS4C                               :{BLACK}全称：{GOLD}韶山4C型电力机车
 STR_FULL_NAME_SS4G                               :{BLACK}全称：{GOLD}韶山4G型电力机车
 STR_FULL_NAME_SS5                                :{BLACK}全称：{GOLD}韶山5型电力机车
 STR_FULL_NAME_SS6                                :{BLACK}全称：{GOLD}韶山6型电力机车
@@ -589,12 +593,16 @@ STR_REVERSE                                      : └ 翻转的涂装
 STR_ORANGE                                       :{ORANGE} - 橘色涂装
 STR_GREEN                                        :{GREEN} - 绿色涂装
 STR_RED                                          :{RED} - 红色涂装
+STR_WHITE                                        :{WHITE} - 白色涂装
+STR_BLUE                                         :{BLUE} - 蓝色涂装
+STR_GRASSGREEN                                   :{DKGREEN} - 草绿色涂装
 STR_LATER_ORANGE                                 :{ORANGE} - 后期橘色涂装
 STR_LATER_GREEN                                  :{GREEN} - 后期绿色涂装
 STR_XIHU                                         : - {GREEN}西户铁路{BLACK}涂装
 STR_XIHU_REVERSE                                 : - {GREEN}西户铁路{BLACK}涂装，倒转方向
 STR_DF4D_7000                                    : - {GREEN}7000{YELLOW}系{BLACK}涂装
 STR_SS7C_BANANA                                  : - {YELLOW}黄色{BLACK}涂装
+STR_FUZHOU                                       : - 福州机务段涂装
 STR_UKRAINE                                      : - {YELLOW}“乌克兰”{BLUE}涂装
 STR_DF4B_DPRK                                    : - {BLUE}蓝{DKGREEN}绿{BLACK}相间涂装
 STR_DF4D4000_DPRK                                : - {BLUE}蓝{DKGREEN}绿{BLACK}相间涂装
@@ -603,8 +611,9 @@ STR_DF4BN_REVERSE                                : - {BLUE}新头型DF4B (反转
 STR_ALTERNATIVE                                  : - 另一种原版涂装
 STR_DF_YELLOW                                    : - {GOLD}黄色{GREEN}窗线{BLACK}涂装
 STR_DF_WHITE                                     : - {WHITE}白色{GREEN}窗线{BLACK}涂装
-STR_6Y2_FACTORY                                  : - {BLUE}出厂{BLACK}涂装
+STR_FACTORY                                      : - 出厂涂装  
 STR_6Y2_LATE                                     : - {GREEN}晚期{BLACK}涂装
+STR_SS4_BLUEROOF                                 : - 白色涂装（车顶为{BLUE}蓝{BLACK}色）
 STR_SHENHUA                                      : - {GOLD}神华集团涂装
 STR_GUONENG                                      : - {GOLD}国家能源集团涂装
 STR_CHN2LAOS                                     : - {GOLD}中老铁路涂装
