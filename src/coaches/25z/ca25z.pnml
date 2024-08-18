@@ -1,6 +1,6 @@
 //Begin CA25Z
 switch (FEAT_TRAINS, SELF, switch_ca25z_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_S25Z_SERIES);
+    0: return string(STR_25Z_SERIES);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -90,7 +90,7 @@ item (FEAT_TRAINS, ca25z) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_CA25Z), string(STR_CAFE_EFFECT), string(STR_25Z_LIVERY_AVAILABILITY), string(STR_COMFORT_192_CAFE));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_CA25Z), string(STR_CAFE_EFFECT), string(STR_25Z_LIVERY_AVAILABILITY), string(STR_COMFORT_MEDIUM, 240));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_ca25z_cargo_subtype;
 

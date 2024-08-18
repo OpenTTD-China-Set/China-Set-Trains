@@ -201,7 +201,7 @@ item (FEAT_TRAINS, crh3c) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_6, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH3C_NICKNAME), string(STR_RELIABILITY_12), string(STR_CRH3C_CONSIST), string(STR_CRH3C_HEAD_SEAT), string(STR_350_AVAILABLE));
+        additional_text:                string(STR_DESC_6, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH3C_NICKNAME), string(STR_RELDEC_LOW, 12), string(STR_CRH3C_CONSIST), string(STR_CRH3C_HEAD_SEAT), string(STR_350_AVAILABLE));
         can_attach_wagon:               crhwagon;
         start_stop:                     mu4car;
         cargo_subtype_text:             switch_crh_c_cargo_subtype;

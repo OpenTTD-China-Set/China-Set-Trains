@@ -305,7 +305,7 @@ item (FEAT_TRAINS, cr200jc) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CR200JC_NICKNAME), string(STR_RELIABILITY_8), string(STR_CR200J_CONSIST));
+        additional_text:                string(STR_DESC_4, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CR200JC_NICKNAME), string(STR_RELDEC_LOW, 8), string(STR_CR200J_CONSIST));
         can_attach_wagon:               cr200jcwagon;
         start_stop:                     switch_cr200jc_start_stop;
 

@@ -71,7 +71,7 @@ item (FEAT_TRAINS, df4d3000) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_DF4D), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF4D_NICKNAME), string(STR_RELIABILITY_14));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_DF4D), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF4D_NICKNAME), string(STR_RELDEC_MEDIUM, 14));
         can_attach_wagon:               locowagon;
 
         // Graphics

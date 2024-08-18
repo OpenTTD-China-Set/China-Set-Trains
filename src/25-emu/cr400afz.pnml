@@ -351,7 +351,7 @@ item (FEAT_TRAINS, cr400afz) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON),/*  string(STR_CR400AFZ_NICKNAME), */ string(STR_RELIABILITY_3), string(STR_CR400_Z_CONSIST), string(STR_CR400_Z_HEAD_SEAT));
+        additional_text:                string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CR400_Z_NICKNAME),  string(STR_RELDEC_VERY_LOW, 3), string(STR_CR400_Z_CONSIST), string(STR_CR400_Z_HEAD_SEAT));
         can_attach_wagon:               crhwagon;
         start_stop:                     mu4to24car;
         // Graphics
@@ -366,7 +366,7 @@ item (FEAT_TRAINS, cr400afz) {
         purchase_power:                 return 3399;
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.126*255);
-        cargo_age_period:               (20 * 5 * cafedecayfactor()) << param_cargo_decay;
+        cargo_age_period:               (180 * cafedecayfactor()) << param_cargo_decay;
         cost_factor:                    97;
         running_cost_factor:            74 * runningcostfactor() * cafecostfactor() + 20;
         purchase_running_cost_factor:   316;
