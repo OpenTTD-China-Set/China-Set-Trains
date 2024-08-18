@@ -7,7 +7,7 @@ China Set: Trains Changelog
 
 0.3.1.169 (8/17/2024)
 --------------------
-Add: HXD2, HXD2-1000, CHA1C, SS4B, SS4C
+Add: HXD2, HXD2-1000, CHA1C, SS4B, SS4C, DJJ2, DJF3
 Renewl the sprites of SS3, SS4, SS4G, DF11, HXN5
 Add Livery: CR400BF-C Winter Olympic, CR400BF-Z Asia Game
 
