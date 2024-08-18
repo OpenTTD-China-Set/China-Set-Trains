@@ -196,7 +196,7 @@ item (FEAT_TRAINS, cr200jcl) {
         purchase_running_cost_factor:   364;
         purchase_cargo_capacity:        0;
         bitmask_vehicle_info:           switch_pushpull_consist_correction;
-        name:                            switch_cr200jcl_name;
+        name:                           switch_cr200jcl_name;
 
     }
 

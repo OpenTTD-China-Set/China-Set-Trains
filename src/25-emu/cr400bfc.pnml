@@ -81,7 +81,7 @@ switch (FEAT_TRAINS, SELF, switch_cr400bfc_graphics, position_in_articulated_veh
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bfc_head_capacity, position_in_articulated_veh % 3) {
-    1: return 20;
+    1: return 18;
     return 0;
 }
 
@@ -411,7 +411,7 @@ item (FEAT_TRAINS, cr400bfc) {
         purchase_power:                 return 3399;
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.119*255);
-        cargo_age_period:               (20 * 5 * cafedecayfactor()) << param_cargo_decay;
+        cargo_age_period:               (180 * cafedecayfactor()) << param_cargo_decay;
         cost_factor:                    97;
         running_cost_factor:            74 * runningcostfactor() * cafecostfactor() + 20;
         purchase_running_cost_factor:   316;

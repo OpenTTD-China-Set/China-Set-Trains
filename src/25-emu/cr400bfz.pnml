@@ -440,7 +440,7 @@ item (FEAT_TRAINS, cr400bfz) {
         purchase_power:                 return 3399;
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.119*255);
-        cargo_age_period:               (20 * 5 * cafedecayfactor()) << param_cargo_decay;
+        cargo_age_period:               (180 * cafedecayfactor()) << param_cargo_decay;
         cost_factor:                    98;
         running_cost_factor:            74 * runningcostfactor() * cafecostfactor() + 20;
         purchase_running_cost_factor:   316;
