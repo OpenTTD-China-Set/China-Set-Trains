@@ -230,6 +230,8 @@
 
 // 25kV AC EMU
 #include "src/25-emu/djj1.pnml"
+#include "src/25-emu/djj2.pnml"
+#include "src/25-emu/djf3.pnml"
 #include "src/25-emu/cr200ja.pnml"
 #include "src/25-emu/cr200jal.pnml"
 #include "src/25-emu/cr200jb.pnml"

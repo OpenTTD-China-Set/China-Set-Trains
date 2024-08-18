@@ -373,7 +373,7 @@ item (FEAT_TRAINS, crh380a) {
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.083*255);
         cargo_capacity:                 switch_crh380a_head_capacity;
-        cargo_age_period:               12 * 5 * cafedecayfactor() << param_cargo_decay;
+        cargo_age_period:               100 * cafedecayfactor() << param_cargo_decay;
         cost_factor:                    68;
         running_cost_factor:            (54 + crhspeedcost()) * runningcostfactor() * cafecostfactor() + 20;
         purchase_running_cost_factor:   236;
