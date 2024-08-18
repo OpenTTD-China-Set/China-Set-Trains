@@ -5,6 +5,27 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.1.168 (19/8/2024)
+--------------------
+Add: HXD2, HXD2-1000, CHA1C, SS4B, SS4C, DJJ2, DJF3
+Renewal the sprites of SS3, SS4, SS4G, DF11, HXN5
+Add Livery: CR400BF-C Winter Olympics, CR400BF-Z Asian Games
+Feature: improved language strings of reliability decay and comfort
+
+0.3.1.167 (8/8/2024)
+--------------------
+Add: NC3, P80, UZ25T, P50, P65
+Renewal the sprites of HXD1D, 25T
+Wagons with aging liveries now have new feature: The probabilities of aging liveries will change by years
+Fix #47: The Cargo Type of PB
+Completed the CRH1 Series:
+    - Refurbish CRH1A
+    - Add CRH1B, CRH1A-A
+    - Fix #48: Fix the power of CRH1E
+Add the CR400BF(Intelligent EMU) Series:
+    - Add CR400BF-C, CR400BF-Z/S, CR400BF-AZ/BZ/BS
+Fix #49: The capacity and running cost of CR400AF-AZ/BZ/BS
+
 0.3.0.166 (16/6/2024)
 --------------------
 Fix #46: CRH2E (Longitudinal Sleeper) capacity
