@@ -145,7 +145,7 @@ item (FEAT_TRAINS, djj2) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_DJJ2_321_AVAILABLE), string(STR_DJJ2_CAN_ATTACH_WAGON), string(STR_DJJ2_CONSIST), string(STR_RELIABILITY_28));
+        additional_text:                string(STR_DESC_4, string(STR_DJJ2_321_AVAILABLE), string(STR_DJJ2_CAN_ATTACH_WAGON), string(STR_DJJ2_CONSIST), string(STR_RELDEC_HIGH, 28));
         can_attach_wagon:               djj2wagon;
         start_stop:                     switch_djj2_start_stop;
         cargo_subtype_text:             switch_djj2_cargo_subtype;

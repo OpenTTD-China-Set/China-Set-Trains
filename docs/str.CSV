@@ -700,32 +700,19 @@ STR_DESC_PENGDAIKE,"{BLACK}Passengers in Boxcars (Peng Dai Ke): From 1980s to 20
 STR_ATTACH_ALL_CRH_CR,{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs,{BLACK}匹配的动车组：{GOLD}所有和谐/复兴号动车
 STR_ATTACH_SLEEPER_MU,{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs,{BLACK}匹配的动车组：{GOLD}所有提供卧铺的和谐/复兴号动车
 STR_ATTACH_CR200J,{BLACK}Matching MUs: {GOLD}CR200J Series,{BLACK}匹配的动车组：{GOLD}CR200J系列动车
-<<<<<<< HEAD
-STR_NZJ1_XINSHUGUANG_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK}, equivalent to Double-Decker Hard Seat, Capacity: 136, Comfort: 200; {GOLD}ZY{BLACK}, equivalent to Double-Decker Soft Seat, Capacity: 108, Comfort: 240",{BLACK}匹配的车厢：{GOLD}二等座{BLACK}实为双层硬座，载客量：136，舒适度：200；{GOLD}一等座{BLACK}实为双层软座，载客量：108，舒适度：240
-STR_NDJ3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC{BLACK}, Second Class Capacity: 114, Comfort: 200",{BLACK}匹配的车厢：{GOLD}二等座、一等座、二等/餐车合造{BLACK}，二等座载客量：114，舒适度：200
+STR_NZJ1_XINSHUGUANG_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK}, equivalent to Double-Decker Hard Seat, Capacity: 136, Comfort: {YELLOW}200{BLACK}; {GOLD}ZY{BLACK}, equivalent to Double-Decker Soft Seat, Capacity: 108, Comfort: {YELLOW}240",{BLACK}匹配的车厢：{GOLD}二等座{BLACK}实为双层硬座，载客量：136，舒适度：{YELLOW}200{BLACK}；{GOLD}一等座{BLACK}实为双层软座，载客量：108，舒适度：{YELLOW}240
+STR_NDJ3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC{BLACK}, Second Class Capacity: 114, Comfort: 200",{BLACK}匹配的车厢：{GOLD}二等座、一等座、二等/餐车合造{BLACK}，二等座载客量：114，舒适度：{YELLOW}200
 STR_DJJ1_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent to Soft Seat",{BLACK}匹配的车厢：{GOLD}一等座{BLACK}实为软座
 STR_DJJ2_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等座、二等/餐车合造
 STR_DJF3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent to Soft Seat",{BLACK}匹配的车厢：{GOLD}一等座{BLACK}实为软座
-=======
-STR_NZJ1_XINSHUGUANG_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK}, equivalent to Double-Decker Hard Seat, Capacity: 136, Comfort: {YELLOW}200{BLACK}; {GOLD}ZY{BLACK}, equivalent to Double-Decker Soft Seat, Capacity: 108, Comfort: {YELLOW}240",{BLACK}匹配的车厢：{GOLD}二等座{BLACK}实为双层硬座，载客量：136，舒适度：{YELLOW}200{BLACK}；{GOLD}一等座{BLACK}实为双层软座，载客量：108，舒适度：{YELLOW}240
-STR_NDJ3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC{BLACK}, Second Class Capacity: 114, Comfort: {YELLOW}200",{BLACK}匹配的车厢：{GOLD}二等座、一等座、二等/餐车合造{BLACK}，二等座载客量：114，舒适度：{YELLOW}200
-STR_DJJ1_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZY{BLACK}, equivalent to Soft Seat, Comfort: {YELLOW}240",{BLACK}匹配的车厢：仅有{GOLD}一等座{BLACK}，与软座相似，舒适度：{YELLOW}240
->>>>>>> a005b01f26e07bb784fbc54343a557e15b817f5e
 STR_CR200J_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, WE, WY, WG",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
 STR_CRH_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
 STR_CRH_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, WY, WG, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造
 STR_CRH_LSLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}一等卧、二等/餐车合造 (实为软卧/餐车合造车)
-<<<<<<< HEAD
-STR_CRH6A2_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: 160), {GOLD}ZY",{BLACK}匹配的车厢：{GOLD}二等座{BLACK} (带站席，舒适度：160)、{GOLD}一等座
-STR_CRH6A3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: 160",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：160
-STR_CRH6F_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places (Crowded), Comfort: 128",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：128
-STR_NC3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, Comfort: 185",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}，舒适度：185
-=======
 STR_CRH6A2_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: {ORANGE}160{BLACK}), {GOLD}ZY",{BLACK}匹配的车厢：{GOLD}二等座{BLACK} (带站席，舒适度：{ORANGE}160{BLACK})、{GOLD}一等座
 STR_CRH6A3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: {ORANGE}160",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
 STR_CRH6F_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places (Crowded), Comfort: {RED}128",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：{RED}128
 STR_NC3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, Comfort: 185",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}，舒适度：{YELLOW}185
->>>>>>> a005b01f26e07bb784fbc54343a557e15b817f5e
 # Consist,,
 STR_NJ2_CONSIST,{BLACK}Consist: {GOLD}2 to 4 sections,{BLACK}构成：{GOLD}2-4节重联
 STR_HXN3QZ_CONSIST,{BLACK}Consist: {GOLD}2 to 4 sections,{BLACK}构成：{GOLD}2-4节重联

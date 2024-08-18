@@ -684,8 +684,8 @@ STR_DESC_PENGDAIKE                               :{BLACK}棚代客：从20世纪
 STR_ATTACH_ALL_CRH_CR                            :{BLACK}匹配的动车组：{GOLD}所有和谐/复兴号动车
 STR_ATTACH_SLEEPER_MU                            :{BLACK}匹配的动车组：{GOLD}所有提供卧铺的和谐/复兴号动车
 STR_ATTACH_CR200J                                :{BLACK}匹配的动车组：{GOLD}CR200J系列动车
-STR_NZJ1_XINSHUGUANG_CAN_ATTACH_WAGON            :{BLACK}匹配的车厢：{GOLD}二等座{BLACK}实为双层硬座，载客量：136，舒适度：200；{GOLD}一等座{BLACK}实为双层软座，载客量：108，舒适度：240
-STR_NDJ3_CAN_ATTACH_WAGON                        :{BLACK}匹配的车厢：{GOLD}二等座、一等座、二等/餐车合造{BLACK}，二等座载客量：114，舒适度：200
+STR_NZJ1_XINSHUGUANG_CAN_ATTACH_WAGON            :{BLACK}匹配的车厢：{GOLD}二等座{BLACK}实为双层硬座，载客量：136，舒适度：{YELLOW}200{BLACK}；{GOLD}一等座{BLACK}实为双层软座，载客量：108，舒适度：{YELLOW}240
+STR_NDJ3_CAN_ATTACH_WAGON                        :{BLACK}匹配的车厢：{GOLD}二等座、一等座、二等/餐车合造{BLACK}，二等座载客量：114，舒适度：{YELLOW}200
 STR_DJJ1_CAN_ATTACH_WAGON                        :{BLACK}匹配的车厢：{GOLD}一等座{BLACK}实为软座
 STR_DJJ2_CAN_ATTACH_WAGON                        :{BLACK}匹配的车厢：{GOLD}二等座、一等座、二等/餐车合造
 STR_DJF3_CAN_ATTACH_WAGON                        :{BLACK}匹配的车厢：{GOLD}一等座{BLACK}实为软座
