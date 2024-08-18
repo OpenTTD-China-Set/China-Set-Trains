@@ -86,7 +86,7 @@ item (FEAT_TRAINS, yz22) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YZ22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_144), string(STR_NO_AIR_CONDITIONER));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YZ22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_LOW, 144), string(STR_NO_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_yz22_cargo_subtype;
 

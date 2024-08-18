@@ -70,7 +70,7 @@ item (FEAT_TRAINS, rz25b) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_RZ25B), string(STR_25B_LIVERY_AVAILABILITY), string(STR_COMFORT_192), string(STR_NO_AIR_CONDITIONER));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_RZ25B), string(STR_25B_LIVERY_AVAILABILITY), string(STR_COMFORT_MEDIUM, 192), string(STR_NO_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
 
         // Graphics
