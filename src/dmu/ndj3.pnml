@@ -124,7 +124,7 @@ item (FEAT_TRAINS, ndj3) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_NDJ3_NICKNAME), string(STR_NDJ3_CAN_ATTACH_WAGON), string(STR_NDJ3_CONSIST), string(STR_RELIABILITY_6));
+        additional_text:                string(STR_DESC_4, string(STR_NDJ3_NICKNAME), string(STR_NDJ3_CAN_ATTACH_WAGON), string(STR_NDJ3_CONSIST), string(STR_RELDEC_VERY_LOW, 6));
         can_attach_wagon:               ndj3wagon;
         start_stop:                     switch_ndj3_start_stop;
 

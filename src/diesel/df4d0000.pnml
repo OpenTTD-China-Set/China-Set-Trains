@@ -87,7 +87,7 @@ item (FEAT_TRAINS, df4d0000) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_DF4D), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF4D0000_LIVERY_AVAILABILITY), string(STR_DF4D_NICKNAME), string(STR_RELIABILITY_14));
+        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_DF4D), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF4D0000_LIVERY_AVAILABILITY), string(STR_DF4D_NICKNAME), string(STR_RELDEC_MEDIUM, 14));
         cargo_subtype_text:             switch_df4d0000_cargo_subtype;
         can_attach_wagon:               locowagon;
 

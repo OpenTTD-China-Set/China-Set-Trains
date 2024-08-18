@@ -433,7 +433,7 @@ STR_HU_IMPORT                                    :匈牙利进口车型
 # Desc
 STR_JINLUN_25DT                                  :{BLUE}金{WHITE}轮{RED}号{GOLD}内燃动车组所使用的拖车
 STR_XL25T_SSPE_DESCRIPTION                       :{BLACK}新时速运递公司使用的XL25T版本。
-STR_CHA1C_DESC                                   : {BLACK}混合动力机车。在非电气化路段使用电池供电，功率为{BLUE}2000kw{BLACK}。在25kV交流供电铁路上功率为{RED}2400kw
+STR_CHA1C_DESC                                   : {BLACK}混合动力机车。在非电气化路段使用电池供电，功率为{BLUE}2000 kW{BLACK}。在25kV交流供电铁路上功率为{RED}2400 kW
 # Livery Availability
 STR_DF_LIVERY_AVAILABILITY                       :{BLACK}可供选择的涂装：{GOLD}黄色{GREEN}窗线{BLACK}涂装, {WHITE}白色{GREEN}窗线{BLACK}涂装
 STR_DF4_LIVERY_AVAILABILITY                      :{BLACK}可供选择的涂装：{GREEN}绿色涂装{GOLD}，{ORANGE}橘色涂装{BLACK}，{BLUE}“乌克兰”{YELLOW}涂装，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}
@@ -569,18 +569,11 @@ STR_ALIASNAME_DF                                 :{BLACK}曾用名：{GOLD}巨�
 STR_ALIASNME_SS1                                 :{BLACK}曾用名：{GOLD}6Y1
 STR_ALIASNAME_FXD1B                              :{BLACK}曾用名：{GOLD}HXD1F(和谐1F型电力机车)
 # Reliability
-STR_RELIABILITY_32                               :{BLACK}可靠性下降速度：{GOLD}32
-STR_RELIABILITY_24                               :{BLACK}可靠性下降速度：{GOLD}24
-STR_RELIABILITY_20                               :{BLACK}可靠性下降速度：{GOLD}20
-STR_RELIABILITY_16                               :{BLACK}可靠性下降速度：{GOLD}16
-STR_RELIABILITY_15                               :{BLACK}可靠性下降速度：{GOLD}15
-STR_RELIABILITY_14                               :{BLACK}可靠性下降速度：{GOLD}14
-STR_RELIABILITY_12                               :{BLACK}可靠性下降速度：{GOLD}12
-STR_RELIABILITY_10                               :{BLACK}可靠性下降速度：{GOLD}10
-STR_RELIABILITY_8                                :{BLACK}可靠性下降速度：{GOLD}8
-STR_RELIABILITY_6                                :{BLACK}可靠性下降速度：{GOLD}6
-STR_RELIABILITY_5                                :{BLACK}可靠性下降速度：{GOLD}5
-STR_RELIABILITY_3                                :{BLACK}可靠性下降速度：{GOLD}3
+STR_RELDEC_VERY_HIGH                             :{BLACK}可靠性下降速度：{RED}极高（{COMMA}）
+STR_RELDEC_HIGH                                  :{BLACK}可靠性下降速度：{ORANGE}较高（{COMMA}）
+STR_RELDEC_MEDIUM                                :{BLACK}可靠性下降速度：{YELLOW}一般（{COMMA}）
+STR_RELDEC_LOW                                   :{BLACK}可靠性下降速度：{GREEN}较低（{COMMA}）
+STR_RELDEC_VERY_LOW                              :{BLACK}可靠性下降速度：{BLUE}极低（{COMMA}）
 # Speed
 STR_310_KMH                                      : - 最高速度 310 km/h
 STR_350_KMH                                      : - 最高速度 350 km/h，运营费用增加
@@ -664,35 +657,22 @@ STR_XIAOYONG                                     : - 萧甬铁路涂装
 STR_ASIAGAME                                     : - {PURPLE}杭州亚运会"润泽江南"{BLACK}涂装
 STR_WINTER_OLYMPIC                               : - {LTBLUE}北京冬奥会"瑞雪迎春"{BLACK}涂装
 # Decay
-STR_COMFORT                                      :{BLACK}舒适度：{GOLD}{COMMA}
-STR_COMFORT_108                                  :{BLACK}舒适度：{GOLD}108
-STR_COMFORT_144                                  :{BLACK}舒适度：{GOLD}144
-STR_COMFORT_160                                  :{BLACK}舒适度：{GOLD}160
-STR_COMFORT_192                                  :{BLACK}舒适度：{GOLD}192
-STR_COMFORT_256                                  :{BLACK}舒适度：{GOLD}256
-STR_COMFORT_288                                  :{BLACK}舒适度：{GOLD}288
-STR_COMFORT_320                                  :{BLACK}舒适度：{GOLD}320
-STR_COMFORT_384                                  :{BLACK}舒适度：{GOLD}384
-STR_COMFORT_144_CAFE                             :{BLACK}舒适度：{GOLD}144{BLACK}，但由于餐车作用，运营时至少为180
-STR_COMFORT_160_CAFE                             :{BLACK}舒适度：{GOLD}160{BLACK}，但由于餐车作用，运营时至少为200
-STR_COMFORT_192_CAFE                             :{BLACK}舒适度：{GOLD}192{BLACK}，但由于餐车作用，运营时至少为240
-STR_COMFORT_384_AC                               :{BLACK}舒适度：{GOLD}384{BLACK}，但由于空调作用，运营时至少为480
-STR_COMFORT_240                                  :{BLACK}舒适度：{GOLD}240
-STR_COMFORT_400                                  :{BLACK}舒适度：{GOLD}400
-STR_COMFORT_480                                  :{BLACK}舒适度：{GOLD}480
-STR_COMFORT_640                                  :{BLACK}舒适度：{GOLD}640
-STR_COMFORT_720                                  :{BLACK}舒适度：{GOLD}720
-STR_COMFORT_800                                  :{BLACK}舒适度：{GOLD}800
-STR_COMFORT_240_CAFE                             :{BLACK}舒适度：{GOLD}240 {BLACK}，但由于餐车作用，运营时至少为300
-STR_DECAY_185                                    :{BLACK}货物贬值周期因子：{GOLD}185
-STR_DECAY_200                                    :{BLACK}货物贬值周期因子：{GOLD}200
-STR_DECAY_400                                    :{BLACK}货物贬值周期因子：{GOLD}400
-STR_DECAY_800                                    :{BLACK}货物贬值周期因子：{GOLD}800
-STR_DECAY_1600                                   :{BLACK}货物贬值周期因子：{GOLD}1600
-STR_DECAY_BOXCAR                                 :{BLACK}货物贬值周期因子：{GOLD}185，棚代客80，装载活禽/畜560
-STR_DECAY_BOXCAR_NOPASS                          :{BLACK}货物贬值周期因子：{GOLD}185，装载活禽/畜560，棚代客不可用
+STR_COMFORT_VERY_LOW                             :{BLACK}舒适度：{RED}极低（{COMMA}）
+STR_COMFORT_LOW                                  :{BLACK}舒适度：{ORANGE}较低（{COMMA}）
+STR_COMFORT_MEDIUM                               :{BLACK}舒适度：{YELLOW}一般（{COMMA}）
+STR_COMFORT_HIGH                                 :{BLACK}舒适度：{GREEN}较高（{COMMA}）
+STR_COMFORT_VERY_HIGH                            :{BLACK}舒适度：{BLUE}很高（{COMMA}）
+STR_COMFORT_EXTREMELY_HIGH                       :{BLACK}舒适度：{WHITE}极高（{COMMA}）
+STR_FRESHNESS_VERY_LOW                           :{BLACK}货物贬值周期因子：{RED}极低（{COMMA}）
+STR_FRESHNESS_LOW                                :{BLACK}货物贬值周期因子：{ORANGE}较低（{COMMA}）
+STR_FRESHNESS_MEDIUM                             :{BLACK}货物贬值周期因子：{YELLOW}一般（{COMMA}）
+STR_FRESHNESS_HIGH                               :{BLACK}货物贬值周期因子：{GREEN}较高（{COMMA}）
+STR_FRESHNESS_VERY_HIGH                          :{BLACK}货物贬值周期因子：{BLUE}很高（{COMMA}）
+STR_FRESHNESS_EXTREMELY_HIGH                     :{BLACK}货物贬值周期因子：{WHITE}极高（{COMMA}）
+STR_DECAY_BOXCAR                                 :{BLACK}货物贬值周期因子：{YELLOW}185{BLACK}，棚代客{RED}80{BLACK}，装载活禽/畜{BLUE}560
+STR_DECAY_BOXCAR_NOPASS                          :{BLACK}货物贬值周期因子：{YELLOW}185{BLACK}，装载活禽/畜{BLUE}560{BLACK}，棚代客{RED}不可用
 STR_CAFE_EFFECT                                  :{BLACK}餐车的作用：{GOLD}加挂餐车使除餐车外的所有非通勤客车运行费用减半，货物贬值周期增加1/4
-STR_AIR_CONDITIONER_EFFECT                       :{BLACK}空调发电车的作用：{GOLD}加挂空调发电车可增加大部分非机供机车牵引客车的货物贬值周期
+STR_AIR_CONDITIONER_EFFECT                       :{BLACK}空调发电车的作用：{GOLD}加挂空调发电车可使大部分非机供机车牵引客车的货物贬值周期增加1/4
 STR_NO_AIR_CONDITIONER                           :{BLACK}空调：{RED}不可用
 STR_SELF_AIR_CONDITIONER                         :{BLACK}自带空调发电机{RED}但仅用于本车厢
 STR_DESC_PENGDAIKE                               :{BLACK}棚代客：从20世纪80年代至2008年，为适应春运期间极大的客流量，部分铁路局曾开行使用棚车装载旅客的临客列车，内部极度拥挤。该现象反映了当时铁路运输资源的严重缺乏。
@@ -700,17 +680,17 @@ STR_DESC_PENGDAIKE                               :{BLACK}棚代客：从20世纪
 STR_ATTACH_ALL_CRH_CR                            :{BLACK}匹配的动车组：{GOLD}所有和谐/复兴号动车
 STR_ATTACH_SLEEPER_MU                            :{BLACK}匹配的动车组：{GOLD}所有提供卧铺的和谐/复兴号动车
 STR_ATTACH_CR200J                                :{BLACK}匹配的动车组：{GOLD}CR200J系列动车
-STR_NZJ1_XINSHUGUANG_CAN_ATTACH_WAGON            :{BLACK}匹配的车厢：{GOLD}二等座{BLACK}实为双层硬座，载客量：136，舒适度：200；{GOLD}一等座{BLACK}实为双层软座，载客量：108，舒适度：240
-STR_NDJ3_CAN_ATTACH_WAGON                        :{BLACK}匹配的车厢：{GOLD}二等座、一等座、二等/餐车合造{BLACK}，二等座载客量：114，舒适度：200
-STR_DJJ1_CAN_ATTACH_WAGON                        :{BLACK}匹配的车厢：仅有{GOLD}一等座{BLACK}，与软座相似，舒适度：240
+STR_NZJ1_XINSHUGUANG_CAN_ATTACH_WAGON            :{BLACK}匹配的车厢：{GOLD}二等座{BLACK}实为双层硬座，载客量：136，舒适度：{YELLOW}200{BLACK}；{GOLD}一等座{BLACK}实为双层软座，载客量：108，舒适度：{YELLOW}240
+STR_NDJ3_CAN_ATTACH_WAGON                        :{BLACK}匹配的车厢：{GOLD}二等座、一等座、二等/餐车合造{BLACK}，二等座载客量：114，舒适度：{YELLOW}200
+STR_DJJ1_CAN_ATTACH_WAGON                        :{BLACK}匹配的车厢：仅有{GOLD}一等座{BLACK}，与软座相似，舒适度：{YELLOW}240
 STR_CR200J_CAN_ATTACH_WAGON                      :{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
 STR_CRH_CAN_ATTACH_WAGON                         :{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
 STR_CRH_SLEEPER_CAN_ATTACH_WAGON                 :{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造
 STR_CRH_LSLEEPER_CAN_ATTACH_WAGON                :{BLACK}匹配的车厢：{GOLD}一等卧、二等/餐车合造 (实为软卧/餐车合造车)
-STR_CRH6A2_CAN_ATTACH_WAGON                      :{BLACK}匹配的车厢：{GOLD}二等座{BLACK} (带站席，舒适度：160)、{GOLD}一等座
-STR_CRH6A3_CAN_ATTACH_WAGON                      :{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：160
-STR_CRH6F_CAN_ATTACH_WAGON                       :{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：120
-STR_NC3_CAN_ATTACH_WAGON                         :{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}，舒适度：185
+STR_CRH6A2_CAN_ATTACH_WAGON                      :{BLACK}匹配的车厢：{GOLD}二等座{BLACK} (带站席，舒适度：{ORANGE}160{BLACK})、{GOLD}一等座
+STR_CRH6A3_CAN_ATTACH_WAGON                      :{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
+STR_CRH6F_CAN_ATTACH_WAGON                       :{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：{RED}128
+STR_NC3_CAN_ATTACH_WAGON                         :{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}，舒适度：{YELLOW}185
 # Consist
 STR_NJ2_CONSIST                                  :{BLACK}构成：{GOLD}2-4节重联
 STR_HXN3QZ_CONSIST                               :{BLACK}构成：{GOLD}2-4节重联
@@ -767,8 +747,8 @@ STR_CRH380D_HEAD_SEAT                            :{BLACK}头车座席：{GOLD}�
 STR_CR400_HEAD_SEAT                              :{BLACK}头车座席：{GOLD}一等座
 STR_CR400_Z_HEAD_SEAT                            :{BLACK}头车座席：{GOLD}商务座 (复兴号智能动车组标准)
 STR_CRH6A2_HEAD_SEAT                             :{BLACK}头车座席：{GOLD}一等座
-STR_CRH6A3_HEAD_SEAT                             :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席，舒适度：160
-STR_CRH6F_HEAD_SEAT                              :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：140
+STR_CRH6A3_HEAD_SEAT                             :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
+STR_CRH6F_HEAD_SEAT                              :{BLACK}头车座席：{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：{RED}128
 STR_CR300_HEAD_SEAT                              :{BLACK}头车座席：{GOLD}一等座
 # Misc
 STR_ELECTRICITY_SUPPLY_YES                       :{BLACK}机供：{GOLD}是

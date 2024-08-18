@@ -97,7 +97,7 @@ item (FEAT_TRAINS, c62) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_2, string(STR_C62_LIVERY_AVAILABILITY), string(STR_DECAY_185));
+        additional_text:                string(STR_DESC_2, string(STR_C62_LIVERY_AVAILABILITY), string(STR_FRESHNESS_MEDIUM, 185));
         can_attach_wagon:               locowagon;
 
         // Graphics

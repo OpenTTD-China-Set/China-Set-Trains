@@ -5,15 +5,16 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
-0.3.1.169 (8/17/2024)
+0.3.1.168 (18/8/2024)
 --------------------
 Add: HXD2, HXD2-1000, CHA1C, SS4B, SS4C
-Renewl the sprites of SS3, SS4, SS4G, DF11, HXN5
+Renewal the sprites of SS3, SS4, SS4G, DF11, HXN5
 Add Livery: CR400BF-C Winter Olympic, CR400BF-Z Asia Game
+Feature: improved language strings of reliability decay and comfort
 
 0.3.1.167 (8/8/2024)
 --------------------
-Add: NC3, P80, UZ25T, P50，P65
+Add: NC3, P80, UZ25T, P50, P65
 Renewl the sprites of HXD1D, 25T
 Wagons with aging liveries now have new feature: The probabilities of aging liveries will change by years
 Fix #47: The Cargo Tyoe of PB

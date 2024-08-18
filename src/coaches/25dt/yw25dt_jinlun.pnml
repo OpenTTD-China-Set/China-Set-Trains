@@ -84,7 +84,7 @@ item (FEAT_TRAINS, yw25dt_jinlun) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW25DT_JINLUN), string(STR_JINLUN_25DT), string(STR_25DT_JINLUN_LIVERY_AVAILABILITY), string(STR_COMFORT_288));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW25DT_JINLUN), string(STR_JINLUN_25DT), string(STR_25DT_JINLUN_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 288));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_25dt_jinlun_cargo_subtype;
 

@@ -69,7 +69,7 @@ item (FEAT_TRAINS, hxd2) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_HXD2), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_HXD2_NICKNAME), string(STR_RELIABILITY_8));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_HXD2), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_HXD2_NICKNAME), string(STR_RELDEC_LOW, 8));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_hxd2_graphics;

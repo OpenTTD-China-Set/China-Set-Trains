@@ -70,7 +70,7 @@ item (FEAT_TRAINS, xl25k) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_XL25K), string(STR_25K_LIVERY_AVAILABILITY), string(STR_DECAY_200));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_XL25K), string(STR_25K_LIVERY_AVAILABILITY), string(STR_FRESHNESS_MEDIUM, 200));
         can_attach_wagon:               locowagon;
 
         // Graphics

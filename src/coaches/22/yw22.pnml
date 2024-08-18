@@ -95,7 +95,7 @@ item (FEAT_TRAINS, yw22) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT, 300), string(STR_NO_AIR_CONDITIONER));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 300), string(STR_NO_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
 
 
@@ -160,7 +160,7 @@ item (FEAT_TRAINS, yw221966) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT, 360), string(STR_NO_AIR_CONDITIONER));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 360), string(STR_NO_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
 
 

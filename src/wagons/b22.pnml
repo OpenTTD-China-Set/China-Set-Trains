@@ -85,7 +85,7 @@ item (FEAT_TRAINS, b22) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DECAY_1600);
+        additional_text:                string(STR_FRESHNESS_EXTREMELY_HIGH, 1600);
         can_attach_wagon:               locowagon;
 
         // Graphics
