@@ -31,7 +31,7 @@ switch (FEAT_TRAINS, SELF, switch_cha1c_graphics, position_in_articulated_veh % 
 }
 
 //Power
-switch(FEAT_TRAINS, SELF, switch_cha1c_power, tile_is_railtype("SACA")) {
+switch(FEAT_TRAINS, SELF, switch_cha1c_power, tile_powers_railtype("SACA")) {
     1: return 3218;
     return 2682;
 }

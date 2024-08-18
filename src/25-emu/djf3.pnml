@@ -194,7 +194,6 @@ item (FEAT_TRAINS, djf3) {
         articulated_part:               switch_djf3_articulated_part;
 
         // Stats
-        speed:                          switch_crh_c_speed;
         length:                         switch_length_2_8_2;
         cargo_capacity:                 switch_djf3_head_capacity;
         cargo_age_period:               100 * cafedecayfactor() << param_cargo_decay;
