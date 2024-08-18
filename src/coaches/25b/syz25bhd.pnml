@@ -86,7 +86,7 @@ item (FEAT_TRAINS, syz25bhd) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SYZ25B), string(STR_S25BHD_LIVERY_AVAILABILITY), string(STR_COMFORT_160));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SYZ25B), string(STR_S25BHD_LIVERY_AVAILABILITY), string(STR_COMFORT_LOW, 160));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_s25bhd_cargo_subtype;
 

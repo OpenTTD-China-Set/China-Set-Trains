@@ -91,7 +91,7 @@ item (FEAT_TRAINS, cha1c) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_CHA1C_DESC),string(STR_ELECTRICITY_SUPPLY_YES), string(STR_RELIABILITY_8));
+        additional_text:                string(STR_DESC_4, string(STR_CHA1C_DESC),string(STR_ELECTRICITY_SUPPLY_YES), string(STR_RELDEC_LOW, 8));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_cha1c_graphics;

@@ -449,7 +449,7 @@ STR_DESC_2                                       :{STRING}{}{STRING}
 # Desc
 STR_JINLUN_25DT                                  :Coaches use for DMU {BLUE}"JIN{WHITE}LUN"
 STR_XL25T_SSPE_DESCRIPTION                       :{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.
-STR_CHA1C_DESC                                   : {BLACK}Hybrid Locomotive. Use battery in non-electrifield railways as {BLUE}2000kw{BLACK},  and running as {RED}2400kw{BLACK} in 25kV AC railways
+STR_CHA1C_DESC                                   : {BLACK}Hybrid Locomotive using battery on non-electrified tracks providing {BLUE}2000 kW{BLACK}, and providing {RED}2400 kW{BLACK} on 25kV AC tracks
 # Livery Availability
 STR_DF_LIVERY_AVAILABILITY                       :{BLACK}Livery Availability: {GOLD}Yellow {GREEN}Line {BLACK}Livery, {WHITE}White {GREEN}Line {BLACK}Livery
 STR_DF4_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea, DF4B only),{BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery, Jinhua-Wenzhou Livery (DF4B only)
@@ -585,19 +585,11 @@ STR_ALIASNAME_DF                                 :{BLACK}Alias Name: {GOLD}Great
 STR_ALIASNME_SS1                                 :{BLACK}Alias Name: {GOLD}6Y1
 STR_ALIASNAME_FXD1B                              :{BLACK}Alias Name: {GOLD}HXD1F (Hexie/Harmony 1F Electric Locomotive)
 # Reliability
-STR_RELIABILITY_32                               :{BLACK}Reliability decay speed: {GOLD}32
-STR_RELIABILITY_28                               :{BLACK}Reliability decay speed: {GOLD}28
-STR_RELIABILITY_24                               :{BLACK}Reliability decay speed: {GOLD}24
-STR_RELIABILITY_20                               :{BLACK}Reliability decay speed: {GOLD}20
-STR_RELIABILITY_16                               :{BLACK}Reliability decay speed: {GOLD}16
-STR_RELIABILITY_15                               :{BLACK}Reliability decay speed: {GOLD}15
-STR_RELIABILITY_14                               :{BLACK}Reliability decay speed: {GOLD}14
-STR_RELIABILITY_12                               :{BLACK}Reliability decay speed: {GOLD}12
-STR_RELIABILITY_10                               :{BLACK}Reliability decay speed: {GOLD}10
-STR_RELIABILITY_8                                :{BLACK}Reliability decay speed: {GOLD}8
-STR_RELIABILITY_6                                :{BLACK}Reliability decay speed: {GOLD}6
-STR_RELIABILITY_5                                :{BLACK}Reliability decay speed: {GOLD}5
-STR_RELIABILITY_3                                :{BLACK}Reliability decay speed: {GOLD}3
+STR_RELDEC_VERY_HIGH                             :{BLACK}Reliability decay speed: {RED}Very high ({COMMA})
+STR_RELDEC_HIGH                                  :{BLACK}Reliability decay speed: {ORANGE}High ({COMMA})
+STR_RELDEC_MEDIUM                                :{BLACK}Reliability decay speed: {YELLOW}Medium ({COMMA})
+STR_RELDEC_LOW                                   :{BLACK}Reliability decay speed: {GREEN}Low ({COMMA})
+STR_RELDEC_VERY_LOW                              :{BLACK}Reliability decay speed: {BLUE}Very low ({COMMA})
 # Speed
 STR_ORIGIN_SPEED                                 : - Origin Speed
 STR_310_KMH                                      : - Max Speed 310 km/h
@@ -686,35 +678,22 @@ STR_XIAOYONG                                     : - Xiaoshan/Hangzhou-Ningbo Li
 STR_ASIAGAME                                     : - {PURPLE}The 19th Asian Games Hangzhou {BLACK}Livery
 STR_WINTER_OLYMPIC                               : - {LTBLUE}The XXIV Olympic Winter Games {BLACK}Livery
 # Decay
-STR_COMFORT                                      :{BLACK}Comfort: {GOLD}{COMMA}
-STR_COMFORT_108                                  :{BLACK}Comfort: {GOLD}108
-STR_COMFORT_144                                  :{BLACK}Comfort: {GOLD}144
-STR_COMFORT_160                                  :{BLACK}Comfort: {GOLD}160
-STR_COMFORT_192                                  :{BLACK}Comfort: {GOLD}192
-STR_COMFORT_256                                  :{BLACK}Comfort: {GOLD}256
-STR_COMFORT_288                                  :{BLACK}Comfort: {GOLD}288
-STR_COMFORT_320                                  :{BLACK}Comfort: {GOLD}320
-STR_COMFORT_384                                  :{BLACK}Comfort: {GOLD}384
-STR_COMFORT_144_CAFE                             :{BLACK}Comfort: {GOLD}144 {BLACK}, but at least 180 in operation due to its restaurant identity
-STR_COMFORT_160_CAFE                             :{BLACK}Comfort: {GOLD}160 {BLACK}, but at least 200 in operation due to its restaurant identity
-STR_COMFORT_192_CAFE                             :{BLACK}Comfort: {GOLD}192 {BLACK}, but at least 240 in operation due to its restaurant identity
-STR_COMFORT_384_AC                               :{BLACK}Comfort: {GOLD}384 {BLACK}, but at least 480 in operation due to the presence of air conditioner
-STR_COMFORT_240                                  :{BLACK}Comfort: {GOLD}240
-STR_COMFORT_400                                  :{BLACK}Comfort: {GOLD}400
-STR_COMFORT_480                                  :{BLACK}Comfort: {GOLD}480
-STR_COMFORT_640                                  :{BLACK}Comfort: {GOLD}640
-STR_COMFORT_720                                  :{BLACK}Comfort: {GOLD}720
-STR_COMFORT_800                                  :{BLACK}Comfort: {GOLD}800
-STR_COMFORT_240_CAFE                             :{BLACK}Comfort: {GOLD}240 {BLACK}, but at least 300 in operation due to its restaurant identity
-STR_DECAY_185                                    :{BLACK}Cargo Age Period Factor {GOLD}185
-STR_DECAY_200                                    :{BLACK}Cargo Age Period Factor {GOLD}200
-STR_DECAY_400                                    :{BLACK}Cargo Age Period Factor {GOLD}400
-STR_DECAY_800                                    :{BLACK}Cargo Age Period Factor {GOLD}800
-STR_DECAY_1600                                   :{BLACK}Cargo Age Period Factor {GOLD}1600
-STR_DECAY_BOXCAR                                 :{BLACK}Cargo Age Period Factor {GOLD}185, Passengers 80, Livestock 560
-STR_DECAY_BOXCAR_NOPASS                          :{BLACK}Cargo Age Period Factor {GOLD}185, Livestock 560, Unrefittable to Passengers
+STR_COMFORT_VERY_LOW                             :{BLACK}Comfort: {RED}Very low ({COMMA})
+STR_COMFORT_LOW                                  :{BLACK}Comfort: {ORANGE}Low ({COMMA})
+STR_COMFORT_MEDIUM                               :{BLACK}Comfort: {YELLOW}Medium ({COMMA})
+STR_COMFORT_HIGH                                 :{BLACK}Comfort: {GREEN}High ({COMMA})
+STR_COMFORT_VERY_HIGH                            :{BLACK}Comfort: {BLUE}Very high ({COMMA})
+STR_COMFORT_EXTREMELY_HIGH                       :{BLACK}Comfort: {WHITE}Extremely high ({COMMA})
+STR_FRESHNESS_VERY_LOW                           :{BLACK}Cargo age period factor: {RED}Very low ({COMMA})
+STR_FRESHNESS_LOW                                :{BLACK}Cargo age period factor: {ORANGE}Low ({COMMA})
+STR_FRESHNESS_MEDIUM                             :{BLACK}Cargo age period factor: {YELLOW}Medium ({COMMA})
+STR_FRESHNESS_HIGH                               :{BLACK}Cargo age period factor: {GREEN}High ({COMMA})
+STR_FRESHNESS_VERY_HIGH                          :{BLACK}Cargo age period factor: {BLUE}Very high ({COMMA})
+STR_FRESHNESS_EXTREMELY_HIGH                     :{BLACK}Cargo age period factor: {WHITE}Extremely High ({COMMA})
+STR_DECAY_BOXCAR                                 :{BLACK}Cargo Age Period Factor: {YELLOW}185{BLACK}, Passengers {RED}80{BLACK}, Livestock {BLUE}560
+STR_DECAY_BOXCAR_NOPASS                          :{BLACK}Cargo Age Period Factor: {YELLOW}185{BLACK}, Livestock {BLUE}560{BLACK}, {RED}Unrefittable to Passengers
 STR_CAFE_EFFECT                                  :{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Halves Running Costs of Non-Commuter Passenger Cars except Restaurant Cars, and Increases Cargo Age Period by 1/4
-STR_AIR_CONDITIONER_EFFECT                       :{BLACK}Air Conditioner Effect: {GOLD}Attaching Air Conditioner Generator Car Increases Cargo Age Period of Most Passenger Cars Hauled by Locomotives without Electricity Supply
+STR_AIR_CONDITIONER_EFFECT                       :{BLACK}Air Conditioner Effect: {GOLD}Attaching Air Conditioner Generator Car Increases Cargo Age Period of Most Passenger Cars Hauled by Locomotives without Electricity Supply by 1/4
 STR_NO_AIR_CONDITIONER                           :{BLACK}Air Conditioner: {RED}Unavailable
 STR_SELF_AIR_CONDITIONER                         :{BLACK}With Air Conditioner Compartment {RED}ONLY USED BY ITSELF
 STR_DESC_PENGDAIKE                               :{BLACK}Passengers in Boxcars (Peng Dai Ke): From 1980s to 2008, to handle huge traffic amounts during the Spring Festival period, temporary trains where passengers crowding in boxcars had to be operated. This reflected a severe lack of railway transport resources at that time.
@@ -722,95 +701,3 @@ STR_DESC_PENGDAIKE                               :{BLACK}Passengers in Boxcars (
 STR_ATTACH_ALL_CRH_CR                            :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs
 STR_ATTACH_SLEEPER_MU                            :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs
 STR_ATTACH_CR200J                                :{BLACK}Matching MUs: {GOLD}CR200J Series
-STR_NZJ1_XINSHUGUANG_CAN_ATTACH_WAGON            :{BLACK}Matching Wagons: {GOLD}ZE{BLACK}, equivalent to Double-Decker Hard Seat, Capacity: 136, Comfort: 200; {GOLD}ZY{BLACK}, equivalent to Double-Decker Soft Seat, Capacity: 108, Comfort: 240
-STR_NDJ3_CAN_ATTACH_WAGON                        :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC{BLACK}, Second Class Capacity: 114, Comfort: 200
-STR_DJJ1_CAN_ATTACH_WAGON                        :{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent to Soft Seat
-STR_DJJ2_CAN_ATTACH_WAGON                        :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC
-STR_DJF3_CAN_ATTACH_WAGON                        :{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent to Soft Seat
-STR_CR200J_CAN_ATTACH_WAGON                      :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, WE, WY, WG
-STR_CRH_CAN_ATTACH_WAGON                         :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC
-STR_CRH_SLEEPER_CAN_ATTACH_WAGON                 :{BLACK}Matching Wagons: {GOLD}ZE, WY, WG, ZEC
-STR_CRH_LSLEEPER_CAN_ATTACH_WAGON                :{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)
-STR_CRH6A2_CAN_ATTACH_WAGON                      :{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: 160), {GOLD}ZY
-STR_CRH6A3_CAN_ATTACH_WAGON                      :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: 160
-STR_CRH6F_CAN_ATTACH_WAGON                       :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places (Crowded), Comfort: 128
-STR_NC3_CAN_ATTACH_WAGON                         :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, Comfort: 185
-# Consist
-STR_NJ2_CONSIST                                  :{BLACK}Consist: {GOLD}2 to 4 sections
-STR_HXN3QZ_CONSIST                               :{BLACK}Consist: {GOLD}2 to 4 sections
-STR_DF11G_CONSIST                                :{BLACK}Consist: {GOLD}2 sections joint together (Normal), or one section at head, another section at back ("Splitting Pig", max speed 120 km/h, power 4133 hpM)
-STR_NC3_CONSIST                                  :{BLACK}Consist: {GOLD}2 to 16 cars; cabs are powered
-STR_NZJ1_XINSHUGUANG_CONSIST                     :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle
-STR_JINLUN_LOCOMOTIVE_CONSIST                    :{BLACK}Consist: {GOLD}One section at front, another section at back. Only can attach "{BLUE}JIN{WHITE}LUN{GOLD}" 25DT Series coaches.
-STR_NDJ3_CONSIST                                 :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle
-STR_DJJ1_CONSIST                                 :{BLACK}Consist: {GOLD}One section at front, with wagons attached; or one section at front, another section at back. At least 4 wagons
-STR_DJJ2_CONSIST                                 :{BLACK}Consist: {GOLD}One section at front, another section at back, MU Wagins in Middle
-STR_DJF3_CONSIST                                 :{BLACK}Consist: {GOLD}4 to 12 cars; with 9-car standard consist (M-T-M-M-T-M-M-T-M)
-STR_CRH5A_CONSIST                                :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car
-STR_CR400_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12
-STR_CR400_AB_CONSIST                             :{BLACK}Consist: {GOLD}4 to 24 cars; with 16-car standard consist 2*(T-M-T-M-M-T-M-T)
-STR_CR400_Z_CONSIST                              :{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12. {RED}Intelligent {YELLOW}EMUs {GOLD}have lower running costs
-STR_CR400_AB_Z_CONSIST                           :{BLACK}Consist: {GOLD}4 to 24 cars; with 16-car standard consist 2*(T-M-T-M-M-T-M-T). {RED}Intelligent {YELLOW}EMUs {GOLD}have lower running costs
-STR_CR200J_CONSIST                               :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, with wagons attached; or one section at front, another section at back. Will run as coupled when cars more than 12
-STR_CR200JL_CONSIST                              :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, another section at back.
-STR_CRH1A_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars. Will run as coupled when cars more than 12
-STR_CRH1B_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars
-STR_CRH1E_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars
-STR_CRH1AA_CONSIST                               :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars. Will run as coupled when cars more than 12
-STR_CRH2A_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12
-STR_CRH2B_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars
-STR_CRH2C_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12
-STR_CRH2E_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars
-STR_CRH2G_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12
-STR_CRH3A_CONSIST                                :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
-STR_CRH3C_CONSIST                                :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
-STR_CRH380A_CONSIST                              :{BLACK}Consist: {GOLD}At least 4 cars, with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12
-STR_CRH380AL_CONSIST                             :{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised
-STR_CRH380B_CONSIST                              :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
-STR_CRH380CL_CONSIST                             :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
-STR_CRH380D_CONSIST                              :{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist M-T-M-T-T-M-T-M. Will run as coupled when cars more than 12
-STR_CRH6A2_CONSIST                               :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
-STR_CRH6A3_CONSIST                               :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
-STR_CRH6AA_CONSIST                               :{BLACK}Consist: {GOLD}Fixed consist of 4 cars (Mc-Tp-Tp-Mc), multiple sections available
-STR_CRH6F_CONSIST                                :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
-STR_CR300_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12
-# Head Seat
-STR_DJF3_HEAD_SEAT                               :{BLACK}Head Seat: {GOLD}Soft Seat (RZ) {BLACK} as 1st-Class (ZY)
-STR_CRH1A_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH1B_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH1E_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
-STR_CRH1AA_HEAD_SEAT                             :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH2A_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
-STR_CRH2B_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
-STR_CRH2C_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
-STR_CRH2E_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
-STR_CRH2G_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH2ELS_HEAD_SEAT                            :{BLACK}Head Seat: {GOLD}1st-Class Sleeprt (WY)
-STR_CRH3A_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH3C_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
-STR_CRH5A_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH380A_HEAD_SEAT                            :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH380B_HEAD_SEAT                            :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH380CL_HEAD_SEAT                           :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH380D_HEAD_SEAT                            :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CR400_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CR400_Z_HEAD_SEAT                            :{BLACK}Head Seat: {GOLD}Luxury-Business-Class (SW)
-STR_CRH6A2_HEAD_SEAT                             :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH6A3_HEAD_SEAT                             :{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places, Comfort: 160
-STR_CRH6F_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places (crowded), Comfort: 140
-STR_CR300_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_HEADSEAT_ZW                                  :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
-STR_HEADSEAT_ZY                                  :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_HEADSEAT_ZS                                  :{BLACK}Head Seat: {GOLD}Business-Class (ZS)
-STR_HEADSEAT_SW                                  :{BLACK}Head Seat: {GOLD}Luxury-Business-Class (SW)
-# Misc
-STR_ELECTRICITY_SUPPLY_YES                       :{BLACK}Electricity Supply for cars: {GOLD}YES
-STR_ELECTRICITY_SUPPLY_NO                        :{BLACK}Electricity Supply for cars: {RED}NO
-STR_TOO_SHORT                                    :TOO SHORT!
-STR_ONLY_TWO_SECTIONS                            :This locomotive must be in a consist of two sections to run.
-STR_MUST_BE_4_8_12_16_CARS                       :This MU must be in a consist of 4, 8, 12 or 16 cars to run.
-STR_MUST_BE_5_TO_17_CARS                         :This MU must be in a consist of 5 to 17 cars to run.
-STR_MUST_BE_2_TO_16_CARS                         :This MU must be in a consist of 2 to 16 cars to run.
-STR_MUST_BE_4_TO_24_CARS                         :This MU must be in a consist of 4 to 24 cars to run.
-STR_MUST_BE_4_TO_12_CARS                         :This MU must be in a consist of 4 to 12 cars to run.
-STR_MUST_BE_8_TO_24_CARS                         :This MU must be in a consist of 8 to 24 cars to run.

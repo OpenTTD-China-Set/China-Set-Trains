@@ -51,7 +51,7 @@ item (FEAT_TRAINS, zecmuw) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_CAFE_EFFECT), string(STR_ATTACH_ALL_CRH_CR), string(STR_COMFORT_240_CAFE));
+        additional_text:                string(STR_DESC_3, string(STR_CAFE_EFFECT), string(STR_ATTACH_ALL_CRH_CR), string(STR_COMFORT_HIGH, 300));
         can_attach_wagon:               muhead;
 
         // Graphics

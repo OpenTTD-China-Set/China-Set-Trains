@@ -50,7 +50,7 @@ item (FEAT_TRAINS, wemuw) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_2, string(STR_ATTACH_CR200J), string(STR_COMFORT_480));
+        additional_text:                string(STR_DESC_2, string(STR_ATTACH_CR200J), string(STR_COMFORT_HIGH, 480));
         can_attach_wagon:               muhead;
 
         // Graphics

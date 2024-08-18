@@ -194,7 +194,7 @@ item (FEAT_TRAINS, crh6f) {
         ai_special_flag:                AI_FLAG_PASSENGER;
         cargo_capacity:                 1;
         loading_speed:                  18 << param_loading_speed;
-        cargo_age_period:               120 << param_cargo_decay;
+        cargo_age_period:               128 << param_cargo_decay;
 
         // Stats
         speed:                          160 km/h;
@@ -209,7 +209,7 @@ item (FEAT_TRAINS, crh6f) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_CRH6F_CAN_ATTACH_WAGON), string(STR_CRH6F_NICKNAME), string(STR_CRH6F_LIVERY_AVAILABILITY), string(STR_RELIABILITY_6), string(STR_CRH6F_CONSIST), string(STR_CRH6F_HEAD_SEAT));
+        additional_text:                string(STR_DESC_5, string(STR_CRH6F_CAN_ATTACH_WAGON), string(STR_CRH6F_NICKNAME), string(STR_CRH6F_LIVERY_AVAILABILITY), string(STR_RELDEC_VERY_LOW, 6), string(STR_CRH6F_CONSIST), string(STR_CRH6F_HEAD_SEAT));
         can_attach_wagon:               onlyze;
         start_stop:                     mu4car;
         cargo_subtype_text:             switch_crh6f_cargo_subtype;
@@ -226,7 +226,7 @@ item (FEAT_TRAINS, crh6f) {
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.2*255);
         cargo_capacity:                 switch_crh6f_head_capacity;
-        cargo_age_period:               140 << param_cargo_decay;
+        cargo_age_period:               128 << param_cargo_decay;
         cost_factor:                    65;
         running_cost_factor:            50 * runningcostfactor() + 20;
         purchase_running_cost_factor:   220;
@@ -244,7 +244,7 @@ item (FEAT_TRAINS, crh6f) {
         length:                         switch_length_2_8_2;
         weight:                         48;
         can_attach_wagon:               muhead;
-        cargo_age_period:               120 << param_cargo_decay;
+        cargo_age_period:               128 << param_cargo_decay;
         bitmask_vehicle_info:           switch_crh_wagon_bitmask;
         articulated_part:               switch_crh_wagon_articulated_part;
         cost_factor:                    switch_crh6f_wagon_cost;

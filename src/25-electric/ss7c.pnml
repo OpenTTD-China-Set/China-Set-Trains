@@ -83,7 +83,7 @@ item (FEAT_TRAINS, ss7c) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_SS7C), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_SS7C_LIVERY_AVAILABILITY), string(STR_SS7C_NICKNAME), string(STR_RELIABILITY_10));
+        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_SS7C), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_SS7C_LIVERY_AVAILABILITY), string(STR_SS7C_NICKNAME), string(STR_RELDEC_LOW, 10));
         cargo_subtype_text:             switch_ss7c_cargo_subtype;
         can_attach_wagon:               locowagon;
         // Graphics
