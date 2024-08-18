@@ -4,7 +4,7 @@ import re, csv
 
 strs = []
 
-with open('docs/str.csv', mode='r', newline='', encoding='utf-8') as f:
+with open('docs/str.csv', mode='r', newline='', encoding='utf-8-sig') as f:
     reader = csv.reader(f)
     for row in reader:
         strs.append(row)
