@@ -521,37 +521,37 @@ STR_NX70A_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Black Livery Onl
 STR_DF_NICKNAME,{BLACK}Nickname: {GOLD}Old DongFeng,{BLACK}昵称：{GOLD}老东风
 STR_DF4_NICKNAME,"{BLACK}Nickname: {GOLD}""Watermelon"" for {GREEN}Green {GOLD}Livery, ""Orange"" for {ORANGE}Orange {GOLD}Livery",{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
 STR_DF4B_NICKNAME,"{BLACK}Nickname: {GOLD}""Watermelon"" for {GREEN}Green {GOLD}Livery, ""Orange"" for {ORANGE}Orange {GOLD}Livery",{BLACK}改进后的内燃机使得该机车更加耐用。昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
-STR_DF4C_NICKNAME,{BLACK}Nickname: {GOLD}Blue Cat,{BLACK}昵称： {GOLD}蓝猫
-STR_DF4D_NICKNAME,{BLACK}Nickname: {GOLD}Tiger,{BLACK}昵称： {GOLD}老虎
-STR_DF4D7000_NICKNAME,{BLACK}Nickname: {GOLD}Liuzhou Tiger,{BLACK}昵称： {GOLD}柳州虎
-STR_DF7G_NICKNAME,{BLACK}Nickname: {GOLD}Begger,{BLACK}昵称： {GOLD}乞丐
-STR_DF8B_NICKNAME,{BLACK}Nickname: {GOLD}Barbie,{BLACK}昵称： {GOLD}芭比
-STR_DF11_NICKNAME,{BLACK}Nickname: {GOLD}Lion,{BLACK}昵称： {GOLD}狮子
-STR_DF11G_NICKNAME,{BLACK}Nickname: {GOLD}Pig,{BLACK}昵称： {GOLD}猪
-STR_HXN5_NICKNAME,{BLACK}Nickname: {GOLD}Grasshopper,{BLACK}昵称： {GOLD}蚱蜢
-STR_HXN5B_NICKNAME,{BLACK}Nickname: {GOLD}Scrambled egg with tomato,{BLACK}昵称： {GOLD}番茄炒蛋
-STR_SS1_NICKNAME,{BLACK}Nickname: {GOLD}Peony,{BLACK}昵称： {BLUE}芍药
-STR_SS3_NICKNAME,"{BLACK}Nickname: San - Three, Ge - Elder Brother, Ye - Grandfather or a general and respectful pronoun to old men","{BLACK}昵称： {GOLD}三哥 (前期), 三爷 (老化后)"
-STR_SS3B_NICKNAME,{BLACK}Nickname: {BLUE}Blue Bird,{BLACK}昵称： {GOLD}蓝鸟，大蓝鸟
-STR_SS4_NICKNAME,{BLACK}Nickname: {BLUE}Baoji Blue,{BLACK}昵称： {BLUE}宝鸡蓝
-STR_SS4G_NICKNAME,{BLACK}Nickname: Si - Four,{BLACK}昵称： {GOLD}四哥
-STR_SS5_NICKNAME,{BLACK}Nickname: {GOLD}Xiaowu (Little Five),{BLACK}昵称：{GOLD}试验型机车，产量仅2台。
-STR_SS6_NICKNAME,{BLACK}Nickname: {GOLD}Xiaoliu (Little Six),{BLACK}昵称： {GOLD}小六
+STR_DF4C_NICKNAME,{BLACK}Nickname: {GOLD}Blue Cat,{BLACK}昵称：{GOLD}蓝猫
+STR_DF4D_NICKNAME,{BLACK}Nickname: {GOLD}Tiger,{BLACK}昵称：{GOLD}老虎
+STR_DF4D7000_NICKNAME,{BLACK}Nickname: {GOLD}Liuzhou Tiger,{BLACK}昵称：{GOLD}柳州虎
+STR_DF7G_NICKNAME,{BLACK}Nickname: {GOLD}Begger,{BLACK}昵称：{GOLD}乞丐
+STR_DF8B_NICKNAME,{BLACK}Nickname: {GOLD}Barbie,{BLACK}昵称：{GOLD}芭比
+STR_DF11_NICKNAME,{BLACK}Nickname: {GOLD}Lion,{BLACK}昵称：{GOLD}狮子
+STR_DF11G_NICKNAME,{BLACK}Nickname: {GOLD}Pig,{BLACK}昵称：{GOLD}猪
+STR_HXN5_NICKNAME,{BLACK}Nickname: {GOLD}Grasshopper,{BLACK}昵称：{GOLD}蚱蜢
+STR_HXN5B_NICKNAME,{BLACK}Nickname: {GOLD}Scrambled egg with tomato,{BLACK}昵称：{GOLD}番茄炒蛋
+STR_SS1_NICKNAME,{BLACK}Nickname: {GOLD}Peony,{BLACK}昵称：{BLUE}芍药
+STR_SS3_NICKNAME,"{BLACK}Nickname: San'ge (new), Sanye (Old) (San - Three, Ge - Elder Brother, Ye - Grandfather or a general and respectful pronoun to old men)","{BLACK}昵称：{GOLD}三哥 (前期), 三爷 (老化后)"
+STR_SS3B_NICKNAME,{BLACK}Nickname: {BLUE}Blue Bird,{BLACK}昵称：{GOLD}蓝鸟，大蓝鸟
+STR_SS4_NICKNAME,{BLACK}Nickname: {BLUE}Baoji Blue,{BLACK}昵称：{BLUE}宝鸡蓝
+STR_SS4G_NICKNAME,{BLACK}Nickname: Sige (Si - Four),{BLACK}昵称： {GOLD}四哥
+STR_SS5_NICKNAME,{BLACK}Nickname: {GOLD}Xiaowu (Little Five),{GOLD}试验型机车，产量仅2台。{BLACK}昵称：{GOLD}小五
+STR_SS6_NICKNAME,{BLACK}Nickname: {GOLD}Xiaoliu (Little Six),{BLACK}昵称：{GOLD}小六
 STR_SS6B_NICKNAME,"{BLACK}Nickname: {GOLD}Yan Xiaoliu (a character from Chinese soap opera ""Wulin Waizhuan"")",{BLACK}昵称： {GOLD}燕小六
-STR_SS7_NICKNAME,{BLACK}Nickname: {GOLD}Roast Chicken,{BLACK}昵称： {GOLD}为山区小转弯半径线路设计的通用电力机车，最大的特点是使用了B0-B0-B0轴式转向架布局。{BLACK}昵称{GOLD}烧鸡
-STR_SS7B_NICKNAME,{BLACK}Nickname: {GOLD}Cat,{BLACK}昵称： {GOLD}试制型25t轴重干线重载货运电力机车，产量仅2台，其中0001号机车于2005年因山体滑坡事故报废。{BLACK}昵称{GOLD}大脸猫
-STR_SS7C_NICKNAME,{BLACK}Nickname: {GOLD}Cat,{BLACK}昵称： {GOLD}客货运两用干线电力机车，昵称大脸猫(原版涂装)、{YELLOW}香蕉(黄色涂装)
-STR_SS7D_NICKNAME,{BLACK}Nickname: {GOLD}Transformer,{BLACK}昵称：{BLACK}昵称：{GOLD}金刚
-STR_SS7E_NICKNAME,{BLACK}Nickname: {GOLD}Beauty,{BLACK}昵称： {GOLD}准高速干线电力机车，{BLACK}昵称{GOLD}美女
+STR_SS7_NICKNAME,{BLACK}Nickname: {GOLD}Roast Chicken,{GOLD}为山区小转弯半径线路设计的通用电力机车，最大的特点是使用了B0-B0-B0轴式转向架布局。{BLACK}昵称{GOLD}烧鸡
+STR_SS7B_NICKNAME,{BLACK}Nickname: {GOLD}Cat,{GOLD}试制型25t轴重干线重载货运电力机车，产量仅2台，其中0001号机车于2005年因山体滑坡事故报废。{BLACK}昵称{GOLD}大脸猫
+STR_SS7C_NICKNAME,{BLACK}Nickname: {GOLD}Cat,{GOLD}客货运两用干线电力机车，{BLACK}昵称{GOLD}大脸猫(原版涂装)、{YELLOW}香蕉(黄色涂装)
+STR_SS7D_NICKNAME,{BLACK}Nickname: {GOLD}Transformer,{BLACK}昵称：{GOLD}金刚
+STR_SS7E_NICKNAME,{BLACK}Nickname: {GOLD}Beauty,{GOLD}准高速干线电力机车，{BLACK}昵称{GOLD}美女
 STR_SS8_NICKNAME,{BLACK}Nickname: {GOLD}Broom,{BLACK}昵称： {GOLD}扫把
 STR_SS9_NICKNAME,{BLACK}Nickname: {GOLD}Frog,{BLACK}昵称：{GOLD}青蛙
 STR_SS9G_NICKNAME,{BLACK}Nickname: {GOLD}Shochu,{BLACK}昵称：{GOLD}烧酒
-STR_HXD1_NICKNAME,{BLACK}Nickname: {GOLD}Smurf,{BLACK}昵称： {GOLD}蓝精灵
-STR_HXD1B_NICKNAME,{BLACK}Nickname: {GOLD}River Crab,{BLACK}昵称： {GOLD}河蟹
-STR_HXD1D_NICKNAME,{BLACK}Nickname: {GOLD}Jujube,{BLACK}昵称： {GOLD}红枣
-STR_HXD2_NICKNAME,{BLACK}Nickname: {GOLD}Electric Hippo,{BLACK}昵称： {GOLD}电河马
-STR_HXD3C_NICKNAME,{BLACK}Nickname: {GOLD}Electric Baboon,{BLACK}昵称： {GOLD}电狒狒
-STR_HXD3D_NICKNAME,{BLACK}Nickname: {GOLD}Tomato,{BLACK}昵称： {GOLD}番茄
+STR_HXD1_NICKNAME,{BLACK}Nickname: {GOLD}Smurf,{BLACK}昵称：{GOLD}蓝精灵
+STR_HXD1B_NICKNAME,{BLACK}Nickname: {GOLD}River Crab,{BLACK}昵称：{GOLD}河蟹
+STR_HXD1D_NICKNAME,{BLACK}Nickname: {GOLD}Jujube,{BLACK}昵称：{GOLD}红枣
+STR_HXD2_NICKNAME,{BLACK}Nickname: {GOLD}Electric Hippo,{BLACK}昵称：{GOLD}电河马
+STR_HXD3C_NICKNAME,{BLACK}Nickname: {GOLD}Electric Baboon,{BLACK}昵称：{GOLD}电狒狒
+STR_HXD3D_NICKNAME,{BLACK}Nickname: {GOLD}Tomato,{BLACK}昵称：{GOLD}番茄
 STR_NDJ3_NICKNAME,{BLACK}Nickname: {WHITE}White Pig,{BLACK}昵称：{WHITE}大白猪
 STR_CR200J_NICKNAME,"{BLACK}Nickname: {GREEN}""Hulk"" {GOLD}(Official), {GREEN}""Trash Bin"" {GOLD}(Folk)",{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方)，{GREEN}“垃圾桶”{GOLD}(民间)
 STR_CR200JC_NICKNAME,"{BLACK}Nickname: {GREEN}""AD Bin"" {GOLD}(Folk)",{BLACK}昵称：{RED}“A{WHITE}D{GREEN}桶”{GOLD}(民间)

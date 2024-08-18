@@ -1,6 +1,6 @@
 //Begin RZT25Z
 switch (FEAT_TRAINS, SELF, switch_rzt25z_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_S25Z_SERIES);
+    0: return string(STR_25Z_SERIES);
     return CB_RESULT_NO_TEXT;
 }
 

@@ -532,10 +532,10 @@ STR_DF11G_NICKNAME                               :{BLACK}Nickname: {GOLD}Pig
 STR_HXN5_NICKNAME                                :{BLACK}Nickname: {GOLD}Grasshopper
 STR_HXN5B_NICKNAME                               :{BLACK}Nickname: {GOLD}Scrambled egg with tomato
 STR_SS1_NICKNAME                                 :{BLACK}Nickname: {GOLD}Peony
-STR_SS3_NICKNAME                                 :{BLACK}Nickname: San - Three, Ge - Elder Brother, Ye - Grandfather or a general and respectful pronoun to old men
+STR_SS3_NICKNAME                                 :{BLACK}Nickname: San'ge (new), Sanye (Old) (San - Three, Ge - Elder Brother, Ye - Grandfather or a general and respectful pronoun to old men)
 STR_SS3B_NICKNAME                                :{BLACK}Nickname: {BLUE}Blue Bird
 STR_SS4_NICKNAME                                 :{BLACK}Nickname: {BLUE}Baoji Blue
-STR_SS4G_NICKNAME                                :{BLACK}Nickname: Si - Four
+STR_SS4G_NICKNAME                                :{BLACK}Nickname: Sige (Si - Four)
 STR_SS5_NICKNAME                                 :{BLACK}Nickname: {GOLD}Xiaowu (Little Five)
 STR_SS6_NICKNAME                                 :{BLACK}Nickname: {GOLD}Xiaoliu (Little Six)
 STR_SS6B_NICKNAME                                :{BLACK}Nickname: {GOLD}Yan Xiaoliu (a character from Chinese soap opera "Wulin Waizhuan")
