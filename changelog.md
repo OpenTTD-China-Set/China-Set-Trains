@@ -5,6 +5,11 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.1.169 (19/8/2024)
+--------------------
+Fix #50: P80 weight
+Fix #51: P70 sprite errors
+
 0.3.1.168 (19/8/2024)
 --------------------
 Add: HXD2, HXD2-1000, CHA1C, SS4B, SS4C, DJJ2, DJF3

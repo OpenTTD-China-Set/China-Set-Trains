@@ -35,21 +35,21 @@ spriteset (spriteset_p70_brown, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 }
  */
 random_switch (FEAT_TRAINS, SELF, random_p70_colour_early) {
-    15: spriteset_p50_black;
-    10: spriteset_p50_brown;
-    1: spriteset_p50_rustyred;
+    15: spriteset_p70_black;
+    10: spriteset_p70_brown;
+    1: spriteset_p70_rustyred;
     5: spriteset_p70_blue;
 }
 random_switch (FEAT_TRAINS, SELF, random_p70_colour_middium) {
-    10: spriteset_p50_black;
+    10: spriteset_p70_black;
     3: spriteset_p70_blue;
-    10: spriteset_p50_brown;
-    5: spriteset_p50_rustyred;
+    10: spriteset_p70_brown;
+    5: spriteset_p70_rustyred;
 }
 random_switch (FEAT_TRAINS, SELF, random_p70_colour_late) {
-    10: spriteset_p50_black;
-    10: spriteset_p50_brown;
-    10: spriteset_p50_rustyred;
+    10: spriteset_p70_black;
+    10: spriteset_p70_brown;
+    10: spriteset_p70_rustyred;
     1: spriteset_p70_blue;
 }
 switch (FEAT_TRAINS, SELF, random_p70_colour, current_year - 2002) {
