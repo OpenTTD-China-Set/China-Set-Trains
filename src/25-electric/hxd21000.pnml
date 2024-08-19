@@ -80,7 +80,7 @@ item (FEAT_TRAINS, hxd21000) {
         articulated_part:               switch_hxd21000_articulated_part;
 
         // Stats
-        length:                         switch_length_2_4_2;
+        length:                         switch_length_2_5_2;
         cargo_capacity:                 0;
         cost_factor:                    146;
         running_cost_factor:            118 * runningcostfactor();

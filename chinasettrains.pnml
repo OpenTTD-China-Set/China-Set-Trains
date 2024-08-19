@@ -211,9 +211,11 @@
 #include "src/25-electric/hxd11000.pnml"
 #include "src/25-electric/hxd1b.pnml"
 #include "src/25-electric/hxd1d.pnml"
+#include "src/25-electric/fxd1b.pnml"
+#include "src/25-electric/fxd1b1000.pnml"
 #include "src/25-electric/hxd2.pnml"
 #include "src/25-electric/hxd21000.pnml"
-#include "src/25-electric/hxd1f.pnml"
+#include "src/25-electric/hxd3.pnml"
 #include "src/25-electric/hxd3c.pnml"
 #include "src/25-electric/hxd3d.pnml"
 
