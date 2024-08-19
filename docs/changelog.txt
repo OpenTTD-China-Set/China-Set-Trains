@@ -5,6 +5,12 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.2.169 (20/8/2024)
+--------------------
+Add: HXD3, FXD1-1000
+Renewal the sprites of DF11Z, HXD2, HXD2-1000
+
+
 0.3.1.168 (19/8/2024)
 --------------------
 Add: HXD2, HXD2-1000, CHA1C, SS4B, SS4C, DJJ2, DJF3
