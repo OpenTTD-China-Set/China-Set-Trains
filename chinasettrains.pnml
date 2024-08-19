@@ -215,8 +215,11 @@
 #include "src/25-electric/fxd1b1000.pnml"
 #include "src/25-electric/hxd2.pnml"
 #include "src/25-electric/hxd21000.pnml"
+<<<<<<< HEAD
 #include "src/25-electric/hxd2b.pnml"
 #include "src/25-electric/fxd2b1000.pnml"
+=======
+>>>>>>> 9ecce40 (add fxd1b-1000,hxd3)
 #include "src/25-electric/hxd3.pnml"
 #include "src/25-electric/hxd3c.pnml"
 #include "src/25-electric/hxd3d.pnml"

@@ -1,6 +1,10 @@
 // Begin FXD1B
 switch (FEAT_TRAINS, SELF, switch_fxd1b_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+<<<<<<< HEAD
     0: return string(STR_FXD1_SERIES);
+=======
+    0: return string(STR_HXD1_SERIES);
+>>>>>>> 9ecce40 (add fxd1b-1000,hxd3)
     return CB_RESULT_NO_TEXT;
 }
 // Graphics

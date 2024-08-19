@@ -63,7 +63,11 @@ sort (FEAT_TRAINS, [
     hxd1d,
     hxd2,
     hxd21000,
+<<<<<<< HEAD
     hxd2b,
+=======
+/*     hxd2b, */
+>>>>>>> 9ecce40 (add fxd1b-1000,hxd3)
 /*     hxd2c, */
 /*     hxd2d, */
     hxd3,
@@ -73,7 +77,10 @@ sort (FEAT_TRAINS, [
     hxd1f,
     fxd1b1000,
 /*     fxd2b, */
+<<<<<<< HEAD
     fxd2b1000,
+=======
+>>>>>>> 9ecce40 (add fxd1b-1000,hxd3)
     cha1c,
     nc3,
     nzj1_xinshuguang,
