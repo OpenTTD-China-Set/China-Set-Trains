@@ -63,7 +63,7 @@ item (FEAT_TRAINS, ss5) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SS5), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_SS5_NICKNAME), string(STR_RELIABILITY_16));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SS5), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_SS5_NICKNAME), string(STR_RELDEC_MEDIUM, 16));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_ss5_graphics;

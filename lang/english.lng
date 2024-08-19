@@ -1,831 +1,795 @@
-﻿##grflangid 0x01
-
-STR_GRF_NAME                            :China Set: Trains {VERSION_STRING}
-STR_GRF_DESC                            :The Train sector of the China Set of OpenTTD.
-STR_GRF_URL                             :https://www.tt-forums.net/viewtopic.php?t=91092
-STR_GRF_DESC_EXTRA                      :Trains: Locomotives, MUs, Coaches and Wagons in China Mainland. More contents in the future.
-STR_GRF_DESC_README                     :See readme for details.
-
-STR_LEAPING_LIU_NEVER_DIES              :{BLUE}Leaping Liu Never Dies.
-
-STR_PARAM_LOADING_SPEED                 :Loading Speed
-STR_PARAM_LOADING_SPEED_DESC            :Adjust vehicle loading speed. Default is 100%.
-
-STR_PARAM_PURCHASE_COST                 :Purchase costs
-STR_PARAM_PURCHASE_COST_DESC            :Adjust vehicle purchase costs. Default is 25%.
-STR_PARAM_RUNNING_COST                  :Running costs
-STR_PARAM_RUNNING_COST_DESC             :Adjust vehicle running costs. Default is 25%.
-
-STR_PARAM_DIVIDE_16                     :6.25%
-STR_PARAM_DIVIDE_8                      :12.5%
-STR_PARAM_DIVIDE_4                      :25%
-STR_PARAM_DIVIDE_2                      :50%
-STR_PARAM_NORMAL                        :100%
-STR_PARAM_TIMES_2                       :200%
-STR_PARAM_TIMES_4                       :400%
-STR_PARAM_TIMES_8                       :800%
-STR_PARAM_TIMES_16                      :1600%
-
-STR_PARAM_CARGO_DECAY                   :Cargo Age Period
-STR_PARAM_CARGO_DECAY_DESC              :Adjust cargo age period of coaches and wagons. "Long" is "Standard" doubled, while "Very Long" is "Long" doubled. Even in "Standard" mode, cargo age period varies.
-STR_PARAM_STANDARD                      :Standard
-STR_PARAM_LONG                          :Long
-STR_PARAM_VERY_LONG                     :Very Long
-
-STR_PARAM_GAOZULV                       :25m Passenger Coaches build after 2014 are {DKGREEN}"Gaozu Geeen"{BLACK} in defeaut
-STR_PARAM_GAOZULV_DESC                  :Choose weather to print{DKGREEN} Canarium Green (also called "Gaozu Geeen"){BLACK} to 25m Passenger Coaches build after 2014 in defeaut
-
-STR_USED_WITH_DYNAMIC_ENGINES           :This GRF needs dynamic_engines to be turned on. Open console, and type "setting dynamic_engines 1".
-
-STR_NAME_YZ22                           :YZ22 (Passenger Coach)
-STR_NAME_RZ22                           :RZ22 (Passenger Coach)
-STR_NAME_YW22                           :YW22 (Passenger Coach)
-STR_NAME_YW22EARLY                      :YW22 (Passenger Coach) (Early Version)
-STR_NAME_YW221966                       :YW22 (Passenger Coach) (Late Version)
-STR_NAME_RW22                           :RW22 (Passenger Coach)
-STR_NAME_YZ22AIRCON                     :YZ22 (Passenger Coach) (Air-conditioned)
-STR_NAME_RZ22AIRCON                     :RZ22 (Passenger Coach) (Air-conditioned)
-STR_NAME_YW22AIRCON                     :YW22 (Passenger Coach) (Air-conditioned)
-STR_NAME_RW22AIRCON                     :RW22 (Passenger Coach) (Air-conditioned)
-STR_NAME_CA23                           :CA23 (Passenger Coach)
-STR_NAME_CA23AIRCON                     :CA23 (Passenger Coach) (Air-conditioned)
-STR_NAME_YZ22B                          :YZ22B (Passenger Coach)
-STR_NAME_YW22B                          :YW22B (Passenger Coach)
-STR_NAME_RW22B                          :RW22B (Passenger Coach)
-STR_NAME_YZ25ML                         :YZ25 (Mainline) (Passenger Coach)
-STR_NAME_RZ25ML                         :RZ25 (Mainline) (Passenger Coach)
-STR_NAME_YW25ML                         :YW25 (Mainline) (Passenger Coach)
-STR_NAME_RW25ML                         :RW25 (Mainline) (Passenger Coach)
-STR_NAME_CA25ML                         :CA25 (Mainline) (Restaurant Car)
-STR_NAME_YZ25B                          :YZ25B (Passenger Coach)
-STR_NAME_RZ25B                          :RZ25B (Passenger Coach)
-STR_NAME_YW25B                          :YW25B (Passenger Coach)
-STR_NAME_RW25B                          :RW25B (Passenger Coach)
-STR_NAME_SYZ25BLD                       :SYZ25B (Passenger Coach) (Low-Door)
-STR_NAME_SRZ25BLD                       :SRZ25B (Passenger Coach) (Low-Door)
-STR_NAME_SYZ25BHD                       :SYZ25B (Passenger Coach) (High-Door)
-STR_NAME_SRZ25BHD                       :SRZ25B (Passenger Coach) (High-Door)
-STR_NAME_SYW25BHD                       :SYW25B (Passenger Coach) (High-Door)
-STR_NAME_SRW25BHD                       :SRW25B (Passenger Coach) (High-Door)
-STR_NAME_YZ25G                          :YZ25G (Passenger Coach)
-STR_NAME_RZ25G                          :RZ25G (Passenger Coach)
-STR_NAME_YW25G                          :YW25G (Passenger Coach)
-STR_NAME_RW25G                          :RW25G (Passenger Coach)
-STR_NAME_CA25G                          :CA25G (Restaurant Car)
-STR_NAME_RW19K                          :RW19K (Passenger Coach)
-STR_NAME_YZ25K                          :YZ25K (Passenger Coach)
-STR_NAME_RZ25K                          :RZ25K (Passenger Coach)
-STR_NAME_YW25K                          :YW25K (Passenger Coach)
-STR_NAME_RW25K                          :RW25K (Passenger Coach)
-STR_NAME_SYZ25KLD                       :SYZ25K (Passenger Coach) (Low-Door)
-STR_NAME_SRZ25KLD                       :SRZ25K (Passenger Coach) (Low-Door)
-STR_NAME_SYZ25KHD                       :SYZ25K (Passenger Coach) (High-Door)
-STR_NAME_SRZ25KHD                       :SRZ25K (Passenger Coach) (High-Door)
-STR_NAME_SYW25KHD                       :SYW25K (Passenger Coach) (High-Door)
-STR_NAME_SRW25KHD                       :SRW25K (Passenger Coach) (High-Door)
-STR_NAME_SCA25KHD                       :SCA25K (Restaurant Car) (High-Door)
-STR_NAME_CA25K                          :CA25K (Restaurant Car)
-STR_NAME_RW19T                          :RW19T (Passenger Coach)
-STR_NAME_YZ25T                          :YZ25T (Passenger Coach)
-STR_NAME_RZ25T                          :RZ25T (Passenger Coach)
-STR_NAME_YW25T                          :YW25T (Passenger Coach)
-STR_NAME_RW25T                          :RW25T (Passenger Coach)
-STR_NAME_CA25T                          :CA25T (Restaurant Car)
-STR_NAME_YZ31                           :YZ31 (Passenger Coach)
-STR_NAME_XL22                           :XL22 (Luggage Car)
-STR_NAME_XL25ML                         :XL25 (Mainline) (Luggage Car)
-STR_NAME_XL25B                          :XL25B (Luggage Car)
-STR_NAME_XL25G                          :XL25G (Luggage Car)
-STR_NAME_XL25K                          :XL25K (Luggage Car)
-STR_NAME_XL25T                          :XL25T (Luggage Car)
-STR_NAME_XL25T_SSPE                     :XL25T-SSPE (Luggage Car)
-STR_NAME_UZ22                           :UZ22 (Luggage Car)
-STR_NAME_UZ25T                          :UZ25T (Luggage Car)
-STR_NAME_TZ                             :TZ (Air Conditioner Generator Car)
-STR_NAME_TZ2                            :TZ2 (Air Conditioner Generator Car)
-STR_NAME_KD25G                          :KD25G (Air Conditioner Generator Car)
-STR_NAME_KD25K                          :KD25K (Air Conditioner Generator Car)
-STR_NAME_KD25Z                          :KD25Z (Air Conditioner Generator Car)
-STR_NAME_KD25T                          :KD25T (Air Conditioner Generator Car)
-STR_NAME_RZ125Z                         :RZ125Z (Passenger Coach)
-STR_NAME_RZ225Z                         :RZ225Z (Passenger Coach)
-STR_NAME_RZT25Z                         :RZT25Z (Passenger Coach)
-STR_NAME_CA25Z                          :CA25Z (Restaurant Car)
-STR_NAME_RZXL25Z                        :RZXL25Z (Luggage Car)
-STR_NAME_SRZ125Z                        :SRZ125Z (Passenger Coach)
-STR_NAME_SRZ225Z                        :SRZ225Z (Passenger Coach)
-STR_NAME_SCA25Z                         :SCA25Z (Restaurant Car)
-STR_NAME_SRZXL25Z                       :SRZXL25Z (Luggage Car)
-STR_NAME_SYW25                          :SYW25 (Passenger Coach)
-STR_NAME_SRW25                          :SRW25 (Passenger Coach)
-STR_NAME_YZ25DT_JINLUN                  :YZ25DT (JINLUN DMU) (Passenger Coach)
-STR_NAME_YW25DT_JINLUN                  :YW25DT (JINLUN DMU) (Passenger Coach)
-STR_NAME_RW25DT_JINLUN                  :RW25DT (JINLUN DMU) (Passenger Coach)
-STR_NAME_SYZ25DT_JINLUN                 :SYZ25DT (JINLUN DMU) (Passenger Coach)
-STR_NAME_SRZ25DT_JINLUN                 :SRZ25DT (JINLUN DMU) (Passenger Coach)
-
-STR_NAME_C62                            :C62 (Gondola)
-STR_NAME_C64                            :C64 (Gondola)
-STR_NAME_C70                            :C70 (Gondola)
-STR_NAME_P50                            :P50 (Boxcar)
-STR_NAME_P60                            :P60 (Boxcar)
-STR_NAME_P61                            :P61 (Boxcar)
-STR_NAME_P62                            :P62 (Boxcar)
-STR_NAME_P63                            :P63 (Boxcar)
-STR_NAME_P65                            :P65 (Boxcar)
-STR_NAME_P70                            :P70 (Boxcar)
-STR_NAME_P80                            :P80 (Boxcar)
-STR_NAME_PB                             :PB (Boxcar)
-STR_NAME_B6                             :B6 (Refrigerator Wagon)
-STR_NAME_B22                            :B22 (Refrigerator Wagon)
-STR_NAME_G17                            :G17 (Tanker)
-STR_NAME_G50                            :G50 (Tanker)
-STR_NAME_G60                            :G60 (Tanker)
-STR_NAME_GN70                           :GN70 (Tanker)
-STR_NAME_GN80                           :GN80 (Tanker)
-STR_NAME_N5                             :N5 (Flatcar)
-STR_NAME_N60                            :N60 (Flatcar)
-STR_NAME_NX17                           :NX17 (Flatcar)
-STR_NAME_NX70A                          :NX70A (Flatcar)
-STR_NAME_JSQ5                           :JSQ5 (Vehicle Transporter)
-STR_NAME_JSQ6                           :JSQ6 (Vehicle Transporter)
-STR_NAME_L70                            :L70 (Hopper)
-STR_NAME_J5                             :J5 (Livestock Wagon)
-
-STR_NAME_SY                             :SY (Steam)
-
-STR_NAME_DF                             :DF (Diesel)
-STR_NAME_DF4K                           :DF4 (Diesel) (Passenger Type)
-STR_NAME_DF4H                           :DF4 (Diesel) (Freight Type)
-STR_NAME_DF4BK                          :DF4B (Diesel) (Passenger Type)
-STR_NAME_DF4BH                          :DF4B (Diesel) (Freight Type)
-STR_NAME_DF4C                           :DF4C (Diesel)
-STR_NAME_DF4D0000                       :DF4D-0000 (Diesel)
-STR_NAME_DF4DF                          :DF4DF (Diesel)
-STR_NAME_DF4D3000                       :DF4D-3000 (Diesel)
-STR_NAME_DF4D4000                       :DF4D-4000 (Diesel)
-STR_NAME_DF4D7000                       :DF4D-7000 (Diesel)
-STR_NAME_DF4E                           :DF4E (Diesel)
-STR_NAME_DF5KZ                          :DF5 (Diesel Shunter)
-STR_NAME_DF5                            :DF5-1000 (Diesel Shunter)
-STR_NAME_DF7G                           :DF7G (Diesel Shunter)
-STR_NAME_DF7G5000                       :DF7G-5000 (Diesel Shunter)
-STR_NAME_DF7G8000                       :DF7G-8000 (Diesel Shunter)
-STR_NAME_DFH7                           :DFH7 (Diesel)
-STR_NAME_DF8B                           :DF8B (Diesel)
-STR_NAME_DF11                           :DF11 (Diesel)
-STR_NAME_DF11G                          :DF11G (Diesel)
-STR_NAME_DF11Z                          :DF11Z (Diesel)
-STR_NAME_ND5                            :ND5 (Diesel)
-STR_NAME_NJ2                            :NJ2 (Diesel)
-STR_NAME_HXN3                           :HXN3 (Diesel)
-STR_NAME_HXN3QZ                         :HXN3 (Diesel) (Plateau Type)
-STR_NAME_HXN5                           :HXN5 (Diesel)
-STR_NAME_HXN5B                          :HXN5B (Diesel)
-STR_NAME_SS1                            :SS1 (Electric)
-STR_NAME_SS3                            :SS3 (Electric)
-STR_NAME_SS3B                           :SS3B (Electric)
-STR_NAME_SS4                            :SS4 (Electric)
-STR_NAME_SS4B                           :SS4B (Electric)
-STR_NAME_SS4C                           :SS4C (Electric)
-STR_NAME_SS4G                           :SS4G (Electric)
-STR_NAME_SS5                            :SS5 (Electric)
-STR_NAME_SS6                            :SS6 (Electric)
-STR_NAME_SS6B                           :SS6B (Electric)
-STR_NAME_SS7                            :SS7 (Electric)
-STR_NAME_SS7B                           :SS7B (Electric)
-STR_NAME_SS7C                           :SS7C (Electric)
-STR_NAME_SS7D                           :SS7D (Electric)
-STR_NAME_SS7E                           :SS7E (Electric)
-STR_NAME_SS8                            :SS8 (Electric)
-STR_NAME_SS9                            :SS9 (Electric)
-STR_NAME_SS9G                           :SS9G (Electric)
-STR_NAME_6Y2                            :6Y2 (Electric)
-STR_NAME_HXD1                           :HXD1 (Electric)
-STR_NAME_HXD11000                       :HXD1-1000 (Electric)
-STR_NAME_HXD1B                          :HXD1B (Electric)
-STR_NAME_HXD1D                          :HXD1D (Electric)
-STR_NAME_HXD3C                          :HXD3C (Electric)
-STR_NAME_HXD3D                          :HXD3D (Electric)
-STR_NAME_FXD1B                          :FXD1B (Electric)
-
-STR_NAME_NC3                            :NC3 (DMU)
-STR_NAME_NZJ1_XINSHUGUANG               :NZJ1 "Xinshuguang" (DMU)
-STR_NAME_NZJ2_JINLUN_UNILAMINAR         :NZJ2 "Jinlun" (UNILAMINAR) (DMU)
-STR_NAME_NZJ2_JINLUN_DOUBLE_DECKER      :NZJ2 "Jinlun" (DOUBLE DECKER) (DMU)
-STR_NAME_NDJ3                           :NDJ3 "Great Wall" (DMU)
-STR_NAME_DJJ1                           :DJJ1 "Blue Arrow" (EMU)
-STR_NAME_CR200JA                        :CR200J-A (EMU)
-STR_NAME_CR200JAL                       :CR200J-A (Long Version) (EMU)
-STR_NAME_CR200JB                        :CR200J-B (EMU)
-STR_NAME_CR200JC                        :CR200J-C (EMU)
-STR_NAME_CR200JCL                       :CR200J-C (Long Version) (EMU)
-STR_NAME_CRH1A                          :CRH1A (EMU)
-STR_NAME_CRH1B                          :CRH1B (Long Version) (EMU)
-STR_NAME_CRH1E                          :CRH1E (EMU)
-STR_NAME_CRH1AA                         :CRH1A-A (EMU)
-STR_NAME_CRH2A                          :CRH2A (EMU)
-STR_NAME_CRH2B                          :CRH2B (Long Version) (EMU)
-STR_NAME_CRH2C                          :CRH2C (EMU)
-STR_NAME_CRH2E                          :CRH2E (EMU)
-STR_NAME_CRH2G                          :CRH2G (EMU)
-STR_NAME_CRH2ELS                        :CRH2E (Longitudinal Sleeper) (EMU)
-STR_NAME_CRH3A                          :CRH3A (EMU)
-STR_NAME_CRH3C                          :CRH3C (EMU)
-STR_NAME_CRH5A                          :CRH5A (EMU)
-STR_NAME_CRH380A                        :CRH380A (EMU)
-STR_NAME_CRH380AL                       :CRH380AL (Long Version) (EMU)
-STR_NAME_CRH380B                        :CRH380B (EMU)
-STR_NAME_CRH380CL                       :CRH380CL (EMU)
-STR_NAME_CRH380D                        :CRH380D (EMU)
-STR_NAME_CR300AF                        :CR300AF (EMU)
-STR_NAME_CR300BF                        :CR300BF (EMU)
-STR_NAME_CR400AF                        :CR400AF (EMU)
-STR_NAME_CR400AFAB                      :CR400AF-A/B (Long Version) (EMU)
-STR_NAME_CR400AFZ                       :CR400AF-C/Z/S (Intelligent EMU)
-STR_NAME_CR400AFABZ                     :CR400AF-AZ/BZ/BS (Long Version) (Intelligent EMU)
-STR_NAME_CR400BF                        :CR400BF (EMU)
-STR_NAME_CR400BFAB                      :CR400BF-A/B (Long Version) (EMU)
-STR_NAME_CR400BFC                       :CR400BF-C (Intelligent EMU)
-STR_NAME_CR400BFZ                       :CR400BF-Z/S (Intelligent EMU)
-STR_NAME_CR400BFABZ                     :CR400BF-AZ/BZ/BS (Intelligent EMU)
-STR_NAME_CRH6A2                         :CRH6A (2-Door Version) (EMU)
-STR_NAME_CRH6A3                         :CRH6A (3-Door Version) (EMU)
-STR_NAME_CRH6AA                         :CRH6A-A (Section) (EMU)
-STR_NAME_CRH6F                          :CRH6F (EMU)
-
-
-
-
-
-STR_NAME_ZEMUW                          :2nd-Class (ZE) MU Wagon
-STR_NAME_ZYMUW                          :1st-Class (ZY) MU Wagon
-STR_NAME_ZSMUW                          :Business-Class (ZS) MU Wagon
-STR_NAME_SWMUW                          :Luxury-Business-Class (SW) MU Wagon
-STR_NAME_ZECMUW                         :2nd-Class Restaurant Combined (ZEC) MU Wagon
-STR_NAME_WEMUW                          :2nd-Class Sleeper (WE) MU Wagon
-STR_NAME_WYMUW                          :1st-Class Sleeper (WY) MU Wagon
-STR_NAME_WGMUW                          :Top-Class Sleeper (WG) MU Wagon
-
-STR_FULL_NAME_YZ22                      :{BLACK}Full Name: {GOLD}22 Type Hard Seat Passenger Coach
-STR_FULL_NAME_RZ22                      :{BLACK}Full Name: {GOLD}22 Type Soft Seat Passenger Coach
-STR_FULL_NAME_YW22                      :{BLACK}Full Name: {GOLD}22 Type Hard Sleeper Passenger Coach
-STR_FULL_NAME_RW22                      :{BLACK}Full Name: {GOLD}22 Type Soft Sleeper Passenger Coach
-STR_FULL_NAME_YZ22AIRCON                :{BLACK}Full Name: {GOLD}22 Type Hard Seat Passenger Coach (Air-conditioned)
-STR_FULL_NAME_RZ22AIRCON                :{BLACK}Full Name: {GOLD}22 Type Soft Seat Passenger Coach (Air-conditioned)
-STR_FULL_NAME_YW22AIRCON                :{BLACK}Full Name: {GOLD}22 Type Hard Sleeper Passenger Coach (Air-conditioned)
-STR_FULL_NAME_RW22AIRCON                :{BLACK}Full Name: {GOLD}22 Type Soft Sleeper Passenger Coach (Air-conditioned)
-STR_FULL_NAME_CA23                      :{BLACK}Full Name: {GOLD}23 Type Restaurant Car
-STR_FULL_NAME_CA23AIRCON                :{BLACK}Full Name: {GOLD}23 Type Restaurant Car (Air-conditioned)
-STR_FULL_NAME_YZ22B                     :{BLACK}Full Name: {GOLD}22B Type Hard Seat Passenger Coach
-STR_FULL_NAME_YW22B                     :{BLACK}Full Name: {GOLD}22B Type Hard Sleeper Passenger Coach
-STR_FULL_NAME_RW22B                     :{BLACK}Full Name: {GOLD}22B Type Soft Sleeper Passenger Coach
-STR_FULL_NAME_YZ25ML                    :{BLACK}Full Name: {GOLD}25m Mainline Hard Seat Passenger Coach
-STR_FULL_NAME_RZ25ML                    :{BLACK}Full Name: {GOLD}25m Mainline Soft Seat Passenger Coach
-STR_FULL_NAME_YW25ML                    :{BLACK}Full Name: {GOLD}25m Mainline Hard Sleeper Passenger Coach
-STR_FULL_NAME_RW25ML                    :{BLACK}Full Name: {GOLD}25m Mainline Soft Sleeper Passenger Coach
-STR_FULL_NAME_CA25ML                    :{BLACK}Full Name: {GOLD}25m Mainline Restaurant Car
-STR_FULL_NAME_YZ25B                     :{BLACK}Full Name: {GOLD}25m Standard Hard Seat Passenger Coach
-STR_FULL_NAME_RZ25B                     :{BLACK}Full Name: {GOLD}25m Standard Soft Seat Passenger Coach
-STR_FULL_NAME_YW25B                     :{BLACK}Full Name: {GOLD}25m Standard Hard Sleeper Passenger Coach
-STR_FULL_NAME_RW25B                     :{BLACK}Full Name: {GOLD}25m Standard Soft Sleeper Passenger Coach
-STR_FULL_NAME_SYZ25B                    :{BLACK}Full Name: {GOLD}25m Standard Double Decker Hard Seat Passenger Coach
-STR_FULL_NAME_SRZ25B                    :{BLACK}Full Name: {GOLD}25m Standard Double Decker Soft Seat Passenger Coach
-STR_FULL_NAME_SYW25B                    :{BLACK}Full Name: {GOLD}25m Standard Double Decker Hard Sleeper Passenger Coach
-STR_FULL_NAME_SRW25B                    :{BLACK}Full Name: {GOLD}25m Standard Double Decker Soft Sleeper Passenger Coach
-STR_FULL_NAME_YZ25G                     :{BLACK}Full Name: {GOLD}25m Improved Hard Seat Passenger Coach
-STR_FULL_NAME_RZ25G                     :{BLACK}Full Name: {GOLD}25m Improved Soft Seat Passenger Coach
-STR_FULL_NAME_YW25G                     :{BLACK}Full Name: {GOLD}25m Improved Hard Sleeper Passenger Coach
-STR_FULL_NAME_RW25G                     :{BLACK}Full Name: {GOLD}25m Improved Soft Sleeper Passenger Coach
-STR_FULL_NAME_CA25G                     :{BLACK}Full Name: {GOLD}25m Improved Restaurant Car
-STR_FULL_NAME_RW19K                     :{BLACK}Full Name: {GOLD}19K Type Soft Sleeper Passenger Coach (2 berth)
-STR_FULL_NAME_YZ25K                     :{BLACK}Full Name: {GOLD}25m Rapid Hard Seat Passenger Coach
-STR_FULL_NAME_RZ25K                     :{BLACK}Full Name: {GOLD}25m Rapid Soft Seat Passenger Coach
-STR_FULL_NAME_YW25K                     :{BLACK}Full Name: {GOLD}25m Rapid Hard Sleeper Passenger Coach
-STR_FULL_NAME_RW25K                     :{BLACK}Full Name: {GOLD}25m Rapid Soft Sleeper Passenger Coach
-STR_FULL_NAME_SYZ25K                    :{BLACK}Full Name: {GOLD}25m Rapid Double Decker Hard Seat Passenger Coach
-STR_FULL_NAME_SRZ25K                    :{BLACK}Full Name: {GOLD}25m Rapid Double Decker Soft Seat Passenger Coach
-STR_FULL_NAME_SYW25K                    :{BLACK}Full Name: {GOLD}25m Rapid Double Decker Hard Sleeper Passenger Coach
-STR_FULL_NAME_SRW25K                    :{BLACK}Full Name: {GOLD}25m Rapid Double Decker Soft Sleeper Passenger Coach
-STR_FULL_NAME_SCA25K                    :{BLACK}Full Name: {GOLD}25m Rapid Double Decker Restaurant Car
-STR_FULL_NAME_CA25K                     :{BLACK}Full Name: {GOLD}25m Rapid Improved Restaurant Car
-STR_FULL_NAME_RW19T                     :{BLACK}Full Name: {GOLD}19T Type Soft Sleeper Passenger Coach (2 berth)
-STR_FULL_NAME_YZ25T                     :{BLACK}Full Name: {GOLD}25m Accelerated Hard Seat Passenger Coach
-STR_FULL_NAME_RZ25T                     :{BLACK}Full Name: {GOLD}25m Accelerated Soft Seat Passenger Coach
-STR_FULL_NAME_YW25T                     :{BLACK}Full Name: {GOLD}25m Accelerated Hard Sleeper Passenger Coach
-STR_FULL_NAME_RW25T                     :{BLACK}Full Name: {GOLD}25m Accelerated Soft Sleeper Passenger Coach
-STR_FULL_NAME_YZ31                      :{BLACK}Full Name: {GOLD}31 Type Hard Seat Passenger Coach
-STR_FULL_NAME_CA25T                     :{BLACK}Full Name: {GOLD}25m Accelerated Restaurant Car
-STR_FULL_NAME_XL22                      :{BLACK}Full Name: {GOLD}22 Type Luggage Car
-STR_FULL_NAME_XL25ML                    :{BLACK}Full Name: {GOLD}25m Mainline Luggage Car
-STR_FULL_NAME_XL25B                     :{BLACK}Full Name: {GOLD}25m Standard Luggage Car
-STR_FULL_NAME_XL25G                     :{BLACK}Full Name: {GOLD}25m Improved Luggage Car
-STR_FULL_NAME_XL25K                     :{BLACK}Full Name: {GOLD}25m Rapid Luggage Car
-STR_FULL_NAME_XL25T                     :{BLACK}Full Name: {GOLD}25m Accelerated Luggage Car
-STR_FULL_NAME_UZ22                      :{BLACK}Full Name: {GOLD}22 Type Railway Post Office
-STR_FULL_NAME_UZ25T                     :{BLACK}Full Name: {GOLD}25m Accelerated Railway Post Office
-STR_FULL_NAME_TZ                        :{BLACK}Full Name: {GOLD}Special Purpose Car
-STR_FULL_NAME_TZ2                       :{BLACK}Full Name: {GOLD}Special Purpose Car Type 2
-STR_FULL_NAME_KD25G                     :{BLACK}Full Name: {GOLD}25m Improved Air Conditioner Generator Car
-STR_FULL_NAME_KD25K                     :{BLACK}Full Name: {GOLD}25m Rapid Air Conditioner Generator Car
-STR_FULL_NAME_KD25Z                     :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Air Conditioner Generator Car
-STR_FULL_NAME_KD25T                     :{BLACK}Full Name: {GOLD}25m Accelerated Air Conditioner Generator Car
-STR_FULL_NAME_RZ125Z                    :{BLACK}Full Name: {GOLD}25m Semi-Highspeed 1st-Class Seat Passenger Coach
-STR_FULL_NAME_RZ225Z                    :{BLACK}Full Name: {GOLD}25m Semi-Highspeed 2nd-Class Seat Passenger Coach
-STR_FULL_NAME_RZT25Z                    :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Top-Class Seat Passenger Coach
-STR_FULL_NAME_RZXL25Z                   :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Soft Seat Passenger Coach & Luggage Car
-STR_FULL_NAME_CA25Z                     :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Restaurant Car
-STR_FULL_NAME_SRZ125Z                   :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Double Decker 1st-Class Seat Passenger Coach
-STR_FULL_NAME_SRZ225Z                   :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Double Decker 2nd-Class Seat Passenger Coach
-STR_FULL_NAME_SCA25Z                    :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Double Decker Restaurant Car
-STR_FULL_NAME_SRZXL25Z                  :{BLACK}Full Name: {GOLD}25m Semi-Highspeed Double Decker Soft Seat Passenger Coach & Luggage Car
-STR_FULL_NAME_SYW25                     :{BLACK}Full Name: {GOLD}25m Double Decker Hard Sleeper Passenger Coach
-STR_FULL_NAME_SRW25                     :{BLACK}Full Name: {GOLD}25m Double Decker Soft Sleeper Passenger Coach
-
-STR_FULL_NAME_YZ25DT_JINLUN             :{BLACK}Full Name: {GOLD}25m Unilaminar Hard Seat Passenger Trail Car of "Jinlun" DMU
-STR_FULL_NAME_YW25DT_JINLUN             :{BLACK}Full Name: {GOLD}25m Unilaminar Hard Sleeper Passenger Trail Car of "Jinlun" DMU
-STR_FULL_NAME_RW25DT_JINLUN             :{BLACK}Full Name: {GOLD}25m Unilaminar Soft Sleeper Passenger Trail Car of "Jinlun" DMU
-STR_FULL_NAME_SYZ25DT_JINLUN            :{BLACK}Full Name: {GOLD}25m Double Decker Hard Seat Passenger Trail Car of "Jinlun" DMU
-STR_FULL_NAME_SRZ25DT_JINLUN            :{BLACK}Full Name: {GOLD}25m Double Decker Hard Seat Passenger Trail Car of "Jinlun" DMU
-
-STR_FULL_NAME_SY                        :{BLACK}Full Name: {GOLD}Shangyou {BLACK}(Meaning: Aiming High) {GOLD}Steam Locomotive
-
-STR_FULL_NAME_DF                        :{BLACK}Full Name: {GOLD}Dongfeng Diesel Locomotive
-STR_FULL_NAME_DF4                       :{BLACK}Full Name: {GOLD}Dongfeng 4 Diesel Locomotive
-STR_FULL_NAME_DF4B                      :{BLACK}Full Name: {GOLD}Dongfeng 4B Diesel Locomotive
-STR_FULL_NAME_DF4C                      :{BLACK}Full Name: {GOLD}Dongfeng 4C Diesel Locomotive
-STR_FULL_NAME_DF4D                      :{BLACK}Full Name: {GOLD}Dongfeng 4D Diesel Locomotive
-STR_FULL_NAME_DF4D7000                  :{BLACK}Full Name: {GOLD}Dongfeng 4D Diesel Locomotive 7000 Series
-STR_FULL_NAME_DF4DF                     :{BLACK}Full Name: {GOLD}Dongfeng 4DF Diesel Locomotive
-STR_FULL_NAME_DF4E                      :{BLACK}Full Name: {GOLD}Dongfeng 4E Diesel Locomotive
-STR_FULL_NAME_DF5KZ                     :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive 
-STR_FULL_NAME_DF5                       :{BLACK}Full Name: {GOLD}Dongfeng 5 Diesel Locomotive 1000 Series
-STR_FULL_NAME_DF7G                      :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive
-STR_FULL_NAME_DF7G5000                  :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive 5000 Series
-STR_FULL_NAME_DF7G8000                  :{BLACK}Full Name: {GOLD}Dongfeng 7G Diesel Locomotive 8000 Series
-STR_FULL_NAME_DFH7                      :{BLACK}Full Name: {GOLD}Dongfanghong 7 Diesel Locomotive
-STR_FULL_NAME_DF8B                      :{BLACK}Full Name: {GOLD}Dongfeng 8B Diesel Locomotive
-STR_FULL_NAME_DF11                      :{BLACK}Full Name: {GOLD}Dongfeng 11 Diesel Locomotive
-STR_FULL_NAME_DF11G                     :{BLACK}Full Name: {BLUE}Dongfeng 11G {WHITE}Diesel Locomotive
-STR_FULL_NAME_DF11Z                     :{BLACK}Full Name: {GOLD}Dongfeng 11Z Diesel Locomotive
-STR_FULL_NAME_ND5                       :{BLACK}Full Name: {GOLD}Neidian 5 Diesel Locomotive
-STR_FULL_NAME_HXN3                      :{BLACK}Full Name: {GOLD}Hexie 3 Diesel Locomotive
-STR_FULL_NAME_HXN5                      :{BLACK}Full Name: {GOLD}Hexie 5 Diesel Locomotive
-STR_FULL_NAME_HXN5B                     :{BLACK}Full Name: {GOLD}Hexie 5B Diesel Locomotive
-STR_FULL_NAME_SS1                       :{BLACK}Full Name: {GOLD}Shaoshan 1 Electric Locomotive
-STR_FULL_NAME_SS3                       :{BLACK}Full Name: {GOLD}Shaoshan 3 Electric Locomotive
-STR_FULL_NAME_SS3B                      :{BLACK}Full Name: {GOLD}Shaoshan 3B Electric Locomotive
-STR_FULL_NAME_SS4                       :{BLACK}Full Name: {GOLD}Shaoshan 4 Electric Locomotive
-STR_FULL_NAME_SS4B                      :{BLACK}Full Name: {GOLD}Shaoshan 4B Electric Locomotive
-STR_FULL_NAME_SS4C                      :{BLACK}Full Name: {GOLD}Shaoshan 4C Electric Locomotive
-STR_FULL_NAME_SS4G                      :{BLACK}Full Name: {GOLD}Shaoshan 4G Electric Locomotive
-STR_FULL_NAME_SS5                       :{BLACK}Full Name: {GOLD}Shaoshan 5 Electric Locomotive
-STR_FULL_NAME_SS6                       :{BLACK}Full Name: {GOLD}Shaoshan 6 Electric Locomotive
-STR_FULL_NAME_SS6B                      :{BLACK}Full Name: {GOLD}Shaoshan 6B Electric Locomotive
-STR_FULL_NAME_SS7                       :{BLACK}Full Name: {GOLD}Shaoshan 7 Electric Locomotive
-STR_FULL_NAME_SS7B                      :{BLACK}Full Name: {GOLD}Shaoshan 7B Electric Locomotive
-STR_FULL_NAME_SS7C                      :{BLACK}Full Name: {GOLD}Shaoshan 7C Electric Locomotive
-STR_FULL_NAME_SS7D                      :{BLACK}Full Name: {GOLD}Shaoshan 7D Electric Locomotive
-STR_FULL_NAME_SS7E                      :{BLACK}Full Name: {GOLD}Shaoshan 7E Electric Locomotive
-STR_FULL_NAME_SS8                       :{BLACK}Full Name: {GOLD}Shaoshan 8 Electric Locomotive
-STR_FULL_NAME_SS9                       :{BLACK}Full Name: {GOLD}Shaoshan 9 Electric Locomotive
-STR_FULL_NAME_SS9G                      :{BLACK}Full Name: {GOLD}Shaoshan 9G Electric Locomotive
-STR_FULL_NAME_HXD1                      :{BLACK}Full Name: {GOLD}Hexie/Harmony 1 Electric Locomotive
-STR_FULL_NAME_HXD11000                  :{BLACK}Full Name: {GOLD}Hexie/Harmony 1 Electric Locomotive 1000 Series
-STR_FULL_NAME_HXD1B                     :{BLACK}Full Name: {GOLD}Hexie/Harmony 1B Electric Locomotive
-STR_FULL_NAME_HXD1D                     :{BLACK}Full Name: {GOLD}Hexie/Harmony 1D Electric Locomotive
-STR_FULL_NAME_FXD1B                     :{BLACK}Full Name: {GOLD}Fuxing/Revival 1B Electric Locomotive
-STR_FULL_NAME_HXD3C                     :{BLACK}Full Name: {GOLD}Hexie/Harmony 3C Electric Locomotive
-STR_FULL_NAME_HXD3D                     :{BLACK}Full Name: {GOLD}Hexie/Harmony 3D Electric Locomotive
-
-STR_DF4_SERIES                          :DF4 Series (Diesel Locomotive)
-STR_DF4D_SERIES                         :DF4D Series (Diesel Locomotive)
-STR_DF5_SERIES                          :DF5 Series (Diesel Locomotive)
-STR_DF7G_SERIES                         :DF7G Series (Diesel Locomotive)
-STR_SS4_SERIES                          :SS4 Series (Electric Locomotive)
-STR_SS6_SERIES                          :SS6 Series (Electric Locomotive)
-STR_SS7_SERIES                          :SS7 Series (Electric Locomotive)
-STR_SS9_SERIES                          :SS9 Series (Electric Locomotive)
-STR_HXD1_SERIES                         :HXD1 Series (Electric Locomotive)
-STR_HXD2_SERIES                         :HXD2 Series (Electric Locomotive)
-STR_HXD3_SERIES                         :HXD3 Series (Electric Locomotive)
-STR_HXN3_SERIES                         :HXN3 Series (Diesel Locomotive)
-STR_HXN5_SERIES                         :HXN5 Series (Diesel Locomotive)
-STR_NZJ2_SERIES                         :NZJ2 Series (DMU)
-STR_CRH1_SERIES                         :CRH1 Series (EMU)
-STR_CRH2_SERIES                         :CRH2 Series (EMU)
-STR_CRH3_SERIES                         :CRH3 Series (EMU)
-STR_CRH5_SERIES                         :CRH5 Series (EMU)
-STR_CRH6_SERIES                         :CRH6 Series (EMU)
-STR_CRH380A_SERIES                      :CRH380A Series (EMU)
-STR_CRH380B_SERIES                      :CRH380B Series (EMU)
-STR_CR200J_SERIES                       :CR200J Series (EMU)
-STR_CR400AF_SERIES                      :CR400AF Series (EMU)
-STR_CR400BF_SERIES                      :CR400BF Series (EMU)
-
-STR_21_SERIES                           :Type 21 Series Coaches
-STR_22_SERIES                           :Type 22 Series Coaches
-STR_22_AIRCON_SERIES                    :Type 22 Series Air-conditioned Coaches
-STR_22B_SERIES                          :Type 22B Series Coaches
-STR_24_DDR_SERIES                       :Type 24 Series Coaches (DDR)
-STR_25_SERIES                           :Type 25 Series Coaches
-STR_S25_SERIES                          :Type S25 Series Coaches
-STR_25_HK_SERIES                        :Type 25 Series Canton-Kowloon Railway Coaches
-STR_25B_SERIES                          :Type 25B Series Coaches
-STR_S25BLD_SERIES                       :Type S25B Series Coaches (Low-Door)
-STR_S25BHD_SERIES                       :Type S25B Series Coaches (High-Door)
-STR_25G_SERIES                          :Type 25G Series Coaches
-STR_25Z_SERIES                          :Type 25Z Series Coaches
-STR_S25Z_SERIES                         :Type S25Z Series Coaches 
-STR_25K_SERIES                          :Type 25K Series Coaches
-STR_S25KLD_SERIES                       :Type S25K Series Coaches (Low-Door)
-STR_S25KHD_SERIES                       :Type S25K Series Coaches (High-Door)
-STR_25T_SERIES                          :Type 25T Series Coaches
-
-STR_25DT_JINLUN_SERIES                  :NZJ2 JINLUN DMU Wagons
-
-STR_MU_WAGON                            :MU Wagons
-
-STR_BOXCAR                              :Boxcar
-STR_FLATCAR                             :Flatcar
-STR_TANKER                              :Tanker
-STR_GONDOLA                             :Gondola
-STR_REFRIGERATOR_WAGON                  :Refrigerator Wagon
-STR_VIHICLE_TRANSPORTER                 :Vihicle Transporter
-
-STR_US_IMPORT                           :Imported from United States
-STR_FR_IMPORT                           :Imported from France
-STR_HU_IMPORT                           :Imported from Hungary
-
-STR_DESC_6                              :{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}
-STR_DESC_5                              :{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}
-STR_DESC_4                              :{STRING}{}{STRING}{}{STRING}{}{STRING}
-STR_DESC_3                              :{STRING}{}{STRING}{}{STRING}
-STR_DESC_2                              :{STRING}{}{STRING}
-
-STR_XL25T_SSPE_DESCRIPTION              :{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.
-
-STR_DF_LIVERY_AVAILABILITY              :{BLACK}Livery Availability: {GOLD}Yellow {GREEN}Line {BLACK}Livery, {WHITE}White {GREEN}Line {BLACK}Livery
-STR_DF4_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea, DF4B only),{BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery, Jinhua-Wenzhou Livery (DF4B only)
-STR_DF4C_LIVERY_AVAILABILITY            :{BLACK}Livery Availability: Original Livery, {GREEN}GREEN {GOLD}Livery, {BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery
-STR_DF4D0000_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {BROWN}Original {GOLD}Livery, {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {GOLD}Railway Livery
-STR_DF4D4000_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {BLUE}4000-{YELLOW}Series {GOLD}Livery and {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea)
-STR_DF4DF_LIVERY_AVAILABILITY           :{BLACK}Livery Availability: Original Livery
-STR_DF7G5000_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: Original Livery
-STR_DF8B_LIVERY_AVAILABILITY            :{BLACK}Livery Availability: Original Livery
-STR_NJ2_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {WHITE}Original {GOLD}and {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery
-
-STR_SS7C_LIVERY_AVAILABILITY            :{BLACK}Livery Availability: {GOLD}Original Livery, {YELLOW}Banana Yellow {GOLD}Livery
-STR_6Y2_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {BLUE}Original Livery, Factory Livery, {GREEN}Late Livery
-
-STR_DJJ1_LIVERY_AVAILABILITY            :{BLACK}Livery Availability: {GOLD}Original Livery, Guangzhou-Shenzhen Railway Livery
-STR_CRH6A2_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Prototype, Guangzhou-Shenzhen, Guangzhou-Zhuhai, Tianfu (A nickname of Chengdu, meaning "Paradise") (with or without green stripes), Zhengzhou-Jiaozuo, Zhuhai-Airport, Pearl River Delta (Blue or Orange)
-STR_CRH6A3_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Beijing-Tongzhou, Shanghai-Jinshan
-STR_CRH6AA_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Pearl River Delta, Guangzhou-Zhuhai, Tianfu (A nickname of Chengdu, meaning "Paradise") (with or without green stripes)
-STR_CRH6F_LIVERY_AVAILABILITY           :{BLACK}Livery Availability: {GOLD}Pearl River Delta, Shanghai-Jinshan, Xiaoshan/Hangzhou-Ningbo
-
-STR_22_LIVERY_AVAILABILITY              :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Wuhan Railway Vocational College Livery (only coaches), Sanshui-Maoming Livery (unfinish), "Longqingxia" Livery (unfinish), Beijing-Shanghai Direct Express Livery (XL22, UZ22), Guangzhou-Hongkong Livery (XL22, UZ22) (unfinish)
-STR_22AIRCON_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Beijing-Shanghai Direct Express Livery, Guangzhou-Hongkong Livery (unfinish)
-STR_22B_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery
-STR_25B_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_RW25B_LIVERY_AVAILABILITY           :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_XL25B_LIVERY_AVAILABILITY           :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_S25BLD_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {ORANGE}Orange-{YELLOW}Yellow {GOLD}Livery, deteriorated, with strengthening steel sheet, Urumqi, Xianxing (All low-door, higher loading speed, 120 km/h)
-STR_S25BHD_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}deteriorated, Shenyang (All high-door, lower loading speed, 140 km/h)
-STR_25G_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, Xi'an-Huxian Railway Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_CA25G_LIVERY_AVAILABILITY           :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_KD25G_LIVERY_AVAILABILITY           :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an-Huxian Railway Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery (unfinished), {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_25T_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery
-STR_BSP25T_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery, Made by BSP Livery
-STR_CA25T_LIVERY_AVAILABILITY           :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery, Made by BSP Livery
-STR_XL25T_LIVERY_AVAILABILITY           :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery (unfinished), {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_UZ25T_LIVERY_AVAILABILITY           :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_KD25T_LIVERY_AVAILABILITY           :{BLACK}Livery Availability: Only {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery
-STR_19K_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery
-STR_25K_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_25Z_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {BLUE}Xi{WHITE}zi{GOLD}Livery, {LTBLUE}Shijiazhuang-Qinhuangdao {WHITE}Slow Train {GOLD}Livery, {BLUE}Guangzhou-{RED}-Shenzhen{WHITE} Railway{GOLD} Livery
-STR_S25Z_LIVERY_AVAILABILITY            :{BLACK}Livery Availability: {LTBLUE}Shijiazhuang-Qinhuangdao {WHITE}Slow Train {GOLD}Livery, {BLUE}Guangzhou-{DKGREEN}-Shenzhen{WHITE} Railway{GOLD} Livery
-STR_S25_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {BLUE}Blue-{GOLD}-Orange-{WHITE}-White {BLACK}Livery, other livery (unfinished}
-STR_S25KLD_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Liaodong Peninsula Livery (All low-door, higher loading speed)
-STR_S25KHD_LIVERY_AVAILABILITY          :{BLACK}Livery Availability: {GOLD}Xianxing (Pioneer), Xi'an (All high-door, slower loading speed)
-STR_SCA25KHD_LIVERY_AVAILABILITY        :{BLACK}Livery Availability: {GOLD}Xi'an
-STR_TZ_LIVERY_AVAILABILITY              :{BLACK}Livery Availability: {ORANGE}Orange {GOLD}Livery, {GOLD}Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery
-STR_KD25K_LIVERY_AVAILABILITY           :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
-STR_25DT_JINLUN_LIVERY_AVAILABILITY     :{BLACK}Livery Availability: {GOLD}Earlier Livery (Before 2010), Later Livery (After 2010)
-STR_YZ31_LIVERY_AVAILABILITY            :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Sanshui-Maoming Railway Livery (unfinished)
-STR_25ML_LIVERY_AVAILABILITY            :{BLACK}Livery Availability: {WHITE}White-{GREEN}-Green {GOLD}Livery, {RED}RED-{GREEN}-Green {GOLD}Livery (after 2003)
-
-STR_G17_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished)
-STR_G60_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {GRAY}Grey {GOLD}with Random-Colour Stripes (unfinished)
-STR_GN70_LIVERY_AVAILABILITY            :{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished)
-STR_GN80_LIVERY_AVAILABILITY            :{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished)
-STR_C62_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {GOLD}Random (unfinished)
-STR_C64_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {GOLD}Random (unfinished)
-STR_C70_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {GOLD}Random (unfinished)
-STR_P50_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred), Wreck Livery
-STR_P60_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {GOLD}Random (unfinished)
-STR_P61_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {GOLD}Random (unfinished)
-STR_P62_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {GOLD}Random (Black, Blue, Brown, Rustyred)
-STR_P63_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred)
-STR_P65_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {DKGREEN}China Post{GOLD}, Black (unfinished)
-STR_P70_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {GOLD}Random (Black, Blue, Brown, Rustyred)
-STR_N5_LIVERY_AVAILABILITY              :{BLACK}Livery Availability: {GOLD}Random (unfinished)
-STR_N60_LIVERY_AVAILABILITY             :{BLACK}Livery Availability: {GOLD}Random (unfinished)
-STR_NX17_LIVERY_AVAILABILITY            :{BLACK}Livery Availability: {GOLD}Random (Black, Brown)
-STR_NX70A_LIVERY_AVAILABILITY           :{BLACK}Livery Availability: {GOLD}Black Livery Only
-
-STR_DF_NICKNAME                         :{BLACK}Nickname: {GOLD}Old DongFeng
-STR_DF4_NICKNAME                        :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
-STR_DF4B_NICKNAME                       :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
-STR_DF4C_NICKNAME                       :{BLACK}Nickname: {GOLD}Blue Cat
-STR_DF4D_NICKNAME                       :{BLACK}Nickname: {GOLD}Tiger
-STR_DF4D7000_NICKNAME                   :{BLACK}Nickname: {GOLD}Liuzhou Tiger
-STR_DF7G_NICKNAME                       :{BLACK}Nickname: {GOLD}Begger
-STR_DF8B_NICKNAME                       :{BLACK}Nickname: {GOLD}Barbie
-STR_DF11_NICKNAME                       :{BLACK}Nickname: {GOLD}Lion
-STR_DF11G_NICKNAME                      :{BLACK}Nickname: {GOLD}Pig
-STR_HXN5_NICKNAME                       :{BLACK}Nickname: {GOLD}Grasshopper
-STR_HXN5B_NICKNAME                      :{BLACK}Nickname: {GOLD}Scrambled egg with tomato
-STR_SS1_NICKNAME                        :{BLACK}Nickname: {GOLD}Peony
-STR_SS3_NICKNAME                        :{BLACK}Nickname: {GOLD}San'ge (New), Sanye (Old) {}{BLACK}Chinese Lesson: San - Three, Ge - Elder Brother, Ye - Grandfather or a general and respectful pronoun to old men
-STR_SS3B_NICKNAME                       :{BLACK}Nickname: {BLUE}Blue Bird
-STR_SS4_NICKNAME                        :{BLACK}Nickname: {BLUE}Baoji Blue
-STR_SS4G_NICKNAME                       :{BLACK}Nickname: {GOLD}Sige {}{BLACK}Chinese Lesson: Si - Four
-STR_SS5_NICKNAME                        :{BLACK}Nickname: {GOLD}Xiaowu (Little Five)
-STR_SS6_NICKNAME                        :{BLACK}Nickname: {GOLD}Xiaoliu (Little Six)
-STR_SS6B_NICKNAME                       :{BLACK}Nickname: {GOLD}Yan Xiaoliu (a character from Chinese soap opera "Wulin Waizhuan")
-STR_SS7_NICKNAME                        :{BLACK}Nickname: {GOLD}Roast Chicken
-STR_SS7B_NICKNAME                       :{BLACK}Nickname: {GOLD}Cat
-STR_SS7C_NICKNAME                       :{BLACK}Nickname: {GOLD}Cat
-STR_SS7D_NICKNAME                       :{BLACK}Nickname: {GOLD}Transformer
-STR_SS7E_NICKNAME                       :{BLACK}Nickname: {GOLD}Beauty
-STR_SS8_NICKNAME                        :{BLACK}Nickname: {GOLD}Broom
-STR_SS9_NICKNAME                        :{BLACK}Nickname: {GOLD}Frog
-STR_SS9G_NICKNAME                       :{BLACK}Nickname: {GOLD}Shochu
-STR_HXD1_NICKNAME                       :{BLACK}Nickname: {GOLD}Smurf
-STR_HXD1B_NICKNAME                      :{BLACK}Nickname: {GOLD}River Crab
-STR_HXD1D_NICKNAME                      :{BLACK}Nickname: {GOLD}Jujube
-STR_HXD3C_NICKNAME                      :{BLACK}Nickname: {GOLD}Electric Baboon
-STR_HXD3D_NICKNAME                      :{BLACK}Nickname: {GOLD}Tomato
-STR_NDJ3_NICKNAME                       :{BLACK}Nickname: {WHITE}White Pig
-STR_CR200J_NICKNAME                     :{BLACK}Nickname: {GREEN}"Hulk" {GOLD}(Official), {GREEN}"Trash Bin" {GOLD}(Folk)
-STR_CR200JC_NICKNAME                    :{BLACK}Nickname: {GREEN}"AD Bin" {GOLD}(Folk)
-STR_CRH1A_NICKNAME                      :{BLACK}Nickname: {GOLD}Metro 
-STR_CRH1B_NICKNAME                      :{BLACK}Nickname: {GOLD}Long Metro 
-STR_CRH1E_NICKNAME                      :{BLACK}Nickname: {GOLD}Sleeping Metro 
-STR_CRH1AA_NICKNAME                     :{BLACK}Nickname: {GOLD}Cute Metro 
-STR_CRH2A_NICKNAME                      :{BLACK}Nickname: {GOLD}Hairtail
-STR_CRH2B_NICKNAME                      :{BLACK}Nickname: {GOLD}Long Hairtail
-STR_CRH2C_NICKNAME                      :{BLACK}Nickname: {GOLD}Crazy Hairtail
-STR_CRH2E_NICKNAME                      :{BLACK}Nickname: {GOLD}Sleeper Hairtail
-STR_CRH2G_NICKNAME                      :{BLACK}Nickname: {GOLD}Advanced Black Face
-STR_CRH3A_NICKNAME                      :{BLACK}Nickname: {GOLD}Golden Eyes
-STR_CRH3C_NICKNAME                      :{BLACK}Nickname: {GOLD}Rabbit
-STR_CRH5A_NICKNAME                      :{BLACK}Nickname: {GOLD}Donkey
-STR_CRH6F_NICKNAME                      :{BLACK}Nickname: {GOLD}Real Metro
-STR_CRH380A_NICKNAME                    :{BLACK}Nickname: {GOLD}Big Rat
-STR_CRH380B_NICKNAME                    :{BLACK}Nickname: {GOLD}Crazy Rabbit
-STR_CRH380CL_NICKNAME                   :{BLACK}Nickname: {GOLD}Shark
-STR_CRH380D_NICKNAME                    :{BLACK}Nickname: {GOLD}Crazy Metro
-STR_CR400AF_NICKNAME                    :{BLACK}Nickname: {GOLD}Red Loong
-STR_CR400BF_NICKNAME                    :{BLACK}Nickname: {GOLD}Golden Phoenix
-STR_CR300AF_NICKNAME                    :{BLACK}Nickname: {LTBLUE}Smurfette
-STR_CR300BF_NICKNAME                    :{BLACK}Nickname: {LTBLUE}"Blue Antidote" {GOLD}(Official), {LTBLUE}"Zoombie Blue" {GOLD}(Folk)
-
-STR_ALIASNAME_DF                        :{BLACK}Alias Name: {GOLD}Great Loong
-STR_ALIASNME_SS1                        :{BLACK}Alias Name: {GOLD}6Y1
-STR_ALIASNAME_FXD1B                     :{BLACK}Alias Name: {GOLD}HXD1F (Hexie/Harmony 1F Electric Locomotive)
-
-STR_RELIABILITY_32                      :{BLACK}Reliability decay speed: {GOLD}32
-STR_RELIABILITY_24                      :{BLACK}Reliability decay speed: {GOLD}24
-STR_RELIABILITY_20                      :{BLACK}Reliability decay speed: {GOLD}20
-STR_RELIABILITY_16                      :{BLACK}Reliability decay speed: {GOLD}16
-STR_RELIABILITY_15                      :{BLACK}Reliability decay speed: {GOLD}15
-STR_RELIABILITY_14                      :{BLACK}Reliability decay speed: {GOLD}14
-STR_RELIABILITY_12                      :{BLACK}Reliability decay speed: {GOLD}12
-STR_RELIABILITY_10                      :{BLACK}Reliability decay speed: {GOLD}10
-STR_RELIABILITY_8                       :{BLACK}Reliability decay speed: {GOLD}8
-STR_RELIABILITY_6                       :{BLACK}Reliability decay speed: {GOLD}6
-STR_RELIABILITY_5                       :{BLACK}Reliability decay speed: {GOLD}5
-STR_RELIABILITY_3                       :{BLACK}Reliability decay speed: {GOLD}3
-
-STR_310_KMH                             : - Max Speed 310 km/h
-STR_350_KMH                             : - Max Speed 350 km/h, Running Costs Increase
-STR_380_KMH                             : - Max Speed 380 km/h, Running Costs Greatly Increase
-
-STR_350_AVAILABLE                       :Refittable to Max Speed 350 km/h (Increasing running costs)
-STR_350_380_AVAILABLE                   :Refittable to Max Speed 350 or 380 km/h (Increasing running costs)
-
-STR_ORIGINAL                            : - Original Livery
-STR_REVERSE                             : └ the Reverse of the Livery Above
-STR_ORANGE                              :{ORANGE} - Orange Livery
-STR_GREEN                               :{GREEN} - Green Livery
-STR_RED                                 :{RED} - Red Livery
-STR_WHITE                               :{WHITE} - White Livery
-STR_LATER_ORANGE                        :{ORANGE} - Later Orange Livery
-STR_LATER_GREEN                         :{GREEN} - Later Green Livery
-STR_XIHU                                : - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery
-STR_XIHU_REVERSE                        : - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery, reversed
-STR_DF4D_7000                           : - {GREEN}7000-{YELLOW}Series {BLACK}Livery
-STR_SS7C_BANANA                         : - {YELLOW}Banana Yellow {BLACK}Livery
-STR_BLUE                                : - {BLUE}Blue Livery
-STR_UKRAINE                             : - {YELLOW}Yellow {BLACK}and {BLUE}Blue {BLACK}Livery
-STR_FUZHOU                              : - Fuzhou Livery 
-STR_DF4B_DPRK                           : - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery
-STR_GRASSGREEN                          : - {DKGREEN}Dark Green Livery
-STR_DF4D4000_DPRK                       : - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery
-STR_DF4BN_ORIGINAL                      : - {BLUE}DF4B With New Bodyshell
-STR_DF4BN_REVERSE                       : - {BLUE}DF4B With New Bodyshell (Reversed)
-STR_ALTERNATIVE                         : - Alternative Original Livery
-STR_DF_YELLOW                           : - {GOLD}Yellow {GREEN}Line {BLACK}Livery
-STR_DF_WHITE                            : - {WHITE}White {GREEN}Line {BLACK}Livery
-STR_FACTORY                             : - Factory Livery
-STR_6Y2_LATE                            : - {GREEN}Late {BLACK}Livery
-STR_SS4_BLUEROOF                        : - {WHITE}White {BLACK}Livery with {BLUE}Blue{BLACK} Roof
-STR_SHENHUA                             : - {GOLD}Shenhua Groups Livery
-STR_GUONENG                             : - {GOLD}CHN Energy Livery
-
-STR_CHN2LAOS                            : - {GOLD}China-Laos Railway Livery
-
-STR_WUJING                              : - {GOLD}"Armed Police"Livery
-STR_DFH7                                : - DFH7
-STR_DFH7B                               : - DFH7B
-
-
-STR_RANDOM_COLOR                        : - Ramdom Color
-STR_BUILD_YEAR                          : - According to build year
-STR_YW22_ORIGINAL                       : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240
-STR_YW22_1966                           : - 1966 Design - Capacity 60, Comfort 288
-STR_ORDINARY_GREEN                      : - {GREEN}Ordinary Green {BLACK}Livery
-STR_RED_WHITE                           : - {RED}Red {BLACK}and {WHITE}White
-STR_BLUE_RED_WHITE                      : - {BLUE}Blue-{RED}Red{WHITE}-White
-STR_JITONG                              : - {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {BLACK}Livery
-STR_LUCHAOGANG                          : - {LTBLUE}Shanghai-Luchaogang {BLACK}Livery
-STR_LIAODONG                            : - Liaodong Peninsula Livery
-STR_DETERIORATE                         : - Deteriorated Livery
-STR_STRENGTHEN                          : - With Strengthening Steel Sheet
-STR_URUMQI                              : - Urumqi Railway Bureau
-STR_XIAN                                : - Xi'an Railway Bureau
-STR_SHENYANG                            : - Shenyang Railway Bureau
-STR_XIANXING                            : - Xianxing (Pioneer) Livery
-STR_XIZI                                : - Xizi Livery
-STR_QINGZANG                            : - Qinghai-Tibet Railway Livery
-STR_GUANGSHEN                           : - Guangzhou-Shenzhen Railway Livery
-STR_JINWEN                              : - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLACK}Company
-STR_GAOZU_GREEN                         : - {DKGREEN}"Gaozu Green" {BLACK}(unfinished except 25T)
-STR_BEIJING                             : - Beijing Railway Bureau
-STR_WRU                                 : - Wuhan Railway Vocational College of Technology Livery
-STR_BEIJING2SHANGHAI                    : - Beijing-Shanghai Express Train Livery {CREAM}Cream-{BROWN}-Brown
-STR_LATER                               : - Later Livery
-STR_EARLIER                             : - Earlier Livery
-STR_LONGQINGXIA                         : - "Longqingxia" Livery
-STR_BEIJING2SHANGHAIALT                 : - Beijing-Shanghai Express Train Livery {BLUE}Blue-{WHITE}-White
-STR_RESCUE                              : - Wrecker Livery
-STR_BSP25T                              : - Made by BSP
-
-
-
-
-STR_PROTOTYPE                           : - Prototype
-STR_JINGTONG                            : - Beijing-Tongzhou Livery
-STR_TIANFU                              : - Tianfu (Chengdu) Livery
-STR_TIANFU_GREEN                        : - Tianfu (Chengdu) Livery with green stripes
-STR_GUANGZHU                            : - Guangzhou-Zhuhai Livery
-STR_ZHENGJIAO                           : - Zhengzhou-Jiaozuo Livery
-STR_ZHUJI                               : - Zhuhai-Airport Livery
-STR_ZHUSANJIAO_BLUE                     : - Pearl River Delta Intercity Railway, Blue
-STR_ZHUSANJIAO_ORANGE                   : - Pearl River Delta Intercity Railway, Orange
-STR_JINSHAN                             : - Shanghai-Jinshan Livery
-STR_GUANGQING                           : - Guangzhou-Qingyuan Livery
-STR_FOSHAN                              : - Foshan Livery
-STR_XIAOYONG                            : - Xiaoshan/Hangzhou-Ningbo Livery
-
-STR_JINLUN_25DT                         :Coaches use for DMU {BLUE}"JIN{WHITE}LUN"
-
-STR_COMFORT                             :{BLACK}Comfort: {GOLD}{COMMA}
-
-STR_COMFORT_108                         :{BLACK}Comfort: {GOLD}108
-STR_COMFORT_144                         :{BLACK}Comfort: {GOLD}144
-STR_COMFORT_160                         :{BLACK}Comfort: {GOLD}160
-STR_COMFORT_192                         :{BLACK}Comfort: {GOLD}192
-STR_COMFORT_256                         :{BLACK}Comfort: {GOLD}256
-STR_COMFORT_288                         :{BLACK}Comfort: {GOLD}288
-STR_COMFORT_320                         :{BLACK}Comfort: {GOLD}320
-STR_COMFORT_384                         :{BLACK}Comfort: {GOLD}384
-
-STR_COMFORT_144_CAFE                    :{BLACK}Comfort: {GOLD}144 {BLACK}, but at least 180 in operation due to its restaurant identity
-STR_COMFORT_160_CAFE                    :{BLACK}Comfort: {GOLD}160 {BLACK}, but at least 200 in operation due to its restaurant identity
-STR_COMFORT_192_CAFE                    :{BLACK}Comfort: {GOLD}192 {BLACK}, but at least 240 in operation due to its restaurant identity
-STR_COMFORT_384_AC                      :{BLACK}Comfort: {GOLD}384 {BLACK}, but at least 480 in operation due to the presence of air conditioner
-
-STR_COMFORT_240                         :{BLACK}Comfort: {GOLD}240
-STR_COMFORT_400                         :{BLACK}Comfort: {GOLD}400
-STR_COMFORT_480                         :{BLACK}Comfort: {GOLD}480
-STR_COMFORT_640                         :{BLACK}Comfort: {GOLD}640
-STR_COMFORT_720                         :{BLACK}Comfort: {GOLD}720
-STR_COMFORT_800                         :{BLACK}Comfort: {GOLD}800
-
-STR_COMFORT_240_CAFE                    :{BLACK}Comfort: {GOLD}240 {BLACK}, but at least 300 in operation due to its restaurant identity
-
-STR_DECAY_185                           :{BLACK}Cargo Age Period Factor: {GOLD}185
-STR_DECAY_200                           :{BLACK}Cargo Age Period Factor: {GOLD}200
-STR_DECAY_400                           :{BLACK}Cargo Age Period Factor: {GOLD}400
-STR_DECAY_800                           :{BLACK}Cargo Age Period Factor: {GOLD}800
-STR_DECAY_1600                          :{BLACK}Cargo Age Period Factor: {GOLD}1600
-STR_DECAY_BOXCAR                        :{BLACK}Cargo Age Period Factor: {GOLD}185, Passengers 80, Livestock 560
-STR_DECAY_BOXCAR_NOPASS                 :{BLACK}Cargo Age Period Factor: {GOLD}185, Livestock 560, Unrefittable to Passengers
-
-STR_CAFE_EFFECT                         :{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Halves Running Costs of Non-Commuter Passenger Cars except Restaurant Cars, and Increases Cargo Age Period by 1/4
-STR_AIR_CONDITIONER_EFFECT              :{BLACK}Air Conditioner Effect: {GOLD}Attaching Air Conditioner Generator Car Increases Cargo Age Period of Most Passenger Cars Hauled by Locomotives without Electricity Supply
-
-STR_NO_AIR_CONDITIONER                  :{BLACK}Air Conditioner: {RED}Unavailable
-STR_SELF_AIR_CONDITIONER                :{BLACK}With Air Conditioner Compartment {RED}ONLY USED BY ITSELF
-
-STR_DESC_PENGDAIKE                      :{BLACK}Passengers in Boxcars (Peng Dai Ke): From 1980s to 2008, to handle huge traffic amounts during the Spring Festival period, temporary trains where passengers crowding in boxcars had to be operated. This reflected a severe lack of railway transport resources at that time.
-
-STR_ATTACH_ALL_CRH_CR                   :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs
-STR_ATTACH_SLEEPER_MU                   :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs
-STR_ATTACH_CR200J                       :{BLACK}Matching MUs: {GOLD}CR200J Series
-STR_NZJ1_XINSHUGUANG_CAN_ATTACH_WAGON   :{BLACK}Matching Wagons: {GOLD}ZE{BLACK}, equivalent to Double-Decker Hard Seat, Capacity: 136, Comfort: 200; {GOLD}ZY{BLACK}, equivalent to Double-Decker Soft Seat, Capacity: 108, Comfort: 240
-STR_NDJ3_CAN_ATTACH_WAGON               :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC{BLACK}, Second Class Capacity: 114, Comfort: 200
-STR_DJJ1_CAN_ATTACH_WAGON               :{BLACK}Matching Wagons: Only {GOLD}ZY{BLACK}, equivalent to Soft Seat, Comfort: 240
-STR_CR200J_CAN_ATTACH_WAGON             :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, WE, WY, WG
-STR_CRH_CAN_ATTACH_WAGON                :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC
-STR_CRH_SLEEPER_CAN_ATTACH_WAGON        :{BLACK}Matching Wagons: {GOLD}ZE, WY, WG, ZEC
-STR_CRH_LSLEEPER_CAN_ATTACH_WAGON       :{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)
-STR_CRH6A2_CAN_ATTACH_WAGON             :{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: 160), {GOLD}ZY
-STR_CRH6A3_CAN_ATTACH_WAGON             :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: 160
-STR_CRH6F_CAN_ATTACH_WAGON              :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places (Crowded), Comfort: 120
-STR_NC3_CAN_ATTACH_WAGON                :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, Comfort: 185
-
-STR_NJ2_CONSIST                         :{BLACK}Consist: {GOLD}2 to 4 sections
-STR_HXN3QZ_CONSIST                      :{BLACK}Consist: {GOLD}2 to 4 sections
-STR_DF11G_CONSIST                       :{BLACK}Consist: {GOLD}2 sections joint together (Normal), or one section at head, another section at back ("Splitting Pig", max speed 120 km/h, power 4133 hpM)
-STR_NC3_CONSIST                         :{BLACK}Consist: {GOLD}2 to 16 cars; cabs are powered
-STR_NZJ1_XINSHUGUANG_CONSIST            :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle
-STR_JINLUN_LOCOMOTIVE_CONSIST           :{BLACK}Consist: {GOLD}One section at front, another section at back. Only can attach "{BLUE}JIN{WHITE}LUN{GOLD}" 25DT Series coaches.
-STR_NDJ3_CONSIST                        :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle
-STR_DJJ1_CONSIST                        :{BLACK}Consist: {GOLD}One section at front, with wagons attached; or one section at front, another section at back. At least 4 wagons
-STR_CRH5A_CONSIST                       :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car
-STR_CR400_CONSIST                       :{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12
-STR_CR400_AB_CONSIST                    :{BLACK}Consist: {GOLD}4 to 24 cars; with 16-car standard consist 2*(T-M-T-M-M-T-M-T)
-STR_CR400_Z_CONSIST                     :{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12. {RED}Intelligent {YELLOW}EMUs {GOLD}have lower running costs
-STR_CR400_AB_Z_CONSIST                  :{BLACK}Consist: {GOLD}4 to 24 cars; with 16-car standard consist 2*(T-M-T-M-M-T-M-T). {RED}Intelligent {YELLOW}EMUs {GOLD}have lower running costs
-STR_CR200J_CONSIST                      :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, with wagons attached; or one section at front, another section at back. Will run as coupled when cars more than 12
-STR_CR200JL_CONSIST                     :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, another section at back.
-STR_CRH1A_CONSIST                       :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars. Will run as coupled when cars more than 12
-STR_CRH1B_CONSIST                       :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars
-STR_CRH1E_CONSIST                       :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars
-STR_CRH1AA_CONSIST                      :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars. Will run as coupled when cars more than 12
-STR_CRH2A_CONSIST                       :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12
-STR_CRH2B_CONSIST                       :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars
-STR_CRH2C_CONSIST                       :{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12
-STR_CRH2E_CONSIST                       :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars
-STR_CRH2G_CONSIST                       :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12
-STR_CRH3A_CONSIST                       :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
-STR_CRH3C_CONSIST                       :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
-STR_CRH380A_CONSIST                     :{BLACK}Consist: {GOLD}At least 4 cars, with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12
-STR_CRH380AL_CONSIST                    :{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised
-STR_CRH380B_CONSIST                     :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
-STR_CRH380CL_CONSIST                    :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
-STR_CRH380D_CONSIST                     :{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist M-T-M-T-T-M-T-M. Will run as coupled when cars more than 12
-STR_CRH6A2_CONSIST                      :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
-STR_CRH6A3_CONSIST                      :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
-STR_CRH6AA_CONSIST                      :{BLACK}Consist: {GOLD}Fixed consist of 4 cars (Mc-Tp-Tp-Mc), multiple sections available
-STR_CRH6F_CONSIST                       :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
-STR_CR300_CONSIST                       :{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12
-
-STR_CRH1A_HEAD_SEAT                     :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH1B_HEAD_SEAT                     :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH1E_HEAD_SEAT                     :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
-STR_CRH1AA_HEAD_SEAT                    :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH2A_HEAD_SEAT                     :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
-STR_CRH2B_HEAD_SEAT                     :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
-STR_CRH2C_HEAD_SEAT                     :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
-STR_CRH2E_HEAD_SEAT                     :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
-STR_CRH2G_HEAD_SEAT                     :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH2ELS_HEAD_SEAT                   :{BLACK}Head Seat: {GOLD}1st-Class Sleeprt (WY)
-STR_CRH3A_HEAD_SEAT                     :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH3C_HEAD_SEAT                     :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
-STR_CRH5A_HEAD_SEAT                     :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH380A_HEAD_SEAT                   :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH380B_HEAD_SEAT                   :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH380CL_HEAD_SEAT                  :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH380D_HEAD_SEAT                   :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CR400_HEAD_SEAT                     :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CR400_Z_HEAD_SEAT                   :{BLACK}Head Seat: {GOLD}Luxury-Business-Class (SW)
-STR_CRH6A2_HEAD_SEAT                    :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-STR_CRH6A3_HEAD_SEAT                    :{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places, Comfort: 160
-STR_CRH6F_HEAD_SEAT                     :{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places (crowded), Comfort: 140
-STR_CR300_HEAD_SEAT                     :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
-
-STR_ELECTRICITY_SUPPLY_YES              :{BLACK}Electricity Supply for cars: {GOLD}YES
-STR_ELECTRICITY_SUPPLY_NO               :{BLACK}Electricity Supply for cars: {RED}NO
-
-STR_TOO_SHORT                           :TOO SHORT!
-STR_ONLY_TWO_SECTIONS                   :This locomotive must be in a consist of two sections to run.
-STR_MUST_BE_4_8_12_16_CARS              :This MU must be in a consist of 4, 8, 12 or 16 cars to run.
-STR_MUST_BE_5_TO_17_CARS                :This MU must be in a consist of 5 to 17 cars to run.
-STR_MUST_BE_2_TO_16_CARS                :This MU must be in a consist of 2 to 16 cars to run.
-STR_MUST_BE_4_TO_24_CARS                :This MU must be in a consist of 4 to 24 cars to run.
-STR_MUST_BE_8_TO_24_CARS                :This MU must be in a consist of 8 to 24 cars to run.
+##grflangid 0x01
+# STRING                                         :ENGLISH  
+STR_GRF_NAME                                     :China Set: Trains {VERSION_STRING}
+STR_GRF_DESC                                     :The Train sector of the China Set of OpenTTD.
+STR_GRF_URL                                      :https://www.tt-forums.net/viewtopic.php?t=91092
+STR_GRF_DESC_EXTRA                               : Locomotives, MUs, Coaches and Wagons in China Mainland. More contents in the future.
+STR_GRF_DESC_README                              :See readme for details.
+STR_LEAPING_LIU_NEVER_DIES                       :{BLUE}Leaping Liu Never Dies.
+STR_PARAM_LOADING_SPEED                          :Loading Speed
+STR_PARAM_LOADING_SPEED_DESC                     :Adjust vehicle loading speed. Default is 100%.
+STR_PARAM_PURCHASE_COST                          :Purchase costs
+STR_PARAM_PURCHASE_COST_DESC                     :Adjust vehicle purchase costs. Default is 25%.
+STR_PARAM_RUNNING_COST                           :Running costs
+STR_PARAM_RUNNING_COST_DESC                      :Adjust vehicle running costs. Default is 25%.
+STR_PARAM_DIVIDE_16                              :6.25%    
+STR_PARAM_DIVIDE_8                               :12.50%   
+STR_PARAM_DIVIDE_4                               :25%      
+STR_PARAM_DIVIDE_2                               :50%      
+STR_PARAM_NORMAL                                 :100%     
+STR_PARAM_TIMES_2                                :200%     
+STR_PARAM_TIMES_4                                :400%     
+STR_PARAM_TIMES_8                                :800%     
+STR_PARAM_TIMES_16                               :1600%    
+STR_PARAM_CARGO_DECAY                            :Cargo Age Period
+STR_PARAM_CARGO_DECAY_DESC                       :Adjust cargo age period of coaches and wagons. "Long" is "Standard" doubled, while "Very Long" is "Long" doubled. Even in "Standard" mode, cargo age period varies.
+STR_PARAM_STANDARD                               :Standard 
+STR_PARAM_LONG                                   :Long     
+STR_PARAM_VERY_LONG                              :Very Long
+STR_PARAM_GAOZULV                                :25m Passenger Coaches build after 2014 are {DKGREEN}"Gaozu Geeen"{BLACK} in defeaut
+STR_PARAM_GAOZULV_DESC                           :Choose weather to print{DKGREEN} Canarium Green (also called "Gaozu Geeen"){BLACK} to 25m Passenger Coaches build after 2014 in defeaut
+STR_USED_WITH_DYNAMIC_ENGINES                    :This GRF needs dynamic_engines to be turned on. Open console, and type "setting dynamic_engines 1".
+# Name
+STR_NAME_YZ22                                    :YZ22 (Passenger Coach)
+STR_NAME_RZ22                                    :RZ22 (Passenger Coach)
+STR_NAME_YW22                                    :YW22 (Passenger Coach)
+STR_NAME_YW22EARLY                               :YW22 (Passenger Coach) (Early Version)
+STR_NAME_YW221966                                :YW22 (Passenger Coach) (Late Version)
+STR_NAME_RW22                                    :RW22 (Passenger Coach)
+STR_NAME_YZ22AIRCON                              :YZ22 (Passenger Coach) (Air-conditioned)
+STR_NAME_RZ22AIRCON                              :RZ22 (Passenger Coach) (Air-conditioned)
+STR_NAME_YW22AIRCON                              :YW22 (Passenger Coach) (Air-conditioned)
+STR_NAME_RW22AIRCON                              :RW22 (Passenger Coach) (Air-conditioned)
+STR_NAME_CA23                                    :CA23 (Passenger Coach)
+STR_NAME_CA23AIRCON                              :CA23 (Passenger Coach) (Air-conditioned)
+STR_NAME_YZ22B                                   :YZ22B (Passenger Coach)
+STR_NAME_YW22B                                   :YW22B (Passenger Coach)
+STR_NAME_RW22B                                   :RW22B (Passenger Coach)
+STR_NAME_YZ25ML                                  :YZ25 (Mainline) (Passenger Coach)
+STR_NAME_RZ25ML                                  :RZ25 (Mainline) (Passenger Coach)
+STR_NAME_YW25ML                                  :YW25 (Mainline) (Passenger Coach)
+STR_NAME_RW25ML                                  :RW25 (Mainline) (Passenger Coach)
+STR_NAME_CA25ML                                  :CA25 (Mainline) (Restaurant Car)
+STR_NAME_YZ25B                                   :YZ25B (Passenger Coach)
+STR_NAME_RZ25B                                   :RZ25B (Passenger Coach)
+STR_NAME_YW25B                                   :YW25B (Passenger Coach)
+STR_NAME_RW25B                                   :RW25B (Passenger Coach)
+STR_NAME_SYZ25BLD                                :SYZ25B (Passenger Coach) (Low-Door)
+STR_NAME_SRZ25BLD                                :SRZ25B (Passenger Coach) (Low-Door)
+STR_NAME_SYZ25BHD                                :SYZ25B (Passenger Coach) (High-Door)
+STR_NAME_SRZ25BHD                                :SRZ25B (Passenger Coach) (High-Door)
+STR_NAME_SYW25BHD                                :SYW25B (Passenger Coach) (High-Door)
+STR_NAME_SRW25BHD                                :SRW25B (Passenger Coach) (High-Door)
+STR_NAME_YZ25G                                   :YZ25G (Passenger Coach)
+STR_NAME_RZ25G                                   :RZ25G (Passenger Coach)
+STR_NAME_YW25G                                   :YW25G (Passenger Coach)
+STR_NAME_RW25G                                   :RW25G (Passenger Coach)
+STR_NAME_CA25G                                   :CA25G (Restaurant Car)
+STR_NAME_RW19K                                   :RW19K (Passenger Coach)
+STR_NAME_YZ25K                                   :YZ25K (Passenger Coach)
+STR_NAME_RZ25K                                   :RZ25K (Passenger Coach)
+STR_NAME_YW25K                                   :YW25K (Passenger Coach)
+STR_NAME_RW25K                                   :RW25K (Passenger Coach)
+STR_NAME_SYZ25KLD                                :SYZ25K (Passenger Coach) (Low-Door)
+STR_NAME_SRZ25KLD                                :SRZ25K (Passenger Coach) (Low-Door)
+STR_NAME_SYZ25KHD                                :SYZ25K (Passenger Coach) (High-Door)
+STR_NAME_SRZ25KHD                                :SRZ25K (Passenger Coach) (High-Door)
+STR_NAME_SYW25KHD                                :SYW25K (Passenger Coach) (High-Door)
+STR_NAME_SRW25KHD                                :SRW25K (Passenger Coach) (High-Door)
+STR_NAME_SCA25KHD                                :SCA25K (Restaurant Car) (High-Door)
+STR_NAME_CA25K                                   :CA25K (Restaurant Car)
+STR_NAME_RW19T                                   :RW19T (Passenger Coach)
+STR_NAME_YZ25T                                   :YZ25T (Passenger Coach)
+STR_NAME_RZ25T                                   :RZ25T (Passenger Coach)
+STR_NAME_YW25T                                   :YW25T (Passenger Coach)
+STR_NAME_RW25T                                   :RW25T (Passenger Coach)
+STR_NAME_CA25T                                   :CA25T (Restaurant Car)
+STR_NAME_YZ31                                    :YZ31 (Passenger Coach)
+STR_NAME_XL22                                    :XL22 (Luggage Car)
+STR_NAME_XL25ML                                  :XL25 (Mainline) (Luggage Car)
+STR_NAME_XL25B                                   :XL25B (Luggage Car)
+STR_NAME_XL25G                                   :XL25G (Luggage Car)
+STR_NAME_XL25K                                   :XL25K (Luggage Car)
+STR_NAME_XL25T                                   :XL25T (Luggage Car)
+STR_NAME_XL25T_SSPE                              :XL25T-SSPE (Luggage Car)
+STR_NAME_UZ22                                    :UZ22 (Railway Post Office)
+STR_NAME_UZ25T                                   :UZ25T (Railway Post Office)
+STR_NAME_TZ                                      :TZ (Air Conditioner Generator Car)
+STR_NAME_TZ2                                     :TZ2 (Air Conditioner Generator Car)
+STR_NAME_KD25G                                   :KD25G (Air Conditioner Generator Car)
+STR_NAME_KD25K                                   :KD25K (Air Conditioner Generator Car)
+STR_NAME_KD25Z                                   :KD25Z (Air Conditioner Generator Car)
+STR_NAME_KD25T                                   :KD25T (Air Conditioner Generator Car)
+STR_NAME_RZ125Z                                  :RZ125Z (Passenger Coach)
+STR_NAME_RZ225Z                                  :RZ225Z (Passenger Coach)
+STR_NAME_RZT25Z                                  :RZT25Z (Passenger Coach)
+STR_NAME_CA25Z                                   :CA25Z (Restaurant Car)
+STR_NAME_RZXL25Z                                 :RZXL25Z (Luggage Car)
+STR_NAME_SRZ125Z                                 :SRZ125Z (Passenger Coach)
+STR_NAME_SRZ225Z                                 :SRZ225Z (Passenger Coach)
+STR_NAME_SCA25Z                                  :SCA25Z (Restaurant Car)
+STR_NAME_SRZXL25Z                                :SRZXL25Z (Luggage Car)
+STR_NAME_SYW25                                   :SYW25 (Passenger Coach)
+STR_NAME_SRW25                                   :SRW25 (Passenger Coach)
+STR_NAME_YZ25DT_JINLUN                           :YZ25DT (JINLUN DMU) (Passenger Coach)
+STR_NAME_YW25DT_JINLUN                           :YW25DT (JINLUN DMU) (Passenger Coach)
+STR_NAME_RW25DT_JINLUN                           :RW25DT (JINLUN DMU) (Passenger Coach)
+STR_NAME_SYZ25DT_JINLUN                          :SYZ25DT (JINLUN DMU) (Passenger Coach)
+STR_NAME_SRZ25DT_JINLUN                          :SRZ25DT (JINLUN DMU) (Passenger Coach)
+STR_NAME_C62                                     :C62 (Gondola)
+STR_NAME_C64                                     :C64 (Gondola)
+STR_NAME_C70                                     :C70 (Gondola)
+STR_NAME_P50                                     :P50 (Boxcar)
+STR_NAME_P60                                     :P60 (Boxcar)
+STR_NAME_P61                                     :P61 (Boxcar)
+STR_NAME_P62                                     :P62 (Boxcar)
+STR_NAME_P63                                     :P63 (Boxcar)
+STR_NAME_P64                                     :P64 (Boxcar)
+STR_NAME_P65                                     :P65 (Boxcar)
+STR_NAME_P70                                     :P70 (Boxcar)
+STR_NAME_P80                                     :P80 (Boxcar)
+STR_NAME_PB                                      :PB (Boxcar)
+STR_NAME_B6                                      :B6 (Refrigerator Wagon)
+STR_NAME_B22                                     :B22 (Refrigerator Wagon)
+STR_NAME_G17                                     :G17 (Tanker)
+STR_NAME_G50                                     :G50 (Tanker)
+STR_NAME_G60                                     :G60 (Tanker)
+STR_NAME_GN70                                    :GN70 (Tanker)
+STR_NAME_GN80                                    :GN80 (Tanker)
+STR_NAME_N5                                      :N5 (Flatcar)
+STR_NAME_N60                                     :N60 (Flatcar)
+STR_NAME_NX17                                    :NX17 (Flatcar)
+STR_NAME_NX70A                                   :NX70A (Flatcar)
+STR_NAME_JSQ5                                    :JSQ5 (Vehicle Transporter)
+STR_NAME_JSQ6                                    :JSQ6 (Vehicle Transporter)
+STR_NAME_L70                                     :L70 (Hopper)
+STR_NAME_J5                                      :J5 (Livestock Wagon)
+STR_NAME_SY                                      :SY (Steam)
+STR_NAME_DF                                      :DF (Diesel)
+STR_NAME_DF4K                                    :DF4 (Diesel) (Passenger Type)
+STR_NAME_DF4H                                    :DF4 (Diesel) (Freight Type)
+STR_NAME_DF4BK                                   :DF4B (Diesel) (Passenger Type)
+STR_NAME_DF4BH                                   :DF4B (Diesel) (Freight Type)
+STR_NAME_DF4C                                    :DF4C (Diesel)
+STR_NAME_DF4D0000                                :DF4D-0000 (Diesel)
+STR_NAME_DF4DF                                   :DF4DF (Diesel)
+STR_NAME_DF4D3000                                :DF4D-3000 (Diesel)
+STR_NAME_DF4D4000                                :DF4D-4000 (Diesel)
+STR_NAME_DF4D7000                                :DF4D-7000 (Diesel)
+STR_NAME_DF4E                                    :DF4E (Diesel)
+STR_NAME_DF5KZ                                   :DF5 (Diesel Shunter)
+STR_NAME_DF5                                     :DF5-1000 (Diesel Shunter)
+STR_NAME_DF7G                                    :DF7G (Diesel Shunter)
+STR_NAME_DF7G5000                                :DF7G-5000 (Diesel Shunter)
+STR_NAME_DF7G8000                                :DF7G-8000 (Diesel Shunter)
+STR_NAME_DFH7                                    :DFH7 (Diesel)
+STR_NAME_DF8B                                    :DF8B (Diesel)
+STR_NAME_DF11                                    :DF11 (Diesel)
+STR_NAME_DF11G                                   :DF11G (Diesel)
+STR_NAME_DF11Z                                   :DF11Z (Diesel)
+STR_NAME_ND5                                     :ND5 (Diesel)
+STR_NAME_NJ2                                     :NJ2 (Diesel)
+STR_NAME_HXN3                                    :HXN3 (Diesel)
+STR_NAME_HXN3QZ                                  :HXN3 (Diesel) (Plateau Type)
+STR_NAME_HXN5                                    :HXN5 (Diesel)
+STR_NAME_HXN5B                                   :HXN5B (Diesel)
+STR_NAME_SS1                                     :SS1 (Electric)
+STR_NAME_SS3                                     :SS3 (Electric)
+STR_NAME_SS3B                                    :SS3B (Electric)
+STR_NAME_SS4                                     :SS4 (Electric)
+STR_NAME_SS4B                                    :SS4B (Electric)
+STR_NAME_SS4C                                    :SS4C (Electric)
+STR_NAME_SS4G                                    :SS4G (Electric)
+STR_NAME_SS5                                     :SS5 (Electric)
+STR_NAME_SS6                                     :SS6 (Electric)
+STR_NAME_SS6B                                    :SS6B (Electric)
+STR_NAME_SS7                                     :SS7 (Electric)
+STR_NAME_SS7B                                    :SS7B (Electric)
+STR_NAME_SS7C                                    :SS7C (Electric)
+STR_NAME_SS7D                                    :SS7D (Electric)
+STR_NAME_SS7E                                    :SS7E (Electric)
+STR_NAME_SS8                                     :SS8 (Electric)
+STR_NAME_SS9                                     :SS9 (Electric)
+STR_NAME_SS9G                                    :SS9G (Electric)
+STR_NAME_6Y2                                     :6Y2 (Electric)
+STR_NAME_HXD1                                    :HXD1 (Electric)
+STR_NAME_HXD11000                                :HXD1-1000 (Electric)
+STR_NAME_HXD1B                                   :HXD1B (Electric)
+STR_NAME_HXD1D                                   :HXD1D (Electric)
+STR_NAME_HXD2                                    :HXD2 (Electric)
+STR_NAME_HXD21000                                :HXD2-1000 (Electric)
+STR_NAME_HXD3C                                   :HXD3C (Electric)
+STR_NAME_HXD3D                                   :HXD3D (Electric)
+STR_NAME_FXD1B                                   :FXD1B (Electric)
+STR_NAME_CHA1C                                   :CHA1C (Hybrid)
+STR_NAME_NC3                                     :NC3 (DMU)
+STR_NAME_NZJ1_XINSHUGUANG                        :NZJ1 "Xinshuguang" (DMU)
+STR_NAME_NZJ2_JINLUN_UNILAMINAR                  :NZJ2 "Jinlun" (UNILAMINAR) (DMU)
+STR_NAME_NZJ2_JINLUN_DOUBLE_DECKER               :NZJ2 "Jinlun" (DOUBLE DECKER) (DMU)
+STR_NAME_NDJ3                                    :NDJ3 "Great Wall" (DMU)
+STR_NAME_DJJ1                                    :DJJ1 "Blue Arrow" (EMU)
+STR_NAME_DJJ2                                    :DJJ2 "China Star" (EMU)
+STR_NAME_DJF3                                    :DJF3 "Changbai Mount" (EMU)
+STR_NAME_CR200JA                                 :CR200J-A (EMU)
+STR_NAME_CR200JAL                                :CR200J-A (Long Version) (EMU)
+STR_NAME_CR200JB                                 :CR200J-B (EMU)
+STR_NAME_CR200JC                                 :CR200J-C (EMU)
+STR_NAME_CR200JCL                                :CR200J-C (Long Version) (EMU)
+STR_NAME_CRH1A                                   :CRH1A (EMU)
+STR_NAME_CRH1B                                   :CRH1B (Long Version) (EMU)
+STR_NAME_CRH1E                                   :CRH1E (EMU)
+STR_NAME_CRH1AA                                  :CRH1A-A (EMU)
+STR_NAME_CRH2A                                   :CRH2A (EMU)
+STR_NAME_CRH2B                                   :CRH2B (Long Version) (EMU)
+STR_NAME_CRH2C                                   :CRH2C (EMU)
+STR_NAME_CRH2E                                   :CRH2E (EMU)
+STR_NAME_CRH2G                                   :CRH2G (EMU)
+STR_NAME_CRH2ELS                                 :CRH2E (Longitudinal Sleeper) (EMU)
+STR_NAME_CRH3A                                   :CRH3A (EMU)
+STR_NAME_CRH3C                                   :CRH3C (EMU)
+STR_NAME_CRH5A                                   :CRH5A (EMU)
+STR_NAME_CRH380A                                 :CRH380A (EMU)
+STR_NAME_CRH380AL                                :CRH380AL (Long Version) (EMU)
+STR_NAME_CRH380B                                 :CRH380B (EMU)
+STR_NAME_CRH380CL                                :CRH380CL (EMU)
+STR_NAME_CRH380D                                 :CRH380D (EMU)
+STR_NAME_CR300AF                                 :CR300AF (EMU)
+STR_NAME_CR300BF                                 :CR300BF (EMU)
+STR_NAME_CR400AF                                 :CR400AF (EMU)
+STR_NAME_CR400AFAB                               :CR400AF-A/B (Long Version) (EMU)
+STR_NAME_CR400AFZ                                :CR400AF-C/Z/S (Intelligent EMU)
+STR_NAME_CR400AFABZ                              :CR400AF-AZ/BZ/BS (Long Version) (Intelligent EMU)
+STR_NAME_CR400BF                                 :CR400BF (EMU)
+STR_NAME_CR400BFAB                               :CR400BF-A/B (Long Version) (EMU)
+STR_NAME_CR400BFC                                :CR400BF-C (Intelligent EMU)
+STR_NAME_CR400BFZ                                :CR400BF-Z/S (Intelligent EMU)
+STR_NAME_CR400BFABZ                              :CR400BF-AZ/BZ/BS (Intelligent EMU)
+STR_NAME_CRH6A2                                  :CRH6A (2-Door Version) (EMU)
+STR_NAME_CRH6A3                                  :CRH6A (3-Door Version) (EMU)
+STR_NAME_CRH6AA                                  :CRH6A-A (Section) (EMU)
+STR_NAME_CRH6F                                   :CRH6F (EMU)
+STR_NAME_ZEMUW                                   :2nd-Class (ZE) MU Wagon
+STR_NAME_ZYMUW                                   :1st-Class (ZY) MU Wagon
+STR_NAME_ZSMUW                                   :Business-Class (ZS) MU Wagon
+STR_NAME_SWMUW                                   :Luxury-Business-Class (SW) MU Wagon
+STR_NAME_ZECMUW                                  :2nd-Class Restaurant Combined (ZEC) MU Wagon
+STR_NAME_WEMUW                                   :2nd-Class Sleeper (WE) MU Wagon
+STR_NAME_WYMUW                                   :1st-Class Sleeper (WY) MU Wagon
+STR_NAME_WGMUW                                   :Top-Class Sleeper (WG) MU Wagon
+# Full Name
+STR_FULL_NAME_YZ22                               :{BLACK}FULLNAME: {GOLD}22 Type Hard Seat Passenger Coach
+STR_FULL_NAME_RZ22                               :{BLACK}FULLNAME: {GOLD}22 Type Soft Seat Passenger Coach
+STR_FULL_NAME_YW22                               :{BLACK}FULLNAME: {GOLD}22 Type Hard Sleeper Passenger Coach
+STR_FULL_NAME_RW22                               :{BLACK}FULLNAME: {GOLD}22 Type Soft Sleeper Passenger Coach
+STR_FULL_NAME_YZ22AIRCON                         :{BLACK}FULLNAME: {GOLD}22 Type Hard Seat Passenger Coach (Air-conditioned)
+STR_FULL_NAME_RZ22AIRCON                         :{BLACK}FULLNAME: {GOLD}22 Type Soft Seat Passenger Coach (Air-conditioned)
+STR_FULL_NAME_YW22AIRCON                         :{BLACK}FULLNAME: {GOLD}22 Type Hard Sleeper Passenger Coach (Air-conditioned)
+STR_FULL_NAME_RW22AIRCON                         :{BLACK}FULLNAME: {GOLD}22 Type Soft Sleeper Passenger Coach (Air-conditioned)
+STR_FULL_NAME_CA23                               :{BLACK}FULLNAME: {GOLD}23 Type Restaurant Car
+STR_FULL_NAME_CA23AIRCON                         :{BLACK}FULLNAME: {GOLD}23 Type Restaurant Car (Air-conditioned)
+STR_FULL_NAME_YZ22B                              :{BLACK}FULLNAME: {GOLD}22B Type Hard Seat Passenger Coach
+STR_FULL_NAME_YW22B                              :{BLACK}FULLNAME: {GOLD}22B Type Hard Sleeper Passenger Coach
+STR_FULL_NAME_RW22B                              :{BLACK}FULLNAME: {GOLD}22B Type Soft Sleeper Passenger Coach
+STR_FULL_NAME_YZ25ML                             :{BLACK}FULLNAME: {GOLD}25m Mainline Hard Seat Passenger Coach
+STR_FULL_NAME_RZ25ML                             :{BLACK}FULLNAME: {GOLD}25m Mainline Soft Seat Passenger Coach
+STR_FULL_NAME_YW25ML                             :{BLACK}FULLNAME: {GOLD}25m Mainline Hard Sleeper Passenger Coach
+STR_FULL_NAME_RW25ML                             :{BLACK}FULLNAME: {GOLD}25m Mainline Soft Sleeper Passenger Coach
+STR_FULL_NAME_CA25ML                             :{BLACK}FULLNAME: {GOLD}25m Mainline Restaurant Car
+STR_FULL_NAME_YZ25B                              :{BLACK}FULLNAME: {GOLD}25m Standard Hard Seat Passenger Coach
+STR_FULL_NAME_RZ25B                              :{BLACK}FULLNAME: {GOLD}25m Standard Soft Seat Passenger Coach
+STR_FULL_NAME_YW25B                              :{BLACK}FULLNAME: {GOLD}25m Standard Hard Sleeper Passenger Coach
+STR_FULL_NAME_RW25B                              :{BLACK}FULLNAME: {GOLD}25m Standard Soft Sleeper Passenger Coach
+STR_FULL_NAME_SYZ25B                             :{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Hard Seat Passenger Coach
+STR_FULL_NAME_SRZ25B                             :{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Soft Seat Passenger Coach
+STR_FULL_NAME_SYW25B                             :{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Hard Sleeper Passenger Coach
+STR_FULL_NAME_SRW25B                             :{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Soft Sleeper Passenger Coach
+STR_FULL_NAME_YZ25G                              :{BLACK}FULLNAME: {GOLD}25m Improved Hard Seat Passenger Coach
+STR_FULL_NAME_RZ25G                              :{BLACK}FULLNAME: {GOLD}25m Improved Soft Seat Passenger Coach
+STR_FULL_NAME_YW25G                              :{BLACK}FULLNAME: {GOLD}25m Improved Hard Sleeper Passenger Coach
+STR_FULL_NAME_RW25G                              :{BLACK}FULLNAME: {GOLD}25m Improved Soft Sleeper Passenger Coach
+STR_FULL_NAME_CA25G                              :{BLACK}FULLNAME: {GOLD}25m Improved Restaurant Car
+STR_FULL_NAME_RW19K                              :{BLACK}FULLNAME: {GOLD}19K Type Soft Sleeper Passenger Coach (2 berth)
+STR_FULL_NAME_YZ25K                              :{BLACK}FULLNAME: {GOLD}25m Rapid Hard Seat Passenger Coach
+STR_FULL_NAME_RZ25K                              :{BLACK}FULLNAME: {GOLD}25m Rapid Soft Seat Passenger Coach
+STR_FULL_NAME_YW25K                              :{BLACK}FULLNAME: {GOLD}25m Rapid Hard Sleeper Passenger Coach
+STR_FULL_NAME_RW25K                              :{BLACK}FULLNAME: {GOLD}25m Rapid Soft Sleeper Passenger Coach
+STR_FULL_NAME_SYZ25K                             :{BLACK}FULLNAME: {GOLD}25m Rapid Double Decker Hard Seat Passenger Coach
+STR_FULL_NAME_SRZ25K                             :{BLACK}FULLNAME: {GOLD}25m Rapid Double Decker Soft Seat Passenger Coach
+STR_FULL_NAME_SYW25K                             :{BLACK}FULLNAME: {GOLD}25m Rapid Double Decker Hard Sleeper Passenger Coach
+STR_FULL_NAME_SRW25K                             :{BLACK}FULLNAME: {GOLD}25m Rapid Double Decker Soft Sleeper Passenger Coach
+STR_FULL_NAME_SCA25K                             :{BLACK}FULLNAME: {GOLD}25m Rapid Double Decker Restaurant Car
+STR_FULL_NAME_CA25K                              :{BLACK}FULLNAME: {GOLD}25m Rapid Improved Restaurant Car
+STR_FULL_NAME_RW19T                              :{BLACK}FULLNAME: {GOLD}19T Type Soft Sleeper Passenger Coach (2 berth)
+STR_FULL_NAME_YZ25T                              :{BLACK}FULLNAME: {GOLD}25m Accelerated Hard Seat Passenger Coach
+STR_FULL_NAME_RZ25T                              :{BLACK}FULLNAME: {GOLD}25m Accelerated Soft Seat Passenger Coach
+STR_FULL_NAME_YW25T                              :{BLACK}FULLNAME: {GOLD}25m Accelerated Hard Sleeper Passenger Coach
+STR_FULL_NAME_RW25T                              :{BLACK}FULLNAME: {GOLD}25m Accelerated Soft Sleeper Passenger Coach
+STR_FULL_NAME_YZ31                               :{BLACK}FULLNAME: {GOLD}31 Type Hard Seat Passenger Coach
+STR_FULL_NAME_CA25T                              :{BLACK}FULLNAME: {GOLD}25m Accelerated Restaurant Car
+STR_FULL_NAME_XL22                               :{BLACK}FULLNAME: {GOLD}22 Type Luggage Car
+STR_FULL_NAME_XL25ML                             :{BLACK}FULLNAME: {GOLD}25m Mainline Luggage Car
+STR_FULL_NAME_XL25B                              :{BLACK}FULLNAME: {GOLD}25m Standard Luggage Car
+STR_FULL_NAME_XL25G                              :{BLACK}FULLNAME: {GOLD}25m Improved Luggage Car
+STR_FULL_NAME_XL25K                              :{BLACK}FULLNAME: {GOLD}25m Rapid Luggage Car
+STR_FULL_NAME_XL25T                              :{BLACK}FULLNAME: {GOLD}25m Accelerated Luggage Car
+STR_FULL_NAME_UZ22                               :{BLACK}FULLNAME: {GOLD}22 Type Railway Post Office
+STR_FULL_NAME_UZ25T                              :{BLACK}FULLNAME: {GOLD}25m Accelerated Railway Post Office
+STR_FULL_NAME_TZ                                 :{BLACK}FULLNAME: {GOLD}Special Purpose Car
+STR_FULL_NAME_TZ2                                :{BLACK}FULLNAME: {GOLD}Special Purpose Car Type 2
+STR_FULL_NAME_KD25G                              :{BLACK}FULLNAME: {GOLD}25m Improved Air Conditioner Generator Car
+STR_FULL_NAME_KD25K                              :{BLACK}FULLNAME: {GOLD}25m Rapid Air Conditioner Generator Car
+STR_FULL_NAME_KD25Z                              :{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Air Conditioner Generator Car
+STR_FULL_NAME_KD25T                              :{BLACK}FULLNAME: {GOLD}25m Accelerated Air Conditioner Generator Car
+STR_FULL_NAME_RZ125Z                             :{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed 1st-Class Seat Passenger Coach
+STR_FULL_NAME_RZ225Z                             :{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed 2nd-Class Seat Passenger Coach
+STR_FULL_NAME_RZT25Z                             :{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Top-Class Seat Passenger Coach
+STR_FULL_NAME_RZXL25Z                            :{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Soft Seat Passenger Coach & Luggage Car
+STR_FULL_NAME_CA25Z                              :{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Restaurant Car
+STR_FULL_NAME_SRZ125Z                            :{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Double Decker 1st-Class Seat Passenger Coach
+STR_FULL_NAME_SRZ225Z                            :{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Double Decker 2nd-Class Seat Passenger Coach
+STR_FULL_NAME_SCA25Z                             :{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Double Decker Restaurant Car
+STR_FULL_NAME_SRZXL25Z                           :{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Double Decker Soft Seat Passenger Coach & Luggage Car
+STR_FULL_NAME_SYW25                              :{BLACK}FULLNAME: {GOLD}25m Double Decker Hard Sleeper Passenger Coach
+STR_FULL_NAME_SRW25                              :{BLACK}FULLNAME: {GOLD}25m Double Decker Soft Sleeper Passenger Coach
+STR_FULL_NAME_YZ25DT_JINLUN                      :{BLACK}FULLNAME: {GOLD}25m Unilaminar Hard Seat Passenger Trail Car of "Jinlun" DMU
+STR_FULL_NAME_YW25DT_JINLUN                      :{BLACK}FULLNAME: {GOLD}25m Unilaminar Hard Sleeper Passenger Trail Car of "Jinlun" DMU
+STR_FULL_NAME_RW25DT_JINLUN                      :{BLACK}FULLNAME: {GOLD}25m Unilaminar Soft Sleeper Passenger Trail Car of "Jinlun" DMU
+STR_FULL_NAME_SYZ25DT_JINLUN                     :{BLACK}FULLNAME: {GOLD}25m Double Decker Hard Seat Passenger Trail Car of "Jinlun" DMU
+STR_FULL_NAME_SRZ25DT_JINLUN                     :{BLACK}FULLNAME: {GOLD}25m Double Decker Hard Seat Passenger Trail Car of "Jinlun" DMU
+STR_FULL_NAME_SY                                 :{BLACK}FULLNAME: {GOLD}Shangyou {BLACK}(Meaning: Aiming High) {GOLD}Steam Locomotive
+STR_FULL_NAME_DF                                 :{BLACK}FULLNAME: {GOLD}Dongfeng Diesel Locomotive
+STR_FULL_NAME_DF4                                :{BLACK}FULLNAME: {GOLD}Dongfeng 4 Diesel Locomotive
+STR_FULL_NAME_DF4B                               :{BLACK}FULLNAME: {GOLD}Dongfeng 4B Diesel Locomotive
+STR_FULL_NAME_DF4C                               :{BLACK}FULLNAME: {GOLD}Dongfeng 4C Diesel Locomotive
+STR_FULL_NAME_DF4D                               :{BLACK}FULLNAME: {GOLD}Dongfeng 4D Diesel Locomotive
+STR_FULL_NAME_DF4D7000                           :{BLACK}FULLNAME: {GOLD}Dongfeng 4D Diesel Locomotive 7000 Series
+STR_FULL_NAME_DF4DF                              :{BLACK}FULLNAME: {GOLD}Dongfeng 4DF Diesel Locomotive
+STR_FULL_NAME_DF4E                               :{BLACK}FULLNAME: {GOLD}Dongfeng 4E Diesel Locomotive
+STR_FULL_NAME_DF5KZ                              :{BLACK}FULLNAME: {GOLD}Dongfeng 5 Diesel Locomotive 
+STR_FULL_NAME_DF5                                :{BLACK}FULLNAME: {GOLD}Dongfeng 5 Diesel Locomotive 1000 Series
+STR_FULL_NAME_DF7G                               :{BLACK}FULLNAME: {GOLD}Dongfeng 7G Diesel Locomotive
+STR_FULL_NAME_DF7G5000                           :{BLACK}FULLNAME: {GOLD}Dongfeng 7G Diesel Locomotive 5000 Series
+STR_FULL_NAME_DF7G8000                           :{BLACK}FULLNAME: {GOLD}Dongfeng 7G Diesel Locomotive 8000 Series
+STR_FULL_NAME_DFH7                               :{BLACK}FULLNAME: {GOLD}Dongfanghong 7 Diesel Locomotive
+STR_FULL_NAME_DF8B                               :{BLACK}FULLNAME: {GOLD}Dongfeng 8B Diesel Locomotive
+STR_FULL_NAME_DF11                               :{BLACK}FULLNAME: {GOLD}Dongfeng 11 Diesel Locomotive
+STR_FULL_NAME_DF11G                              :{BLACK}FULLNAME: {BLUE}Dongfeng 11G {WHITE}Diesel Locomotive
+STR_FULL_NAME_DF11Z                              :{BLACK}FULLNAME: {GOLD}Dongfeng 11Z Diesel Locomotive
+STR_FULL_NAME_ND5                                :{BLACK}FULLNAME: {GOLD}Neidian 5 Diesel Locomotive
+STR_FULL_NAME_HXN3                               :{BLACK}FULLNAME: {GOLD}Hexie 3 Diesel Locomotive
+STR_FULL_NAME_HXN5                               :{BLACK}FULLNAME: {GOLD}Hexie 5 Diesel Locomotive
+STR_FULL_NAME_HXN5B                              :{BLACK}FULLNAME: {GOLD}Hexie 5B Diesel Locomotive
+STR_FULL_NAME_SS1                                :{BLACK}FULLNAME: {GOLD}Shaoshan 1 Electric Locomotive
+STR_FULL_NAME_SS3                                :{BLACK}FULLNAME: {GOLD}Shaoshan 3 Electric Locomotive
+STR_FULL_NAME_SS3B                               :{BLACK}FULLNAME: {GOLD}Shaoshan 3B Electric Locomotive
+STR_FULL_NAME_SS4                                :{BLACK}FULLNAME: {GOLD}Shaoshan 4 Electric Locomotive
+STR_FULL_NAME_SS4B                               :{BLACK}FULLNAME: {GOLD}Shaoshan 4B Electric Locomotive
+STR_FULL_NAME_SS4C                               :{BLACK}FULLNAME: {GOLD}Shaoshan 4C Electric Locomotive
+STR_FULL_NAME_SS4G                               :{BLACK}FULLNAME: {GOLD}Shaoshan 4G Electric Locomotive
+STR_FULL_NAME_SS5                                :{BLACK}FULLNAME: {GOLD}Shaoshan 5 Electric Locomotive
+STR_FULL_NAME_SS6                                :{BLACK}FULLNAME: {GOLD}Shaoshan 6 Electric Locomotive
+STR_FULL_NAME_SS6B                               :{BLACK}FULLNAME: {GOLD}Shaoshan 6B Electric Locomotive
+STR_FULL_NAME_SS7                                :{BLACK}FULLNAME: {GOLD}Shaoshan 7 Electric Locomotive
+STR_FULL_NAME_SS7B                               :{BLACK}FULLNAME: {GOLD}Shaoshan 7B Electric Locomotive
+STR_FULL_NAME_SS7C                               :{BLACK}FULLNAME: {GOLD}Shaoshan 7C Electric Locomotive
+STR_FULL_NAME_SS7D                               :{BLACK}FULLNAME: {GOLD}Shaoshan 7D Electric Locomotive
+STR_FULL_NAME_SS7E                               :{BLACK}FULLNAME: {GOLD}Shaoshan 7E Electric Locomotive
+STR_FULL_NAME_SS8                                :{BLACK}FULLNAME: {GOLD}Shaoshan 8 Electric Locomotive
+STR_FULL_NAME_SS9                                :{BLACK}FULLNAME: {GOLD}Shaoshan 9 Electric Locomotive
+STR_FULL_NAME_SS9G                               :{BLACK}FULLNAME: {GOLD}Shaoshan 9G Electric Locomotive
+STR_FULL_NAME_HXD1                               :{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1 Electric Locomotive
+STR_FULL_NAME_HXD11000                           :{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1 Electric Locomotive 1000 Series
+STR_FULL_NAME_HXD1B                              :{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1B Electric Locomotive
+STR_FULL_NAME_HXD1D                              :{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1D Electric Locomotive
+STR_FULL_NAME_FXD1B                              :{BLACK}FULLNAME: {GOLD}Fuxing/Revival 1B Electric Locomotive
+STR_FULL_NAME_HXD2                               :{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2 Electric Locomotive
+STR_FULL_NAME_HXD21000                           :{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2 Electric Locomotive 1000 Series
+STR_FULL_NAME_HXD3C                              :{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3C Electric Locomotive
+STR_FULL_NAME_HXD3D                              :{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3D Electric Locomotive
+# Series Nmae
+STR_DF4_SERIES                                   :DF4 Series (Diesel Locomotive)
+STR_DF4D_SERIES                                  :DF4D Series (Diesel Locomotive)
+STR_DF5_SERIES                                   :DF5 Series (Diesel Locomotive)
+STR_DF7G_SERIES                                  :DF7G Series (Diesel Locomotive)
+STR_SS4_SERIES                                   :SS4 Series (Electric Locomotive)
+STR_SS6_SERIES                                   :SS6 Series (Electric Locomotive)
+STR_SS7_SERIES                                   :SS7 Series (Electric Locomotive)
+STR_SS9_SERIES                                   :SS9 Series (Electric Locomotive)
+STR_HXD1_SERIES                                  :HXD1 Series (Electric Locomotive)
+STR_HXD2_SERIES                                  :HXD2 Series (Electric Locomotive)
+STR_HXD3_SERIES                                  :HXD3 Series (Electric Locomotive)
+STR_HXN3_SERIES                                  :HXN3 Series (Diesel Locomotive)
+STR_HXN5_SERIES                                  :HXN5 Series (Diesel Locomotive)
+STR_NZJ2_SERIES                                  :NZJ2 Series (DMU)
+STR_CRH1_SERIES                                  :CRH1 Series (EMU)
+STR_CRH2_SERIES                                  :CRH2 Series (EMU)
+STR_CRH3_SERIES                                  :CRH3 Series (EMU)
+STR_CRH5_SERIES                                  :CRH5 Series (EMU)
+STR_CRH6_SERIES                                  :CRH6 Series (EMU)
+STR_CRH380A_SERIES                               :CRH380A Series (EMU)
+STR_CRH380B_SERIES                               :CRH380B Series (EMU)
+STR_CR200J_SERIES                                :CR200J Series (EMU)
+STR_CR400AF_SERIES                               :CR400AF Series (EMU)
+STR_CR400BF_SERIES                               :CR400BF Series (EMU)
+STR_21_SERIES                                    :Type 21 Series Coaches
+STR_22_SERIES                                    :Type 22 Series Coaches
+STR_22_AIRCON_SERIES                             :Type 22 Series Air-conditioned Coaches
+STR_22B_SERIES                                   :Type 22B Series Coaches
+STR_24_DDR_SERIES                                :Type 24 Series Coaches (DDR)
+STR_25_SERIES                                    :Type 25 Series Coaches
+STR_S25_SERIES                                   :Type S25 Series Coaches
+STR_25_HK_SERIES                                 :Type 25 Series Canton-Kowloon Railway Coaches
+STR_25B_SERIES                                   :Type 25B Series Coaches
+STR_S25BLD_SERIES                                :Type S25B Series Coaches (Low-Door)
+STR_S25BHD_SERIES                                :Type S25B Series Coaches (High-Door)
+STR_25G_SERIES                                   :Type 25G Series Coaches
+STR_25Z_SERIES                                   :Type 25Z Series Coaches
+STR_S25Z_SERIES                                  :Type S25Z Series Coaches 
+STR_25K_SERIES                                   :Type 25K Series Coaches
+STR_S25KLD_SERIES                                :Type S25K Series Coaches (Low-Door)
+STR_S25KHD_SERIES                                :Type S25K Series Coaches (High-Door)
+STR_25T_SERIES                                   :Type 25T Series Coaches
+STR_25DT_JINLUN_SERIES                           :NZJ2 JINLUN DMU Wagons
+STR_MU_WAGON                                     :MU Wagons
+STR_BOXCAR                                       :Boxcar   
+STR_FLATCAR                                      :Flatcar  
+STR_TANKER                                       :Tanker   
+STR_GONDOLA                                      :Gondola  
+STR_REFRIGERATOR_WAGON                           :Refrigerator Wagon
+STR_VIHICLE_TRANSPORTER                          :Vihicle Transporter
+# Import Regien
+STR_US_IMPORT                                    :Imported from United States
+STR_FR_IMPORT                                    :Imported from France
+STR_HU_IMPORT                                    :Imported from Hungary
+STR_DESC_6                                       :{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}
+STR_DESC_5                                       :{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}
+STR_DESC_4                                       :{STRING}{}{STRING}{}{STRING}{}{STRING}
+STR_DESC_3                                       :{STRING}{}{STRING}{}{STRING}
+STR_DESC_2                                       :{STRING}{}{STRING}
+# Desc
+STR_JINLUN_25DT                                  :Coaches use for DMU {BLUE}"JIN{WHITE}LUN"
+STR_XL25T_SSPE_DESCRIPTION                       :{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.
+STR_CHA1C_DESC                                   : {BLACK}Hybrid Locomotive using battery on non-electrified tracks providing {BLUE}2000 kW{BLACK}, and providing {RED}2400 kW{BLACK} on 25kV AC tracks
+# Livery Availability
+STR_DF_LIVERY_AVAILABILITY                       :{BLACK}Livery Availability: {GOLD}Yellow {GREEN}Line {BLACK}Livery, {WHITE}White {GREEN}Line {BLACK}Livery
+STR_DF4_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea, DF4B only),{BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery, Jinhua-Wenzhou Livery (DF4B only)
+STR_DF4C_LIVERY_AVAILABILITY                     :{BLACK}Livery Availability: Original Livery, {GREEN}GREEN {GOLD}Livery, {BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery
+STR_DF4D0000_LIVERY_AVAILABILITY                 :{BLACK}Livery Availability: {BROWN}Original {GOLD}Livery, {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {GOLD}Railway Livery
+STR_DF4D4000_LIVERY_AVAILABILITY                 :{BLACK}Livery Availability: {BLUE}4000-{YELLOW}Series {GOLD}Livery and {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea)
+STR_DF4DF_LIVERY_AVAILABILITY                    :{BLACK}Livery Availability: Original Livery
+STR_DF7G5000_LIVERY_AVAILABILITY                 :{BLACK}Livery Availability: Original Livery
+STR_DF8B_LIVERY_AVAILABILITY                     :{BLACK}Livery Availability: Original Livery
+STR_NJ2_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {WHITE}Original {GOLD}and {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery
+STR_SS7C_LIVERY_AVAILABILITY                     :{BLACK}Livery Availability: {GOLD}Original Livery, {YELLOW}Banana Yellow {GOLD}Livery
+STR_6Y2_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {BLUE}Original Livery, Factory Livery, {GREEN}Late Livery
+STR_DJJ1_LIVERY_AVAILABILITY                     :{BLACK}Livery Availability: {GOLD}Original Livery, Guangzhou-Shenzhen Railway Livery
+STR_CRH6A2_LIVERY_AVAILABILITY                   :{BLACK}Livery Availability: {GOLD}Prototype, Guangzhou-Shenzhen, Guangzhou-Zhuhai, Tianfu (A nickname of Chengdu, meaning "Paradise") (with or without green stripes), Zhengzhou-Jiaozuo, Zhuhai-Airport, Pearl River Delta (Blue or Orange)
+STR_CRH6A3_LIVERY_AVAILABILITY                   :{BLACK}Livery Availability: {GOLD}Beijing-Tongzhou, Shanghai-Jinshan
+STR_CRH6AA_LIVERY_AVAILABILITY                   :{BLACK}Livery Availability: {GOLD}Pearl River Delta, Guangzhou-Zhuhai, Tianfu (A nickname of Chengdu, meaning "Paradise") (with or without green stripes)
+STR_CRH6F_LIVERY_AVAILABILITY                    :{BLACK}Livery Availability: {GOLD}Pearl River Delta, Shanghai-Jinshan, Xiaoshan/Hangzhou-Ningbo
+STR_CR400BFC_LIVERY_AVAILABILITY                 :{BLACK}Livery Availability: {LTBLUE}Winter Olypics Livery, {GOLD}Origin Livery,
+STR_CR400BFZ_LIVERY_AVAILABILITY                 :{BLACK}Livery Availability: {RED}Origin {GOLD}Livery, {PURPLE}Asia Game Livery 
+STR_22_LIVERY_AVAILABILITY                       :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Wuhan Railway Vocational College Livery (only coaches), Sanshui-Maoming Livery (unfinish), "Longqingxia" Livery (unfinish), Beijing-Shanghai Direct Express Livery (XL22, UZ22), Guangzhou-Hongkong Livery (XL22, UZ22) (unfinish)
+STR_22AIRCON_LIVERY_AVAILABILITY                 :{BLACK}Livery Availability: {GOLD}Beijing-Shanghai Direct Express Livery, Guangzhou-Hongkong Livery (unfinish)
+STR_22B_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery
+STR_25B_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_RW25B_LIVERY_AVAILABILITY                    :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_XL25B_LIVERY_AVAILABILITY                    :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_S25BLD_LIVERY_AVAILABILITY                   :{BLACK}Livery Availability: {ORANGE}Orange-{YELLOW}Yellow {GOLD}Livery, deteriorated, with strengthening steel sheet, Urumqi, Xianxing (All low-door, higher loading speed, 120 km/h)
+STR_S25BHD_LIVERY_AVAILABILITY                   :{BLACK}Livery Availability: {GOLD}deteriorated, Shenyang (All high-door, lower loading speed, 140 km/h)
+STR_25G_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, Xi'an-Huxian Railway Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_CA25G_LIVERY_AVAILABILITY                    :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_KD25G_LIVERY_AVAILABILITY                    :{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an-Huxian Railway Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery (unfinished), {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_25T_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery
+STR_BSP25T_LIVERY_AVAILABILITY                   :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery, Made by BSP Livery
+STR_CA25T_LIVERY_AVAILABILITY                    :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery, Made by BSP Livery
+STR_XL25T_LIVERY_AVAILABILITY                    :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery (unfinished), {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_UZ25T_LIVERY_AVAILABILITY                    :{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_KD25T_LIVERY_AVAILABILITY                    :{BLACK}Livery Availability: Only {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery
+STR_19K_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery
+STR_25K_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_25Z_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {BLUE}Xi{WHITE}zi{GOLD}Livery, {LTBLUE}Shijiazhuang-Qinhuangdao {WHITE}Slow Train {GOLD}Livery, {BLUE}Guangzhou-{RED}-Shenzhen{WHITE} Railway{GOLD} Livery
+STR_S25Z_LIVERY_AVAILABILITY                     :{BLACK}Livery Availability: {LTBLUE}Shijiazhuang-Qinhuangdao {WHITE}Slow Train {GOLD}Livery, {BLUE}Guangzhou-{DKGREEN}-Shenzhen{WHITE} Railway{GOLD} Livery
+STR_S25_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {BLUE}Blue-{GOLD}-Orange-{WHITE}-White {BLACK}Livery, other livery (unfinished}
+STR_S25KLD_LIVERY_AVAILABILITY                   :{BLACK}Livery Availability: {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Liaodong Peninsula Livery (All low-door, higher loading speed)
+STR_S25KHD_LIVERY_AVAILABILITY                   :{BLACK}Livery Availability: {GOLD}Xianxing (Pioneer), Xi'an (All high-door, slower loading speed)
+STR_SCA25KHD_LIVERY_AVAILABILITY                 :{BLACK}Livery Availability: {GOLD}Xi'an
+STR_TZ_LIVERY_AVAILABILITY                       :{BLACK}Livery Availability: {ORANGE}Orange {GOLD}Livery, {GOLD}Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery
+STR_KD25K_LIVERY_AVAILABILITY                    :{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an Livery, {DKGREEN}"Gaozu Green" {GOLD}Livery (unfinished)
+STR_25DT_JINLUN_LIVERY_AVAILABILITY              :{BLACK}Livery Availability: {GOLD}Earlier Livery (Before 2010), Later Livery (After 2010)
+STR_YZ31_LIVERY_AVAILABILITY                     :{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Sanshui-Maoming Railway Livery (unfinished)
+STR_25ML_LIVERY_AVAILABILITY                     :{BLACK}Livery Availability: {WHITE}White-{GREEN}-Green {GOLD}Livery, {RED}RED-{GREEN}-Green {GOLD}Livery (after 2003)
+STR_G17_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished)
+STR_G60_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GRAY}Grey {GOLD}with Random-Colour Stripes (unfinished)
+STR_GN70_LIVERY_AVAILABILITY                     :{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished)
+STR_GN80_LIVERY_AVAILABILITY                     :{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished)
+STR_C62_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_C64_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_C70_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_P50_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred), Wreck Livery
+STR_P60_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_P61_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_P62_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GOLD}Random (Black, Blue, Brown, Rustyred)
+STR_P63_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred)
+STR_P64_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred)
+STR_P65_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {DKGREEN}China Post{GOLD}, Black (unfinished)
+STR_P70_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GOLD}Random (Black, Blue, Brown, Rustyred)
+STR_N5_LIVERY_AVAILABILITY                       :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_N60_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GOLD}Random (unfinished)
+STR_NX17_LIVERY_AVAILABILITY                     :{BLACK}Livery Availability: {GOLD}Random (Black, Brown)
+STR_NX70A_LIVERY_AVAILABILITY                    :{BLACK}Livery Availability: {GOLD}Black Livery Only
+# Nickname
+STR_DF_NICKNAME                                  :{BLACK}Nickname: {GOLD}Old DongFeng
+STR_DF4_NICKNAME                                 :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
+STR_DF4B_NICKNAME                                :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
+STR_DF4C_NICKNAME                                :{BLACK}Nickname: {GOLD}Blue Cat
+STR_DF4D_NICKNAME                                :{BLACK}Nickname: {GOLD}Tiger
+STR_DF4D7000_NICKNAME                            :{BLACK}Nickname: {GOLD}Liuzhou Tiger
+STR_DF7G_NICKNAME                                :{BLACK}Nickname: {GOLD}Begger
+STR_DF8B_NICKNAME                                :{BLACK}Nickname: {GOLD}Barbie
+STR_DF11_NICKNAME                                :{BLACK}Nickname: {GOLD}Lion
+STR_DF11G_NICKNAME                               :{BLACK}Nickname: {GOLD}Pig
+STR_HXN5_NICKNAME                                :{BLACK}Nickname: {GOLD}Grasshopper
+STR_HXN5B_NICKNAME                               :{BLACK}Nickname: {GOLD}Scrambled egg with tomato
+STR_SS1_NICKNAME                                 :{BLACK}Nickname: {GOLD}Peony
+STR_SS3_NICKNAME                                 :{BLACK}Nickname: San'ge (new), Sanye (Old) (San - Three, Ge - Elder Brother, Ye - Grandfather or a general and respectful pronoun to old men)
+STR_SS3B_NICKNAME                                :{BLACK}Nickname: {BLUE}Blue Bird
+STR_SS4_NICKNAME                                 :{BLACK}Nickname: {BLUE}Baoji Blue
+STR_SS4G_NICKNAME                                :{BLACK}Nickname: Sige (Si - Four)
+STR_SS5_NICKNAME                                 :{BLACK}Nickname: {GOLD}Xiaowu (Little Five)
+STR_SS6_NICKNAME                                 :{BLACK}Nickname: {GOLD}Xiaoliu (Little Six)
+STR_SS6B_NICKNAME                                :{BLACK}Nickname: {GOLD}Yan Xiaoliu (a character from Chinese soap opera "Wulin Waizhuan")
+STR_SS7_NICKNAME                                 :{BLACK}Nickname: {GOLD}Roast Chicken
+STR_SS7B_NICKNAME                                :{BLACK}Nickname: {GOLD}Cat
+STR_SS7C_NICKNAME                                :{BLACK}Nickname: {GOLD}Cat
+STR_SS7D_NICKNAME                                :{BLACK}Nickname: {GOLD}Transformer
+STR_SS7E_NICKNAME                                :{BLACK}Nickname: {GOLD}Beauty
+STR_SS8_NICKNAME                                 :{BLACK}Nickname: {GOLD}Broom
+STR_SS9_NICKNAME                                 :{BLACK}Nickname: {GOLD}Frog
+STR_SS9G_NICKNAME                                :{BLACK}Nickname: {GOLD}Shochu
+STR_HXD1_NICKNAME                                :{BLACK}Nickname: {GOLD}Smurf
+STR_HXD1B_NICKNAME                               :{BLACK}Nickname: {GOLD}River Crab
+STR_HXD1D_NICKNAME                               :{BLACK}Nickname: {GOLD}Jujube
+STR_HXD2_NICKNAME                                :{BLACK}Nickname: {GOLD}Electric Hippo
+STR_HXD3C_NICKNAME                               :{BLACK}Nickname: {GOLD}Electric Baboon
+STR_HXD3D_NICKNAME                               :{BLACK}Nickname: {GOLD}Tomato
+STR_NDJ3_NICKNAME                                :{BLACK}Nickname: {WHITE}White Pig
+STR_CR200J_NICKNAME                              :{BLACK}Nickname: {GREEN}"Hulk" {GOLD}(Official), {GREEN}"Trash Bin" {GOLD}(Folk)
+STR_CR200JC_NICKNAME                             :{BLACK}Nickname: {GREEN}"AD Bin" {GOLD}(Folk)
+STR_CRH1A_NICKNAME                               :{BLACK}Nickname: {GOLD}Metro 
+STR_CRH1B_NICKNAME                               :{BLACK}Nickname: {GOLD}Long Metro 
+STR_CRH1E_NICKNAME                               :{BLACK}Nickname: {GOLD}Sleeping Metro 
+STR_CRH1AA_NICKNAME                              :{BLACK}Nickname: {GOLD}Cute Metro 
+STR_CRH2A_NICKNAME                               :{BLACK}Nickname: {GOLD}Hairtail
+STR_CRH2B_NICKNAME                               :{BLACK}Nickname: {GOLD}Long Hairtail
+STR_CRH2C_NICKNAME                               :{BLACK}Nickname: {GOLD}Crazy Hairtail
+STR_CRH2E_NICKNAME                               :{BLACK}Nickname: {GOLD}Sleeper Hairtail
+STR_CRH2G_NICKNAME                               :{BLACK}Nickname: {GOLD}Advanced Black Face
+STR_CRH3A_NICKNAME                               :{BLACK}Nickname: {GOLD}Golden Eyes
+STR_CRH3C_NICKNAME                               :{BLACK}Nickname: {GOLD}Rabbit
+STR_CRH5A_NICKNAME                               :{BLACK}Nickname: {GOLD}Donkey
+STR_CRH6F_NICKNAME                               :{BLACK}Nickname: {GOLD}Real Metro
+STR_CRH380A_NICKNAME                             :{BLACK}Nickname: {GOLD}Big Rat
+STR_CRH380B_NICKNAME                             :{BLACK}Nickname: {GOLD}Crazy Rabbit
+STR_CRH380CL_NICKNAME                            :{BLACK}Nickname: {GOLD}Shark
+STR_CRH380D_NICKNAME                             :{BLACK}Nickname: {GOLD}Crazy Metro
+STR_CR400AF_NICKNAME                             :{BLACK}Nickname: {GOLD}Red Loong
+STR_CR400BF_NICKNAME                             :{BLACK}Nickname: {GOLD}Golden Phoenix
+STR_CR400_Z_NICKNAME                             :{BLACK}Nickname: {GOLD}Dragon and {RED}Phoenix bring prosperity
+STR_CR400BFC_NICKNAME                            :{BLACK}Nickname: {LTBLUE}Blessed Snow Welcomes Spring (Winter Olympic Livery Only)
+STR_CR400BFZ_NICKNAME                            :{BLACK}Nickname: {GOLD}Dragon and {RED}Phoenix bring prosperity,  {PURPLE}Egglpant (Folk)/ Aussie on Yangtze (Official) (Asia Game Livery Only)
+STR_CR300AF_NICKNAME                             :{BLACK}Nickname: {LTBLUE}Smurfette
+STR_CR300BF_NICKNAME                             :{BLACK}Nickname: {LTBLUE}"Blue Antidote" {GOLD}(Official), {LTBLUE}"Zoombie Blue" {GOLD}(Folk)
+# Alias Name
+STR_ALIASNAME_DF                                 :{BLACK}Alias Name: {GOLD}Great Loong
+STR_ALIASNME_SS1                                 :{BLACK}Alias Name: {GOLD}6Y1
+STR_ALIASNAME_FXD1B                              :{BLACK}Alias Name: {GOLD}HXD1F (Hexie/Harmony 1F Electric Locomotive)
+# Reliability
+STR_RELDEC_VERY_HIGH                             :{BLACK}Reliability decay speed: {RED}Very high ({COMMA})
+STR_RELDEC_HIGH                                  :{BLACK}Reliability decay speed: {ORANGE}High ({COMMA})
+STR_RELDEC_MEDIUM                                :{BLACK}Reliability decay speed: {YELLOW}Medium ({COMMA})
+STR_RELDEC_LOW                                   :{BLACK}Reliability decay speed: {GREEN}Low ({COMMA})
+STR_RELDEC_VERY_LOW                              :{BLACK}Reliability decay speed: {BLUE}Very low ({COMMA})
+# Speed
+STR_ORIGIN_SPEED                                 : - Origin Speed
+STR_310_KMH                                      : - Max Speed 310 km/h
+STR_350_KMH                                      : - Max Speed 350 km/h, Running Costs Increase
+STR_380_KMH                                      : - Max Speed 380 km/h, Running Costs Greatly Increase
+STR_DJJ2_321_KMH                                 : - {GOLD}321.5 km/h{BLACK}. Broke the Highest Speed Record of China's Railway on 27th Oct. 2002. Running Costs Greatly Increase
+STR_350_AVAILABLE                                :Refittable to Max Speed 350 km/h (Increasing running costs)
+STR_350_380_AVAILABLE                            :Refittable to Max Speed 350 or 380 km/h (Increasing running costs)
+STR_DJJ2_321_AVAILABLE                           :This train has broke the Highest Speed Record of China's Railway by {GOLD}321.5 km/h{BLACK} on 27th Oct. 2002. Refittable to this speed (Increasing running costs)
+# Livery
+STR_ORIGINAL                                     : - Original Livery
+STR_REVERSE                                      : └ the Reverse of the Livery Above
+STR_ORANGE                                       :{ORANGE} - Orange Livery
+STR_GREEN                                        :{GREEN} - Green Livery
+STR_RED                                          :{RED} - Red Livery
+STR_WHITE                                        :{WHITE} - WhIte Livery
+STR_BLUE                                         :{BLUE} - Blue Livery
+STR_GRASSGREEN                                   :{DKGREEN} - Dark Green Livery
+STR_LATER_ORANGE                                 :{ORANGE} - Later Orange Livery
+STR_LATER_GREEN                                  :{GREEN} - Later Green Livery
+STR_XIHU                                         : - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery
+STR_XIHU_REVERSE                                 : - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery, reversed
+STR_DF4D_7000                                    : - {GREEN}7000-{YELLOW}Series {BLACK}Livery
+STR_SS7C_BANANA                                  : - {YELLOW}Banana Yellow {BLACK}Livery
+STR_FUZHOU                                       : - Fuzhou Livery
+STR_UKRAINE                                      : - {YELLOW}Yellow {BLACK}and {BLUE}Blue {BLACK}Livery
+STR_DF4B_DPRK                                    : - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery
+STR_DF4D4000_DPRK                                : - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery
+STR_DF4BN_ORIGINAL                               : - {BLUE}DF4B With New Bodyshell
+STR_DF4BN_REVERSE                                : - {BLUE}DF4B With New Bodyshell (Reversed)
+STR_ALTERNATIVE                                  : - Alternative Original Livery
+STR_DF_YELLOW                                    : - {GOLD}Yellow {GREEN}Line {BLACK}Livery
+STR_DF_WHITE                                     : - {WHITE}White {GREEN}Line {BLACK}Livery
+STR_FACTORY                                      : - Factory Livery
+STR_6Y2_LATE                                     : - {GREEN}Late {BLACK}Livery
+STR_SS4_BLUEROOF                                 : - {WHITE}White {BLACK}Livery with {BLUE}Blue{BLACK} Roof
+STR_SHENHUA                                      : - {GOLD}Shenhua Groups Livery
+STR_GUONENG                                      : - {GOLD}CHN Energy Livery
+STR_CHN2LAOS                                     : - {GOLD}China-Laos Railway Livery
+STR_WUJING                                       : - {GOLD}"Armed Police"Livery
+STR_DFH7                                         : - DFH7  
+STR_DFH7B                                        : - DFH7B 
+STR_RANDOM_COLOR                                 : - Ramdom Color
+STR_BUILD_YEAR                                   : - According to build year
+STR_YW22_ORIGINAL                                : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240
+STR_YW22_1966                                    : - 1966 Design - Capacity 60, Comfort 288
+STR_ORDINARY_GREEN                               : - {GREEN}Ordinary Green {BLACK}Livery
+STR_RED_WHITE                                    : - {RED}Red {BLACK}and {WHITE}White
+STR_BLUE_RED_WHITE                               : - {BLUE}Blue-{RED}Red{WHITE}-White
+STR_JITONG                                       : - {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {BLACK}Livery
+STR_LUCHAOGANG                                   : - {LTBLUE}Shanghai-Luchaogang {BLACK}Livery
+STR_LIAODONG                                     : - Liaodong Peninsula Livery
+STR_DETERIORATE                                  : - Deteriorated Livery
+STR_STRENGTHEN                                   : - With Strengthening Steel Sheet
+STR_URUMQI                                       : - Urumqi Railway Bureau
+STR_XIAN                                         : - Xi'an Railway Bureau
+STR_SHENYANG                                     : - Shenyang Railway Bureau
+STR_XIANXING                                     : - Xianxing (Pioneer) Livery
+STR_XIZI                                         : - Xizi Livery
+STR_QINGZANG                                     : - Qinghai-Tibet Railway Livery
+STR_GUANGSHEN                                    : - Guangzhou-Shenzhen Railway Livery
+STR_JINWEN                                       : - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLACK}Company
+STR_GAOZU_GREEN                                  : - {DKGREEN}"Gaozu Green" {BLACK}(unfinished except 25T)
+STR_BEIJING                                      : - Beijing Railway Bureau
+STR_WRU                                          : - Wuhan Railway Vocational College of Technology Livery
+STR_BEIJING2SHANGHAI                             : - Beijing-Shanghai Express Train Livery {CREAM}Cream-{BROWN}-Brown
+STR_LATER                                        : - Later Livery
+STR_EARLIER                                      : - Earlier Livery
+STR_LONGQINGXIA                                  : - "Longqingxia" Livery
+STR_BEIJING2SHANGHAIALT                          : - Beijing-Shanghai Express Train Livery {BLUE}Blue-{WHITE}-White
+STR_RESCUE                                       : - Wrecker Livery
+STR_BSP25T                                       : - Made by BSP
+STR_PROTOTYPE                                    : - Prototype
+STR_JINGTONG                                     : - Beijing-Tongzhou Livery
+STR_TIANFU                                       : - Tianfu (Chengdu) Livery
+STR_TIANFU_GREEN                                 : - Tianfu (Chengdu) Livery with green stripes
+STR_GUANGZHU                                     : - Guangzhou-Zhuhai Livery
+STR_ZHENGJIAO                                    : - Zhengzhou-Jiaozuo Livery
+STR_ZHUJI                                        : - Zhuhai-Airport Livery
+STR_ZHUSANJIAO_BLUE                              : - Pearl River Delta Intercity Railway, Blue
+STR_ZHUSANJIAO_ORANGE                            : - Pearl River Delta Intercity Railway, Orange
+STR_JINSHAN                                      : - Shanghai-Jinshan Livery
+STR_GUANGQING                                    : - Guangzhou-Qingyuan Livery
+STR_FOSHAN                                       : - Foshan Livery
+STR_XIAOYONG                                     : - Xiaoshan/Hangzhou-Ningbo Livery
+STR_ASIAGAME                                     : - {PURPLE}The 19th Asian Games Hangzhou {BLACK}Livery
+STR_WINTER_OLYMPIC                               : - {LTBLUE}The XXIV Olympic Winter Games {BLACK}Livery
+# Decay
+STR_COMFORT_VERY_LOW                             :{BLACK}Comfort: {RED}Very low ({COMMA})
+STR_COMFORT_LOW                                  :{BLACK}Comfort: {ORANGE}Low ({COMMA})
+STR_COMFORT_MEDIUM                               :{BLACK}Comfort: {YELLOW}Medium ({COMMA})
+STR_COMFORT_HIGH                                 :{BLACK}Comfort: {GREEN}High ({COMMA})
+STR_COMFORT_VERY_HIGH                            :{BLACK}Comfort: {BLUE}Very high ({COMMA})
+STR_COMFORT_EXTREMELY_HIGH                       :{BLACK}Comfort: {WHITE}Extremely high ({COMMA})
+STR_FRESHNESS_VERY_LOW                           :{BLACK}Cargo age period factor: {RED}Very low ({COMMA})
+STR_FRESHNESS_LOW                                :{BLACK}Cargo age period factor: {ORANGE}Low ({COMMA})
+STR_FRESHNESS_MEDIUM                             :{BLACK}Cargo age period factor: {YELLOW}Medium ({COMMA})
+STR_FRESHNESS_HIGH                               :{BLACK}Cargo age period factor: {GREEN}High ({COMMA})
+STR_FRESHNESS_VERY_HIGH                          :{BLACK}Cargo age period factor: {BLUE}Very high ({COMMA})
+STR_FRESHNESS_EXTREMELY_HIGH                     :{BLACK}Cargo age period factor: {WHITE}Extremely High ({COMMA})
+STR_DECAY_BOXCAR                                 :{BLACK}Cargo Age Period Factor: {YELLOW}185{BLACK}, Passengers {RED}80{BLACK}, Livestock {BLUE}560
+STR_DECAY_BOXCAR_NOPASS                          :{BLACK}Cargo Age Period Factor: {YELLOW}185{BLACK}, Livestock {BLUE}560{BLACK}, {RED}Unrefittable to Passengers
+STR_CAFE_EFFECT                                  :{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Halves Running Costs of Non-Commuter Passenger Cars except Restaurant Cars, and Increases Cargo Age Period by 1/4
+STR_AIR_CONDITIONER_EFFECT                       :{BLACK}Air Conditioner Effect: {GOLD}Attaching Air Conditioner Generator Car Increases Cargo Age Period of Most Passenger Cars Hauled by Locomotives without Electricity Supply by 1/4
+STR_NO_AIR_CONDITIONER                           :{BLACK}Air Conditioner: {RED}Unavailable
+STR_SELF_AIR_CONDITIONER                         :{BLACK}With Air Conditioner Compartment {RED}ONLY USED BY ITSELF
+STR_DESC_PENGDAIKE                               :{BLACK}Passengers in Boxcars (Peng Dai Ke): From 1980s to 2008, to handle huge traffic amounts during the Spring Festival period, temporary trains where passengers crowding in boxcars had to be operated. This reflected a severe lack of railway transport resources at that time.
+# Can Attach
+STR_ATTACH_ALL_CRH_CR                            :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs
+STR_ATTACH_SLEEPER_MU                            :{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs
+STR_ATTACH_CR200J                                :{BLACK}Matching MUs: {GOLD}CR200J Series
+STR_NZJ1_XINSHUGUANG_CAN_ATTACH_WAGON            :{BLACK}Matching Wagons: {GOLD}ZE{BLACK}, equivalent to Double-Decker Hard Seat, Capacity: 136, Comfort: {YELLOW}200{BLACK}; {GOLD}ZY{BLACK}, equivalent to Double-Decker Soft Seat, Capacity: 108, Comfort: {YELLOW}240
+STR_NDJ3_CAN_ATTACH_WAGON                        :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC{BLACK}, Second Class Capacity: 114, Comfort: 200
+STR_DJJ1_CAN_ATTACH_WAGON                        :{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent to Soft Seat
+STR_DJJ2_CAN_ATTACH_WAGON                        :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC
+STR_DJF3_CAN_ATTACH_WAGON                        :{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent to Soft Seat
+STR_CR200J_CAN_ATTACH_WAGON                      :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, WE, WY, WG
+STR_CRH_CAN_ATTACH_WAGON                         :{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC
+STR_CRH_SLEEPER_CAN_ATTACH_WAGON                 :{BLACK}Matching Wagons: {GOLD}ZE, WY, WG, ZEC
+STR_CRH_LSLEEPER_CAN_ATTACH_WAGON                :{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)
+STR_CRH6A2_CAN_ATTACH_WAGON                      :{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: {ORANGE}160{BLACK}), {GOLD}ZY
+STR_CRH6A3_CAN_ATTACH_WAGON                      :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: {ORANGE}160
+STR_CRH6F_CAN_ATTACH_WAGON                       :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places (Crowded), Comfort: {RED}128
+STR_NC3_CAN_ATTACH_WAGON                         :{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, Comfort: 185
+# Consist
+STR_NJ2_CONSIST                                  :{BLACK}Consist: {GOLD}2 to 4 sections
+STR_HXN3QZ_CONSIST                               :{BLACK}Consist: {GOLD}2 to 4 sections
+STR_DF11G_CONSIST                                :{BLACK}Consist: {GOLD}2 sections joint together (Normal), or one section at head, another section at back ("Splitting Pig", max speed 120 km/h, power 4133 hpM)
+STR_NC3_CONSIST                                  :{BLACK}Consist: {GOLD}2 to 16 cars; cabs are powered
+STR_NZJ1_XINSHUGUANG_CONSIST                     :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle
+STR_JINLUN_LOCOMOTIVE_CONSIST                    :{BLACK}Consist: {GOLD}One section at front, another section at back. Only can attach "{BLUE}JIN{WHITE}LUN{GOLD}" 25DT Series coaches.
+STR_NDJ3_CONSIST                                 :{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle
+STR_DJJ1_CONSIST                                 :{BLACK}Consist: {GOLD}One section at front, with wagons attached; or one section at front, another section at back. At least 4 wagons
+STR_DJJ2_CONSIST                                 :{BLACK}Consist: {GOLD}One section at front, another section at back, MU Wagins in Middle
+STR_DJF3_CONSIST                                 :{BLACK}Consist: {GOLD}4 to 12 cars; with 9-car standard consist (M-T-M-M-T-M-M-T-M)
+STR_CRH5A_CONSIST                                :{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car
+STR_CR400_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12
+STR_CR400_AB_CONSIST                             :{BLACK}Consist: {GOLD}4 to 24 cars; with 16-car standard consist 2*(T-M-T-M-M-T-M-T)
+STR_CR400_Z_CONSIST                              :{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12. {RED}Intelligent {YELLOW}EMUs {GOLD}have lower running costs
+STR_CR400_AB_Z_CONSIST                           :{BLACK}Consist: {GOLD}4 to 24 cars; with 16-car standard consist 2*(T-M-T-M-M-T-M-T). {RED}Intelligent {YELLOW}EMUs {GOLD}have lower running costs
+STR_CR200J_CONSIST                               :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, with wagons attached; or one section at front, another section at back. Will run as coupled when cars more than 12
+STR_CR200JL_CONSIST                              :{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, another section at back.
+STR_CRH1A_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars. Will run as coupled when cars more than 12
+STR_CRH1B_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars
+STR_CRH1E_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars
+STR_CRH1AA_CONSIST                               :{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars. Will run as coupled when cars more than 12
+STR_CRH2A_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12
+STR_CRH2B_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars
+STR_CRH2C_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12
+STR_CRH2E_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars
+STR_CRH2G_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12
+STR_CRH3A_CONSIST                                :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
+STR_CRH3C_CONSIST                                :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
+STR_CRH380A_CONSIST                              :{BLACK}Consist: {GOLD}At least 4 cars, with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12
+STR_CRH380AL_CONSIST                             :{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised
+STR_CRH380B_CONSIST                              :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
+STR_CRH380CL_CONSIST                             :{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)
+STR_CRH380D_CONSIST                              :{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist M-T-M-T-T-M-T-M. Will run as coupled when cars more than 12
+STR_CRH6A2_CONSIST                               :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
+STR_CRH6A3_CONSIST                               :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
+STR_CRH6AA_CONSIST                               :{BLACK}Consist: {GOLD}Fixed consist of 4 cars (Mc-Tp-Tp-Mc), multiple sections available
+STR_CRH6F_CONSIST                                :{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars
+STR_CR300_CONSIST                                :{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12
+# Head Seat
+STR_DJF3_HEAD_SEAT                               :{BLACK}Head Seat: {GOLD}Soft Seat (RZ) {BLACK} as 1st-Class (ZY)
+STR_CRH1A_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH1B_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH1E_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
+STR_CRH1AA_HEAD_SEAT                             :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH2A_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
+STR_CRH2B_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
+STR_CRH2C_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
+STR_CRH2E_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
+STR_CRH2G_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH2ELS_HEAD_SEAT                            :{BLACK}Head Seat: {GOLD}1st-Class Sleeper (WY)
+STR_CRH3A_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH3C_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
+STR_CRH5A_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH380A_HEAD_SEAT                            :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH380B_HEAD_SEAT                            :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH380CL_HEAD_SEAT                           :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH380D_HEAD_SEAT                            :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CR400_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CR400_Z_HEAD_SEAT                            :{BLACK}Head Seat: {GOLD}Luxury-Business-Class (SW)
+STR_CRH6A2_HEAD_SEAT                             :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_CRH6A3_HEAD_SEAT                             :{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places, Comfort: {ORANGE}160
+STR_CRH6F_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places (crowded), Comfort: {RED}128
+STR_CR300_HEAD_SEAT                              :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_HEADSEAT_ZW                                  :{BLACK}Head Seat: {GOLD}2nd-Class (ZE)
+STR_HEADSEAT_ZY                                  :{BLACK}Head Seat: {GOLD}1st-Class (ZY)
+STR_HEADSEAT_ZS                                  :{BLACK}Head Seat: {GOLD}Business-Class (ZS)
+STR_HEADSEAT_SW                                  :{BLACK}Head Seat: {GOLD}Luxury-Business-Class (SW)
+# Misc
+STR_ELECTRICITY_SUPPLY_YES                       :{BLACK}Electricity Supply for cars: {GOLD}YES
+STR_ELECTRICITY_SUPPLY_NO                        :{BLACK}Electricity Supply for cars: {RED}NO
+STR_TOO_SHORT                                    :TOO SHORT!
+STR_ONLY_TWO_SECTIONS                            :This locomotive must be in a consist of two sections to run.
+STR_MUST_BE_4_8_12_16_CARS                       :This MU must be in a consist of 4, 8, 12 or 16 cars to run.
+STR_MUST_BE_5_TO_17_CARS                         :This MU must be in a consist of 5 to 17 cars to run.
+STR_MUST_BE_2_TO_16_CARS                         :This MU must be in a consist of 2 to 16 cars to run.
+STR_MUST_BE_4_TO_24_CARS                         :This MU must be in a consist of 4 to 24 cars to run.
+STR_MUST_BE_4_TO_12_CARS                         :This MU must be in a consist of 4 to 12 cars to run.
+STR_MUST_BE_8_TO_24_CARS                         :This MU must be in a consist of 8 to 24 cars to run.

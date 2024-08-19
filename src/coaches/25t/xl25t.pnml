@@ -102,7 +102,7 @@ item (FEAT_TRAINS, xl25t) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_XL25T), string(STR_XL25T_LIVERY_AVAILABILITY), string(STR_DECAY_200));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_XL25T), string(STR_XL25T_LIVERY_AVAILABILITY), string(STR_FRESHNESS_MEDIUM, 200));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_xl25t_cargo_subtype;
 
@@ -118,7 +118,7 @@ item (FEAT_TRAINS, xl25t) {
         cost_factor:                    8;
         running_cost_factor:            7 * runningcostfactor();
         purchase_running_cost_factor:   28;
-        purchase_cargo_capacity:        92/3;
+        purchase_cargo_capacity:        71/3;
         name:                            switch_xl25t_name;
 
     }

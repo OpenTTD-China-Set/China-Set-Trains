@@ -1,6 +1,6 @@
 //Begin RZT25Z
 switch (FEAT_TRAINS, SELF, switch_rzt25z_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_S25Z_SERIES);
+    0: return string(STR_25Z_SERIES);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -71,7 +71,7 @@ item (FEAT_TRAINS, rzt25z) {
 
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RZT25Z), string(STR_25Z_LIVERY_AVAILABILITY), string(STR_COMFORT_320));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RZT25Z), string(STR_25Z_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 320));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_rzt25z_graphics;

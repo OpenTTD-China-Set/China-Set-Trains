@@ -82,7 +82,7 @@ item (FEAT_TRAINS, _6y2) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FR_IMPORT), string(STR_ELECTRICITY_SUPPLY_NO),  string(STR_6Y2_LIVERY_AVAILABILITY),string(STR_RELIABILITY_12));
+        additional_text:                string(STR_DESC_4, string(STR_FR_IMPORT), string(STR_ELECTRICITY_SUPPLY_NO),  string(STR_6Y2_LIVERY_AVAILABILITY),string(STR_RELDEC_LOW, 12));
         cargo_subtype_text:             switch_6y2_cargo_subtype;
         can_attach_wagon:               locowagon;
         // Graphics

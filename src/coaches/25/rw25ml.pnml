@@ -89,7 +89,7 @@ item (FEAT_TRAINS, rw25ml) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RW25ML), string(STR_25ML_LIVERY_AVAILABILITY), string(STR_COMFORT_384));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RW25ML), string(STR_25ML_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 384));
         can_attach_wagon:               locowagon;
 
         // Graphics

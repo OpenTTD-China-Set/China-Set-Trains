@@ -74,7 +74,7 @@ item (FEAT_TRAINS, jsq5) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DECAY_400);
+        additional_text:                string(STR_FRESHNESS_HIGH, 400);
         can_attach_wagon:               locowagon;
 
         // Graphics

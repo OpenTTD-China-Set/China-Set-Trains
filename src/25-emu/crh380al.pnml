@@ -242,7 +242,7 @@ item (FEAT_TRAINS, crh380al) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_6, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH380A_NICKNAME), string(STR_RELIABILITY_12), string(STR_CRH380AL_CONSIST), string(STR_CRH380A_HEAD_SEAT), string(STR_350_380_AVAILABLE));
+        additional_text:                string(STR_DESC_6, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH380A_NICKNAME), string(STR_RELDEC_LOW, 12), string(STR_CRH380AL_CONSIST), string(STR_CRH380A_HEAD_SEAT), string(STR_350_380_AVAILABLE));
         can_attach_wagon:               crhwagon;
         start_stop:                     mu4to24car;
         cargo_subtype_text:             switch_crh380_cargo_subtype;
@@ -260,7 +260,7 @@ item (FEAT_TRAINS, crh380al) {
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.083*255);
         cargo_capacity:                 switch_crh380al_head_capacity;
-        cargo_age_period:               12 * 5 * cafedecayfactor() << param_cargo_decay;
+        cargo_age_period:               100 * cafedecayfactor() << param_cargo_decay;
         cost_factor:                    68;
         running_cost_factor:            (54 + crhspeedcost()) * runningcostfactor() * cafecostfactor() + 20;
         purchase_running_cost_factor:   236;

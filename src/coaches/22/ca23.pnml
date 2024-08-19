@@ -81,7 +81,7 @@ item (FEAT_TRAINS, ca23) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_CA23), string(STR_CAFE_EFFECT), string(STR_22AIRCON_LIVERY_AVAILABILITY), string(STR_COMFORT_144_CAFE));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_CA23), string(STR_CAFE_EFFECT), string(STR_22AIRCON_LIVERY_AVAILABILITY), string(STR_COMFORT_MEDIUM, 180));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_ca23_cargo_subtype;
 

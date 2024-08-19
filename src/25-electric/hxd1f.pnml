@@ -99,7 +99,7 @@ item (FEAT_TRAINS, hxd1f) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_FXD1B), string(STR_ALIASNAME_FXD1B), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_FXD1B), string(STR_ALIASNAME_FXD1B), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_LOW, 8));
         cargo_subtype_text:             switch_hxd1f_cargo_subtype;
         can_attach_wagon:               locowagon;
         // Graphics

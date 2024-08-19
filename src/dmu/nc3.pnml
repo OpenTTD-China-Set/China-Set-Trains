@@ -210,7 +210,7 @@ item (FEAT_TRAINS, nc3) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_NC3_CAN_ATTACH_WAGON), string(STR_NC3_CONSIST), string(STR_HU_IMPORT), string(STR_COMFORT, 185), string(STR_RELIABILITY_16));
+        additional_text:                string(STR_DESC_5, string(STR_NC3_CAN_ATTACH_WAGON), string(STR_NC3_CONSIST), string(STR_HU_IMPORT), string(STR_COMFORT_MEDIUM, 185), string(STR_RELDEC_MEDIUM, 16));
         can_attach_wagon:               onlyze;
         start_stop:                     mu2to16car;
 

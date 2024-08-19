@@ -72,7 +72,7 @@ item (FEAT_TRAINS, hxd11000) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_HXD11000), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELIABILITY_8));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_HXD11000), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_LOW, 8));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_hxd11000_graphics;
@@ -82,12 +82,12 @@ item (FEAT_TRAINS, hxd11000) {
         // Stats
         length:                         switch_length_2_4_2;
         cargo_capacity:                 0;
-        cost_factor:                    136;
-        running_cost_factor:            113 * runningcostfactor();
-        purchase_running_cost_factor:   452;
+        cost_factor:                    146;
+        running_cost_factor:            118 * runningcostfactor();
+        purchase_running_cost_factor:   472;
         purchase_cargo_capacity:        0;
         bitmask_vehicle_info:           0;
-        name:                            switch_hxd11000_name;
+        name:                           switch_hxd11000_name;
 
     }
 }

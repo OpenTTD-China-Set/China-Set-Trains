@@ -180,6 +180,12 @@ switch (FEAT_TRAINS, SELF, singlemu, vehicle_type_id) {
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
+switch (FEAT_TRAINS, SELF, onlyzezyzec, vehicle_type_id) {
+    1024..1025: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
 switch (FEAT_TRAINS, SELF, onlyzezy, vehicle_type_id) {
     1024..1025: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     return CB_RESULT_ATTACH_DISALLOW;
@@ -187,6 +193,11 @@ switch (FEAT_TRAINS, SELF, onlyzezy, vehicle_type_id) {
 
 switch (FEAT_TRAINS, SELF, onlyze, vehicle_type_id) {
     1024: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, onlyzy, vehicle_type_id) {
+    1025: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
@@ -224,6 +235,13 @@ switch (FEAT_TRAINS, SELF, mu2to16car, (num_vehs_in_consist < 6) || (num_vehs_in
 
 switch (FEAT_TRAINS, SELF, mu4to24car, (num_vehs_in_consist < 12) || (num_vehs_in_consist > 72)) {
     1: return string(STR_MUST_BE_4_TO_24_CARS);
+    return CB_RESULT_NO_TEXT;
+}
+
+// MUs need at least 4 and at most 12 cars to start
+
+switch (FEAT_TRAINS, SELF, mu4to12car, (num_vehs_in_consist < 12) || (num_vehs_in_consist > 36)) {
+    1: return string(STR_MUST_BE_4_TO_12_CARS);
     return CB_RESULT_NO_TEXT;
 }
 

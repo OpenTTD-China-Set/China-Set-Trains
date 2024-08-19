@@ -334,7 +334,7 @@ item (FEAT_TRAINS, crh380d) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_6, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH380D_NICKNAME), string(STR_CRH380D_CONSIST), string(STR_RELIABILITY_5), string(STR_CRH380D_HEAD_SEAT));
+        additional_text:                string(STR_DESC_6, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH380D_NICKNAME), string(STR_CRH380D_CONSIST), string(STR_RELDEC_VERY_LOW, 5), string(STR_CRH380D_HEAD_SEAT));
         can_attach_wagon:               crhwagon;
         start_stop:                     mu4to24car;
         cargo_subtype_text:             switch_crh380_cargo_subtype;

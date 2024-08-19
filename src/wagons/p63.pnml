@@ -23,11 +23,30 @@ spriteset (spriteset_p63_brown, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("wagons", "p63-brown")
 }
 
-random_switch (FEAT_TRAINS, SELF, random_p63_colour) {
-    1: spriteset_p63_black; // More colours waiting to be added
+random_switch (FEAT_TRAINS, SELF, random_p63_colour_early) {
+    15: spriteset_p63_black; // More colours waiting to be added
     1: spriteset_p63_rustyred;
-    1: spriteset_p63_brown;
+    4: spriteset_p63_brown;
 }
+
+random_switch (FEAT_TRAINS, SELF, random_p63_colour_middium) {
+    16: spriteset_p63_black; // More colours waiting to be added
+    4: spriteset_p63_rustyred;
+    10: spriteset_p63_brown;
+}
+
+random_switch (FEAT_TRAINS, SELF, random_p63_colour_late) {
+    12: spriteset_p63_black; // More colours waiting to be added
+    8: spriteset_p63_rustyred;
+    10: spriteset_p63_brown;
+}
+
+switch (FEAT_TRAINS, SELF, random_p63_colour, current_year - 1979) {
+    0..15: random_p63_colour_early; 
+    16..30: random_p63_colour_middium;
+    random_p63_colour_late;
+}
+
 
 switch (FEAT_TRAINS, SELF, switch_p63_articulated_part, extra_callback_info1) {
     1..2: return p63;
