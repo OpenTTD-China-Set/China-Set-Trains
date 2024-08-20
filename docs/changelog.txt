@@ -16,8 +16,14 @@ Completed the CRH3 Sries:
 =======
 Add: HXD3, FXD1-1000
 Renewal the sprites of DF11Z, HXD2, HXD2-1000, CRH3A, CRH3C
+<<<<<<< HEAD
 Refurbish: CRH3A, CRH3C
 >>>>>>> 61c804b (rrebrush crh3a crh3c)
+=======
+Completed the CRH3 Sries:
+    - Refurbish and renewal the sprites of CRH3A, CRH3C, CRH380B, CRH380CL
+    - Add: CJ1, CRH380BL
+>>>>>>> af510a2 (add cj1 crh380bl)
 
 0.3.1.169 (19/8/2024)
 --------------------

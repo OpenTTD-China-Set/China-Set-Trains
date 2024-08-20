@@ -602,7 +602,11 @@ STR_ALIASNAME_DF,"{BLACK}Alias Name: {GOLD}Great Loong, ND",{BLACK}曾用名：{
 STR_ALIASNAME_SS1,{BLACK}Alias Name: {GOLD}6Y1,{BLACK}曾用名：{GOLD}6Y1
 STR_ALIASNAME_HXD3,{BLACK}Alias Name: {GOLD}DJ3,{BLACK}曾用名：{GOLD}DJ3
 STR_ALIASNAME_FXD1B,{BLACK}Alias Name: {GOLD}HXD1F (Hexie/Harmony 1F Electric Locomotive),{BLACK}曾用名：{GOLD}HXD1F(和谐1F型电力机车)
+<<<<<<< HEAD
 STR_ALIASNAME_FXD2B,{BLACK}Alias Name: {GOLD}HXD2F (Hexie/Harmony 2F Electric Locomotive),{BLACK}曾用名：{GOLD}HXD2F(和谐2F型电力机车)
+=======
+STR_ALIASNAME_FXD2B,{BLACK}Alias Name: {GOLD}HXD1F (Hexie/Harmony 2F Electric Locomotive),{BLACK}曾用名：{GOLD}HXD1F(和谐2F型电力机车)
+>>>>>>> af510a2 (add cj1 crh380bl)
 STR_ALIASNAME_CJ,{BLACK}Alias Name: {GOLD}CRH3A {BLACK}(Inter-City Version),{BLACK}曾用名：{GOLD}CRH3A {BLACK}(城际版)
 # Reliability,,
 STR_RELDEC_VERY_HIGH,{BLACK}Reliability decay speed: {RED}Very high ({COMMA}),{BLACK}可靠性下降速度：{RED}极高（{COMMA}）
@@ -767,6 +771,7 @@ STR_CRH2C_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailer
 STR_CRH2E_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars,{BLACK}构成：{GOLD}4-24节：半数车厢为动力车
 STR_CRH2G_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节：半数 (向上取整) 车厢为动力车。大于12节时以重联方式运行
 <<<<<<< HEAD
+<<<<<<< HEAD
 STR_CJ1_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
 STR_CRH3A_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
 STR_CRH3C_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
@@ -783,6 +788,16 @@ STR_CRH380AL_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trai
 STR_CRH380B_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)",{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
 STR_CRH380CL_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)",{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
 >>>>>>> 61c804b (rrebrush crh3a crh3c)
+=======
+STR_CJ1_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
+STR_CRH3A_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
+STR_CRH3C_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
+STR_CRH380A_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节；头尾拖车，中间全为动力车。大于12节时以重联方式运行
+STR_CRH380AL_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised",{BLACK}构成：{GOLD}4-24节；头尾拖车，中间全为动力车
+STR_CRH380B_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节；头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
+STR_CRH380BL_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)",{BLACK}构成：{GOLD}4-24节；头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
+STR_CRH380CL_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)",{BLACK}构成：{GOLD}4-24节；头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
+>>>>>>> af510a2 (add cj1 crh380bl)
 STR_CRH380D_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist M-T-M-T-T-M-T-M. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 M-T-M-T-T-M-T-M。大于12节时以重联方式运行
 STR_CRH6A2_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars",{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
 STR_CRH6A3_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars",{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T

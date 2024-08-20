@@ -159,10 +159,14 @@ switch (FEAT_TRAINS, SELF, switch_crh3c_wagon_running, vehicle_is_potentially_po
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //power
 =======
 
 >>>>>>> 61c804b (rrebrush crh3a crh3c)
+=======
+//power
+>>>>>>> af510a2 (add cj1 crh380bl)
 switch (FEAT_TRAINS, SELF, switch_crh3c_wagon_power_back, position_in_consist_from_end % 6) {
     0..2: return 2950;
     return 0;
