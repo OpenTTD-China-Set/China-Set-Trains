@@ -158,7 +158,7 @@ switch (FEAT_TRAINS, SELF, switch_crh3c_wagon_running, vehicle_is_potentially_po
     switch_crh3c_wagon_running_unpower;
 }
 
-
+//power
 switch (FEAT_TRAINS, SELF, switch_crh3c_wagon_power_back, position_in_consist_from_end % 6) {
     0..2: return 2950;
     return 0;
@@ -193,7 +193,7 @@ item (FEAT_TRAINS, crh3c) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        variant_group:					9222;
+        variant_group:					cj1;
 
         // Availability
         climates_available:             ALL_CLIMATES;

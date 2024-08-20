@@ -228,13 +228,15 @@ STR_NAME_CRH2C,CRH2C (EMU),CRH2C (电力动车)
 STR_NAME_CRH2E,CRH2E (EMU),CRH2E (电力动车)
 STR_NAME_CRH2G,CRH2G (EMU),CRH2G (电力动车)
 STR_NAME_CRH2ELS,CRH2E (Longitudinal Sleeper) (EMU),CRH2E (纵向卧铺) (电力动车)
+STR_NAME_CJ1,CJ1 (EMU),CJ1 (电力动车)
 STR_NAME_CRH3A,CRH3A (EMU),CRH3A (电力动车)
 STR_NAME_CRH3C,CRH3C (EMU),CRH3C (电力动车)
 STR_NAME_CRH5A,CRH5A (EMU),CRH5A (电力动车)
 STR_NAME_CRH380A,CRH380A (EMU),CRH380A (电力动车)
 STR_NAME_CRH380AL,CRH380AL (Long Version) (EMU),CRH380AL (长编组) (电力动车)
 STR_NAME_CRH380B,CRH380B (EMU),CRH380B (电力动车)
-STR_NAME_CRH380CL,CRH380CL (EMU),CRH380CL (电力动车)
+STR_NAME_CRH380BL,CRH380BL (Long Version) (EMU),CRH380BL (长编组) (电力动车)
+STR_NAME_CRH380CL,CRH380CL (Long Version) (EMU),CRH380CL (长编组) (电力动车)
 STR_NAME_CRH380D,CRH380D (EMU),CRH380D (电力动车)
 STR_NAME_CR300AF,CR300AF (EMU),CR300AF (电力动车)
 STR_NAME_CR300BF,CR300BF (EMU),CR300BF (电力动车)
@@ -551,7 +553,7 @@ STR_SS7_NICKNAME,{BLACK}Nickname: {GOLD}Roast Chicken,{GOLD}为山区小转弯�
 STR_SS7B_NICKNAME,{BLACK}Nickname: {GOLD}Cat,{GOLD}试制型25t轴重干线重载货运电力机车，产量仅2台，其中0001号机车于2005年因山体滑坡事故报废。{BLACK}昵称{GOLD}大脸猫
 STR_SS7C_NICKNAME,{BLACK}Nickname: {GOLD}Cat,{GOLD}客货运两用干线电力机车，{BLACK}昵称{GOLD}大脸猫(原版涂装)、{YELLOW}香蕉(黄色涂装)
 STR_SS7D_NICKNAME,{BLACK}Nickname: {GOLD}Transformer,{BLACK}昵称：{GOLD}金刚
-STR_SS7E_NICKNAME,{BLACK}Nickname: {GOLD}Beauty,{GOLD}准高速干线电力机车，{BLACK}昵称{GOLD}美女
+STR_SS7E_NICKNAME,{BLACK}Nickname: {GOLD}Beauty,{GOLD}准高速干线电力机车，{BLACK}昵称：{GOLD}美女
 STR_SS8_NICKNAME,{BLACK}Nickname: {GOLD}Broom,{BLACK}昵称： {GOLD}扫把
 STR_SS9_NICKNAME,{BLACK}Nickname: {GOLD}Frog,{BLACK}昵称：{GOLD}青蛙
 STR_SS9G_NICKNAME,{BLACK}Nickname: {GOLD}Shochu,{BLACK}昵称：{GOLD}烧酒
@@ -574,6 +576,7 @@ STR_CRH2B_NICKNAME,{BLACK}Nickname: {GOLD}Long Hairtail,{BLACK}昵称：{GOLD}�
 STR_CRH2C_NICKNAME,{BLACK}Nickname: {GOLD}Crazy Hairtail,{BLACK}昵称：{GOLD}疯带鱼
 STR_CRH2E_NICKNAME,{BLACK}Nickname: {GOLD}Sleeper Hairtail,{BLACK}昵称：{GOLD}睡带鱼
 STR_CRH2G_NICKNAME,{BLACK}Nickname: {GOLD}Advanced Black Face,{BLACK}昵称：{GOLD}先进黑脸
+STR_CJ1_NICKNAME,{BLACK}Nickname: {GOLD}Toy Car,{BLACK}昵称：{GOLD}玩具车
 STR_CRH3A_NICKNAME,{BLACK}Nickname: {GOLD}Golden Eyes,{BLACK}昵称：{GOLD}黄金眼
 STR_CRH3C_NICKNAME,{BLACK}Nickname: {GOLD}Rabbit,{BLACK}昵称：{GOLD}兔子
 STR_CRH5A_NICKNAME,{BLACK}Nickname: {GOLD}Donkey,{BLACK}昵称：{GOLD}驴
@@ -582,7 +585,7 @@ STR_CRH380A_NICKNAME,{BLACK}Nickname: {GOLD}Big Rat,{BLACK}昵称：{GOLD}大老
 STR_CRH380B_NICKNAME,{BLACK}Nickname: {GOLD}Crazy Rabbit,{BLACK}昵称：{GOLD}疯兔子
 STR_CRH380CL_NICKNAME,{BLACK}Nickname: {GOLD}Shark,{BLACK}昵称：{GOLD}大鲨鱼
 STR_CRH380D_NICKNAME,{BLACK}Nickname: {GOLD}Crazy Metro,{BLACK}昵称：{GOLD}疯地铁
-STR_CR400AF_NICKNAME,{BLACK}Nickname: {GOLD}Red Loong,{BLACK}昵称：{GOLD}红神龙
+STR_CR400AF_NICKNAME,{BLACK}Nickname: {GOLD}Red Loong,{BLACK}昵称：{RED}红神龙
 STR_CR400BF_NICKNAME,{BLACK}Nickname: {GOLD}Golden Phoenix,{BLACK}昵称：{GOLD}金凤凰
 STR_CR400_Z_NICKNAME,{BLACK}Nickname: {GOLD}Dragon and {RED}Phoenix bring prosperity,{BLACK}昵称：{GOLD}龙凤{RED}呈祥
 STR_CR400BFC_NICKNAME,{BLACK}Nickname: {LTBLUE}Blessed Snow Welcomes Spring (Winter Olympic Livery Only),{BLACK}冬奥涂装版昵称：{LTBLUE}瑞雪迎春
@@ -595,6 +598,7 @@ STR_ALIASNAME_SS1,{BLACK}Alias Name: {GOLD}6Y1,{BLACK}曾用名：{GOLD}6Y1
 STR_ALIASNAME_HXD3,{BLACK}Alias Name: {GOLD}DJ3,{BLACK}曾用名：{GOLD}DJ3
 STR_ALIASNAME_FXD1B,{BLACK}Alias Name: {GOLD}HXD1F (Hexie/Harmony 1F Electric Locomotive),{BLACK}曾用名：{GOLD}HXD1F(和谐1F型电力机车)
 STR_ALIASNAME_FXD2B,{BLACK}Alias Name: {GOLD}HXD1F (Hexie/Harmony 2F Electric Locomotive),{BLACK}曾用名：{GOLD}HXD1F(和谐2F型电力机车)
+STR_ALIASNAME_CJ,{BLACK}Alias Name: {GOLD}CRH3A {BLACK}(Inter-City Version),{BLACK}曾用名：{GOLD}CRH3A {BLACK}(城际版)
 # Reliability,,
 STR_RELDEC_VERY_HIGH,{BLACK}Reliability decay speed: {RED}Very high ({COMMA}),{BLACK}可靠性下降速度：{RED}极高（{COMMA}）
 STR_RELDEC_HIGH,{BLACK}Reliability decay speed: {ORANGE}High ({COMMA}),{BLACK}可靠性下降速度：{ORANGE}较高（{COMMA}）
@@ -723,6 +727,7 @@ STR_CR200J_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, 
 STR_CRH_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
 STR_CRH_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, WY, WG, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造
 STR_CRH_LSLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}一等卧、二等/餐车合造 (实为软卧/餐车合造车)
+STR_CJ1_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: {ORANGE}160",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
 STR_CRH6A2_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: {ORANGE}160{BLACK}), {GOLD}ZY",{BLACK}匹配的车厢：{GOLD}二等座{BLACK} (带站席，舒适度：{ORANGE}160{BLACK})、{GOLD}一等座
 STR_CRH6A3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: {ORANGE}160",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
 STR_CRH6F_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places (Crowded), Comfort: {RED}128",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：{RED}128
@@ -754,12 +759,14 @@ STR_CRH2B_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up)
 STR_CRH2C_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾拖车，中间全为动力车。大于12节时以重联方式运行
 STR_CRH2E_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars,{BLACK}构成：{GOLD}4-24节：半数车厢为动力车
 STR_CRH2G_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节：半数 (向上取整) 车厢为动力车。大于12节时以重联方式运行
+STR_CJ1_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
 STR_CRH3A_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
 STR_CRH3C_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
-STR_CRH380A_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节；头尾拖车，中间全为动力车。大于12节时以重联方式运行。
-STR_CRH380AL_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised",{BLACK}构成：{GOLD}8-24节；头尾拖车，中间全为动力车
-STR_CRH380B_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)",{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
-STR_CRH380CL_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)",{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
+STR_CRH380A_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节；头尾拖车，中间全为动力车。大于12节时以重联方式运行
+STR_CRH380AL_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised",{BLACK}构成：{GOLD}4-24节；头尾拖车，中间全为动力车
+STR_CRH380B_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节；头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
+STR_CRH380BL_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)",{BLACK}构成：{GOLD}4-24节；头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
+STR_CRH380CL_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)",{BLACK}构成：{GOLD}4-24节；头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
 STR_CRH380D_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist M-T-M-T-T-M-T-M. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 M-T-M-T-T-M-T-M。大于12节时以重联方式运行
 STR_CRH6A2_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars",{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
 STR_CRH6A3_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars",{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
@@ -778,12 +785,13 @@ STR_CRH2C_HEAD_SEAT,{BLACK}Head Seat: {GOLD}2nd-Class (ZE),{BLACK}头车座席�
 STR_CRH2E_HEAD_SEAT,{BLACK}Head Seat: {GOLD}2nd-Class (ZE),{BLACK}头车座席：{GOLD}二等座
 STR_CRH2G_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
 STR_CRH2ELS_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class Sleeper (WY),{BLACK}头车座席：{GOLD}动卧
+STR_CJ1_HEAD_SEAT,"{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places, Comfort: {ORANGE}160",{BLACK}头车座席：{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
 STR_CRH3A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
 STR_CRH3C_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}商务座
 STR_CRH5A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
 STR_CRH380A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
-STR_CRH380B_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
-STR_CRH380CL_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CRH380B_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}商务座
+STR_CRH380CL_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}商务座
 STR_CRH380D_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
 STR_CR400_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
 STR_CR400_Z_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Luxury-Business-Class (SW),{BLACK}头车座席：{GOLD}商务座 (复兴号智能动车组标准)
