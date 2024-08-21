@@ -244,7 +244,7 @@ item (FEAT_TRAINS, ss9, 6165) {}
 item (FEAT_TRAINS, ss9g, 6166) {}
 item (FEAT_TRAINS, ss4b, 6167) {}
 item (FEAT_TRAINS, ss4c, 6168) {}
-// 6169-6170 coded by Babel
+// 6169-6175 coded by Babel
 item (FEAT_TRAINS, hxd2, 6169) {}
 item (FEAT_TRAINS, hxd21000, 6170) {}
 item (FEAT_TRAINS, fxd1b1000, 6171) {}

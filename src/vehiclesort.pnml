@@ -63,7 +63,7 @@ sort (FEAT_TRAINS, [
     hxd1d,
     hxd2,
     hxd21000,
-/*     hxd2b, */
+    hxd2b,
 /*     hxd2c, */
 /*     hxd2d, */
     hxd3,

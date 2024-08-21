@@ -1,42 +1,43 @@
-// Begin HXD3
-switch (FEAT_TRAINS, SELF, switch_hxd3_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_HXD3_SERIES);
+// Begin HXD2B
+switch (FEAT_TRAINS, SELF, switch_hxd2b_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_HXD2_SERIES);
     return CB_RESULT_NO_TEXT;
 }
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_hxd3_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("25-electric", "hxd3")
+spriteset (spriteset_hxd2b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-electric", "hxd2b")
 }
 
 // Vehicle
-spriteset (spriteset_hxd3_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-electric", "hxd3")
+spriteset (spriteset_hxd2b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "hxd2b")
 }
 
-switch (FEAT_TRAINS, SELF, switch_hxd3_articulated_part, extra_callback_info1) {
-    1..2: return hxd3;
+switch (FEAT_TRAINS, SELF, switch_hxd2b_articulated_part, extra_callback_info1) {
+    1..2: return hxd2b;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_hxd3_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_hxd3_original;
+switch (FEAT_TRAINS, SELF, switch_hxd2b_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_hxd2b_original;
     empty_sprites;
 }
 
 
-item (FEAT_TRAINS, hxd3) {
+item (FEAT_TRAINS, hxd2b) {
     property {
         // Menu
-        name:                           string(STR_NAME_HXD3);
+        name:                           string(STR_NAME_HXD2B);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
+        variant_group:					hxd2;
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2006,05,01);
+        introduction_date:              date(2009,06,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
         track_type:                     SACA;
@@ -55,9 +56,9 @@ item (FEAT_TRAINS, hxd3) {
 
         // Stats
         speed:                          120 km/h;
-        power:                          7200 kW;
+        power:                          9600 kW;
         weight:                         150 ton;
-        tractive_effort_coefficient:    0.388;
+        tractive_effort_coefficient:    0.397;
         cost_factor:                    127;
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            104;
@@ -65,23 +66,23 @@ item (FEAT_TRAINS, hxd3) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_HXD3), string(STR_ALIASNAME_HXD3), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_HXD3_NICKNAME), string(STR_RELDEC_LOW, 8));
+        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_HXD2B), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_HXD2_NICKNAME), string(STR_RELDEC_LOW, 8));
         can_attach_wagon:               locowagon;
         // Graphics
-        default:                        switch_hxd3_graphics;
-        purchase:                       spriteset_hxd3_purchase_original;
-        articulated_part:               switch_hxd3_articulated_part;
+        default:                        switch_hxd2b_graphics;
+        purchase:                       spriteset_hxd2b_purchase_original;
+        articulated_part:               switch_hxd2b_articulated_part;
 
         // Stats
-        length:                         switch_length_2_6_2;
+        length:                         switch_length_2_7_2;
         cargo_capacity:                 0;
-        cost_factor:                    127;
-        running_cost_factor:            102 * runningcostfactor();
-        purchase_running_cost_factor:   408;
+        cost_factor:                    142;
+        running_cost_factor:            118 * runningcostfactor();
+        purchase_running_cost_factor:   472;
         purchase_cargo_capacity:        0;
         bitmask_vehicle_info:           0;
-        name:                           switch_hxd3_name;
+        name:                           switch_hxd2b_name;
     }
 }
 
-// End HXD3
+// End HXD2B

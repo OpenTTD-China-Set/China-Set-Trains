@@ -7,7 +7,7 @@ China Set: Trains Changelog
 
 0.3.2.170 (20/8/2024)
 --------------------
-Add: HXD3, FXD1B-1000, FXD2B-1000
+Add: HXD3, FXD1B-1000, FXD2B-1000, P64
 Renewal the sprites of DF11Z, HXD2, HXD2-1000, CRH3A, CRH3C
 Completed the CRH3 Sries:
     - Refurbish and renewal the sprites of CRH3A, CRH3C, CRH380B, CRH380CL
