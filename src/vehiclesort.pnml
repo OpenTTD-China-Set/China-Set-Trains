@@ -78,9 +78,13 @@ sort (FEAT_TRAINS, [
     fxd1b1000,
 /*     fxd2b, */
 <<<<<<< HEAD
+<<<<<<< HEAD
     fxd2b1000,
 =======
 >>>>>>> 9ecce40 (add fxd1b-1000,hxd3)
+=======
+    fxd2b1000,
+>>>>>>> 88b22cc (add fxd2b-1000)
     cha1c,
     nc3,
     nzj1_xinshuguang,
