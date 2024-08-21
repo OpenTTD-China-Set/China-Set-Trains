@@ -34,9 +34,12 @@ item (FEAT_TRAINS, hxd3) {
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         variant_group:					hxd3;
 >>>>>>> 9ecce40 (add fxd1b-1000,hxd3)
+=======
+>>>>>>> 7d663c8 (add hxd2b)
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -66,10 +69,14 @@ item (FEAT_TRAINS, hxd3) {
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            104;
 <<<<<<< HEAD
+<<<<<<< HEAD
         reliability_decay:              8;
 =======
         reliability_decay:              6;
 >>>>>>> 9ecce40 (add fxd1b-1000,hxd3)
+=======
+        reliability_decay:              8;
+>>>>>>> 7d663c8 (add hxd2b)
     }
     graphics {
         // Menu

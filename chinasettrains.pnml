@@ -217,6 +217,9 @@
 #include "src/25-electric/hxd21000.pnml"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7d663c8 (add hxd2b)
 #include "src/25-electric/hxd2b.pnml"
 #include "src/25-electric/fxd2b1000.pnml"
 =======
