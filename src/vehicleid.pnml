@@ -320,9 +320,13 @@ item (FEAT_TRAINS, djj2, 9256) {}
 item (FEAT_TRAINS, crh380bl, 9257) {}
 item (FEAT_TRAINS, cj1, 9258) {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 item (FEAT_TRAINS, x2000, 9259) {}
 =======
 >>>>>>> af510a2 (add cj1 crh380bl)
+=======
+item (FEAT_TRAINS, x2000, 9259) {}
+>>>>>>> 251c19d (add x2000(with bug))
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
 #define id_range_1500_emu 0x2800..0x2BFF
