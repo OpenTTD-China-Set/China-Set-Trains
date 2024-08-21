@@ -233,6 +233,7 @@
 #include "src/dmu/nzj2_jinlun_double_decker.pnml"
 
 // 25kV AC EMU
+#include "src/25-emu/x2000.pnml"
 #include "src/25-emu/djj1.pnml"
 #include "src/25-emu/djj2.pnml"
 #include "src/25-emu/djf3.pnml"
