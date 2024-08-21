@@ -204,6 +204,7 @@ STR_NAME_HXD3D,HXD3D (Electric),HXD3D (电力)
 STR_NAME_FXD1B,FXD1B (Electric),FXD1B (电力)
 STR_NAME_FXD1B1000,FXD1B-1000 (Electric),FXD1B-1000 (电力)
 STR_NAME_FXD2B,FXD2B (Electric),FXD2B (电力)
+STR_NAME_FXD2B1000,FXD2B-1000 (Electric),FXD2B-1000 (电力)
 STR_NAME_CHA1C,CHA1C (Hybrid),CHA1C (混合动力)
 STR_NAME_NC3,NC3 (DMU),NC3 (内燃动车)
 STR_NAME_NZJ1_XINSHUGUANG,"NZJ1 ""Xinshuguang"" (DMU)","NZJ1 ""新曙光号"" (内燃动车)"
@@ -392,6 +393,7 @@ STR_FULL_NAME_HXD2,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2 Electric Locomotive,{B
 STR_FULL_NAME_HXD21000,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2 Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}和谐2型电力机车1000系
 STR_FULL_NAME_HXD2B,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2B Electric Locomotive,{BLACK}全称：{GOLD}和谐2B型电力机车
 STR_FULL_NAME_FXD2B,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 2B Electric Locomotive,{BLACK}全称：{GOLD}复兴2B型电力机车
+STR_FULL_NAME_FXD2B1000,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 2B Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}和谐2型电力机车1000系
 STR_FULL_NAME_HXD3,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3 Electric Locomotive,{BLACK}全称：{GOLD}和谐3型电力机车
 STR_FULL_NAME_HXD3C,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3C Electric Locomotive,{BLACK}全称：{GOLD}和谐3C型电力机车
 STR_FULL_NAME_HXD3D,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3D Electric Locomotive,{BLACK}全称：{GOLD}和谐3D型电力机车

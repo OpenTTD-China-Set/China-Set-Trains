@@ -73,6 +73,7 @@ sort (FEAT_TRAINS, [
     hxd1f,
     fxd1b1000,
 /*     fxd2b, */
+    fxd2b1000,
     cha1c,
     nc3,
     nzj1_xinshuguang,

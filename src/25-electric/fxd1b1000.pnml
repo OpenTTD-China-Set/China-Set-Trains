@@ -1,6 +1,6 @@
 // Begin FXD1B1000
 switch (FEAT_TRAINS, SELF, switch_fxd1b1000_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_HXD1_SERIES);
+    0: return string(STR_FXD1_SERIES);
     return CB_RESULT_NO_TEXT;
 }
 // Graphics
@@ -71,7 +71,7 @@ item (FEAT_TRAINS, fxd1b1000) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_FXD1B1000), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_VERY_LOW, 5));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_FXD1B1000), string(STR_ALIASNAME_FXD1B), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_VERY_LOW, 5));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_fxd1b1000_graphics;
