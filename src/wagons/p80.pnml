@@ -84,7 +84,7 @@ item (FEAT_TRAINS, p80) {
         // Stats
         speed:                          120 km/h;
         power:                          0 hp;
-        weight:                         226 ton;
+        weight:                         26 ton;
         cost_factor:                    8;
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            6;
