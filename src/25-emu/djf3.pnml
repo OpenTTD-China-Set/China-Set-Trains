@@ -156,8 +156,9 @@ item (FEAT_TRAINS, djf3) {
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2003,09,06);
-        model_life:                     VEHICLE_NEVER_EXPIRES;
-        vehicle_life:                   20;
+        model_life:                     30;
+        retire_early:                   20;
+        vehicle_life:                   15;
         track_type:                     SABA;
 
         // Cargo

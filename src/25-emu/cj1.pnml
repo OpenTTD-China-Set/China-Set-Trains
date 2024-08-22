@@ -1,0 +1,255 @@
+// Begin CJ1
+switch (FEAT_TRAINS, SELF, switch_cj1_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_CRH3_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_cj1_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-emu", "cj1-c")
+}
+
+// Vehicle
+spriteset (spriteset_cj1_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cj1-c")
+}
+spriteset (spriteset_cj1_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cj1-m")
+}
+spriteset (spriteset_cj1_middle_p, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "cj1-tp")
+}
+spriteset (spriteset_cj1_middle_p_r, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cj1-tp")
+}
+spriteset (spriteset_cj1_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "cj1-c")
+}
+spriteset (spriteset_cj1_cab_c, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "cj1-c-c")
+}
+spriteset (spriteset_cj1_cab_c_r, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cj1-c-c")
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj1_articulated_part, extra_callback_info1) {
+    1..2: return cj1;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj1_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_cj1_front;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj1_head_capacity, position_in_articulated_veh % 3) {
+    1: return 48;
+    return 0;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_cj1_middle_graphics_reconnect_tp, (position_in_consist / 3) + 1 - (num_vehs_in_consist / 6) + 1) {
+    0: spriteset_cj1_middle_p_r;
+    1: spriteset_cj1_cab_c;
+    2: spriteset_cj1_cab_c_r;
+    3: spriteset_cj1_middle_p;
+    spriteset_cj1_middle_m;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj1_middle_graphics_reconnect, (position_in_consist / 3) + 1) {
+    2: spriteset_cj1_middle_p;
+    switch_cj1_middle_graphics_reconnect_tp;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj1_middle_graphics_short, (position_in_consist / 3) + 1) {
+    2: spriteset_cj1_middle_p;
+    spriteset_cj1_middle_m;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj1_length, num_vehs_in_consist / 3) {
+    2..12: switch_cj1_middle_graphics_short;
+    switch_cj1_middle_graphics_reconnect;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj1_cab_graphics, (position_in_consist_from_end / 3) + 1) {
+    1: spriteset_cj1_cab;
+    2: spriteset_cj1_middle_p_r;
+    switch_cj1_length;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj1_wagon_graphics, position_in_articulated_veh % 3) {
+    1: switch_cj1_cab_graphics;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj1_wagon_length, position_in_consist_from_end) {
+    switch_length_2_8_2;
+}
+
+//cap
+
+switch (FEAT_TRAINS, SELF, switch_cj1_middle_capacity_1, vehicle_type_id) {
+    1024: return 168;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj1_middle_capacity, position_in_articulated_veh % 3) {
+    1: switch_cj1_middle_capacity_1;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj1_cab_capacity_1, vehicle_type_id) {
+    1024: return 120;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj1_cab_capacity, position_in_articulated_veh % 3) {
+    1: switch_cj1_cab_capacity_1;
+    return 0;
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_cj1_wagon_capacity_short, position_in_consist_from_end) {
+    0..2: switch_cj1_cab_capacity;
+    switch_cj1_middle_capacity;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj1_wagon_capacity_reconnect, (position_in_consist / 3) + 1 - (num_vehs_in_consist / 6)) {
+    0..1: switch_cj1_cab_capacity;
+    switch_cj1_wagon_capacity_short;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj1_wagon_capacity, num_vehs_in_consist / 3) {
+    2..12: switch_cj1_wagon_capacity_short;
+    switch_cj1_wagon_capacity_reconnect;
+}
+
+//cost
+
+switch (FEAT_TRAINS, SELF, switch_cj1_wagon_running_power, vehicle_type_id) {
+    1024: return 51;
+    return 0;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_cj1_wagon_running_unpower, vehicle_type_id) {
+    1024: return 9;
+    return 0;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_cj1_wagon_running, vehicle_is_potentially_powered) {
+    1: switch_cj1_wagon_running_power;
+    switch_cj1_wagon_running_unpower;
+}
+
+//power
+
+switch (FEAT_TRAINS, SELF, switch_cj1_wagon_power_back, position_in_consist_from_end % 6) {
+    0..2: return 1717;
+    return 0;
+}
+switch (FEAT_TRAINS, SELF, switch_cj1_wagon_power_front, position_in_consist % 6) {
+    0..2: return 1717;
+    return 0;
+}
+switch (FEAT_TRAINS, SELF, switch_cj1_wagon_power_reconnect, (position_in_consist / 3) + 1 > (num_vehs_in_consist / 6)) {
+    1: switch_cj1_wagon_power_back;
+    switch_cj1_wagon_power_front;
+}
+switch (FEAT_TRAINS, SELF, switch_cj1_wagon_power_short, position_in_consist % 6) {
+    0..2: return 1717;
+    return 0;
+}
+switch (FEAT_TRAINS, SELF, switch_cj1_wagon_power, num_vehs_in_consist / 3) {
+    2..12: switch_cj1_wagon_power_short;
+    switch_cj1_wagon_power_reconnect;
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_cj1_wagon_traction, vehicle_is_potentially_powered) {
+    1: return int(0.138*255);
+    return 0;
+}
+
+
+item (FEAT_TRAINS, cj1) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CJ1);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2013,06,08);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   25;
+        track_type:                     SABA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               160 << param_cargo_decay;
+
+        // Stats
+        speed:                          250 km/h;
+        power:                          1280 kW;
+        weight:                         55 ton;
+        tractive_effort_coefficient:    0.14;
+        cost_factor:                    61;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            26;
+        reliability_decay:              20;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_5, string(STR_CJ1_CAN_ATTACH_WAGON), string(STR_CJ1_NICKNAME), string(STR_RELDEC_LOW, 8), string(STR_CJ1_CONSIST), string(STR_CJ1_HEAD_SEAT));
+        can_attach_wagon:               onlyze;
+        start_stop:                     mu4to24car;
+        // Graphics
+        default:                        switch_cj1_graphics;
+        purchase:                       spriteset_cj1_purchase_original;
+        articulated_part:               switch_cj1_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_cj1_head_capacity;
+        cargo_age_period:               40 * cafedecayfactor() << param_cargo_decay;
+        cost_factor:                    64;
+        running_cost_factor:            50 * runningcostfactor() * 2 + 20;
+        purchase_running_cost_factor:   240;
+        purchase_cargo_capacity:        48/3;
+        name:                           switch_cj1_name;
+    }
+
+    // Multiple Unit Wagons
+    livery_override(zemuw) {
+        default:                        switch_cj1_wagon_graphics;
+        cargo_capacity:                 switch_cj1_wagon_capacity;
+        power:                          switch_cj1_wagon_power;
+        tractive_effort_coefficient:    switch_cj1_wagon_traction;
+        length:                         switch_cj1_wagon_length;
+        weight:                         52;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (160) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        running_cost_factor:            switch_cj1_wagon_running() * runningcostfactor() * 2 + accostfactor();
+    }
+
+}
+
+// End CJ1

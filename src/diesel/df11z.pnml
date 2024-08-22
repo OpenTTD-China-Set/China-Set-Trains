@@ -62,11 +62,11 @@ item (FEAT_TRAINS, df11z) {
         cost_factor:                    127;
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            104;
-        reliability_decay:              14;
+        reliability_decay:              2;
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_DF11Z), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_MEDIUM, 14));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_DF11Z), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_VERY_LOW, 2));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_df11z_graphics;
@@ -76,9 +76,9 @@ item (FEAT_TRAINS, df11z) {
         // Stats
         length:                         switch_length_2_6_2;
         cargo_capacity:                 0;
-        cost_factor:                    135;
-        running_cost_factor:            100 * runningcostfactor();
-        purchase_running_cost_factor:   400;
+        cost_factor:                    147;
+        running_cost_factor:            117 * runningcostfactor();
+        purchase_running_cost_factor:   468;
         purchase_cargo_capacity:        0;
         bitmask_vehicle_info:           0;
     }
