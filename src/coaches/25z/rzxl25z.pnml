@@ -16,14 +16,33 @@ spriteset (spriteset_rzxl25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BP
 spriteset (spriteset_rzxl25z_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches","rzxl25z")
 }
+spriteset (spriteset_rzxl25z_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches","rzxl25z-guangzhou-sifang-a")
+}
+spriteset (spriteset_rzxl25z_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches","rzxl25z-guangzhou-green")
+}
 
 switch (FEAT_TRAINS, SELF, switch_rzxl25z_articulated_part, extra_callback_info1) {
     1..2: return rzxl25z;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+switch (FEAT_TRAINS, SELF, switch_rzxl25z_cargo_subtype, cargo_subtype) {
+    0: return string(STR_GUANGSHEN_CHANGKE_1);
+    1: return string(STR_GUANGSHEN_CHANGKE_2);
+    2: return string(STR_GUANGSHEN_GREEN);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rzxl25z_graphics_subtype, cargo_subtype) {
+    0: spriteset_rzxl25z_original;
+    1: spriteset_rzxl25z_alternative;
+    2: spriteset_rzxl25z_green;
+}
+
 switch (FEAT_TRAINS, SELF, switch_rzxl25z_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_rzxl25z_original;
+    1: switch_rzxl25z_graphics_subtype;
     empty_sprites;
 }
 

@@ -14,14 +14,29 @@ spriteset (spriteset_rz225z_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_rz225z_xizi, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "rz225z")
 }
+spriteset (spriteset_rz225z_xizi_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "rz225z-green")
+}
 spriteset (spriteset_rz225z_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "rz225z-beijing")
 }
-spriteset (spriteset_rz225z_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "rz225z-guangzhou")
+spriteset (spriteset_rz225z_beijing_colourfading, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "rz225z-beijing-colourfading")
 }
-spriteset (spriteset_rz225z_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "rz225z-green")
+spriteset (spriteset_rz225z_guangzhou_changke_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "rz225z-guangzhou-changke-a")
+}
+spriteset (spriteset_rz225z_guangzhou_sifang_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "rz225z-guangzhou-sifang-a")
+}
+spriteset (spriteset_rz225z_guangzhou_sifang_b, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "rz225z-guangzhou-sifang-b")
+}
+spriteset (spriteset_rz225z_guangzhou_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "rz225z-guangzhou-green")
+}
+spriteset (spriteset_rz225z_wuhan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "rz225z-wuhan")
 }
 
 switch (FEAT_TRAINS, SELF, switch_rz225z_articulated_part, extra_callback_info1) {
@@ -29,11 +44,21 @@ switch (FEAT_TRAINS, SELF, switch_rz225z_articulated_part, extra_callback_info1)
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+switch (FEAT_TRAINS, SELF, switch_rz225z_xizi_graphics_subtype_year_depend, build_year) {
+     0..2014: spriteset_rz225z_xizi;
+    spriteset_rz225z_xizi_green;
+}
+
 switch (FEAT_TRAINS, SELF, switch_rz225z_graphics_subtype, cargo_subtype) {
     0: spriteset_rz225z_xizi;
-    1: spriteset_rz225z_beijing;
-    2: spriteset_rz225z_guangzhou;
-    3: spriteset_rz225z_green;
+    1: switch_rz225z_xizi_graphics_subtype_year_depend;
+    2: spriteset_rz225z_beijing;
+    3: spriteset_rz225z_beijing_colourfading;
+    4: spriteset_rz225z_guangzhou_changke_a;
+    5: spriteset_rz225z_guangzhou_sifang_a;
+    6: spriteset_rz225z_guangzhou_sifang_b;
+    7: spriteset_rz225z_guangzhou_green;
+    8: spriteset_rz225z_wuhan;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rz225z_graphics, position_in_articulated_veh % 3) {
@@ -43,9 +68,14 @@ switch (FEAT_TRAINS, SELF, switch_rz225z_graphics, position_in_articulated_veh %
 
 switch (FEAT_TRAINS, SELF, switch_rz225z_cargo_subtype, cargo_subtype) {
     0: return string(STR_XIZI);
-    1: return string(STR_BEIJING);
-    2: return string(STR_GUANGSHEN);
-    3: return string(STR_GAOZU_GREEN);
+    1: return string(STR_XIZI_BUILD_YEAR);
+    2: return string(STR_BEIJING);
+    3: return string(STR_BEIJING_FADE);
+    4: return string(STR_GUANGSHEN_CHANGKE_1);
+    5: return string(STR_GUANGSHEN_SIFANG_1);
+    6: return string(STR_GUANGSHEN_SIFANG_2);
+    7: return string(STR_GUANGSHEN_GREEN);
+    8: return string(STR_WUHAN);
     return CB_RESULT_NO_TEXT;
 }
 

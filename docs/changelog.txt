@@ -9,6 +9,7 @@ China Set: Trains Changelog
 --------------------
 Fix #50: P80 weight
 Add: DFH3, BH1, JSQ1, X2K, W5, W5S, W5SK, W6, W6S, P62N, P64A, P66H
+Add Livery: 25Z series
 
 0.3.1.168 (19/8/2024)
 --------------------

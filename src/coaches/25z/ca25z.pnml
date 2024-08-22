@@ -9,18 +9,30 @@ switch (FEAT_TRAINS, SELF, switch_ca25z_name, getbits(extra_callback_info1, 0, 8
 
 // Purchase Menu
 spriteset (spriteset_ca25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "ca25z")
+    template_purchase ("coaches", "ca25z-1")
 }
 
 // Vehicle
-spriteset (spriteset_ca25z_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "ca25z")
+spriteset (spriteset_ca25z_beijing_1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "ca25z-1")
 }
-spriteset (spriteset_ca25z_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "ca25z-guangzhou")
+spriteset (spriteset_ca25z_beijing_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "ca25z-2")
 }
-spriteset (spriteset_ca25z_beijing_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "ca25z-beijing-blue")
+spriteset (spriteset_ca25z_beijing_colourfading_1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "ca25z-colourfading-1")
+}
+spriteset (spriteset_ca25z_beijing_colourfading_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "ca25z-colourfading-2")
+}
+spriteset (spriteset_ca25z_guangzhou_changke_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "ca25z-guangzhou-changke-a")
+}
+spriteset (spriteset_ca25z_guangzhou_sifang_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "ca25z-guangzhou-sifang-a")
+}
+spriteset (spriteset_ca25z_guangzhou_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "ca25z-guangzhou-green")
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca25z_articulated_part, extra_callback_info1) {
@@ -30,15 +42,30 @@ switch (FEAT_TRAINS, SELF, switch_ca25z_articulated_part, extra_callback_info1) 
 
 switch (FEAT_TRAINS, SELF, switch_ca25z_cargo_subtype, cargo_subtype) {
     0: return string(STR_BEIJING);
-    1: return string(STR_GUANGSHEN);
-    2: return string(STR_BLUE_RED_WHITE);
+    1: return string(STR_BEIJING_FADE);
+    2: return string(STR_GUANGSHEN_CHANGKE_1);
+    3: return string(STR_GUANGSHEN_SIFANG_1);
+    4: return string(STR_GUANGSHEN_GREEN);
     return CB_RESULT_NO_TEXT;
 }
 
+random_switch (FEAT_TRAINS, SELF, random_ca25z_beijing) {
+    1: spriteset_ca25z_beijing_1;
+    1: spriteset_ca25z_beijing_2;
+}
+
+random_switch (FEAT_TRAINS, SELF, random_ca25z_beijing_colourfading) {
+    1: spriteset_ca25z_beijing_colourfading_1;
+    1: spriteset_ca25z_beijing_colourfading_2;
+}
+
+
 switch (FEAT_TRAINS, SELF, switch_ca25z_graphics_subtype, cargo_subtype) {
-    0: spriteset_ca25z_beijing;
-    1: spriteset_ca25z_guangzhou;
-    2: spriteset_ca25z_beijing_blue;
+    0: random_ca25z_beijing;
+    1: random_ca25z_beijing_colourfading;
+    2: spriteset_ca25z_guangzhou_changke_a;
+    3: spriteset_ca25z_guangzhou_sifang_a;
+    4: spriteset_ca25z_guangzhou_green;
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca25z_graphics, position_in_articulated_veh % 3) {

@@ -16,8 +16,11 @@ spriteset (spriteset_srz125z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BP
 spriteset (spriteset_srz125z_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches","srz125z")
 }
-spriteset (spriteset_srz125z_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "srz125z-guangzhou")
+spriteset (spriteset_srz125z_guangzhou_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "srz125z-guangzhou-a")
+}
+spriteset (spriteset_srz125z_guangzhou_b, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "srz125z-guangzhou-b")
 }
 
 switch (FEAT_TRAINS, SELF, switch_srz125z_articulated_part, extra_callback_info1) {
@@ -27,13 +30,15 @@ switch (FEAT_TRAINS, SELF, switch_srz125z_articulated_part, extra_callback_info1
 
 switch (FEAT_TRAINS, SELF, switch_srz125z_cargo_subtype, cargo_subtype) {
     0: return string(STR_BEIJING);
-    1: return string(STR_GUANGSHEN);
+    1: return string(STR_GUANGSHEN_PUZHEN_1);
+    2: return string(STR_GUANGSHEN_PUZHEN_2);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_srz125z_graphics_subtype, cargo_subtype) {
     0: spriteset_srz125z_beijing;
-    1: spriteset_srz125z_guangzhou;
+    1: spriteset_srz125z_guangzhou_a;
+    2: spriteset_srz125z_guangzhou_b;
 }
 
 switch (FEAT_TRAINS, SELF, switch_srz125z_graphics, position_in_articulated_veh % 3) {

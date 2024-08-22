@@ -500,7 +500,7 @@ STR_UZ25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue {GOLD}and 
 STR_KD25T_LIVERY_AVAILABILITY,{BLACK}Livery Availability: Only {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery,{BLACK}可供选择的涂装：仅有{DKGREEN}青藏铁路{GOLD}涂装
 STR_19K_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery",{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{RED}红{WHITE}白{GOLD}相间涂装
 STR_25K_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
-STR_25Z_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Xi{WHITE}zi{GOLD}Livery, {LTBLUE}Shijiazhuang-Qinhuangdao {WHITE}Slow Train {GOLD}Livery, {BLUE}Guangzhou-{RED}-Shenzhen{WHITE} Railway{GOLD} Livery","{BLACK}可供选择的涂装：{BLUE}西子号{WHITE}列车{GOLD}涂装，{LTBLUE}石秦{WHITE}特慢{GOLD}涂装, {BLUE}广深{RED}铁{WHITE}路{GOLD}涂装"
+STR_25Z_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Xi{WHITE}zi{GOLD}Livery, {LTBLUE}Beijing {GOLD}Livery, {BLUE}Guangzhou-{RED}-Shenzhen{WHITE} Railway{GOLD} Livery, {BLUE}Wuhan {GOLD}Livery,  {DKGREEN}Green {GOLD}Livery","{BLACK}可供选择的涂装：{BLUE}西子号{WHITE}列车{GOLD}涂装，{LTBLUE}北京铁路局{GOLD}涂装, {BLUE}广深{RED}铁{WHITE}路{GOLD}涂装, 绿色涂装，武汉铁路局涂装"
 STR_S25Z_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {LTBLUE}Shijiazhuang-Qinhuangdao {WHITE}Slow Train {GOLD}Livery, {BLUE}Guangzhou-{DKGREEN}-Shenzhen{WHITE} Railway{GOLD} Livery","{BLACK}可供选择的涂装：{LTBLUE}石秦{WHITE}特慢{GOLD}涂装, {BLUE}广深{DKGREEN}铁{WHITE}路{GOLD}涂装"
 STR_S25_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue-{GOLD}-Orange-{WHITE}-White {BLACK}Livery, other livery (unfinished}",{BLACK}可供选择的涂装：{GOLD}蓝-橙-白涂装，其他彩绘涂装尚未完成
 STR_S25KLD_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Liaodong Peninsula Livery (All low-door, higher loading speed)",{BLACK}可供选择的涂装：{LTBLUE}沪芦列车{GOLD}涂装，辽东半岛号 (均为低开门，装载较快)
@@ -664,12 +664,22 @@ STR_URUMQI, - Urumqi Railway Bureau, - 乌鲁木齐铁路局
 STR_XIAN, - Xi'an Railway Bureau, - 西安铁路局
 STR_SHENYANG, - Shenyang Railway Bureau, - 沈阳铁路局
 STR_XIANXING, - Xianxing (Pioneer) Livery, - 先行号涂装
-STR_XIZI, - Xizi Livery, - 西子号涂装
+STR_XIZI," - ""Xizi"" Livery", - 西子号涂装
+STR_XIZI_BUILD_YEAR," - ""Xizi"" (According to build year)", - 西子号（根据建造年份选择涂装）
 STR_QINGZANG, - Qinghai-Tibet Railway Livery, - 青藏铁路涂装
 STR_GUANGSHEN, - Guangzhou-Shenzhen Railway Livery, - 广深铁路涂装
+STR_GUANGSHEN_CHANGKE_1," - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 1st)", - 广深铁路（长春客车厂一批次）涂装
+STR_GUANGSHEN_CHANGKE_2," - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 2nd)", - 广深铁路（长春客车厂二批次）涂装
+STR_GUANGSHEN_SIFANG_1," - Guangzhou-Shenzhen Railway Livery (Sifang Railway Vehicle Works, Production Batch 1st)", - 广深铁路（四方厂一批次）涂装
+STR_GUANGSHEN_SIFANG_2," - Guangzhou-Shenzhen Railway Livery (Sifang Railway Vehicle Works, Production Batch 2nd)", - 广深铁路（四方厂二批次）涂装
+STR_GUANGSHEN_PUZHEN_1," - Guangzhou-Shenzhen Railway Livery (Puzhen Railway Vehicle Works, Production Batch 1st)", - 广深铁路（浦镇厂一批次）涂装
+STR_GUANGSHEN_PUZHEN_2," - Guangzhou-Shenzhen Railway Livery (Puzhen Railway Vehicle Works, Production Batch 2nd)", - 广深铁路（浦镇厂二批次）涂装
+STR_GUANGSHEN_GREEN, - Guangzhou-Shenzhen Railway {DKGREEN}Green {BLACK}Livery (Unfinished), - 广深铁路绿色涂装（未完成）
 STR_JINWEN, - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLACK}Company, - {WHITE}金{RED}温{BLUE}铁{WHITE}路{BLACK}公司
 STR_GAOZU_GREEN," - {DKGREEN}""Gaozu Green"" {BLACK}(unfinished except 25T)"," - {DKGREEN}""高阻绿"" {BLACK}(未完成, 25T除外)"
-STR_BEIJING, - Beijing Railway Bureau, - 北京铁路局
+STR_BEIJING, - Beijing Livery, - 北京铁路局涂装
+STR_BEIJING_FADE, - Beijing Livery (Colour Faded), - 褪色的北京铁路局涂装
+STR_WUHAN, - Wuhan Livery, - 武汉铁路局涂装
 STR_WRU, - Wuhan Railway Vocational College of Technology Livery, - 武汉铁路技术学院涂装
 STR_BEIJING2SHANGHAI, - Beijing-Shanghai Express Train Livery {CREAM}Cream-{BROWN}-Brown, - 北京至上海13/14次直快涂装
 STR_LATER, - Later Livery, - 后期涂装
