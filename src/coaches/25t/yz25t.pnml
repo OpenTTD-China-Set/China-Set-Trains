@@ -14,11 +14,14 @@ spriteset (spriteset_yz25t_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP)
 spriteset (spriteset_yz25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "yz25t")
 }
-spriteset (spriteset_25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t-qingzang")
-}
 spriteset (spriteset_25t_gaozu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t-gaozu")
+}
+spriteset (spriteset_yz25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "yz25t-xz")
+}
+spriteset (spriteset_bspyz25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "bspyz25t-xz")
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25t_articulated_part, extra_callback_info1) {
@@ -29,8 +32,9 @@ switch (FEAT_TRAINS, SELF, switch_yz25t_articulated_part, extra_callback_info1) 
 switch (FEAT_TRAINS, SELF, switch_yz25t_cargo_subtype, cargo_subtype) {
     0: string(STR_BUILD_YEAR);
     1: string(STR_ORIGINAL);
-    2: string(STR_QINGZANG);
-    3: string(STR_GAOZU_GREEN);
+    2: string(STR_GAOZU_GREEN);
+    3: string(STR_QINGZANG);
+    4: string(STR_QINGZANG_BSP);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -45,8 +49,9 @@ switch (FEAT_TRAINS, SELF, switch_yz25t_graphics_subtype_0, param_gaozulv) {
 switch (FEAT_TRAINS, SELF, switch_yz25t_graphics_subtype, cargo_subtype) {
     0: switch_yz25t_graphics_subtype_0;
     1: spriteset_yz25t_original;
-    2: spriteset_25t_qingzang;
-    3: spriteset_25t_gaozu;
+    2: spriteset_25t_gaozu;
+    3: spriteset_yz25t_qingzang;
+    4: spriteset_bspyz25t_qingzang;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25t_graphics, position_in_articulated_veh % 3) {
@@ -96,7 +101,7 @@ item (FEAT_TRAINS, yz25t) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YZ25T), string(STR_25T_LIVERY_AVAILABILITY), string(STR_COMFORT_LOW, 160));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YZ25T), string(STR_YZ_YW25T_LIVERY_AVAILABILITY), string(STR_COMFORT_LOW, 160));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_yz25t_cargo_subtype;
 
@@ -113,7 +118,7 @@ item (FEAT_TRAINS, yz25t) {
         running_cost_factor:            8 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   32;
         purchase_cargo_capacity:        118/3;
-        name:                            switch_yz25t_name;
+        name:                           switch_yz25t_name;
     }
 }
 

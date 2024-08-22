@@ -20,7 +20,12 @@ spriteset (spriteset_rw25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_bsprw25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "bsprw25t")
 }
-
+spriteset (spriteset_rw25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "rw25t-xz")
+}
+spriteset (spriteset_bsprw25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "bsprw25t-xz")
+}
 
 switch (FEAT_TRAINS, SELF, switch_rw25t_articulated_part, extra_callback_info1) {
     1..2: return rw25t;
@@ -28,11 +33,13 @@ switch (FEAT_TRAINS, SELF, switch_rw25t_articulated_part, extra_callback_info1) 
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw25t_cargo_subtype, cargo_subtype) {
-    0: string(STR_BUILD_YEAR);
+   0: string(STR_BUILD_YEAR);
     1: string(STR_ORIGINAL);
     2: string(STR_BSP25T);
-    3: string(STR_QINGZANG);
-    4: string(STR_GAOZU_GREEN);
+    3: string(STR_GAOZU_GREEN);
+/*     4: string(STR_GAOZU_GREEN); */
+    4: string(STR_QINGZANG);
+    5: string(STR_QINGZANG_BSP);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -52,8 +59,10 @@ switch (FEAT_TRAINS, SELF, switch_rw25t_graphics_subtype, cargo_subtype) {
     0: switch_rw25t_graphics_subtype_0;
     1: spriteset_rw25t_original;
     2: spriteset_bsprw25t_original;
-    3: spriteset_25t_qingzang;
-    4: spriteset_25t_gaozu;
+    3: spriteset_25t_gaozu;
+/*     4: ; */
+    4: spriteset_rw25t_qingzang;
+    5: spriteset_bsprw25t_qingzang;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw25t_graphics, position_in_articulated_veh % 3) {
@@ -104,7 +113,7 @@ item (FEAT_TRAINS, rw25t) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RW25T), string(STR_BSP25T_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 384));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RW25T), string(STR_RW25T_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 384));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_rw25t_cargo_subtype;
 
@@ -121,7 +130,7 @@ item (FEAT_TRAINS, rw25t) {
         running_cost_factor:            15 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   60;
         purchase_cargo_capacity:        36/3;
-        name:                            switch_rw25t_name;
+        name:                           switch_rw25t_name;
 
     }
 }

@@ -495,12 +495,14 @@ STR_S25BHD_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}deteriorated, 
 STR_25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, Xi'an-Huxian Railway Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}，西户铁路涂装，“高阻绿”{GOLD}涂装 (未完成)
 STR_CA25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{ORANGE}橙色{GOLD}涂装，“高阻绿”{GOLD}涂装 (未完成)
 STR_KD25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an-Huxian Railway Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery (unfinished), {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{ORANGE}橙色{GOLD}涂装，{LTBLUE}沪芦列车{GOLD}涂装，西户铁路涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装 (未完成){DKGREEN}，“高阻绿”{GOLD}涂装 (未完成)
-STR_25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery",{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}青藏铁路{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装
-STR_BSP25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery, Made by BSP Livery","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装，{DKGREEN}青藏铁路 {GOLD}涂装，{DKGREEN}""高祖绿"" {GOLD}涂装，BSP25T涂装"
-STR_CA25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery, Made by BSP Livery","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装，{DKGREEN}青藏铁路 {GOLD}涂装，{DKGREEN}""高祖绿"" {GOLD}涂装，BSP25T涂装"
-STR_XL25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery (unfinished), {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}青藏铁路{GOLD}涂装 (未完成)，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
-STR_UZ25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (未完成)，{DKGREEN}""高祖绿"" {GOLD}涂装"
-STR_KD25T_LIVERY_AVAILABILITY,{BLACK}Livery Availability: Only {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery,{BLACK}可供选择的涂装：仅有{DKGREEN}青藏铁路{GOLD}涂装
+STR_YZ_YW25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Only Made in China), {DKGREEN}""Gaozu Lv"" Green Livery (Only Made in China),  Qinghai-Tibet Railway Grenn Livery (Both have Made in China and Made by BSP)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (仅国产)，{DKGREEN}青藏铁路涂装 (国产和BSP版本)，""高祖绿""涂装 (仅国产)，{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)"
+STR_RZ25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Both have Made in China and Made by BSP), {DKGREEN}""Gaozu Lv"" Green Livery (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Grenn Livery (Only Made in China),{WHITE} Guangzhou-Kowloon Railway Livery {DKGREEN}(And its ""Gaozu Lv"" Green version)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (仅国产)，""高祖绿""涂装 (国产和BSP版本)，{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)"
+STR_RW25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Both have Made in China and Made by BSP), {DKGREEN}""Gaozu Lv"" Green Livery (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Grenn Livery (Also Both have Made in China and Made by BSP)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (国产和BSP版本)，""高祖绿""涂装 (国产和BSP版本)"
+STR_CA25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Both have Made in China and Made by BSP), {DKGREEN}""Gaozu Lv"" Green Livery (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Grenn Livery (Also Both have Made in China and Made by BSP),{WHITE} Guangzhou-Kowloon Railway Livery {DKGREEN}(And its ""Gaozu Lv"" Green version)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (国产和BSP版本)，""高祖绿""涂装，{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)"
+STR_XL25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery (Both have Made in China and Made by BSP) , {DKGREEN}""Gaozu Lv""  Green Livery  (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Livery  (Only Made in China)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (仅国产)，""高祖绿""涂装 (国产和BSP版本)"
+STR_RZXL25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {WHITE} Guangzhou-Kowloon Railway Livery {DKGREEN}(And its ""Gaozu Lv"" Green version)",{BLACK}可供选择的涂装：{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)
+STR_UZ25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery (Only Made in China),  {DKGREEN}""Gaozu Lv""  GreenLivery (Only Made in China)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (仅国产)，{DKGREEN}""高祖绿""涂装 (仅国产)"
+STR_KD25T_LIVERY_AVAILABILITY,{BLACK}Livery Availability: Only {DKGREEN}Qinghai-Tibet Railway Livery,{BLACK}可供选择的涂装：仅有{DKGREEN}青藏铁路涂装
 STR_19K_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery",{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{RED}红{WHITE}白{GOLD}相间涂装
 STR_25K_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_25Z_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Xi{WHITE}zi{GOLD}Livery, {LTBLUE}Shijiazhuang-Qinhuangdao {WHITE}Slow Train {GOLD}Livery, {BLUE}Guangzhou-{RED}-Shenzhen{WHITE} Railway{GOLD} Livery","{BLACK}可供选择的涂装：{BLUE}西子号{WHITE}列车{GOLD}涂装，{LTBLUE}石秦{WHITE}特慢{GOLD}涂装, {BLUE}广深{RED}铁{WHITE}路{GOLD}涂装"
@@ -671,10 +673,15 @@ STR_XIAN, - Xi'an Railway Bureau, - 西安铁路局
 STR_SHENYANG, - Shenyang Railway Bureau, - 沈阳铁路局
 STR_XIANXING, - Xianxing (Pioneer) Livery, - 先行号涂装
 STR_XIZI, - Xizi Livery, - 西子号涂装
-STR_QINGZANG, - Qinghai-Tibet Railway Livery, - 青藏铁路涂装
 STR_GUANGSHEN, - Guangzhou-Shenzhen Railway Livery, - 广深铁路涂装
 STR_JINWEN, - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLACK}Company, - {WHITE}金{RED}温{BLUE}铁{WHITE}路{BLACK}公司
 STR_GAOZU_GREEN," - {DKGREEN}""Gaozu Green"" {BLACK}(unfinished except 25T)"," - {DKGREEN}""高阻绿"" {BLACK}(未完成, 25T除外)"
+STR_GAOZU_GREEN_BSP," - {DKGREEN}""Gaozu Green"" {BLACK}livery of BSP25T"," - BSP25T 的{DKGREEN}""高阻绿"" {BLACK}涂装"
+STR_BSP25T, - Made by BSP, - BSP制造
+STR_25T_HK, - Used in Guangzhou-Kowloon Railway version, - 广九直通车版本
+STR_25T_HK_GREEN," - {DKGREEN}""Gaozu Green"" {BLACK}liveryof 25T used in Guangzhou-Kowloon Railway", - 广九直通车的刷{DKGREEN}绿{BLACK}涂装
+STR_QINGZANG, - Qinghai-Tibet Railway Livery (Made in China), - {DKGREEN}青藏铁路涂装 (国产)
+STR_QINGZANG_BSP, - Qinghai-Tibet Railway Livery (Made by BSP), - {DKGREEN}青藏铁路涂装 (BSP)
 STR_BEIJING, - Beijing Railway Bureau, - 北京铁路局
 STR_WRU, - Wuhan Railway Vocational College of Technology Livery, - 武汉铁路技术学院涂装
 STR_BEIJING2SHANGHAI, - Beijing-Shanghai Express Train Livery {CREAM}Cream-{BROWN}-Brown, - 北京至上海13/14次直快涂装
@@ -683,7 +690,6 @@ STR_EARLIER, - Earlier Livery, - 早期涂装
 STR_LONGQINGXIA," - ""Longqingxia"" Livery", - 龙庆峡号涂装
 STR_BEIJING2SHANGHAIALT, - Beijing-Shanghai Express Train Livery {BLUE}Blue-{WHITE}-White, - 北京至上海21/22次直快涂装
 STR_RESCUE, - Wrecker Livery, - 救援涂装
-STR_BSP25T, - Made by BSP, - BSP制造
 STR_PROTOTYPE, - Prototype, - 原型
 STR_JINGTONG, - Beijing-Tongzhou Livery, - 京通号涂装
 STR_TIANFU, - Tianfu (Chengdu) Livery, - 成都天府号涂装
