@@ -1,0 +1,811 @@
+﻿# STRING,ENGLISH,SIMPLIFIED CHINESE
+STR_GRF_NAME,China Set: Trains {VERSION_STRING},中国包：火车 {VERSION_STRING}
+STR_GRF_DESC,The Train sector of the China Set of OpenTTD.,OpenTTD中国包的火车部分。
+STR_GRF_URL,https://www.tt-forums.net/viewtopic.php?t=91092,
+STR_GRF_DESC_EXTRA," Locomotives, MUs, Coaches and Wagons in China Mainland. More contents in the future.",中国大陆的火车，包括机车、动车组、车厢。未来会有更多内容。
+STR_GRF_DESC_README,See readme for details.,更多信息请查看Readme。
+STR_LEAPING_LIU_NEVER_DIES,{BLUE}Leaping Liu Never Dies.,{BLUE}跨越不死，曙光永生
+STR_PARAM_LOADING_SPEED,Loading Speed,装载速度
+STR_PARAM_LOADING_SPEED_DESC,Adjust vehicle loading speed. Default is 100%.,调整车辆装载速度。默认为100%。
+STR_PARAM_PURCHASE_COST,Purchase costs,购买费用
+STR_PARAM_PURCHASE_COST_DESC,Adjust vehicle purchase costs. Default is 25%.,调整车辆购买费用。默认为25%。
+STR_PARAM_RUNNING_COST,Running costs,运营费用
+STR_PARAM_RUNNING_COST_DESC,Adjust vehicle running costs. Default is 25%.,调整车辆运营费用。默认为25%。
+STR_PARAM_DIVIDE_16,6.25%,
+STR_PARAM_DIVIDE_8,12.50%,
+STR_PARAM_DIVIDE_4,25%,
+STR_PARAM_DIVIDE_2,50%,
+STR_PARAM_NORMAL,100%,
+STR_PARAM_TIMES_2,200%,
+STR_PARAM_TIMES_4,400%,
+STR_PARAM_TIMES_8,800%,
+STR_PARAM_TIMES_16,1600%,
+STR_PARAM_CARGO_DECAY,Cargo Age Period,货物贬值周期
+STR_PARAM_CARGO_DECAY_DESC,"Adjust cargo age period of coaches and wagons. ""Long"" is ""Standard"" doubled, while ""Very Long"" is ""Long"" doubled. Even in ""Standard"" mode, cargo age period varies.",调整车厢的货物贬值周期。“较长”为“标准”的两倍，“很长”是“较长”的两倍。即使在“标准”设置下，货物贬值周期也随车厢种类而变化。
+STR_PARAM_STANDARD,Standard,标准
+STR_PARAM_LONG,Long,较长
+STR_PARAM_VERY_LONG,Very Long,很长
+STR_PARAM_GAOZULV,"25m Passenger Coaches build after 2014 are {DKGREEN}""Gaozu Geeen""{BLACK} in defeaut",2014年后建造的25型客车默认刷{DKGREEN}绿
+STR_PARAM_GAOZULV_DESC,"Choose weather to print{DKGREEN} Canarium Green (also called ""Gaozu Geeen""){BLACK} to 25m Passenger Coaches build after 2014 in defeaut",决定2014年后建造的25型客车是否默认刷{DKGREEN}绿
+STR_USED_WITH_DYNAMIC_ENGINES,"This GRF needs dynamic_engines to be turned on. Open console, and type ""setting dynamic_engines 1"".","请切换至控制台模式, 键入 ""setting dynamic_engines 1"", 否则您无法游玩中国包."
+# Name,,
+STR_NAME_YZ22,YZ22 (Passenger Coach),YZ22 (客车)
+STR_NAME_RZ22,RZ22 (Passenger Coach),RZ22 (客车)
+STR_NAME_YW22,YW22 (Passenger Coach),YW22 (客车)
+STR_NAME_YW22EARLY,YW22 (Passenger Coach) (Early Version),YW22 (客车) (早期型)
+STR_NAME_YW221966,YW22 (Passenger Coach) (Late Version),YW22 (客车) (后期型)
+STR_NAME_RW22,RW22 (Passenger Coach),RW22 (客车)
+STR_NAME_YZ22AIRCON,YZ22 (Passenger Coach) (Air-conditioned),YZ22 (客车) (加装空调)
+STR_NAME_RZ22AIRCON,RZ22 (Passenger Coach) (Air-conditioned),RZ22 (客车) (加装空调)
+STR_NAME_YW22AIRCON,YW22 (Passenger Coach) (Air-conditioned),YW22 (客车) (加装空调)
+STR_NAME_RW22AIRCON,RW22 (Passenger Coach) (Air-conditioned),RW22 (客车) (加装空调)
+STR_NAME_CA23,CA23 (Passenger Coach),CA23 (餐车)
+STR_NAME_CA23AIRCON,CA23 (Passenger Coach) (Air-conditioned),CA23 (餐车) (加装空调)
+STR_NAME_YZ22B,YZ22B (Passenger Coach),YZ22B (客车)
+STR_NAME_YW22B,YW22B (Passenger Coach),YW22B (客车)
+STR_NAME_RW22B,RW22B (Passenger Coach),RW22B (客车)
+STR_NAME_YZ25ML,YZ25 (Mainline) (Passenger Coach),YZ25 (干线) (客车)
+STR_NAME_RZ25ML,RZ25 (Mainline) (Passenger Coach),RZ25 (干线) (客车)
+STR_NAME_YW25ML,YW25 (Mainline) (Passenger Coach),YW25 (干线) (客车)
+STR_NAME_RW25ML,RW25 (Mainline) (Passenger Coach),RW25 (干线) (客车)
+STR_NAME_CA25ML,CA25 (Mainline) (Restaurant Car),CA25 (干线) (客车)
+STR_NAME_YZ25B,YZ25B (Passenger Coach),YZ25B (客车)
+STR_NAME_RZ25B,RZ25B (Passenger Coach),RZ25B (客车)
+STR_NAME_YW25B,YW25B (Passenger Coach),YW25B (客车)
+STR_NAME_RW25B,RW25B (Passenger Coach),RW25B (客车)
+STR_NAME_SYZ25BLD,SYZ25B (Passenger Coach) (Low-Door),SYZ25B (客车) (低开门)
+STR_NAME_SRZ25BLD,SRZ25B (Passenger Coach) (Low-Door),SRZ25B (客车) (低开门)
+STR_NAME_SYZ25BHD,SYZ25B (Passenger Coach) (High-Door),SYZ25B (客车) (高开门)
+STR_NAME_SRZ25BHD,SRZ25B (Passenger Coach) (High-Door),SRZ25B (客车) (高开门)
+STR_NAME_SYW25BHD,SYW25B (Passenger Coach) (High-Door),SYW25B (客车) (高开门)
+STR_NAME_SRW25BHD,SRW25B (Passenger Coach) (High-Door),SRW25B (客车) (高开门)
+STR_NAME_YZ25G,YZ25G (Passenger Coach),YZ25G (客车)
+STR_NAME_RZ25G,RZ25G (Passenger Coach),RZ25G (客车)
+STR_NAME_YW25G,YW25G (Passenger Coach),YW25G (客车)
+STR_NAME_RW25G,RW25G (Passenger Coach),RW25G (客车)
+STR_NAME_CA25G,CA25G (Restaurant Car),CA25G (餐车)
+STR_NAME_RW19K,RW19K (Passenger Coach),RW19K (客车)
+STR_NAME_YZ25K,YZ25K (Passenger Coach),YZ25K (客车)
+STR_NAME_RZ25K,RZ25K (Passenger Coach),RZ25K (客车)
+STR_NAME_YW25K,YW25K (Passenger Coach),YW25K (客车)
+STR_NAME_RW25K,RW25K (Passenger Coach),RW25K (客车)
+STR_NAME_SYZ25KLD,SYZ25K (Passenger Coach) (Low-Door),SYZ25K (客车) (低开门)
+STR_NAME_SRZ25KLD,SRZ25K (Passenger Coach) (Low-Door),SRZ25K (客车) (低开门)
+STR_NAME_SYZ25KHD,SYZ25K (Passenger Coach) (High-Door),SYZ25K (客车) (高开门)
+STR_NAME_SRZ25KHD,SRZ25K (Passenger Coach) (High-Door),SRZ25K (客车) (高开门)
+STR_NAME_SYW25KHD,SYW25K (Passenger Coach) (High-Door),SYW25K (客车) (高开门)
+STR_NAME_SRW25KHD,SRW25K (Passenger Coach) (High-Door),SRW25K (客车) (高开门)
+STR_NAME_SCA25KHD,SCA25K (Restaurant Car) (High-Door),SCA25K (餐车) (高开门)
+STR_NAME_CA25K,CA25K (Restaurant Car),CA25K (餐车)
+STR_NAME_RW19T,RW19T (Passenger Coach),RW19T (客车)
+STR_NAME_YZ25T,YZ25T (Passenger Coach),YZ25T (客车)
+STR_NAME_RZ25T,RZ25T (Passenger Coach),RZ25T (客车)
+STR_NAME_YW25T,YW25T (Passenger Coach),YW25T (客车)
+STR_NAME_RW25T,RW25T (Passenger Coach),RW25T (客车)
+STR_NAME_CA25T,CA25T (Restaurant Car),CA25T (餐车)
+STR_NAME_YZ31,YZ31 (Passenger Coach),YZ31 (客车)
+STR_NAME_XL22,XL22 (Luggage Car),XL22 (行李车)
+STR_NAME_XL25ML,XL25 (Mainline) (Luggage Car),XL25 (干线) (行李车)
+STR_NAME_XL25B,XL25B (Luggage Car),XL25B (行李车)
+STR_NAME_XL25G,XL25G (Luggage Car),XL25G (行李车)
+STR_NAME_XL25K,XL25K (Luggage Car),XL25K (行李车)
+STR_NAME_XL25T,XL25T (Luggage Car),XL25T (行李车)
+STR_NAME_XL25T_SSPE,XL25T-SSPE (Luggage Car),XL25T-SSPE (行李车)
+STR_NAME_UZ22,UZ22 (Railway Post Office),UZ22 (邮车)
+STR_NAME_UZ25T,UZ25T (Railway Post Office),UZ25T (邮车)
+STR_NAME_TZ,TZ (Air Conditioner Generator Car),TZ (空调发电车)
+STR_NAME_TZ2,TZ2 (Air Conditioner Generator Car),TZ2 (空调发电车)
+STR_NAME_KD25G,KD25G (Air Conditioner Generator Car),KD25G (空调发电车)
+STR_NAME_KD25K,KD25K (Air Conditioner Generator Car),KD25K (空调发电车)
+STR_NAME_KD25Z,KD25Z (Air Conditioner Generator Car),KD25Z (空调发电车)
+STR_NAME_KD25T,KD25T (Air Conditioner Generator Car),KD25T (空调发电车)
+STR_NAME_RZ125Z,RZ125Z (Passenger Coach),RZ125Z (客车)
+STR_NAME_RZ225Z,RZ225Z (Passenger Coach),RZ225Z (客车)
+STR_NAME_RZT25Z,RZT25Z (Passenger Coach),RZT25Z (客车)
+STR_NAME_CA25Z,CA25Z (Restaurant Car),CA25Z (餐车)
+STR_NAME_RZXL25Z,RZXL25Z (Luggage Car),RZXL25Z (行李车)
+STR_NAME_SRZ125Z,SRZ125Z (Passenger Coach),SRZ125Z (客车)
+STR_NAME_SRZ225Z,SRZ225Z (Passenger Coach),SRZ225Z (客车)
+STR_NAME_SCA25Z,SCA25Z (Restaurant Car),SCA25Z (餐车)
+STR_NAME_SRZXL25Z,SRZXL25Z (Luggage Car),SRZXL25Z (行李车)
+STR_NAME_SYW25,SYW25 (Passenger Coach),SYW25 (客车)
+STR_NAME_SRW25,SRW25 (Passenger Coach),SRW25 (客车)
+STR_NAME_YZ25DT_JINLUN,YZ25DT (JINLUN DMU) (Passenger Coach),YZ25DT (金轮号动车组) (客车)
+STR_NAME_YW25DT_JINLUN,YW25DT (JINLUN DMU) (Passenger Coach),YW25DT (金轮号动车组) (客车)
+STR_NAME_RW25DT_JINLUN,RW25DT (JINLUN DMU) (Passenger Coach),RW25DT (金轮号动车组) (客车)
+STR_NAME_SYZ25DT_JINLUN,SYZ25DT (JINLUN DMU) (Passenger Coach),SYZ25DT (金轮号动车组) (客车)
+STR_NAME_SRZ25DT_JINLUN,SRZ25DT (JINLUN DMU) (Passenger Coach),SRZ25DT (金轮号动车组) (客车)
+STR_NAME_C62,C62 (Gondola),C62 (敞车)
+STR_NAME_C64,C64 (Gondola),C64 (敞车)
+STR_NAME_C70,C70 (Gondola),C70 (敞车)
+STR_NAME_P50,P50 (Boxcar),P50 (棚车)
+STR_NAME_P60,P60 (Boxcar),P60 (棚车)
+STR_NAME_P61,P61 (Boxcar),P61 (棚车)
+STR_NAME_P62,P62 (Boxcar),P62 (棚车)
+STR_NAME_P62N,P62N (Boxcar),P62N (棚车)
+STR_NAME_P63,P63 (Boxcar),P63 (棚车)
+STR_NAME_P64,P64 (Boxcar),P64 (棚车)
+STR_NAME_P64A,P64A (Boxcar),P64A (棚车)
+STR_NAME_P65,P65 (Boxcar),P65 (棚车)
+STR_NAME_P66H,P66H (Boxcar),P66H (棚车)
+STR_NAME_P70,P70 (Boxcar),P70 (棚车)
+STR_NAME_P80,P80 (Boxcar),P80 (棚车)
+STR_NAME_PB,PB (Boxcar),PB (棚车)
+STR_NAME_W5,W5 (Boxcar for Toxic Good),W5 (有毒物品专用车)
+STR_NAME_W5S,W5S (Boxcar for Toxic Good),W5S (有毒物品专用车)
+STR_NAME_W5SK,W5SK (Boxcar for Toxic Good),W5SK (有毒物品专用车)
+STR_NAME_W6,W5 (Boxcar for Toxic Good),W6 (有毒物品专用车)
+STR_NAME_W6S,W5 (Boxcar for Toxic Good),W6S (有毒物品专用车)
+STR_NAME_B6,B6 (Refrigerator Wagon),B6 (保温车)
+STR_NAME_B22,B22 (Refrigerator Wagon),B22 (保温车)
+STR_NAME_BH1,BH1 (Refrigerator Wagon),BH1 (保温车)
+STR_NAME_G17,G17 (Tanker),G17 (罐车)
+STR_NAME_G50,G50 (Tanker),G50 (罐车)
+STR_NAME_G60,G60 (Tanker),G60 (罐车)
+STR_NAME_GN70,GN70 (Tanker),GN70 (罐车)
+STR_NAME_GN80,GN80 (Tanker),GN80 (罐车)
+STR_NAME_N5,N5 (Flatcar),N5 (平车)
+STR_NAME_N60,N60 (Flatcar),N60 (平车)
+STR_NAME_NX17,NX17 (Flatcar),NX17 (平车)
+STR_NAME_NX70A,NX70A (Flatcar),NX70A (平车)
+STR_NAME_X2K,X2K (Flatcar for Containers),X2K (集装箱专用车)
+STR_NAME_JSQ1,JSQ1 (Vehicle Transporter),JSQ1 (汽车运输车)
+STR_NAME_JSQ5,JSQ5 (Vehicle Transporter),JSQ5 (汽车运输车)
+STR_NAME_JSQ6,JSQ6 (Vehicle Transporter),JSQ6 (汽车运输车)
+STR_NAME_L70,L70 (Hopper),L70 (粮食漏斗车)
+STR_NAME_J5,J5 (Livestock Wagon),J5 (家畜运输车)
+STR_NAME_SY,SY (Steam),SY (蒸汽)
+STR_NAME_DF,DF (Diesel),DF (内燃)
+STR_NAME_DF4K,DF4 (Diesel) (Passenger Type),DF4 (内燃) (客运型)
+STR_NAME_DF4H,DF4 (Diesel) (Freight Type),DF4 (内燃) (货运型)
+STR_NAME_DF4BK,DF4B (Diesel) (Passenger Type),DF4B (内燃) (客运型)
+STR_NAME_DF4BH,DF4B (Diesel) (Freight Type),DF4B (内燃) (货运型)
+STR_NAME_DF4C,DF4C (Diesel),DF4C (内燃)
+STR_NAME_DF4D0000,DF4D-0000 (Diesel),DF4D-0000 (内燃)
+STR_NAME_DF4DF,DF4DF (Diesel),DF4DF (内燃)
+STR_NAME_DF4D3000,DF4D-3000 (Diesel),DF4D-3000 (内燃)
+STR_NAME_DF4D4000,DF4D-4000 (Diesel),DF4D-4000 (内燃)
+STR_NAME_DF4D7000,DF4D-7000 (Diesel),DF4D-7000 (内燃)
+STR_NAME_DF4E,DF4E (Diesel),DF4E (内燃)
+STR_NAME_DF5KZ,DF5 (Diesel Shunter),DF5 (内燃) (调车用)
+STR_NAME_DF5,DF5-1000 (Diesel Shunter),DF5-1000 (内燃) (调车用)
+STR_NAME_DF7G,DF7G (Diesel Shunter),DF7G (内燃) (调车用)
+STR_NAME_DF7G5000,DF7G-5000 (Diesel Shunter),DF7G-5000 (内燃) (调车用)
+STR_NAME_DF7G8000,DF7G-8000 (Diesel Shunter),DF7G-8000 (内燃) (调车用)
+STR_NAME_DF8B,DF8B (Diesel),DF8B (内燃)
+STR_NAME_DF11,DF11 (Diesel),DF11 (内燃)
+STR_NAME_DF11G,DF11G (Diesel),DF11G (内燃)
+STR_NAME_DF11Z,DF11Z (Diesel),DF11Z (内燃)
+STR_NAME_DFH3,DFH3 (Diesel),DFH3 (内燃) 
+STR_NAME_DFH7,DFH7 (Diesel),DFH7 (内燃) (调车用)
+STR_NAME_ND5,ND5 (Diesel),ND5 (内燃)
+STR_NAME_NJ2,NJ2 (Diesel),NJ2 (内燃)
+STR_NAME_HXN3,HXN3 (Diesel),HXN3 (内燃)
+STR_NAME_HXN3QZ,HXN3 (Diesel) (Plateau Type),HXN3 (内燃) (高原型)
+STR_NAME_HXN5,HXN5 (Diesel),HXN5 (内燃)
+STR_NAME_HXN5B,HXN5B (Diesel),HXN5B (内燃)
+STR_NAME_SS1,SS1 (Electric),SS1 (电力)
+STR_NAME_SS3,SS3 (Electric),SS3 (电力)
+STR_NAME_SS3B,SS3B (Electric),SS3B (电力)
+STR_NAME_SS4,SS4 (Electric),SS4 (电力)
+STR_NAME_SS4B,SS4B (Electric),SS4B (电力)
+STR_NAME_SS4C,SS4C (Electric),SS4C (电力)
+STR_NAME_SS4G,SS4G (Electric),SS4G (电力)
+STR_NAME_SS5,SS5 (Electric),SS5 (电力)
+STR_NAME_SS6,SS6 (Electric),SS6 (电力)
+STR_NAME_SS6B,SS6B (Electric),SS6B (电力)
+STR_NAME_SS7,SS7 (Electric),SS7 (电力)
+STR_NAME_SS7B,SS7B (Electric),SS7B (电力)
+STR_NAME_SS7C,SS7C (Electric),SS7C (电力)
+STR_NAME_SS7D,SS7D (Electric),SS7D (电力)
+STR_NAME_SS7E,SS7E (Electric),SS7E (电力)
+STR_NAME_SS8,SS8 (Electric),SS8 (电力)
+STR_NAME_SS9,SS9 (Electric),SS9 (电力)
+STR_NAME_SS9G,SS9G (Electric),SS9G (电力)
+STR_NAME_6Y2,6Y2 (Electric),6Y2 (电力)
+STR_NAME_HXD1,HXD1 (Electric),HXD1 (电力)
+STR_NAME_HXD11000,HXD1-1000 (Electric),HXD1-1000 (电力)
+STR_NAME_HXD1B,HXD1B (Electric),HXD1B (电力)
+STR_NAME_HXD1D,HXD1D (Electric),HXD1D (电力)
+STR_NAME_HXD2,HXD2 (Electric),HXD2 (电力)
+STR_NAME_HXD21000,HXD2-1000 (Electric),HXD2-1000 (电力)
+STR_NAME_HXD3C,HXD3C (Electric),HXD3C (电力)
+STR_NAME_HXD3D,HXD3D (Electric),HXD3D (电力)
+STR_NAME_FXD1B,FXD1B (Electric),FXD1B (电力)
+STR_NAME_CHA1C,CHA1C (Hybrid),CHA1C (混合动力)
+STR_NAME_NC3,NC3 (DMU),NC3 (内燃动车)
+STR_NAME_NZJ1_XINSHUGUANG,"NZJ1 ""Xinshuguang"" (DMU)","NZJ1 ""新曙光号"" (内燃动车)"
+STR_NAME_NZJ2_JINLUN_UNILAMINAR,"NZJ2 ""Jinlun"" (UNILAMINAR) (DMU)","NZJ2 ""金轮号"" (单层) (内燃动车)"
+STR_NAME_NZJ2_JINLUN_DOUBLE_DECKER,"NZJ2 ""Jinlun"" (DOUBLE DECKER) (DMU)","NZJ2 ""金轮号"" (双层) (内燃动车)"
+STR_NAME_NDJ3,"NDJ3 ""Great Wall"" (DMU)","NDJ3 ""长城号"" (内燃动车)"
+STR_NAME_DJJ1,"DJJ1 ""Blue Arrow"" (EMU)","DJJ1 ""蓝箭"" (电力动车)"
+STR_NAME_DJJ2,"DJJ2 ""China Star"" (EMU)","DJJ2 ""中华之星"" (电力动车)"
+STR_NAME_DJF3,"DJF3 ""Changbai Mount"" (EMU)","DJF3 ""长白山号"" (电力动车)"
+STR_NAME_CR200JA,CR200J-A (EMU),CR200J-A (电力动车)
+STR_NAME_CR200JAL,CR200J-A (Long Version) (EMU),CR200J-A (长编组) (电力动车)
+STR_NAME_CR200JB,CR200J-B (EMU),CR200J-B (电力动车)
+STR_NAME_CR200JC,CR200J-C (EMU),CR200J-C (电力动车)
+STR_NAME_CR200JCL,CR200J-C (Long Version) (EMU),CR200J-C (长编组) (电力动车)
+STR_NAME_CRH1A,CRH1A (EMU),CRH1A (电力动车)
+STR_NAME_CRH1B,CRH1B (Long Version) (EMU),CRH1B (电力动车)
+STR_NAME_CRH1E,CRH1E (EMU),CRH1E (电力动车)
+STR_NAME_CRH1AA,CRH1A-A (EMU),CRH1A-A (长编组) (电力动车)
+STR_NAME_CRH2A,CRH2A (EMU),CRH2A (电力动车)
+STR_NAME_CRH2B,CRH2B (Long Version) (EMU),CRH2B (长编组) (电力动车)
+STR_NAME_CRH2C,CRH2C (EMU),CRH2C (电力动车)
+STR_NAME_CRH2E,CRH2E (EMU),CRH2E (电力动车)
+STR_NAME_CRH2G,CRH2G (EMU),CRH2G (电力动车)
+STR_NAME_CRH2ELS,CRH2E (Longitudinal Sleeper) (EMU),CRH2E (纵向卧铺) (电力动车)
+STR_NAME_CRH3A,CRH3A (EMU),CRH3A (电力动车)
+STR_NAME_CRH3C,CRH3C (EMU),CRH3C (电力动车)
+STR_NAME_CRH5A,CRH5A (EMU),CRH5A (电力动车)
+STR_NAME_CRH380A,CRH380A (EMU),CRH380A (电力动车)
+STR_NAME_CRH380AL,CRH380AL (Long Version) (EMU),CRH380AL (长编组) (电力动车)
+STR_NAME_CRH380B,CRH380B (EMU),CRH380B (电力动车)
+STR_NAME_CRH380CL,CRH380CL (EMU),CRH380CL (电力动车)
+STR_NAME_CRH380D,CRH380D (EMU),CRH380D (电力动车)
+STR_NAME_CR300AF,CR300AF (EMU),CR300AF (电力动车)
+STR_NAME_CR300BF,CR300BF (EMU),CR300BF (电力动车)
+STR_NAME_CR400AF,CR400AF (EMU),CR400AF (电力动车)
+STR_NAME_CR400AFAB,CR400AF-A/B (Long Version) (EMU),CR400AF-A/B (长编组) (电力动车)
+STR_NAME_CR400AFZ,CR400AF-C/Z/S (Intelligent EMU),CR400AF-C/Z/S (智能动车)
+STR_NAME_CR400AFABZ,CR400AF-AZ/BZ/BS (Long Version) (Intelligent EMU),CR400AF-AZ/BZ/BS (长编组) (智能动车)
+STR_NAME_CR400BF,CR400BF (EMU),CR400BF (电力动车)
+STR_NAME_CR400BFAB,CR400BF-A/B (Long Version) (EMU),CR400BF-A/B (长编组) (电力动车)
+STR_NAME_CR400BFC,CR400BF-C (Intelligent EMU),CR400BF-C (智能动车)
+STR_NAME_CR400BFZ,CR400BF-Z/S (Intelligent EMU),CR400BF-Z/S (智能动车)
+STR_NAME_CR400BFABZ,CR400BF-AZ/BZ/BS (Intelligent EMU),CR400BF-AZ/BZ/BS (长编组) (智能动车)
+STR_NAME_CRH6A2,CRH6A (2-Door Version) (EMU),CRH6A (二门版) (电力动车)
+STR_NAME_CRH6A3,CRH6A (3-Door Version) (EMU),CRH6A (三门版) (电力动车)
+STR_NAME_CRH6AA,CRH6A-A (Section) (EMU),CRH6A-A (整节) (电力动车)
+STR_NAME_CRH6F,CRH6F (EMU),CRH6F (电力动车)
+STR_NAME_ZEMUW,2nd-Class (ZE) MU Wagon,动车组二等座车厢
+STR_NAME_ZYMUW,1st-Class (ZY) MU Wagon,动车组一等座车厢
+STR_NAME_ZSMUW,Business-Class (ZS) MU Wagon,动车组商务座车厢
+STR_NAME_SWMUW,Luxury-Business-Class (SW) MU Wagon,动车组商务座车厢 (复兴号智能动车组标准)
+STR_NAME_ZECMUW,2nd-Class Restaurant Combined (ZEC) MU Wagon,动车组二等座/餐车合造车厢
+STR_NAME_WEMUW,2nd-Class Sleeper (WE) MU Wagon,动车组二等卧铺车厢
+STR_NAME_WYMUW,1st-Class Sleeper (WY) MU Wagon,动车组一等卧铺车厢
+STR_NAME_WGMUW,Top-Class Sleeper (WG) MU Wagon,动车组高级软卧车厢
+# Full Name,,
+STR_FULL_NAME_YZ22,{BLACK}FULLNAME: {GOLD}22 Type Hard Seat Passenger Coach,{BLACK}全称：{GOLD}22型硬座客车
+STR_FULL_NAME_RZ22,{BLACK}FULLNAME: {GOLD}22 Type Soft Seat Passenger Coach,{BLACK}全称：{GOLD}22型软座客车
+STR_FULL_NAME_YW22,{BLACK}FULLNAME: {GOLD}22 Type Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}22型硬卧客车
+STR_FULL_NAME_RW22,{BLACK}FULLNAME: {GOLD}22 Type Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}22型软卧客车
+STR_FULL_NAME_YZ22AIRCON,{BLACK}FULLNAME: {GOLD}22 Type Hard Seat Passenger Coach (Air-conditioned),{BLACK}全称：{GOLD}22型硬座客车 (加装空调)
+STR_FULL_NAME_RZ22AIRCON,{BLACK}FULLNAME: {GOLD}22 Type Soft Seat Passenger Coach (Air-conditioned),{BLACK}全称：{GOLD}22型软座客车 (加装空调)
+STR_FULL_NAME_YW22AIRCON,{BLACK}FULLNAME: {GOLD}22 Type Hard Sleeper Passenger Coach (Air-conditioned),{BLACK}全称：{GOLD}22型硬卧客车 (加装空调)
+STR_FULL_NAME_RW22AIRCON,{BLACK}FULLNAME: {GOLD}22 Type Soft Sleeper Passenger Coach (Air-conditioned),{BLACK}全称：{GOLD}22型软卧客车 (加装空调)
+STR_FULL_NAME_CA23,{BLACK}FULLNAME: {GOLD}23 Type Restaurant Car,{BLACK}全称：{GOLD}23型餐车
+STR_FULL_NAME_CA23AIRCON,{BLACK}FULLNAME: {GOLD}23 Type Restaurant Car (Air-conditioned),{BLACK}全称：{GOLD}23型餐车 (加装空调)
+STR_FULL_NAME_YZ22B,{BLACK}FULLNAME: {GOLD}22B Type Hard Seat Passenger Coach,{BLACK}全称：{GOLD}22B型硬座客车
+STR_FULL_NAME_YW22B,{BLACK}FULLNAME: {GOLD}22B Type Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}22B型硬卧客车
+STR_FULL_NAME_RW22B,{BLACK}FULLNAME: {GOLD}22B Type Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}22B型软卧客车
+STR_FULL_NAME_YZ25ML,{BLACK}FULLNAME: {GOLD}25m Mainline Hard Seat Passenger Coach,{BLACK}全称：{GOLD}干线25型硬座客车
+STR_FULL_NAME_RZ25ML,{BLACK}FULLNAME: {GOLD}25m Mainline Soft Seat Passenger Coach,{BLACK}全称：{GOLD}干线25型软座客车
+STR_FULL_NAME_YW25ML,{BLACK}FULLNAME: {GOLD}25m Mainline Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}干线25型硬卧客车
+STR_FULL_NAME_RW25ML,{BLACK}FULLNAME: {GOLD}25m Mainline Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}干线25型软卧客车
+STR_FULL_NAME_CA25ML,{BLACK}FULLNAME: {GOLD}25m Mainline Restaurant Car,{BLACK}全称：{GOLD}干线25型餐车
+STR_FULL_NAME_YZ25B,{BLACK}FULLNAME: {GOLD}25m Standard Hard Seat Passenger Coach,{BLACK}全称：{GOLD}25米标准型硬座客车
+STR_FULL_NAME_RZ25B,{BLACK}FULLNAME: {GOLD}25m Standard Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米标准型软座客车
+STR_FULL_NAME_YW25B,{BLACK}FULLNAME: {GOLD}25m Standard Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米标准型硬卧客车
+STR_FULL_NAME_RW25B,{BLACK}FULLNAME: {GOLD}25m Standard Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米标准型软卧客车
+STR_FULL_NAME_SYZ25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Hard Seat Passenger Coach,{BLACK}全称：{GOLD}25米标准型双层硬座客车
+STR_FULL_NAME_SRZ25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米标准型双层软座客车
+STR_FULL_NAME_SYW25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米标准型双层硬卧客车
+STR_FULL_NAME_SRW25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米标准型双层软卧客车
+STR_FULL_NAME_YZ25G,{BLACK}FULLNAME: {GOLD}25m Improved Hard Seat Passenger Coach,{BLACK}全称：{GOLD}25米改进型硬座客车
+STR_FULL_NAME_RZ25G,{BLACK}FULLNAME: {GOLD}25m Improved Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米改进型软座客车
+STR_FULL_NAME_YW25G,{BLACK}FULLNAME: {GOLD}25m Improved Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米改进型硬卧客车
+STR_FULL_NAME_RW25G,{BLACK}FULLNAME: {GOLD}25m Improved Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米改进型软卧客车
+STR_FULL_NAME_CA25G,{BLACK}FULLNAME: {GOLD}25m Improved Restaurant Car,{BLACK}全称：{GOLD}25米改进型餐车
+STR_FULL_NAME_RW19K,{BLACK}FULLNAME: {GOLD}19K Type Soft Sleeper Passenger Coach (2 berth),{BLACK}全称：{GOLD}19K型高级软卧客车
+STR_FULL_NAME_YZ25K,{BLACK}FULLNAME: {GOLD}25m Rapid Hard Seat Passenger Coach,{BLACK}全称：{GOLD}25米快速型硬座客车
+STR_FULL_NAME_RZ25K,{BLACK}FULLNAME: {GOLD}25m Rapid Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米快速型软座客车
+STR_FULL_NAME_YW25K,{BLACK}FULLNAME: {GOLD}25m Rapid Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米快速型硬卧客车
+STR_FULL_NAME_RW25K,{BLACK}FULLNAME: {GOLD}25m Rapid Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米快速型软卧客车
+STR_FULL_NAME_SYZ25K,{BLACK}FULLNAME: {GOLD}25m Rapid Double Decker Hard Seat Passenger Coach,{BLACK}全称：{GOLD}25米快速型双层硬座客车
+STR_FULL_NAME_SRZ25K,{BLACK}FULLNAME: {GOLD}25m Rapid Double Decker Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米快速型双层软座客车
+STR_FULL_NAME_SYW25K,{BLACK}FULLNAME: {GOLD}25m Rapid Double Decker Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米快速型双层硬卧客车
+STR_FULL_NAME_SRW25K,{BLACK}FULLNAME: {GOLD}25m Rapid Double Decker Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米快速型双层软卧客车
+STR_FULL_NAME_SCA25K,{BLACK}FULLNAME: {GOLD}25m Rapid Double Decker Restaurant Car,{BLACK}全称：{GOLD}25米快速型双层餐车
+STR_FULL_NAME_CA25K,{BLACK}FULLNAME: {GOLD}25m Rapid Improved Restaurant Car,{BLACK}全称：{GOLD}25米快速型餐车
+STR_FULL_NAME_RW19T,{BLACK}FULLNAME: {GOLD}19T Type Soft Sleeper Passenger Coach (2 berth),{BLACK}全称：{GOLD}19T型高级软卧客车
+STR_FULL_NAME_YZ25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Hard Seat Passenger Coach,{BLACK}全称：{GOLD}25米提速型硬座客车
+STR_FULL_NAME_RZ25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米提速型软座客车
+STR_FULL_NAME_YW25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米提速型硬卧客车
+STR_FULL_NAME_RW25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米提速型软卧客车
+STR_FULL_NAME_YZ31,{BLACK}FULLNAME: {GOLD}31 Type Hard Seat Passenger Coach,{BLACK}全称：{GOLD}31型硬座客车
+STR_FULL_NAME_CA25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Restaurant Car,{BLACK}全称：{GOLD}25米提速型餐车
+STR_FULL_NAME_XL22,{BLACK}FULLNAME: {GOLD}22 Type Luggage Car,{BLACK}全称：{GOLD}22型行李车
+STR_FULL_NAME_XL25ML,{BLACK}FULLNAME: {GOLD}25m Mainline Luggage Car,{BLACK}全称：{GOLD}25米标准型行李车
+STR_FULL_NAME_XL25B,{BLACK}FULLNAME: {GOLD}25m Standard Luggage Car,{BLACK}全称：{GOLD}干线25型行李车
+STR_FULL_NAME_XL25G,{BLACK}FULLNAME: {GOLD}25m Improved Luggage Car,{BLACK}全称：{GOLD}25米改进型行李车
+STR_FULL_NAME_XL25K,{BLACK}FULLNAME: {GOLD}25m Rapid Luggage Car,{BLACK}全称：{GOLD}25米快速型行李车
+STR_FULL_NAME_XL25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Luggage Car,{BLACK}全称：{GOLD}25米提速型行李车
+STR_FULL_NAME_UZ22,{BLACK}FULLNAME: {GOLD}22 Type Railway Post Office,{BLACK}全称：{GOLD}22型邮政车
+STR_FULL_NAME_UZ25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Railway Post Office,{BLACK}全称：{GOLD}25米提速型邮政车
+STR_FULL_NAME_TZ,{BLACK}FULLNAME: {GOLD}Special Purpose Car,{BLACK}全称：{GOLD}特种车
+STR_FULL_NAME_TZ2,{BLACK}FULLNAME: {GOLD}Special Purpose Car Type 2,{BLACK}全称：{GOLD}2型特种车
+STR_FULL_NAME_KD25G,{BLACK}FULLNAME: {GOLD}25m Improved Air Conditioner Generator Car,{BLACK}全称：{GOLD}25米改进型空调发电车
+STR_FULL_NAME_KD25K,{BLACK}FULLNAME: {GOLD}25m Rapid Air Conditioner Generator Car,{BLACK}全称：{GOLD}25米快速型空调发电车
+STR_FULL_NAME_KD25Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Air Conditioner Generator Car,{BLACK}全称：{GOLD}25米准高速空调发电车
+STR_FULL_NAME_KD25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Air Conditioner Generator Car,{BLACK}全称：{GOLD}25米提速型空调发电车
+STR_FULL_NAME_RZ125Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed 1st-Class Seat Passenger Coach,{BLACK}全称：{GOLD}25米准高速一等软座客车
+STR_FULL_NAME_RZ225Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed 2nd-Class Seat Passenger Coach,{BLACK}全称：{GOLD}25米准高速二等软座客车
+STR_FULL_NAME_RZT25Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Top-Class Seat Passenger Coach,{BLACK}全称：{GOLD}25米准高速特等软座客车
+STR_FULL_NAME_RZXL25Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Soft Seat Passenger Coach & Luggage Car,{BLACK}全称：{GOLD}25米准高速软座行李合造车
+STR_FULL_NAME_CA25Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Restaurant Car,{BLACK}全称：{GOLD}25米准高速餐车
+STR_FULL_NAME_SRZ125Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Double Decker 1st-Class Seat Passenger Coach,{BLACK}全称：{GOLD}25米准高速双层一等软座客车
+STR_FULL_NAME_SRZ225Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Double Decker 2nd-Class Seat Passenger Coach,{BLACK}全称：{GOLD}25米准高速双层二等软座客车
+STR_FULL_NAME_SCA25Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Double Decker Restaurant Car,{BLACK}全称：{GOLD}25米准高速双层餐车
+STR_FULL_NAME_SRZXL25Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Double Decker Soft Seat Passenger Coach & Luggage Car,{BLACK}全称：{GOLD}25米准高速双层软座行李合造车
+STR_FULL_NAME_SYW25,{BLACK}FULLNAME: {GOLD}25m Double Decker Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米型双层硬卧客车
+STR_FULL_NAME_SRW25,{BLACK}FULLNAME: {GOLD}25m Double Decker Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米型双层软卧客车
+STR_FULL_NAME_YZ25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}25m Unilaminar Hard Seat Passenger Trail Car of ""Jinlun"" DMU",{BLACK}全称：{GOLD}“金轮号”内燃动车组25米单层硬座拖车
+STR_FULL_NAME_YW25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}25m Unilaminar Hard Sleeper Passenger Trail Car of ""Jinlun"" DMU",{BLACK}全称：{GOLD}“金轮号”内燃动车组25米单层硬卧拖车
+STR_FULL_NAME_RW25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}25m Unilaminar Soft Sleeper Passenger Trail Car of ""Jinlun"" DMU",{BLACK}全称：{GOLD}“金轮号”内燃动车组25米单层软卧拖车
+STR_FULL_NAME_SYZ25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}25m Double Decker Hard Seat Passenger Trail Car of ""Jinlun"" DMU",{BLACK}全称：{GOLD}“金轮号”内燃动车组25米双层硬座拖车
+STR_FULL_NAME_SRZ25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}25m Double Decker Hard Seat Passenger Trail Car of ""Jinlun"" DMU",{BLACK}全称：{GOLD}“金轮号”内燃动车组25米双层软座拖车
+STR_FULL_NAME_SY,{BLACK}FULLNAME: {GOLD}Shangyou {BLACK}(Meaning: Aiming High) {GOLD}Steam Locomotive,{BLACK}全称：{GOLD}上游型蒸汽机车
+STR_FULL_NAME_DF,{BLACK}FULLNAME: {GOLD}Dongfeng Diesel Locomotive,{BLACK}全称：{GOLD}东风型内燃机车
+STR_FULL_NAME_DF4,{BLACK}FULLNAME: {GOLD}Dongfeng 4 Diesel Locomotive,{BLACK}全称：{GOLD}东风4型内燃机车
+STR_FULL_NAME_DF4B,{BLACK}FULLNAME: {GOLD}Dongfeng 4B Diesel Locomotive,{BLACK}全称：{GOLD}东风4B型内燃机车
+STR_FULL_NAME_DF4C,{BLACK}FULLNAME: {GOLD}Dongfeng 4C Diesel Locomotive,{BLACK}全称：{GOLD}东风4C型内燃机车
+STR_FULL_NAME_DF4D,{BLACK}FULLNAME: {GOLD}Dongfeng 4D Diesel Locomotive,{BLACK}全称：{GOLD}东风4D型内燃机车
+STR_FULL_NAME_DF4D7000,{BLACK}FULLNAME: {GOLD}Dongfeng 4D Diesel Locomotive 7000 Series,{BLACK}全称：{GOLD}东风4D型内燃机车7000系
+STR_FULL_NAME_DF4DF,{BLACK}FULLNAME: {GOLD}Dongfeng 4DF Diesel Locomotive,{BLACK}全称：{GOLD}东风4DF型内燃机车
+STR_FULL_NAME_DF4E,{BLACK}FULLNAME: {GOLD}Dongfeng 4E Diesel Locomotive,{BLACK}全称：{GOLD}东风4E型内燃机车
+STR_FULL_NAME_DF5KZ,{BLACK}FULLNAME: {GOLD}Dongfeng 5 Diesel Locomotive ,{BLACK}全称：{GOLD}东风5型内燃机车
+STR_FULL_NAME_DF5,{BLACK}FULLNAME: {GOLD}Dongfeng 5 Diesel Locomotive 1000 Series,{BLACK}全称：{GOLD}东风5型内燃机车1000系
+STR_FULL_NAME_DF7G,{BLACK}FULLNAME: {GOLD}Dongfeng 7G Diesel Locomotive,{BLACK}全称：{GOLD}东风7G型内燃机车
+STR_FULL_NAME_DF7G5000,{BLACK}FULLNAME: {GOLD}Dongfeng 7G Diesel Locomotive 5000 Series,{BLACK}全称：{GOLD}东风7G型内燃机车5000系
+STR_FULL_NAME_DF7G8000,{BLACK}FULLNAME: {GOLD}Dongfeng 7G Diesel Locomotive 8000 Series,{BLACK}全称：{GOLD}东风7G型内燃机车8000系
+STR_FULL_NAME_DF8B,{BLACK}FULLNAME: {GOLD}Dongfeng 8B Diesel Locomotive,{BLACK}全称：{GOLD}东风8B型内燃机车
+STR_FULL_NAME_DF11,{BLACK}FULLNAME: {GOLD}Dongfeng 11 Diesel Locomotive,{BLACK}全称：{GOLD}东风11型内燃机车
+STR_FULL_NAME_DF11G,{BLACK}FULLNAME: {BLUE}Dongfeng 11G {WHITE}Diesel Locomotive,{BLACK}全称：{BLUE}东风11G型{WHITE}内燃机车
+STR_FULL_NAME_DF11Z,{BLACK}FULLNAME: {GOLD}Dongfeng 11Z Diesel Locomotive,{BLACK}全称：{GOLD}东风11Z型内燃机车
+STR_FULL_NAME_DFH3,"{BLACK}FULLNAME: {GOLD}Dongfanghong 3 Diesel Locomotive{}{BLACK}Livery Availability: Ordinary {BLUE}Blue {BLACK}Livery, {RED}Red {BLACK}Livery, {BROWN}""Gongqingtuan"" {BLACK}Livery ,Liaodong Peninsula Livery",{BLACK}全称：{GOLD}东方红3型内燃机车{}{BLACK}可选择的涂装：原始蓝色涂装，红色涂装，共青团号涂装，辽东半岛号涂装
+STR_FULL_NAME_DFH7,{BLACK}FULLNAME: {GOLD}Dongfanghong 7 Diesel Locomotive,{BLACK}全称：{GOLD}东方红7型内燃机车
+STR_FULL_NAME_ND5,{BLACK}FULLNAME: {GOLD}Neidian 5 Diesel Locomotive,{BLACK}全称：{GOLD}内电5型内燃机车
+STR_FULL_NAME_HXN3,{BLACK}FULLNAME: {GOLD}Hexie 3 Diesel Locomotive,{BLACK}全称：{GOLD}和谐内3型内燃机车
+STR_FULL_NAME_HXN5,{BLACK}FULLNAME: {GOLD}Hexie 5 Diesel Locomotive,{BLACK}全称：{GOLD}和谐内5型内燃机车
+STR_FULL_NAME_HXN5B,{BLACK}FULLNAME: {GOLD}Hexie 5B Diesel Locomotive,{BLACK}全称：{GOLD}和谐内5B型内燃机车
+STR_FULL_NAME_SS1,{BLACK}FULLNAME: {GOLD}Shaoshan 1 Electric Locomotive,{BLACK}全称：{GOLD}韶山1型电力机车
+STR_FULL_NAME_SS3,"{BLACK}FULLNAME: {GOLD}Shaoshan 3 Electric Locomotive{}{BLACK}Livery Availability: Ordinary {BLACK}Livery, {DKGREEN}Grassgreen {BLACK}Livery, {BLUE}Blue {BLACK}Livery, {RED}Red {BLACK}Livery and Fuzhou Livery",{BLACK}全称：{GOLD}韶山3型电力机车{}{BLACK}可替换的涂装：原始涂装，红色涂装，蓝色涂装，草绿色涂装，福州机务段涂装
+STR_FULL_NAME_SS3B,{BLACK}FULLNAME: {GOLD}Shaoshan 3B Electric Locomotive,{BLACK}全称：{GOLD}韶山3B型电力机车
+STR_FULL_NAME_SS4,"{BLACK}FULLNAME: {GOLD}Shaoshan 4 Electric Locomotive{}{BLACK}Livery Availability: Ordinary {BLUE}Blue {BLACK}Livery, {WHITE}White {BLACK}Livery, {WHITE}White {BLACK}Livery with {BLUE}Blue {BLACK}Roof, Factory Livery",{BLACK}全称：{GOLD}韶山4型电力机车{}{BLACK}可替换的涂装：蓝色涂装，白色涂装，车顶为蓝色的白色涂装，出厂涂装
+STR_FULL_NAME_SS4B,{BLACK}FULLNAME: {GOLD}Shaoshan 4B Electric Locomotive,{BLACK}全称：{GOLD}韶山4B型电力机车
+STR_FULL_NAME_SS4C,{BLACK}FULLNAME: {GOLD}Shaoshan 4C Electric Locomotive,{BLACK}全称：{GOLD}韶山4C型电力机车
+STR_FULL_NAME_SS4G,{BLACK}FULLNAME: {GOLD}Shaoshan 4G Electric Locomotive,{BLACK}全称：{GOLD}韶山4G型电力机车
+STR_FULL_NAME_SS5,{BLACK}FULLNAME: {GOLD}Shaoshan 5 Electric Locomotive,{BLACK}全称：{GOLD}韶山5型电力机车
+STR_FULL_NAME_SS6,{BLACK}FULLNAME: {GOLD}Shaoshan 6 Electric Locomotive,{BLACK}全称：{GOLD}韶山6型电力机车
+STR_FULL_NAME_SS6B,{BLACK}FULLNAME: {GOLD}Shaoshan 6B Electric Locomotive,{BLACK}全称：{GOLD}韶山6B型电力机车
+STR_FULL_NAME_SS7,{BLACK}FULLNAME: {GOLD}Shaoshan 7 Electric Locomotive,{BLACK}全称：{GOLD}韶山7型电力机车
+STR_FULL_NAME_SS7B,{BLACK}FULLNAME: {GOLD}Shaoshan 7B Electric Locomotive,{BLACK}全称：{GOLD}韶山7B型电力机车
+STR_FULL_NAME_SS7C,{BLACK}FULLNAME: {GOLD}Shaoshan 7C Electric Locomotive,{BLACK}全称：{GOLD}韶山7C型电力机车
+STR_FULL_NAME_SS7D,{BLACK}FULLNAME: {GOLD}Shaoshan 7D Electric Locomotive,{BLACK}全称：{GOLD}韶山7D型电力机车
+STR_FULL_NAME_SS7E,{BLACK}FULLNAME: {GOLD}Shaoshan 7E Electric Locomotive,{BLACK}全称：{GOLD}韶山7E型电力机车
+STR_FULL_NAME_SS8,{BLACK}FULLNAME: {GOLD}Shaoshan 8 Electric Locomotive,{BLACK}全称：{GOLD}韶山8型电力机车
+STR_FULL_NAME_SS9,{BLACK}FULLNAME: {GOLD}Shaoshan 9 Electric Locomotive,{BLACK}全称：{GOLD}韶山9型电力机车
+STR_FULL_NAME_SS9G,{BLACK}FULLNAME: {GOLD}Shaoshan 9G Electric Locomotive,{BLACK}全称：{GOLD}韶山9G型电力机车
+STR_FULL_NAME_HXD1,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1 Electric Locomotive,{BLACK}全称：{GOLD}和谐1型电力机车
+STR_FULL_NAME_HXD11000,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1 Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}和谐1型电力机车1000系
+STR_FULL_NAME_HXD1B,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1B Electric Locomotive,{BLACK}全称：{GOLD}和谐1B型电力机车
+STR_FULL_NAME_HXD1D,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1D Electric Locomotive,{BLACK}全称：{GOLD}和谐1D型电力机车
+STR_FULL_NAME_FXD1B,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 1B Electric Locomotive,{BLACK}全称：{GOLD}复兴1B型电力机车
+STR_FULL_NAME_HXD2,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2 Electric Locomotive,{BLACK}全称：{GOLD}和谐2型电力机车
+STR_FULL_NAME_HXD21000,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2 Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}和谐2型电力机车1000系
+STR_FULL_NAME_HXD3C,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3C Electric Locomotive,{BLACK}全称：{GOLD}和谐3C型电力机车
+STR_FULL_NAME_HXD3D,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3D Electric Locomotive,{BLACK}全称：{GOLD}和谐3D型电力机车
+# Series Nmae,,
+STR_DF4_SERIES,DF4 Series (Diesel Locomotive),DF4系列 (内燃机车)
+STR_DF4D_SERIES,DF4D Series (Diesel Locomotive),DF4D系列 (内燃机车)
+STR_DF5_SERIES,DF5 Series (Diesel Locomotive),DF5系列 (内燃机车)
+STR_DF7G_SERIES,DF7G Series (Diesel Locomotive),DF7G系列 (内燃机车)
+STR_SS4_SERIES,SS4 Series (Electric Locomotive),SS4系列 (电力机车)
+STR_SS6_SERIES,SS6 Series (Electric Locomotive),SS6系列 (电力机车)
+STR_SS7_SERIES,SS7 Series (Electric Locomotive),SS7系列 (电力机车)
+STR_SS9_SERIES,SS9 Series (Electric Locomotive),SS9系列 (电力机车)
+STR_HXD1_SERIES,HXD1 Series (Electric Locomotive),HXD1系列 (电力机车)
+STR_HXD2_SERIES,HXD2 Series (Electric Locomotive),HXD2系列 (电力机车)
+STR_HXD3_SERIES,HXD3 Series (Electric Locomotive),HXD3系列 (电力机车)
+STR_HXN3_SERIES,HXN3 Series (Diesel Locomotive),HXN3系列 (内燃机车)
+STR_HXN5_SERIES,HXN5 Series (Diesel Locomotive),HXN5系列 (内燃机车)
+STR_NZJ2_SERIES,NZJ2 Series (DMU),NZJ2系列 (内燃动车组)
+STR_CRH1_SERIES,CRH1 Series (EMU),CRH1系列 (电力动车组)
+STR_CRH2_SERIES,CRH2 Series (EMU),CRH2系列 (电力动车组)
+STR_CRH3_SERIES,CRH3 Series (EMU),CRH3系列 (电力动车组)
+STR_CRH5_SERIES,CRH5 Series (EMU),CRH5系列 (电力动车组)
+STR_CRH6_SERIES,CRH6 Series (EMU),CRH6系列 (电力动车组)
+STR_CRH380A_SERIES,CRH380A Series (EMU),CRH380A系列 (电力动车组)
+STR_CRH380B_SERIES,CRH380B Series (EMU),CRH380B系列 (电力动车组)
+STR_CR200J_SERIES,CR200J Series (EMU),CR200J系列 (电力动车组)
+STR_CR400AF_SERIES,CR400AF Series (EMU),CR400AF系列 (电力动车组)
+STR_CR400BF_SERIES,CR400BF Series (EMU),CR400BF系列 (电力动车组)
+STR_21_SERIES,Type 21 Series Coaches,21型客车
+STR_22_SERIES,Type 22 Series Coaches,22型客车
+STR_22_AIRCON_SERIES,Type 22 Series Air-conditioned Coaches,22型空调客车
+STR_22B_SERIES,Type 22B Series Coaches,22B型客车
+STR_24_DDR_SERIES,Type 24 Series Coaches (DDR),24型客车 (东德造)
+STR_25_SERIES,Type 25 Series Coaches,25型客车
+STR_S25_SERIES,Type S25 Series Coaches,S25型双层客车
+STR_25_HK_SERIES,Type 25 Series Canton-Kowloon Railway Coaches,25型广九铁路客车
+STR_25B_SERIES,Type 25B Series Coaches,25B型客车
+STR_S25BLD_SERIES,Type S25B Series Coaches (Low-Door),S25B型双层客车 (低开门)
+STR_S25BHD_SERIES,Type S25B Series Coaches (High-Door),S25B型双层客车 (高开门)
+STR_25G_SERIES,Type 25G Series Coaches,25G型客车
+STR_25Z_SERIES,Type 25Z Series Coaches,25Z型客车
+STR_S25Z_SERIES,Type S25Z Series Coaches ,S25Z型双层客车
+STR_25K_SERIES,Type 25K Series Coaches,25K型客车
+STR_S25KLD_SERIES,Type S25K Series Coaches (Low-Door),S25K型双层客车 (低开门)
+STR_S25KHD_SERIES,Type S25K Series Coaches (High-Door),S25K型双层客车 (高开门)
+STR_25T_SERIES,Type 25T Series Coaches,25T型客车
+STR_25DT_JINLUN_SERIES,NZJ2 JINLUN DMU Wagons,"NZJ2 ""金轮号""动车组拖车"
+STR_MU_WAGON,MU Wagons,动车组车厢
+STR_BOXCAR,Boxcar,棚车
+STR_FLATCAR,Flatcar,平车
+STR_TANKER,Tanker,罐车
+STR_GONDOLA,Gondola,敞车
+STR_REFRIGERATOR_WAGON,Refrigerator Wagon,保温车
+STR_VIHICLE_TRANSPORTER,Vihicle Transporter,汽车运输车
+# Import Regien,,
+STR_US_IMPORT,Imported from United States,美国进口车型
+STR_FR_IMPORT,Imported from France,法国进口车型
+STR_HU_IMPORT,Imported from Hungary,匈牙利进口车型
+STR_DESC_6,{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING},
+STR_DESC_5,{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING},
+STR_DESC_4,{STRING}{}{STRING}{}{STRING}{}{STRING},
+STR_DESC_3,{STRING}{}{STRING}{}{STRING},
+STR_DESC_2,{STRING}{}{STRING},
+# Desc,,
+STR_JINLUN_25DT,"Coaches use for DMU {BLUE}""JIN{WHITE}LUN""",{BLUE}金{WHITE}轮{RED}号{GOLD}内燃动车组所使用的拖车
+STR_XL25T_SSPE_DESCRIPTION,"{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.",{BLACK}新时速运递公司使用的XL25T版本。
+STR_CHA1C_DESC," {BLACK}Hybrid Locomotive using battery on non-electrified tracks providing {BLUE}2000 kW{BLACK}, and providing {RED}2400 kW{BLACK} on 25kV AC tracks", {BLACK}混合动力机车。在非电气化路段使用电池供电，功率为{BLUE}2000 kW{BLACK}。在25kV交流供电铁路上功率为{RED}2400 kW
+# Livery Availability,,
+STR_DF_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Yellow {GREEN}Line {BLACK}Livery, {WHITE}White {GREEN}Line {BLACK}Livery","{BLACK}可供选择的涂装：{GOLD}黄色{GREEN}窗线{BLACK}涂装, {WHITE}白色{GREEN}窗线{BLACK}涂装"
+STR_DF4_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea, DF4B only),{BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery, Jinhua-Wenzhou Livery (DF4B only)",{BLACK}可供选择的涂装：{GREEN}绿色涂装{GOLD}，{ORANGE}橘色涂装{BLACK}，{BLUE}“乌克兰”{YELLOW}涂装，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}
+STR_DF4C_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original Livery, {GREEN}GREEN {GOLD}Livery, {BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery","{BLACK}可供选择的涂装：原版涂装，{GREEN}绿色{GOLD}涂装, “乌克兰”{BLUE}蓝{YELLOW}黄{GOLD}涂装"
+STR_DF4D0000_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BROWN}Original {GOLD}Livery, {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {GOLD}Railway Livery",{BLACK}可供选择的涂装：{BROWN}原版{GOLD}涂装，{GREEN}西户铁路{GOLD}涂装
+STR_DF4D4000_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}4000-{YELLOW}Series {GOLD}Livery and {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea)",{BLACK}可供选择的涂装：{BLUE}“乌克兰”{YELLOW}涂装{GOLD}，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装
+STR_DF4DF_LIVERY_AVAILABILITY,{BLACK}Livery Availability: Original Livery,{BLACK}可供选择的涂装：原版涂装
+STR_DF7G5000_LIVERY_AVAILABILITY,{BLACK}Livery Availability: Original Livery,{BLACK}可供选择的涂装：原版涂装
+STR_DF8B_LIVERY_AVAILABILITY,{BLACK}Livery Availability: Original Livery,{BLACK}可供选择的涂装：{GOLD}原版涂装
+STR_NJ2_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {WHITE}Original {GOLD}and {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery,{BLACK}可供选择的涂装：{WHITE}原色{GOLD}涂装，{DKGREEN}青藏铁路{GOLD}涂装
+STR_SS7C_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Original Livery, {YELLOW}Banana Yellow {GOLD}Livery",{BLACK}可供选择的涂装：{GOLD}大脸猫涂装，{YELLOW}香蕉{GOLD}涂装
+STR_6Y2_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Original Livery, Factory Livery, {GREEN}Late Livery",{BLACK}可供选择的涂装：{BLUE}原始涂装，出厂涂装，{GREEN}晚期涂装
+STR_DJJ1_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Original Livery, Guangzhou-Shenzhen Railway Livery",{BLACK}可供选择的涂装：{GOLD}蓝箭涂装，广深铁路涂装
+STR_CRH6A2_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Prototype, Guangzhou-Shenzhen, Guangzhou-Zhuhai, Tianfu (A nickname of Chengdu, meaning ""Paradise"") (with or without green stripes), Zhengzhou-Jiaozuo, Zhuhai-Airport, Pearl River Delta (Blue or Orange)",{BLACK}可供选择的涂装：{GOLD}原型，广深城际定制版，广珠城际，成都天府号 (有/无绿色条带)，郑焦城际，珠海机场，珠三角城际(蓝/橙色)
+STR_CRH6A3_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Beijing-Tongzhou, Shanghai-Jinshan",{BLACK}可供选择的涂装：{GOLD}京通号，金山铁路
+STR_CRH6AA_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Pearl River Delta, Guangzhou-Zhuhai, Tianfu (A nickname of Chengdu, meaning ""Paradise"") (with or without green stripes)",{BLACK}可供选择的涂装：{GOLD}珠三角城际，广珠城际，成都天府号 (有/无绿色条带)
+STR_CRH6F_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Pearl River Delta, Shanghai-Jinshan, Xiaoshan/Hangzhou-Ningbo",{BLACK}可供选择的涂装：{GOLD}珠三角城际，金山铁路，萧甬铁路
+STR_CR400BFC_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {LTBLUE}Winter Olypics Livery, {GOLD}Origin Livery,",{BLACK}可供选择的涂装：{LTBLUE}冬奥涂装，{GOLD}原版涂装
+STR_CR400BFZ_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {RED}Origin {GOLD}Livery, {PURPLE}Asia Game Livery ",{BLACK}可供选择的涂装：{RED}原版龙凤{GOLD}呈祥涂装，{PURPLE}亚运涂装
+STR_22_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Wuhan Railway Vocational College Livery (only coaches), Sanshui-Maoming Livery (unfinish), ""Longqingxia"" Livery (unfinish), Beijing-Shanghai Direct Express Livery (XL22, UZ22), Guangzhou-Hongkong Livery (XL22, UZ22) (unfinish)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，武汉铁路技术学院涂装 (仅客车)，龙庆峡号{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装、{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，广九直通车涂装 (仅XL22，UZ22)
+STR_22AIRCON_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Beijing-Shanghai Direct Express Livery, Guangzhou-Hongkong Livery (unfinish)","{BLACK}可供选择的涂装：{GOLD}京沪直达特快{CREAM}奶油色-{BROWN}-棕红色、{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，广九直通车涂装,"
+STR_22B_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery,{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装
+STR_25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{BLUE}集{RED}通{WHITE}铁{BLUE}路{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_RW25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_XL25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_S25BLD_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {ORANGE}Orange-{YELLOW}Yellow {GOLD}Livery, deteriorated, with strengthening steel sheet, Urumqi, Xianxing (All low-door, higher loading speed, 120 km/h)",{BLACK}可供选择的涂装：{ORANGE}橙{YELLOW}黄{GOLD}相间涂装，老化版，加强筋版，乌鲁木齐局，先行号 (均为低开门，装载较快，120 km/h)
+STR_S25BHD_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}deteriorated, Shenyang (All high-door, lower loading speed, 140 km/h)",{BLACK}可供选择的涂装：{GOLD}老化涂装，沈阳铁路局 (均为高开门，装载较慢，140 km/h)
+STR_25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, Xi'an-Huxian Railway Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}，西户铁路涂装，“高阻绿”{GOLD}涂装 (未完成)
+STR_CA25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{ORANGE}橙色{GOLD}涂装，“高阻绿”{GOLD}涂装 (未完成)
+STR_KD25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an-Huxian Railway Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery (unfinished), {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{ORANGE}橙色{GOLD}涂装，{LTBLUE}沪芦列车{GOLD}涂装，西户铁路涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装 (未完成){DKGREEN}，“高阻绿”{GOLD}涂装 (未完成)
+STR_25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery",{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}青藏铁路{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装
+STR_BSP25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery, Made by BSP Livery","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装，{DKGREEN}青藏铁路 {GOLD}涂装，{DKGREEN}""高祖绿"" {GOLD}涂装，BSP25T涂装"
+STR_CA25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery, Made by BSP Livery","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装，{DKGREEN}青藏铁路 {GOLD}涂装，{DKGREEN}""高祖绿"" {GOLD}涂装，BSP25T涂装"
+STR_XL25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery (unfinished), {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{GOLD}相间涂装，{DKGREEN}青藏铁路{GOLD}涂装 (未完成)，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_UZ25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (未完成)，{DKGREEN}""高祖绿"" {GOLD}涂装"
+STR_KD25T_LIVERY_AVAILABILITY,{BLACK}Livery Availability: Only {DKGREEN}Qinghai{YELLOW}-{DKGREEN}Tibet Railway {GOLD}Livery,{BLACK}可供选择的涂装：仅有{DKGREEN}青藏铁路{GOLD}涂装
+STR_19K_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery",{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{RED}红{WHITE}白{GOLD}相间涂装
+STR_25K_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_25Z_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Xi{WHITE}zi{GOLD}Livery, {LTBLUE}Shijiazhuang-Qinhuangdao {WHITE}Slow Train {GOLD}Livery, {BLUE}Guangzhou-{RED}-Shenzhen{WHITE} Railway{GOLD} Livery","{BLACK}可供选择的涂装：{BLUE}西子号{WHITE}列车{GOLD}涂装，{LTBLUE}石秦{WHITE}特慢{GOLD}涂装, {BLUE}广深{RED}铁{WHITE}路{GOLD}涂装"
+STR_S25Z_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {LTBLUE}Shijiazhuang-Qinhuangdao {WHITE}Slow Train {GOLD}Livery, {BLUE}Guangzhou-{DKGREEN}-Shenzhen{WHITE} Railway{GOLD} Livery","{BLACK}可供选择的涂装：{LTBLUE}石秦{WHITE}特慢{GOLD}涂装, {BLUE}广深{DKGREEN}铁{WHITE}路{GOLD}涂装"
+STR_S25_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue-{GOLD}-Orange-{WHITE}-White {BLACK}Livery, other livery (unfinished}",{BLACK}可供选择的涂装：{GOLD}蓝-橙-白涂装，其他彩绘涂装尚未完成
+STR_S25KLD_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Liaodong Peninsula Livery (All low-door, higher loading speed)",{BLACK}可供选择的涂装：{LTBLUE}沪芦列车{GOLD}涂装，辽东半岛号 (均为低开门，装载较快)
+STR_S25KHD_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Xianxing (Pioneer), Xi'an (All high-door, slower loading speed)",{BLACK}可供选择的涂装：{GOLD}先行号，西安铁路局 (高开门，装载较慢)
+STR_SCA25KHD_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Xi'an,{BLACK}可供选择的涂装：{GOLD}西安铁路局
+STR_TZ_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {ORANGE}Orange {GOLD}Livery, {GOLD}Beijing-Shanghai Direct Express {CREAM}Cream-{BROWN}-Brown {GOLD}Livery",{BLACK}可供选择的涂装：{ORANGE}橙色{GOLD}涂装，{GOLD}京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装
+STR_KD25K_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{LTBLUE}沪芦列车{GOLD}涂装，西安铁路局涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
+STR_25DT_JINLUN_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Earlier Livery (Before 2010), Later Livery (After 2010)", {GOLD}早期涂装 (2010年之前)，晚期涂装(2010年以后)
+STR_YZ31_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Sanshui-Maoming Railway Livery (unfinished)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，三茂铁路涂装 (未完成)
+STR_25ML_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {WHITE}White-{GREEN}-Green {GOLD}Livery, {RED}RED-{GREEN}-Green {GOLD}Livery (after 2003)", {GOLD}白底绿带涂装，类25G红色涂装 (2003年以后)
+STR_G17_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{GRAY}黑色{GOLD}加随机颜色条带 (未完成)
+STR_G60_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GRAY}Grey {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带 (未完成)
+STR_GN70_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{BLACK}黑色{GOLD}加随机颜色条带 (未完成)
+STR_GN80_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{BLACK}黑色{GOLD}加随机颜色条带 (未完成)
+STR_C62_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
+STR_C64_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
+STR_C70_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
+STR_P50_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred), Wreck Livery",{BLACK}可供选择的涂装：{GOLD}随机 (黑色，铁锈色，棕色)，救援涂装
+STR_P60_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
+STR_P61_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
+STR_P62_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Random (Black, Blue, Brown, Rustyred)",{BLACK}可供选择的涂装：{GOLD}随机 (黑色，蓝色，铁锈色，棕色)
+STR_P63_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred)",{BLACK}可供选择的涂装：{GOLD}随机 (黑色，铁锈色，棕色)
+STR_P64_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred)",{BLACK}可供选择的涂装：{GOLD}随机 (黑色，铁锈色，棕色，红色)
+STR_P65_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {DKGREEN}China Post{GOLD}, Black (unfinished)","{DKGREEN}可供选择的涂装： 中国邮政{GOLD},黑色 (未完成)"
+STR_P70_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Random (Black, Blue, Brown, Rustyred)",{BLACK}可供选择的涂装：{GOLD}随机 (黑色，蓝色，铁锈色，棕色)
+STR_N5_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
+STR_N60_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
+STR_NX17_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Random (Black, Brown)",{BLACK}可供选择的涂装：{GOLD}随机(黑色，棕色)
+STR_NX70A_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Black Livery Only,{BLACK}可供选择的涂装：{GOLD}仅黑色
+STR_X2K_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random Containers,{BLACK}可供选择的涂装：{GOLD}随机集装箱
+STR_JSQ1_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Random (Red, Blue)",{BLACK}可供选择的涂装：{GOLD}随机颜色（蓝色，红色）
+STR_W_BOXCAR_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Yellow Livery with Yellow or White Roof,{BLACK}涂装：{GOLD}黄色，车顶颜色随机（黄色，白色）
+# Nickname,,
+STR_DF_NICKNAME,{BLACK}Nickname: {GOLD}Old DongFeng,{BLACK}昵称：{GOLD}老东风
+STR_DF4_NICKNAME,"{BLACK}Nickname: {GOLD}""Watermelon"" for {GREEN}Green {GOLD}Livery, ""Orange"" for {ORANGE}Orange {GOLD}Livery",{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
+STR_DF4B_NICKNAME,"{BLACK}Nickname: {GOLD}""Watermelon"" for {GREEN}Green {GOLD}Livery, ""Orange"" for {ORANGE}Orange {GOLD}Livery",{BLACK}改进后的内燃机使得该机车更加耐用。昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
+STR_DF4C_NICKNAME,{BLACK}Nickname: {GOLD}Blue Cat,{BLACK}昵称：{GOLD}蓝猫
+STR_DF4D_NICKNAME,{BLACK}Nickname: {GOLD}Tiger,{BLACK}昵称：{GOLD}老虎
+STR_DF4D7000_NICKNAME,{BLACK}Nickname: {GOLD}Liuzhou Tiger,{BLACK}昵称：{GOLD}柳州虎
+STR_DF7G_NICKNAME,{BLACK}Nickname: {GOLD}Begger,{BLACK}昵称：{GOLD}乞丐
+STR_DF8B_NICKNAME,{BLACK}Nickname: {GOLD}Barbie,{BLACK}昵称：{GOLD}芭比
+STR_DF11_NICKNAME,{BLACK}Nickname: {GOLD}Lion,{BLACK}昵称：{GOLD}狮子
+STR_DF11G_NICKNAME,{BLACK}Nickname: {GOLD}Pig,{BLACK}昵称：{GOLD}猪
+STR_HXN5_NICKNAME,{BLACK}Nickname: {GOLD}Grasshopper,{BLACK}昵称：{GOLD}蚱蜢
+STR_HXN5B_NICKNAME,{BLACK}Nickname: {GOLD}Scrambled egg with tomato,{BLACK}昵称：{GOLD}番茄炒蛋
+STR_SS1_NICKNAME,{BLACK}Nickname: {GOLD}Peony,{BLACK}昵称：{BLUE}芍药
+STR_SS3_NICKNAME,"{BLACK}Nickname: San'ge (new), Sanye (Old) (San - Three, Ge - Elder Brother, Ye - Grandfather or a general and respectful pronoun to old men)","{BLACK}昵称：{GOLD}三哥 (前期), 三爷 (老化后)"
+STR_SS3B_NICKNAME,{BLACK}Nickname: {BLUE}Blue Bird,{BLACK}昵称：{GOLD}蓝鸟，大蓝鸟
+STR_SS4_NICKNAME,{BLACK}Nickname: {BLUE}Baoji Blue,{BLACK}昵称：{BLUE}宝鸡蓝
+STR_SS4G_NICKNAME,{BLACK}Nickname: Sige (Si - Four),{BLACK}昵称： {GOLD}四哥
+STR_SS5_NICKNAME,{BLACK}Nickname: {GOLD}Xiaowu (Little Five),{GOLD}试验型机车，产量仅2台。{BLACK}昵称：{GOLD}小五
+STR_SS6_NICKNAME,{BLACK}Nickname: {GOLD}Xiaoliu (Little Six),{BLACK}昵称：{GOLD}小六
+STR_SS6B_NICKNAME,"{BLACK}Nickname: {GOLD}Yan Xiaoliu (a character from Chinese soap opera ""Wulin Waizhuan"")",{BLACK}昵称： {GOLD}燕小六
+STR_SS7_NICKNAME,{BLACK}Nickname: {GOLD}Roast Chicken,{GOLD}为山区小转弯半径线路设计的通用电力机车，最大的特点是使用了B0-B0-B0轴式转向架布局。{BLACK}昵称{GOLD}烧鸡
+STR_SS7B_NICKNAME,{BLACK}Nickname: {GOLD}Cat,{GOLD}试制型25t轴重干线重载货运电力机车，产量仅2台，其中0001号机车于2005年因山体滑坡事故报废。{BLACK}昵称{GOLD}大脸猫
+STR_SS7C_NICKNAME,{BLACK}Nickname: {GOLD}Cat,{GOLD}客货运两用干线电力机车，{BLACK}昵称{GOLD}大脸猫(原版涂装)、{YELLOW}香蕉(黄色涂装)
+STR_SS7D_NICKNAME,{BLACK}Nickname: {GOLD}Transformer,{BLACK}昵称：{GOLD}金刚
+STR_SS7E_NICKNAME,{BLACK}Nickname: {GOLD}Beauty,{GOLD}准高速干线电力机车，{BLACK}昵称{GOLD}美女
+STR_SS8_NICKNAME,{BLACK}Nickname: {GOLD}Broom,{BLACK}昵称： {GOLD}扫把
+STR_SS9_NICKNAME,{BLACK}Nickname: {GOLD}Frog,{BLACK}昵称：{GOLD}青蛙
+STR_SS9G_NICKNAME,{BLACK}Nickname: {GOLD}Shochu,{BLACK}昵称：{GOLD}烧酒
+STR_HXD1_NICKNAME,{BLACK}Nickname: {GOLD}Smurf,{BLACK}昵称：{GOLD}蓝精灵
+STR_HXD1B_NICKNAME,{BLACK}Nickname: {GOLD}River Crab,{BLACK}昵称：{GOLD}河蟹
+STR_HXD1D_NICKNAME,{BLACK}Nickname: {GOLD}Jujube,{BLACK}昵称：{GOLD}红枣
+STR_HXD2_NICKNAME,{BLACK}Nickname: {GOLD}Electric Hippo,{BLACK}昵称：{GOLD}电河马
+STR_HXD3C_NICKNAME,{BLACK}Nickname: {GOLD}Electric Baboon,{BLACK}昵称：{GOLD}电狒狒
+STR_HXD3D_NICKNAME,{BLACK}Nickname: {GOLD}Tomato,{BLACK}昵称：{GOLD}番茄
+STR_NDJ3_NICKNAME,{BLACK}Nickname: {WHITE}White Pig,{BLACK}昵称：{WHITE}大白猪
+STR_CR200J_NICKNAME,"{BLACK}Nickname: {GREEN}""Hulk"" {GOLD}(Official), {GREEN}""Trash Bin"" {GOLD}(Folk)",{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方)，{GREEN}“垃圾桶”{GOLD}(民间)
+STR_CR200JC_NICKNAME,"{BLACK}Nickname: {GREEN}""AD Bin"" {GOLD}(Folk)",{BLACK}昵称：{RED}“A{WHITE}D{GREEN}桶”{GOLD}(民间)
+STR_CRH1A_NICKNAME,{BLACK}Nickname: {GOLD}Metro ,{BLACK}昵称：{GOLD}地铁
+STR_CRH1B_NICKNAME,{BLACK}Nickname: {GOLD}Long Metro ,{BLACK}昵称：{GOLD}长地铁
+STR_CRH1E_NICKNAME,{BLACK}Nickname: {GOLD}Sleeping Metro ,{BLACK}昵称：{GOLD}睡地铁
+STR_CRH1AA_NICKNAME,{BLACK}Nickname: {GOLD}Cute Metro ,{BLACK}昵称：{GOLD}萌地铁
+STR_CRH2A_NICKNAME,{BLACK}Nickname: {GOLD}Hairtail,{BLACK}昵称：{GOLD}带鱼
+STR_CRH2B_NICKNAME,{BLACK}Nickname: {GOLD}Long Hairtail,{BLACK}昵称：{GOLD}长带鱼
+STR_CRH2C_NICKNAME,{BLACK}Nickname: {GOLD}Crazy Hairtail,{BLACK}昵称：{GOLD}疯带鱼
+STR_CRH2E_NICKNAME,{BLACK}Nickname: {GOLD}Sleeper Hairtail,{BLACK}昵称：{GOLD}睡带鱼
+STR_CRH2G_NICKNAME,{BLACK}Nickname: {GOLD}Advanced Black Face,{BLACK}昵称：{GOLD}先进黑脸
+STR_CRH3A_NICKNAME,{BLACK}Nickname: {GOLD}Golden Eyes,{BLACK}昵称：{GOLD}黄金眼
+STR_CRH3C_NICKNAME,{BLACK}Nickname: {GOLD}Rabbit,{BLACK}昵称：{GOLD}兔子
+STR_CRH5A_NICKNAME,{BLACK}Nickname: {GOLD}Donkey,{BLACK}昵称：{GOLD}驴
+STR_CRH6F_NICKNAME,{BLACK}Nickname: {GOLD}Real Metro,{BLACK}昵称：{GOLD}真地铁
+STR_CRH380A_NICKNAME,{BLACK}Nickname: {GOLD}Big Rat,{BLACK}昵称：{GOLD}大老鼠
+STR_CRH380B_NICKNAME,{BLACK}Nickname: {GOLD}Crazy Rabbit,{BLACK}昵称：{GOLD}疯兔子
+STR_CRH380CL_NICKNAME,{BLACK}Nickname: {GOLD}Shark,{BLACK}昵称：{GOLD}大鲨鱼
+STR_CRH380D_NICKNAME,{BLACK}Nickname: {GOLD}Crazy Metro,{BLACK}昵称：{GOLD}疯地铁
+STR_CR400AF_NICKNAME,{BLACK}Nickname: {GOLD}Red Loong,{BLACK}昵称：{GOLD}红神龙
+STR_CR400BF_NICKNAME,{BLACK}Nickname: {GOLD}Golden Phoenix,{BLACK}昵称：{GOLD}金凤凰
+STR_CR400_Z_NICKNAME,{BLACK}Nickname: {GOLD}Dragon and {RED}Phoenix bring prosperity,{BLACK}昵称：{GOLD}龙凤{RED}呈祥
+STR_CR400BFC_NICKNAME,{BLACK}Nickname: {LTBLUE}Blessed Snow Welcomes Spring (Winter Olympic Livery Only),{BLACK}冬奥涂装版昵称：{LTBLUE}瑞雪迎春
+STR_CR400BFZ_NICKNAME,"{BLACK}Nickname: {GOLD}Dragon and {RED}Phoenix bring prosperity,  {PURPLE}Egglpant (Folk)/ Aussie on Yangtze (Official) (Asia Game Livery Only)",{BLACK}昵称：{GOLD}龙凤{RED}呈祥{BLACK}，{PURPLE}茄子 (民间)/润泽江南 (官方) (亚运涂装)
+STR_CR300AF_NICKNAME,{BLACK}Nickname: {LTBLUE}Smurfette,{BLACK}昵称：{LTBLUE}蓝妹妹
+STR_CR300BF_NICKNAME,"{BLACK}Nickname: {LTBLUE}""Blue Antidote"" {GOLD}(Official), {LTBLUE}""Zoombie Blue"" {GOLD}(Folk)",{BLACK}昵称：{LTBLUE}“蓝暖男”{GOLD}(官方)，{LTBLUE}“僵尸蓝”{GOLD}(民间)
+# Alias Name,,
+STR_ALIASNAME_DF,{BLACK}Alias Name: {GOLD}Great Loong,{BLACK}曾用名：{GOLD}巨龙，ND
+STR_ALIASNME_SS1,{BLACK}Alias Name: {GOLD}6Y1,{BLACK}曾用名：{GOLD}6Y1
+STR_ALIASNAME_FXD1B,{BLACK}Alias Name: {GOLD}HXD1F (Hexie/Harmony 1F Electric Locomotive),{BLACK}曾用名：{GOLD}HXD1F(和谐1F型电力机车)
+# Reliability,,
+STR_RELDEC_VERY_HIGH,{BLACK}Reliability decay speed: {RED}Very high ({COMMA}),{BLACK}可靠性下降速度：{RED}极高（{COMMA}）
+STR_RELDEC_HIGH,{BLACK}Reliability decay speed: {ORANGE}High ({COMMA}),{BLACK}可靠性下降速度：{ORANGE}较高（{COMMA}）
+STR_RELDEC_MEDIUM,{BLACK}Reliability decay speed: {YELLOW}Medium ({COMMA}),{BLACK}可靠性下降速度：{YELLOW}一般（{COMMA}）
+STR_RELDEC_LOW,{BLACK}Reliability decay speed: {GREEN}Low ({COMMA}),{BLACK}可靠性下降速度：{GREEN}较低（{COMMA}）
+STR_RELDEC_VERY_LOW,{BLACK}Reliability decay speed: {BLUE}Very low ({COMMA}),{BLACK}可靠性下降速度：{BLUE}极低（{COMMA}）
+# Speed,,
+STR_ORIGIN_SPEED, - Origin Speed, - 原始速度
+STR_310_KMH, - Max Speed 310 km/h, - 最高速度 310 km/h
+STR_350_KMH," - Max Speed 350 km/h, Running Costs Increase", - 最高速度 350 km/h，运营费用增加
+STR_380_KMH," - Max Speed 380 km/h, Running Costs Greatly Increase", - 最高速度 380 km/h，运营费用大幅增加
+STR_DJJ2_321_KMH, - {GOLD}321.5 km/h{BLACK}. Broke the Highest Speed Record of China's Railway on 27th Oct. 2002. Running Costs Greatly Increase, - {GOLD}321.5 km/h{BLACK}，2002年10月27日创下的当时中国铁路最高速。运营费用大幅增加
+STR_350_AVAILABLE,Refittable to Max Speed 350 km/h (Increasing running costs),可改装为最高速度 350 km/h，运营费用增加
+STR_350_380_AVAILABLE,Refittable to Max Speed 350 or 380 km/h (Increasing running costs),可改装为最高速度 350 或 380 km/h，运营费用增加
+STR_DJJ2_321_AVAILABLE,This train has broke the Highest Speed Record of China's Railway by {GOLD}321.5 km/h{BLACK} on 27th Oct. 2002. Refittable to this speed (Increasing running costs),这列车曾经在2002年10月27日创下了当时中国铁路的最高速321.5 km/h。可改装到这一速度，运营费用增加
+# Livery,,
+STR_ORIGINAL, - Original Livery, - 原版涂装
+STR_REVERSE, └ the Reverse of the Livery Above, └ 翻转的涂装
+STR_ORANGE,{ORANGE} - Orange Livery,{ORANGE} - 橘色涂装
+STR_GREEN,{GREEN} - Green Livery,{GREEN} - 绿色涂装
+STR_RED,{RED} - Red Livery,{RED} - 红色涂装
+STR_WHITE,{WHITE} - WhIte Livery,{WHITE} - 白色涂装
+STR_BLUE,{BLUE} - Blue Livery,{BLUE} - 蓝色涂装
+STR_GRASSGREEN,{DKGREEN} - Dark Green Livery,{DKGREEN} - 草绿色涂装
+STR_LATER_ORANGE,{ORANGE} - Later Orange Livery,{ORANGE} - 后期橘色涂装
+STR_LATER_GREEN,{GREEN} - Later Green Livery,{GREEN} - 后期绿色涂装
+STR_XIHU, - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery, - {GREEN}西户铁路{BLACK}涂装
+STR_XIHU_REVERSE," - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery, reversed", - {GREEN}西户铁路{BLACK}涂装，倒转方向
+STR_DF4D_7000, - {GREEN}7000-{YELLOW}Series {BLACK}Livery, - {GREEN}7000{YELLOW}系{BLACK}涂装
+STR_SS7C_BANANA, - {YELLOW}Banana Yellow {BLACK}Livery, - {YELLOW}黄色{BLACK}涂装
+STR_FUZHOU, - Fuzhou Livery, - 福州机务段涂装
+STR_UKRAINE, - {YELLOW}Yellow {BLACK}and {BLUE}Blue {BLACK}Livery, - {YELLOW}“乌克兰”{BLUE}涂装
+STR_DF4B_DPRK, - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery, - {BLUE}蓝{DKGREEN}绿{BLACK}相间涂装
+STR_DF4D4000_DPRK, - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery, - {BLUE}蓝{DKGREEN}绿{BLACK}相间涂装
+STR_DF4BN_ORIGINAL, - {BLUE}DF4B With New Bodyshell, - {BLUE}新头型DF4B
+STR_DF4BN_REVERSE, - {BLUE}DF4B With New Bodyshell (Reversed), - {BLUE}新头型DF4B (反转)
+STR_ALTERNATIVE, - Alternative Original Livery, - 另一种原版涂装
+STR_DF_YELLOW, - {GOLD}Yellow {GREEN}Line {BLACK}Livery, - {GOLD}黄色{GREEN}窗线{BLACK}涂装
+STR_DF_WHITE, - {WHITE}White {GREEN}Line {BLACK}Livery, - {WHITE}白色{GREEN}窗线{BLACK}涂装
+STR_FACTORY, - Factory Livery, - 出厂涂装
+STR_6Y2_LATE, - {GREEN}Late {BLACK}Livery, - {GREEN}晚期{BLACK}涂装
+STR_SS4_BLUEROOF, - {WHITE}White {BLACK}Livery with {BLUE}Blue{BLACK} Roof, - 白色涂装（车顶为{BLUE}蓝{BLACK}色）
+STR_SHENHUA, - {GOLD}Shenhua Groups Livery, - {GOLD}神华集团涂装
+STR_GUONENG, - {GOLD}CHN Energy Livery, - {GOLD}国家能源集团涂装
+STR_CHN2LAOS, - {GOLD}China-Laos Railway Livery, - {GOLD}中老铁路涂装
+STR_WUJING," - {GOLD}""Armed Police""Livery", - {GOLD}“武警”涂装
+STR_DFH7, - DFH7,
+STR_DFH7B, - DFH7B,
+STR_GONGQINGTUAN," - ""Gongqingtuan"" Livery", - 共青团号涂装
+STR_RANDOM_COLOR, - Ramdom Color, - 随机颜色
+STR_BUILD_YEAR, - According to build year, - 根据建造年份选择设计
+STR_YW22_ORIGINAL," - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240", - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
+STR_YW22_1966," - 1966 Design - Capacity 60, Comfort 288", - 1966年新设计 - 定员60，舒适度288
+STR_ORDINARY_GREEN, - {GREEN}Ordinary Green {BLACK}Livery, - {GREEN}绿皮车{BLACK}涂装
+STR_RED_WHITE, - {RED}Red {BLACK}and {WHITE}White, - {RED}红{WHITE}白{BLACK}相间
+STR_BLUE_RED_WHITE, - {BLUE}Blue-{RED}Red{WHITE}-White, - {BLUE}蓝{WHITE}白{RED}红{BLACK}相间涂装
+STR_JITONG, - {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {BLACK}Livery, - {BLUE}集{RED}通{WHITE}铁{BLUE}路{BLACK}涂装
+STR_LUCHAOGANG, - {LTBLUE}Shanghai-Luchaogang {BLACK}Livery, - {LTBLUE}沪芦列车{BLACK}涂装
+STR_LIAODONG, - Liaodong Peninsula Livery, - 辽东半岛号涂装
+STR_DETERIORATE, - Deteriorated Livery, - 老化后
+STR_STRENGTHEN, - With Strengthening Steel Sheet, - 带加强筋
+STR_URUMQI, - Urumqi Railway Bureau, - 乌鲁木齐铁路局
+STR_XIAN, - Xi'an Railway Bureau, - 西安铁路局
+STR_SHENYANG, - Shenyang Railway Bureau, - 沈阳铁路局
+STR_XIANXING, - Xianxing (Pioneer) Livery, - 先行号涂装
+STR_XIZI, - Xizi Livery, - 西子号涂装
+STR_QINGZANG, - Qinghai-Tibet Railway Livery, - 青藏铁路涂装
+STR_GUANGSHEN, - Guangzhou-Shenzhen Railway Livery, - 广深铁路涂装
+STR_JINWEN, - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLACK}Company, - {WHITE}金{RED}温{BLUE}铁{WHITE}路{BLACK}公司
+STR_GAOZU_GREEN," - {DKGREEN}""Gaozu Green"" {BLACK}(unfinished except 25T)"," - {DKGREEN}""高阻绿"" {BLACK}(未完成, 25T除外)"
+STR_BEIJING, - Beijing Railway Bureau, - 北京铁路局
+STR_WRU, - Wuhan Railway Vocational College of Technology Livery, - 武汉铁路技术学院涂装
+STR_BEIJING2SHANGHAI, - Beijing-Shanghai Express Train Livery {CREAM}Cream-{BROWN}-Brown, - 北京至上海13/14次直快涂装
+STR_LATER, - Later Livery, - 后期涂装
+STR_EARLIER, - Earlier Livery, - 早期涂装
+STR_LONGQINGXIA," - ""Longqingxia"" Livery", - 龙庆峡号涂装
+STR_BEIJING2SHANGHAIALT, - Beijing-Shanghai Express Train Livery {BLUE}Blue-{WHITE}-White, - 北京至上海21/22次直快涂装
+STR_RESCUE, - Wrecker Livery, - 救援涂装
+STR_BSP25T, - Made by BSP, - BSP制造
+STR_PROTOTYPE, - Prototype, - 原型
+STR_JINGTONG, - Beijing-Tongzhou Livery, - 京通号涂装
+STR_TIANFU, - Tianfu (Chengdu) Livery, - 成都天府号涂装
+STR_TIANFU_GREEN, - Tianfu (Chengdu) Livery with green stripes, - 成都天府号涂装，带绿色条带
+STR_GUANGZHU, - Guangzhou-Zhuhai Livery, - 广珠城际涂装
+STR_ZHENGJIAO, - Zhengzhou-Jiaozuo Livery, - 郑焦城际涂装
+STR_ZHUJI, - Zhuhai-Airport Livery, - 珠机城际涂装
+STR_ZHUSANJIAO_BLUE," - Pearl River Delta Intercity Railway, Blue", - 珠三角城际涂装(蓝)
+STR_ZHUSANJIAO_ORANGE," - Pearl River Delta Intercity Railway, Orange", - 珠三角城际涂装(橙)
+STR_JINSHAN, - Shanghai-Jinshan Livery, - 金山铁路涂装
+STR_GUANGQING, - Guangzhou-Qingyuan Livery, - 广清城际涂装
+STR_FOSHAN, - Foshan Livery, - 佛肇城际涂装
+STR_XIAOYONG, - Xiaoshan/Hangzhou-Ningbo Livery, - 萧甬铁路涂装
+STR_ASIAGAME, - {PURPLE}The 19th Asian Games Hangzhou {BLACK}Livery," - {PURPLE}杭州亚运会""润泽江南""{BLACK}涂装"
+STR_WINTER_OLYMPIC, - {LTBLUE}The XXIV Olympic Winter Games {BLACK}Livery," - {LTBLUE}北京冬奥会""瑞雪迎春""{BLACK}涂装"
+# Decay,,
+STR_COMFORT_VERY_LOW,{BLACK}Comfort: {RED}Very low ({COMMA}),{BLACK}舒适度：{RED}极低（{COMMA}）
+STR_COMFORT_LOW,{BLACK}Comfort: {ORANGE}Low ({COMMA}),{BLACK}舒适度：{ORANGE}较低（{COMMA}）
+STR_COMFORT_MEDIUM,{BLACK}Comfort: {YELLOW}Medium ({COMMA}),{BLACK}舒适度：{YELLOW}一般（{COMMA}）
+STR_COMFORT_HIGH,{BLACK}Comfort: {GREEN}High ({COMMA}),{BLACK}舒适度：{GREEN}较高（{COMMA}）
+STR_COMFORT_VERY_HIGH,{BLACK}Comfort: {BLUE}Very high ({COMMA}),{BLACK}舒适度：{BLUE}很高（{COMMA}）
+STR_COMFORT_EXTREMELY_HIGH,{BLACK}Comfort: {WHITE}Extremely high ({COMMA}),{BLACK}舒适度：{WHITE}极高（{COMMA}）
+STR_FRESHNESS_VERY_LOW,{BLACK}Cargo age period factor: {RED}Very low ({COMMA}),{BLACK}货物贬值周期因子：{RED}极低（{COMMA}）
+STR_FRESHNESS_LOW,{BLACK}Cargo age period factor: {ORANGE}Low ({COMMA}),{BLACK}货物贬值周期因子：{ORANGE}较低（{COMMA}）
+STR_FRESHNESS_MEDIUM,{BLACK}Cargo age period factor: {YELLOW}Medium ({COMMA}),{BLACK}货物贬值周期因子：{YELLOW}一般（{COMMA}）
+STR_FRESHNESS_HIGH,{BLACK}Cargo age period factor: {GREEN}High ({COMMA}),{BLACK}货物贬值周期因子：{GREEN}较高（{COMMA}）
+STR_FRESHNESS_VERY_HIGH,{BLACK}Cargo age period factor: {BLUE}Very high ({COMMA}),{BLACK}货物贬值周期因子：{BLUE}很高（{COMMA}）
+STR_FRESHNESS_EXTREMELY_HIGH,{BLACK}Cargo age period factor: {WHITE}Extremely High ({COMMA}),{BLACK}货物贬值周期因子：{WHITE}极高（{COMMA}）
+STR_DECAY_BOXCAR,"{BLACK}Cargo Age Period Factor: {YELLOW}185{BLACK}, Passengers {RED}80{BLACK}, Livestock {BLUE}560",{BLACK}货物贬值周期因子：{YELLOW}185{BLACK}，棚代客{RED}80{BLACK}，装载活禽/畜{BLUE}560
+STR_DECAY_BOXCAR_NOPASS,"{BLACK}Cargo Age Period Factor: {YELLOW}185{BLACK}, Livestock {BLUE}560{BLACK}, {RED}Unrefittable to Passengers",{BLACK}货物贬值周期因子：{YELLOW}185{BLACK}，装载活禽/畜{BLUE}560{BLACK}，棚代客{RED}不可用
+STR_CAFE_EFFECT,"{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Halves Running Costs of Non-Commuter Passenger Cars except Restaurant Cars, and Increases Cargo Age Period by 1/4",{BLACK}餐车的作用：{GOLD}加挂餐车使除餐车外的所有非通勤客车运行费用减半，货物贬值周期增加1/4
+STR_AIR_CONDITIONER_EFFECT,{BLACK}Air Conditioner Effect: {GOLD}Attaching Air Conditioner Generator Car Increases Cargo Age Period of Most Passenger Cars Hauled by Locomotives without Electricity Supply by 1/4,{BLACK}空调发电车的作用：{GOLD}加挂空调发电车可使大部分非机供机车牵引客车的货物贬值周期增加1/4
+STR_NO_AIR_CONDITIONER,{BLACK}Air Conditioner: {RED}Unavailable,{BLACK}空调：{RED}不可用
+STR_SELF_AIR_CONDITIONER,{BLACK}With Air Conditioner Compartment {RED}ONLY USED BY ITSELF,{BLACK}自带空调发电机{RED}但仅用于本车厢
+STR_DESC_PENGDAIKE,"{BLACK}Passengers in Boxcars (Peng Dai Ke): From 1980s to 2008, to handle huge traffic amounts during the Spring Festival period, temporary trains where passengers crowding in boxcars had to be operated. This reflected a severe lack of railway transport resources at that time.",{BLACK}棚代客：从20世纪80年代至2008年，为适应春运期间极大的客流量，部分铁路局曾开行使用棚车装载旅客的临客列车，内部极度拥挤。该现象反映了当时铁路运输资源的严重缺乏。
+# Can Attach,,
+STR_ATTACH_ALL_CRH_CR,{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs,{BLACK}匹配的动车组：{GOLD}所有和谐/复兴号动车
+STR_ATTACH_SLEEPER_MU,{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs,{BLACK}匹配的动车组：{GOLD}所有提供卧铺的和谐/复兴号动车
+STR_ATTACH_CR200J,{BLACK}Matching MUs: {GOLD}CR200J Series,{BLACK}匹配的动车组：{GOLD}CR200J系列动车
+STR_NZJ1_XINSHUGUANG_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK}, equivalent to Double-Decker Hard Seat, Capacity: 136, Comfort: {YELLOW}200{BLACK}; {GOLD}ZY{BLACK}, equivalent to Double-Decker Soft Seat, Capacity: 108, Comfort: {YELLOW}240",{BLACK}匹配的车厢：{GOLD}二等座{BLACK}实为双层硬座，载客量：136，舒适度：{YELLOW}200{BLACK}；{GOLD}一等座{BLACK}实为双层软座，载客量：108，舒适度：{YELLOW}240
+STR_NDJ3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC{BLACK}, Second Class Capacity: 114, Comfort: 200",{BLACK}匹配的车厢：{GOLD}二等座、一等座、二等/餐车合造{BLACK}，二等座载客量：114，舒适度：{YELLOW}200
+STR_DJJ1_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent to Soft Seat",{BLACK}匹配的车厢：{GOLD}一等座{BLACK}实为软座
+STR_DJJ2_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等座、二等/餐车合造
+STR_DJF3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent to Soft Seat",{BLACK}匹配的车厢：{GOLD}一等座{BLACK}实为软座
+STR_CR200J_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, WE, WY, WG",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
+STR_CRH_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
+STR_CRH_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, WY, WG, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造
+STR_CRH_LSLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}一等卧、二等/餐车合造 (实为软卧/餐车合造车)
+STR_CRH6A2_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: {ORANGE}160{BLACK}), {GOLD}ZY",{BLACK}匹配的车厢：{GOLD}二等座{BLACK} (带站席，舒适度：{ORANGE}160{BLACK})、{GOLD}一等座
+STR_CRH6A3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: {ORANGE}160",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
+STR_CRH6F_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places (Crowded), Comfort: {RED}128",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：{RED}128
+STR_NC3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, Comfort: 185",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}，舒适度：{YELLOW}185
+# Consist,,
+STR_NJ2_CONSIST,{BLACK}Consist: {GOLD}2 to 4 sections,{BLACK}构成：{GOLD}2-4节重联
+STR_HXN3QZ_CONSIST,{BLACK}Consist: {GOLD}2 to 4 sections,{BLACK}构成：{GOLD}2-4节重联
+STR_DF11G_CONSIST,"{BLACK}Consist: {GOLD}2 sections joint together (Normal), or one section at head, another section at back (""Splitting Pig"", max speed 120 km/h, power 4133 hpM)","{BLACK}构成：{GOLD}两节重联 (普通)，或一节在头部提供动力，另一节在尾部供电 (“拆猪”，最高速度 120 km/h, 功率 4133 公制马力)"
+STR_NC3_CONSIST,{BLACK}Consist: {GOLD}2 to 16 cars; cabs are powered,{BLACK}构成：{GOLD}2-16节；控制车带动力
+STR_NZJ1_XINSHUGUANG_CONSIST,"{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle",{BLACK}构成：{GOLD}头尾各一节，中间加挂至少四节车厢
+STR_JINLUN_LOCOMOTIVE_CONSIST,"{BLACK}Consist: {GOLD}One section at front, another section at back. Only can attach ""{BLUE}JIN{WHITE}LUN{GOLD}"" 25DT Series coaches.","{BLACK}构成：{GOLD}头尾各一节，仅可挂载""{BLUE}金{WHITE}轮{RED}号{GOLD}""25DT车厢"
+STR_NDJ3_CONSIST,"{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle",{BLACK}构成：{GOLD}头尾各一节，中间加挂至少四节车厢
+STR_DJJ1_CONSIST,"{BLACK}Consist: {GOLD}One section at front, with wagons attached; or one section at front, another section at back. At least 4 wagons",{BLACK}构成：{GOLD}头部一节，或头尾各一节，中间加挂至少四节车厢
+STR_DJJ2_CONSIST,"{BLACK}Consist: {GOLD}One section at front, another section at back, MU Wagins in Middle",{BLACK}构成：{GOLD}头尾各一节，中间加挂拖车车厢
+STR_DJF3_CONSIST,{BLACK}Consist: {GOLD}4 to 12 cars; with 9-car standard consist (M-T-M-M-T-M-M-T-M),{BLACK}构成：{GOLD}4-12节；9 节标准编组时为 (M-T-M-M-T-M-M-T-M)
+STR_CRH5A_CONSIST,"{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car",{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车 1495 公制马力
+STR_CR400_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 T-M-T-M-M-T-M-T。大于12节时以重联方式运行
+STR_CR400_AB_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 16-car standard consist 2*(T-M-T-M-M-T-M-T),{BLACK}构成：{GOLD}4-24节；16 节标准编组时为 2*(T-M-T-M-M-T-M-T)
+STR_CR400_Z_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12. {RED}Intelligent {YELLOW}EMUs {GOLD}have lower running costs,{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 T-M-T-M-M-T-M-T。大于12节时以重联方式运行。智能动车运行费用更低
+STR_CR400_AB_Z_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 16-car standard consist 2*(T-M-T-M-M-T-M-T). {RED}Intelligent {YELLOW}EMUs {GOLD}have lower running costs,{BLACK}构成：{GOLD}4-24节；16 节标准编组时为 2*(T-M-T-M-M-T-M-T)。智能动车运行费用更低
+STR_CR200J_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, with wagons attached; or one section at front, another section at back. Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：动力车头部一节，或头尾各一节；当有两辆机车时节数超过11将重联运行
+STR_CR200JL_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, another section at back.",{BLACK}构成：{GOLD}4-24节：动力车头尾各一节
+STR_CRH1A_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节：其中8节标准编组为5M3T。大于12节时以重联方式运行
+STR_CRH1B_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars",{BLACK}构成：{GOLD}4-24节：其中8节标准编组为5M3T，16节标准编组为10M6T
+STR_CRH1E_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars",{BLACK}构成：{GOLD}4-24节：其中8节标准编组为5M3T，16节标准编组为10M6T
+STR_CRH1AA_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节：其中8节标准编组为5M3T。大于12节时以重联方式运行
+STR_CRH2A_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节：半数车厢为动力车。大于12节时以重联方式运行
+STR_CRH2B_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars,{BLACK}构成：{GOLD}4-24节：半数车厢为动力车
+STR_CRH2C_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾拖车，中间全为动力车。大于12节时以重联方式运行
+STR_CRH2E_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars,{BLACK}构成：{GOLD}4-24节：半数车厢为动力车
+STR_CRH2G_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节：半数 (向上取整) 车厢为动力车。大于12节时以重联方式运行
+STR_CRH3A_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)",{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
+STR_CRH3C_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)",{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
+STR_CRH380A_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节；头尾拖车，中间全为动力车。大于12节时以重联方式运行。
+STR_CRH380AL_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised",{BLACK}构成：{GOLD}8-24节；头尾拖车，中间全为动力车
+STR_CRH380B_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)",{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
+STR_CRH380CL_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M)",{BLACK}构成：{GOLD}至少4节，头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)
+STR_CRH380D_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist M-T-M-T-T-M-T-M. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 M-T-M-T-T-M-T-M。大于12节时以重联方式运行
+STR_CRH6A2_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars",{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
+STR_CRH6A3_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars",{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
+STR_CRH6AA_CONSIST,"{BLACK}Consist: {GOLD}Fixed consist of 4 cars (Mc-Tp-Tp-Mc), multiple sections available",{BLACK}构成：{GOLD}4节固定编组 (Mc-Tp-Tp-Mc)，可重联
+STR_CRH6F_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars",{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
+STR_CR300_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 T-M-T-M-M-T-M-T。大于12节时以重联方式运行
+# Head Seat,,
+STR_DJF3_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Soft Seat (RZ) {BLACK} as 1st-Class (ZY),{BLACK}头车座席：一等座作为{GOLD}软座{BLACK}使用
+STR_CRH1A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CRH1B_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CRH1E_HEAD_SEAT,{BLACK}Head Seat: {GOLD}2nd-Class (ZE),{BLACK}头车座席：{GOLD}二等座
+STR_CRH1AA_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CRH2A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}2nd-Class (ZE),{BLACK}头车座席：{GOLD}二等座
+STR_CRH2B_HEAD_SEAT,{BLACK}Head Seat: {GOLD}2nd-Class (ZE),{BLACK}头车座席：{GOLD}二等座
+STR_CRH2C_HEAD_SEAT,{BLACK}Head Seat: {GOLD}2nd-Class (ZE),{BLACK}头车座席：{GOLD}二等座
+STR_CRH2E_HEAD_SEAT,{BLACK}Head Seat: {GOLD}2nd-Class (ZE),{BLACK}头车座席：{GOLD}二等座
+STR_CRH2G_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CRH2ELS_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class Sleeper (WY),{BLACK}头车座席：{GOLD}动卧
+STR_CRH3A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CRH3C_HEAD_SEAT,{BLACK}Head Seat: {GOLD}2nd-Class (ZE),{BLACK}头车座席：{GOLD}二等座
+STR_CRH5A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CRH380A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CRH380B_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CRH380CL_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CRH380D_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CR400_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CR400_Z_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Luxury-Business-Class (SW),{BLACK}头车座席：{GOLD}商务座 (复兴号智能动车组标准)
+STR_CRH6A2_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CRH6A3_HEAD_SEAT,"{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places, Comfort: {ORANGE}160",{BLACK}头车座席：{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
+STR_CRH6F_HEAD_SEAT,"{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places (crowded), Comfort: {RED}128",{BLACK}头车座席：{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：{RED}128
+STR_CR300_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_HEADSEAT_ZW,{BLACK}Head Seat: {GOLD}2nd-Class (ZE),
+STR_HEADSEAT_ZY,{BLACK}Head Seat: {GOLD}1st-Class (ZY),
+STR_HEADSEAT_ZS,{BLACK}Head Seat: {GOLD}Business-Class (ZS),
+STR_HEADSEAT_SW,{BLACK}Head Seat: {GOLD}Luxury-Business-Class (SW),
+# Misc,,
+STR_ELECTRICITY_SUPPLY_YES,{BLACK}Electricity Supply for cars: {GOLD}YES,{BLACK}机供：{GOLD}是
+STR_ELECTRICITY_SUPPLY_NO,{BLACK}Electricity Supply for cars: {RED}NO,{BLACK}机供：{RED}否
+STR_TOO_SHORT,TOO SHORT!,列车太短了
+STR_ONLY_TWO_SECTIONS,This locomotive must be in a consist of two sections to run.,该机车节数必须为2，否则无法运行
+STR_MUST_BE_4_8_12_16_CARS,"This MU must be in a consist of 4, 8, 12 or 16 cars to run.",该动车组节数必须为4，8，12或16，否则无法运行
+STR_MUST_BE_5_TO_17_CARS,This MU must be in a consist of 5 to 17 cars to run.,该动车组节数必须在5至17之间，否则无法运行
+STR_MUST_BE_2_TO_16_CARS,This MU must be in a consist of 2 to 16 cars to run.,该动车组节数必须在2至16之间，否则无法运行
+STR_MUST_BE_4_TO_24_CARS,This MU must be in a consist of 4 to 24 cars to run.,该动车组节数必须在4至24之间，否则无法运行
+STR_MUST_BE_4_TO_12_CARS,This MU must be in a consist of 4 to 12 cars to run.,该动车组节数必须在4至12之间，否则无法运行
+STR_MUST_BE_8_TO_24_CARS,This MU must be in a consist of 8 to 24 cars to run.,该动车组节数必须在8至24之间，否则无法运行

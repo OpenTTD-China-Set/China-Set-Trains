@@ -1,0 +1,355 @@
+//This file sets all vehicle IDs. Each type has a range of 32/64/128/256/512/768/1024 possible IDs.
+
+//Horse, available ID range: 512-1023 (hex 0x0200..0x03FF)
+#define id_range_horse 0x0200..0x03FF
+
+
+//Unit Wagons, available ID range: 1024-2047 (hex 0x0400..0x07FF)
+#define id_range_unit_wagons 0x0400..0x07FF
+
+//Where Unit Wagons for Passengers on RAIL/ELRL: 1024-1535
+#define id_range_unit_wagons_RAIL 0x0400..0x05FF
+item (FEAT_TRAINS, zemuw, 1024) {}
+item (FEAT_TRAINS, zymuw, 1025) {}
+// 1026 Deleted
+item (FEAT_TRAINS, zsmuw, 1027) {}
+item (FEAT_TRAINS, swmuw, 1028) {}
+// 1029-1034 Deleted
+item (FEAT_TRAINS, zecmuw, 1035) {}
+item (FEAT_TRAINS, wemuw, 1036) {}
+item (FEAT_TRAINS, wymuw, 1037) {}
+// 1038 Deleted
+item (FEAT_TRAINS, wgmuw, 1039) {}
+item (FEAT_TRAINS, wrcmuw, 1040) {}
+item (FEAT_TRAINS, camuw, 1041) {}
+item (FEAT_TRAINS, yzmuw, 1042) {}
+item (FEAT_TRAINS, rzmuw, 1043) {}
+item (FEAT_TRAINS, syzmuw, 1044) {}
+item (FEAT_TRAINS, srzmuw, 1045) {}
+item (FEAT_TRAINS, sywmuw, 1046) {}
+item (FEAT_TRAINS, srwmuw, 1047) {}
+// 1048-1050 Deleted
+item (FEAT_TRAINS, xlmuw, 1051) {}
+
+
+//Unit Wagons for Cargoes on RAIL/ELRL: 1536-1663
+#define id_range_unit_wagons_RAIL_CARGO 0x0600..0x067F
+
+//Unit Wagons on MONO: 1663-1791
+#define id_range_unit_wagons_MONO 0x0680..0x06FF
+
+//Unit Wagons on MGLV: 1792-2047
+#define id_range_unit_wagons_MGLV 0x0700..0x07FF
+
+
+//Coaches, available ID range: 2048-3071 (hex 0x0800..0x0BFF)
+#define id_range_coaches 0x0800..0x0BFF
+item (FEAT_TRAINS, yz25g, 2048) {}
+item (FEAT_TRAINS, rz25g, 2049) {}
+item (FEAT_TRAINS, yw25g, 2050) {}
+item (FEAT_TRAINS, rw25g, 2051) {}
+item (FEAT_TRAINS, yz25t, 2052) {}
+item (FEAT_TRAINS, rz25t, 2053) {}
+item (FEAT_TRAINS, yw25t, 2054) {}
+item (FEAT_TRAINS, rw25t, 2055) {}
+item (FEAT_TRAINS, xl25k, 2056) {}
+item (FEAT_TRAINS, xl25g, 2057) {}
+item (FEAT_TRAINS, yz25k, 2058) {}
+item (FEAT_TRAINS, rz25k, 2059) {}
+item (FEAT_TRAINS, yw25k, 2060) {}
+item (FEAT_TRAINS, rw25k, 2061) {}
+//2062 Deleted
+item (FEAT_TRAINS, kd25k, 2063) {}
+item (FEAT_TRAINS, xl25t_sspe, 2064) {}
+item (FEAT_TRAINS, kd25g, 2065) {}
+item (FEAT_TRAINS, ca25t, 2066) {}
+item (FEAT_TRAINS, ca25g, 2067) {}
+item (FEAT_TRAINS, ca25k, 2068) {}
+item (FEAT_TRAINS, xl25t, 2069) {}
+item (FEAT_TRAINS, yz22, 2070) {}
+item (FEAT_TRAINS, rz22, 2071) {}
+item (FEAT_TRAINS, yw22, 2072) {}
+item (FEAT_TRAINS, rw22, 2073) {}
+item (FEAT_TRAINS, yz22b, 2074) {}
+item (FEAT_TRAINS, yw22b, 2075) {}
+item (FEAT_TRAINS, rw22b, 2076) {}
+item (FEAT_TRAINS, yz25b, 2077) {}
+item (FEAT_TRAINS, rz25b, 2078) {}
+item (FEAT_TRAINS, yw25b, 2079) {}
+item (FEAT_TRAINS, rw25b, 2080) {}
+item (FEAT_TRAINS, syz25bld, 2081) {}
+item (FEAT_TRAINS, srz25bld, 2082) {}
+item (FEAT_TRAINS, syz25kld, 2083) {}
+item (FEAT_TRAINS, srz25kld, 2084) {}
+item (FEAT_TRAINS, syz25bhd, 2085) {}
+item (FEAT_TRAINS, srz25bhd, 2086) {}
+item (FEAT_TRAINS, syw25bhd, 2087) {}
+item (FEAT_TRAINS, srw25bhd, 2088) {}
+item (FEAT_TRAINS, syz25khd, 2089) {}
+item (FEAT_TRAINS, srz25khd, 2090) {}
+item (FEAT_TRAINS, syw25khd, 2091) {}
+item (FEAT_TRAINS, srw25khd, 2092) {}
+item (FEAT_TRAINS, sca25khd, 2093) {}
+item (FEAT_TRAINS, kd25t, 2094) {}
+item (FEAT_TRAINS, xl22, 2095) {}
+item (FEAT_TRAINS, xl25b, 2096) {}
+// 2097-2118 coded by wuwu
+item (FEAT_TRAINS, rzt25z, 2097) {}
+item (FEAT_TRAINS, rz125z, 2098) {}
+item (FEAT_TRAINS, rz225z, 2099) {}
+item (FEAT_TRAINS, ca25z, 2100) {}
+item (FEAT_TRAINS, rzxl25z, 2101) {}
+item (FEAT_TRAINS, kd25z, 2102) {}
+item (FEAT_TRAINS, srz125z, 2103) {}
+item (FEAT_TRAINS, srz225z, 2104) {}
+item (FEAT_TRAINS, sca25z, 2105) {}
+item (FEAT_TRAINS, srzxl25z, 2106) {}
+item (FEAT_TRAINS, syw25, 2107) {}
+item (FEAT_TRAINS, srw25, 2108) {}
+item (FEAT_TRAINS, rw19k, 2109) {}
+item (FEAT_TRAINS, rw19t, 2110) {}
+item (FEAT_TRAINS, uz22, 2111) {}
+item (FEAT_TRAINS, yz22aircon, 2112) {}
+item (FEAT_TRAINS, rz22aircon, 2113) {}
+item (FEAT_TRAINS, yw22aircon, 2114) {}
+item (FEAT_TRAINS, rw22aircon, 2115) {}
+item (FEAT_TRAINS, ca23aircon, 2116) {}
+item (FEAT_TRAINS, ca23, 2117) {}
+item (FEAT_TRAINS, tz, 2118) {}
+item (FEAT_TRAINS, yz25b, 2077) {}
+item (FEAT_TRAINS, rz25b, 2078) {}
+item (FEAT_TRAINS, yw25b, 2079) {}
+item (FEAT_TRAINS, rw25b, 2080) {}
+// JinLun DMU Series code by Babel
+item (FEAT_TRAINS, yz25dt_jinlun, 2119) {}
+item (FEAT_TRAINS, yw25dt_jinlun, 2120) {}
+item (FEAT_TRAINS, rw25dt_jinlun, 2121) {}
+item (FEAT_TRAINS, syz25dt_jinlun, 2122) {}
+item (FEAT_TRAINS, srz25dt_jinlun, 2123) {}
+item (FEAT_TRAINS, yz31, 2124) {}
+item (FEAT_TRAINS, yz25ml, 2125) {}
+item (FEAT_TRAINS, tz2, 2126) {}
+item (FEAT_TRAINS, yw25ml, 2127) {}
+item (FEAT_TRAINS, rw25ml, 2128) {}
+item (FEAT_TRAINS, ca25ml, 2129) {}
+item (FEAT_TRAINS, xl25ml, 2130) {}
+item (FEAT_TRAINS, yw221966, 2131) {}
+// uz25t code by Babel
+item (FEAT_TRAINS, uz25t, 2132) {}
+
+//Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
+#define id_range_wagons 0x0C00..0x0FFF
+item (FEAT_TRAINS, c64, 3072) {}
+item (FEAT_TRAINS, p62, 3073) {}
+item (FEAT_TRAINS, g60, 3074) {}
+item (FEAT_TRAINS, p60, 3075) {}
+item (FEAT_TRAINS, c62, 3076) {}
+item (FEAT_TRAINS, nx17, 3077) {}
+item (FEAT_TRAINS, n60, 3078) {}
+item (FEAT_TRAINS, c70, 3079) {}
+item (FEAT_TRAINS, p70, 3080) {}
+item (FEAT_TRAINS, gn70, 3081) {}
+item (FEAT_TRAINS, jsq5, 3082) {}
+item (FEAT_TRAINS, jsq6, 3083) {}
+item (FEAT_TRAINS, b6, 3084) {}
+item (FEAT_TRAINS, b22, 3085) {}
+item (FEAT_TRAINS, l70, 3086) {}
+// 3087 coded by wuwu
+item (FEAT_TRAINS, nx70a, 3087) {}
+// 3088 coded by babel
+item (FEAT_TRAINS, g50, 3088) {}
+// 3089 coded by wuwu
+item (FEAT_TRAINS, g17, 3089) {}
+item (FEAT_TRAINS, gn80, 3090) {}
+item (FEAT_TRAINS, p61, 3091) {}
+item (FEAT_TRAINS, p63, 3092) {}
+item (FEAT_TRAINS, pb, 3093) {}
+item (FEAT_TRAINS, j5, 3094) {}
+item (FEAT_TRAINS, n5, 3095) {}
+// 3096 coded by babel
+item (FEAT_TRAINS, p80, 3096) {}
+item (FEAT_TRAINS, p65, 3097) {}
+item (FEAT_TRAINS, p50, 3098) {}
+item (FEAT_TRAINS, p64, 3099) {}
+item (FEAT_TRAINS, p62n, 3100) {}
+item (FEAT_TRAINS, p64a, 3101) {}
+item (FEAT_TRAINS, p66h, 3102) {}
+item (FEAT_TRAINS, w5, 3103) {}
+item (FEAT_TRAINS, w5s, 3104) {}
+item (FEAT_TRAINS, w5sk, 3105) {}
+item (FEAT_TRAINS, w6, 3106) {}
+item (FEAT_TRAINS, w6s, 3107) {}
+item (FEAT_TRAINS, bh1, 3108) {}
+item (FEAT_TRAINS, x2k, 3109) {}
+item (FEAT_TRAINS, jsq1, 3110) {}
+
+//Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
+#define id_range_steam 0x1000..0x13FF
+item (FEAT_TRAINS, sy, 4096) {}
+
+//Diesel, available ID range: 5120-6143 (hex 0x1400..0x17FF)
+#define id_range_diesel 0x1400..0x17FF
+item (FEAT_TRAINS, df4k, 5120) {}
+item (FEAT_TRAINS, df4h, 5121) {}
+item (FEAT_TRAINS, df11g, 5122) {}
+item (FEAT_TRAINS, df4d0000, 5123) {}
+item (FEAT_TRAINS, df4d3000, 5124) {}
+item (FEAT_TRAINS, df4d4000, 5125) {}
+item (FEAT_TRAINS, df11, 5126) {}
+item (FEAT_TRAINS, nj2, 5127) {}
+item (FEAT_TRAINS, df5, 5128) {}
+// 5129-5139 coded by wuwu
+item (FEAT_TRAINS, df4bk, 5129) {}
+item (FEAT_TRAINS, df4bh, 5130) {}
+item (FEAT_TRAINS, df4bk, 5129) {}
+item (FEAT_TRAINS, df4bh, 5130) {}
+item (FEAT_TRAINS, df7g, 5131) {}
+item (FEAT_TRAINS, df7g8000, 5132) {}
+item (FEAT_TRAINS, dfh7, 5133) {}
+item (FEAT_TRAINS, dfh7b, 5134) {}
+item (FEAT_TRAINS, df7g5000, 5135) {}
+item (FEAT_TRAINS, hxn5b, 5136) {}
+item (FEAT_TRAINS, df4c, 5137) {}
+item (FEAT_TRAINS, df4d7000, 5138) {}
+item (FEAT_TRAINS, df8b, 5139) {}
+item (FEAT_TRAINS, df4df, 5140) {}
+// 5141 DF code by Babel
+item (FEAT_TRAINS, df, 5141) {}
+// 5142-5147 code by wuwu
+item (FEAT_TRAINS, df11z, 5142) {}
+item (FEAT_TRAINS, df5kz, 5143) {}
+item (FEAT_TRAINS, df4e, 5144) {}
+//5145 Delet
+item (FEAT_TRAINS, nd5, 5146) {}
+item (FEAT_TRAINS, hxn5, 5147) {}
+item (FEAT_TRAINS, hxn3, 5148) {}
+item (FEAT_TRAINS, hxn3qz, 5149) {}
+item (FEAT_TRAINS, dfh3, 5150) {}
+
+//25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
+#define id_range_25_electric 0x1800..0x1BFF
+item (FEAT_TRAINS, hxd3c, 6144) {}
+item (FEAT_TRAINS, hxd3d, 6145) {}
+item (FEAT_TRAINS, hxd1b, 6146) {}
+item (FEAT_TRAINS, ss3, 6147) {}
+item (FEAT_TRAINS, ss8, 6148) {}
+item (FEAT_TRAINS, hxd1, 6149) {}
+item (FEAT_TRAINS, ss4, 6150) {}
+// 6151-6158 coded by wuwu
+item (FEAT_TRAINS, ss4g, 6151) {}
+item (FEAT_TRAINS, ss5, 6152) {}
+item (FEAT_TRAINS, ss6, 6153) {}
+item (FEAT_TRAINS, ss7, 6154) {}
+item (FEAT_TRAINS, ss7b, 6155) {}
+item (FEAT_TRAINS, ss7c, 6156) {}
+item (FEAT_TRAINS, ss7e, 6157) {}
+item (FEAT_TRAINS, ss3b, 6158) {}
+// 6159-6160 coded by Babel
+item (FEAT_TRAINS, hxd1d, 6159) {}
+item (FEAT_TRAINS, _6y2, 6160) {}
+// 6161-6166 coded by wuwu
+item (FEAT_TRAINS, hxd11000, 6161) {}
+item (FEAT_TRAINS, hxd1f, 6162) {}
+item (FEAT_TRAINS, ss1, 6163) {}
+item (FEAT_TRAINS, ss7d, 6164) {}
+item (FEAT_TRAINS, ss9, 6165) {}
+item (FEAT_TRAINS, ss9g, 6166) {}
+item (FEAT_TRAINS, ss4b, 6167) {}
+item (FEAT_TRAINS, ss4c, 6168) {}
+// 6169-6170 coded by Babel
+item (FEAT_TRAINS, hxd2, 6169) {}
+item (FEAT_TRAINS, hxd21000, 6170) {}
+
+
+//Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
+#define id_range_multi_loco 0x1C00..0x1FFF
+item (FEAT_TRAINS, cha1c, 7168) {}
+
+
+//DMU, available ID range: 8192-9215 (hex 0x2000..0x23FF)
+#define id_range_dmu 0x2000..0x23FF
+item (FEAT_TRAINS, ndj3, 8192) {}
+item (FEAT_TRAINS, nzj2_jinlun_1, 8193) {}
+item (FEAT_TRAINS, nzj2_jinlun_2, 8194) {}
+item (FEAT_TRAINS, nzj1_xinshuguang, 8195) {}
+item (FEAT_TRAINS, nc3, 8196) {}
+
+//25kV AC EMU, available ID range: 9216-10239 (hex 0x2400..0x27FF)
+#define id_range_25_emu 0x2000..0x23FF
+item (FEAT_TRAINS, cr200ja, 9216) {}
+item (FEAT_TRAINS, crh5a, 9217) {}
+item (FEAT_TRAINS, cr400bf, 9218) {}
+item (FEAT_TRAINS, cr200jal, 9219) {}
+item (FEAT_TRAINS, crh2a, 9220) {}
+item (FEAT_TRAINS, crh2c, 9221) {}
+item (FEAT_TRAINS, crh3a, 9222) {}
+item (FEAT_TRAINS, cr200jb, 9223) {}
+item (FEAT_TRAINS, djj1, 9224) {}
+item (FEAT_TRAINS, crh1a, 9225) {}
+item (FEAT_TRAINS, crh3c, 9226) {}
+item (FEAT_TRAINS, crh380b, 9227) {}
+item (FEAT_TRAINS, crh6a2, 9228) {}
+item (FEAT_TRAINS, crh6a3, 9229) {}
+item (FEAT_TRAINS, crh6aa, 9230) {}
+item (FEAT_TRAINS, crh6f, 9231) {}
+item (FEAT_TRAINS, crh1e, 9232) {}
+item (FEAT_TRAINS, crh2g, 9233) {}
+item (FEAT_TRAINS, crh380cl, 9234) {}
+item (FEAT_TRAINS, cr400af, 9235) {}
+item (FEAT_TRAINS, crh380a, 9236) {}
+item (FEAT_TRAINS, cr200jc, 9237) {}
+item (FEAT_TRAINS, crh380al, 9238) {}
+item (FEAT_TRAINS, cr200jcl, 9239) {}
+item (FEAT_TRAINS, cr300bf, 9240) {}
+item (FEAT_TRAINS, crh380d, 9241) {}
+item (FEAT_TRAINS, crh2b, 9242) {}
+item (FEAT_TRAINS, crh2e, 9243) {}
+item (FEAT_TRAINS, crh2els, 9244) {}
+item (FEAT_TRAINS, cr400afab, 9245) {}
+item (FEAT_TRAINS, cr400bfab, 9246) {}
+item (FEAT_TRAINS, cr400afz, 9247) {}
+item (FEAT_TRAINS, cr400afabz, 9248) {}
+item (FEAT_TRAINS, cr300af, 9249) {}
+item (FEAT_TRAINS, crh1b, 9250) {}
+item (FEAT_TRAINS, crh1aa, 9251) {}
+item (FEAT_TRAINS, cr400bfz, 9252) {}
+item (FEAT_TRAINS, cr400bfc, 9253) {}
+item (FEAT_TRAINS, cr400bfabz, 9254) {}
+item (FEAT_TRAINS, djf3, 9255) {}
+item (FEAT_TRAINS, djj2, 9256) {}
+
+//1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
+#define id_range_1500_emu 0x2800..0x2BFF
+
+
+//750V DC EMU, available ID range: 11264-12287 (hex 0x2C00..0x2FFF)
+#define id_range_750_emu 0x2C00..0x2BFF
+//Maybe can use for MTR?--Babel
+
+//Third Rail EMU, available ID range: 11288-13311 (hex 0x3000..0x33FF)
+#define id_range_third_emu 0x3000..0x33FF
+
+
+//Multi Power MU, available ID range: 13312-14335 (hex 0x3400..0x37FF)
+#define id_range_multi_mu 0x3400..0x37FF
+
+
+//Monorail MU, available ID range: 14336-14847 (hex 0x3800..0x39FF)
+#define id_range_mono_mu 0x3800..0x3BFF
+
+
+//Maglev MU, availabel ID range: 14848-15359 (hex 0x3A00..0x3BFF)
+#define id_range_mglv_mu 0x3A00..0x3BFF
+
+
+//Cargo DMU, available ID range: 15340-15615 (hex 0x3C00..0x3CFF)
+#define id_range_cargo_dmu 0x3C00..0x3CFF
+
+
+//25kV AC Cargo EMU, available ID range: 15616-16127 (hex 0x3D00..0x3EFF)
+#define id_range_25_cargo_emu 0x3D00..0x3EFF
+
+
+//Multi Power Cargo MU, available range: 16128..16383 (hex 0x3F00..0x3FFF)
+#define id_range_multi_cargo_mu 0x3F00..0x3FFF
+
