@@ -44,7 +44,8 @@ item (FEAT_TRAINS, ss4b) {
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(1995,01,01);
-        model_life:                     VEHICLE_NEVER_EXPIRES;
+        model_life:                     60;
+        retire_early:                   30;
         vehicle_life:                   30;
         track_type:                     SACA;
 

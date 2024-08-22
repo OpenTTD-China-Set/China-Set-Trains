@@ -47,6 +47,7 @@ item (FEAT_TRAINS, zymuw) {
         cost_factor:                    24;
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            6;                      //depending on the mu
+        curve_speed_mod:                0.2;
     }
     graphics {
         // Menu
