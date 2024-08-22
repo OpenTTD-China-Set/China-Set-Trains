@@ -389,12 +389,12 @@ STR_FULL_NAME_HXD11000,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1 Electric Locomotiv
 STR_FULL_NAME_HXD1B,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1B Electric Locomotive,{BLACK}全称：{GOLD}和谐1B型电力机车
 STR_FULL_NAME_HXD1D,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1D Electric Locomotive,{BLACK}全称：{GOLD}和谐1D型电力机车
 STR_FULL_NAME_FXD1B,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 1B Electric Locomotive,{BLACK}全称：{GOLD}复兴1B型电力机车
-STR_FULL_NAME_FXD1B1000,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 1B Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}和谐1型电力机车1000系
+STR_FULL_NAME_FXD1B1000,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 1B Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}复兴1B型电力机车1000系
 STR_FULL_NAME_HXD2,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2 Electric Locomotive,{BLACK}全称：{GOLD}和谐2型电力机车
 STR_FULL_NAME_HXD21000,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2 Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}和谐2型电力机车1000系
 STR_FULL_NAME_HXD2B,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2B Electric Locomotive,{BLACK}全称：{GOLD}和谐2B型电力机车
 STR_FULL_NAME_FXD2B,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 2B Electric Locomotive,{BLACK}全称：{GOLD}复兴2B型电力机车
-STR_FULL_NAME_FXD2B1000,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 2B Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}和谐2型电力机车1000系
+STR_FULL_NAME_FXD2B1000,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 2B Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}复兴2B型电力机车1000系
 STR_FULL_NAME_HXD3,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3 Electric Locomotive,{BLACK}全称：{GOLD}和谐3型电力机车
 STR_FULL_NAME_HXD3C,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3C Electric Locomotive,{BLACK}全称：{GOLD}和谐3C型电力机车
 STR_FULL_NAME_HXD3D,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3D Electric Locomotive,{BLACK}全称：{GOLD}和谐3D型电力机车
@@ -602,7 +602,7 @@ STR_ALIASNAME_DF,"{BLACK}Alias Name: {GOLD}Great Loong, ND",{BLACK}曾用名：{
 STR_ALIASNAME_SS1,{BLACK}Alias Name: {GOLD}6Y1,{BLACK}曾用名：{GOLD}6Y1
 STR_ALIASNAME_HXD3,{BLACK}Alias Name: {GOLD}DJ3,{BLACK}曾用名：{GOLD}DJ3
 STR_ALIASNAME_FXD1B,{BLACK}Alias Name: {GOLD}HXD1F (Hexie/Harmony 1F Electric Locomotive),{BLACK}曾用名：{GOLD}HXD1F(和谐1F型电力机车)
-STR_ALIASNAME_FXD2B,{BLACK}Alias Name: {GOLD}HXD1F (Hexie/Harmony 2F Electric Locomotive),{BLACK}曾用名：{GOLD}HXD1F(和谐2F型电力机车)
+STR_ALIASNAME_FXD2B,{BLACK}Alias Name: {GOLD}HXD2F (Hexie/Harmony 2F Electric Locomotive),{BLACK}曾用名：{GOLD}HXD2F(和谐2F型电力机车)
 STR_ALIASNAME_CJ,{BLACK}Alias Name: {GOLD}CRH3A {BLACK}(Inter-City Version),{BLACK}曾用名：{GOLD}CRH3A {BLACK}(城际版)
 # Reliability,,
 STR_RELDEC_VERY_HIGH,{BLACK}Reliability decay speed: {RED}Very high ({COMMA}),{BLACK}可靠性下降速度：{RED}极高（{COMMA}）
