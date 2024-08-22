@@ -123,14 +123,23 @@ STR_NAME_P50                                     :P50 (Boxcar)
 STR_NAME_P60                                     :P60 (Boxcar)
 STR_NAME_P61                                     :P61 (Boxcar)
 STR_NAME_P62                                     :P62 (Boxcar)
+STR_NAME_P62N                                    :P62N (Boxcar)
 STR_NAME_P63                                     :P63 (Boxcar)
 STR_NAME_P64                                     :P64 (Boxcar)
+STR_NAME_P64A                                    :P64A (Boxcar)
 STR_NAME_P65                                     :P65 (Boxcar)
+STR_NAME_P66H                                    :P66H (Boxcar)
 STR_NAME_P70                                     :P70 (Boxcar)
 STR_NAME_P80                                     :P80 (Boxcar)
 STR_NAME_PB                                      :PB (Boxcar)
+STR_NAME_W5                                      :W5 (Boxcar for Toxic Good)
+STR_NAME_W5S                                     :W5S (Boxcar for Toxic Good)
+STR_NAME_W5SK                                    :W5SK (Boxcar for Toxic Good)
+STR_NAME_W6                                      :W5 (Boxcar for Toxic Good)
+STR_NAME_W6S                                     :W5 (Boxcar for Toxic Good)
 STR_NAME_B6                                      :B6 (Refrigerator Wagon)
 STR_NAME_B22                                     :B22 (Refrigerator Wagon)
+STR_NAME_BH1                                     :BH1 (Refrigerator Wagon)
 STR_NAME_G17                                     :G17 (Tanker)
 STR_NAME_G50                                     :G50 (Tanker)
 STR_NAME_G60                                     :G60 (Tanker)
@@ -140,6 +149,8 @@ STR_NAME_N5                                      :N5 (Flatcar)
 STR_NAME_N60                                     :N60 (Flatcar)
 STR_NAME_NX17                                    :NX17 (Flatcar)
 STR_NAME_NX70A                                   :NX70A (Flatcar)
+STR_NAME_X2K                                     :X2K (Flatcar for Containers)
+STR_NAME_JSQ1                                    :JSQ1 (Vehicle Transporter)
 STR_NAME_JSQ5                                    :JSQ5 (Vehicle Transporter)
 STR_NAME_JSQ6                                    :JSQ6 (Vehicle Transporter)
 STR_NAME_L70                                     :L70 (Hopper)
@@ -162,11 +173,12 @@ STR_NAME_DF5                                     :DF5-1000 (Diesel Shunter)
 STR_NAME_DF7G                                    :DF7G (Diesel Shunter)
 STR_NAME_DF7G5000                                :DF7G-5000 (Diesel Shunter)
 STR_NAME_DF7G8000                                :DF7G-8000 (Diesel Shunter)
-STR_NAME_DFH7                                    :DFH7 (Diesel)
 STR_NAME_DF8B                                    :DF8B (Diesel)
 STR_NAME_DF11                                    :DF11 (Diesel)
 STR_NAME_DF11G                                   :DF11G (Diesel)
 STR_NAME_DF11Z                                   :DF11Z (Diesel)
+STR_NAME_DFH3                                    :DFH3 (Diesel)
+STR_NAME_DFH7                                    :DFH7 (Diesel)
 STR_NAME_ND5                                     :ND5 (Diesel)
 STR_NAME_NJ2                                     :NJ2 (Diesel)
 STR_NAME_HXN3                                    :HXN3 (Diesel)
@@ -350,19 +362,20 @@ STR_FULL_NAME_DF5                                :{BLACK}FULLNAME: {GOLD}Dongfen
 STR_FULL_NAME_DF7G                               :{BLACK}FULLNAME: {GOLD}Dongfeng 7G Diesel Locomotive
 STR_FULL_NAME_DF7G5000                           :{BLACK}FULLNAME: {GOLD}Dongfeng 7G Diesel Locomotive 5000 Series
 STR_FULL_NAME_DF7G8000                           :{BLACK}FULLNAME: {GOLD}Dongfeng 7G Diesel Locomotive 8000 Series
-STR_FULL_NAME_DFH7                               :{BLACK}FULLNAME: {GOLD}Dongfanghong 7 Diesel Locomotive
 STR_FULL_NAME_DF8B                               :{BLACK}FULLNAME: {GOLD}Dongfeng 8B Diesel Locomotive
 STR_FULL_NAME_DF11                               :{BLACK}FULLNAME: {GOLD}Dongfeng 11 Diesel Locomotive
 STR_FULL_NAME_DF11G                              :{BLACK}FULLNAME: {BLUE}Dongfeng 11G {WHITE}Diesel Locomotive
 STR_FULL_NAME_DF11Z                              :{BLACK}FULLNAME: {GOLD}Dongfeng 11Z Diesel Locomotive
+STR_FULL_NAME_DFH3                               :{BLACK}FULLNAME: {GOLD}Dongfanghong 3 Diesel Locomotive{}{BLACK}Livery Availability: Ordinary {BLUE}Blue {BLACK}Livery, {RED}Red {BLACK}Livery, {BROWN}"Gongqingtuan" {BLACK}Livery ,Liaodong Peninsula Livery
+STR_FULL_NAME_DFH7                               :{BLACK}FULLNAME: {GOLD}Dongfanghong 7 Diesel Locomotive
 STR_FULL_NAME_ND5                                :{BLACK}FULLNAME: {GOLD}Neidian 5 Diesel Locomotive
 STR_FULL_NAME_HXN3                               :{BLACK}FULLNAME: {GOLD}Hexie 3 Diesel Locomotive
 STR_FULL_NAME_HXN5                               :{BLACK}FULLNAME: {GOLD}Hexie 5 Diesel Locomotive
 STR_FULL_NAME_HXN5B                              :{BLACK}FULLNAME: {GOLD}Hexie 5B Diesel Locomotive
 STR_FULL_NAME_SS1                                :{BLACK}FULLNAME: {GOLD}Shaoshan 1 Electric Locomotive
-STR_FULL_NAME_SS3                                :{BLACK}FULLNAME: {GOLD}Shaoshan 3 Electric Locomotive
+STR_FULL_NAME_SS3                                :{BLACK}FULLNAME: {GOLD}Shaoshan 3 Electric Locomotive{}{BLACK}Livery Availability: Ordinary {BLACK}Livery, {DKGREEN}Grassgreen {BLACK}Livery, {BLUE}Blue {BLACK}Livery, {RED}Red {BLACK}Livery and Fuzhou Livery
 STR_FULL_NAME_SS3B                               :{BLACK}FULLNAME: {GOLD}Shaoshan 3B Electric Locomotive
-STR_FULL_NAME_SS4                                :{BLACK}FULLNAME: {GOLD}Shaoshan 4 Electric Locomotive
+STR_FULL_NAME_SS4                                :{BLACK}FULLNAME: {GOLD}Shaoshan 4 Electric Locomotive{}{BLACK}Livery Availability: Ordinary {BLUE}Blue {BLACK}Livery, {WHITE}White {BLACK}Livery, {WHITE}White {BLACK}Livery with {BLUE}Blue {BLACK}Roof, Factory Livery
 STR_FULL_NAME_SS4B                               :{BLACK}FULLNAME: {GOLD}Shaoshan 4B Electric Locomotive
 STR_FULL_NAME_SS4C                               :{BLACK}FULLNAME: {GOLD}Shaoshan 4C Electric Locomotive
 STR_FULL_NAME_SS4G                               :{BLACK}FULLNAME: {GOLD}Shaoshan 4G Electric Locomotive
@@ -518,6 +531,9 @@ STR_N5_LIVERY_AVAILABILITY                       :{BLACK}Livery Availability: {G
 STR_N60_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GOLD}Random (unfinished)
 STR_NX17_LIVERY_AVAILABILITY                     :{BLACK}Livery Availability: {GOLD}Random (Black, Brown)
 STR_NX70A_LIVERY_AVAILABILITY                    :{BLACK}Livery Availability: {GOLD}Black Livery Only
+STR_X2K_LIVERY_AVAILABILITY                      :{BLACK}Livery Availability: {GOLD}Random Containers
+STR_JSQ1_LIVERY_AVAILABILITY                     :{BLACK}Livery Availability: {GOLD}Random (Red, Blue)
+STR_W_BOXCAR_LIVERY_AVAILABILITY                 :{BLACK}Livery Availability: {GOLD}Yellow Livery with Yellow or White Roof
 # Nickname
 STR_DF_NICKNAME                                  :{BLACK}Nickname: {GOLD}Old DongFeng
 STR_DF4_NICKNAME                                 :{BLACK}Nickname: {GOLD}"Watermelon" for {GREEN}Green {GOLD}Livery, "Orange" for {ORANGE}Orange {GOLD}Livery
@@ -632,6 +648,7 @@ STR_CHN2LAOS                                     : - {GOLD}China-Laos Railway Li
 STR_WUJING                                       : - {GOLD}"Armed Police"Livery
 STR_DFH7                                         : - DFH7  
 STR_DFH7B                                        : - DFH7B 
+STR_GONGQINGTUAN                                 : - "Gongqingtuan" Livery
 STR_RANDOM_COLOR                                 : - Ramdom Color
 STR_BUILD_YEAR                                   : - According to build year
 STR_YW22_ORIGINAL                                : - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240

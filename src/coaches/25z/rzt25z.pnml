@@ -13,8 +13,11 @@ spriteset (spriteset_rzt25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP
 }
 
 // Vehicle
-spriteset (spriteset_rzt25z_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_rzt25z_xizi, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches","rzt25z")
+}
+spriteset (spriteset_rzt25z_xizi_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches","rzt25z-green")
 }
 
 switch (FEAT_TRAINS, SELF, switch_rzt25z_articulated_part, extra_callback_info1) {
@@ -22,9 +25,25 @@ switch (FEAT_TRAINS, SELF, switch_rzt25z_articulated_part, extra_callback_info1)
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+switch (FEAT_TRAINS, SELF, switch_rzt25z_xizi_graphics_subtype_year_depend, build_year) {
+     0..2014: spriteset_rzt25z_xizi;
+    spriteset_rzt25z_xizi_green;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rzt25z_graphics_subtype, cargo_subtype) {
+    0: spriteset_rzt25z_xizi;
+    1: switch_rzt25z_xizi_graphics_subtype_year_depend;
+}
+
 switch (FEAT_TRAINS, SELF, switch_rzt25z_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_rzt25z_original;
+    1: switch_rzt25z_graphics_subtype;
     empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rzt25z_cargo_subtype, cargo_subtype) {
+    0: return string(STR_XIZI);
+    1: return string(STR_XIZI_BUILD_YEAR);
+    return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rzt25z_capacity, position_in_articulated_veh % 3) {
@@ -73,6 +92,7 @@ item (FEAT_TRAINS, rzt25z) {
         // Menu
         additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RZT25Z), string(STR_25Z_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 320));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_rzt25z_cargo_subtype;
         // Graphics
         default:                        switch_rzt25z_graphics;
         purchase:                       spriteset_rzt25z_purchase_original;
