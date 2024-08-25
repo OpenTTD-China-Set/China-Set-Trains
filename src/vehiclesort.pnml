@@ -30,6 +30,14 @@ sort (FEAT_TRAINS, [
     hxn3qz,
     hxn5,
     hxn5b,
+/*     hxn5k, */
+/*     hxn6, */
+/*     fxn3, */
+/*     fxn3b, */
+/*     fxn3c, */
+/*     fxn3d, */
+/*     fxn3h, */
+/*     fxn5c, */
     _6y2,
     ss1,
     ss3,
@@ -52,18 +60,28 @@ sort (FEAT_TRAINS, [
     hxd1,
     hxd11000,
     hxd1b,
+/*     hxd1c, */
     hxd1d,
     hxd2,
     hxd21000,
+    hxd2b,
+/*     hxd2c, */
+/*     hxd2d, */
+    hxd3,
+/*     hxd3b, */
     hxd3c,
     hxd3d,
     hxd1f,
+    fxd1b1000,
+/*     fxd2b, */
+    fxd2b1000,
     cha1c,
     nc3,
     nzj1_xinshuguang,
     nzj2_jinlun_1,
     nzj2_jinlun_2,
     ndj3,
+    x2000,
     djj1,
     djj2,
     djf3,
@@ -77,6 +95,7 @@ sort (FEAT_TRAINS, [
     crh2e,
     crh2g,
     crh2els,
+    cj1,
     crh3a,
     crh3c,
     crh5a,
@@ -87,6 +106,7 @@ sort (FEAT_TRAINS, [
     crh380a,
     crh380al,
     crh380b,
+    crh380bl,
     crh380cl,
     crh380d,
     cr200ja,

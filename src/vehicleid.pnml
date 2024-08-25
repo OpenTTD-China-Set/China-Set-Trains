@@ -256,10 +256,14 @@ item (FEAT_TRAINS, ss9, 6165) {}
 item (FEAT_TRAINS, ss9g, 6166) {}
 item (FEAT_TRAINS, ss4b, 6167) {}
 item (FEAT_TRAINS, ss4c, 6168) {}
-// 6169-6170 coded by Babel
+// 6169-6175 coded by Babel
 item (FEAT_TRAINS, hxd2, 6169) {}
 item (FEAT_TRAINS, hxd21000, 6170) {}
-
+item (FEAT_TRAINS, fxd1b1000, 6171) {}
+item (FEAT_TRAINS, hxd3, 6172) {}
+item (FEAT_TRAINS, hxd2b, 6173) {}
+item (FEAT_TRAINS, fxd2b, 6174) {}
+item (FEAT_TRAINS, fxd2b1000, 6175) {}
 
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
 #define id_range_multi_loco 0x1C00..0x1FFF
@@ -317,6 +321,9 @@ item (FEAT_TRAINS, cr400bfc, 9253) {}
 item (FEAT_TRAINS, cr400bfabz, 9254) {}
 item (FEAT_TRAINS, djf3, 9255) {}
 item (FEAT_TRAINS, djj2, 9256) {}
+item (FEAT_TRAINS, crh380bl, 9257) {}
+item (FEAT_TRAINS, cj1, 9258) {}
+item (FEAT_TRAINS, x2000, 9259) {}
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
 #define id_range_1500_emu 0x2800..0x2BFF
