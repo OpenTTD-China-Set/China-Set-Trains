@@ -108,107 +108,118 @@ switch (FEAT_TRAINS, SELF, airconditioner, vehicle_is_powered) {
     return 0;
 }
 
+// Only allow/disallow attaching wagons from China Set: Trains
+switch (FEAT_TRAINS, SELF, onlyallowcst, grfid) {
+    0x5F5F0300: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, onlydisallowcst, grfid) {
+    0x5F5F0300: return CB_RESULT_ATTACH_DISALLOW;
+    return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+}
+
 switch (FEAT_TRAINS, SELF, crhwagon, vehicle_type_id) {
-    1024..1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024..1035: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, crhwagonxl, vehicle_type_id) {
-    1024..1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1051: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024..1035: return onlyallowcst;
+    1051: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, crhwagonsleeper, vehicle_type_id) {
-    1024..1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1038..1040: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024..1035: return onlyallowcst;
+    1038..1040: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, crhsleeperonly, vehicle_type_id) {
-    1024: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1037: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1039: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024: return onlyallowcst;
+    1035: return onlyallowcst;
+    1037: return onlyallowcst;
+    1039: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, crh_wagons_longitudinal_sleeper, vehicle_type_id) {
-    1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1037: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1035: return onlyallowcst;
+    1037: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, crhwagonsleeperxl, vehicle_type_id) {
-    1024..1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1038..1040: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1051: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024..1035: return onlyallowcst;
+    1038..1040: return onlyallowcst;
+    1051: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, earlymuwagon, vehicle_type_id) {
-    1041..1050: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1041..1050: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, earlymuwagonxl, vehicle_type_id) {
-    1041..1051: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1041..1051: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, cr200jwagon, vehicle_type_id) {
-    1024..1037: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1039: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024..1037: return onlyallowcst;
+    1039: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, cr200jwagonxl, vehicle_type_id) {
-    1024..1037: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1039: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1051: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024..1037: return onlyallowcst;
+    1039: return onlyallowcst;
+    1051: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, muhead, vehicle_type_id) {
-    1024..1051: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    8192..14335: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024..1051: return onlyallowcst;
+    8192..14335: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, singlemu, vehicle_type_id) {
-    1024..1051: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024..1051: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, onlyzezyzec, vehicle_type_id) {
-    1024..1025: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024..1025: return onlyallowcst;
+    1035: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, onlyzezy, vehicle_type_id) {
-    1024..1025: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024..1025: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, onlyze, vehicle_type_id) {
-    1024: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, onlyzy, vehicle_type_id) {
-    1025: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1025: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, onlycrh6aa, vehicle_type_id) {
-    9230: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    9230: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
 switch (FEAT_TRAINS, SELF, locowagon, vehicle_type_id) {
-    1024..1051: return CB_RESULT_ATTACH_DISALLOW;
-    8192..14335: return CB_RESULT_ATTACH_DISALLOW;
+    1024..1051: onlydisallowcst;
+    8192..14335: onlydisallowcst;
     return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
 }
 
