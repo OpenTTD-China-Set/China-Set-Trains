@@ -348,3 +348,7 @@ item (FEAT_TRAINS, x2000, 9259) {}
 //Multi Power Cargo MU, available range: 16128..16383 (hex 0x3F00..0x3FFF)
 #define id_range_multi_cargo_mu 0x3F00..0x3FFF
 
+
+
+//MTR id range Strart
+
