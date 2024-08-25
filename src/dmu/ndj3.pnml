@@ -27,9 +27,9 @@ switch (FEAT_TRAINS, SELF, switch_ndj3_articulated_part, extra_callback_info1) {
 }
 
 switch (FEAT_TRAINS, SELF, ndj3wagon, vehicle_type_id) {
-    1024..1025: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1035: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    8192: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024..1025: return onlyallowcst;
+    1035: return onlyallowcst;
+    8192: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 

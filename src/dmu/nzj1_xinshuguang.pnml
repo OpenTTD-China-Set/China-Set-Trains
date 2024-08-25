@@ -24,8 +24,8 @@ switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_articulated_part, extra_callb
 }
 
 switch (FEAT_TRAINS, SELF, nzj1_xinshuguang_wagon_right_consist, vehicle_type_id) {
-    1024..1025: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    8195: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024..1025: return onlyallowcst;
+    8195: return onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 

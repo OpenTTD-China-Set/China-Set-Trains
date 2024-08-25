@@ -1,6 +1,6 @@
 //Begin JSQ6
 switch (FEAT_TRAINS, SELF, switch_jsq6_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_VIHICLE_TRANSPORTER);
+    0: return string(STR_VEHICLE_TRANSPORTER);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -46,7 +46,7 @@ item (FEAT_TRAINS, jsq6) {
         name:                           string(STR_NAME_JSQ6);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					3082;
+        variant_group:					3110;
 
         // Availability
         climates_available:             ALL_CLIMATES;
