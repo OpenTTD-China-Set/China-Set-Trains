@@ -34,7 +34,8 @@ switch (FEAT_TRAINS, SELF, switch_w5sk_graphics, position_in_articulated_veh % 3
 }
 
 switch (FEAT_TRAINS, SELF, switch_w5sk_capacity, position_in_articulated_veh % 3) {
-    return 50;
+    1: return 50;
+    return 0;
 }
 
 

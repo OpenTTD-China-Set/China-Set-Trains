@@ -17,11 +17,12 @@ SHELL := /bin/bash
 FILE_NAME	  ?= mynewgrf
 VOX_DIR 	  ?= gfx
 DOC_FILES	  ?= docs/changelog.txt docs/readme.txt docs/license.txt
-CUSTOM_TAGS   ?= custom_tags.txt
+LNG_SCRIPTS   ?= str-csv.py
 PALETTE 	  ?= ttd_palette.json
 
 GORENDER 	?= renderobject -overwrite
 NMLC 		?= nmlc -c
+PYTHON      ?= python
 GCC 		:= gcc
 MANIFEST 	:= manifest.json
 
@@ -53,6 +54,8 @@ CODE_FILES 	   ?= $(INDEX_FILE)
 CUSTOM_TAGS	   ?= custom_tags.txt
 TEMP_DIR	   ?= temp
 
+lng_files: $(LNG_SCRIPTS)
+	$(PYTHON) $<
 
 $(CUSTOM_TAGS): ./Makefile.dist
 	$(GCC) -E -x c -o $@ $<
@@ -61,7 +64,7 @@ $(CUSTOM_TAGS): ./Makefile.dist
 $(NML_FILE): $(CUSTOM_TAGS) $(CODE_FILES) $(VOX_GENREATED_FILES)
 	$(GCC) -E -x c -D REPO_REVISION=$(REPO_REVISION) -D VERSION_STRING=$(REPO_VERSION_STRING) -o $@ $(INDEX_FILE)
 
-$(GRF_FILE): $(NML_FILE) $(CUSTOM_TAGS)
+$(GRF_FILE): $(NML_FILE) $(CUSTOM_TAGS) lng_files
 	$(NMLC) $<
 	if [ ! -d $(TEMP_DIR) ]; then mkdir $(TEMP_DIR); fi
 	mv -f $(NML_FILE) $(TEMP_DIR)/$(NML_FILE)
