@@ -8,11 +8,11 @@ with open('docs/str.csv', mode='r', newline='', encoding='utf-8-sig') as f:
     reader = csv.reader(f)
     for row in reader:
         strs.append(row)
-        print(row)
+        """ print(row) """
 
 
 if not os.path.exists("lang/"):
-        os.makedirs("lang/") 
+        os.makedirs("lang/")
 with open("lang/english.lng", 'w', encoding='utf-8') as f:
     f.write("##grflangid 0x01"+"\n")
     for i in range(len(strs)):
@@ -32,5 +32,5 @@ def other_lang_generate(lang_name, lang_row, lang_code):
                     pass
             else:
                 f.write(f"{strs[i][0]:48} {":"+strs[i][2]:<10}\n")
-   
+
 other_lang_generate("simplified_chinese", 2, "0x56")

@@ -36,8 +36,8 @@ spriteset (spriteset_cr200jc_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_
 }
 
 switch (FEAT_TRAINS, SELF, cr200jcwagon, vehicle_type_id) {
-    1024..1035: return onlyallowcst;
-    9237: return onlyallowcst;
+    1024..1035: onlyallowcst;
+    9237: onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
