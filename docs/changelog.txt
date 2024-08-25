@@ -9,6 +9,7 @@ China Set: Trains Changelog
 --------------------
 Add: X2000, HXD2B, HXD3, FXD1B-1000, FXD2B-1000, DFH3, P64, BH1, JSQ1, X2K, W5, W5S, W5SK, W6, W6S, P62N, P64A, P66H
 Add Livery: 25Z series
+Add the GRF-ID check for wagon attachment
 Renewal the sprites of DF11Z, HXD2, HXD2-1000, CRH3A, CRH3C
 Completed the CRH3 Sries:
     - Refurbish and renewal the sprites of CRH3A, CRH3C, CRH380B, CRH380CL

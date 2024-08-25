@@ -462,7 +462,7 @@ STR_FLATCAR,Flatcar,平车
 STR_TANKER,Tanker,罐车
 STR_GONDOLA,Gondola,敞车
 STR_REFRIGERATOR_WAGON,Refrigerator Wagon,保温车
-STR_VIHICLE_TRANSPORTER,Vihicle Transporter,汽车运输车
+STR_VEHICLE_TRANSPORTER,Vehicle Transporter,汽车运输车
 # Import Regien,,
 STR_US_IMPORT,Imported from United States,美国进口车型
 STR_FR_IMPORT,Imported from France,法国进口车型
