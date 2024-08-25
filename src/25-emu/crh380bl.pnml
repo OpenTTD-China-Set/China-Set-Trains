@@ -88,7 +88,7 @@ switch (FEAT_TRAINS, SELF, switch_crh380bl_cab_capacity, position_in_articulated
 
 
 switch (FEAT_TRAINS, SELF, switch_crh380bl_wagon_capacity, position_in_consist_from_end) {
-    0..2: switch_crh380b_cab_capacity;
+    0..2: switch_crh380bl_cab_capacity;
     switch_crh380b_middle_capacity;
 }
 

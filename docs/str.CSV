@@ -666,10 +666,10 @@ STR_SHENHUA, - {GOLD}Shenhua Groups Livery, - {GOLD}神华集团涂装
 STR_GUONENG, - {GOLD}CHN Energy Livery, - {GOLD}国家能源集团涂装
 STR_CHN2LAOS, - {GOLD}China-Laos Railway Livery, - {GOLD}中老铁路涂装
 STR_WUJING," - {GOLD}""Armed Police""Livery", - {GOLD}“武警”涂装
-STR_DFH7, - DFH7
-STR_DFH7B, - DFH7B
-STR_HXD_F, - HXD{COMMA}F
-STR_FXD_B, - FXD{COMMA}B
+STR_DFH7, - DFH7,
+STR_DFH7B, - DFH7B,
+STR_HXD_F, - HXD{COMMA}F,
+STR_FXD_B, - FXD{COMMA}B,
 STR_GONGQINGTUAN," - ""Gongqingtuan"" Livery", - 共青团号涂装
 STR_RANDOM_COLOR, - Ramdom Color, - 随机颜色
 STR_BUILD_YEAR, - According to build year, - 根据建造年份选择设计
