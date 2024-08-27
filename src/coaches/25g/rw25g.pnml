@@ -7,25 +7,53 @@ switch (FEAT_TRAINS, SELF, switch_rw25g_name, getbits(extra_callback_info1, 0, 8
 
 // Graphics
 
-// // Purchase Menu
-// spriteset (spriteset_rw25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-//     template_purchase ("coaches", "25g")
-// }
+// Purchase Menu
+spriteset (spriteset_rw25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches/25g", "rw25g")
+}
 
-// // Vehicle
-// spriteset (spriteset_rw25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-//     template_12_standard ("coaches", "25g")
-// }
+// Vehicle
+spriteset (spriteset_rw25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "rw25g")
+}
+spriteset (spriteset_rw25g_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "rw25g-jinwen-1")
+}
 
 switch (FEAT_TRAINS, SELF, switch_rw25g_articulated_part, extra_callback_info1) {
     1..2: return rw25g;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-// switch (FEAT_TRAINS, SELF, switch_rw25g_graphics, position_in_articulated_veh % 3) {
-//     0: spriteset_rw25g_original;
-//     empty_sprites;
-// }
+switch (FEAT_TRAINS, SELF, switch_rw25g_cargo_subtype, cargo_subtype) {
+    0: return string(STR_BUILD_YEAR);
+    1: return string(STR_ORIGINAL);
+/*     2: return string(STR_GAOZU_GREEN); */
+    2: return string(STR_JINWEN);
+/*     4: return string(STR_JINWEN_GREEN); */
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25g_graphics_subtype_year_depend, build_year) {
+    0..2014: spriteset_rw25g_original; // Unfinished
+    spriteset_rw25g_original;
+}
+switch (FEAT_TRAINS, SELF, switch_rw25g_graphics_subtype_0, param_gaozulv) {
+    1: switch_rw25g_graphics_subtype_year_depend;
+    spriteset_rw25g_original;
+}
+switch (FEAT_TRAINS, SELF, switch_rw25g_graphics_subtype, cargo_subtype) {
+    0: switch_rw25g_graphics_subtype_0;
+    1: spriteset_rw25g_original;
+/*     2: ; */
+    2: spriteset_rw25g_jinwen;
+/*     4: ; */
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25g_graphics, position_in_articulated_veh % 3) {
+    1: switch_rw25g_graphics_subtype;
+    empty_sprites;
+}
 
 switch (FEAT_TRAINS, SELF, switch_rw25g_capacity, position_in_articulated_veh % 3) {
     1: return 36;
@@ -74,10 +102,10 @@ item (FEAT_TRAINS, rw25g) {
         can_attach_wagon:               locowagon;
 
         // Graphics
-        default:                        switch_25g_graphics;
-        purchase:                       spriteset_25g_purchase_original;
+        default:                        switch_rw25g_graphics;
+        purchase:                       spriteset_rw25g_purchase_original;
         articulated_part:               switch_rw25g_articulated_part;
-        cargo_subtype_text:             switch_25g_cargo_subtype;
+        cargo_subtype_text:             switch_rw25g_cargo_subtype;
 
         // Stats
         length:                         switch_length_2_8_2;

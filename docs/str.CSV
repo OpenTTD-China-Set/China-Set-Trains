@@ -61,6 +61,9 @@ STR_NAME_SYW25BHD,SYW25B (Passenger Coach) (High-Door),SYW25B (客车) (高开�
 STR_NAME_SRW25BHD,SRW25B (Passenger Coach) (High-Door),SRW25B (客车) (高开门)
 STR_NAME_YZ25G,YZ25G (Passenger Coach),YZ25G (客车)
 STR_NAME_RZ25G,RZ25G (Passenger Coach),RZ25G (客车)
+STR_NAME_RZ225G,RZ225G (Passenger Coach),RZ225G (客车)
+STR_NAME_RZ125G,RZ125G (Passenger Coach),RZ125G (客车)
+STR_NAME_RZT25G,RZT25G (Passenger Coach),RZT25G (客车)
 STR_NAME_YW25G,YW25G (Passenger Coach),YW25G (客车)
 STR_NAME_RW25G,RW25G (Passenger Coach),RW25G (客车)
 STR_NAME_CA25G,CA25G (Restaurant Car),CA25G (餐车)
@@ -80,6 +83,7 @@ STR_NAME_CA25K,CA25K (Restaurant Car),CA25K (餐车)
 STR_NAME_RW19T,RW19T (Passenger Coach),RW19T (客车)
 STR_NAME_YZ25T,YZ25T (Passenger Coach),YZ25T (客车)
 STR_NAME_RZ25T,RZ25T (Passenger Coach),RZ25T (客车)
+STR_NAME_RZXL25T,RZXL26T (Luggage Passenger Coach),RZXL25T (行李客车)
 STR_NAME_YW25T,YW25T (Passenger Coach),YW25T (客车)
 STR_NAME_RW25T,RW25T (Passenger Coach),RW25T (客车)
 STR_NAME_CA25T,CA25T (Restaurant Car),CA25T (餐车)
@@ -92,6 +96,7 @@ STR_NAME_XL25K,XL25K (Luggage Car),XL25K (行李车)
 STR_NAME_XL25T,XL25T (Luggage Car),XL25T (行李车)
 STR_NAME_XL25T_SSPE,XL25T-SSPE (Luggage Car),XL25T-SSPE (行李车)
 STR_NAME_UZ22,UZ22 (Railway Post Office),UZ22 (邮车)
+STR_NAME_UZ25G,UZ25G (Railway Post Office),UZ25G (邮车)
 STR_NAME_UZ25T,UZ25T (Railway Post Office),UZ25T (邮车)
 STR_NAME_TZ,TZ (Air Conditioner Generator Car),TZ (空调发电车)
 STR_NAME_TZ2,TZ2 (Air Conditioner Generator Car),TZ2 (空调发电车)
@@ -304,6 +309,9 @@ STR_FULL_NAME_SYW25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Hard Slee
 STR_FULL_NAME_SRW25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米标准型双层软卧客车
 STR_FULL_NAME_YZ25G,{BLACK}FULLNAME: {GOLD}25m Improved Hard Seat Passenger Coach,{BLACK}全称：{GOLD}25米改进型硬座客车
 STR_FULL_NAME_RZ25G,{BLACK}FULLNAME: {GOLD}25m Improved Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米改进型软座客车
+STR_FULL_NAME_RZ225G,{BLACK}FULLNAME: {GOLD}25m Improved Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米改进型二等软座客车
+STR_FULL_NAME_RZ125G,{BLACK}FULLNAME: {GOLD}25m Improved Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米改进型一等软座客车
+STR_FULL_NAME_RZT25G,{BLACK}FULLNAME: {GOLD}25m Improved Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米改进型特等软座客车
 STR_FULL_NAME_YW25G,{BLACK}FULLNAME: {GOLD}25m Improved Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米改进型硬卧客车
 STR_FULL_NAME_RW25G,{BLACK}FULLNAME: {GOLD}25m Improved Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米改进型软卧客车
 STR_FULL_NAME_CA25G,{BLACK}FULLNAME: {GOLD}25m Improved Restaurant Car,{BLACK}全称：{GOLD}25米改进型餐车
@@ -321,6 +329,7 @@ STR_FULL_NAME_CA25K,{BLACK}FULLNAME: {GOLD}25m Rapid Improved Restaurant Car,{BL
 STR_FULL_NAME_RW19T,{BLACK}FULLNAME: {GOLD}19T Type Soft Sleeper Passenger Coach (2 berth),{BLACK}全称：{GOLD}19T型高级软卧客车
 STR_FULL_NAME_YZ25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Hard Seat Passenger Coach,{BLACK}全称：{GOLD}25米提速型硬座客车
 STR_FULL_NAME_RZ25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米提速型软座客车
+STR_FULL_NAME_RZXL25T,{BLACK}FULLNAME: {GOLD}26m Accelerated Soft Seat Passenger Luggage Coach,{BLACK}全称：{GOLD}25米提速型软座行李合造车
 STR_FULL_NAME_YW25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米提速型硬卧客车
 STR_FULL_NAME_RW25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米提速型软卧客车
 STR_FULL_NAME_YZ31,{BLACK}FULLNAME: {GOLD}31 Type Hard Seat Passenger Coach,{BLACK}全称：{GOLD}31型硬座客车
@@ -332,7 +341,8 @@ STR_FULL_NAME_XL25G,{BLACK}FULLNAME: {GOLD}25m Improved Luggage Car,{BLACK}全�
 STR_FULL_NAME_XL25K,{BLACK}FULLNAME: {GOLD}25m Rapid Luggage Car,{BLACK}全称：{GOLD}25米快速型行李车
 STR_FULL_NAME_XL25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Luggage Car,{BLACK}全称：{GOLD}25米提速型行李车
 STR_FULL_NAME_UZ22,{BLACK}FULLNAME: {GOLD}22 Type Railway Post Office,{BLACK}全称：{GOLD}22型邮政车
-STR_FULL_NAME_UZ25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Railway Post Office,{BLACK}全称：{GOLD}25米提速型邮政车
+STR_FULL_NAME_UZ25G,{BLACK}FULLNAME: {GOLD}25m Improved Railway Post Office,{BLACK}全称：{GOLD}25米提速型邮政车
+STR_FULL_NAME_UZ25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Railway Post Office,{BLACK}全称：{GOLD}25米改进型邮政车
 STR_FULL_NAME_TZ,{BLACK}FULLNAME: {GOLD}Special Purpose Car,{BLACK}全称：{GOLD}特种车
 STR_FULL_NAME_TZ2,{BLACK}FULLNAME: {GOLD}Special Purpose Car Type 2,{BLACK}全称：{GOLD}2型特种车
 STR_FULL_NAME_KD25G,{BLACK}FULLNAME: {GOLD}25m Improved Air Conditioner Generator Car,{BLACK}全称：{GOLD}25米改进型空调发电车
@@ -505,9 +515,12 @@ STR_RW25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN
 STR_XL25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_S25BLD_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {ORANGE}Orange-{YELLOW}Yellow {GOLD}Livery, deteriorated, with strengthening steel sheet, Urumqi, Xianxing (All low-door, higher loading speed, 120 km/h)",{BLACK}可供选择的涂装：{ORANGE}橙{YELLOW}黄{GOLD}相间涂装，老化版，加强筋版，乌鲁木齐局，先行号 (均为低开门，装载较快，120 km/h)
 STR_S25BHD_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}deteriorated, Shenyang (All high-door, lower loading speed, 140 km/h)",{BLACK}可供选择的涂装：{GOLD}老化涂装，沈阳铁路局 (均为高开门，装载较慢，140 km/h)
-STR_25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, Xi'an-Huxian Railway Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}，西户铁路涂装，“高阻绿”{GOLD}涂装 (未完成)
-STR_CA25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{ORANGE}橙色{GOLD}涂装，“高阻绿”{GOLD}涂装 (未完成)
-STR_KD25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Xi'an-Huxian Railway Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery (unfinished), {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{RED}红{WHITE}白{GOLD}相间涂装，{ORANGE}橙色{GOLD}涂装，{LTBLUE}沪芦列车{GOLD}涂装，西户铁路涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装 (未完成){DKGREEN}，“高阻绿”{GOLD}涂装 (未完成)
+STR_YZ25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Origin{RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Lv"" Green Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery (And its ""Gaozu Lv"" Green version), {GREEN}Xi'an-Huxian Railway Livery",{BLACK}可供选择的涂装：原版{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”涂装 ，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}，{GREEN}西户铁路涂装
+STR_25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Origin{RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Lv"" Green Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery (And its ""Gaozu Lv"" Green version)",{BLACK}可供选择的涂装：原版{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”涂装 ，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}(及其刷绿版本)
+STR_RZ25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Origin{RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Lv"" Green Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery ",{BLACK}可供选择的涂装：原版{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”涂装 ，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}
+STR_CA25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Origin{RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Lv"" Green Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, {ORANGE}Orange Livery",{BLACK}可供选择的涂装：原版{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”涂装 ，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}(及其刷绿版本)，{ORANGE}橙色{GOLD}涂装
+STR_KD25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Origin{RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Lv"" Green Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang Livery,  {GREEN}Xi'an-Huxian Railway Livery",{BLACK}可供选择的涂装：原版{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”涂装 ，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}(及其刷绿版本)，{ORANGE}橙色{GOLD}涂装，{LTBLUE}沪芦列车涂装，{GREEN}西户铁路涂装
+STR_UZ25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Origin{RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Lv"" Green Livery",{BLACK}可供选择的涂装：原版{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”涂装 
 STR_YZ_YW25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Only Made in China), {DKGREEN}""Gaozu Lv"" Green Livery (Only Made in China),  Qinghai-Tibet Railway Grenn Livery (Both have Made in China and Made by BSP)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (仅国产)，{DKGREEN}青藏铁路涂装 (国产和BSP版本)，""高祖绿""涂装 (仅国产)，{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)"
 STR_RZ25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Both have Made in China and Made by BSP), {DKGREEN}""Gaozu Lv"" Green Livery (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Grenn Livery (Only Made in China),{WHITE} Guangzhou-Kowloon Railway Livery {DKGREEN}(And its ""Gaozu Lv"" Green version)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (仅国产)，""高祖绿""涂装 (国产和BSP版本)，{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)"
 STR_RW25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Both have Made in China and Made by BSP), {DKGREEN}""Gaozu Lv"" Green Livery (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Grenn Livery (Also Both have Made in China and Made by BSP)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (国产和BSP版本)，""高祖绿""涂装 (国产和BSP版本)"
@@ -700,11 +713,12 @@ STR_GUANGSHEN_PUZHEN_1," - Guangzhou-Shenzhen Railway Livery (Puzhen Railway Veh
 STR_GUANGSHEN_PUZHEN_2," - Guangzhou-Shenzhen Railway Livery (Puzhen Railway Vehicle Works, Production Batch 2nd)", - 广深铁路（浦镇厂二批次）涂装
 STR_GUANGSHEN_GREEN, - Guangzhou-Shenzhen Railway {DKGREEN}Green {BLACK}Livery (Unfinished), - 广深铁路绿色涂装（未完成）
 STR_JINWEN, - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLACK}Company, - {WHITE}金{RED}温{BLUE}铁{WHITE}路{BLACK}公司
+STR_JINWEN_GREEN," - {DKGREEN}""Gaozu Green"" {BLACK}livery of Jinhua-Wenzhou Railway Company", - 金温铁路涂装的{DKGREEN}刷绿版本
 STR_GAOZU_GREEN," - {DKGREEN}""Gaozu Green"" {BLACK}(unfinished except 25T)"," - {DKGREEN}""高阻绿"" {BLACK}(未完成, 25T除外)"
 STR_GAOZU_GREEN_BSP," - {DKGREEN}""Gaozu Green"" {BLACK}livery of BSP25T"," - BSP25T 的{DKGREEN}""高阻绿"" {BLACK}涂装"
 STR_BSP25T, - Made by BSP, - BSP制造
 STR_25T_HK, - Used in Guangzhou-Kowloon Railway version, - 广九直通车版本
-STR_25T_HK_GREEN," - {DKGREEN}""Gaozu Green"" {BLACK}liveryof 25T used in Guangzhou-Kowloon Railway", - 广九直通车的刷{DKGREEN}绿{BLACK}涂装
+STR_25T_HK_GREEN," - {DKGREEN}""Gaozu Green"" {BLACK}livery of 25T used in Guangzhou-Kowloon Railway", - 广九直通车的刷{DKGREEN}绿{BLACK}涂装
 STR_QINGZANG, - Qinghai-Tibet Railway Livery (Made in China), - {DKGREEN}青藏铁路涂装 (国产)
 STR_QINGZANG_BSP, - Qinghai-Tibet Railway Livery (Made by BSP), - {DKGREEN}青藏铁路涂装 (BSP)
 STR_BEIJING, - Beijing Livery, - 北京铁路局涂装

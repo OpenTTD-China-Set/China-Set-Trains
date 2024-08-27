@@ -9,30 +9,30 @@ switch (FEAT_TRAINS, SELF, switch_ca25z_name, getbits(extra_callback_info1, 0, 8
 
 // Purchase Menu
 spriteset (spriteset_ca25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "ca25z-1")
+    template_purchase ("coaches/25z", "ca25z-1")
 }
 
 // Vehicle
 spriteset (spriteset_ca25z_beijing_1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "ca25z-1")
+    template_standard ("coaches/25z", "ca25z-1")
 }
 spriteset (spriteset_ca25z_beijing_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "ca25z-2")
+    template_standard ("coaches/25z", "ca25z-2")
 }
 spriteset (spriteset_ca25z_beijing_colourfading_1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "ca25z-colourfading-1")
+    template_standard ("coaches/25z", "ca25z-colourfading-1")
 }
 spriteset (spriteset_ca25z_beijing_colourfading_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "ca25z-colourfading-2")
+    template_standard ("coaches/25z", "ca25z-colourfading-2")
 }
 spriteset (spriteset_ca25z_guangzhou_changke_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "ca25z-guangzhou-changke-a")
+    template_standard ("coaches/25z", "ca25z-guangzhou-changke-a")
 }
 spriteset (spriteset_ca25z_guangzhou_sifang_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "ca25z-guangzhou-sifang-a")
+    template_standard ("coaches/25z", "ca25z-guangzhou-sifang-a")
 }
 spriteset (spriteset_ca25z_guangzhou_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "ca25z-guangzhou-green")
+    template_standard ("coaches/25z", "ca25z-guangzhou-green")
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca25z_articulated_part, extra_callback_info1) {

@@ -21,7 +21,7 @@ spriteset (spriteset_crh380a_middle_p, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh380a-tp")
 }
 spriteset (spriteset_crh380a_middle_p_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh380a-tp")
+    template_reversed ("25-emu", "crh380a-tp-r")
 }
 spriteset (spriteset_crh380a_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh380a-tc")
@@ -49,7 +49,60 @@ switch (FEAT_TRAINS, SELF, switch_crh380a_head_capacity, position_in_articulated
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh380a_middle_wagon_three_quarters, ((position_in_consist / 3) + 1) == (num_vehs_in_consist * 3 / 12)) {
+
+
+switch (FEAT_TRAINS, SELF, switch_crh380a_middle_wagon_back, (position_in_consist_from_end / 3) + 1 - (num_vehs_in_consist / 24)) {
+    2: spriteset_crh380a_middle_p_reversed;
+    4: spriteset_crh380a_middle_p;
+    spriteset_crh380a_middle_m;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380a_middle_wagon_front, (position_in_consist / 3) + 1 - (num_vehs_in_consist / 24)) {
+    2: spriteset_crh380a_middle_p;
+    4: spriteset_crh380a_middle_p_reversed;
+    spriteset_crh380a_middle_m;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh380a_if_middle_wagon_front_or_back, (position_in_consist / 3) + 1 <= (num_vehs_in_consist / 6)) {
+    1: switch_crh380a_middle_wagon_front;
+    switch_crh380a_middle_wagon_back;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380a_middle_wagon_half_long, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) {
+    1: spriteset_crh380a_cab_reconect;
+    spriteset_crh380a_cab_reconect_reversed;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380a_middle_wagon_reconect, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
+    1: switch_crh380a_middle_wagon_half_long;
+    switch_crh380a_if_middle_wagon_front_or_back;
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_crh380a_if_middle_wagon_tp_short, (position_in_consist / 3) + 1 - (num_vehs_in_consist / 12)) {//8节时，后面的参数时2，此时4,6节有动力
+    2: spriteset_crh380a_middle_p;
+    4: spriteset_crh380a_middle_p_reversed;
+    spriteset_crh380a_middle_m;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh380a_length_class, num_vehs_in_consist / 3) {
+    2..12:   switch_crh380a_if_middle_wagon_tp_short;
+    switch_crh380a_middle_wagon_reconect;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380a_if_wagon_end, position_in_consist_from_end == 1) {
+    1: spriteset_crh380a_cab;
+    switch_crh380a_length_class;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380a_wagon_graphics, (position_in_consist_from_end % 3) == 1) {
+    1: switch_crh380a_if_wagon_end;
+    empty_sprites;
+}
+/* switch (FEAT_TRAINS, SELF, switch_crh380a_middle_wagon_three_quarters, ((position_in_consist / 3) + 1) == (num_vehs_in_consist * 3 / 12)) {
     1: spriteset_crh380a_middle_p;
     spriteset_crh380a_middle_p_reversed;
 }
@@ -112,7 +165,7 @@ switch (FEAT_TRAINS, SELF, switch_crh380a_wagon_graphics, (position_in_consist_f
     1: switch_crh380a_if_wagon_end;
     empty_sprites;
 }
-
+ */
 /* switch (FEAT_TRAINS, SELF, switch_crh380a_short_graphics, (position_in_consist_from_end == position_in_consist) || (position_in_consist_from_end == position_in_consist + 3)) {
     1: spriteset_crh380a_middle_p;
     spriteset_crh380a_middle_m;
@@ -351,7 +404,7 @@ item (FEAT_TRAINS, crh380a) {
         running_cost_factor:            56;
         reliability_decay:              12;
         bitmask_vehicle_info:           bitmask(2);
-        
+
     }
     graphics {
         // Menu

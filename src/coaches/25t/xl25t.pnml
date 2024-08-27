@@ -56,7 +56,7 @@ switch (FEAT_TRAINS, SELF, switch_xl25t_graphics_subtype, cargo_subtype) {
     2: spriteset_bspxl25t_original;
 /*     3:; */
 /*     4:; */
-    3: spriteset_xl25t_qingzang; 
+    3: spriteset_xl25t_qingzang;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25t_graphics, position_in_articulated_veh % 3) {
@@ -81,7 +81,7 @@ item (FEAT_TRAINS, xl25t) {
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2002,01,01);
+        introduction_date:              date(2003,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
         track_type:                     SACN;
@@ -124,7 +124,7 @@ item (FEAT_TRAINS, xl25t) {
         cost_factor:                    8;
         running_cost_factor:            7 * runningcostfactor();
         purchase_running_cost_factor:   28;
-        purchase_cargo_capacity:        71/3;
+        purchase_cargo_capacity:        80/3;
         name:                           switch_xl25t_name;
 
     }

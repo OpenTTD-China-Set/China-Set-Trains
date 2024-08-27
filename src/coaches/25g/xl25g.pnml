@@ -9,15 +9,15 @@ switch (FEAT_TRAINS, SELF, switch_xl25g_name, getbits(extra_callback_info1, 0, 8
 
 // Purchase Menu
 spriteset (spriteset_xl25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "xl25g")
+    template_purchase ("coaches/25g", "xl25g")
 }
 
 // Vehicle
 spriteset (spriteset_xl25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "xl25g")
+    template_standard ("coaches/25g", "xl25g")
 }
 spriteset (spriteset_xl25g_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "xl25g-jinwen")
+    template_standard ("coaches/25g", "xl25g-jinwen")
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25g_articulated_part, extra_callback_info1) {
@@ -26,14 +26,26 @@ switch (FEAT_TRAINS, SELF, switch_xl25g_articulated_part, extra_callback_info1) 
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25g_cargo_subtype, cargo_subtype) {
-    0: return string(STR_ORIGINAL);
-    1: return string(STR_JINWEN);
+    0: return string(STR_BUILD_YEAR);
+    1: return string(STR_ORIGINAL);
+/*     2: return string(STR_GAOZU_GREEN); */
+    2: return string(STR_JINWEN);
     return CB_RESULT_NO_TEXT;
 }
 
+switch (FEAT_TRAINS, SELF, switch_xl25g_graphics_subtype_year_depend, build_year) {
+    0..2014: spriteset_xl25g_original; // Unfinished
+    spriteset_xl25g_original;
+}
+switch (FEAT_TRAINS, SELF, switch_xl25g_graphics_subtype_0, param_gaozulv) {
+    1: switch_xl25g_graphics_subtype_year_depend;
+    spriteset_xl25g_original;
+}
 switch (FEAT_TRAINS, SELF, switch_xl25g_graphics_subtype, cargo_subtype) {
-    0: spriteset_xl25g_original;
-    1: spriteset_xl25g_jinwen;
+    0: switch_xl25g_graphics_subtype_0;
+    1: spriteset_xl25g_original;
+/*     2: ; */
+    2: spriteset_xl25g_jinwen;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25g_graphics, position_in_articulated_veh % 3) {
@@ -42,7 +54,7 @@ switch (FEAT_TRAINS, SELF, switch_xl25g_graphics, position_in_articulated_veh % 
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25g_capacity, position_in_articulated_veh % 3) {
-    1: return 71;
+    1: return 80;
     return 0;
 }
 
@@ -57,7 +69,7 @@ item (FEAT_TRAINS, xl25g) {
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(1996,01,01);
+        introduction_date:              date(1992,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
         track_type:                     SACN;
@@ -65,7 +77,7 @@ item (FEAT_TRAINS, xl25g) {
         // Cargo
         refittable_cargo_classes:       bitmask(CC_MAIL, CC_ARMOURED);
         non_refittable_cargo_classes:   0;
-        cargo_allow_refit:              [MAIL];
+        cargo_allow_refit:              [MAIL, VALU, GOLD, DIAM];
         cargo_disallow_refit:           [];
         refit_cost:                     0;
         default_cargo_type:             MAIL;
@@ -77,14 +89,14 @@ item (FEAT_TRAINS, xl25g) {
         // Stats
         speed:                          120 km/h;
         power:                          0 hp;
-        weight:                         46.0 ton;
+        weight:                         42.4 ton;
         cost_factor:                    7;
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            4;
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_XL25G), string(STR_25G_LIVERY_AVAILABILITY), string(STR_FRESHNESS_MEDIUM, 200));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_XL25G), string(STR_RZ25G_LIVERY_AVAILABILITY), string(STR_FRESHNESS_MEDIUM, 200));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_xl25g_cargo_subtype;
 
@@ -100,8 +112,8 @@ item (FEAT_TRAINS, xl25g) {
         cost_factor:                    7;
         running_cost_factor:            5 * runningcostfactor();
         purchase_running_cost_factor:   20;
-        purchase_cargo_capacity:        71/3;
-        name:                            switch_xl25g_name;
+        purchase_cargo_capacity:        80/3;
+        name:                           switch_xl25g_name;
 
     }
 }

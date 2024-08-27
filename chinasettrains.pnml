@@ -12,6 +12,11 @@
 // IDs
 #include "src/vehicleid.pnml"
 
+
+//Misc
+#include "src/misc/luggageroom_25.pnml"
+#include "src/misc/luggageroom_s25.pnml"
+
 // Horse
 
 
@@ -67,6 +72,7 @@
 
 #include "src/coaches/25g/yz25g.pnml"
 #include "src/coaches/25g/rz25g.pnml"
+#include "src/coaches/25g/rzt25g.pnml"
 #include "src/coaches/25g/yw25g.pnml"
 #include "src/coaches/25g/rw25g.pnml"
 #include "src/coaches/25g/ca25g.pnml"
@@ -91,6 +97,7 @@
 
 #include "src/coaches/25t/yz25t.pnml"
 #include "src/coaches/25t/rz25t.pnml"
+#include "src/coaches/25t/rzxl25t.pnml"
 #include "src/coaches/25t/yw25t.pnml"
 #include "src/coaches/25t/rw25t.pnml"
 #include "src/coaches/25t/ca25t.pnml"

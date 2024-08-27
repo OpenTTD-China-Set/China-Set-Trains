@@ -136,6 +136,13 @@ item (FEAT_TRAINS, xl25ml, 2130) {}
 item (FEAT_TRAINS, yw221966, 2131) {}
 // uz25t code by Babel
 item (FEAT_TRAINS, uz25t, 2132) {}
+item (FEAT_TRAINS, rzxl25t, 2133) {}
+item (FEAT_TRAINS, uz25g, 2134) {}
+item (FEAT_TRAINS, rzt25g, 2135) {}
+
+
+item (FEAT_TRAINS, luggageroom_s25, 3070) {}
+item (FEAT_TRAINS, luggageroom_25, 3071) {}
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 #define id_range_wagons 0x0C00..0x0FFF
@@ -362,5 +369,5 @@ item (FEAT_TRAINS, x2000, 9259) {}
 
 
 
-//MTR id range Strart
+
 

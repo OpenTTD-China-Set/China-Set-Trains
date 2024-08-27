@@ -9,18 +9,18 @@ switch (FEAT_TRAINS, SELF, switch_rzxl25z_name, getbits(extra_callback_info1, 0,
 
 // Purchase Menu
 spriteset (spriteset_rzxl25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches","rzxl25z")
+    template_purchase ("coaches/25z","rzxl25z")
 }
 
 // Vehicle
 spriteset (spriteset_rzxl25z_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches","rzxl25z")
+    template_standard ("coaches/25z","rzxl25z")
 }
 spriteset (spriteset_rzxl25z_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches","rzxl25z-guangzhou-sifang-a")
+    template_standard ("coaches/25z","rzxl25z-guangzhou-sifang-a")
 }
 spriteset (spriteset_rzxl25z_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches","rzxl25z-guangzhou-green")
+    template_standard ("coaches/25z","rzxl25z-guangzhou-green")
 }
 
 switch (FEAT_TRAINS, SELF, switch_rzxl25z_articulated_part, extra_callback_info1) {

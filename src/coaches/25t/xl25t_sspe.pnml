@@ -43,7 +43,7 @@ item (FEAT_TRAINS, xl25t_sspe) {
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2002,01,01);
+        introduction_date:              date(2004,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
         track_type:                     SACN;
@@ -51,7 +51,7 @@ item (FEAT_TRAINS, xl25t_sspe) {
         // Cargo
         refittable_cargo_classes:       bitmask(CC_MAIL, CC_ARMOURED);
         non_refittable_cargo_classes:   0;
-        cargo_allow_refit:              [MAIL, VALU, GOLD, DIAM];
+        cargo_allow_refit:              [MAIL, VALU, GOLD, DIAM, GOOD];
         cargo_disallow_refit:           [];
         refit_cost:                     0;
         default_cargo_type:             MAIL;

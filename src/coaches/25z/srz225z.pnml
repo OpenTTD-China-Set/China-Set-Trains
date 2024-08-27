@@ -7,15 +7,15 @@ switch (FEAT_TRAINS, SELF, switch_srz225z_name, getbits(extra_callback_info1, 0,
 
 // Purchase Menu
 spriteset (spriteset_srz225z_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "srz225z")
+    template_purchase ("coaches/25z", "srz225z")
 }
 
 // Vehicle
 spriteset (spriteset_srz225z_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches","srz225z")
+    template_standard ("coaches/25z","srz225z")
 }
 spriteset (spriteset_srz225z_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "srz225z-guangzhou")
+    template_standard ("coaches/25z", "srz225z-guangzhou")
 }
 
 switch (FEAT_TRAINS, SELF, switch_srz225z_articulated_part, extra_callback_info1) {

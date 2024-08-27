@@ -86,7 +86,7 @@ item (FEAT_TRAINS, rz25t) {
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2002,01,01);
+        introduction_date:              date(2003,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
         track_type:                     SACN;

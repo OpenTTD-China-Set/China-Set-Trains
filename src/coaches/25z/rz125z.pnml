@@ -9,39 +9,39 @@ switch (FEAT_TRAINS, SELF, switch_rz125z_name, getbits(extra_callback_info1, 0, 
 
 // Purchase Menu
 spriteset (spriteset_rz125z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "rz125z")
+    template_purchase ("coaches/25z", "rz125z")
 }
 
 // Vehicle
 spriteset (spriteset_rz125z_xizi, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "rz125z")
+    template_standard ("coaches/25z", "rz125z")
 }
 spriteset (spriteset_rz125z_xizi_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "rz125z-green")
+    template_standard ("coaches/25z", "rz125z-green")
 }
 spriteset (spriteset_rz125z_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "rz125z-beijing")
+    template_standard ("coaches/25z", "rz125z-beijing")
 }
 spriteset (spriteset_rz125z_beijing_colourfading, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "rz125z-beijing-colourfading")
+    template_standard ("coaches/25z", "rz125z-beijing-colourfading")
 }
 spriteset (spriteset_rz125z_guangzhou_changke_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "rz125z-guangzhou-changke-a")
+    template_standard ("coaches/25z", "rz125z-guangzhou-changke-a")
 }
 spriteset (spriteset_rz125z_guangzhou_changke_b, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "rz125z-guangzhou-changke-b")
+    template_standard ("coaches/25z", "rz125z-guangzhou-changke-b")
 }
 spriteset (spriteset_rz125z_guangzhou_sifang_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "rz125z-guangzhou-sifang-a")
+    template_standard ("coaches/25z", "rz125z-guangzhou-sifang-a")
 }
 spriteset (spriteset_rz125z_guangzhou_sifang_b, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "rz125z-guangzhou-sifang-b")
+    template_standard ("coaches/25z", "rz125z-guangzhou-sifang-b")
 }
 spriteset (spriteset_rz125z_guangzhou_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "rz125z-guangzhou-green")
+    template_standard ("coaches/25z", "rz125z-guangzhou-green")
 }
 spriteset (spriteset_rz125z_wuhan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "rz125z-wuhan")
+    template_standard ("coaches/25z", "rz125z-wuhan")
 }
 
 switch (FEAT_TRAINS, SELF, switch_rz125z_articulated_part, extra_callback_info1) {

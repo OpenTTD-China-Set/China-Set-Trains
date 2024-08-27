@@ -6,19 +6,19 @@ switch (FEAT_TRAINS, SELF, switch_yz25g_name, getbits(extra_callback_info1, 0, 8
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "25g")
+spriteset (spriteset_yz25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches/25g", "yz25g")
 }
 
 // Vehicle
-spriteset (spriteset_25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25g")
+spriteset (spriteset_yz25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "yz25g")
 }
-spriteset (spriteset_25g_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25g-jinwen")
+spriteset (spriteset_yz25g_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "yz25g-jinwen")
 }
-spriteset (spriteset_25g_xihu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25g-xihu")
+spriteset (spriteset_yz25g_xihu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "yz25g-xihu")
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25g_articulated_part, extra_callback_info1) {
@@ -26,29 +26,35 @@ switch (FEAT_TRAINS, SELF, switch_yz25g_articulated_part, extra_callback_info1) 
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_25g_cargo_subtype, cargo_subtype) {
+switch (FEAT_TRAINS, SELF, switch_yz25g_cargo_subtype, cargo_subtype) {
     0: return string(STR_BUILD_YEAR);
-    1: return string(STR_RED_WHITE);
+    1: return string(STR_ORIGINAL);
+/*     2: return string(STR_GAOZU_GREEN); */
     2: return string(STR_JINWEN);
+/*     4: return string(STR_JINWEN_GREEN); */
     3: return string(STR_XIHU);
-    4: return string(STR_GAOZU_GREEN);
     return CB_RESULT_NO_TEXT;
 }
 
-switch (FEAT_TRAINS, SELF, switch_25g_build_year_sprite, build_year) {
-    spriteset_25g_original; // Unfinished
+switch (FEAT_TRAINS, SELF, switch_yz25g_graphics_subtype_year_depend, build_year) {
+    0..2014: spriteset_yz25g_original; // Unfinished
+    spriteset_yz25g_original;
+}
+switch (FEAT_TRAINS, SELF, switch_yz25g_graphics_subtype_0, param_gaozulv) {
+    1: switch_yz25g_graphics_subtype_year_depend;
+    spriteset_yz25g_original;
+}
+switch (FEAT_TRAINS, SELF, switch_yz25g_graphics_subtype, cargo_subtype) {
+    0: switch_yz25g_graphics_subtype_0;
+    1: spriteset_yz25g_original;
+/*     2: ; */
+    2: spriteset_yz25g_jinwen;
+/*     4: ; */
+    3: spriteset_yz25g_xihu;
 }
 
-switch (FEAT_TRAINS, SELF, switch_25g_graphics_subtype, cargo_subtype) {
-    0: switch_25g_build_year_sprite;
-    1: spriteset_25g_original;
-    2: spriteset_25g_jinwen;
-    3: spriteset_25g_xihu;
-    4: spriteset_25g_original;  // Will change to "spriteset_25g_gaozu" once the "gaozu green" sprite is finished
-}
-
-switch (FEAT_TRAINS, SELF, switch_25g_graphics, position_in_articulated_veh % 3) {
-    1: switch_25g_graphics_subtype;
+switch (FEAT_TRAINS, SELF, switch_yz25g_graphics, position_in_articulated_veh % 3) {
+    1: switch_yz25g_graphics_subtype;
     empty_sprites;
 }
 
@@ -94,14 +100,14 @@ item (FEAT_TRAINS, yz25g) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YZ25G), string(STR_25G_LIVERY_AVAILABILITY), string(STR_COMFORT_LOW, 160));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YZ25G), string(STR_YZ25G_LIVERY_AVAILABILITY), string(STR_COMFORT_LOW, 160));
         can_attach_wagon:               locowagon;
 
         // Graphics
-        default:                        switch_25g_graphics;
-        purchase:                       spriteset_25g_purchase_original;
+        default:                        switch_yz25g_graphics;
+        purchase:                       spriteset_yz25g_purchase_original;
         articulated_part:               switch_yz25g_articulated_part;
-        cargo_subtype_text:             switch_25g_cargo_subtype;
+        cargo_subtype_text:             switch_yz25g_cargo_subtype;
 
         // Stats
         length:                         switch_length_2_8_2;
