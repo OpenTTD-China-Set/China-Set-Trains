@@ -33,7 +33,7 @@ VOX_FILES = $(shell find $(VOX_DIR) -name "*.vox")
 
 VOX_8BPP_FILES = $(VOX:.vox=_8bpp.png)
 VOX_32BPP_FILES = $(VOX:.vox=_32bpp.png)
-VOX_MASK_FILES = $(VOX:.vox=_maskbpp.png)
+VOX_MASK_FILES = $(VOX:.vox=_mask.png)
 
 VOX_GENREATED_FILES = $(VOX_8BPP_FILES) $(VOX_32BPP_FILES) $(VOX_MASK_FILES)
 
