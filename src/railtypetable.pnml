@@ -98,12 +98,12 @@ railtypetable {
 //    SEDA: [SEDA, SADA, SAAA, SAAE, ELRL],
 //    SFCA: [SFCA, SACA, SAAA, SAAE, ELRL],
 //    SGCA: [SGCA, SACA, SAAA, SAAE, ELRL],
-    SAA(: [SAA(, SAAE, ELRL],       // NOT IN CHINA SET: RAILS
-    SAB(: [SAB(, SAA(, SAAE, ELRL], // NOT IN CHINA SET: RAILS
-    SAC(: [SAC(, SAA(, SAAE, ELRL], // NOT IN CHINA SET: RAILS
-    SAD(: [SAD(, SAA(, SAAE, ELRL], // NOT IN CHINA SET: RAILS
-    SAE(: [SAE(, SAA(, SAAE, ELRL], // NOT IN CHINA SET: RAILS
-//    SBC(: [SBC(, SAC(, SAA(, SAAE, ELRL],
+    SAA28 : ["SAA(", SAAE, ELRL],         // NOT IN CHINA SET: RAILS, there is problem having the character "(", using its ASCII code instead
+    SAB28 : ["SAB(", "SAA(", SAAE, ELRL], // NOT IN CHINA SET: RAILS
+    SAC28 : ["SAC(", "SAA(", SAAE, ELRL], // NOT IN CHINA SET: RAILS
+    SAD28 : ["SAD(", "SAA(", SAAE, ELRL], // NOT IN CHINA SET: RAILS
+    SAE28 : ["SAE(", "SAA(", SAAE, ELRL], // NOT IN CHINA SET: RAILS
+//    "SBC(": ["SBC(", "SAC(", "SAA(", SAAE, ELRL],
     SAAD: [SAAD, SAAE, ELRL],       // NOT IN CHINA SET: RAILS
     SABD: [SABD, SAAD, SAAE, ELRL], // NOT IN CHINA SET: RAILS
     SACD: [SACD, SAAD, SAAE, ELRL], // NOT IN CHINA SET: RAILS
