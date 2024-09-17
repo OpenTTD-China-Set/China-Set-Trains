@@ -193,6 +193,7 @@ item (FEAT_TRAINS, jsq1, 3110) {}
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
 item (FEAT_TRAINS, sy, 4096) {}
+item (FEAT_TRAINS, jf1, 4097) {}
 
 //Diesel, available ID range: 5120-6143 (hex 0x1400..0x17FF)
 #define id_range_diesel 0x1400..0x17FF

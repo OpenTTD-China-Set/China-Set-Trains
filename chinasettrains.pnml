@@ -173,6 +173,7 @@
 #include "src/function2.pnml"
 
 // Steam
+#include "src/steam/jf1.pnml"
 #include "src/steam/sy.pnml"
 
 // Diesel
