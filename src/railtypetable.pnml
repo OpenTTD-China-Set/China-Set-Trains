@@ -7,9 +7,8 @@ N - 1067(1000) mm gauge
 n - 762(600) mm gauge
 D - 1435/1520 mm gauge
 d - 1435/1067(1000) mm gauge
-c - 1067/762(600) mm gauge
-M - Monorail;
-L - Magnetic Levitation (Maglev);
+MONO - Monorail;
+MGLV - Magnetic Levitation (Maglev);
 
 The Second Letter:
 For S, B, D gauges:
@@ -20,12 +19,11 @@ D - 210 km/h
 E - 250 km/h (unlimited for B gauge)
 F - 310 km/h
 G - Unlimited;
-For N, d, c gauges:
-A - 80 km/h
-B - 100 km/h
-C - 130 km/h
-D - 160 km/h;
-For n and c gauges:
+For N, d gauges:
+A - 95 km/h
+B - 130 km/h
+C - 160 km/h;
+For n gauges:
 A - 60 km/h;
 For Monorail:
 A - Unlimited;
@@ -33,7 +31,7 @@ For Maglev:
 A - 120 km/h
 B - Unlimited;
 
-The Third Letter:
+The Third Letter for Standard/Broad Gauges:
 A - Very Low Axle Load - <= 15 t
 B - Low Axle Load - 16-19 t
 C - Medium Axle Load - 20-23 t
@@ -45,7 +43,31 @@ N - Non-Electrified
 A - 25 kV AC
 d - 1.5 kV DC
 ( - 25 kV AC / 1.5 kV DC
-3 - Third Rail Electrification;
+3 - Third Rail Electrification
+Z - Third Rail / 1.5 kV DC;
+*/
+
+/* Tracktypes in China Set: Rails:
+
+RAIL, ELRL, MONO, MGLV,
+SADN, SAEN, SBDN, SBEN, SCDN,
+SBDA, SBEA, SCCA, SCDA, SDCA, SDDA, SECA, SEDA, SFCA, SGCA,
+SADD, SBDD, SCDD, (3kV for DPRK and Russia)
+SADd, SBDd, SCCd, (1.5kV: Industrial Railways and Metros)
+SAC3, SBC3,
+SACZ,
+SBC(,
+SADE, (60 km/h, universal)
+NAAN, NBAN, NCAN,
+NAAA, NBAA, NCAA,
+nAAN,
+nAAA,
+BADN, BAEN, BBDN, BBEN, BCDN,
+BBDA, BBEA, BCCA, BDDA, BECA,
+DBDN, DCDA,
+dBDN, dCDA.
+
+48 + 4 = 52
 */
 
 railtypetable {
@@ -76,45 +98,47 @@ railtypetable {
 //    SEDA: [SEDA, SADA, SAAA, SAAE, ELRL],
 //    SFCA: [SFCA, SACA, SAAA, SAAE, ELRL],
 //    SGCA: [SGCA, SACA, SAAA, SAAE, ELRL],
-//    SACB: [SACB, SAAB, SAAE, ELRL],
-//    SBCB: [SBCB, SACB, SAAB, SAAE, ELRL],
-    SACD: [SACD, SAAD, SAAE, ELRL],
+    SAA28 : ["SAA(", SAAE, ELRL],         // NOT IN CHINA SET: RAILS, there is problem having the character "(", using its ASCII code instead
+    SAB28 : ["SAB(", "SAA(", SAAE, ELRL], // NOT IN CHINA SET: RAILS
+    SAC28 : ["SAC(", "SAA(", SAAE, ELRL], // NOT IN CHINA SET: RAILS
+    SAD28 : ["SAD(", "SAA(", SAAE, ELRL], // NOT IN CHINA SET: RAILS
+    SAE28 : ["SAE(", "SAA(", SAAE, ELRL], // NOT IN CHINA SET: RAILS
+//    "SBC(": ["SBC(", "SAC(", "SAA(", SAAE, ELRL],
+    SAAD: [SAAD, SAAE, ELRL],       // NOT IN CHINA SET: RAILS
+    SABD: [SABD, SAAD, SAAE, ELRL], // NOT IN CHINA SET: RAILS
+    SACD: [SACD, SAAD, SAAE, ELRL], // NOT IN CHINA SET: RAILS
+    SADD: [SADD, SAAD, SAAE, ELRL],
 //    SBCD: [SBCD, SACD, SAAD, SAAE, ELRL],
 //    SCCD: [SCCD, SACD, SAAD, SAAE, ELRL],
-    SACd: [SACd, SAAd, SAAE, ELRL],
-//    SBCd: [SBCd, SACd, SAAd, SAAE, ELRL],
-//    SCCd: [SCCd, SACd, SAAd, SAAE, ELRL],
+    SAAd: [SAAd, SAAD, SAAE, ELRL],             // NOT IN CHINA SET: RAILS
+    SABd: [SABd, SAAd, SABD, SAAD, SAAE, ELRL], // NOT IN CHINA SET: RAILS
+    SACd: [SACd, SAAd, SACD, SAAD, SAAE, ELRL], // NOT IN CHINA SET: RAILS
+    SADd: [SADd, SAAd, SADD, SAAD, SAAE, ELRL],
+//    SBCd: [SBCd, SACd, SAAd, SACD, SAAD, SAAE, ELRL],
+//    SCCd: [SCCd, SACd, SAAd, SACD, SAAD, SAAE, ELRL],
     SAC3: [SAC3, SAA3, "3RDR", MTRO, ELRL],
 //    SBC3: [SBC3, SAC3, SAA3, "3RDR", MTRO, ELRL],
-//    SCC3: [SCC3, SAC3, SAA3, "3RDR", MTRO, ELRL],
-    NACN: [NACN, NAAN, NGRL], //NOT IN CHINA SET: RAILS
-    NADN: [NADN, NAAN, NGRL],
-//    NBDN: [NBDN, NADN, NAAN, NGRL],
-//    NCCN: [NCCN, NACN, NAAN, NGRL],
-    NADA: [NADA, NAAA, NAAE, ELNG],
-//    NBCA: [NBCA, NACA, NAAA, NAAE, ELNG],
-//    NBDA: [NBDA, NADA, NAAA, NAAE, ELNG],
-//    NCCA: [NCCA, NACA, NAAA, NAAE, ELNG],
-//    NCDA: [NCDA, NADA, NAAA, NAAE, ELNG],
-//    NDCA: [NDCA, NACA, NAAA, NAAE, ELNG],
-    nACN: [nACN, nAAN, NACN, NAAN, NGRL], //NOT IN CHINA SET: RAILS
-    nADN: [nADN, nAAN, NADN, NAAN, NGRL],
-//    nBDN: [nBDN, nADN, nAAN, NBDN, NADN, NAAN, NGRL],
-    nACA: [nACA, nAAA, nAAE, NACA, NAAA, NAAE, ELNG], //NOT IN CHINA SET: RAILS
-    nADA: [nADA, nAAA, nAAE, NADA, NAAA, NAAE, ELNG], //NOT IN CHINA SET: RAILS
-//    nBDA: [nBDA, nADA, nAAA, nAAE, NBDA, NADA, NAAA, NAAE, ELNG],
-//    nCCA: [nCCA, nACA, nAAA, nAAE, NCCA, NACA, NAAA, NAAE, ELNG],
-//    nDCA: [nDCA, nACA, nAAA, nAAE, NDCA, NACA, NAAA, NAAE, ELNG],
-    mACN: [mACN, mAAN, nACN, nAAN, NACN, NAAN, NGRL],
-    BACN: [BACN, BAAN, RLA0, RAIL], //NOT IN CHINA SET: RAILS
+    NAAN: [NAAN, NGRL],
+//    NBAN: [NBAN, NAAN, NGRL],
+//    NCAN: [NCAN, NAAN, NGRL],
+    NAAA: [NAAA, NAAE, ELNG],
+//    NBAA: [NBAA, NAAA, NAAE, ELNG],
+//    NCAA: [NCAA, NAAA, NAAE, ELNG],
+    nAAN: [nAAN, NAAN, NGRL], 
+    nAAA: [nAAA, nAAE, NAAA, NAAE, ELNG],
+    BAAN: [BAAN, RLA0, RAIL],       // NOT IN CHINA SET: RAILS
+    BABN: [BABN, BAAN, RLA0, RAIL], // NOT IN CHINA SET: RAILS
+    BACN: [BACN, BAAN, RLA0, RAIL], // NOT IN CHINA SET: RAILS
     BADN: [BADN, BAAN, RLA0, RAIL],
     BAEN: [BAEN, BAAN, RLA0, RAIL],
 //    BBDN: [BBDN, BADN, BAAN, RLA0, RAIL],
 //    BBEN: [BBEN, BAEN, BAAN, RLA0, RAIL],
 //    BCDN: [BCDN, BADN, BAAN, RLA0, RAIL],
-    BACA: [BACA, BAAA, BAAE, ERA1, ELRL], //NOT IN CHINA SET: RAILS
-    BADA: [BADA, BAAA, BAAE, ERA1, ELRL], //NOT IN CHINA SET: RAILS
-    BAEA: [BAEA, BAAA, BAAE, ERA1, ELRL], //NOT IN CHINA SET: RAILS
+    BAAA: [BAAA, BAAE, ERA1, ELRL],       // NOT IN CHINA SET: RAILS
+    BABA: [BABA, BAAA, BAAE, ERA1, ELRL], // NOT IN CHINA SET: RAILS
+    BACA: [BACA, BAAA, BAAE, ERA1, ELRL], // NOT IN CHINA SET: RAILS
+    BADA: [BADA, BAAA, BAAE, ERA1, ELRL], // NOT IN CHINA SET: RAILS
+    BAEA: [BAEA, BAAA, BAAE, ERA1, ELRL], // NOT IN CHINA SET: RAILS
 //    BBDA: [BBDA, BADA, BAAA, BAAE, ERA1, ELRL],
 //    BBEA: [BBEA, BAEA, BAAA, BAAE, ERA1, ELRL],
 //    BCDA: [BCDA, BADA, BAAA, BAAE, ERA1, ELRL],
@@ -124,8 +148,4 @@ railtypetable {
 //    DCDA: [DCDA, DADA, DAAA, DAAE, ELRL],
 //    dBDN: [dBDN, dADN, dAAN, RAIL],
 //    dCDA: [dCDA, dADA, dAAA, dAAE, ELRL],
-//    CBDN: [CBDN, CADN, CAAN, RAIL],
-//    CCDA: [CCDA, CADA, CAAA, CAAE, ELRL],
-//    cACN: [cACN, cAAN, NGRL],
-//    LACN: [LACN, LAAN, MGLV],
 }
