@@ -20,6 +20,7 @@ STR_PARAM_TIMES_2,200%,
 STR_PARAM_TIMES_4,400%,
 STR_PARAM_TIMES_8,800%,
 STR_PARAM_TIMES_16,1600%,
+STR_PARAM_DEFEAT,Defeat,默认
 STR_PARAM_CARGO_DECAY,Cargo Age Period,货物贬值周期
 STR_PARAM_CARGO_DECAY_DESC,"Adjust cargo age period of coaches and wagons. ""Long"" is ""Standard"" doubled, while ""Very Long"" is ""Long"" doubled. Even in ""Standard"" mode, cargo age period varies.",调整车厢的货物贬值周期。“较长”为“标准”的两倍，“很长”是“较长”的两倍。即使在“标准”设置下，货物贬值周期也随车厢种类而变化。
 STR_PARAM_STANDARD,Standard,标准
@@ -27,6 +28,8 @@ STR_PARAM_LONG,Long,较长
 STR_PARAM_VERY_LONG,Very Long,很长
 STR_PARAM_GAOZULV,"25m Passenger Coaches build after 2014 are {DKGREEN}""Gaozu Geeen""{BLACK} in defeaut",2014年后建造的25型客车默认刷{DKGREEN}绿
 STR_PARAM_GAOZULV_DESC,"Choose weather to print{DKGREEN} Canarium Green (also called ""Gaozu Geeen""){BLACK} to 25m Passenger Coaches build after 2014 in defeaut",决定2014年后建造的25型客车是否默认刷{DKGREEN}绿
+STR_PARAM_WAGON_CARGO_DECAY,Set Cargo Age Period of Wagons Individually,单独设置货车的货物贬值周期
+STR_PARAM_WAGON_CARGO_DECAY_DESC,"Set cargo age period of wagons individually, overlay calculations on option ""Cargo Age Period"". It makes long-distance transport of frieght be possible.","单独设置货车的货物贬值周期，在选项""货物贬值周期""上叠加计算。这个选项使长途货物运输成为可能"
 STR_USED_WITH_DYNAMIC_ENGINES,"This GRF needs dynamic_engines to be turned on. Open console, and type ""setting dynamic_engines 1"".","请切换至控制台模式, 键入 ""setting dynamic_engines 1"", 否则您无法游玩中国包."
 # Name,,
 STR_NAME_YZ22,YZ22 (Passenger Coach),YZ22 (客车)
@@ -160,6 +163,7 @@ STR_NAME_JSQ6,JSQ6 (Vehicle Transporter),JSQ6 (汽车运输车)
 STR_NAME_L70,L70 (Hopper),L70 (粮食漏斗车)
 STR_NAME_J5,J5 (Livestock Wagon),J5 (家畜运输车)
 STR_NAME_JF1,JF1 (Steam),JF1 (蒸汽)
+STR_NAME_SL6,SL6 (Steam),SL6 (蒸汽)
 STR_NAME_SY,SY (Steam),SY (蒸汽)
 STR_NAME_DF,DF (Diesel),DF (内燃)
 STR_NAME_DF4K,DF4 (Diesel) (Passenger Type),DF4 (内燃) (客运型)
@@ -366,7 +370,8 @@ STR_FULL_NAME_YW25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}25m Unilaminar Hard Sleeper 
 STR_FULL_NAME_RW25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}25m Unilaminar Soft Sleeper Passenger Trail Car of ""Jinlun"" DMU",{BLACK}全称：{GOLD}“金轮号”内燃动车组25米单层软卧拖车
 STR_FULL_NAME_SYZ25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}25m Double Decker Hard Seat Passenger Trail Car of ""Jinlun"" DMU",{BLACK}全称：{GOLD}“金轮号”内燃动车组25米双层硬座拖车
 STR_FULL_NAME_SRZ25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}25m Double Decker Hard Seat Passenger Trail Car of ""Jinlun"" DMU",{BLACK}全称：{GOLD}“金轮号”内燃动车组25米双层软座拖车
-STR_FULL_NAME_JF1,{BLACK}FULLNAME: {GOLD}JieFang {BLACK}(Meaning: Liberate) {GOLD}Steam Locomotive,{BLACK}全称：{GOLD}解放1型蒸汽机车
+STR_FULL_NAME_JF1,{BLACK}FULLNAME: {GOLD}JieFang {BLACK}(Meaning: Liberate) {GOLD}1 Steam Locomotive,{BLACK}全称：{GOLD}解放1型蒸汽机车
+STR_FULL_NAME_SL6,{BLACK}FULLNAME: {GOLD}ShengLi {BLACK}(Meaning: Victory) {GOLD}6 Steam Locomotive,{BLACK}全称：{GOLD}胜利6型蒸汽机车
 STR_FULL_NAME_SY,{BLACK}FULLNAME: {GOLD}Shangyou {BLACK}(Meaning: Aiming High) {GOLD}Steam Locomotive,{BLACK}全称：{GOLD}上游型蒸汽机车
 STR_FULL_NAME_DF,{BLACK}FULLNAME: {GOLD}Dongfeng Diesel Locomotive,{BLACK}全称：{GOLD}东风型内燃机车
 STR_FULL_NAME_DF4,{BLACK}FULLNAME: {GOLD}Dongfeng 4 Diesel Locomotive,{BLACK}全称：{GOLD}东风4型内燃机车
@@ -424,6 +429,8 @@ STR_FULL_NAME_HXD3,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3 Electric Locomotive,{B
 STR_FULL_NAME_HXD3C,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3C Electric Locomotive,{BLACK}全称：{GOLD}和谐3C型电力机车
 STR_FULL_NAME_HXD3D,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3D Electric Locomotive,{BLACK}全称：{GOLD}和谐3D型电力机车
 # Series Nmae,,
+STR_JF_SERIES,JieFang Series (Steam Locomotive),解放系列 (蒸汽机车)
+STR_SL_SERIES,ShengLi Series (Steam Locomotive),胜利系列 (蒸汽机车)
 STR_DF4_SERIES,DF4 Series (Diesel Locomotive),DF4系列 (内燃机车)
 STR_DF4D_SERIES,DF4D Series (Diesel Locomotive),DF4D系列 (内燃机车)
 STR_DF5_SERIES,DF5 Series (Diesel Locomotive),DF5系列 (内燃机车)
@@ -632,6 +639,7 @@ STR_CR300AF_NICKNAME,{BLACK}Nickname: {LTBLUE}Smurfette,{BLACK}昵称：{LTBLUE}
 STR_CR300BF_NICKNAME,"{BLACK}Nickname: {LTBLUE}""Blue Antidote"" {GOLD}(Official), {LTBLUE}""Zoombie Blue"" {GOLD}(Folk)",{BLACK}昵称：{LTBLUE}“蓝暖男”{GOLD}(官方)，{LTBLUE}“僵尸蓝”{GOLD}(民间)
 # Alias Name,,
 STR_ALIASNAME_JF1,"{BLACK}Alias Name: {GOLD}Mikai, MK1",{BLACK}曾用名：{GOLD}ミカイ，ㄇㄎ1型
+STR_ALIASNAME_SL6,"{BLACK}Alias Name: {GOLD}Pashiku, PX6",{BLACK}曾用名：{GOLD}パシク，ㄆㄒ6型
 STR_ALIASNAME_DF,"{BLACK}Alias Name: {GOLD}Great Loong, ND",{BLACK}曾用名：{GOLD}巨龙，ND
 STR_ALIASNAME_SS1,{BLACK}Alias Name: {GOLD}6Y1,{BLACK}曾用名：{GOLD}6Y1
 STR_ALIASNAME_HXD3,{BLACK}Alias Name: {GOLD}DJ3,{BLACK}曾用名：{GOLD}DJ3
@@ -678,6 +686,9 @@ STR_ALTERNATIVE, - Alternative Original Livery, - 另一种原版涂装
 STR_DF_YELLOW, - {GOLD}Yellow {GREEN}Line {BLACK}Livery, - {GOLD}黄色{GREEN}窗线{BLACK}涂装
 STR_DF_WHITE, - {WHITE}White {GREEN}Line {BLACK}Livery, - {WHITE}白色{GREEN}窗线{BLACK}涂装
 STR_FACTORY, - Factory Livery, - 出厂涂装
+STR_LARGE_WINDSHIELD, - With Large Windsheild, - 带大烟板
+STR_SMALL_WINDSHIELD, - With Small Windsheild, - 带小烟板
+STR_WITHOUT_WINDSHIELD, - Without Windsheild, - 没有烟板
 STR_6Y2_LATE, - {GREEN}Late {BLACK}Livery, - {GREEN}晚期{BLACK}涂装
 STR_SS4_BLUEROOF, - {WHITE}White {BLACK}Livery with {BLUE}Blue{BLACK} Roof, - 白色涂装（车顶为{BLUE}蓝{BLACK}色）
 STR_SHENHUA, - {GOLD}Shenhua Groups Livery, - {GOLD}神华集团涂装

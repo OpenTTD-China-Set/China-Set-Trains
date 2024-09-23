@@ -88,6 +88,21 @@ grf {
 			def_value: 1;
 		}
 	}
+    param 6 {
+		param_wagoncargodecay {
+			name: string(STR_PARAM_WAGON_CARGO_DECAY);
+			desc: string(STR_PARAM_WAGON_CARGO_DECAY_DESC);
+			type: int;
+            min_value: 0;
+            max_value: 2;
+            def_value: 0;
+            names: {
+                0: string(STR_PARAM_DEFEAT);
+                1: string(STR_PARAM_LONG);
+                2: string(STR_PARAM_VERY_LONG);
+            };
+		}
+	}
 }
 
 basecost {
