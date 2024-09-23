@@ -760,6 +760,10 @@ STR_FOSHAN, - Foshan Livery, - 佛肇城际涂装
 STR_XIAOYONG, - Xiaoshan/Hangzhou-Ningbo Livery, - 萧甬铁路涂装
 STR_ASIAGAME, - {PURPLE}The 19th Asian Games Hangzhou {BLACK}Livery," - {PURPLE}杭州亚运会""润泽江南""{BLACK}涂装"
 STR_WINTER_OLYMPIC, - {LTBLUE}The XXIV Olympic Winter Games {BLACK}Livery," - {LTBLUE}北京冬奥会""瑞雪迎春""{BLACK}涂装"
+STR_HXD3D1893,"{RED} - HXD3D-1893 {GOLD}""Mao Zedong""","{RED} - HXD3D-1893 {GOLD}""毛泽东号"""
+STR_HXD1D1898,"{RED} - HXD1D-1893 {GOLD}""Zhou Enlai""","{RED} - HXD1D-1898 {GOLD}""周恩来号"""
+STR_HXD3D1886,"{RED} - HXD3D-1886 {GOLD}""Zhu De""","{RED} - HXD3D-1886 {GOLD}""朱德号"""
+STR_HXD3D1921,"{RED} - HXD3D-1921 {GOLD}""Communist""","{RED} - HXD3D-1921 ""共产党员号"""
 # Decay,,
 STR_COMFORT_VERY_LOW,{BLACK}Comfort: {RED}Very low ({COMMA}),{BLACK}舒适度：{RED}极低（{COMMA}）
 STR_COMFORT_LOW,{BLACK}Comfort: {ORANGE}Low ({COMMA}),{BLACK}舒适度：{ORANGE}较低（{COMMA}）

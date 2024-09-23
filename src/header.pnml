@@ -122,9 +122,9 @@ if (ttd_platform != PLATFORM_OPENTTD) {
     error(FATAL, USED_WITH, "OpenTTD");
 }
 else {
-    if (openttd_version < version_openttd(13, 0)) {
+    if (openttd_version < version_openttd(13, 1)) {
         //requires OpenTTD 13.0 or later since the introduction of variants.
-        error(FATAL, REQUIRES_OPENTTD, "13.0");
+        error(FATAL, REQUIRES_OPENTTD, "13.1");
     }
 }
 
