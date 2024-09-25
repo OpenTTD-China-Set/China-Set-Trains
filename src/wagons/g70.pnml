@@ -24,7 +24,7 @@ spriteset (spriteset_g70_white_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 }
 
 random_switch (FEAT_TRAINS, SELF, random_g70_colour) {
-    1: spriteset_g70_gray;
+    3: spriteset_g70_gray;
     1: spriteset_g70_gray_red;
     1: spriteset_g70_white_red;
 }
