@@ -123,9 +123,13 @@ STR_NAME_YW25DT_JINLUN,YW25DT (JINLUN DMU) (Passenger Coach),YW25DT (金轮号�
 STR_NAME_RW25DT_JINLUN,RW25DT (JINLUN DMU) (Passenger Coach),RW25DT (金轮号动车组) (客车)
 STR_NAME_SYZ25DT_JINLUN,SYZ25DT (JINLUN DMU) (Passenger Coach),SYZ25DT (金轮号动车组) (客车)
 STR_NAME_SRZ25DT_JINLUN,SRZ25DT (JINLUN DMU) (Passenger Coach),SRZ25DT (金轮号动车组) (客车)
+STR_NAME_C1,C1 (Gondola),C1 (敞车)
+STR_NAME_C11949,C1 (Mixed Model) (Gondola),C1 (杂型) (敞车)
+STR_NAME_C11956,C1 (Redesigned) (Gondola),C1 (后生产型) (敞车)
 STR_NAME_C62,C62 (Gondola),C62 (敞车)
 STR_NAME_C64,C64 (Gondola),C64 (敞车)
 STR_NAME_C70,C70 (Gondola),C70 (敞车)
+STR_NAME_C80,C80 (Gondola),C80 (敞车)
 STR_NAME_P50,P50 (Boxcar),P50 (棚车)
 STR_NAME_P60,P60 (Boxcar),P60 (棚车)
 STR_NAME_P61,P61 (Boxcar),P61 (棚车)
@@ -150,6 +154,7 @@ STR_NAME_BH1,BH1 (Refrigerator Wagon),BH1 (保温车)
 STR_NAME_G17,G17 (Tanker),G17 (罐车)
 STR_NAME_G50,G50 (Tanker),G50 (罐车)
 STR_NAME_G60,G60 (Tanker),G60 (罐车)
+STR_NAME_G70,G70 (Tanker),G70 (罐车)
 STR_NAME_GN70,GN70 (Tanker),GN70 (罐车)
 STR_NAME_GN80,GN80 (Tanker),GN80 (罐车)
 STR_NAME_N5,N5 (Flatcar),N5 (平车)
@@ -553,11 +558,13 @@ STR_YZ31_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}
 STR_25ML_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {WHITE}White-{GREEN}-Green {GOLD}Livery, {RED}RED-{GREEN}-Green {GOLD}Livery (after 2003)", {GOLD}白底绿带涂装，类25G红色涂装 (2003年以后)
 STR_G17_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{GRAY}黑色{GOLD}加随机颜色条带 (未完成)
 STR_G60_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GRAY}Grey {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带 (未完成)
+STR_G70_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GRAY}Gray {GOLD}with Random-Colour Stripes ,{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带 
 STR_GN70_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{BLACK}黑色{GOLD}加随机颜色条带 (未完成)
 STR_GN80_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{BLACK}黑色{GOLD}加随机颜色条带 (未完成)
 STR_C62_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_C64_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_C70_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
+STR_C80_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}黑色，蓝色，橙色
 STR_P50_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred), Wreck Livery",{BLACK}可供选择的涂装：{GOLD}随机 (黑色，铁锈色，棕色)，救援涂装
 STR_P60_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_P61_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
@@ -664,6 +671,7 @@ STR_DJJ2_321_AVAILABLE,This train has broke the Highest Speed Record of China's 
 # Livery,,
 STR_ORIGINAL, - Original Livery, - 原版涂装
 STR_REVERSE, └ the Reverse of the Livery Above, └ 翻转的涂装
+STR_BLACK,{BLACK} - Black Livery,{BLACK} - 黑色涂装
 STR_ORANGE,{ORANGE} - Orange Livery,{ORANGE} - 橘色涂装
 STR_GREEN,{GREEN} - Green Livery,{GREEN} - 绿色涂装
 STR_RED,{RED} - Red Livery,{RED} - 红色涂装

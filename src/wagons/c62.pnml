@@ -66,6 +66,7 @@ item (FEAT_TRAINS, c62) {
         name:                           string(STR_NAME_C62);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					c1;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -99,6 +100,7 @@ item (FEAT_TRAINS, c62) {
         // Menu
         additional_text:                string(STR_DESC_2, string(STR_C62_LIVERY_AVAILABILITY), string(STR_FRESHNESS_MEDIUM, 185));
         can_attach_wagon:               locowagon;
+
 
         // Graphics
         default:                        switch_c62_graphics;

@@ -1,4 +1,4 @@
-/* 
+/*
 Using Semi-Standardised Railtype Scheme.
 The First Letter:
 S - 1435 mm gauge
@@ -35,8 +35,8 @@ The Third Letter for Standard/Broad Gauges:
 A - Very Low Axle Load - <= 15 t
 B - Low Axle Load - 16-19 t
 C - Medium Axle Load - 20-23 t
-D - High Axle Load - 24-27 t
-E - Very High Axle Load - >= 28 t;
+D - High Axle Load - 24-26 t
+E - Very High Axle Load - >= 27 t;
 
 The Last Letter:
 N - Non-Electrified
@@ -85,7 +85,7 @@ railtypetable {
 //    SCDN: [SCDN, SADN, SAAN, RAIL],
     SAAA: [SAAA, SAAE, ELRL],       //NOT IN CHINA SET: RAILS
     SABA: [SABA, SAAA, SAAE, ELRL], //NOT IN CHINA SET: RAILS
-    SACA: [SACA, SAAA, SAAE, ELRL], //NOT IN CHINA SET: RAILS 
+    SACA: [SACA, SAAA, SAAE, ELRL], //NOT IN CHINA SET: RAILS
     SADA: [SADA, SAAA, SAAE, ELRL], //NOT IN CHINA SET: RAILS
     SAEA: [SAEA, SAAA, SAAE, ELRL], //NOT IN CHINA SET: RAILS
 //    SBDA: [SBDA, SADA, SAAA, SAAE, ELRL],
@@ -124,7 +124,7 @@ railtypetable {
     NAAA: [NAAA, NAAE, ELNG],
 //    NBAA: [NBAA, NAAA, NAAE, ELNG],
 //    NCAA: [NCAA, NAAA, NAAE, ELNG],
-    nAAN: [nAAN, NAAN, NGRL], 
+    nAAN: [nAAN, NAAN, NGRL],
     nAAA: [nAAA, nAAE, NAAA, NAAE, ELNG],
     BAAN: [BAAN, RLA0, RAIL],       // NOT IN CHINA SET: RAILS
     BABN: [BABN, BAAN, RLA0, RAIL], // NOT IN CHINA SET: RAILS

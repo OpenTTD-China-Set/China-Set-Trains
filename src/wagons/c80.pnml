@@ -1,0 +1,275 @@
+//Begin C80
+switch (FEAT_TRAINS, SELF, switch_c80_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_GONDOLA);
+    return CB_RESULT_NO_TEXT;
+}
+
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_c80_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons/c80", "c80-white-lead")
+}
+
+// Vehicle
+spriteset (spriteset_c80_black_lead_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-black-lead")
+}
+spriteset (spriteset_c80_black_lead_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-black-lead-half")
+}
+spriteset (spriteset_c80_black_lead_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-black-lead-full")
+}
+spriteset (spriteset_c80_black_middle_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-black-middle")
+}
+spriteset (spriteset_c80_black_middle_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-black-middle-half")
+}
+spriteset (spriteset_c80_black_middle_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-black-middle-full")
+}
+spriteset (spriteset_c80_black_rear_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-black-rear")
+}
+spriteset (spriteset_c80_black_rear_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-black-rear-half")
+}
+spriteset (spriteset_c80_black_rear_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-black-rear-full")
+}
+
+spriteset (spriteset_c80_blue_lead_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-blue-lead")
+}
+spriteset (spriteset_c80_blue_lead_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-blue-lead-half")
+}
+spriteset (spriteset_c80_blue_lead_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-blue-lead-full")
+}
+spriteset (spriteset_c80_blue_middle_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-blue-middle")
+}
+spriteset (spriteset_c80_blue_middle_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-blue-middle-half")
+}
+spriteset (spriteset_c80_blue_middle_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-blue-middle-full")
+}
+spriteset (spriteset_c80_blue_rear_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-blue-rear")
+}
+spriteset (spriteset_c80_blue_rear_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-blue-rear-half")
+}
+spriteset (spriteset_c80_blue_rear_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-blue-rear-full")
+}
+
+spriteset (spriteset_c80_white_lead_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-white-lead")
+}
+spriteset (spriteset_c80_white_lead_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-white-lead-half")
+}
+spriteset (spriteset_c80_white_lead_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-white-lead-full")
+}
+spriteset (spriteset_c80_white_middle_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-white-middle")
+}
+spriteset (spriteset_c80_white_middle_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-white-middle-half")
+}
+spriteset (spriteset_c80_white_middle_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-white-middle-full")
+}
+spriteset (spriteset_c80_white_rear_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-white-rear")
+}
+spriteset (spriteset_c80_white_rear_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-white-rear-half")
+}
+spriteset (spriteset_c80_white_rear_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/c80", "c80-white-rear-full")
+}
+
+/* switch (FEAT_TRAINS, SELF, switch_c80_black_coal, cargo_count < 54) {
+    0: spriteset_c80_black_coal_full;
+    spriteset_c80_black_coal_half;
+} */
+switch (FEAT_TRAINS, SELF, switch_gfx_c80_black_empty, position_in_articulated_veh % 9) {
+    1: spriteset_c80_black_lead_empty;
+    4: spriteset_c80_black_middle_empty;
+    7: spriteset_c80_black_rear_empty;
+    empty_sprites;
+}
+switch (FEAT_TRAINS, SELF, switch_gfx_c80_black_half, position_in_articulated_veh % 9) {
+    1: spriteset_c80_black_lead_half;
+    4: spriteset_c80_black_middle_half;
+    7: spriteset_c80_black_rear_half;
+    empty_sprites;
+}
+switch (FEAT_TRAINS, SELF, switch_gfx_c80_black_full, position_in_articulated_veh % 9) {
+    1: spriteset_c80_black_lead_full;
+    4: spriteset_c80_black_middle_full;
+    7: spriteset_c80_black_rear_full;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_gfx_c80_blue_empty, position_in_articulated_veh % 9) {
+    1: spriteset_c80_blue_lead_empty;
+    4: spriteset_c80_blue_middle_empty;
+    7: spriteset_c80_blue_rear_empty;
+    empty_sprites;
+}
+switch (FEAT_TRAINS, SELF, switch_gfx_c80_blue_half, position_in_articulated_veh % 9) {
+    1: spriteset_c80_blue_lead_half;
+    4: spriteset_c80_blue_middle_half;
+    7: spriteset_c80_blue_rear_half;
+    empty_sprites;
+}
+switch (FEAT_TRAINS, SELF, switch_gfx_c80_blue_full, position_in_articulated_veh % 9) {
+    1: spriteset_c80_blue_lead_full;
+    4: spriteset_c80_blue_middle_full;
+    7: spriteset_c80_blue_rear_full;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_gfx_c80_white_empty, position_in_articulated_veh % 9) {
+    1: spriteset_c80_white_lead_empty;
+    4: spriteset_c80_white_middle_empty;
+    7: spriteset_c80_white_rear_empty;
+    empty_sprites;
+}
+switch (FEAT_TRAINS, SELF, switch_gfx_c80_white_half, position_in_articulated_veh % 9) {
+    1: spriteset_c80_white_lead_half;
+    4: spriteset_c80_white_middle_half;
+    7: spriteset_c80_white_rear_half;
+    empty_sprites;
+}
+switch (FEAT_TRAINS, SELF, switch_gfx_c80_white_full, position_in_articulated_veh % 9) {
+    1: spriteset_c80_white_lead_full;
+    4: spriteset_c80_white_middle_full;
+    7: spriteset_c80_white_rear_full;
+    empty_sprites;
+}
+
+
+
+
+switch (FEAT_TRAINS, SELF, switch_c80_black, cargo_count) {
+    27..53: switch_gfx_c80_black_half;
+    54..80: switch_gfx_c80_black_full;
+    switch_gfx_c80_black_empty;
+}
+switch (FEAT_TRAINS, SELF, switch_c80_blue, cargo_count) {
+    27..53: switch_gfx_c80_blue_half;
+    54..80: switch_gfx_c80_blue_full;
+    switch_gfx_c80_blue_empty;
+}
+switch (FEAT_TRAINS, SELF, switch_c80_orange, cargo_count) {
+    27..53: switch_gfx_c80_white_half;
+    54..80: switch_gfx_c80_white_full;
+    switch_gfx_c80_white_empty;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c80_colour, cargo_subtype) {
+    1: switch_c80_blue;
+    2: switch_c80_orange;
+    switch_c80_black;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c80_cargo_subtype, cargo_subtype) {
+    0: return string(STR_BLACK);
+    1: return string(STR_BLUE);
+    2: return string(STR_ORANGE);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_c80_articulated_part, extra_callback_info1) {
+    1..8: return c80;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_c80_graphics, position_in_articulated_veh % 3) {
+    1: switch_c80_colour;
+    empty_sprites;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_c80_capacity, position_in_articulated_veh % 9) {
+    1: return 80;
+    4: return 80;
+    7: return 80;
+    return 0;
+}
+
+
+
+item (FEAT_TRAINS, c80) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_C80);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					c1;
+
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2003,03,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_BULK);
+        non_refittable_cargo_classes:   bitmask(CC_PASSENGERS, CC_LIQUID, CC_HAZARDOUS);
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [YETI, YETY, SALT, CERE, CTCD, GRAI, MAIZ, OLSD, TOFF, WHEA, BEAN, CASS, FICR, JAVA, NUTS, RSGR, SGBT, SGCN, SUGR, SWET];
+        refit_cost:                     0;
+        default_cargo_type:             DEFAULT_CARGO_FIRST_REFITTABLE;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 80;
+        loading_speed:                  12 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          100 km/h;
+        power:                          0 hp;
+        weight:                         60 ton;
+        cost_factor:                    12;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_2, string(STR_C80_LIVERY_AVAILABILITY), string(STR_FRESHNESS_MEDIUM, 185));
+        can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_c80_cargo_subtype;
+
+        // Graphics
+        default:                        switch_c80_graphics;
+        purchase:                       spriteset_c80_purchase;
+        articulated_part:               switch_c80_articulated_part;
+
+        // Stats
+        length:                         return 2;
+        cargo_capacity:                 switch_c80_capacity;
+        loading_speed:                  12 << param_loading_speed;
+        cargo_age_period:               185 << (param_cargo_decay + param_wagoncargodecay);
+        cost_factor:                    18;
+        running_cost_factor:            15 * runningcostfactor();
+        purchase_running_cost_factor:   20;
+        purchase_cargo_capacity:        80/3;
+        name:                           switch_c80_name;
+
+    }
+}
+
+// End C80

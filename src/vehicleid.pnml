@@ -189,6 +189,10 @@ item (FEAT_TRAINS, w6s, 3107) {}
 item (FEAT_TRAINS, bh1, 3108) {}
 item (FEAT_TRAINS, x2k, 3109) {}
 item (FEAT_TRAINS, jsq1, 3110) {}
+item (FEAT_TRAINS, c80, 3111) {}
+item (FEAT_TRAINS, c1, 3112) {}
+item (FEAT_TRAINS, c11956, 3113) {}
+item (FEAT_TRAINS, g70, 3114) {}
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
