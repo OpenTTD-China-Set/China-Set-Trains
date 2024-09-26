@@ -531,11 +531,6 @@ STR_RW25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN
 STR_XL25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_S25BLD_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {ORANGE}Orange-{YELLOW}Yellow {GOLD}Livery, deteriorated, with strengthening steel sheet, Urumqi, Xianxing (All low-door, higher loading speed, 120 km/h)",{BLACK}可供选择的涂装：{ORANGE}橙{YELLOW}黄{GOLD}相间涂装，老化版，加强筋版，乌鲁木齐局，先行号 (均为低开门，装载较快，120 km/h)
 STR_S25BHD_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}deteriorated, Shenyang (All high-door, lower loading speed, 140 km/h)",{BLACK}可供选择的涂装：{GOLD}老化涂装，沈阳铁路局 (均为高开门，装载较慢，140 km/h)
-STR_YZ25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Origin{RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Lv"" Green Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery (And its ""Gaozu Lv"" Green version), {GREEN}Xi'an-Huxian Railway Livery",{BLACK}可供选择的涂装：原版{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”涂装 ，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}，{GREEN}西户铁路涂装
-STR_25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Origin{RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Lv"" Green Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery (And its ""Gaozu Lv"" Green version)",{BLACK}可供选择的涂装：原版{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”涂装 ，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}(及其刷绿版本)
-STR_RZ25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Origin{RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Lv"" Green Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery ",{BLACK}可供选择的涂装：原版{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”涂装 ，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}
-STR_CA25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Origin{RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Lv"" Green Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, {ORANGE}Orange Livery",{BLACK}可供选择的涂装：原版{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”涂装 ，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}(及其刷绿版本)，{ORANGE}橙色{GOLD}涂装
-STR_KD25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Origin{RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Lv"" Green Livery, {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {LTBLUE}Shanghai-Luchaogang Livery,  {GREEN}Xi'an-Huxian Railway Livery",{BLACK}可供选择的涂装：原版{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”涂装 ，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}(及其刷绿版本)，{ORANGE}橙色{GOLD}涂装，{LTBLUE}沪芦列车涂装，{GREEN}西户铁路涂装
 STR_UZ25G_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Origin{RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Lv"" Green Livery",{BLACK}可供选择的涂装：原版{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”涂装 
 STR_YZ_YW25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Only Made in China), {DKGREEN}""Gaozu Lv"" Green Livery (Only Made in China),  Qinghai-Tibet Railway Grenn Livery (Both have Made in China and Made by BSP)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (仅国产)，{DKGREEN}青藏铁路涂装 (国产和BSP版本)，""高祖绿""涂装 (仅国产)，{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)"
 STR_RZ25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Both have Made in China and Made by BSP), {DKGREEN}""Gaozu Lv"" Green Livery (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Grenn Livery (Only Made in China),{WHITE} Guangzhou-Kowloon Railway Livery {DKGREEN}(And its ""Gaozu Lv"" Green version)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (仅国产)，""高祖绿""涂装 (国产和BSP版本)，{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)"
@@ -711,10 +706,10 @@ STR_SHENHUA,{BLACK} - {GOLD}Shenhua Groups Livery,{BLACK} - {GOLD}神华集团�
 STR_GUONENG,{BLACK} - {GOLD}CHN Energy Livery,{BLACK} - {GOLD}国家能源集团涂装
 STR_CHN2LAOS,{BLACK} - {GOLD}China-Laos Railway Livery,{BLACK} - {GOLD}中老铁路涂装
 STR_WUJING,"{BLACK} - {GOLD}""Armed Police""Livery",{BLACK} - {GOLD}“武警”涂装
-STR_DFH7,{BLACK} - DFH7,{BLACK}
-STR_DFH7B,{BLACK} - DFH7B,{BLACK}
-STR_HXD_F,{BLACK} - HXD{COMMA}F,{BLACK}
-STR_FXD_B,{BLACK} - FXD{COMMA}B,{BLACK}
+STR_DFH7,{BLACK} - DFH7,
+STR_DFH7B,{BLACK} - DFH7B,
+STR_HXD_F,{BLACK} - HXD{COMMA}F,
+STR_FXD_B,{BLACK} - FXD{COMMA}B,
 STR_GONGQINGTUAN,"{BLACK} - ""Gongqingtuan"" Livery",{BLACK} - 共青团号涂装
 STR_BUILD_YEAR,{BLACK} - According to build year,{BLACK} - 根据建造年份选择设计
 STR_YW22_ORIGINAL,"{BLACK} - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240",{BLACK} - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
@@ -742,7 +737,8 @@ STR_GUANGSHEN_PUZHEN_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Puzhen Rail
 STR_GUANGSHEN_GREEN,{BLACK} - Guangzhou-Shenzhen Railway {DKGREEN}Green {BLACK}Livery (Unfinished),{BLACK} - 广深铁路绿色涂装（未完成）
 STR_JINWEN,{BLACK} - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLACK}Company,{BLACK} - {WHITE}金{RED}温{BLUE}铁{WHITE}路{BLACK}公司
 STR_JINWEN_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of Jinhua-Wenzhou Railway Company",{BLACK} - 金温铁路涂装的{DKGREEN}刷绿版本
-STR_GAOZU_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}(unfinished except 25T)","{BLACK} - {DKGREEN}""高阻绿"" {BLACK}(未完成, 25T除外)"
+STR_NANHU,"{BLACK} - {RED}""South Lake - 1921"" {BLACK}Tourist Train","{BLACK} - {RED}""南湖-1921"" {BLACK}旅游列车"
+STR_GAOZU_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}(unfinished except 25T)","{BLACK} - {DKGREEN}""高阻绿"" {BLACK}"
 STR_GAOZU_GREEN_BSP,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of BSP25T","{BLACK} - BSP25T 的{DKGREEN}""高阻绿"" {BLACK}涂装"
 STR_BSP25T,{BLACK} - Made by BSP,{BLACK} - BSP制造
 STR_25T_HK,{BLACK} - Used in Guangzhou-Kowloon Railway version,{BLACK} - 广九直通车版本

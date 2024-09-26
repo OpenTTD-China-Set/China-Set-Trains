@@ -39,13 +39,13 @@ switch (FEAT_TRAINS, SELF, switch_yz25g_cargo_subtype, cargo_subtype) {
     3: return string(STR_JINWEN);
 /*     4: return string(STR_JINWEN_GREEN); */
     4: return string(STR_XIHU);
-    5: return string(STR_NANHU)
+    5: return string(STR_NANHU);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25g_graphics_subtype_year_depend, build_year) {
     0..2014: spriteset_yz25g_original; // Unfinished
-    spriteset_yz25g_original;
+    spriteset_yz25g_green;
 }
 switch (FEAT_TRAINS, SELF, switch_yz25g_graphics_subtype_0, param_gaozulv) {
     1: switch_yz25g_graphics_subtype_year_depend;
@@ -58,7 +58,7 @@ switch (FEAT_TRAINS, SELF, switch_yz25g_graphics_subtype, cargo_subtype) {
     3: spriteset_yz25g_jinwen;
 /*     4: ; */
     4: spriteset_yz25g_xihu;
-    5: spriteset_yz25g_nanhu
+    5: spriteset_yz25g_nanhu;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25g_graphics, position_in_articulated_veh % 3) {
