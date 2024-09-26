@@ -78,6 +78,7 @@
 #include "src/coaches/25g/rw25g.pnml"
 #include "src/coaches/25g/ca25g.pnml"
 #include "src/coaches/25g/xl25g.pnml"
+#include "src/coaches/25g/uz25g.pnml"
 #include "src/coaches/25g/kd25g.pnml"
 
 #include "src/coaches/25k/yz25k.pnml"
