@@ -9,7 +9,7 @@ switch (FEAT_TRAINS, SELF, switch_cr200jal_name, getbits(extra_callback_info1, 0
 
 // Purchase Menu
 spriteset (spriteset_cr200jal_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("25-emu", "cr200j-m")
+    template_purchase ("25-emu/cr200ja", "cr200j-m")
 }
 
 /* // Vehicle

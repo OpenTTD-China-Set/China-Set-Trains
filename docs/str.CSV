@@ -497,6 +497,8 @@ STR_DESC_5,{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING},
 STR_DESC_4,{STRING}{}{STRING}{}{STRING}{}{STRING},
 STR_DESC_3,{STRING}{}{STRING}{}{STRING},
 STR_DESC_2,{STRING}{}{STRING},
+STR_LV_AVAILABLE_S,{STRING}{STRING}{STRING}{STRING}{STRING}{STRING},
+STR_LV_AVAILABLE_L,{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING},
 # Desc,,
 STR_JINLUN_25DT,"Coaches use for DMU {BLUE}""JIN{WHITE}LUN""",{BLUE}金{WHITE}轮{RED}号{GOLD}内燃动车组所使用的拖车
 STR_XL25T_SSPE_DESCRIPTION,"{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.",{BLACK}新时速运递公司使用的XL25T版本。
@@ -580,6 +582,7 @@ STR_NX70A_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Black Livery Onl
 STR_X2K_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random Containers,{BLACK}可供选择的涂装：{GOLD}随机集装箱
 STR_JSQ1_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Random (Red, Blue)",{BLACK}可供选择的涂装：{GOLD}随机颜色（蓝色，红色）
 STR_W_BOXCAR_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Yellow Livery with Yellow or White Roof,{BLACK}涂装：{GOLD}黄色，车顶颜色随机（黄色，白色）
+STR_LIVERY_AVALIABLE,{BLACK}Livery Availability:,{BLACK}可供选择的涂装：
 # Nickname,,
 STR_DF_NICKNAME,{BLACK}Nickname: {GOLD}Old DongFeng,{BLACK}昵称：{GOLD}老东风
 STR_DF4_NICKNAME,"{BLACK}Nickname: {GOLD}""Watermelon"" for {GREEN}Green {GOLD}Livery, ""Orange"" for {ORANGE}Orange {GOLD}Livery",{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
@@ -669,109 +672,109 @@ STR_350_AVAILABLE,Refittable to Max Speed 350 km/h (Increasing running costs),�
 STR_350_380_AVAILABLE,Refittable to Max Speed 350 or 380 km/h (Increasing running costs),可改装为最高速度 350 或 380 km/h，运营费用增加
 STR_DJJ2_321_AVAILABLE,This train has broke the Highest Speed Record of China's Railway by {GOLD}321.5 km/h{BLACK} on 27th Oct. 2002. Refittable to this speed (Increasing running costs),这列车曾经在2002年10月27日创下了当时中国铁路的最高速321.5 km/h。可改装到这一速度，运营费用增加
 # Livery,,
-STR_ORIGINAL, - Original Livery, - 原版涂装
-STR_REVERSE, └ the Reverse of the Livery Above, └ 翻转的涂装
+STR_ORIGINAL,{BLACK} - Original Livery,{BLACK} - 原版涂装
+STR_ALTERNATIVE,{BLACK} - Alternative Original Livery,{BLACK} - 另一种原版涂装
+STR_REVERSE,{BLACK} └ the Reverse of the Livery Above,{BLACK} └ 翻转的涂装
+STR_PROTOTYPE,{BLACK} - Prototype,{BLACK} - 原型
+STR_LATER,{BLACK} - Later Livery,{BLACK} - 后期涂装
+STR_EARLIER,{BLACK} - Earlier Livery,{BLACK} - 早期涂装
+STR_FACTORY,{BLACK} - Factory Livery,{BLACK} - 出厂涂装
+STR_DETERIORATE,{BLACK} - Deteriorated Livery,{BLACK} - 老化后
 STR_BLACK,{BLACK} - Black Livery,{BLACK} - 黑色涂装
 STR_ORANGE,{ORANGE} - Orange Livery,{ORANGE} - 橘色涂装
 STR_GREEN,{GREEN} - Green Livery,{GREEN} - 绿色涂装
+STR_SS7C_BANANA,{BLACK} - {YELLOW}Banana Yellow {BLACK}Livery,{BLACK} - {YELLOW}黄色{BLACK}涂装
 STR_RED,{RED} - Red Livery,{RED} - 红色涂装
 STR_WHITE,{WHITE} - WhIte Livery,{WHITE} - 白色涂装
 STR_BLUE,{BLUE} - Blue Livery,{BLUE} - 蓝色涂装
 STR_GRASSGREEN,{DKGREEN} - Dark Green Livery,{DKGREEN} - 草绿色涂装
 STR_LATER_ORANGE,{ORANGE} - Later Orange Livery,{ORANGE} - 后期橘色涂装
 STR_LATER_GREEN,{GREEN} - Later Green Livery,{GREEN} - 后期绿色涂装
-STR_XIHU, - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery, - {GREEN}西户铁路{BLACK}涂装
-STR_XIHU_REVERSE," - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery, reversed", - {GREEN}西户铁路{BLACK}涂装，倒转方向
-STR_DF4D_7000, - {GREEN}7000-{YELLOW}Series {BLACK}Livery, - {GREEN}7000{YELLOW}系{BLACK}涂装
-STR_SS7C_BANANA, - {YELLOW}Banana Yellow {BLACK}Livery, - {YELLOW}黄色{BLACK}涂装
-STR_FUZHOU, - Fuzhou Livery, - 福州机务段涂装
-STR_UKRAINE, - {YELLOW}Yellow {BLACK}and {BLUE}Blue {BLACK}Livery, - {YELLOW}“乌克兰”{BLUE}涂装
-STR_DF4B_DPRK, - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery, - {BLUE}蓝{DKGREEN}绿{BLACK}相间涂装
-STR_DF4D4000_DPRK, - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery, - {BLUE}蓝{DKGREEN}绿{BLACK}相间涂装
-STR_DF4BN_ORIGINAL, - {BLUE}DF4B With New Bodyshell, - {BLUE}新头型DF4B
-STR_DF4BN_REVERSE, - {BLUE}DF4B With New Bodyshell (Reversed), - {BLUE}新头型DF4B (反转)
-STR_ALTERNATIVE, - Alternative Original Livery, - 另一种原版涂装
-STR_DF_YELLOW, - {GOLD}Yellow {GREEN}Line {BLACK}Livery, - {GOLD}黄色{GREEN}窗线{BLACK}涂装
-STR_DF_WHITE, - {WHITE}White {GREEN}Line {BLACK}Livery, - {WHITE}白色{GREEN}窗线{BLACK}涂装
-STR_FACTORY, - Factory Livery, - 出厂涂装
-STR_LARGE_WINDSHIELD, - With Large Windsheild, - 带大烟板
-STR_SMALL_WINDSHIELD, - With Small Windsheild, - 带小烟板
-STR_WITHOUT_WINDSHIELD, - Without Windsheild, - 没有烟板
-STR_6Y2_LATE, - {GREEN}Late {BLACK}Livery, - {GREEN}晚期{BLACK}涂装
-STR_SS4_BLUEROOF, - {WHITE}White {BLACK}Livery with {BLUE}Blue{BLACK} Roof, - 白色涂装（车顶为{BLUE}蓝{BLACK}色）
-STR_SHENHUA, - {GOLD}Shenhua Groups Livery, - {GOLD}神华集团涂装
-STR_GUONENG, - {GOLD}CHN Energy Livery, - {GOLD}国家能源集团涂装
-STR_CHN2LAOS, - {GOLD}China-Laos Railway Livery, - {GOLD}中老铁路涂装
-STR_WUJING," - {GOLD}""Armed Police""Livery", - {GOLD}“武警”涂装
-STR_DFH7, - DFH7,
-STR_DFH7B, - DFH7B,
-STR_HXD_F, - HXD{COMMA}F,
-STR_FXD_B, - FXD{COMMA}B,
-STR_GONGQINGTUAN," - ""Gongqingtuan"" Livery", - 共青团号涂装
-STR_RANDOM_COLOR, - Ramdom Color, - 随机颜色
-STR_BUILD_YEAR, - According to build year, - 根据建造年份选择设计
-STR_YW22_ORIGINAL," - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240", - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
-STR_YW22_1966," - 1966 Design - Capacity 60, Comfort 288", - 1966年新设计 - 定员60，舒适度288
-STR_ORDINARY_GREEN, - {GREEN}Ordinary Green {BLACK}Livery, - {GREEN}绿皮车{BLACK}涂装
-STR_RED_WHITE, - {RED}Red {BLACK}and {WHITE}White, - {RED}红{WHITE}白{BLACK}相间
-STR_BLUE_RED_WHITE, - {BLUE}Blue-{RED}Red{WHITE}-White, - {BLUE}蓝{WHITE}白{RED}红{BLACK}相间涂装
-STR_JITONG, - {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {BLACK}Livery, - {BLUE}集{RED}通{WHITE}铁{BLUE}路{BLACK}涂装
-STR_LUCHAOGANG, - {LTBLUE}Shanghai-Luchaogang {BLACK}Livery, - {LTBLUE}沪芦列车{BLACK}涂装
-STR_LIAODONG, - Liaodong Peninsula Livery, - 辽东半岛号涂装
-STR_DETERIORATE, - Deteriorated Livery, - 老化后
-STR_STRENGTHEN, - With Strengthening Steel Sheet, - 带加强筋
-STR_URUMQI, - Urumqi Railway Bureau, - 乌鲁木齐铁路局
-STR_XIAN, - Xi'an Railway Bureau, - 西安铁路局
-STR_SHENYANG, - Shenyang Railway Bureau, - 沈阳铁路局
-STR_XIANXING, - Xianxing (Pioneer) Livery, - 先行号涂装
-STR_XIZI," - ""Xizi"" Livery", - 西子号涂装
-STR_XIZI_BUILD_YEAR," - ""Xizi"" (According to build year)", - 西子号（根据建造年份选择涂装）
-STR_GUANGSHEN, - Guangzhou-Shenzhen Railway Livery, - 广深铁路涂装
-STR_GUANGSHEN_CHANGKE_1," - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 1st)", - 广深铁路（长春客车厂一批次）涂装
-STR_GUANGSHEN_CHANGKE_2," - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 2nd)", - 广深铁路（长春客车厂二批次）涂装
-STR_GUANGSHEN_SIFANG_1," - Guangzhou-Shenzhen Railway Livery (Sifang Railway Vehicle Works, Production Batch 1st)", - 广深铁路（四方厂一批次）涂装
-STR_GUANGSHEN_SIFANG_2," - Guangzhou-Shenzhen Railway Livery (Sifang Railway Vehicle Works, Production Batch 2nd)", - 广深铁路（四方厂二批次）涂装
-STR_GUANGSHEN_PUZHEN_1," - Guangzhou-Shenzhen Railway Livery (Puzhen Railway Vehicle Works, Production Batch 1st)", - 广深铁路（浦镇厂一批次）涂装
-STR_GUANGSHEN_PUZHEN_2," - Guangzhou-Shenzhen Railway Livery (Puzhen Railway Vehicle Works, Production Batch 2nd)", - 广深铁路（浦镇厂二批次）涂装
-STR_GUANGSHEN_GREEN, - Guangzhou-Shenzhen Railway {DKGREEN}Green {BLACK}Livery (Unfinished), - 广深铁路绿色涂装（未完成）
-STR_JINWEN, - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLACK}Company, - {WHITE}金{RED}温{BLUE}铁{WHITE}路{BLACK}公司
-STR_JINWEN_GREEN," - {DKGREEN}""Gaozu Green"" {BLACK}livery of Jinhua-Wenzhou Railway Company", - 金温铁路涂装的{DKGREEN}刷绿版本
-STR_GAOZU_GREEN," - {DKGREEN}""Gaozu Green"" {BLACK}(unfinished except 25T)"," - {DKGREEN}""高阻绿"" {BLACK}(未完成, 25T除外)"
-STR_GAOZU_GREEN_BSP," - {DKGREEN}""Gaozu Green"" {BLACK}livery of BSP25T"," - BSP25T 的{DKGREEN}""高阻绿"" {BLACK}涂装"
-STR_BSP25T, - Made by BSP, - BSP制造
-STR_25T_HK, - Used in Guangzhou-Kowloon Railway version, - 广九直通车版本
-STR_25T_HK_GREEN," - {DKGREEN}""Gaozu Green"" {BLACK}livery of 25T used in Guangzhou-Kowloon Railway", - 广九直通车的刷{DKGREEN}绿{BLACK}涂装
-STR_QINGZANG, - Qinghai-Tibet Railway Livery (Made in China), - {DKGREEN}青藏铁路涂装 (国产)
-STR_QINGZANG_BSP, - Qinghai-Tibet Railway Livery (Made by BSP), - {DKGREEN}青藏铁路涂装 (BSP)
-STR_BEIJING, - Beijing Livery, - 北京铁路局涂装
-STR_BEIJING_FADE, - Beijing Livery (Colour Faded), - 褪色的北京铁路局涂装
-STR_WUHAN, - Wuhan Livery, - 武汉铁路局涂装
-STR_WRU, - Wuhan Railway Vocational College of Technology Livery, - 武汉铁路技术学院涂装
-STR_BEIJING2SHANGHAI, - Beijing-Shanghai Express Train Livery {CREAM}Cream-{BROWN}-Brown, - 北京至上海13/14次直快涂装
-STR_LATER, - Later Livery, - 后期涂装
-STR_EARLIER, - Earlier Livery, - 早期涂装
-STR_LONGQINGXIA," - ""Longqingxia"" Livery", - 龙庆峡号涂装
-STR_BEIJING2SHANGHAIALT, - Beijing-Shanghai Express Train Livery {BLUE}Blue-{WHITE}-White, - 北京至上海21/22次直快涂装
-STR_RESCUE, - Wrecker Livery, - 救援涂装
-STR_PROTOTYPE, - Prototype, - 原型
-STR_JINGTONG, - Beijing-Tongzhou Livery, - 京通号涂装
-STR_TIANFU, - Tianfu (Chengdu) Livery, - 成都天府号涂装
-STR_TIANFU_GREEN, - Tianfu (Chengdu) Livery with green stripes, - 成都天府号涂装，带绿色条带
-STR_GUANGZHU, - Guangzhou-Zhuhai Livery, - 广珠城际涂装
-STR_ZHENGJIAO, - Zhengzhou-Jiaozuo Livery, - 郑焦城际涂装
-STR_ZHUJI, - Zhuhai-Airport Livery, - 珠机城际涂装
-STR_ZHUSANJIAO_BLUE," - Pearl River Delta Intercity Railway, Blue", - 珠三角城际涂装(蓝)
-STR_ZHUSANJIAO_ORANGE," - Pearl River Delta Intercity Railway, Orange", - 珠三角城际涂装(橙)
-STR_JINSHAN, - Shanghai-Jinshan Livery, - 金山铁路涂装
-STR_GUANGQING, - Guangzhou-Qingyuan Livery, - 广清城际涂装
-STR_FOSHAN, - Foshan Livery, - 佛肇城际涂装
-STR_XIAOYONG, - Xiaoshan/Hangzhou-Ningbo Livery, - 萧甬铁路涂装
-STR_ASIAGAME, - {PURPLE}The 19th Asian Games Hangzhou {BLACK}Livery," - {PURPLE}杭州亚运会""润泽江南""{BLACK}涂装"
-STR_WINTER_OLYMPIC, - {LTBLUE}The XXIV Olympic Winter Games {BLACK}Livery," - {LTBLUE}北京冬奥会""瑞雪迎春""{BLACK}涂装"
-STR_HXD3D1893,"{RED} - HXD3D-1893 {GOLD}""Mao Zedong""","{RED} - HXD3D-1893 {GOLD}""毛泽东号"""
-STR_HXD1D1898,"{RED} - HXD1D-1893 {GOLD}""Zhou Enlai""","{RED} - HXD1D-1898 {GOLD}""周恩来号"""
-STR_HXD3D1886,"{RED} - HXD3D-1886 {GOLD}""Zhu De""","{RED} - HXD3D-1886 {GOLD}""朱德号"""
-STR_HXD3D1921,"{RED} - HXD3D-1921 {GOLD}""Communist""","{RED} - HXD3D-1921 ""共产党员号"""
+STR_RANDOM_COLOR,{BLACK} - Ramdom Color,{BLACK} - 随机颜色
+STR_XIHU,{BLACK} - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery,{BLACK} - {GREEN}西户铁路{BLACK}涂装
+STR_XIHU_REVERSE,"{BLACK} - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery, reversed",{BLACK} - {GREEN}西户铁路{BLACK}涂装，倒转方向
+STR_DF4D_7000,{BLACK} - {GREEN}7000-{YELLOW}Series {BLACK}Livery,{BLACK} - {GREEN}7000{YELLOW}系{BLACK}涂装
+STR_FUZHOU,{BLACK} - Fuzhou Livery,{BLACK} - 福州机务段涂装
+STR_UKRAINE,{BLACK} - {YELLOW}Yellow {BLACK}and {BLUE}Blue {BLACK}Livery,{BLACK} - {YELLOW}“乌克兰”{BLUE}涂装
+STR_DF4B_DPRK,{BLACK} - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery,{BLACK} - {BLUE}蓝{DKGREEN}绿{BLACK}相间涂装
+STR_DF4D4000_DPRK,{BLACK} - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery,{BLACK} - {BLUE}蓝{DKGREEN}绿{BLACK}相间涂装
+STR_DF4BN_ORIGINAL,{BLACK} - {BLUE}DF4B With New Bodyshell,{BLACK} - {BLUE}新头型DF4B
+STR_DF4BN_REVERSE,{BLACK} - {BLUE}DF4B With New Bodyshell (Reversed),{BLACK} - {BLUE}新头型DF4B (反转)
+STR_DF_YELLOW,{BLACK} - {GOLD}Yellow {GREEN}Line {BLACK}Livery,{BLACK} - {GOLD}黄色{GREEN}窗线{BLACK}涂装
+STR_DF_WHITE,{BLACK} - {WHITE}White {GREEN}Line {BLACK}Livery,{BLACK} - {WHITE}白色{GREEN}窗线{BLACK}涂装
+STR_LARGE_WINDSHIELD,{BLACK} - With Large Windsheild,{BLACK} - 带大烟板
+STR_SMALL_WINDSHIELD,{BLACK} - With Small Windsheild,{BLACK} - 带小烟板
+STR_WITHOUT_WINDSHIELD,{BLACK} - Without Windsheild,{BLACK} - 没有烟板
+STR_6Y2_LATE,{BLACK} - {GREEN}Late {BLACK}Livery,{BLACK} - {GREEN}晚期{BLACK}涂装
+STR_SS4_BLUEROOF,{BLACK} - {WHITE}White {BLACK}Livery with {BLUE}Blue{BLACK} Roof,{BLACK} - 白色涂装（车顶为{BLUE}蓝{BLACK}色）
+STR_SHENHUA,{BLACK} - {GOLD}Shenhua Groups Livery,{BLACK} - {GOLD}神华集团涂装
+STR_GUONENG,{BLACK} - {GOLD}CHN Energy Livery,{BLACK} - {GOLD}国家能源集团涂装
+STR_CHN2LAOS,{BLACK} - {GOLD}China-Laos Railway Livery,{BLACK} - {GOLD}中老铁路涂装
+STR_WUJING,"{BLACK} - {GOLD}""Armed Police""Livery",{BLACK} - {GOLD}“武警”涂装
+STR_DFH7,{BLACK} - DFH7,{BLACK}
+STR_DFH7B,{BLACK} - DFH7B,{BLACK}
+STR_HXD_F,{BLACK} - HXD{COMMA}F,{BLACK}
+STR_FXD_B,{BLACK} - FXD{COMMA}B,{BLACK}
+STR_GONGQINGTUAN,"{BLACK} - ""Gongqingtuan"" Livery",{BLACK} - 共青团号涂装
+STR_BUILD_YEAR,{BLACK} - According to build year,{BLACK} - 根据建造年份选择设计
+STR_YW22_ORIGINAL,"{BLACK} - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240",{BLACK} - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
+STR_YW22_1966,"{BLACK} - 1966 Design - Capacity 60, Comfort 288",{BLACK} - 1966年新设计 - 定员60，舒适度288
+STR_ORDINARY_GREEN,{BLACK} - {GREEN}Ordinary Green {BLACK}Livery,{BLACK} - {GREEN}绿皮车{BLACK}涂装
+STR_RED_WHITE,{BLACK} - {RED}Red {BLACK}and {WHITE}White,{BLACK} - {RED}红{WHITE}白{BLACK}相间
+STR_BLUE_RED_WHITE,{BLACK} - {BLUE}Blue-{RED}Red{WHITE}-White,{BLACK} - {BLUE}蓝{WHITE}白{RED}红{BLACK}相间涂装
+STR_JITONG,{BLACK} - {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {BLACK}Livery,{BLACK} - {BLUE}集{RED}通{WHITE}铁{BLUE}路{BLACK}涂装
+STR_LUCHAOGANG,{BLACK} - {LTBLUE}Shanghai-Luchaogang {BLACK}Livery,{BLACK} - {LTBLUE}沪芦列车{BLACK}涂装
+STR_LIAODONG,{BLACK} - Liaodong Peninsula Livery,{BLACK} - 辽东半岛号涂装
+STR_STRENGTHEN,{BLACK} - With Strengthening Steel Sheet,{BLACK} - 带加强筋
+STR_URUMQI,{BLACK} - Urumqi Railway Bureau,{BLACK} - 乌鲁木齐铁路局
+STR_XIAN,{BLACK} - Xi'an Railway Bureau,{BLACK} - 西安铁路局
+STR_SHENYANG,{BLACK} - Shenyang Railway Bureau,{BLACK} - 沈阳铁路局
+STR_XIANXING,{BLACK} - Xianxing (Pioneer) Livery,{BLACK} - 先行号涂装
+STR_XIZI,"{BLACK} - ""Xizi"" Livery",{BLACK} - 西子号涂装
+STR_XIZI_BUILD_YEAR,"{BLACK} - ""Xizi"" (According to build year)",{BLACK} - 西子号（根据建造年份选择涂装）
+STR_GUANGSHEN,{BLACK} - Guangzhou-Shenzhen Railway Livery,{BLACK} - 广深铁路涂装
+STR_GUANGSHEN_CHANGKE_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 1st)",{BLACK} - 广深铁路（长春客车厂一批次）涂装
+STR_GUANGSHEN_CHANGKE_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 2nd)",{BLACK} - 广深铁路（长春客车厂二批次）涂装
+STR_GUANGSHEN_SIFANG_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Sifang Railway Vehicle Works, Production Batch 1st)",{BLACK} - 广深铁路（四方厂一批次）涂装
+STR_GUANGSHEN_SIFANG_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Sifang Railway Vehicle Works, Production Batch 2nd)",{BLACK} - 广深铁路（四方厂二批次）涂装
+STR_GUANGSHEN_PUZHEN_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Puzhen Railway Vehicle Works, Production Batch 1st)",{BLACK} - 广深铁路（浦镇厂一批次）涂装
+STR_GUANGSHEN_PUZHEN_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Puzhen Railway Vehicle Works, Production Batch 2nd)",{BLACK} - 广深铁路（浦镇厂二批次）涂装
+STR_GUANGSHEN_GREEN,{BLACK} - Guangzhou-Shenzhen Railway {DKGREEN}Green {BLACK}Livery (Unfinished),{BLACK} - 广深铁路绿色涂装（未完成）
+STR_JINWEN,{BLACK} - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLACK}Company,{BLACK} - {WHITE}金{RED}温{BLUE}铁{WHITE}路{BLACK}公司
+STR_JINWEN_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of Jinhua-Wenzhou Railway Company",{BLACK} - 金温铁路涂装的{DKGREEN}刷绿版本
+STR_GAOZU_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}(unfinished except 25T)","{BLACK} - {DKGREEN}""高阻绿"" {BLACK}(未完成, 25T除外)"
+STR_GAOZU_GREEN_BSP,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of BSP25T","{BLACK} - BSP25T 的{DKGREEN}""高阻绿"" {BLACK}涂装"
+STR_BSP25T,{BLACK} - Made by BSP,{BLACK} - BSP制造
+STR_25T_HK,{BLACK} - Used in Guangzhou-Kowloon Railway version,{BLACK} - 广九直通车版本
+STR_25T_HK_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of 25T used in Guangzhou-Kowloon Railway",{BLACK} - 广九直通车的刷{DKGREEN}绿{BLACK}涂装
+STR_QINGZANG,{BLACK} - Qinghai-Tibet Railway Livery (Made in China),{BLACK} - {DKGREEN}青藏铁路涂装 (国产)
+STR_QINGZANG_BSP,{BLACK} - Qinghai-Tibet Railway Livery (Made by BSP),{BLACK} - {DKGREEN}青藏铁路涂装 (BSP)
+STR_BEIJING,{BLACK} - Beijing Livery,{BLACK} - 北京铁路局涂装
+STR_BEIJING_FADE,{BLACK} - Beijing Livery (Colour Faded),{BLACK} - 褪色的北京铁路局涂装
+STR_WUHAN,{BLACK} - Wuhan Livery,{BLACK} - 武汉铁路局涂装
+STR_WRU,{BLACK} - Wuhan Railway Vocational College of Technology Livery,{BLACK} - 武汉铁路技术学院涂装
+STR_BEIJING2SHANGHAI,{BLACK} - Beijing-Shanghai Express Train Livery {CREAM}Cream-{BROWN}-Brown,{BLACK} - 北京至上海13/14次直快涂装
+STR_LONGQINGXIA,"{BLACK} - ""Longqingxia"" Livery",{BLACK} - 龙庆峡号涂装
+STR_BEIJING2SHANGHAIALT,{BLACK} - Beijing-Shanghai Express Train Livery {BLUE}Blue-{WHITE}-White,{BLACK} - 北京至上海21/22次直快涂装
+STR_RESCUE,{BLACK} - Wrecker Livery,{BLACK} - 救援涂装
+STR_JINGTONG,{BLACK} - Beijing-Tongzhou Livery,{BLACK} - 京通号涂装
+STR_TIANFU,{BLACK} - Tianfu (Chengdu) Livery,{BLACK} - 成都天府号涂装
+STR_TIANFU_GREEN,{BLACK} - Tianfu (Chengdu) Livery with green stripes,{BLACK} - 成都天府号涂装，带绿色条带
+STR_GUANGZHU,{BLACK} - Guangzhou-Zhuhai Livery,{BLACK} - 广珠城际涂装
+STR_ZHENGJIAO,{BLACK} - Zhengzhou-Jiaozuo Livery,{BLACK} - 郑焦城际涂装
+STR_ZHUJI,{BLACK} - Zhuhai-Airport Livery,{BLACK} - 珠机城际涂装
+STR_ZHUSANJIAO_BLUE,"{BLACK} - Pearl River Delta Intercity Railway, Blue",{BLACK} - 珠三角城际涂装(蓝)
+STR_ZHUSANJIAO_ORANGE,"{BLACK} - Pearl River Delta Intercity Railway, Orange",{BLACK} - 珠三角城际涂装(橙)
+STR_JINSHAN,{BLACK} - Shanghai-Jinshan Livery,{BLACK} - 金山铁路涂装
+STR_GUANGQING,{BLACK} - Guangzhou-Qingyuan Livery,{BLACK} - 广清城际涂装
+STR_FOSHAN,{BLACK} - Foshan Livery,{BLACK} - 佛肇城际涂装
+STR_XIAOYONG,{BLACK} - Xiaoshan/Hangzhou-Ningbo Livery,{BLACK} - 萧甬铁路涂装
+STR_ASIAGAME,{BLACK} - {PURPLE}The 19th Asian Games Hangzhou {BLACK}Livery,"{BLACK} - {PURPLE}杭州亚运会""润泽江南""{BLACK}涂装"
+STR_WINTER_OLYMPIC,{BLACK} - {LTBLUE}The XXIV Olympic Winter Games {BLACK}Livery,"{BLACK} - {LTBLUE}北京冬奥会""瑞雪迎春""{BLACK}涂装"
+STR_HXD3D1893,"{BLACK}{RED} - HXD3D-1893 {GOLD}""Mao Zedong""","{BLACK}{RED} - HXD3D-1893 {GOLD}""毛泽东号"""
+STR_HXD1D1898,"{BLACK}{RED} - HXD1D-1893 {GOLD}""Zhou Enlai""","{BLACK}{RED} - HXD1D-1898 {GOLD}""周恩来号"""
+STR_HXD3D1886,"{BLACK}{RED} - HXD3D-1886 {GOLD}""Zhu De""","{BLACK}{RED} - HXD3D-1886 {GOLD}""朱德号"""
+STR_HXD3D1921,"{BLACK}{RED} - HXD3D-1921 {GOLD}""Communist""","{BLACK}{RED} - HXD3D-1921 ""共产党员号"""
 # Decay,,
 STR_COMFORT_VERY_LOW,{BLACK}Comfort: {RED}Very low ({COMMA}),{BLACK}舒适度：{RED}极低（{COMMA}）
 STR_COMFORT_LOW,{BLACK}Comfort: {ORANGE}Low ({COMMA}),{BLACK}舒适度：{ORANGE}较低（{COMMA}）
