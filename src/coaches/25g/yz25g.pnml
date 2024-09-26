@@ -44,7 +44,7 @@ switch (FEAT_TRAINS, SELF, switch_yz25g_cargo_subtype, cargo_subtype) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25g_graphics_subtype_year_depend, build_year) {
-    0..2014: spriteset_yz25g_original; // Unfinished
+    0..2014: spriteset_yz25g_original;
     spriteset_yz25g_green;
 }
 switch (FEAT_TRAINS, SELF, switch_yz25g_graphics_subtype_0, param_gaozulv) {

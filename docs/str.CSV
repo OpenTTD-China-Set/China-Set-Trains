@@ -724,8 +724,9 @@ STR_URUMQI,{BLACK} - Urumqi Railway Bureau,{BLACK} - 乌鲁木齐铁路局
 STR_XIAN,{BLACK} - Xi'an Railway Bureau,{BLACK} - 西安铁路局
 STR_SHENYANG,{BLACK} - Shenyang Railway Bureau,{BLACK} - 沈阳铁路局
 STR_XIANXING,{BLACK} - Xianxing (Pioneer) Livery,{BLACK} - 先行号涂装
-STR_XIZI,"{BLACK} - ""Xizi"" Livery",{BLACK} - 西子号涂装
-STR_XIZI_BUILD_YEAR,"{BLACK} - ""Xizi"" (According to build year)",{BLACK} - 西子号（根据建造年份选择涂装）
+STR_XIZI,"{BLACK} - ""Xizi"" Livery","{BLACK} - {LTBLUE}""西子号""{BLACK}涂装"
+STR_XIZI_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of ""Xizi"" Train","{BLACK} - {DKGREEN}""西子号""的刷绿{BLACK}涂装"
+STR_XIZI_BUILD_YEAR,"{BLACK} - ""Xizi"" (According to build year)","{BLACK} - ""西子号""（根据建造年份选择涂装）"
 STR_GUANGSHEN,{BLACK} - Guangzhou-Shenzhen Railway Livery,{BLACK} - 广深铁路涂装
 STR_GUANGSHEN_CHANGKE_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 1st)",{BLACK} - 广深铁路（长春客车厂一批次）涂装
 STR_GUANGSHEN_CHANGKE_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 2nd)",{BLACK} - 广深铁路（长春客车厂二批次）涂装
@@ -733,7 +734,7 @@ STR_GUANGSHEN_SIFANG_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Sifang Rail
 STR_GUANGSHEN_SIFANG_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Sifang Railway Vehicle Works, Production Batch 2nd)",{BLACK} - 广深铁路（四方厂二批次）涂装
 STR_GUANGSHEN_PUZHEN_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Puzhen Railway Vehicle Works, Production Batch 1st)",{BLACK} - 广深铁路（浦镇厂一批次）涂装
 STR_GUANGSHEN_PUZHEN_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Puzhen Railway Vehicle Works, Production Batch 2nd)",{BLACK} - 广深铁路（浦镇厂二批次）涂装
-STR_GUANGSHEN_GREEN,{BLACK} - Guangzhou-Shenzhen Railway {DKGREEN}Green {BLACK}Livery (Unfinished),{BLACK} - 广深铁路绿色涂装（未完成）
+STR_GUANGSHEN_GREEN,{BLACK} - {DKGREEN}Guangzhou-Shenzhen Railway Green {BLACK}Livery,{BLACK} - {DKGREEN}广深铁路刷绿绿涂装
 STR_JINWEN,{BLACK} - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLACK}Company,{BLACK} - {WHITE}金{RED}温{BLUE}铁{WHITE}路{BLACK}公司
 STR_JINWEN_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of Jinhua-Wenzhou Railway Company",{BLACK} - 金温铁路涂装的{DKGREEN}刷绿版本
 STR_NANHU,"{BLACK} - {RED}""South Lake - 1921"" {BLACK}Tourist Train","{BLACK} - {RED}""南湖-1921"" {BLACK}旅游列车"
@@ -770,6 +771,7 @@ STR_HXD3D1893,"{BLACK}{RED} - HXD3D-1893 {GOLD}""Mao Zedong""","{BLACK}{RED} - H
 STR_HXD1D1898,"{BLACK}{RED} - HXD1D-1893 {GOLD}""Zhou Enlai""","{BLACK}{RED} - HXD1D-1898 {GOLD}""周恩来号"""
 STR_HXD3D1886,"{BLACK}{RED} - HXD3D-1886 {GOLD}""Zhu De""","{BLACK}{RED} - HXD3D-1886 {GOLD}""朱德号"""
 STR_HXD3D1921,"{BLACK}{RED} - HXD3D-1921 {GOLD}""Communist""","{BLACK}{RED} - HXD3D-1921 ""共产党员号"""
+STR_NENGYEQING48,"{BLACK} - {LTBLUE}""Little Bear of Neng-Yeqing"" {BLACK}Livery","{BLACK} - {LTBLUE}""能也庆的小熊"" {BLACK}涂装"
 # Decay,,
 STR_COMFORT_VERY_LOW,{BLACK}Comfort: {RED}Very low ({COMMA}),{BLACK}舒适度：{RED}极低（{COMMA}）
 STR_COMFORT_LOW,{BLACK}Comfort: {ORANGE}Low ({COMMA}),{BLACK}舒适度：{ORANGE}较低（{COMMA}）
