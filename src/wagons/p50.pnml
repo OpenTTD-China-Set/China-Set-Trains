@@ -113,11 +113,12 @@ item (FEAT_TRAINS, p50) {
         name:                           string(STR_NAME_P50);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					p1;
 
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(1956,01,01);
+        introduction_date:              date(1953,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
         track_type:                     SACN;

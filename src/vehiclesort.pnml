@@ -211,6 +211,7 @@ sort (FEAT_TRAINS, [
     xl25t_sspe,
     uz25t,
     kd25t,
+    p1,
     p50,
     p60,
     p61,

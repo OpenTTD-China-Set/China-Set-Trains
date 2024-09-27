@@ -7,33 +7,30 @@ switch (FEAT_TRAINS, SELF, switch_n5_name, getbits(extra_callback_info1, 0, 8) =
 
 // Purchase Menu
 spriteset (spriteset_n5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("wagons", "n5")
+    template_purchase ("wagons/n5", "n5")
 }
 
 // Vehicle
 spriteset (spriteset_n5_original_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("wagons", "n5")
+    template_standard ("wagons/n5", "n5")
 }
 spriteset (spriteset_n5_original_bucket_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("wagons", "n5-bucket-half")
+    template_standard ("wagons/n5", "n5-bucket-half")
 }
 spriteset (spriteset_n5_original_bucket_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("wagons", "n5-bucket-full")
+    template_standard ("wagons/n5", "n5-bucket-full")
 }
-spriteset (spriteset_n5_original_goods_33percent, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("wagons", "n5-goods-33percent")
-}
-spriteset (spriteset_n5_original_goods_66percent, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("wagons", "n5-goods-66percent")
+spriteset (spriteset_n5_original_goods_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/n5", "n5-goods-half")
 }
 spriteset (spriteset_n5_original_goods_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("wagons", "n5-goods-full")
+    template_standard ("wagons/n5", "n5-goods-full")
 }
 spriteset (spriteset_n5_original_metal_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("wagons", "n5-steel-half")
+    template_standard ("wagons/n5", "n5-steel-half")
 }
 spriteset (spriteset_n5_original_metal_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("wagons", "n5-steel-full")
+    template_standard ("wagons/n5", "n5-steel-full")
 }
 
 switch (FEAT_TRAINS, SELF, switch_n5_original_metal, cargo_count < 30) {
@@ -46,14 +43,10 @@ switch (FEAT_TRAINS, SELF, switch_n5_original_bucket, cargo_count < 30) {
     spriteset_n5_original_bucket_half;
 }
 
-switch (FEAT_TRAINS, SELF, switch_n5_original_goods_more_than_33_percent, cargo_count < 35) {
-    0: spriteset_n5_original_goods_full;
-    spriteset_n5_original_goods_66percent;
-}
 
-switch (FEAT_TRAINS, SELF, switch_n5_original_goods_more_than_0_percent, cargo_count < 20) {
-    0: switch_n5_original_goods_more_than_33_percent;
-    spriteset_n5_original_goods_33percent;
+switch (FEAT_TRAINS, SELF, switch_n5_original_goods_more_than_0_percent, cargo_count < 38) {
+    0: spriteset_n5_original_goods_full;
+    spriteset_n5_original_goods_half;
 }
 
 switch (FEAT_TRAINS, SELF, switch_n5_original_all_cargo, cargo_type_in_veh) {
@@ -181,7 +174,7 @@ item (FEAT_TRAINS, n5) {
         articulated_part:               switch_n5_articulated_part;
 
         // Stats
-        length:                         switch_length_2_3_2;
+        length:                         switch_length_2_1_2;
         cargo_capacity:                 switch_n5_capacity;
         loading_speed:                  switch_n5_loading_speed() << param_loading_speed;
         cargo_age_period:               185 << (param_cargo_decay + param_wagoncargodecay);
