@@ -12,6 +12,11 @@
 // IDs
 #include "src/vehicleid.pnml"
 
+
+//Misc
+#include "src/misc/luggageroom_25.pnml"
+#include "src/misc/luggageroom_s25.pnml"
+
 // Horse
 
 
@@ -67,10 +72,13 @@
 
 #include "src/coaches/25g/yz25g.pnml"
 #include "src/coaches/25g/rz25g.pnml"
+#include "src/coaches/25g/rz225g.pnml"
+#include "src/coaches/25g/rzt25g.pnml"
 #include "src/coaches/25g/yw25g.pnml"
 #include "src/coaches/25g/rw25g.pnml"
 #include "src/coaches/25g/ca25g.pnml"
 #include "src/coaches/25g/xl25g.pnml"
+#include "src/coaches/25g/uz25g.pnml"
 #include "src/coaches/25g/kd25g.pnml"
 
 #include "src/coaches/25k/yz25k.pnml"
@@ -91,6 +99,7 @@
 
 #include "src/coaches/25t/yz25t.pnml"
 #include "src/coaches/25t/rz25t.pnml"
+#include "src/coaches/25t/rzxl25t.pnml"
 #include "src/coaches/25t/yw25t.pnml"
 #include "src/coaches/25t/rw25t.pnml"
 #include "src/coaches/25t/ca25t.pnml"
@@ -122,9 +131,12 @@
 #include "src/coaches/31/yz31.pnml"
 
 // Wagons
+#include "src/wagons/c1.pnml"
 #include "src/wagons/c62.pnml"
 #include "src/wagons/c64.pnml"
 #include "src/wagons/c70.pnml"
+#include "src/wagons/c80.pnml"
+#include "src/wagons/p1.pnml"
 #include "src/wagons/p50.pnml"
 #include "src/wagons/p60.pnml"
 #include "src/wagons/p61.pnml"
@@ -146,6 +158,7 @@
 #include "src/wagons/g17.pnml"
 #include "src/wagons/g50.pnml"
 #include "src/wagons/g60.pnml"
+#include "src/wagons/g70.pnml"
 #include "src/wagons/gn70.pnml"
 #include "src/wagons/gn80.pnml"
 #include "src/wagons/n60.pnml"
@@ -166,6 +179,8 @@
 #include "src/function2.pnml"
 
 // Steam
+#include "src/steam/jf1.pnml"
+#include "src/steam/sl6.pnml"
 #include "src/steam/sy.pnml"
 
 // Diesel

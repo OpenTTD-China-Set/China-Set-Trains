@@ -73,8 +73,8 @@ switch (FEAT_TRAINS, SELF, switch_cr200jb_wagon_graphics, position_in_consist_fr
     switch_cr200jb_middle_graphics;
 } */
 switch (FEAT_TRAINS, SELF, cr200jbwagon, vehicle_type_id) {
-    1024..1035: return onlyallowcst;
-    9223: return onlyallowcst;
+    1024..1035: onlyallowcst;
+    9223: onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 

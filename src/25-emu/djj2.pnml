@@ -24,9 +24,9 @@ switch (FEAT_TRAINS, SELF, switch_djj2_articulated_part, extra_callback_info1) {
 }
 
 switch (FEAT_TRAINS, SELF, djj2wagon, vehicle_type_id) {
-    1024..1025: return onlyallowcst;
-    1035: return onlyallowcst;
-    9256: return onlyallowcst;
+    1024..1025: onlyallowcst;
+    1035: onlyallowcst;
+    9256: onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 

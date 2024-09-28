@@ -19,6 +19,9 @@ spriteset (spriteset_xl25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_bspxl25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "bspxl25t")
 }
+spriteset (spriteset_xl25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "xl25t-xz")
+}
 
 switch (FEAT_TRAINS, SELF, switch_xl25t_articulated_part, extra_callback_info1) {
     1..2: return xl25t;
@@ -30,6 +33,9 @@ switch (FEAT_TRAINS, SELF, switch_xl25t_cargo_subtype, cargo_subtype) {
     0: string(STR_BUILD_YEAR);
     1: string(STR_ORIGINAL);
     2: string(STR_BSP25T);
+/*     3: string(STR_GAOZU_GREEN); */
+/*     4: string(STR_GAOZU_GREEN_BSP); */
+    3: string(STR_QINGZANG);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -43,14 +49,14 @@ switch (FEAT_TRAINS, SELF, switch_xl25t_graphics_subtype_0, param_gaozulv) {
     1: switch_xl25t_graphics_subtype_year_depend;
     spriteset_xl25t_original;
 }
-/* switch (FEAT_TRAINS, SELF, switch_xl25t_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_xl25t_original;
-    empty_sprites;
-} */
+
 switch (FEAT_TRAINS, SELF, switch_xl25t_graphics_subtype, cargo_subtype) {
     0: switch_xl25t_graphics_subtype_0;
     1: spriteset_xl25t_original;
     2: spriteset_bspxl25t_original;
+/*     3:; */
+/*     4:; */
+    3: spriteset_xl25t_qingzang;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25t_graphics, position_in_articulated_veh % 3) {
@@ -75,7 +81,7 @@ item (FEAT_TRAINS, xl25t) {
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2002,01,01);
+        introduction_date:              date(2003,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
         track_type:                     SACN;
@@ -118,8 +124,8 @@ item (FEAT_TRAINS, xl25t) {
         cost_factor:                    8;
         running_cost_factor:            7 * runningcostfactor();
         purchase_running_cost_factor:   28;
-        purchase_cargo_capacity:        71/3;
-        name:                            switch_xl25t_name;
+        purchase_cargo_capacity:        80/3;
+        name:                           switch_xl25t_name;
 
     }
 }

@@ -1,0 +1,89 @@
+// Begin JF1
+
+// Graphics
+
+spriteset (spriteset_jf1_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase_xl ("steam/extralength", "jf1")
+}
+
+spriteset (spriteset_jf1_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("steam", "jf1-front")
+}
+
+spriteset (spriteset_jf1_tender, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("steam", "jf1-tender")
+}
+
+switch (FEAT_TRAINS, SELF, switch_jf1_articulated_part, extra_callback_info1) {
+    1..2: return jf1;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_jf1_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_jf1_front;
+    2: spriteset_jf1_tender;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, jf1) {
+    property {
+        // Don't Change - It is crucial
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        climates_available:             ALL_CLIMATES;
+
+        // Don't Change - Unless it is not a steam locomotive
+        engine_class:                   ENGINE_CLASS_STEAM;
+        running_cost_base:              RUNNING_COST_STEAM;
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        // This is for freight locos
+        ai_special_flag:                AI_FLAG_CARGO;
+
+        // Don't Change - It is useless
+        cargo_capacity:                 1;
+        cost_factor:                    1;
+        running_cost_factor:            1;
+
+        // Change them accordingly
+        name:                           string(STR_NAME_JF1);
+        introduction_date:              date(1950,09,30);
+        model_life:                     60;
+        retire_early:                   40;
+        vehicle_life:                   30;
+        track_type:                     SABN;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+        speed:                          80 km/h;
+        power:                          1745 hpM;
+        weight:                         174.85 ton;
+        tractive_effort_coefficient:    0.1375;
+        reliability_decay:              18;
+        bitmask_vehicle_info:           0;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_JF1), string(STR_ALIASNAME_JF1), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_HIGH, 18));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_jf1_graphics;
+        purchase:                       spriteset_jf1_purchase;
+        articulated_part:               switch_jf1_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_6_6;
+        cargo_capacity:                 0;
+        cost_factor:                    64;
+        running_cost_factor:            45 * runningcostfactor();
+        purchase_running_cost_factor:   180;
+        purchase_cargo_capacity:        0;
+    }
+}
+
+// End JF1

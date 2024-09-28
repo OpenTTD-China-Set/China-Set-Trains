@@ -46,7 +46,7 @@ item (FEAT_TRAINS, w6) {
         name:                           string(STR_NAME_W6);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					3098;
+        variant_group:					p1;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -88,7 +88,7 @@ item (FEAT_TRAINS, w6) {
         // Stats
         length:                         switch_length_2_4_2;
         cargo_capacity:                 switch_w6_capacity;
-        cargo_age_period:               185 << param_cargo_decay;
+        cargo_age_period:               185 << (param_cargo_decay + param_wagoncargodecay);
         cost_factor:                    5;
         running_cost_factor:            4 * runningcostfactor();
         purchase_running_cost_factor:   16;

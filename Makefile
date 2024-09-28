@@ -9,6 +9,8 @@
 #       b is the MAJOR_VERSION which increases by 1 each "major" release and decreases to 0 once a increases by 1,
 #       a is the BREAKING_VERSION which increases by 1 only if something breakground happens to this NewGRF.
 
+SHELL := /bin/bash
+
 -include ./Makefile.config
 -include ./Makefile.dist
 
@@ -29,17 +31,17 @@ MANIFEST 	:= manifest.json
 all: sprites code bundle_tar
 
 # voxel paths
-VOX_FILES = $(shell find $(VOX_DIR) -name "*.vox")
+VOX_FILES = $(wildcard $(VOX_DIR)/*.vox wildcard $(VOX_DIR)/*/*.vox)
 
-VOX_8BPP_FILES = $(VOX:.vox=_8bpp.png)
-VOX_32BPP_FILES = $(VOX:.vox=_32bpp.png)
-VOX_MASK_FILES = $(VOX:.vox=_mask.png)
+VOX_8BPP_FILES = $(addsuffix _8bpp.png, $(basename $(VOX_FILES)))
+VOX_32BPP_FILES = $(addsuffix _32bpp.png, $(basename $(VOX_FILES)))
+VOX_MASK_FILES = $(addsuffix _mask.png, $(basename $(VOX_FILES)))
 
 VOX_GENREATED_FILES = $(VOX_8BPP_FILES) $(VOX_32BPP_FILES) $(VOX_MASK_FILES)
 
 %_8bpp.png %_32bpp.png %_mask.png: %.vox
-	@echo "Rendering, manifest = $(MANIFEST), palette = $(dir $<)/$(PALETTE), $<"
-	@$(GORENDER) -m $(MANIFEST) --palette $(dir $<)/$(PALETTE) $<
+	@echo "Rendering, manifest = $(dir $<)/$(MANIFEST), palette = $(dir $<)/$(PALETTE), $<"
+	@$(GORENDER) -m $(dir $<)/$(MANIFEST) --palette $(dir $<)/$(PALETTE) $<
 
 # sprites
 sprites: $(VOX_GENREATED_FILES)
