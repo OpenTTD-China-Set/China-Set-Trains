@@ -75,7 +75,7 @@ item (FEAT_TRAINS, c1) {
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(1949,10,01);
+        introduction_date:              date(1949,01,01);
         model_life:                     50;
         retire_early:                   25;
         vehicle_life:                   30;

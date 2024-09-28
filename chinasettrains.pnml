@@ -33,6 +33,7 @@
 
 // Coaches
 
+#include "src/coaches/fixed-coaches/yz1.pnml"
 #include "src/coaches/22/yz22.pnml"
 #include "src/coaches/22/rz22.pnml"
 #include "src/coaches/22/yw22.pnml"

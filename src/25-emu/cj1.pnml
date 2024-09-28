@@ -216,7 +216,7 @@ item (FEAT_TRAINS, cj1) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_CJ1_CAN_ATTACH_WAGON), string(STR_CJ1_NICKNAME), string(STR_RELDEC_LOW, 8), string(STR_CJ1_CONSIST), string(STR_CJ1_HEAD_SEAT));
+        additional_text:                string(STR_DESC_6, string(STR_CJ1_CAN_ATTACH_WAGON), string(STR_CJ1_NICKNAME), string(STR_ALIASNAME_CJ1), string(STR_RELDEC_LOW, 8), string(STR_CJ1_CONSIST), string(STR_CJ1_HEAD_SEAT));
         can_attach_wagon:               onlyze;
         start_stop:                     mu4to24car;
         // Graphics
