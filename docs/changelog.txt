@@ -7,7 +7,7 @@ China Set: Trains Changelog
 
 0.3.2.171 (30/9/2024)
 --------------------
-Add: RZ225G, UZ25G, P1
+Add: RZ225G, UZ25G, P1, YZ1
 Fix #52: length of N5
 Renewal the sprites of RZ125Z, RZ225Z, RZT25Z
 
