@@ -79,16 +79,7 @@ grf {
             };
         }
     }
-    param 5 {
-		param_gaozulv {
-			name: string(STR_PARAM_GAOZULV);
-			desc: string(STR_PARAM_GAOZULV_DESC);
-			type: bool;
-			bit:  0;
-			def_value: 1;
-		}
-	}
-    param 6 {
+    param 4 {
 		param_wagoncargodecay {
 			name: string(STR_PARAM_WAGON_CARGO_DECAY);
 			desc: string(STR_PARAM_WAGON_CARGO_DECAY_DESC);
@@ -101,6 +92,15 @@ grf {
                 1: string(STR_PARAM_LONG);
                 2: string(STR_PARAM_VERY_LONG);
             };
+		}
+	}
+    param 5 {
+		param_gaozulv {
+			name: string(STR_PARAM_GAOZULV);
+			desc: string(STR_PARAM_GAOZULV_DESC);
+			type: bool;
+			bit:  0;
+			def_value: 1;
 		}
 	}
 }

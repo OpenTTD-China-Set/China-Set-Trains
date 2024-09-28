@@ -3,7 +3,7 @@
 // Graphics
 
 spriteset (spriteset_sl6_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("steam", "sl6-l")
+    template_purchase_xl ("steam/extralength", "sl6-l")
 }
 
 spriteset (spriteset_sl6_l_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {

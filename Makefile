@@ -40,8 +40,8 @@ VOX_MASK_FILES = $(addsuffix _mask.png, $(basename $(VOX_FILES)))
 VOX_GENREATED_FILES = $(VOX_8BPP_FILES) $(VOX_32BPP_FILES) $(VOX_MASK_FILES)
 
 %_8bpp.png %_32bpp.png %_mask.png: %.vox
-	@echo "Rendering, manifest = $(MANIFEST), palette = $(dir $<)/$(PALETTE), $<"
-	@$(GORENDER) -m $(MANIFEST) --palette $(dir $<)/$(PALETTE) $<
+	@echo "Rendering, manifest = $(dir $<)/$(MANIFEST), palette = $(dir $<)/$(PALETTE), $<"
+	@$(GORENDER) -m $(dir $<)/$(MANIFEST) --palette $(dir $<)/$(PALETTE) $<
 
 # sprites
 sprites: $(VOX_GENREATED_FILES)

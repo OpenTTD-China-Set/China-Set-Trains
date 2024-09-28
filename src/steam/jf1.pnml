@@ -3,7 +3,7 @@
 // Graphics
 
 spriteset (spriteset_jf1_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("steam", "jf1")
+    template_purchase_xl ("steam/extralength", "jf1")
 }
 
 spriteset (spriteset_jf1_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
