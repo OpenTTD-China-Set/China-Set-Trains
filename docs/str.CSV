@@ -32,6 +32,8 @@ STR_PARAM_WAGON_CARGO_DECAY,Set Cargo Age Period of Wagons Individually,单独�
 STR_PARAM_WAGON_CARGO_DECAY_DESC,"Set cargo age period of wagons individually, overlay calculations on option ""Cargo Age Period"". It makes long-distance transport of frieght be possible.","单独设置货车的货物贬值周期，在选项""货物贬值周期""上叠加计算。这个选项使长途货物运输成为可能"
 STR_USED_WITH_DYNAMIC_ENGINES,"This GRF needs dynamic_engines to be turned on. Open console, and type ""setting dynamic_engines 1"".","请切换至控制台模式, 键入 ""setting dynamic_engines 1"", 否则您无法游玩中国包."
 # Name,,
+STR_NAME_YZ1,YZ1 (Passenger Coach),YZ1 (客车)
+STR_NAME_YZ21,YZ21 (Passenger Coach),YZ21 (客车)
 STR_NAME_YZ22,YZ22 (Passenger Coach),YZ22 (客车)
 STR_NAME_RZ22,RZ22 (Passenger Coach),RZ22 (客车)
 STR_NAME_YW22,YW22 (Passenger Coach),YW22 (客车)
@@ -292,6 +294,8 @@ STR_NAME_WEMUW,2nd-Class Sleeper (WE) MU Wagon,动车组二等卧铺车厢
 STR_NAME_WYMUW,1st-Class Sleeper (WY) MU Wagon,动车组一等卧铺车厢
 STR_NAME_WGMUW,Top-Class Sleeper (WG) MU Wagon,动车组高级软卧车厢
 # Full Name,,
+STR_FULL_NAME_YZ1,{BLACK}FULLNAME: {GOLD}1 Type Hard Seat Passenger Coach,{BLACK}全称：{GOLD}1型硬座客车
+STR_FULL_NAME_YZ21,{BLACK}FULLNAME: {GOLD}21 Type Hard Seat Passenger Coach,{BLACK}全称：{GOLD}21型硬座客车
 STR_FULL_NAME_YZ22,{BLACK}FULLNAME: {GOLD}22 Type Hard Seat Passenger Coach,{BLACK}全称：{GOLD}22型硬座客车
 STR_FULL_NAME_RZ22,{BLACK}FULLNAME: {GOLD}22 Type Soft Seat Passenger Coach,{BLACK}全称：{GOLD}22型软座客车
 STR_FULL_NAME_YW22,{BLACK}FULLNAME: {GOLD}22 Type Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}22型硬卧客车
@@ -493,6 +497,7 @@ STR_US_IMPORT,Imported from United States,美国进口车型
 STR_FR_IMPORT,Imported from France,法国进口车型
 STR_HU_IMPORT,Imported from Hungary,匈牙利进口车型
 STR_SE_IMPORT,Imported from Sweden,瑞典进口车型
+STR_DESC_8,{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING},
 STR_DESC_6,{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING},
 STR_DESC_5,{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING},
 STR_DESC_4,{STRING}{}{STRING}{}{STRING}{}{STRING},
@@ -650,7 +655,8 @@ STR_ALIASNAME_SS1,{BLACK}Alias Name: {GOLD}6Y1,{BLACK}曾用名：{GOLD}6Y1
 STR_ALIASNAME_HXD3,{BLACK}Alias Name: {GOLD}DJ3,{BLACK}曾用名：{GOLD}DJ3
 STR_ALIASNAME_FXD1B,{BLACK}Alias Name: {GOLD}HXD1F (Hexie/Harmony 1F Electric Locomotive),{BLACK}曾用名：{GOLD}HXD1F(和谐1F型电力机车)
 STR_ALIASNAME_FXD2B,{BLACK}Alias Name: {GOLD}HXD2F (Hexie/Harmony 2F Electric Locomotive),{BLACK}曾用名：{GOLD}HXD2F(和谐2F型电力机车)
-STR_ALIASNAME_CJ,{BLACK}Alias Name: {GOLD}CRH3A {BLACK}(Inter-City Version),{BLACK}曾用名：{GOLD}CRH3A {BLACK}(城际版)
+STR_ALIASNAME_CJ1,{BLACK}Alias Name: {GOLD}CRH3A {BLACK}(Inter-City Version),{BLACK}曾用名：{GOLD}CRH3A {BLACK}(城际版)
+STR_ALIASNAME_YZ1,{BLACK}Standardization From: Ha1,{BLACK}统型化自： ハ1
 # Reliability,,
 STR_RELDEC_VERY_HIGH,{BLACK}Reliability decay speed: {RED}Very high ({COMMA}),{BLACK}可靠性下降速度：{RED}极高（{COMMA}）
 STR_RELDEC_HIGH,{BLACK}Reliability decay speed: {ORANGE}High ({COMMA}),{BLACK}可靠性下降速度：{ORANGE}较高（{COMMA}）
