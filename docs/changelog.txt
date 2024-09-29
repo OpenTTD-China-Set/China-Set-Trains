@@ -5,13 +5,22 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
-0.3.2.170 (20/8/2024)
+0.3.2.171 (30/9/2024)
 --------------------
-Add: X2000, HXD2B, HXD3, FXD1B-1000, FXD2B-1000, P64
+Add: RZ225G, UZ25G, P1, YZ1
+Fix #52: length of N5
+Renewal the sprites of RZ125Z, RZ225Z, RZT25Z
+
+0.3.2.170 (26/9/2024)
+--------------------
+Add: X2000, HXD2B, HXD3, FXD1B-1000, FXD2B-1000, DFH3, P64, BH1, JSQ1, X2K, W5, W5S, W5SK, W6, W6S, P62N, P64A, P66H, C1, C50, JF1, SL6, G70, RZXL25T
+Add Livery: 25Z series, 25T series, 25G series, CR200JA-Prototype, G60
+Add the GRF-ID check for wagon attachment
 Renewal the sprites of DF11Z, HXD2, HXD2-1000, CRH3A, CRH3C
 Completed the CRH3 Sries:
     - Refurbish and renewal the sprites of CRH3A, CRH3C, CRH380B, CRH380CL
     - Add: CJ1, CRH380BL
+Merge the str-csv python script into command "make"
 
 0.3.1.169 (19/8/2024)
 --------------------

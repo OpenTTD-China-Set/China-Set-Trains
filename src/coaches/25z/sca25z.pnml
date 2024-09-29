@@ -9,12 +9,12 @@ switch (FEAT_TRAINS, SELF, switch_sca25z_name, getbits(extra_callback_info1, 0, 
 
 // Purchase Menu
 spriteset (spriteset_sca25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "sca25z")
+    template_purchase ("coaches/25z", "sca25z")
 }
 
 // Vehicle
 spriteset (spriteset_sca25z_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "sca25z")
+    template_standard ("coaches/25z", "sca25z")
 }
 
 switch (FEAT_TRAINS, SELF, switch_sca25z_articulated_part, extra_callback_info1) {

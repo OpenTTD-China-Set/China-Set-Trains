@@ -9,12 +9,12 @@ switch (FEAT_TRAINS, SELF, switch_srzxl25z_name, getbits(extra_callback_info1, 0
 
 // Purchase Menu
 spriteset (spriteset_srzxl25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches","srzxl25z")
+    template_purchase ("coaches/25z","srzxl25z")
 }
 
 // Vehicle
 spriteset (spriteset_srzxl25z_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches","srzxl25z")
+    template_standard ("coaches/25z","srzxl25z")
 }
 
 switch (FEAT_TRAINS, SELF, switch_srzxl25z_articulated_part, extra_callback_info1) {

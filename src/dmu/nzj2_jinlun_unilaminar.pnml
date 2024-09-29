@@ -24,8 +24,8 @@ switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_start_stop, !hasbit(bitmask_cons
 }
 
 switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_1_can_attach_wagon, vehicle_type_id) {
-    8193: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    2119..2123: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    8193: onlyallowcst;
+    2119..2123: onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 

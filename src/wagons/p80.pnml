@@ -60,7 +60,7 @@ item (FEAT_TRAINS, p80) {
         name:                           string(STR_NAME_P80);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					3098;
+        variant_group:					p1;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -103,7 +103,7 @@ item (FEAT_TRAINS, p80) {
         length:                         switch_length_2_5_2;
         cargo_capacity:                 switch_p80_capacity;
         loading_speed:                  switch_p80_loading_speed() << param_loading_speed;
-        cargo_age_period:               switch_p80_decay() << param_cargo_decay;
+        cargo_age_period:               switch_p80_decay() << (param_cargo_decay + param_wagoncargodecay);
         cost_factor:                    6;
         running_cost_factor:            5 * runningcostfactor();
         purchase_running_cost_factor:   20;

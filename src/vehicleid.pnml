@@ -134,8 +134,19 @@ item (FEAT_TRAINS, rw25ml, 2128) {}
 item (FEAT_TRAINS, ca25ml, 2129) {}
 item (FEAT_TRAINS, xl25ml, 2130) {}
 item (FEAT_TRAINS, yw221966, 2131) {}
-// uz25t code by Babel
+// 2132- code by Babel
 item (FEAT_TRAINS, uz25t, 2132) {}
+item (FEAT_TRAINS, rzxl25t, 2133) {}
+item (FEAT_TRAINS, uz25g, 2134) {}
+item (FEAT_TRAINS, rzt25g, 2135) {}
+item (FEAT_TRAINS, rz225g, 2136) {}
+item (FEAT_TRAINS, rz125g, 2137) {}
+item (FEAT_TRAINS, yz1, 2138) {}
+
+
+
+item (FEAT_TRAINS, luggageroom_s25, 3070) {}
+item (FEAT_TRAINS, luggageroom_25, 3071) {}
 
 //Wagons, available ID range: 3072-4095 (hex 0x0C00..0x0FFF)
 #define id_range_wagons 0x0C00..0x0FFF
@@ -171,10 +182,28 @@ item (FEAT_TRAINS, p80, 3096) {}
 item (FEAT_TRAINS, p65, 3097) {}
 item (FEAT_TRAINS, p50, 3098) {}
 item (FEAT_TRAINS, p64, 3099) {}
+item (FEAT_TRAINS, p62n, 3100) {}
+item (FEAT_TRAINS, p64a, 3101) {}
+item (FEAT_TRAINS, p66h, 3102) {}
+item (FEAT_TRAINS, w5, 3103) {}
+item (FEAT_TRAINS, w5s, 3104) {}
+item (FEAT_TRAINS, w5sk, 3105) {}
+item (FEAT_TRAINS, w6, 3106) {}
+item (FEAT_TRAINS, w6s, 3107) {}
+item (FEAT_TRAINS, bh1, 3108) {}
+item (FEAT_TRAINS, x2k, 3109) {}
+item (FEAT_TRAINS, jsq1, 3110) {}
+item (FEAT_TRAINS, c80, 3111) {}
+item (FEAT_TRAINS, c1, 3112) {}
+item (FEAT_TRAINS, c11956, 3113) {}
+item (FEAT_TRAINS, g70, 3114) {}
+item (FEAT_TRAINS, p1, 3115) {}
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
 item (FEAT_TRAINS, sy, 4096) {}
+item (FEAT_TRAINS, jf1, 4097) {}
+item (FEAT_TRAINS, sl6, 4098) {}
 
 //Diesel, available ID range: 5120-6143 (hex 0x1400..0x17FF)
 #define id_range_diesel 0x1400..0x17FF
@@ -213,6 +242,7 @@ item (FEAT_TRAINS, nd5, 5146) {}
 item (FEAT_TRAINS, hxn5, 5147) {}
 item (FEAT_TRAINS, hxn3, 5148) {}
 item (FEAT_TRAINS, hxn3qz, 5149) {}
+item (FEAT_TRAINS, dfh3, 5150) {}
 
 //25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
 #define id_range_25_electric 0x1800..0x1BFF
@@ -347,4 +377,8 @@ item (FEAT_TRAINS, x2000, 9259) {}
 
 //Multi Power Cargo MU, available range: 16128..16383 (hex 0x3F00..0x3FFF)
 #define id_range_multi_cargo_mu 0x3F00..0x3FFF
+
+
+
+
 

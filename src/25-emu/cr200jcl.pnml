@@ -29,9 +29,9 @@ spriteset (spriteset_cr200jc_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
  */
 // included in cr200jc_graphics.pnml
 switch (FEAT_TRAINS, SELF, cr200jclwagon, vehicle_type_id) {
-    1024..1037: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    1039: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    9239: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1024..1037: onlyallowcst;
+    1039: onlyallowcst;
+    9239: onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 

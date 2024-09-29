@@ -40,6 +40,18 @@ template template_purchase (a, b) {
     []
 }
 
+template template_purchase_xl (a, b) {
+    // a: vehicle type (all lower cases), b: vehicle name (all lower cases)
+    []
+    []
+    []
+    []
+    []
+    []
+    [856,   0, 256,  80,-128, -60, "gfx/"+a+"/"+b+"_32bpp.png"]
+    []
+}
+
 template template_standard (a, b) {
     [  0,   0,  36, 160, -12, -80, "gfx/"+a+"/"+b+"_32bpp.png"]
     [ 44,   0, 120, 116, -72, -76, "gfx/"+a+"/"+b+"_32bpp.png"]
