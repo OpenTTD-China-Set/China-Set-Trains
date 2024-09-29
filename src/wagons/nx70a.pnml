@@ -617,7 +617,7 @@ item (FEAT_TRAINS, nx70a) {
         length:                         switch_length_2_2_2;
         cargo_capacity:                 switch_nx70a_capacity;
         loading_speed:                  switch_nx70a_loading_speed() << param_loading_speed;
-        cargo_age_period:               185 << param_cargo_decay;
+        cargo_age_period:               185 << (param_cargo_decay + param_wagoncargodecay);
         cost_factor:                    6;
         running_cost_factor:            4 * runningcostfactor();
         purchase_running_cost_factor:   16;

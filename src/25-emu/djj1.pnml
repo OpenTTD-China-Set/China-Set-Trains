@@ -33,8 +33,8 @@ switch (FEAT_TRAINS, SELF, switch_djj1_articulated_part, extra_callback_info1) {
 }
 
 switch (FEAT_TRAINS, SELF, djj1wagon, vehicle_type_id) {
-    1025: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
-    9224: return CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES;
+    1025: onlyallowcst;
+    9224: onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 

@@ -9,16 +9,32 @@ switch (FEAT_TRAINS, SELF, switch_g60_name, getbits(extra_callback_info1, 0, 8) 
 
 // Purchase Menu
 spriteset (spriteset_g60_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("wagons", "g60")
+    template_purchase ("wagons/g60", "g60")
 }
 
 // Vehicle
-spriteset (spriteset_g60_grey, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("wagons", "g60")
+spriteset (spriteset_g60_gray, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/g60", "g60")
+}
+spriteset (spriteset_g60_red_gray, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/g60", "g60-red-gray")
+}
+spriteset (spriteset_g60_yellow_gray, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/g60", "g60-yellow-gray")
+}
+spriteset (spriteset_g60_red_white, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/g60", "g60-red-white")
+}
+spriteset (spriteset_g60_yellow_white, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/g60", "g60-yellow-white")
 }
 
 random_switch (FEAT_TRAINS, SELF, random_g60_colour) {
-    1: spriteset_g60_grey; // More colours waiting to be added
+    4: spriteset_g60_gray;
+    1: spriteset_g60_red_gray;
+    1: spriteset_g60_yellow_gray;
+    1: spriteset_g60_red_white;
+    1: spriteset_g60_yellow_white;
 }
 
 switch (FEAT_TRAINS, SELF, switch_g60_articulated_part, extra_callback_info1) {
@@ -85,7 +101,7 @@ item (FEAT_TRAINS, g60) {
         // Stats
         length:                         switch_length_2_2_2;
         cargo_capacity:                 switch_g60_capacity;
-        cargo_age_period:               185 << param_cargo_decay;
+        cargo_age_period:               185 << (param_cargo_decay + param_wagoncargodecay);
         cost_factor:                    5;
         running_cost_factor:            4 * runningcostfactor();
         purchase_running_cost_factor:   16;

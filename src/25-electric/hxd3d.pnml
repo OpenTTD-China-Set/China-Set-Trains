@@ -16,14 +16,39 @@ spriteset (spriteset_hxd3d_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP)
 spriteset (spriteset_hxd3d_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-electric", "hxd3d")
 }
+spriteset (spriteset_hxd3d1893, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric/extra", "hxd3d-1893")
+}
+spriteset (spriteset_hxd3d1886, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric/extra", "hxd3d-1886")
+}
+spriteset (spriteset_hxd3d1921, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric/extra", "hxd3d-1921")
+}
 
 switch (FEAT_TRAINS, SELF, switch_hxd3d_articulated_part, extra_callback_info1) {
     1..2: return hxd3d;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+switch (FEAT_TRAINS, SELF, switch_hxd3d_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_HXD3D1893);
+    2: return string(STR_HXD3D1886);
+    3: return string(STR_HXD3D1921);
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_gfx_hxd3d, cargo_subtype) {
+    0: spriteset_hxd3d_original;
+    1: spriteset_hxd3d1893;
+    2: spriteset_hxd3d1886;
+    3: spriteset_hxd3d1921;
+    empty_sprites;
+}
+
 switch (FEAT_TRAINS, SELF, switch_hxd3d_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_hxd3d_original;
+    1: switch_gfx_hxd3d;
     empty_sprites;
 }
 
@@ -70,6 +95,7 @@ item (FEAT_TRAINS, hxd3d) {
         // Menu
         additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_HXD3D), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_HXD3D_NICKNAME), string(STR_RELDEC_VERY_LOW, 6));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_hxd3d_cargo_subtype;
         // Graphics
         default:                        switch_hxd3d_graphics;
         purchase:                       spriteset_hxd3d_purchase_original;

@@ -68,7 +68,7 @@ item (FEAT_TRAINS, c64) {
         name:                           string(STR_NAME_C64);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					3076;
+        variant_group:					c1;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -110,7 +110,7 @@ item (FEAT_TRAINS, c64) {
         // Stats
         length:                         switch_length_2_2_2;
         cargo_capacity:                 switch_c64_capacity;
-        cargo_age_period:               185 << param_cargo_decay;
+        cargo_age_period:               185 << (param_cargo_decay + param_wagoncargodecay);
         cost_factor:                    5;
         running_cost_factor:            4 * runningcostfactor();
         purchase_running_cost_factor:   16;

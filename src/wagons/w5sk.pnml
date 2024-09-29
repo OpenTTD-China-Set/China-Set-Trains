@@ -1,0 +1,102 @@
+// Begin W5SK
+switch (FEAT_TRAINS, SELF, switch_w5sk_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_BOXCAR);
+    return CB_RESULT_NO_TEXT;
+}
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_w5sk_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "w5s")
+}
+
+// Vehicle
+spriteset (spriteset_w5sk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "w5s")
+}
+spriteset (spriteset_w5sk_white, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "w5s-white")
+}
+
+random_switch (FEAT_TRAINS, SELF, random_w5sk) {
+    1: spriteset_w5sk; // More colours waiting to be added
+    1: spriteset_w5sk_white;
+}
+
+switch (FEAT_TRAINS, SELF, switch_w5sk_articulated_part, extra_callback_info1) {
+    1..2: return w5sk;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_w5sk_graphics, position_in_articulated_veh % 3) {
+    1: random_w5sk;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_w5sk_capacity, position_in_articulated_veh % 3) {
+    1: return 50;
+    return 0;
+}
+
+
+
+item (FEAT_TRAINS, w5sk) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_W5SK);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					3103;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2002,01,01);
+        model_life:                     60;
+        retire_early:                   30;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       0;
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [SULP, ENSP, FMSP, FERT, NITR, NHNO, CHLO, NH3_, ACID, C2H4, SOAP, N7__, RFPR];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             FMSP;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 60;
+        loading_speed:                  6 << param_loading_speed;
+        cargo_age_period:               400 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          0 hp;
+        weight:                         26.5 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_2, string(STR_W_BOXCAR_LIVERY_AVAILABILITY), string(STR_FRESHNESS_HIGH, 400));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_w5sk_graphics;
+        purchase:                       spriteset_w5sk_purchase;
+        articulated_part:               switch_w5sk_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_4_2;
+        cargo_capacity:                 switch_w5sk_capacity;
+        cargo_age_period:               400 << (param_cargo_decay + param_wagoncargodecay);
+        cost_factor:                    12;
+        running_cost_factor:            10 * runningcostfactor();
+        purchase_running_cost_factor:   40;
+        purchase_cargo_capacity:        50 / 3;
+        name:                           switch_w5sk_name;
+    }
+}
+
+// End W5SK
+

@@ -79,7 +79,7 @@ random_switch (FEAT_TRAINS, SELF, random_p62_colour_late) {
     10: spriteset_p62_brown;
 }
 switch (FEAT_TRAINS, SELF, random_p62_colour, current_year - 1979) {
-    0..15: random_p62_colour_early; 
+    0..15: random_p62_colour_early;
     16..30: random_p62_colour_middium;
     random_p62_colour_late;
 }
@@ -137,7 +137,7 @@ item (FEAT_TRAINS, p62) {
         name:                           string(STR_NAME_P62);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					3098;
+        variant_group:					p1;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -180,7 +180,7 @@ item (FEAT_TRAINS, p62) {
         length:                         switch_length_2_4_2;
         cargo_capacity:                 switch_p62_capacity;
         loading_speed:                  switch_p62_loading_speed() << param_loading_speed;
-        cargo_age_period:               switch_p62_decay() << param_cargo_decay;
+        cargo_age_period:               switch_p62_decay() << (param_cargo_decay + param_wagoncargodecay);
         cost_factor:                    5;
         running_cost_factor:            4 * runningcostfactor();
         purchase_running_cost_factor:   16;

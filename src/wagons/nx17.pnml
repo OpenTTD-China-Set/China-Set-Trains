@@ -1063,19 +1063,19 @@ switch (FEAT_TRAINS, SELF, switch_nx17_brown_all_cargo, cargo_type_in_veh) {
 } */
 // 2 colours is enough
 random_switch (FEAT_TRAINS, SELF, random_nx17_colour_early) {
-    20: switch_nx17_black_all_cargo; 
+    20: switch_nx17_black_all_cargo;
     1: switch_nx17_brown_all_cargo;
 }
 random_switch (FEAT_TRAINS, SELF, random_nx17_colour_middium) {
-    20: switch_nx17_black_all_cargo; 
+    20: switch_nx17_black_all_cargo;
     5: switch_nx17_brown_all_cargo;
 }
 random_switch (FEAT_TRAINS, SELF, random_nx17_colour_late) {
-    10: switch_nx17_black_all_cargo; 
+    10: switch_nx17_black_all_cargo;
     10: switch_nx17_brown_all_cargo;
 }
 switch (FEAT_TRAINS, SELF, random_nx17_colour, current_year - 1997) {
-    0..15: random_nx17_colour_early; 
+    0..15: random_nx17_colour_early;
     16..30: random_nx17_colour_middium;
     random_nx17_colour_late;
 }
@@ -1158,7 +1158,7 @@ item (FEAT_TRAINS, nx17) {
         length:                         switch_length_2_2_2;
         cargo_capacity:                 switch_nx17_capacity;
         loading_speed:                  switch_nx17_loading_speed() << param_loading_speed;
-        cargo_age_period:               185 << param_cargo_decay;
+        cargo_age_period:               185 << (param_cargo_decay + param_wagoncargodecay);
         cost_factor:                    5;
         running_cost_factor:            4 * runningcostfactor();
         purchase_running_cost_factor:   16;

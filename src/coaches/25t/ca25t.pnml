@@ -19,6 +19,15 @@ spriteset (spriteset_ca25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_bspca25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "bspca25t")
 }
+spriteset (spriteset_ca25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "ca25t-xz")
+}
+spriteset (spriteset_bspca25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "bspca25t-xz")
+}
+spriteset (spriteset_ca25t_hk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "ca25t-hk")
+}
 
 switch (FEAT_TRAINS, SELF, switch_ca25t_articulated_part, extra_callback_info1) {
     1..2: return ca25t;
@@ -29,6 +38,12 @@ switch (FEAT_TRAINS, SELF, switch_ca25t_cargo_subtype, cargo_subtype) {
     0: string(STR_BUILD_YEAR);
     1: string(STR_ORIGINAL);
     2: string(STR_BSP25T);
+/*     3: ; */
+/*     4: ; */
+    3: string(STR_QINGZANG);
+    4: string(STR_QINGZANG_BSP);
+    5: string(STR_25T_HK);
+/*     8: ; */
     return CB_RESULT_NO_TEXT;
 }
 
@@ -43,6 +58,12 @@ switch (FEAT_TRAINS, SELF, switch_ca25t_graphics_subtype, cargo_subtype) {
     0: switch_ca25t_graphics_subtype_0;
     1: spriteset_ca25t_original;
     2: spriteset_bspca25t_original;
+/*     3: ; */
+/*     4: ; */
+    3: spriteset_ca25t_qingzang;
+    4: spriteset_bspca25t_qingzang;
+    5: spriteset_ca25t_hk;
+/*     8: ; */
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca25t_graphics, position_in_articulated_veh % 3) {
@@ -66,7 +87,7 @@ item (FEAT_TRAINS, ca25t) {
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(2002,01,01);
+        introduction_date:              date(2003,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
         track_type:                     SACN;
@@ -111,7 +132,7 @@ item (FEAT_TRAINS, ca25t) {
         running_cost_factor:            6 * runningcostfactor() + accostfactor() + 50; // IT IS A RESTAURANT CAR!
         purchase_running_cost_factor:   74;
         purchase_cargo_capacity:        48/3;
-        name:                            switch_ca25t_name;
+        name:                           switch_ca25t_name;
 
     }
 }

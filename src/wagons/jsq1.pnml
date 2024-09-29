@@ -1,0 +1,205 @@
+// Begin JSQ1
+switch (FEAT_TRAINS, SELF, switch_jsq1_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_VEHICLE_TRANSPORTER);
+    return CB_RESULT_NO_TEXT;
+}
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_jsq1_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "jsq1-1-empty")
+}
+
+// Vehicle
+spriteset (spriteset_jsq1_1_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-1-empty")
+}
+spriteset (spriteset_jsq1_1_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-1-half")
+}
+spriteset (spriteset_jsq1_1_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-1-full")
+}
+spriteset (spriteset_jsq1_2_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-2-red")
+}
+spriteset (spriteset_jsq1_2_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-2-blue")
+}
+spriteset (spriteset_jsq1_3_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-3-red")
+}
+spriteset (spriteset_jsq1_3_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-3-blue")
+}
+spriteset (spriteset_jsq1_4_red_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-4-red-empty")
+}
+spriteset (spriteset_jsq1_4_red_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-4-red-half")
+}
+spriteset (spriteset_jsq1_4_red_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-4-red-full")
+}
+spriteset (spriteset_jsq1_4_blue_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-4-blue-empty")
+}
+spriteset (spriteset_jsq1_4_blue_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-4-blue-half")
+}
+spriteset (spriteset_jsq1_4_blue_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-4-blue-full")
+}
+spriteset (spriteset_jsq1_5, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-5")
+}
+spriteset (spriteset_jsq1_6_red_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-6-red-empty")
+}
+spriteset (spriteset_jsq1_6_red_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-6-red-half")
+}
+spriteset (spriteset_jsq1_6_red_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-6-red-full")
+}
+spriteset (spriteset_jsq1_6_blue_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-6-blue-empty")
+}
+spriteset (spriteset_jsq1_6_blue_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-6-blue-half")
+}
+spriteset (spriteset_jsq1_6_blue_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "jsq1-6-blue-full")
+}
+
+switch (FEAT_TRAINS, SELF, switch_jsq1_articulated_part, extra_callback_info1) {
+    1..2: return jsq1;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+random_switch (FEAT_TRAINS, SELF, random_jsq1_full) {
+    1: spriteset_jsq1_1_full; // More colours waiting to be added
+    1: spriteset_jsq1_2_red;
+    1: spriteset_jsq1_2_blue;
+    1: spriteset_jsq1_3_red;
+    1: spriteset_jsq1_3_blue;
+    1: spriteset_jsq1_4_red_full;
+    1: spriteset_jsq1_4_blue_full;
+    1: spriteset_jsq1_5;
+    1: spriteset_jsq1_6_red_full;
+    1: spriteset_jsq1_6_blue_full;
+}
+
+random_switch (FEAT_TRAINS, SELF, random_jsq1_half) {
+    1: spriteset_jsq1_1_half; // More colours waiting to be added
+    1: spriteset_jsq1_2_red;
+    1: spriteset_jsq1_2_blue;
+    1: spriteset_jsq1_3_red;
+    1: spriteset_jsq1_3_blue;
+    1: spriteset_jsq1_4_red_half;
+    1: spriteset_jsq1_4_blue_half;
+    1: spriteset_jsq1_5;
+    1: spriteset_jsq1_6_red_half;
+    1: spriteset_jsq1_6_blue_half;
+}
+
+random_switch (FEAT_TRAINS, SELF, random_jsq1_empty) {
+    1: spriteset_jsq1_1_empty; // More colours waiting to be added
+    1: spriteset_jsq1_2_red;
+    1: spriteset_jsq1_2_blue;
+    1: spriteset_jsq1_3_red;
+    1: spriteset_jsq1_3_blue;
+    1: spriteset_jsq1_4_red_empty;
+    1: spriteset_jsq1_4_blue_empty;
+    1: spriteset_jsq1_5;
+    1: spriteset_jsq1_6_red_empty;
+    1: spriteset_jsq1_6_blue_empty;
+}
+
+switch (FEAT_TRAINS, SELF, switch_jsq1_not_empty, cargo_count < 10) {
+    0: random_jsq1_half;
+    random_jsq1_full;
+}
+
+switch (FEAT_TRAINS, SELF, switch_jsq1_original, cargo_count < 2) {
+    0: switch_jsq1_not_empty;
+    random_jsq1_empty;
+}
+
+switch (FEAT_TRAINS, SELF, switch_jsq1_graphics, position_in_articulated_veh % 3) {
+    1: switch_jsq1_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_jsq1_capacity_cargo, cargo_type_in_veh) {
+    VEHI: return 18;
+    ENSP: return 27;
+    FMSP: return 27;
+}
+
+switch (FEAT_TRAINS, SELF, switch_jsq1_capacity, position_in_articulated_veh % 3) {
+    1: switch_jsq1_capacity_cargo;
+    return 0;
+}
+
+
+
+item (FEAT_TRAINS, jsq1) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_JSQ1);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1989,01,01);
+        model_life:                     60;
+        retire_early:                   30;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       0;
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [VEHI, ENSP, FMSP];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             VEHI;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 18;
+        loading_speed:                  3 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          100 km/h;
+        power:                          0 hp;
+        weight:                         27 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_2, string(STR_JSQ1_LIVERY_AVAILABILITY), string(STR_FRESHNESS_HIGH, 400));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_jsq1_graphics;
+        purchase:                       spriteset_jsq1_purchase;
+        articulated_part:               switch_jsq1_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_6_2;
+        cargo_capacity:                 switch_jsq1_capacity;
+        cargo_age_period:               400 << (param_cargo_decay + param_wagoncargodecay);
+        cost_factor:                    10;
+        running_cost_factor:            9 * runningcostfactor();
+        purchase_running_cost_factor:   36;
+        purchase_cargo_capacity:        switch_jsq1_capacity_cargo() / 3;
+        name:                           switch_jsq1_name;
+    }
+}
+
+// End JSQ1
+

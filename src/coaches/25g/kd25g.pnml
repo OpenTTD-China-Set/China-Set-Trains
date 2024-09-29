@@ -9,24 +9,30 @@ switch (FEAT_TRAINS, SELF, switch_kd25g_name, getbits(extra_callback_info1, 0, 8
 
 // Purchase Menu
 spriteset (spriteset_kd25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "kd25g")
+    template_purchase ("coaches/25g", "kd25g")
 }
 
 // Vehicle
 spriteset (spriteset_kd25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "kd25g")
+    template_standard ("coaches/25g", "kd25g")
+}
+spriteset (spriteset_kd25g_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "kd25g-green")
 }
 spriteset (spriteset_kd25g_luchaogang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "kd25g-luchaogang")
+    template_standard ("coaches/25g", "kd25g-luchaogang")
 }
 spriteset (spriteset_kd25g_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "kd25g-orange")
+    template_standard ("coaches/25g", "kd25g-orange")
 }
 spriteset (spriteset_kd25g_xihu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "kd25g-xihu")
+    template_standard ("coaches/25g", "kd25g-xihu")
 }
 spriteset (spriteset_kd25g_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "kd25g-jinwen")
+    template_standard ("coaches/25g", "kd25g-jinwen")
+}
+spriteset (spriteset_kd25g_nanhu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "kd25g-nanhu")
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25g_articulated_part, extra_callback_info1) {
@@ -36,27 +42,36 @@ switch (FEAT_TRAINS, SELF, switch_kd25g_articulated_part, extra_callback_info1) 
 
 switch (FEAT_TRAINS, SELF, switch_kd25g_cargo_subtype, cargo_subtype) {
     0: return string(STR_BUILD_YEAR);
-    1: return string(STR_RED_WHITE);
-    2: return string(STR_LUCHAOGANG);
-    3: return string(STR_ORANGE);
+    1: return string(STR_ORIGINAL);
+    2: return string(STR_GAOZU_GREEN);
+    3: return string(STR_JINWEN);
+/*     4: return string(STR_JINWEN_GREEN); */
     4: return string(STR_XIHU);
-    5: return string(STR_GAOZU_GREEN);
-    6: return string(STR_JINWEN);
+    5: return string(STR_LUCHAOGANG);
+    6: return string(STR_ORANGE);
+    7: return string(STR_NANHU);
     return CB_RESULT_NO_TEXT;
 }
 
-switch (FEAT_TRAINS, SELF, switch_kd25g_build_year_sprite, build_year) {
-    spriteset_kd25g_original; // Unfinished
+switch (FEAT_TRAINS, SELF, switch_kd25g_graphics_subtype_year_depend, build_year) {
+    0..2014: spriteset_kd25g_original; // Unfinished
+    spriteset_kd25g_green;
+}
+switch (FEAT_TRAINS, SELF, switch_kd25g_graphics_subtype_0, param_gaozulv) {
+    1: switch_kd25g_graphics_subtype_year_depend;
+    spriteset_kd25g_original;
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25g_graphics_subtype, cargo_subtype) {
-    0: switch_kd25g_build_year_sprite;
+    0: switch_kd25g_graphics_subtype_0;
     1: spriteset_kd25g_original;
-    2: spriteset_kd25g_luchaogang;
-    3: spriteset_kd25g_orange;
+    2: spriteset_kd25g_green;
+    3: spriteset_kd25g_jinwen;
+/*     4: ; */
     4: spriteset_kd25g_xihu;
-    5: spriteset_kd25g_original;  // Will change to "spriteset_kd25g_gaozu" once the "gaozu green" sprite is finished
-    6: spriteset_kd25g_jinwen;
+    5: spriteset_kd25g_luchaogang;
+    6: spriteset_kd25g_orange;
+    7: spriteset_kd25g_nanhu;
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25g_graphics, position_in_articulated_veh % 3) {
@@ -103,7 +118,7 @@ item (FEAT_TRAINS, kd25g) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25G), string(STR_KD25G_LIVERY_AVAILABILITY), string(STR_AIR_CONDITIONER_EFFECT));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), /*string(STR_JINWEN_GREEN), */string(STR_XIHU), string(STR_LUCHAOGANG), string(STR_ORANGE), string(STR_NANHU)), string(STR_AIR_CONDITIONER_EFFECT));
         can_attach_wagon:               locowagon;
 
         // Graphics
