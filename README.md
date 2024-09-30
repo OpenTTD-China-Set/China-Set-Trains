@@ -9,49 +9,36 @@ READ IN ENGLISH | [CHINESE](./README-zh.md)
 
 ## 1. General Information
 
-China Set: Trains is the train sector of the China set of OpenTTD.\
+China Set: Trains is the train sector of the China set of OpenTTD.
 China Set: Trains is licensed under GPL v2.
 
 Everything in this set is Mainland China rolling stock, in addition of
 several wagon types from international/interregional connections.
 
-Locomotives and multiple units featuring refitting are for deciding the
-speed and traction effort suitable for freight or passenger operations
-and/or livery refitting.
+Locomotives and multiple units featuring refitting are for liveries.
 
-When livery refitting is available, the default setting is
-year-dependent livery. That means when the livery is scheduled be
-changed between specific years, locomotive, multiple unit or coach will
-automatically update to the next livery.
-
-The next option is build year livery, which means that locomotive,
-multiple unit or coach will remain on the livery scheme as built. It
-overrides the automatic update of livery, enabling former livery being
-usable on the time when it's not otherwise available anymore.
-
-The third option is to manually choose a livery from liveries already
-introduced.
-
-Speed and traction effort can be choosed at the same time (if locomotive
-or multiple unit has one) with year-dependent, build year or manual
-livery.
+The default setting should be build year livery, which means that
+locomotive, multiple unit or coach will remain on the livery scheme as
+built. Another option is to manually choose a livery from liveries
+already introduced.
 
 Wagon refitting behaves as in normal OpenTTD, there is cargo-specific
 graphics on major part of wagons.
 
 List of available parameters:
 
-| Name             | Function                        | Default value |
-|------------------|---------------------------------|---------------|
-| Loading speed    | Change wagon loading speed      | Normal        |
-| Purchase cost    | Change purchase cost            | 25%           |
-| Running cost     | Change running cost             | 25%           |
-| Cargo age period | Change the rate cargo gets aged | Standard      |
+| Name                                                               | Function                                                                                                                                                    | Default value |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| Loading speed                                                      | Change wagon loading speed                                                                                                                                  | Normal        |
+| Purchase cost                                                      | Change purchase cost                                                                                                                                        | 25%           |
+| Running cost                                                       | Change running cost                                                                                                                                         | 25%           |
+| Cargo age period                                                   | Change the rate cargo gets aged                                                                                                                             | Standard      |
+| Cargo age period<br />for freight wagons                           | Change the rate cargo in mail and freight wagons<br />gets aged; independent from the parameter above                                                      | Standard      |
+| 25-Series coaches<br />built after 2014 <br />default to be green | Change whether the Type 25 Series Coaches<br />purchased after 2014 default to be olive green. <br />In reality, before 2014, they had different colours. | Yes           |
 
 ## 2. Building
 
-The source is available on [GitHub](https://github.com/OpenTTD-China-Set/China-Set-Trains).\
-These tools are required to build the GRF:
+The source is available on [GitHub](https://github.com/OpenTTD-China-Set/China-Set-Trains).These tools are required to build the GRF:
 
 - nml
 - make
@@ -60,14 +47,13 @@ These tools are required to build the GRF:
 
 You would need to render all models first, then you can build the GRF.
 
->[!NOTE]
->The first build will be slow since all models have to be rendered, which is a slow process.
->You can use `make -j n` to speed up the process by running multiple tasks at once where `n` is the task limit.
+> [!NOTE]
+> The first build will be slow since all models have to be rendered, which is a slow process.
+> You can use `make -j n` to speed up the process by running multiple tasks at once where `n` is the task limit.
 
-Using Linux or WSL:
+Using Linux or WSL:#!/bin/bash
 
 ```bash
-#!/bin/bash
 # you'll have to install gorender from https://github.com/mattkimber/gorender
 # here we use apt for demo
 
@@ -80,7 +66,7 @@ pip3 install nml
 
 # compiling
 make
-# alternatively, you could use "make -j" n where n is the total number of parallel tasks you want to run at once.
+# alternatively, you could use "make -j n" where n is the total number of parallel tasks you want to run at once.
 ```
 
 Using Windows (Scoop is advised here, but non-scoop compilations are also possible):
@@ -128,8 +114,10 @@ Thanks to:
 - andythenorth
 - Belaja Lilija
 - Emperor Jake
+- dP
 - Garlic_Bread42
 - KeepinItRail
+- peter1138
 - planetmaker
 - Simo333
 - Timberwolf
@@ -147,7 +135,7 @@ OpenTTD Developers; and Chris Sawyer.
 ```text
 China Set: Trains
 
-Copyright (C) 2023 China Set Team
+Copyright (C) 2024 China Set Team
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
