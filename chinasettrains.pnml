@@ -47,6 +47,7 @@
 #include "src/coaches/22/ca23.pnml"
 #include "src/coaches/22/ca23aircon.pnml"
 #include "src/coaches/22/tz.pnml"
+#include "src/coaches/22/yz31.pnml"
 
 #include "src/coaches/22b/yz22b.pnml"
 #include "src/coaches/22b/yw22b.pnml"
@@ -74,6 +75,7 @@
 #include "src/coaches/25g/yz25g.pnml"
 #include "src/coaches/25g/rz25g.pnml"
 #include "src/coaches/25g/rz225g.pnml"
+#include "src/coaches/25g/rz125g.pnml"
 #include "src/coaches/25g/rzt25g.pnml"
 #include "src/coaches/25g/yw25g.pnml"
 #include "src/coaches/25g/rw25g.pnml"
@@ -87,6 +89,7 @@
 #include "src/coaches/25k/yw25k.pnml"
 #include "src/coaches/25k/rw25k.pnml"
 #include "src/coaches/25k/ca25k.pnml"
+#include "src/coaches/25k/uz25k.pnml"
 #include "src/coaches/25k/xl25k.pnml"
 #include "src/coaches/25k/kd25k.pnml"
 #include "src/coaches/25k/syz25kld.pnml"
@@ -96,7 +99,7 @@
 #include "src/coaches/25k/syw25khd.pnml"
 #include "src/coaches/25k/srw25khd.pnml"
 #include "src/coaches/25k/sca25khd.pnml"
-#include "src/coaches/19/rw19k.pnml"
+#include "src/coaches/25k/rw19k.pnml"
 
 #include "src/coaches/25t/yz25t.pnml"
 #include "src/coaches/25t/rz25t.pnml"
@@ -108,7 +111,7 @@
 #include "src/coaches/25t/xl25t_sspe.pnml"
 #include "src/coaches/25t/uz25t.pnml"
 #include "src/coaches/25t/kd25t.pnml"
-#include "src/coaches/19/rw19t.pnml"
+#include "src/coaches/25t/rw19t.pnml"
 
 #include "src/coaches/25z/rz125z.pnml"
 #include "src/coaches/25z/rz225z.pnml"
@@ -129,7 +132,7 @@
 #include "src/coaches/25dt/syz25dt_jinlun.pnml"
 #include "src/coaches/25dt/srz25dt_jinlun.pnml"
 
-#include "src/coaches/31/yz31.pnml"
+
 
 // Wagons
 #include "src/wagons/c1.pnml"
@@ -296,6 +299,7 @@
 #include "src/25-emu/cr400afab.pnml"
 #include "src/25-emu/cr400afz.pnml"
 #include "src/25-emu/cr400afabz.pnml"
+#include "src/25-emu/cr400afae.pnml"
 #include "src/25-emu/cr400bf.pnml"
 #include "src/25-emu/cr400bfab.pnml"
 #include "src/25-emu/cr400bfc.pnml"

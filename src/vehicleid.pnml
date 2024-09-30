@@ -142,6 +142,7 @@ item (FEAT_TRAINS, rzt25g, 2135) {}
 item (FEAT_TRAINS, rz225g, 2136) {}
 item (FEAT_TRAINS, rz125g, 2137) {}
 item (FEAT_TRAINS, yz1, 2138) {}
+item (FEAT_TRAINS, uz25k, 2139) {}
 
 
 
@@ -342,6 +343,7 @@ item (FEAT_TRAINS, djj2, 9256) {}
 item (FEAT_TRAINS, crh380bl, 9257) {}
 item (FEAT_TRAINS, cj1, 9258) {}
 item (FEAT_TRAINS, x2000, 9259) {}
+item (FEAT_TRAINS, cr400afae, 9260) {}
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
 #define id_range_1500_emu 0x2800..0x2BFF

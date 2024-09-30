@@ -5,27 +5,61 @@ switch (FEAT_TRAINS, SELF, switch_ca25k_name, getbits(extra_callback_info1, 0, 8
 }
 
 
-// Graphics
-
-// Purchase Menu
-spriteset (spriteset_ca25k_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "ca25k")
-}
-
-// Vehicle
-spriteset (spriteset_ca25k_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "ca25k")
-}
-
 switch (FEAT_TRAINS, SELF, switch_ca25k_articulated_part, extra_callback_info1) {
     1..2: return ca25k;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_ca25k_graphics, position_in_articulated_veh % 3) {
+// Graphics
+
+// Purchase Menu
+
+spriteset (spriteset_ca25k_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches/25k", "ca25k")
+}
+
+// Vehicle
+spriteset (spriteset_ca25k_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "ca25k")
+}
+spriteset (spriteset_ca25k_gmsr, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "ca25k-gmsr")
+}
+spriteset (spriteset_ca25k_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "ca25k-guangshen")
+}
+switch (FEAT_TRAINS, SELF, switch_ca25k_cargo_subtype, cargo_subtype) {
+    0: return string(STR_BUILD_YEAR);
+    1: return string(STR_ORIGINAL);
+    /* 2: string(STR_GAOZU_GREEN); */
+    2: return string(STR_GMSR);
+/*     3: return string(STR_GUANGSHEN); */
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25k_graphics_subtype_year_depend, build_year) {
+     0..2014: spriteset_ca25k_original; //Unfinished
+    spriteset_ca25k_original;
+}
+switch (FEAT_TRAINS, SELF, switch_ca25k_graphics_subtype_0, param_gaozulv) {
+    1: switch_ca25k_graphics_subtype_year_depend;
+    spriteset_ca25k_original;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25k_graphics_subtype, cargo_subtype) {
+    0: switch_ca25k_graphics_subtype_0;
     1: spriteset_ca25k_original;
+/*     2: ; */
+    2: spriteset_ca25k_gmsr;
+/*     3: spriteset_ca25k_guangshen; */
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25k_graphics, position_in_articulated_veh % 3) {
+    1: switch_ca25k_graphics_subtype;
     empty_sprites;
 }
+
+//Cap
 
 switch (FEAT_TRAINS, SELF, switch_ca25k_capacity, position_in_articulated_veh % 3) {
     1: return 48;
@@ -71,8 +105,9 @@ item (FEAT_TRAINS, ca25k) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_CA25K), string(STR_CAFE_EFFECT), string(STR_25K_LIVERY_AVAILABILITY), string(STR_COMFORT_MEDIUM, 200));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_CA25K), string(STR_CAFE_EFFECT),  string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL)/* , string(STR_GAOZU_GREEN) */, string(STR_GMSR)/* , string(STR_GUANGSHEN) */), string(STR_COMFORT_MEDIUM, 200));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_ca25k_cargo_subtype;
 
         // Graphics
         default:                        switch_ca25k_graphics;
