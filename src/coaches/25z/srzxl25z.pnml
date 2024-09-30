@@ -18,7 +18,8 @@ spriteset (spriteset_srzxl25z_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_srzxl25z_articulated_part, extra_callback_info1) {
-    1..2: return srzxl25z;
+    1: return srzxl25z;
+    2: return luggageroom_s25;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
@@ -28,7 +29,7 @@ switch (FEAT_TRAINS, SELF, switch_srzxl25z_graphics, position_in_articulated_veh
 }
 
 switch (FEAT_TRAINS, SELF, switch_srzxl25z_capacity, position_in_articulated_veh % 3) {
-    1: return 92;
+    1: return 66;
     return 0;
 }
 
@@ -49,15 +50,15 @@ item (FEAT_TRAINS, srzxl25z) {
         track_type:                     SACN;
 
         // Cargo
-        refittable_cargo_classes:       bitmask(CC_MAIL, CC_ARMOURED);
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
         non_refittable_cargo_classes:   0;
-        cargo_allow_refit:              [MAIL];
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
         cargo_disallow_refit:           [];
         refit_cost:                     0;
         default_cargo_type:             PASS;
         ai_special_flag:                AI_FLAG_CARGO;
         cargo_capacity:                 92;
-        loading_speed:                  6 << param_loading_speed;
+        loading_speed:                  8 << param_loading_speed;
         cargo_age_period:               185 << param_cargo_decay;
 
         // Stats
@@ -71,7 +72,7 @@ item (FEAT_TRAINS, srzxl25z) {
 
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SRZXL25Z), string(STR_25Z_LIVERY_AVAILABILITY), string(STR_FRESHNESS_MEDIUM, 200));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SRZXL25Z), string(STR_FRESHNESS_MEDIUM, 256));
         can_attach_wagon:               locowagon;
         // Graphics
         default:                        switch_srzxl25z_graphics;
@@ -81,12 +82,12 @@ item (FEAT_TRAINS, srzxl25z) {
         // Stats
         length:                         switch_length_2_8_2;
         cargo_capacity:                 switch_srzxl25z_capacity;
-        cargo_age_period:               200 << param_cargo_decay;
-        cost_factor:                    8;
-        running_cost_factor:            6 * runningcostfactor();
-        purchase_running_cost_factor:   24;
-        purchase_cargo_capacity:        92/3;
-        name:                            switch_srzxl25z_name;
+        cargo_age_period:               (16 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    17;
+        running_cost_factor:            11 * runningcostfactor();
+        purchase_running_cost_factor:   44;
+        purchase_cargo_capacity:        66/3;
+        name:                           switch_srzxl25z_name;
 
     }
 }

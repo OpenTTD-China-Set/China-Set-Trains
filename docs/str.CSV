@@ -32,6 +32,8 @@ STR_PARAM_WAGON_CARGO_DECAY,Set Cargo Age Period of Wagons Individually,单独�
 STR_PARAM_WAGON_CARGO_DECAY_DESC,"Set cargo age period of wagons individually, overlay calculations on option ""Cargo Age Period"". It makes long-distance transport of frieght be possible.","单独设置货车的货物贬值周期，在选项""货物贬值周期""上叠加计算。这个选项使长途货物运输成为可能"
 STR_USED_WITH_DYNAMIC_ENGINES,"This GRF needs dynamic_engines to be turned on. Open console, and type ""setting dynamic_engines 1"".","请切换至控制台模式, 键入 ""setting dynamic_engines 1"", 否则您无法游玩中国包."
 # Name,,
+STR_NAME_YZ1,YZ1 (Passenger Coach),YZ1 (客车)
+STR_NAME_YZ21,YZ21 (Passenger Coach),YZ21 (客车)
 STR_NAME_YZ22,YZ22 (Passenger Coach),YZ22 (客车)
 STR_NAME_RZ22,RZ22 (Passenger Coach),RZ22 (客车)
 STR_NAME_YW22,YW22 (Passenger Coach),YW22 (客车)
@@ -100,6 +102,7 @@ STR_NAME_XL25T,XL25T (Luggage Car),XL25T (行李车)
 STR_NAME_XL25T_SSPE,XL25T-SSPE (Luggage Car),XL25T-SSPE (行李车)
 STR_NAME_UZ22,UZ22 (Railway Post Office),UZ22 (邮车)
 STR_NAME_UZ25G,UZ25G (Railway Post Office),UZ25G (邮车)
+STR_NAME_UZ25K,UZ25K (Railway Post Office),UZ25K (邮车)
 STR_NAME_UZ25T,UZ25T (Railway Post Office),UZ25T (邮车)
 STR_NAME_TZ,TZ (Air Conditioner Generator Car),TZ (空调发电车)
 STR_NAME_TZ2,TZ2 (Air Conditioner Generator Car),TZ2 (空调发电车)
@@ -115,7 +118,7 @@ STR_NAME_RZXL25Z,RZXL25Z (Luggage Passenger Coach),RZXL25Z (行李客车)
 STR_NAME_SRZ125Z,SRZ125Z (Passenger Coach),SRZ125Z (客车)
 STR_NAME_SRZ225Z,SRZ225Z (Passenger Coach),SRZ225Z (客车)
 STR_NAME_SCA25Z,SCA25Z (Restaurant Car),SCA25Z (餐车)
-STR_NAME_SRZXL25Z,SRZXL25Z (Luggage Car),SRZXL25Z (行李车)
+STR_NAME_SRZXL25Z,SRZX125Z (Luggage Car),SRZX125Z (行李客车)
 STR_NAME_SYW25,SYW25 (Passenger Coach),SYW25 (客车)
 STR_NAME_SRW25,SRW25 (Passenger Coach),SRW25 (客车)
 STR_NAME_YZ25DT_JINLUN,YZ25DT (JINLUN DMU) (Passenger Coach),YZ25DT (金轮号动车组) (客车)
@@ -274,6 +277,7 @@ STR_NAME_CR400AF,CR400AF (EMU),CR400AF (电力动车)
 STR_NAME_CR400AFAB,CR400AF-A/B (Long Version) (EMU),CR400AF-A/B (长编组) (电力动车)
 STR_NAME_CR400AFZ,CR400AF-C/Z/S (Intelligent EMU),CR400AF-C/Z/S (智能动车)
 STR_NAME_CR400AFABZ,CR400AF-AZ/BZ/BS (Long Version) (Intelligent EMU),CR400AF-AZ/BZ/BS (长编组) (智能动车)
+STR_NAME_CR400AFAE,CR400AF-AE (Intelligent EMU),CR400AF-AE (智能动车)
 STR_NAME_CR400BF,CR400BF (EMU),CR400BF (电力动车)
 STR_NAME_CR400BFAB,CR400BF-A/B (Long Version) (EMU),CR400BF-A/B (长编组) (电力动车)
 STR_NAME_CR400BFC,CR400BF-C (Intelligent EMU),CR400BF-C (智能动车)
@@ -285,13 +289,15 @@ STR_NAME_CRH6AA,CRH6A-A (Section) (EMU),CRH6A-A (整节) (电力动车)
 STR_NAME_CRH6F,CRH6F (EMU),CRH6F (电力动车)
 STR_NAME_ZEMUW,2nd-Class (ZE) MU Wagon,动车组二等座车厢
 STR_NAME_ZYMUW,1st-Class (ZY) MU Wagon,动车组一等座车厢
-STR_NAME_ZSMUW,Business-Class (ZS) MU Wagon,动车组商务座车厢
+STR_NAME_ZSMUW,Business-Class (ZS) MU Wagon,动车组商务座/特等座车厢
 STR_NAME_SWMUW,Luxury-Business-Class (SW) MU Wagon,动车组商务座车厢 (复兴号智能动车组标准)
 STR_NAME_ZECMUW,2nd-Class Restaurant Combined (ZEC) MU Wagon,动车组二等座/餐车合造车厢
 STR_NAME_WEMUW,2nd-Class Sleeper (WE) MU Wagon,动车组二等卧铺车厢
 STR_NAME_WYMUW,1st-Class Sleeper (WY) MU Wagon,动车组一等卧铺车厢
 STR_NAME_WGMUW,Top-Class Sleeper (WG) MU Wagon,动车组高级软卧车厢
 # Full Name,,
+STR_FULL_NAME_YZ1,{BLACK}FULLNAME: {GOLD}1 Type Hard Seat Passenger Coach,{BLACK}全称：{GOLD}1型硬座客车
+STR_FULL_NAME_YZ21,{BLACK}FULLNAME: {GOLD}21 Type Hard Seat Passenger Coach,{BLACK}全称：{GOLD}21型硬座客车
 STR_FULL_NAME_YZ22,{BLACK}FULLNAME: {GOLD}22 Type Hard Seat Passenger Coach,{BLACK}全称：{GOLD}22型硬座客车
 STR_FULL_NAME_RZ22,{BLACK}FULLNAME: {GOLD}22 Type Soft Seat Passenger Coach,{BLACK}全称：{GOLD}22型软座客车
 STR_FULL_NAME_YW22,{BLACK}FULLNAME: {GOLD}22 Type Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}22型硬卧客车
@@ -353,6 +359,7 @@ STR_FULL_NAME_XL25K,{BLACK}FULLNAME: {GOLD}25m Rapid Luggage Car,{BLACK}全称�
 STR_FULL_NAME_XL25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Luggage Car,{BLACK}全称：{GOLD}25米提速型行李车
 STR_FULL_NAME_UZ22,{BLACK}FULLNAME: {GOLD}22 Type Railway Post Office,{BLACK}全称：{GOLD}22型邮政车
 STR_FULL_NAME_UZ25G,{BLACK}FULLNAME: {GOLD}25m Improved Railway Post Office,{BLACK}全称：{GOLD}25米提速型邮政车
+STR_FULL_NAME_UZ25K,{BLACK}FULLNAME: {GOLD}25m Rapid Railway Post Office,{BLACK}全称：{GOLD}25米快速型邮政车
 STR_FULL_NAME_UZ25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Railway Post Office,{BLACK}全称：{GOLD}25米改进型邮政车
 STR_FULL_NAME_TZ,{BLACK}FULLNAME: {GOLD}Special Purpose Car,{BLACK}全称：{GOLD}特种车
 STR_FULL_NAME_TZ2,{BLACK}FULLNAME: {GOLD}Special Purpose Car Type 2,{BLACK}全称：{GOLD}2型特种车
@@ -368,7 +375,7 @@ STR_FULL_NAME_CA25Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Restaurant Car,{BL
 STR_FULL_NAME_SRZ125Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Double Decker 1st-Class Seat Passenger Coach,{BLACK}全称：{GOLD}25米准高速双层一等软座客车
 STR_FULL_NAME_SRZ225Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Double Decker 2nd-Class Seat Passenger Coach,{BLACK}全称：{GOLD}25米准高速双层二等软座客车
 STR_FULL_NAME_SCA25Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Double Decker Restaurant Car,{BLACK}全称：{GOLD}25米准高速双层餐车
-STR_FULL_NAME_SRZXL25Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Double Decker Soft Seat Passenger Coach & Luggage Car,{BLACK}全称：{GOLD}25米准高速双层软座行李合造车
+STR_FULL_NAME_SRZXL25Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Double Decker 1st-Class Seat Passenger Coach & Luggage Car,{BLACK}全称：{GOLD}25米准高速双层一等软座行李合造车
 STR_FULL_NAME_SYW25,{BLACK}FULLNAME: {GOLD}25m Double Decker Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米型双层硬卧客车
 STR_FULL_NAME_SRW25,{BLACK}FULLNAME: {GOLD}25m Double Decker Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米型双层软卧客车
 STR_FULL_NAME_YZ25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}25m Unilaminar Hard Seat Passenger Trail Car of ""Jinlun"" DMU",{BLACK}全称：{GOLD}“金轮号”内燃动车组25米单层硬座拖车
@@ -493,6 +500,7 @@ STR_US_IMPORT,Imported from United States,美国进口车型
 STR_FR_IMPORT,Imported from France,法国进口车型
 STR_HU_IMPORT,Imported from Hungary,匈牙利进口车型
 STR_SE_IMPORT,Imported from Sweden,瑞典进口车型
+STR_DESC_8,{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING},
 STR_DESC_6,{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING},
 STR_DESC_5,{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING},
 STR_DESC_4,{STRING}{}{STRING}{}{STRING}{}{STRING},
@@ -568,7 +576,7 @@ STR_P61_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished
 STR_P62_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Random (Black, Blue, Brown, Rustyred)",{BLACK}可供选择的涂装：{GOLD}随机 (黑色，蓝色，铁锈色，棕色)
 STR_P63_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred)",{BLACK}可供选择的涂装：{GOLD}随机 (黑色，铁锈色，棕色)
 STR_P64_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Random (Black, Brown, Rustyred)",{BLACK}可供选择的涂装：{GOLD}随机 (黑色，铁锈色，棕色，红色)
-STR_P65_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {DKGREEN}China Post{GOLD}, Black (unfinished)","{DKGREEN}可供选择的涂装： 中国邮政{GOLD},黑色 (未完成)"
+STR_P65_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {DKGREEN}China Post{GOLD}, Black (unfinished)","{DKGREEN}可供选择的涂装： 中国邮政{GOLD}, 黑色 (未完成)"
 STR_P70_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Random (Black, Blue, Brown, Rustyred)",{BLACK}可供选择的涂装：{GOLD}随机 (黑色，蓝色，铁锈色，棕色)
 STR_N5_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
 STR_N60_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
@@ -650,7 +658,8 @@ STR_ALIASNAME_SS1,{BLACK}Alias Name: {GOLD}6Y1,{BLACK}曾用名：{GOLD}6Y1
 STR_ALIASNAME_HXD3,{BLACK}Alias Name: {GOLD}DJ3,{BLACK}曾用名：{GOLD}DJ3
 STR_ALIASNAME_FXD1B,{BLACK}Alias Name: {GOLD}HXD1F (Hexie/Harmony 1F Electric Locomotive),{BLACK}曾用名：{GOLD}HXD1F(和谐1F型电力机车)
 STR_ALIASNAME_FXD2B,{BLACK}Alias Name: {GOLD}HXD2F (Hexie/Harmony 2F Electric Locomotive),{BLACK}曾用名：{GOLD}HXD2F(和谐2F型电力机车)
-STR_ALIASNAME_CJ,{BLACK}Alias Name: {GOLD}CRH3A {BLACK}(Inter-City Version),{BLACK}曾用名：{GOLD}CRH3A {BLACK}(城际版)
+STR_ALIASNAME_CJ1,{BLACK}Alias Name: {GOLD}CRH3A {BLACK}(Inter-City Version),{BLACK}曾用名：{GOLD}CRH3A {BLACK}(城际版)
+STR_ALIASNAME_YZ1,{BLACK}Standardization From: Ha1,{BLACK}统型化自： ハ1
 # Reliability,,
 STR_RELDEC_VERY_HIGH,{BLACK}Reliability decay speed: {RED}Very high ({COMMA}),{BLACK}可靠性下降速度：{RED}极高（{COMMA}）
 STR_RELDEC_HIGH,{BLACK}Reliability decay speed: {ORANGE}High ({COMMA}),{BLACK}可靠性下降速度：{ORANGE}较高（{COMMA}）
@@ -728,6 +737,7 @@ STR_XIANXING,{BLACK} - Xianxing (Pioneer) Livery,{BLACK} - 先行号涂装
 STR_XIZI,"{BLACK} - ""Xizi"" Livery","{BLACK} - {LTBLUE}""西子号""{BLACK}涂装"
 STR_XIZI_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of ""Xizi"" Train","{BLACK} - {DKGREEN}""西子号""的刷绿{BLACK}涂装"
 STR_XIZI_BUILD_YEAR,"{BLACK} - ""Xizi"" (According to build year)","{BLACK} - ""西子号""（根据建造年份选择涂装）"
+STR_GMSR,{BLACK} - Guangzhou–Meizhou–Shantou Railway Livery,{BLACK} - 广梅汕铁路涂装
 STR_GUANGSHEN,{BLACK} - Guangzhou-Shenzhen Railway Livery,{BLACK} - 广深铁路涂装
 STR_GUANGSHEN_CHANGKE_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 1st)",{BLACK} - 广深铁路（长春客车厂一批次）涂装
 STR_GUANGSHEN_CHANGKE_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 2nd)",{BLACK} - 广深铁路（长春客车厂二批次）涂装
@@ -788,6 +798,7 @@ STR_FRESHNESS_VERY_HIGH,{BLACK}Cargo age period factor: {BLUE}Very high ({COMMA}
 STR_FRESHNESS_EXTREMELY_HIGH,{BLACK}Cargo age period factor: {WHITE}Extremely High ({COMMA}),{BLACK}货物贬值周期因子：{WHITE}极高（{COMMA}）
 STR_DECAY_BOXCAR,"{BLACK}Cargo Age Period Factor: {YELLOW}185{BLACK}, Passengers {RED}80{BLACK}, Livestock {BLUE}560",{BLACK}货物贬值周期因子：{YELLOW}185{BLACK}，棚代客{RED}80{BLACK}，装载活禽/畜{BLUE}560
 STR_DECAY_BOXCAR_NOPASS,"{BLACK}Cargo Age Period Factor: {YELLOW}185{BLACK}, Livestock {BLUE}560{BLACK}, {RED}Unrefittable to Passengers",{BLACK}货物贬值周期因子：{YELLOW}185{BLACK}，装载活禽/畜{BLUE}560{BLACK}，棚代客{RED}不可用
+STR_DECAY_BOXCAR_POST,"{BLACK}Cargo Age Period Factor: {YELLOW}200{BLACK}, {RED}Unrefittable to Passengers",{BLACK}货物贬值周期因子：{YELLOW}200{BLACK}，棚代客{RED}不可用
 STR_CAFE_EFFECT,"{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Halves Running Costs of Non-Commuter Passenger Cars except Restaurant Cars, and Increases Cargo Age Period by 1/4",{BLACK}餐车的作用：{GOLD}加挂餐车使除餐车外的所有非通勤客车运行费用减半，货物贬值周期增加1/4
 STR_AIR_CONDITIONER_EFFECT,{BLACK}Air Conditioner Effect: {GOLD}Attaching Air Conditioner Generator Car Increases Cargo Age Period of Most Passenger Cars Hauled by Locomotives without Electricity Supply by 1/4,{BLACK}空调发电车的作用：{GOLD}加挂空调发电车可使大部分非机供机车牵引客车的货物贬值周期增加1/4
 STR_NO_AIR_CONDITIONER,{BLACK}Air Conditioner: {RED}Unavailable,{BLACK}空调：{RED}不可用
@@ -806,6 +817,7 @@ STR_DJF3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent t
 STR_CR200J_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, WE, WY, WG",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
 STR_CRH_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
 STR_CRH_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, WY, WG, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造
+STR_CR_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, SW, WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}二等座、商务座、一等卧、二等/餐车合造 (实为软卧/餐车合造车)
 STR_CRH_LSLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}一等卧、二等/餐车合造 (实为软卧/餐车合造车)
 STR_CJ1_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: {ORANGE}160",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
 STR_CRH6A2_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: {ORANGE}160{BLACK}), {GOLD}ZY",{BLACK}匹配的车厢：{GOLD}二等座{BLACK} (带站席，舒适度：{ORANGE}160{BLACK})、{GOLD}一等座
@@ -868,14 +880,15 @@ STR_CRH2G_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席�
 STR_CRH2ELS_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class Sleeper (WY),{BLACK}头车座席：{GOLD}动卧
 STR_CJ1_HEAD_SEAT,"{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places, Comfort: {ORANGE}160",{BLACK}头车座席：{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
 STR_CRH3A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
-STR_CRH3C_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}商务座
+STR_CRH3C_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}特等座 (商务座)
 STR_CRH5A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
 STR_CRH380A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
-STR_CRH380B_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}商务座
-STR_CRH380CL_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}商务座
+STR_CRH380B_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}特等座 (商务座)
+STR_CRH380CL_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}特等座 (商务座)
 STR_CRH380D_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
 STR_CR400_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
 STR_CR400_Z_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Luxury-Business-Class (SW),{BLACK}头车座席：{GOLD}商务座 (复兴号智能动车组标准)
+STR_CR400_E_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}特等座 (商务座)
 STR_CRH6A2_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
 STR_CRH6A3_HEAD_SEAT,"{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places, Comfort: {ORANGE}160",{BLACK}头车座席：{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
 STR_CRH6F_HEAD_SEAT,"{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places (crowded), Comfort: {RED}128",{BLACK}头车座席：{GOLD}二等座{BLACK}带站席 (拥挤)，舒适度：{RED}128

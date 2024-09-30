@@ -50,15 +50,25 @@ switch (FEAT_TRAINS, SELF, switch_df11g_speed, num_vehs_in_vehid_chain % 6) {
     return 120;
 }
 
-switch (FEAT_TRAINS, SELF, switch_df11g_power_split, position_in_consist_from_end) {
-    0..2: return 0;
-    return 4133;
+switch (FEAT_TRAINS, SELF, switch_df11g_power_split, position_in_articulated_veh) {
+    0..2: return 4057;
+    return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_df11g_power, num_vehs_in_vehid_chain % 6) {
-    3: switch_df11g_power_split;
-    return 4133;
+switch (FEAT_TRAINS, SELF, switch_df11g_power, num_vehs_in_vehid_chain > 3) {
+    1: return 4057;
+    switch_df11g_power_split;
 }
+
+
+/* switch (FEAT_TRAINS, SELF, switch_df11g_bitmask_info_0, position_in_consist_from_end) {
+    0..2: return bitmask(2);
+    return 0;
+}
+switch (FEAT_TRAINS, SELF, switch_df11g_bitmask_info, position_in_vehid_chain % 6) {
+    3..5: return bitmask(2);
+    switch_df11g_bitmask_info_0;
+} */
 
 switch (FEAT_TRAINS, SELF, switch_df11g_traction_split, vehicle_is_potentially_powered) {
     0: return 0;
@@ -132,6 +142,7 @@ item (FEAT_TRAINS, df11g) {
         running_cost_factor:                    69 * runningcostfactor() + 10;
         purchase_running_cost_factor:           276;
         purchase_cargo_capacity:                0;
+/*         bitmask_vehicle_info:                   switch_df11g_bitmask_info; */
     }
 }
 

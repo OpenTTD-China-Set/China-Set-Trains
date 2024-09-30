@@ -1,0 +1,119 @@
+//Begin UZ25K
+switch (FEAT_TRAINS, SELF, switch_uz25k_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_25K_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_uz25k_articulated_part, extra_callback_info1) {
+    1..2: return uz25k;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+// Graphics
+
+// Purchase Menu
+
+spriteset (spriteset_uz25k_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches/25k", "uz25k")
+}
+
+// Vehicle
+spriteset (spriteset_uz25k_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "uz25k")
+}
+
+switch (FEAT_TRAINS, SELF, switch_uz25k_cargo_subtype, cargo_subtype) {
+    0: string(STR_BUILD_YEAR);
+    1: string(STR_ORIGINAL);
+    /* 2: string(STR_GAOZU_GREEN); */
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_uz25k_graphics_subtype_year_depend, build_year) {
+     0..2014: spriteset_uz25k_original; //Unfinished
+    spriteset_uz25k_original;
+}
+switch (FEAT_TRAINS, SELF, switch_uz25k_graphics_subtype_0, param_gaozulv) {
+    1: switch_uz25k_graphics_subtype_year_depend;
+    spriteset_uz25k_original;
+}
+
+switch (FEAT_TRAINS, SELF, switch_uz25k_graphics_subtype, cargo_subtype) {
+    0: switch_uz25k_graphics_subtype_0;
+    1: spriteset_rw25t_original;
+/*     2: ; */
+}
+
+switch (FEAT_TRAINS, SELF, switch_uz25k_graphics, position_in_articulated_veh % 3) {
+    1: switch_uz25k_graphics_subtype;
+    empty_sprites;
+}
+
+//Cap
+
+switch (FEAT_TRAINS, SELF, switch_uz25k_capacity, position_in_articulated_veh % 3) {
+    1: return 72;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, uz25k) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_UZ25K);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					2058;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1996,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_MAIL, CC_ARMOURED);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [MAIL, VALU, GOLD, DIAM, GOOD];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             MAIL;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 72;
+        loading_speed:                  6 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          140 km/h;
+        power:                          0 hp;
+        weight:                         45 ton;
+        cost_factor:                    7;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            4;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_UZ25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL)/* , string(STR_GAOZU_GREEN) */), string(STR_FRESHNESS_MEDIUM, 200));
+        can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_uz25k_cargo_subtype;
+
+        // Graphics
+        default:                        switch_uz25k_graphics;
+        purchase:                       spriteset_uz25k_purchase_original;
+        articulated_part:               switch_uz25k_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_uz25k_capacity;
+        cargo_age_period:               200 << (param_cargo_decay + param_wagoncargodecay);
+        cost_factor:                    7;
+        running_cost_factor:            5 * runningcostfactor();
+        purchase_running_cost_factor:   20;
+        purchase_cargo_capacity:        72/3;
+        name:                           switch_uz25k_name;
+
+    }
+}
+
+// End UZ25K

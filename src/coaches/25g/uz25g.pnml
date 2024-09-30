@@ -103,7 +103,7 @@ item (FEAT_TRAINS, uz25g) {
         // Stats
         length:                         switch_length_2_8_2;
         cargo_capacity:                 switch_uz25g_capacity;
-        cargo_age_period:               200 << param_cargo_decay;
+        cargo_age_period:               200 << (param_cargo_decay + param_wagoncargodecay);
         cost_factor:                    8;
         running_cost_factor:            5 * runningcostfactor();
         purchase_running_cost_factor:   20;

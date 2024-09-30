@@ -144,6 +144,14 @@ switch (FEAT_TRAINS, SELF, crhsleeperonly, vehicle_type_id) {
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
+switch (FEAT_TRAINS, SELF, crsleeperonly, vehicle_type_id) {
+    1024: onlyallowcst;
+    1027: onlyallowcst;
+    1035: onlyallowcst;
+    1037: onlyallowcst;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
 switch (FEAT_TRAINS, SELF, crh_wagons_longitudinal_sleeper, vehicle_type_id) {
     1035: onlyallowcst;
     1037: onlyallowcst;

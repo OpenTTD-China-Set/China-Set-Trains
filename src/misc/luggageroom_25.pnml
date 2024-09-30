@@ -19,7 +19,7 @@ item(FEAT_TRAINS, luggageroom_25) {
         refittable_cargo_classes:       bitmask(CC_MAIL, CC_EXPRESS);
         cargo_allow_refit:              [MAIL, VALU, GOLD, DIAM];
         cargo_disallow_refit:           [];
-        cargo_age_period:               200;
+        cargo_age_period:               200 << (param_cargo_decay + param_wagoncargodecay);
         refit_cost:                     0;
         default_cargo_type:             MAIL;
         track_type:                     SAAN;
