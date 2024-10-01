@@ -20,16 +20,16 @@ STR_PARAM_TIMES_2,200%,
 STR_PARAM_TIMES_4,400%,
 STR_PARAM_TIMES_8,800%,
 STR_PARAM_TIMES_16,1600%,
-STR_PARAM_DEFEAT,Defeat,默认
+STR_PARAM_DEFAULT,Default,默认
 STR_PARAM_CARGO_DECAY,Cargo Age Period,货物贬值周期
 STR_PARAM_CARGO_DECAY_DESC,"Adjust cargo age period of coaches and wagons. ""Long"" is ""Standard"" doubled, while ""Very Long"" is ""Long"" doubled. Even in ""Standard"" mode, cargo age period varies.",调整车厢的货物贬值周期。“较长”为“标准”的两倍，“很长”是“较长”的两倍。即使在“标准”设置下，货物贬值周期也随车厢种类而变化。
 STR_PARAM_STANDARD,Standard,标准
 STR_PARAM_LONG,Long,较长
 STR_PARAM_VERY_LONG,Very Long,很长
-STR_PARAM_GAOZULV,"25m Passenger Coaches build after 2014 are {DKGREEN}""Gaozu Geeen""{BLACK} in defeaut",2014年后建造的25型客车默认刷{DKGREEN}绿
-STR_PARAM_GAOZULV_DESC,"Choose weather to print{DKGREEN} Canarium Green (also called ""Gaozu Geeen""){BLACK} to 25m Passenger Coaches build after 2014 in defeaut",决定2014年后建造的25型客车是否默认刷{DKGREEN}绿
+STR_PARAM_GAOZULV,"Type 25 Passenger Coaches built after 2014 are {DKGREEN}""Gaozu Geeen""{BLACK} in default",2014年后建造的25型客车默认刷{DKGREEN}绿
+STR_PARAM_GAOZULV_DESC,"Choose whether to print{DKGREEN} Canarium Green (also called ""Gaozu Geeen""){BLACK} to Type 25 Passenger Coaches built after 2014 in default",决定2014年后建造的25型客车是否默认刷{DKGREEN}绿
 STR_PARAM_WAGON_CARGO_DECAY,Set Cargo Age Period of Wagons Individually,单独设置货车的货物贬值周期
-STR_PARAM_WAGON_CARGO_DECAY_DESC,"Set cargo age period of wagons individually, overlay calculations on option ""Cargo Age Period"". It makes long-distance transport of frieght be possible.","单独设置货车的货物贬值周期，在选项""货物贬值周期""上叠加计算。这个选项使长途货物运输成为可能"
+STR_PARAM_WAGON_CARGO_DECAY_DESC,"Set cargo age period of mail and freight wagons individually, and multiplied by ""Cargo Age Period"" again. It makes very-long-distance transport of frieght possible.","单独设置邮件车和货车的货物贬值周期，在选项""货物贬值周期""上叠加计算。这个选项使超长途货物运输成为可能"
 STR_USED_WITH_DYNAMIC_ENGINES,"This GRF needs dynamic_engines to be turned on. Open console, and type ""setting dynamic_engines 1"".","请切换至控制台模式, 键入 ""setting dynamic_engines 1"", 否则您无法游玩中国包."
 # Name,,
 STR_NAME_YZ1,YZ1 (Passenger Coach),YZ1 (客车)

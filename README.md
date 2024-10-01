@@ -51,9 +51,10 @@ You would need to render all models first, then you can build the GRF.
 > The first build will be slow since all models have to be rendered, which is a slow process.
 > You can use `make -j n` to speed up the process by running multiple tasks at once where `n` is the task limit.
 
-Using Linux or WSL:#!/bin/bash
+Using Linux or WSL:
 
 ```bash
+#!/bin/bash
 # you'll have to install gorender from https://github.com/mattkimber/gorender
 # here we use apt for demo
 
@@ -113,8 +114,8 @@ Thanks to:
 
 - andythenorth
 - Belaja Lilija
-- Emperor Jake
 - dP
+- Emperor Jake
 - Garlic_Bread42
 - KeepinItRail
 - peter1138
