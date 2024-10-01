@@ -32,7 +32,7 @@ switch (FEAT_TRAINS, SELF, switch_yz25k_cargo_subtype, cargo_subtype) {
     1: return string(STR_ORIGINAL);
 /*     2: string(STR_GAOZU_GREEN); */
     2: return string(STR_GMSR);
-/*     3: return string(STR_GUANGSHEN); */
+    3: return string(STR_GUANGSHEN);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -50,7 +50,7 @@ switch (FEAT_TRAINS, SELF, switch_yz25k_graphics_subtype, cargo_subtype) {
     1: spriteset_yz25k_original;
 /*     2: ; */
     2: spriteset_yz25k_gmsr;
-/*     3: spriteset_yz25k_guangshen; */
+    3: spriteset_yz25k_guangshen;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25k_graphics, position_in_articulated_veh % 3) {
@@ -102,7 +102,7 @@ item (FEAT_TRAINS, yz25k) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YZ25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL)/* , string(STR_GAOZU_GREEN) */, string(STR_GMSR)/* , string(STR_GUANGSHEN) */), string(STR_COMFORT_LOW, 160));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YZ25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL)/* , string(STR_GAOZU_GREEN) */, string(STR_GMSR), string(STR_GUANGSHEN)), string(STR_COMFORT_LOW, 160));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_yz25k_cargo_subtype;
 

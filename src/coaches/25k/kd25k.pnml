@@ -55,7 +55,7 @@ switch (FEAT_TRAINS, SELF, switch_kd25k_graphics_subtype, cargo_subtype) {
     1: spriteset_kd25k_original;
 /*     2: ; */
     2: spriteset_kd25k_gmsr;
-/*     3: spriteset_kd25k_guangshen; */
+    3: spriteset_kd25k_guangshen;
     3: spriteset_kd25k_luchaogang;
     4: spriteset_kd25k_xian;
 }
@@ -104,7 +104,7 @@ item (FEAT_TRAINS, kd25k) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL)/* , string(STR_GAOZU_GREEN)*/, string(STR_GMSR)/* , string(STR_GUANGSHEN) */, string(STR_LUCHAOGANG), string(STR_XIAN)), string(STR_AIR_CONDITIONER_EFFECT));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL)/* , string(STR_GAOZU_GREEN)*/, string(STR_GMSR), string(STR_GUANGSHEN), string(STR_LUCHAOGANG), string(STR_XIAN)), string(STR_AIR_CONDITIONER_EFFECT));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_kd25k_cargo_subtype;
 
