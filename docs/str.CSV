@@ -150,8 +150,8 @@ STR_NAME_PB,PB (Boxcar),PB (棚车)
 STR_NAME_W5,W5 (Boxcar for Toxic Good),W5 (有毒物品专用车)
 STR_NAME_W5S,W5S (Boxcar for Toxic Good),W5S (有毒物品专用车)
 STR_NAME_W5SK,W5SK (Boxcar for Toxic Good),W5SK (有毒物品专用车)
-STR_NAME_W6,W5 (Boxcar for Toxic Good),W6 (有毒物品专用车)
-STR_NAME_W6S,W5 (Boxcar for Toxic Good),W6S (有毒物品专用车)
+STR_NAME_W6,W6 (Boxcar for Toxic Good),W6 (有毒物品专用车)
+STR_NAME_W6S,W6S (Boxcar for Toxic Good),W6S (有毒物品专用车)
 STR_NAME_B6,B6 (Refrigerator Wagon),B6 (保温车)
 STR_NAME_B22,B22 (Refrigerator Wagon),B22 (保温车)
 STR_NAME_BH1,BH1 (Refrigerator Wagon),BH1 (保温车)
@@ -817,7 +817,7 @@ STR_DJF3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent t
 STR_CR200J_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, WE, WY, WG",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
 STR_CRH_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
 STR_CRH_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, WY, WG, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造
-STR_CR_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, SW, WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}二等座、商务座、一等卧、二等/餐车合造 (实为软卧/餐车合造车)
+STR_CR_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZS, WY, ZEC (As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}二等座、商务座、一等卧、二等/餐车合造 (实为软卧/餐车合造车)
 STR_CRH_LSLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}一等卧、二等/餐车合造 (实为软卧/餐车合造车)
 STR_CJ1_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: {ORANGE}160",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
 STR_CRH6A2_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: {ORANGE}160{BLACK}), {GOLD}ZY",{BLACK}匹配的车厢：{GOLD}二等座{BLACK} (带站席，舒适度：{ORANGE}160{BLACK})、{GOLD}一等座
