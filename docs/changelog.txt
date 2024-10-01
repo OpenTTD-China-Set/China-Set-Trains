@@ -37,7 +37,7 @@ Feature: improved language strings of reliability decay and comfort
 
 0.3.1.167 (8/8/2024)
 --------------------
-Add: NC3, P80, UZ25T, P50, P65
+Add: NC3, P80, UZ25T, P50, P65, G50
 Renewal the sprites of HXD1D, 25T
 Wagons with aging liveries now have new feature: The probabilities of aging liveries will change by years
 Fix #47: The Cargo Type of PB
