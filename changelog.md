@@ -5,10 +5,14 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.2.173 (4/10/2024)
+---------------------
+Fix #53: CR400AF-Z Sprite Errors
+
 0.3.2.171 (1/10/2024)
 ---------------------
 
-Add: RZ225G, UZ25G, P1, YZ1, RZ125G, UZ25K
+Add: RZ225G, UZ25G, P1, YZ1, RZ125G, UZ25K, CR400AF-AE
 Fix #52: length of N5
 Renewal the sprites of RZ125Z, RZ225Z, RZT25Z
 Renewal the sprites of 25K Series, and add liveries of 25K Series
