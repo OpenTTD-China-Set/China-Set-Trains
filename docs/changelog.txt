@@ -5,6 +5,10 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.2.173 (1/10/2024)
+--------------------
+Fix #52: sprites of CR400AFZ
+
 0.3.2.171 (1/10/2024)
 --------------------
 Add: RZ225G, UZ25G, P1, YZ1, RZ125G, UZ25K
