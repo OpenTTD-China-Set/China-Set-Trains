@@ -20,16 +20,16 @@ STR_PARAM_TIMES_2,200%,
 STR_PARAM_TIMES_4,400%,
 STR_PARAM_TIMES_8,800%,
 STR_PARAM_TIMES_16,1600%,
-STR_PARAM_DEFEAT,Defeat,默认
+STR_PARAM_DEFAULT,Default,默认
 STR_PARAM_CARGO_DECAY,Cargo Age Period,货物贬值周期
 STR_PARAM_CARGO_DECAY_DESC,"Adjust cargo age period of coaches and wagons. ""Long"" is ""Standard"" doubled, while ""Very Long"" is ""Long"" doubled. Even in ""Standard"" mode, cargo age period varies.",调整车厢的货物贬值周期。“较长”为“标准”的两倍，“很长”是“较长”的两倍。即使在“标准”设置下，货物贬值周期也随车厢种类而变化。
 STR_PARAM_STANDARD,Standard,标准
 STR_PARAM_LONG,Long,较长
 STR_PARAM_VERY_LONG,Very Long,很长
-STR_PARAM_GAOZULV,"25m Passenger Coaches build after 2014 are {DKGREEN}""Gaozu Geeen""{BLACK} in defeaut",2014年后建造的25型客车默认刷{DKGREEN}绿
-STR_PARAM_GAOZULV_DESC,"Choose weather to print{DKGREEN} Canarium Green (also called ""Gaozu Geeen""){BLACK} to 25m Passenger Coaches build after 2014 in defeaut",决定2014年后建造的25型客车是否默认刷{DKGREEN}绿
+STR_PARAM_GAOZULV,"Type 25 Passenger Coaches built after 2014 are {DKGREEN}""Gaozu Geeen""{BLACK} in default",2014年后建造的25型客车默认刷{DKGREEN}绿
+STR_PARAM_GAOZULV_DESC,"Choose whether to print{DKGREEN} Canarium Green (also called ""Gaozu Geeen""){BLACK} to Type 25 Passenger Coaches built after 2014 in default",决定2014年后建造的25型客车是否默认刷{DKGREEN}绿
 STR_PARAM_WAGON_CARGO_DECAY,Set Cargo Age Period of Wagons Individually,单独设置货车的货物贬值周期
-STR_PARAM_WAGON_CARGO_DECAY_DESC,"Set cargo age period of wagons individually, overlay calculations on option ""Cargo Age Period"". It makes long-distance transport of frieght be possible.","单独设置货车的货物贬值周期，在选项""货物贬值周期""上叠加计算。这个选项使长途货物运输成为可能"
+STR_PARAM_WAGON_CARGO_DECAY_DESC,"Set cargo age period of mail and freight wagons individually, and multiplied by ""Cargo Age Period"" again. It makes very-long-distance transport of frieght possible.","单独设置邮件车和货车的货物贬值周期，在选项""货物贬值周期""上叠加计算。这个选项使超长途货物运输成为可能"
 STR_USED_WITH_DYNAMIC_ENGINES,"This GRF needs dynamic_engines to be turned on. Open console, and type ""setting dynamic_engines 1"".","请切换至控制台模式, 键入 ""setting dynamic_engines 1"", 否则您无法游玩中国包."
 # Name,,
 STR_NAME_YZ1,YZ1 (Passenger Coach),YZ1 (客车)
@@ -150,8 +150,8 @@ STR_NAME_PB,PB (Boxcar),PB (棚车)
 STR_NAME_W5,W5 (Boxcar for Toxic Good),W5 (有毒物品专用车)
 STR_NAME_W5S,W5S (Boxcar for Toxic Good),W5S (有毒物品专用车)
 STR_NAME_W5SK,W5SK (Boxcar for Toxic Good),W5SK (有毒物品专用车)
-STR_NAME_W6,W5 (Boxcar for Toxic Good),W6 (有毒物品专用车)
-STR_NAME_W6S,W5 (Boxcar for Toxic Good),W6S (有毒物品专用车)
+STR_NAME_W6,W6 (Boxcar for Toxic Good),W6 (有毒物品专用车)
+STR_NAME_W6S,W6S (Boxcar for Toxic Good),W6S (有毒物品专用车)
 STR_NAME_B6,B6 (Refrigerator Wagon),B6 (保温车)
 STR_NAME_B22,B22 (Refrigerator Wagon),B22 (保温车)
 STR_NAME_BH1,BH1 (Refrigerator Wagon),BH1 (保温车)
@@ -817,7 +817,7 @@ STR_DJF3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent t
 STR_CR200J_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, WE, WY, WG",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
 STR_CRH_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
 STR_CRH_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, WY, WG, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造
-STR_CR_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, SW, WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}二等座、商务座、一等卧、二等/餐车合造 (实为软卧/餐车合造车)
+STR_CR_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZS, WY, ZEC (As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}二等座、商务座、一等卧、二等/餐车合造 (实为软卧/餐车合造车)
 STR_CRH_LSLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}一等卧、二等/餐车合造 (实为软卧/餐车合造车)
 STR_CJ1_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: {ORANGE}160",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
 STR_CRH6A2_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: {ORANGE}160{BLACK}), {GOLD}ZY",{BLACK}匹配的车厢：{GOLD}二等座{BLACK} (带站席，舒适度：{ORANGE}160{BLACK})、{GOLD}一等座
