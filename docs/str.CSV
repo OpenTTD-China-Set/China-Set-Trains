@@ -563,7 +563,7 @@ STR_YZ31_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}
 STR_25ML_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {WHITE}White-{GREEN}-Green {GOLD}Livery, {RED}RED-{GREEN}-Green {GOLD}Livery (after 2003)", {GOLD}白底绿带涂装，类25G红色涂装 (2003年以后)
 STR_G17_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{GRAY}黑色{GOLD}加随机颜色条带 (未完成)
 STR_G60_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GRAY}Gray {GOLD}with Random-Colour Stripes ,{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带
-STR_G70_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GRAY}Gray {GOLD}with Random-Colour Stripes ,{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带 
+STR_G70_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GRAY}Gray {GOLD}with Random-Colour Stripes ,{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带
 STR_GN70_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{BLACK}黑色{GOLD}加随机颜色条带 (未完成)
 STR_GN80_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{BLACK}黑色{GOLD}加随机颜色条带 (未完成)
 STR_C62_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
@@ -805,8 +805,8 @@ STR_NO_AIR_CONDITIONER,{BLACK}Air Conditioner: {RED}Unavailable,{BLACK}空调：
 STR_SELF_AIR_CONDITIONER,{BLACK}With Air Conditioner Compartment {RED}ONLY USED BY ITSELF,{BLACK}自带空调发电机{RED}但仅用于本车厢
 STR_DESC_PENGDAIKE,"{BLACK}Passengers in Boxcars (Peng Dai Ke): From 1980s to 2008, to handle huge traffic amounts during the Spring Festival period, temporary trains where passengers crowding in boxcars had to be operated. This reflected a severe lack of railway transport resources at that time.",{BLACK}棚代客：从20世纪80年代至2008年，为适应春运期间极大的客流量，部分铁路局曾开行使用棚车装载旅客的临客列车，内部极度拥挤。该现象反映了当时铁路运输资源的严重缺乏。
 # Can Attach,,
-STR_ATTACH_ALL_CRH_CR,{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs,{BLACK}匹配的动车组：{GOLD}所有和谐/复兴号动车
-STR_ATTACH_SLEEPER_MU,{BLACK}Matching MUs: {GOLD}All CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs,{BLACK}匹配的动车组：{GOLD}所有提供卧铺的和谐/复兴号动车
+STR_ATTACH_ALL_CRH_CR,{BLACK}Matching MUs: {GOLD}Most of CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs,{BLACK}匹配的动车组：{GOLD}大部分和谐/复兴号动车
+STR_ATTACH_SLEEPER_MU,{BLACK}Matching MUs: {GOLD}Part of CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs,{BLACK}匹配的动车组：{GOLD}部分提供卧铺的和谐/复兴号动车
 STR_ATTACH_CR200J,{BLACK}Matching MUs: {GOLD}CR200J Series,{BLACK}匹配的动车组：{GOLD}CR200J系列动车
 STR_NZJ1_XINSHUGUANG_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK}, equivalent to Double-Decker Hard Seat, Capacity: 136, Comfort: {YELLOW}200{BLACK}; {GOLD}ZY{BLACK}, equivalent to Double-Decker Soft Seat, Capacity: 108, Comfort: {YELLOW}240",{BLACK}匹配的车厢：{GOLD}二等座{BLACK}实为双层硬座，载客量：136，舒适度：{YELLOW}200{BLACK}；{GOLD}一等座{BLACK}实为双层软座，载客量：108，舒适度：{YELLOW}240
 STR_NDJ3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC{BLACK}, Second Class Capacity: 114, Comfort: 200",{BLACK}匹配的车厢：{GOLD}二等座、一等座、二等/餐车合造{BLACK}，二等座载客量：114，舒适度：{YELLOW}200
