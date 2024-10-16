@@ -13,13 +13,13 @@ spriteset (spriteset_nj2_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "nj2-original")
 }
 spriteset (spriteset_nj2_original_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "nj2-original-back")
+    template_reversed_10 ("diesel", "nj2-original")
 }
 spriteset (spriteset_nj2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "nj2")
 }
 spriteset (spriteset_nj2_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "nj2-back")
+    template_reversed_10 ("diesel", "nj2")
 }
 
 switch (FEAT_TRAINS, SELF, switch_nj2_articulated_part, extra_callback_info1) {

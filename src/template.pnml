@@ -84,27 +84,18 @@ template template_reversed_11 (a, b) {
     [172,   0, 192,  80, -112, -62, "gfx/"+a+"/"+b+"_32bpp.png"]
     [372,   0, 120, 116, -49, -76, "gfx/"+a+"/"+b+"_32bpp.png"]
 }
-/* template template_reversed_11 (a, b) {
-    [500,   0,  36, 160, -14, -69, "gfx/"+a+"/"+b+"_32bpp.png"]
-    [544,   0, 120, 116, -79, -66, "gfx/"+a+"/"+b+"_32bpp.png"]
-    [672,   0, 192,  80, -104, -78, "gfx/"+a+"/"+b+"_32bpp.png"]
-    [872,   0, 120, 116, -51, -78, "gfx/"+a+"/"+b+"_32bpp.png"]
-    [  0,   0,  36, 160, -14, -87, "gfx/"+a+"/"+b+"_32bpp.png"]
-    [ 44,   0, 120, 116, -67, -76, "gfx/"+a+"/"+b+"_32bpp.png"]
-    [172,   0, 192,  80, -80, -54, "gfx/"+a+"/"+b+"_32bpp.png"]
-    [372,   0, 120, 116, -29, -66, "gfx/"+a+"/"+b+"_32bpp.png"]
-} */
 
-/* template template_reversed_10 (a, b) {
-    [500,   0,  36, 160, -14, -80, "gfx/"+a+"/"+b+"_32bpp.png"]
-    [544,   0, 120, 116, -75, -72, "gfx/"+a+"/"+b+"_32bpp.png"]
-    [672,   0, 192,  80, -96, -60, "gfx/"+a+"/"+b+"_32bpp.png"]
-    [872,   0, 120, 116, -41, -72, "gfx/"+a+"/"+b+"_32bpp.png"]
-    [  0,   0,  36, 160, -14, -80, "gfx/"+a+"/"+b+"_32bpp.png"]
-    [ 44,   0, 120, 116, -75, -72, "gfx/"+a+"/"+b+"_32bpp.png"]
-    [172,   0, 192,  80, -96, -60, "gfx/"+a+"/"+b+"_32bpp.png"]
-    [372,   0, 120, 116, -41, -72, "gfx/"+a+"/"+b+"_32bpp.png"]
-} */
+template template_reversed_10 (a, b) {
+    [500,   0,  36, 160, -14, -94, "gfx/"+a+"/"+b+"_32bpp.png"]
+    [544,   0, 120, 116, -59, -80, "gfx/"+a+"/"+b+"_32bpp.png"]
+    [672,   0, 192,  80, -64, -62, "gfx/"+a+"/"+b+"_32bpp.png"]
+    [872,   0, 120, 116, -25, -64, "gfx/"+a+"/"+b+"_32bpp.png"]
+    [  0,   0,  36, 160, -14, -66, "gfx/"+a+"/"+b+"_32bpp.png"]
+    [ 44,   0, 120, 116, -91, -64, "gfx/"+a+"/"+b+"_32bpp.png"]
+    [172,   0, 192,  80, -128, -62, "gfx/"+a+"/"+b+"_32bpp.png"]
+    [372,   0, 120, 116, -57, -80, "gfx/"+a+"/"+b+"_32bpp.png"]
+}
+
 
 // Below shamelessly stolen from JP+ Shinkansen
 spriteset (spriteset_too_many_12, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx/misc/less12_32bpp.png") {

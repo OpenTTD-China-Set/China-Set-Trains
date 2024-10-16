@@ -18,7 +18,7 @@ spriteset (spriteset_df4d0000_xihu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df4d-xihu")
 }
 spriteset (spriteset_df4d0000_xihu_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "df4d-xihu-r")
+    template_reversed_10 ("diesel", "df4d-xihu")
 }
 
 

@@ -37,7 +37,7 @@ spriteset (spriteset_cr200jb_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200j-b-c")
 }
 spriteset (spriteset_cr200jb_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr200j-b-mr")
+    template_reversed_10 ("25-emu", "cr200j-b-m")
 }
 spriteset (spriteset_cr200jb_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200j-b-c-c")

@@ -4,18 +4,18 @@
 
 // Purchase Menu
 spriteset (spriteset_djj2_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("25-emu/djj2", "djj2-m-b")
+    template_purchase ("25-emu/djj2", "djj2-m")
 }
 
 // Vehicle
 spriteset (spriteset_djj2_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu/djj2", "djj2-m-b")
+    template_standard ("25-emu/djj2", "djj2-m")
 }
 spriteset (spriteset_djj2_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu/djj2", "djj2-t")
 }
 spriteset (spriteset_djj2_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu/djj2", "djj2-m")
+    template_reversed_10 ("25-emu/djj2", "djj2-m")
 }
 
 switch (FEAT_TRAINS, SELF, switch_djj2_articulated_part, extra_callback_info1) {
