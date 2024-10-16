@@ -28,6 +28,9 @@ spriteset (spriteset_kd25k_luchaogang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_kd25k_xian, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25k", "kd25k-xian")
 }
+spriteset (spriteset_kd25k_25t, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "kd25k-25t")
+}
 
 switch (FEAT_TRAINS, SELF, switch_kd25k_articulated_part, extra_callback_info1) {
     1..2: return kd25k;
@@ -42,6 +45,7 @@ switch (FEAT_TRAINS, SELF, switch_kd25k_cargo_subtype, cargo_subtype) {
     3: return string(STR_GUANGSHEN);
     4: return string(STR_LUCHAOGANG);
     5: return string(STR_XIAN);
+    6: return string(STR_BLUE_WHITE);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -58,6 +62,7 @@ switch (FEAT_TRAINS, SELF, switch_kd25k_graphics_subtype, cargo_subtype) {
     3: spriteset_kd25k_guangshen;
     4: spriteset_kd25k_luchaogang;
     5: spriteset_kd25k_xian;
+    6: spriteset_kd25k_25t;
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25k_graphics, position_in_articulated_veh % 3) {
@@ -104,7 +109,7 @@ item (FEAT_TRAINS, kd25k) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL)/* , string(STR_GAOZU_GREEN)*/, string(STR_GMSR), string(STR_GUANGSHEN), string(STR_LUCHAOGANG), string(STR_XIAN)), string(STR_AIR_CONDITIONER_EFFECT));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL)/* , string(STR_GAOZU_GREEN)*/, string(STR_GMSR), string(STR_GUANGSHEN), string(STR_LUCHAOGANG), string(STR_XIAN), string(STR_BLUE_WHITE)), string(STR_AIR_CONDITIONER_EFFECT));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_kd25k_cargo_subtype;
 
