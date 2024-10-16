@@ -58,6 +58,7 @@ STR_NAME_YZ25B,YZ25B (Passenger Coach),YZ25B (客车)
 STR_NAME_RZ25B,RZ25B (Passenger Coach),RZ25B (客车)
 STR_NAME_YW25B,YW25B (Passenger Coach),YW25B (客车)
 STR_NAME_RW25B,RW25B (Passenger Coach),RW25B (客车)
+STR_NAME_CA25B,CA25G (Restaurant Car),CA25B (餐车)
 STR_NAME_SYZ25BLD,SYZ25B (Passenger Coach) (Low-Door),SYZ25B (客车) (低开门)
 STR_NAME_SRZ25BLD,SRZ25B (Passenger Coach) (Low-Door),SRZ25B (客车) (低开门)
 STR_NAME_SYZ25BHD,SYZ25B (Passenger Coach) (High-Door),SYZ25B (客车) (高开门)
@@ -321,6 +322,7 @@ STR_FULL_NAME_YZ25B,{BLACK}FULLNAME: {GOLD}25m Standard Hard Seat Passenger Coac
 STR_FULL_NAME_RZ25B,{BLACK}FULLNAME: {GOLD}25m Standard Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米标准型软座客车
 STR_FULL_NAME_YW25B,{BLACK}FULLNAME: {GOLD}25m Standard Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米标准型硬卧客车
 STR_FULL_NAME_RW25B,{BLACK}FULLNAME: {GOLD}25m Standard Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米标准型软卧客车
+STR_FULL_NAME_CA25B,{BLACK}FULLNAME: {GOLD}25m Standard Restaurant Car,{BLACK}全称：{GOLD}25米标准型餐车
 STR_FULL_NAME_SYZ25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Hard Seat Passenger Coach,{BLACK}全称：{GOLD}25米标准型双层硬座客车
 STR_FULL_NAME_SRZ25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米标准型双层软座客车
 STR_FULL_NAME_SYW25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米标准型双层硬卧客车
@@ -737,7 +739,8 @@ STR_XIANXING,{BLACK} - Xianxing (Pioneer) Livery,{BLACK} - 先行号涂装
 STR_XIZI,"{BLACK} - ""Xizi"" Livery","{BLACK} - {LTBLUE}""西子号""{BLACK}涂装"
 STR_XIZI_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of ""Xizi"" Train","{BLACK} - {DKGREEN}""西子号""的刷绿{BLACK}涂装"
 STR_XIZI_BUILD_YEAR,"{BLACK} - ""Xizi"" (According to build year)","{BLACK} - ""西子号""（根据建造年份选择涂装）"
-STR_GMSR,{BLACK} - Guangzhou–Meizhou–Shantou Railway Livery,{BLACK} - 广梅汕铁路涂装
+STR_HEJIU,{BLACK} - Hefei-Jiujiang Railway Livery,{BLACK} - 合九铁路涂装
+STR_GMSR,{BLACK} - Guangzhou-Meizhou-Shantou Railway Livery,{BLACK} - 广梅汕铁路涂装
 STR_GUANGSHEN,{BLACK} - Guangzhou-Shenzhen Railway Livery,{BLACK} - 广深铁路涂装
 STR_GUANGSHEN_CHANGKE_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 1st)",{BLACK} - 广深铁路（长春客车厂一批次）涂装
 STR_GUANGSHEN_CHANGKE_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 2nd)",{BLACK} - 广深铁路（长春客车厂二批次）涂装

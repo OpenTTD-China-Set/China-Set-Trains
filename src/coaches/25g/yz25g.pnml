@@ -26,6 +26,9 @@ spriteset (spriteset_yz25g_xihu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_yz25g_nanhu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "yz25g-nanhu")
 }
+spriteset (spriteset_yz25g_gmsr, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "yz25g-gmsr")
+}
 
 switch (FEAT_TRAINS, SELF, switch_yz25g_articulated_part, extra_callback_info1) {
     1..2: return yz25g;
@@ -39,7 +42,8 @@ switch (FEAT_TRAINS, SELF, switch_yz25g_cargo_subtype, cargo_subtype) {
     3: return string(STR_JINWEN);
 /*     4: return string(STR_JINWEN_GREEN); */
     4: return string(STR_XIHU);
-    5: return string(STR_NANHU);
+    5: return string(STR_GMSR);
+    6: return string(STR_NANHU);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -58,7 +62,8 @@ switch (FEAT_TRAINS, SELF, switch_yz25g_graphics_subtype, cargo_subtype) {
     3: spriteset_yz25g_jinwen;
 /*     4: ; */
     4: spriteset_yz25g_xihu;
-    5: spriteset_yz25g_nanhu;
+    4: spriteset_yz25g_gmsr;
+    6: spriteset_yz25g_nanhu;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25g_graphics, position_in_articulated_veh % 3) {

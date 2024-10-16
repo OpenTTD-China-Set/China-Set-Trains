@@ -9,18 +9,21 @@ switch (FEAT_TRAINS, SELF, switch_yw25t_name, getbits(extra_callback_info1, 0, 8
 
 // // Purchase Menu
 spriteset (spriteset_yw25t_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "yw25t")
+    template_purchase ("coaches", "25t/yw25t")
 }
 
 // Vehicle
 spriteset (spriteset_yw25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "yw25t")
+    template_standard ("coaches", "25t/yw25t")
+}
+spriteset (spriteset_yW25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/yW25t-green")
 }
 spriteset (spriteset_yw25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "yw25t-xz")
+    template_standard ("coaches", "25t/yw25t-xz")
 }
 spriteset (spriteset_bspyw25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "bspyw25t-xz")
+    template_standard ("coaches", "25t/bspyw25t-xz")
 }
 
 
@@ -39,8 +42,8 @@ switch (FEAT_TRAINS, SELF, switch_yw25t_cargo_subtype, cargo_subtype) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw25t_graphics_subtype_year_depend, build_year) {
-     0..2014: spriteset_yw25t_original;
-    spriteset_25t_gaozu;
+    0..2014: spriteset_yw25t_original;
+    spriteset_yW25t_green;
 }
 switch (FEAT_TRAINS, SELF, switch_yw25t_graphics_subtype_0, param_gaozulv) {
     1: switch_yw25t_graphics_subtype_year_depend;
@@ -50,7 +53,7 @@ switch (FEAT_TRAINS, SELF, switch_yw25t_graphics_subtype_0, param_gaozulv) {
 switch (FEAT_TRAINS, SELF, switch_yw25t_graphics_subtype, cargo_subtype) {
     0: switch_yw25t_graphics_subtype_0;
     1: spriteset_yw25t_original;
-    2: spriteset_25t_gaozu;
+    2: spriteset_yW25t_green;
     3: spriteset_yw25t_qingzang;
     4: spriteset_bspyw25t_qingzang;
 }

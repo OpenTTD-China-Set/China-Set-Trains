@@ -10,23 +10,31 @@ switch (FEAT_TRAINS, SELF, switch_rz25t_name, getbits(extra_callback_info1, 0, 8
 // Purchase Menu
 // // Purchase Menu
 spriteset (spriteset_rz25t_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "rz25t")
+    template_purchase ("coaches", "25t/rz25t")
 }
 
 // Vehicle
 spriteset (spriteset_rz25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "rz25t")
+    template_standard ("coaches", "25t/rz25t")
+}
+spriteset (spriteset_rz25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/rz25t-green")
 }
 spriteset (spriteset_bsprz25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "bsprz25t")
+    template_standard ("coaches", "25t/bsprz25t")
+}
+spriteset (spriteset_bsprz25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/bsprz25t-green")
 }
 spriteset (spriteset_rz25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "rz25t-xz")
+    template_standard ("coaches", "25t/rz25t-xz")
 }
 spriteset (spriteset_rz25t_hk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "rz25t-hk")
+    template_standard ("coaches", "25t/rz25t-hk")
 }
-
+spriteset (spriteset_rz25t_hk_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/rz25t-hk-green")
+}
 
 switch (FEAT_TRAINS, SELF, switch_rz25t_articulated_part, extra_callback_info1) {
     1..2: return rz25t;
@@ -38,16 +46,16 @@ switch (FEAT_TRAINS, SELF, switch_rz25t_cargo_subtype, cargo_subtype) {
     1: string(STR_ORIGINAL);
     2: string(STR_BSP25T);
     3: string(STR_GAOZU_GREEN);
-/*     4: string(STR_GAOZU_GREEN); */
+    4: string(STR_GAOZU_GREEN_BSP);
     4: string(STR_QINGZANG);
     5: string(STR_25T_HK);
-/*     7: string(STR_25T_HK_GREEN); */
+    7: string(STR_25T_HK_GREEN);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rz25t_graphics_subtype_year_depend, build_year) {
      0..2014: spriteset_rz25t_original;
-    spriteset_25t_gaozu;
+    spriteset_rz25t_green;
 }
 switch (FEAT_TRAINS, SELF, switch_rz25t_graphics_subtype_0, param_gaozulv) {
     1: switch_rz25t_graphics_subtype_year_depend;
@@ -58,11 +66,11 @@ switch (FEAT_TRAINS, SELF, switch_rz25t_graphics_subtype, cargo_subtype) {
     0: switch_rz25t_graphics_subtype_0;
     1: spriteset_rz25t_original;
     2: spriteset_bsprz25t_original;
-    3: spriteset_25t_gaozu;
-/*     4: ; */
+    3: spriteset_rz25t_green;
+    4: spriteset_bsprz25t_green;
     4: spriteset_rz25t_qingzang;
     5: spriteset_rz25t_hk;
-/*     7: ; */
+    7: spriteset_rz25t_hk_green;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rz25t_graphics, position_in_articulated_veh % 3) {

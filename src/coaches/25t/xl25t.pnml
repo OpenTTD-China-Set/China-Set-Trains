@@ -9,18 +9,24 @@ switch (FEAT_TRAINS, SELF, switch_xl25t_name, getbits(extra_callback_info1, 0, 8
 
 // Purchase Menu
 spriteset (spriteset_xl25t_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "xl25t")
+    template_purchase ("coaches", "25t/xl25t")
 }
 
 // Vehicle
 spriteset (spriteset_xl25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "xl25t")
+    template_standard ("coaches", "25t/xl25t")
+}
+spriteset (spriteset_xl25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/xl25t-green")
 }
 spriteset (spriteset_bspxl25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "bspxl25t")
+    template_standard ("coaches", "25t/bspxl25t")
+}
+spriteset (spriteset_bspxl25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/bspxl25t-green")
 }
 spriteset (spriteset_xl25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "xl25t-xz")
+    template_standard ("coaches", "25t/xl25t-xz")
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25t_articulated_part, extra_callback_info1) {
@@ -33,15 +39,15 @@ switch (FEAT_TRAINS, SELF, switch_xl25t_cargo_subtype, cargo_subtype) {
     0: string(STR_BUILD_YEAR);
     1: string(STR_ORIGINAL);
     2: string(STR_BSP25T);
-/*     3: string(STR_GAOZU_GREEN); */
-/*     4: string(STR_GAOZU_GREEN_BSP); */
-    3: string(STR_QINGZANG);
+    3: string(STR_GAOZU_GREEN);
+    4: string(STR_GAOZU_GREEN_BSP);
+    5: string(STR_QINGZANG);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25t_graphics_subtype_year_depend, build_year) {
     0..2014: spriteset_xl25t_original;
-    spriteset_xl25t_original;
+    spriteset_xl25t_green;
 }
 
 
@@ -54,8 +60,8 @@ switch (FEAT_TRAINS, SELF, switch_xl25t_graphics_subtype, cargo_subtype) {
     0: switch_xl25t_graphics_subtype_0;
     1: spriteset_xl25t_original;
     2: spriteset_bspxl25t_original;
-/*     3:; */
-/*     4:; */
+    3: spriteset_xl25t_green;
+    4: spriteset_bspxl25t_green;
     3: spriteset_xl25t_qingzang;
 }
 
