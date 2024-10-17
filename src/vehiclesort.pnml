@@ -101,6 +101,9 @@ sort (FEAT_TRAINS, [
     crh3a,
     crh3c,
     crh5a,
+/*     crh5g, */
+    crh5gjt,
+    crh5e,
     crh6a2,
     crh6a3,
     crh6aa,

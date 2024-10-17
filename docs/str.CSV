@@ -267,6 +267,9 @@ STR_NAME_CJ1,CJ1 (EMU),CJ1 (电力动车)
 STR_NAME_CRH3A,CRH3A (EMU),CRH3A (电力动车)
 STR_NAME_CRH3C,CRH3C (EMU),CRH3C (电力动车)
 STR_NAME_CRH5A,CRH5A (EMU),CRH5A (电力动车)
+STR_NAME_CRH5E,CRH5E (EMU),CRH5E (电力动车)
+STR_NAME_CRH5G,CRH5G (EMU),CRH5G (电力动车)
+STR_NAME_CRH5GJT,CRH5G (Technology-Enhanced) (EMU),CRH5G (技术提升型) (电力动车)
 STR_NAME_CRH380A,CRH380A (EMU),CRH380A (电力动车)
 STR_NAME_CRH380AL,CRH380AL (Long Version) (EMU),CRH380AL (长编组) (电力动车)
 STR_NAME_CRH380B,CRH380B (EMU),CRH380B (电力动车)
@@ -822,8 +825,9 @@ STR_DJF3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent t
 STR_CR200J_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, WE, WY, WG",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
 STR_CRH_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
 STR_CRH_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, WY, WG, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造
-STR_CR_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZS, WY, ZEC (As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}二等座、商务座、一等卧、二等/餐车合造 (实为软卧/餐车合造车)
+STR_CR_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZS, WY, ZEC (As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}二等座、商务座 (特等座)、一等卧、二等/餐车合造 (实为软卧/餐车合造车)
 STR_CRH_LSLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}一等卧、二等/餐车合造 (实为软卧/餐车合造车)
+STR_CRH5E_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造 (实为软卧/餐车合造车)
 STR_CJ1_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: {ORANGE}160",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
 STR_CRH6A2_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: {ORANGE}160{BLACK}), {GOLD}ZY",{BLACK}匹配的车厢：{GOLD}二等座{BLACK} (带站席，舒适度：{ORANGE}160{BLACK})、{GOLD}一等座
 STR_CRH6A3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: {ORANGE}160",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
@@ -841,7 +845,6 @@ STR_X2000_CONSIST,"{BLACK}Consist: {GOLD}One section at front, with wagons attac
 STR_DJJ1_CONSIST,"{BLACK}Consist: {GOLD}One section at front, with wagons attached; or one section at front, another section at back. At least 4 wagons",{BLACK}构成：{GOLD}头部一节，或头尾各一节，中间加挂至少四节车厢
 STR_DJJ2_CONSIST,"{BLACK}Consist: {GOLD}One section at front, another section at back, MU Wagins in Middle",{BLACK}构成：{GOLD}头尾各一节，中间加挂拖车车厢
 STR_DJF3_CONSIST,{BLACK}Consist: {GOLD}4 to 12 cars; with 9-car standard consist (M-T-M-M-T-M-M-T-M),{BLACK}构成：{GOLD}4-12节；9 节标准编组时为 (M-T-M-M-T-M-M-T-M)
-STR_CRH5A_CONSIST,"{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car",{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车 1495 公制马力
 STR_CR400_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 T-M-T-M-M-T-M-T。大于12节时以重联方式运行
 STR_CR400_AB_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 16-car standard consist 2*(T-M-T-M-M-T-M-T),{BLACK}构成：{GOLD}4-24节；16 节标准编组时为 2*(T-M-T-M-M-T-M-T)
 STR_CR400_Z_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12. {RED}Intelligent {YELLOW}EMUs {GOLD}have lower running costs,{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 T-M-T-M-M-T-M-T。大于12节时以重联方式运行。智能动车运行费用更低
@@ -860,6 +863,8 @@ STR_CRH2G_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up)
 STR_CJ1_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
 STR_CRH3A_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
 STR_CRH3C_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
+STR_CRH5_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节：其中8节标准编组为5M3T。大于12节时以重联方式运行
+STR_CRH5E_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 16-car consist 10 motorised cars,{BLACK}构成：{GOLD}4-24节：其中16节标准编组为10M6T
 STR_CRH380A_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节；头尾拖车，中间全为动力车。大于12节时以重联方式运行
 STR_CRH380AL_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised",{BLACK}构成：{GOLD}4-24节；头尾拖车，中间全为动力车
 STR_CRH380B_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节；头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
@@ -886,7 +891,8 @@ STR_CRH2ELS_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class Sleeper (WY),{BLACK}头�
 STR_CJ1_HEAD_SEAT,"{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places, Comfort: {ORANGE}160",{BLACK}头车座席：{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
 STR_CRH3A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
 STR_CRH3C_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}特等座 (商务座)
-STR_CRH5A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CRH5_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CRH5E_HEAD_SEAT,{BLACK}Head Seat: {GOLD}2nd-Class (ZE),{BLACK}头车座席：{GOLD}二等座
 STR_CRH380A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
 STR_CRH380B_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}特等座 (商务座)
 STR_CRH380CL_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}特等座 (商务座)

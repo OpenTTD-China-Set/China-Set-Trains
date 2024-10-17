@@ -62,7 +62,7 @@ switch (FEAT_TRAINS, SELF, switch_xl25t_graphics_subtype, cargo_subtype) {
     2: spriteset_bspxl25t_original;
     3: spriteset_xl25t_green;
     4: spriteset_bspxl25t_green;
-    3: spriteset_xl25t_qingzang;
+    5: spriteset_xl25t_qingzang;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25t_graphics, position_in_articulated_veh % 3) {
