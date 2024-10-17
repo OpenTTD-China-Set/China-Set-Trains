@@ -510,8 +510,8 @@ STR_DESC_5,{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING},
 STR_DESC_4,{STRING}{}{STRING}{}{STRING}{}{STRING},
 STR_DESC_3,{STRING}{}{STRING}{}{STRING},
 STR_DESC_2,{STRING}{}{STRING},
-STR_LV_AVAILABLE_S,{STRING}{STRING}{STRING}{STRING}{STRING}{STRING},
-STR_LV_AVAILABLE_L,{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING},
+STR_LV_AVAILABLE_S,{STRING}{STRING}|{STRING}|{STRING}|{STRING}|{STRING},
+STR_LV_AVAILABLE_L,{STRING}{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING},
 # Desc,,
 STR_JINLUN_25DT,"Coaches use for DMU {BLUE}""JIN{WHITE}LUN""",{BLUE}金{WHITE}轮{RED}号{GOLD}内燃动车组所使用的拖车
 STR_XL25T_SSPE_DESCRIPTION,"{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.",{BLACK}新时速运递公司使用的XL25T版本。
@@ -688,10 +688,11 @@ STR_DETERIORATE,{BLACK} - Deteriorated Livery,{BLACK} - 老化后
 STR_BLACK,{BLACK} - Black Livery,{BLACK} - 黑色涂装
 STR_ORANGE,{ORANGE} - Orange Livery,{ORANGE} - 橘色涂装
 STR_GREEN,{GREEN} - Green Livery,{GREEN} - 绿色涂装
-STR_SS7C_BANANA,{BLACK} - {YELLOW}Banana Yellow {BLACK}Livery,{BLACK} - {YELLOW}黄色{BLACK}涂装
+STR_SS7C_BANANA,{BLACK} - {YELLOW}Banana Yellow {BLACK}Livery,{BLACK} - {YELLOW}“香蕉”{BLACK}涂装
 STR_RED,{RED} - Red Livery,{RED} - 红色涂装
 STR_WHITE,{WHITE} - WhIte Livery,{WHITE} - 白色涂装
 STR_BLUE,{BLUE} - Blue Livery,{BLUE} - 蓝色涂装
+STR_LAKEBLUE,{LTBLUE} - Lake Blue Livery,{BLUE} - 湖蓝色涂装
 STR_GRASSGREEN,{DKGREEN} - Dark Green Livery,{DKGREEN} - 草绿色涂装
 STR_LATER_ORANGE,{ORANGE} - Later Orange Livery,{ORANGE} - 后期橘色涂装
 STR_LATER_GREEN,{GREEN} - Later Green Livery,{GREEN} - 后期绿色涂装
@@ -740,6 +741,7 @@ STR_XIZI,"{BLACK} - ""Xizi"" Livery","{BLACK} - {LTBLUE}""西子号""{BLACK}涂�
 STR_XIZI_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of ""Xizi"" Train","{BLACK} - {DKGREEN}""西子号""的刷绿{BLACK}涂装"
 STR_XIZI_BUILD_YEAR,"{BLACK} - ""Xizi"" (According to build year)","{BLACK} - ""西子号""（根据建造年份选择涂装）"
 STR_HEJIU,{BLACK} - Hefei-Jiujiang Railway Livery,{BLACK} - 合九铁路涂装
+STR_GYR,{BLACK} - GUangxi Yanhai Raiway,{BLACK} - 广西沿海铁路涂装
 STR_GMSR,{BLACK} - Guangzhou-Meizhou-Shantou Railway Livery,{BLACK} - 广梅汕铁路涂装
 STR_GUANGSHEN,{BLACK} - Guangzhou-Shenzhen Railway Livery,{BLACK} - 广深铁路涂装
 STR_GUANGSHEN_CHANGKE_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 1st)",{BLACK} - 广深铁路（长春客车厂一批次）涂装

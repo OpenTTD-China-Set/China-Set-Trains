@@ -9,7 +9,7 @@ China Set: Trains Changelog
 --------------------
 Fix #53: offset of sprites template
 Renewal the sprites of 22 Series, 25B Series
-Add Liveries: 25G Series GMSR,
+Add Liveries: 25G Series, 25T Series, 25K Series
 
 0.3.2.173 (4/10/2024)
 --------------------

@@ -20,6 +20,9 @@ spriteset (spriteset_yw25g_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_yw25g_gmsr, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "yw25g-gmsr")
 }
+spriteset (spriteset_yw25g_hejiu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "yw25g-hejiu")
+}
 
 switch (FEAT_TRAINS, SELF, switch_yw25g_articulated_part, extra_callback_info1) {
     1..2: return yw25g;
@@ -33,6 +36,7 @@ switch (FEAT_TRAINS, SELF, switch_yw25g_cargo_subtype, cargo_subtype) {
     2: return string(STR_JINWEN);
 /*     4: return string(STR_JINWEN_GREEN); */
     3: return string(STR_GMSR);
+    4: return string(STR_HEJIU);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -51,6 +55,7 @@ switch (FEAT_TRAINS, SELF, switch_yw25g_graphics_subtype, cargo_subtype) {
     2: spriteset_yw25g_jinwen;
 /*     4: ; */
     3: spriteset_yw25g_gmsr;
+    4: spriteset_yw25g_hejiu;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw25g_graphics, position_in_articulated_veh % 3) {
@@ -101,7 +106,7 @@ item (FEAT_TRAINS, yw25g) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YW25G), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL),/* ,string(STR_GAOZU_GREEN), */ string(STR_JINWEN) /*,string(STR_JINWEN_GREEN) */), string(STR_COMFORT_HIGH, 288));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YW25G), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL),/* ,string(STR_GAOZU_GREEN), */ string(STR_JINWEN)/*, string(STR_JINWEN_GREEN) */, string(STR_GMSR), string(STR_HEJIU)), string(STR_COMFORT_HIGH, 288));
         can_attach_wagon:               locowagon;
 
         // Graphics

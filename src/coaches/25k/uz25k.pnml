@@ -21,17 +21,20 @@ spriteset (spriteset_uz25k_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP)
 spriteset (spriteset_uz25k_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25k", "uz25k")
 }
+spriteset (spriteset_uz25k_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "uz25k-green")
+}
 
 switch (FEAT_TRAINS, SELF, switch_uz25k_cargo_subtype, cargo_subtype) {
     0: string(STR_BUILD_YEAR);
     1: string(STR_ORIGINAL);
-    /* 2: string(STR_GAOZU_GREEN); */
+    2: string(STR_GAOZU_GREEN);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_uz25k_graphics_subtype_year_depend, build_year) {
-     0..2014: spriteset_uz25k_original; //Unfinished
-    spriteset_uz25k_original;
+     0..2014: spriteset_uz25k_original;
+    spriteset_uz25k_green;
 }
 switch (FEAT_TRAINS, SELF, switch_uz25k_graphics_subtype_0, param_gaozulv) {
     1: switch_uz25k_graphics_subtype_year_depend;
@@ -41,7 +44,7 @@ switch (FEAT_TRAINS, SELF, switch_uz25k_graphics_subtype_0, param_gaozulv) {
 switch (FEAT_TRAINS, SELF, switch_uz25k_graphics_subtype, cargo_subtype) {
     0: switch_uz25k_graphics_subtype_0;
     1: spriteset_rw25t_original;
-/*     2: ; */
+    2: spriteset_uz25k_green;
 }
 
 switch (FEAT_TRAINS, SELF, switch_uz25k_graphics, position_in_articulated_veh % 3) {
@@ -94,7 +97,7 @@ item (FEAT_TRAINS, uz25k) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_UZ25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL)/* , string(STR_GAOZU_GREEN) */), string(STR_FRESHNESS_MEDIUM, 200));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_UZ25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN)), string(STR_FRESHNESS_MEDIUM, 200));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_uz25k_cargo_subtype;
 
