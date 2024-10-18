@@ -28,6 +28,9 @@ spriteset (spriteset_rw25g_jinwen_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_rw25g_gmsr, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "rw25g-gmsr")
 }
+spriteset (spriteset_rw25g_hejiu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "rw25g-hejiu")
+}
 
 switch (FEAT_TRAINS, SELF, switch_rw25g_articulated_part, extra_callback_info1) {
     1..2: return rw25g;
@@ -41,6 +44,7 @@ switch (FEAT_TRAINS, SELF, switch_rw25g_cargo_subtype, cargo_subtype) {
     3: return string(STR_JINWEN);
     4: return string(STR_JINWEN_GREEN);
     5: return string(STR_GMSR);
+    6: return string(STR_HEJIU);
     return CB_RESULT_NO_TEXT;
 }
 

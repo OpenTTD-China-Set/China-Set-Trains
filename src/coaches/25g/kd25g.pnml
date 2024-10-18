@@ -93,8 +93,9 @@ switch (FEAT_TRAINS, SELF, switch_kd25g_graphics_subtype, cargo_subtype) {
     7: spriteset_kd25g_orange;
     8: spriteset_kd25g_gmsr;
     9: spriteset_kd25g_hejiu;
-    10: spriteset_kd25g_nanhu;
-    11: spriteset_kd25g_25t;
+    10: spriteset_kd25g_xiaoyong;
+    11: spriteset_kd25g_nanhu;
+    12: spriteset_kd25g_25t;
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25g_graphics, position_in_articulated_veh % 3) {
