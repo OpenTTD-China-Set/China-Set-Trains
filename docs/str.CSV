@@ -682,7 +682,7 @@ STR_350_380_AVAILABLE,Refittable to Max Speed 350 or 380 km/h (Increasing runnin
 STR_DJJ2_321_AVAILABLE,This train has broke the Highest Speed Record of China's Railway by {GOLD}321.5 km/h{BLACK} on 27th Oct. 2002. Refittable to this speed (Increasing running costs),这列车曾经在2002年10月27日创下了当时中国铁路的最高速321.5 km/h。可改装到这一速度，运营费用增加
 # Livery,,
 STR_LV_PRE_GRAY,{GRAY} - Gray,{GRAY} - 灰色
-STR_LV_PRE_DETERIORATE,{BLACK} - Deteriorated,{BALCK} - 旧化
+STR_LV_PRE_DETERIORATE,{BLACK} - Deteriorated,{BLACK} - 旧化
 STR_ORIGINAL,{BLACK} - Original Livery,{BLACK} - 原版涂装
 STR_ALTERNATIVE,{BLACK} - Alternative Original Livery,{BLACK} - 另一种原版涂装
 STR_REVERSE,{BLACK} └ the Reverse of the Livery Above,{BLACK} └ 翻转的涂装
