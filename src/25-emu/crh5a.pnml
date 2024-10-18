@@ -173,6 +173,7 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_running, vehicle_is_potentially_po
 //power
 
 switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_power_unit, ((position_in_consist) / 3 + 1) % 8) {
+    0: return 1475;
     1..2: return 1475;
     4: return 1475;
     7..8: return 1475;
@@ -189,7 +190,7 @@ switch (FEAT_TRAINS, SELF, switch_crh5a_power_long, (position_in_consist / 3) + 
     switch_crh5a_wagon_power_unit;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_power_length, num_vehs_in_consist) {
+switch (FEAT_TRAINS, SELF, switch_crh5a_wagon_power_length, num_vehs_in_consist / 3) {
     2..12: switch_crh5a_wagon_power_unit;
     switch_crh5a_power_long;
 }

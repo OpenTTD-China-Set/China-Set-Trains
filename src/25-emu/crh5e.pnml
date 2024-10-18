@@ -132,7 +132,7 @@ switch (FEAT_TRAINS, SELF, switch_crh5e_wagon_running, vehicle_is_potentially_po
 //power
 
 switch (FEAT_TRAINS, SELF, switch_crh5e_wagon_power_unit, ((position_in_consist) / 3 + 1) % 8) {
-    1..2: return 1475;
+    0..2: return 1475;
     4: return 1475;
     7..8: return 1475;
     return 0;
