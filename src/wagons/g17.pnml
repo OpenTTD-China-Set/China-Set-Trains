@@ -24,6 +24,14 @@ spriteset (spriteset_g17_yellow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 }
 
 
+switch (FEAT_TRAINS, SELF, switch_g17_cargo_subtype, cargo_subtype) {
+    0: return string(STR_BUILD_YEAR);
+    1: return string(STR_ORIGINAL);
+    2: return string(STR_GAOZU_GREEN);
+    3: return string(STR_JINWEN);
+    return CB_RESULT_NO_TEXT;
+}
+
 random_switch (FEAT_TRAINS, SELF, random_g17_colour) {
     1: spriteset_g17_grey;
     1: spriteset_g17_red;
@@ -86,6 +94,7 @@ item (FEAT_TRAINS, g17) {
         // Menu
         additional_text:                string(STR_DESC_2, string(STR_G17_LIVERY_AVAILABILITY), string(STR_FRESHNESS_MEDIUM, 185));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_g17_cargo_subtype;
 
         // Graphics
         default:                        switch_g17_graphics;

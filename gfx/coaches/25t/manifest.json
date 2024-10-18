@@ -23,7 +23,7 @@
     {
       "angle": 0,
       "width": 36,
-      "height": 160,
+      "height": 166,
       "flip": true,
       "render_elevation": 33
     },
@@ -48,7 +48,7 @@
     {
       "angle": 180,
       "width": 36,
-      "height": 160,
+      "height": 166,
       "flip": true,
       "render_elevation": 33
     },
