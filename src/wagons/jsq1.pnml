@@ -79,52 +79,122 @@ switch (FEAT_TRAINS, SELF, switch_jsq1_articulated_part, extra_callback_info1) {
 
 random_switch (FEAT_TRAINS, SELF, random_jsq1_full) {
     1: spriteset_jsq1_1_full; // More colours waiting to be added
-    1: spriteset_jsq1_2_red;
+    3: spriteset_jsq1_2_red;
     1: spriteset_jsq1_2_blue;
-    1: spriteset_jsq1_3_red;
+    3: spriteset_jsq1_3_red;
     1: spriteset_jsq1_3_blue;
-    1: spriteset_jsq1_4_red_full;
+    3: spriteset_jsq1_4_red_full;
     1: spriteset_jsq1_4_blue_full;
-    1: spriteset_jsq1_5;
-    1: spriteset_jsq1_6_red_full;
+    3: spriteset_jsq1_5;
+    3: spriteset_jsq1_6_red_full;
     1: spriteset_jsq1_6_blue_full;
 }
-
 random_switch (FEAT_TRAINS, SELF, random_jsq1_half) {
     1: spriteset_jsq1_1_half; // More colours waiting to be added
-    1: spriteset_jsq1_2_red;
+    3: spriteset_jsq1_2_red;
     1: spriteset_jsq1_2_blue;
-    1: spriteset_jsq1_3_red;
+    3: spriteset_jsq1_3_red;
     1: spriteset_jsq1_3_blue;
-    1: spriteset_jsq1_4_red_half;
+    3: spriteset_jsq1_4_red_half;
     1: spriteset_jsq1_4_blue_half;
-    1: spriteset_jsq1_5;
-    1: spriteset_jsq1_6_red_half;
+    3: spriteset_jsq1_5;
+    3: spriteset_jsq1_6_red_half;
     1: spriteset_jsq1_6_blue_half;
 }
-
 random_switch (FEAT_TRAINS, SELF, random_jsq1_empty) {
     1: spriteset_jsq1_1_empty; // More colours waiting to be added
-    1: spriteset_jsq1_2_red;
+    3: spriteset_jsq1_2_red;
     1: spriteset_jsq1_2_blue;
-    1: spriteset_jsq1_3_red;
+    3: spriteset_jsq1_3_red;
     1: spriteset_jsq1_3_blue;
-    1: spriteset_jsq1_4_red_empty;
+    3: spriteset_jsq1_4_red_empty;
     1: spriteset_jsq1_4_blue_empty;
-    1: spriteset_jsq1_5;
-    1: spriteset_jsq1_6_red_empty;
+    3: spriteset_jsq1_5;
+    3: spriteset_jsq1_6_red_empty;
     1: spriteset_jsq1_6_blue_empty;
 }
 
-switch (FEAT_TRAINS, SELF, switch_jsq1_not_empty, cargo_count < 10) {
+
+random_switch (FEAT_TRAINS, SELF, switch_jsq1_full_red) {
+    1: spriteset_jsq1_2_red;
+    1: spriteset_jsq1_3_red;
+    1: spriteset_jsq1_4_red_full;
+    1: spriteset_jsq1_5;
+    1: spriteset_jsq1_6_red_full;
+}
+random_switch (FEAT_TRAINS, SELF, switch_jsq1_half_red) {
+    1: spriteset_jsq1_2_red;
+    1: spriteset_jsq1_3_red;
+    1: spriteset_jsq1_4_red_half;
+    1: spriteset_jsq1_5;
+    1: spriteset_jsq1_6_red_half;
+}
+random_switch (FEAT_TRAINS, SELF, switch_jsq1_empty_red) {
+    1: spriteset_jsq1_2_red;
+    1: spriteset_jsq1_3_red;
+    1: spriteset_jsq1_4_red_empty;
+    1: spriteset_jsq1_5;
+    1: spriteset_jsq1_6_red_empty;
+}
+
+
+random_switch (FEAT_TRAINS, SELF, switch_jsq1_full_blue) {
+    1: spriteset_jsq1_1_full; // More colours waiting to be added
+    1: spriteset_jsq1_2_blue;
+    1: spriteset_jsq1_3_blue;
+    1: spriteset_jsq1_4_blue_full;
+    1: spriteset_jsq1_6_blue_full;
+}
+random_switch (FEAT_TRAINS, SELF, switch_jsq1_half_blue) {
+    1: spriteset_jsq1_1_half; // More colours waiting to be added
+    1: spriteset_jsq1_2_blue;
+    1: spriteset_jsq1_3_blue;
+    1: spriteset_jsq1_4_blue_half;
+    1: spriteset_jsq1_6_blue_half;
+}
+random_switch (FEAT_TRAINS, SELF, switch_jsq1_empty_blue) {
+    1: spriteset_jsq1_1_empty; // More colours waiting to be added
+    1: spriteset_jsq1_2_blue;
+    1: spriteset_jsq1_3_blue;
+    1: spriteset_jsq1_4_blue_empty;
+    1: spriteset_jsq1_6_blue_empty;
+}
+
+
+
+
+switch (FEAT_TRAINS, SELF, switch_jsq1_empty_color, cargo_subtype) {
+    0: random_jsq1_empty;
+    1: switch_jsq1_empty_red;
+    2: switch_jsq1_empty_blue;
+}
+switch (FEAT_TRAINS, SELF, switch_jsq1_half_color, cargo_subtype) {
     0: random_jsq1_half;
+    1: switch_jsq1_half_red;
+    2: switch_jsq1_half_blue;
+}
+switch (FEAT_TRAINS, SELF, switch_jsq1_full_color, cargo_subtype) {
+    0: random_jsq1_full;
+    1: switch_jsq1_full_red;
+    2: switch_jsq1_full_blue;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_jsq1_original, cargo_count < 2) {
+    0..2: random_jsq1_empty;
+    3..10: random_jsq1_half;
     random_jsq1_full;
 }
 
-switch (FEAT_TRAINS, SELF, switch_jsq1_original, cargo_count < 2) {
-    0: switch_jsq1_not_empty;
-    random_jsq1_empty;
+switch (FEAT_TRAINS, SELF, switch_jsq1_cargo_subtype, cargo_subtype) {
+    0: return string(STR_RANDOM_COLOR);
+    1: return string(STR_RED);
+    2: return string(STR_BLUE);
+    return CB_RESULT_NO_TEXT;
 }
+
+
+
 
 switch (FEAT_TRAINS, SELF, switch_jsq1_graphics, position_in_articulated_veh % 3) {
     1: switch_jsq1_original;
@@ -183,6 +253,7 @@ item (FEAT_TRAINS, jsq1) {
         // Menu
         additional_text:                string(STR_DESC_2, string(STR_JSQ1_LIVERY_AVAILABILITY), string(STR_FRESHNESS_HIGH, 400));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_jsq1_cargo_subtype;
 
         // Graphics
         default:                        switch_jsq1_graphics;

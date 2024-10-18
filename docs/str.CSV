@@ -513,6 +513,7 @@ STR_DESC_5,{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING},
 STR_DESC_4,{STRING}{}{STRING}{}{STRING}{}{STRING},
 STR_DESC_3,{STRING}{}{STRING}{}{STRING},
 STR_DESC_2,{STRING}{}{STRING},
+STR_LV_COLOR_PREFIX,{STRING}{STRING}{STRING}{STRING},
 STR_LV_AVAILABLE_S,{STRING}{STRING}|{STRING}|{STRING}|{STRING}|{STRING},
 STR_LV_AVAILABLE_L,{STRING}{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING},
 # Desc,,
@@ -680,6 +681,8 @@ STR_350_AVAILABLE,Refittable to Max Speed 350 km/h (Increasing running costs),�
 STR_350_380_AVAILABLE,Refittable to Max Speed 350 or 380 km/h (Increasing running costs),可改装为最高速度 350 或 380 km/h，运营费用增加
 STR_DJJ2_321_AVAILABLE,This train has broke the Highest Speed Record of China's Railway by {GOLD}321.5 km/h{BLACK} on 27th Oct. 2002. Refittable to this speed (Increasing running costs),这列车曾经在2002年10月27日创下了当时中国铁路的最高速321.5 km/h。可改装到这一速度，运营费用增加
 # Livery,,
+STR_LV_PRE_GRAY,{GRAY} - Gray,{GRAY} - 灰色
+STR_LV_PRE_DETERIORATE,{BLACK} - Deteriorated,{BALCK} - 旧化
 STR_ORIGINAL,{BLACK} - Original Livery,{BLACK} - 原版涂装
 STR_ALTERNATIVE,{BLACK} - Alternative Original Livery,{BLACK} - 另一种原版涂装
 STR_REVERSE,{BLACK} └ the Reverse of the Livery Above,{BLACK} └ 翻转的涂装
@@ -689,17 +692,21 @@ STR_EARLIER,{BLACK} - Earlier Livery,{BLACK} - 早期涂装
 STR_FACTORY,{BLACK} - Factory Livery,{BLACK} - 出厂涂装
 STR_DETERIORATE,{BLACK} - Deteriorated Livery,{BLACK} - 老化后
 STR_BLACK,{BLACK} - Black Livery,{BLACK} - 黑色涂装
+STR_GRAY,{GRAY} - Gray Livery,{GRAY} - 灰色涂装
 STR_ORANGE,{ORANGE} - Orange Livery,{ORANGE} - 橘色涂装
+STR_YELLOW,{YELLOW} - Yellow Livery,{BLACK} - 黄色涂装
 STR_GREEN,{GREEN} - Green Livery,{GREEN} - 绿色涂装
 STR_SS7C_BANANA,{BLACK} - {YELLOW}Banana Yellow {BLACK}Livery,{BLACK} - {YELLOW}“香蕉”{BLACK}涂装
 STR_RED,{RED} - Red Livery,{RED} - 红色涂装
-STR_WHITE,{WHITE} - WhIte Livery,{WHITE} - 白色涂装
+STR_BROWN,{BROWN} - Brown Livery,{BROWN} - 褐色涂装
+STR_WHITE,{WHITE} - White Livery,{WHITE} - 白色涂装
 STR_BLUE,{BLUE} - Blue Livery,{BLUE} - 蓝色涂装
 STR_LAKEBLUE,{LTBLUE} - Lake Blue Livery,{BLUE} - 湖蓝色涂装
 STR_GRASSGREEN,{DKGREEN} - Dark Green Livery,{DKGREEN} - 草绿色涂装
 STR_LATER_ORANGE,{ORANGE} - Later Orange Livery,{ORANGE} - 后期橘色涂装
 STR_LATER_GREEN,{GREEN} - Later Green Livery,{GREEN} - 后期绿色涂装
 STR_RANDOM_COLOR,{BLACK} - Ramdom Color,{BLACK} - 随机颜色
+STR_RUSTYRED,{BROWN} - Rusty Red Color,{BROWN} - 锈红色
 STR_XIHU,{BLACK} - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery,{BLACK} - {GREEN}西户铁路{BLACK}涂装
 STR_XIHU_REVERSE,"{BLACK} - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery, reversed",{BLACK} - {GREEN}西户铁路{BLACK}涂装，倒转方向
 STR_DF4D_7000,{BLACK} - {GREEN}7000-{YELLOW}Series {BLACK}Livery,{BLACK} - {GREEN}7000{YELLOW}系{BLACK}涂装

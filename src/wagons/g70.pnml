@@ -28,6 +28,20 @@ random_switch (FEAT_TRAINS, SELF, random_g70_colour) {
     1: spriteset_g70_gray_red;
     1: spriteset_g70_white_red;
 }
+switch (FEAT_TRAINS, SELF, switch_g70_cargo_subtype, cargo_subtype) {
+    0: return string(STR_RANDOM_COLOR);
+    1: return string(STR_GRAY);
+    2: return string(STR_RED);
+    3: return string(STR_YELLOW);
+    return CB_RESULT_NO_TEXT;
+}
+switch (FEAT_TRAINS, SELF, switch_g70_graphics_subtype, cargo_subtype) {
+    0: random_g70_colour;
+    1: spriteset_g70_gray;
+    2: spriteset_g70_gray_red;
+    3: spriteset_g70_white_red;
+}
+
 
 switch (FEAT_TRAINS, SELF, switch_g70_articulated_part, extra_callback_info1) {
     1..2: return g70;
@@ -35,7 +49,7 @@ switch (FEAT_TRAINS, SELF, switch_g70_articulated_part, extra_callback_info1) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_g70_graphics, position_in_articulated_veh % 3) {
-    1: random_g70_colour;
+    1: switch_g70_cargo_subtype;
     empty_sprites;
 }
 
@@ -84,6 +98,7 @@ item (FEAT_TRAINS, g70) {
         // Menu
         additional_text:                string(STR_DESC_2, string(STR_G70_LIVERY_AVAILABILITY), string(STR_FRESHNESS_MEDIUM, 185));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_g70_cargo_subtype;
 
         // Graphics
         default:                        switch_g70_graphics;
@@ -98,7 +113,7 @@ item (FEAT_TRAINS, g70) {
         running_cost_factor:            4 * runningcostfactor();
         purchase_running_cost_factor:   16;
         purchase_cargo_capacity:        62/3;
-        name:                            switch_g70_name;
+        name:                           switch_g70_name;
 
     }
 }

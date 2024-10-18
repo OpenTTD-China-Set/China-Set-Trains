@@ -24,18 +24,26 @@ spriteset (spriteset_g17_yellow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 }
 
 
-switch (FEAT_TRAINS, SELF, switch_g17_cargo_subtype, cargo_subtype) {
-    0: return string(STR_BUILD_YEAR);
-    1: return string(STR_ORIGINAL);
-    2: return string(STR_GAOZU_GREEN);
-    3: return string(STR_JINWEN);
-    return CB_RESULT_NO_TEXT;
-}
+
 
 random_switch (FEAT_TRAINS, SELF, random_g17_colour) {
     1: spriteset_g17_grey;
     1: spriteset_g17_red;
-    1: spriteset_g17_yellow;
+    1: spriteset_g17_red;
+}
+switch (FEAT_TRAINS, SELF, switch_g17_cargo_subtype, cargo_subtype) {
+    0: return string(STR_RANDOM_COLOR);
+    1: return string(STR_GRAY);
+    2: return string(STR_RED);
+    3: return string(STR_YELLOW);
+    return CB_RESULT_NO_TEXT;
+}
+switch (FEAT_TRAINS, SELF, switch_gl7_graphics_subtype, cargo_subtype) {
+    0: random_g17_colour;
+    1: spriteset_g17_grey;
+    2: spriteset_yz25g_green;
+    3: spriteset_yz25g_jinwen;
+
 }
 
 switch (FEAT_TRAINS, SELF, switch_g17_articulated_part, extra_callback_info1) {
@@ -44,7 +52,7 @@ switch (FEAT_TRAINS, SELF, switch_g17_articulated_part, extra_callback_info1) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_g17_graphics, position_in_articulated_veh % 3) {
-    1: random_g17_colour;
+    1: switch_gl7_graphics_subtype;
     empty_sprites;
 }
 

@@ -53,13 +53,29 @@ switch (FEAT_TRAINS, SELF, random_p64a_colour, current_year - 1979) {
     16..30: random_p64a_colour_middium;
     random_p64a_colour_late;
 }
+switch (FEAT_TRAINS, SELF, switch_p64a_cargo_subtype, cargo_subtype) {
+    0: return string(STR_RANDOM_COLOR);
+    1: return string(STR_BLACK);
+    2: return string(STR_RUSTYRED);
+    3: return string(STR_BROWN);
+    4: return string(STR_RED);
+    return CB_RESULT_NO_TEXT;
+}
+switch (FEAT_TRAINS, SELF, switch_p64a_graphics_subtype, cargo_subtype) {
+    0: random_p64a_colour;
+    1: spriteset_p64a_black;
+    2: spriteset_p64a_rustyred;
+    3: spriteset_p64a_brown;
+    4: spriteset_p64a_red;
+}
+
 switch (FEAT_TRAINS, SELF, switch_p64a_articulated_part, extra_callback_info1) {
     1..2: return p64a;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
 switch (FEAT_TRAINS, SELF, switch_p64a_graphics, position_in_articulated_veh % 3) {
-    1: random_p64a_colour;
+    1: switch_p64a_graphics_subtype;
     empty_sprites;
 }
 
@@ -138,6 +154,7 @@ item (FEAT_TRAINS, p64a) {
         // Menu
         additional_text:                string(STR_DESC_3, string(STR_P64_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR), string(STR_DESC_PENGDAIKE));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_p64a_cargo_subtype;
 
         // Graphics
         default:                        switch_p64a_graphics;
