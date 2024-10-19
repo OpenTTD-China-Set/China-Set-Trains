@@ -21,10 +21,10 @@ spriteset (spriteset_djj1_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "djj1-c")
 }
 spriteset (spriteset_djj1_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "djj1-m-b")
+    template_reversed_10 ("25-emu", "djj1-m")
 }
 spriteset (spriteset_djj1_back_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "djj1-m-b-guangshen")
+    template_reversed_10 ("25-emu", "djj1-m-guangshen")
 }
 
 switch (FEAT_TRAINS, SELF, switch_djj1_articulated_part, extra_callback_info1) {

@@ -2,7 +2,7 @@
 STR_GRF_NAME,China Set: Trains {VERSION_STRING},中国包：火车 {VERSION_STRING}
 STR_GRF_DESC,The Train sector of the China Set of OpenTTD.,OpenTTD中国包的火车部分。
 STR_GRF_URL,https://www.tt-forums.net/viewtopic.php?t=91092,
-STR_GRF_DESC_EXTRA," Locomotives, MUs, Coaches and Wagons in China Mainland. More contents in the future.",中国大陆的火车，包括机车、动车组、车厢。未来会有更多内容。
+STR_GRF_DESC_EXTRA," Locomotives, MUs, Coaches and Wagons in China Mainland. More contents in the future.",中国大陆的火车，包括机车、动车组、车厢。未来会有更多内容。{RED}在游戏中更新NewGRF时请注意最低兼容版本！请不要强行更新！
 STR_GRF_DESC_README,See readme for details.,更多信息请查看Readme。
 STR_LEAPING_LIU_NEVER_DIES,{BLUE}Leaping Liu Never Dies.,{BLUE}跨越不死，曙光永生
 STR_PARAM_LOADING_SPEED,Loading Speed,装载速度
@@ -58,6 +58,7 @@ STR_NAME_YZ25B,YZ25B (Passenger Coach),YZ25B (客车)
 STR_NAME_RZ25B,RZ25B (Passenger Coach),RZ25B (客车)
 STR_NAME_YW25B,YW25B (Passenger Coach),YW25B (客车)
 STR_NAME_RW25B,RW25B (Passenger Coach),RW25B (客车)
+STR_NAME_CA25B,CA25G (Restaurant Car),CA25B (餐车)
 STR_NAME_SYZ25BLD,SYZ25B (Passenger Coach) (Low-Door),SYZ25B (客车) (低开门)
 STR_NAME_SRZ25BLD,SRZ25B (Passenger Coach) (Low-Door),SRZ25B (客车) (低开门)
 STR_NAME_SYZ25BHD,SYZ25B (Passenger Coach) (High-Door),SYZ25B (客车) (高开门)
@@ -101,6 +102,7 @@ STR_NAME_XL25K,XL25K (Luggage Car),XL25K (行李车)
 STR_NAME_XL25T,XL25T (Luggage Car),XL25T (行李车)
 STR_NAME_XL25T_SSPE,XL25T-SSPE (Luggage Car),XL25T-SSPE (行李车)
 STR_NAME_UZ22,UZ22 (Railway Post Office),UZ22 (邮车)
+STR_NAME_UZ25B,UZ25B (Railway Post Office),UZ25B (邮车)
 STR_NAME_UZ25G,UZ25G (Railway Post Office),UZ25G (邮车)
 STR_NAME_UZ25K,UZ25K (Railway Post Office),UZ25K (邮车)
 STR_NAME_UZ25T,UZ25T (Railway Post Office),UZ25T (邮车)
@@ -265,6 +267,9 @@ STR_NAME_CJ1,CJ1 (EMU),CJ1 (电力动车)
 STR_NAME_CRH3A,CRH3A (EMU),CRH3A (电力动车)
 STR_NAME_CRH3C,CRH3C (EMU),CRH3C (电力动车)
 STR_NAME_CRH5A,CRH5A (EMU),CRH5A (电力动车)
+STR_NAME_CRH5E,CRH5E (EMU),CRH5E (电力动车)
+STR_NAME_CRH5G,CRH5G (EMU),CRH5G (电力动车)
+STR_NAME_CRH5GJT,CRH5G (Technology-Enhanced) (EMU),CRH5G (技术提升型) (电力动车)
 STR_NAME_CRH380A,CRH380A (EMU),CRH380A (电力动车)
 STR_NAME_CRH380AL,CRH380AL (Long Version) (EMU),CRH380AL (长编组) (电力动车)
 STR_NAME_CRH380B,CRH380B (EMU),CRH380B (电力动车)
@@ -320,6 +325,7 @@ STR_FULL_NAME_YZ25B,{BLACK}FULLNAME: {GOLD}25m Standard Hard Seat Passenger Coac
 STR_FULL_NAME_RZ25B,{BLACK}FULLNAME: {GOLD}25m Standard Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米标准型软座客车
 STR_FULL_NAME_YW25B,{BLACK}FULLNAME: {GOLD}25m Standard Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米标准型硬卧客车
 STR_FULL_NAME_RW25B,{BLACK}FULLNAME: {GOLD}25m Standard Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米标准型软卧客车
+STR_FULL_NAME_CA25B,{BLACK}FULLNAME: {GOLD}25m Standard Restaurant Car,{BLACK}全称：{GOLD}25米标准型餐车
 STR_FULL_NAME_SYZ25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Hard Seat Passenger Coach,{BLACK}全称：{GOLD}25米标准型双层硬座客车
 STR_FULL_NAME_SRZ25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米标准型双层软座客车
 STR_FULL_NAME_SYW25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米标准型双层硬卧客车
@@ -352,15 +358,16 @@ STR_FULL_NAME_RW25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Soft Sleeper Passenge
 STR_FULL_NAME_YZ31,{BLACK}FULLNAME: {GOLD}31 Type Hard Seat Passenger Coach,{BLACK}全称：{GOLD}31型硬座客车
 STR_FULL_NAME_CA25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Restaurant Car,{BLACK}全称：{GOLD}25米提速型餐车
 STR_FULL_NAME_XL22,{BLACK}FULLNAME: {GOLD}22 Type Luggage Car,{BLACK}全称：{GOLD}22型行李车
-STR_FULL_NAME_XL25ML,{BLACK}FULLNAME: {GOLD}25m Mainline Luggage Car,{BLACK}全称：{GOLD}25米标准型行李车
-STR_FULL_NAME_XL25B,{BLACK}FULLNAME: {GOLD}25m Standard Luggage Car,{BLACK}全称：{GOLD}干线25型行李车
+STR_FULL_NAME_XL25ML,{BLACK}FULLNAME: {GOLD}25m Mainline Luggage Car,{BLACK}全称：{GOLD}干线25型行李车
+STR_FULL_NAME_XL25B,{BLACK}FULLNAME: {GOLD}25m Standard Luggage Car,{BLACK}全称：{GOLD}25米标准型行李车
 STR_FULL_NAME_XL25G,{BLACK}FULLNAME: {GOLD}25m Improved Luggage Car,{BLACK}全称：{GOLD}25米改进型行李车
 STR_FULL_NAME_XL25K,{BLACK}FULLNAME: {GOLD}25m Rapid Luggage Car,{BLACK}全称：{GOLD}25米快速型行李车
 STR_FULL_NAME_XL25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Luggage Car,{BLACK}全称：{GOLD}25米提速型行李车
 STR_FULL_NAME_UZ22,{BLACK}FULLNAME: {GOLD}22 Type Railway Post Office,{BLACK}全称：{GOLD}22型邮政车
-STR_FULL_NAME_UZ25G,{BLACK}FULLNAME: {GOLD}25m Improved Railway Post Office,{BLACK}全称：{GOLD}25米提速型邮政车
+STR_FULL_NAME_UZ25B,{BLACK}FULLNAME: {GOLD}25m Standard Railway Post Office,{BLACK}全称：{GOLD}25米标准型邮政车
+STR_FULL_NAME_UZ25G,{BLACK}FULLNAME: {GOLD}25m Improved Railway Post Office,{BLACK}全称：{GOLD}25米改进型邮政车
 STR_FULL_NAME_UZ25K,{BLACK}FULLNAME: {GOLD}25m Rapid Railway Post Office,{BLACK}全称：{GOLD}25米快速型邮政车
-STR_FULL_NAME_UZ25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Railway Post Office,{BLACK}全称：{GOLD}25米改进型邮政车
+STR_FULL_NAME_UZ25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Railway Post Office,{BLACK}全称：{GOLD}25米提速型邮政车
 STR_FULL_NAME_TZ,{BLACK}FULLNAME: {GOLD}Special Purpose Car,{BLACK}全称：{GOLD}特种车
 STR_FULL_NAME_TZ2,{BLACK}FULLNAME: {GOLD}Special Purpose Car Type 2,{BLACK}全称：{GOLD}2型特种车
 STR_FULL_NAME_KD25G,{BLACK}FULLNAME: {GOLD}25m Improved Air Conditioner Generator Car,{BLACK}全称：{GOLD}25米改进型空调发电车
@@ -506,8 +513,9 @@ STR_DESC_5,{STRING}{}{STRING}{}{STRING}{}{STRING}{}{STRING},
 STR_DESC_4,{STRING}{}{STRING}{}{STRING}{}{STRING},
 STR_DESC_3,{STRING}{}{STRING}{}{STRING},
 STR_DESC_2,{STRING}{}{STRING},
-STR_LV_AVAILABLE_S,{STRING}{STRING}{STRING}{STRING}{STRING}{STRING},
-STR_LV_AVAILABLE_L,{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING},
+STR_LV_COLOR_PREFIX,{STRING}{STRING}{STRING}{STRING},
+STR_LV_AVAILABLE_S,{STRING}{STRING}|{STRING}|{STRING}|{STRING}|{STRING},
+STR_LV_AVAILABLE_L,{STRING}{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING},
 # Desc,,
 STR_JINLUN_25DT,"Coaches use for DMU {BLUE}""JIN{WHITE}LUN""",{BLUE}金{WHITE}轮{RED}号{GOLD}内燃动车组所使用的拖车
 STR_XL25T_SSPE_DESCRIPTION,"{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.",{BLACK}新时速运递公司使用的XL25T版本。
@@ -535,7 +543,6 @@ STR_CR400BFZ_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {RED}Origin {GOLD}
 STR_22_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Wuhan Railway Vocational College Livery (only coaches), Sanshui-Maoming Livery (unfinish), ""Longqingxia"" Livery (unfinish), Beijing-Shanghai Direct Express Livery (XL22, UZ22), Guangzhou-Hongkong Livery (XL22, UZ22) (unfinish)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，武汉铁路技术学院涂装 (仅客车)，龙庆峡号{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装、{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，广九直通车涂装 (仅XL22，UZ22)
 STR_22AIRCON_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Beijing-Shanghai Direct Express Livery, Guangzhou-Hongkong Livery (unfinish)","{BLACK}可供选择的涂装：{GOLD}京沪直达特快{CREAM}奶油色-{BROWN}-棕红色、{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，广九直通车涂装,"
 STR_22B_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery,{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装
-STR_25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{BLUE}集{RED}通{WHITE}铁{BLUE}路{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_RW25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_XL25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_S25BLD_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {ORANGE}Orange-{YELLOW}Yellow {GOLD}Livery, deteriorated, with strengthening steel sheet, Urumqi, Xianxing (All low-door, higher loading speed, 120 km/h)",{BLACK}可供选择的涂装：{ORANGE}橙{YELLOW}黄{GOLD}相间涂装，老化版，加强筋版，乌鲁木齐局，先行号 (均为低开门，装载较快，120 km/h)
@@ -549,8 +556,6 @@ STR_RZXL25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {WHITE} Guangzhou-K
 STR_UZ25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery (Only Made in China),  {DKGREEN}""Gaozu Lv""  GreenLivery (Only Made in China)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (仅国产)，{DKGREEN}""高祖绿""涂装 (仅国产)"
 STR_KD25T_LIVERY_AVAILABILITY,{BLACK}Livery Availability: Only {DKGREEN}Qinghai-Tibet Railway Livery,{BLACK}可供选择的涂装：仅有{DKGREEN}青藏铁路涂装
 STR_19K_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery",{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{RED}红{WHITE}白{GOLD}相间涂装
-STR_25K_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
-STR_25Z_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Xi{WHITE}zi{GOLD}Livery, {LTBLUE}Beijing {GOLD}Livery, {BLUE}Guangzhou-{RED}-Shenzhen{WHITE} Railway{GOLD} Livery, {BLUE}Wuhan {GOLD}Livery,  {DKGREEN}Green {GOLD}Livery","{BLACK}可供选择的涂装：{BLUE}西子号{WHITE}列车{GOLD}涂装，{LTBLUE}北京铁路局{GOLD}涂装, {BLUE}广深{RED}铁{WHITE}路{GOLD}涂装, 绿色涂装，武汉铁路局涂装"
 STR_S25Z_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {LTBLUE}Shijiazhuang-Qinhuangdao {WHITE}Slow Train {GOLD}Livery, {BLUE}Guangzhou-{DKGREEN}-Shenzhen{WHITE} Railway{GOLD} Livery","{BLACK}可供选择的涂装：{LTBLUE}石秦{WHITE}特慢{GOLD}涂装, {BLUE}广深{DKGREEN}铁{WHITE}路{GOLD}涂装"
 STR_S25_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue-{GOLD}-Orange-{WHITE}-White {BLACK}Livery, other livery (unfinished}",{BLACK}可供选择的涂装：{GOLD}蓝-橙-白涂装，其他彩绘涂装尚未完成
 STR_S25KLD_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Liaodong Peninsula Livery (All low-door, higher loading speed)",{BLACK}可供选择的涂装：{LTBLUE}沪芦列车{GOLD}涂装，辽东半岛号 (均为低开门，装载较快)
@@ -676,6 +681,8 @@ STR_350_AVAILABLE,Refittable to Max Speed 350 km/h (Increasing running costs),�
 STR_350_380_AVAILABLE,Refittable to Max Speed 350 or 380 km/h (Increasing running costs),可改装为最高速度 350 或 380 km/h，运营费用增加
 STR_DJJ2_321_AVAILABLE,This train has broke the Highest Speed Record of China's Railway by {GOLD}321.5 km/h{BLACK} on 27th Oct. 2002. Refittable to this speed (Increasing running costs),这列车曾经在2002年10月27日创下了当时中国铁路的最高速321.5 km/h。可改装到这一速度，运营费用增加
 # Livery,,
+STR_LV_PRE_GRAY,{GRAY} - Gray,{GRAY} - 灰色
+STR_LV_PRE_DETERIORATE,{BLACK} - Deteriorated,{BLACK} - 旧化
 STR_ORIGINAL,{BLACK} - Original Livery,{BLACK} - 原版涂装
 STR_ALTERNATIVE,{BLACK} - Alternative Original Livery,{BLACK} - 另一种原版涂装
 STR_REVERSE,{BLACK} └ the Reverse of the Livery Above,{BLACK} └ 翻转的涂装
@@ -685,16 +692,21 @@ STR_EARLIER,{BLACK} - Earlier Livery,{BLACK} - 早期涂装
 STR_FACTORY,{BLACK} - Factory Livery,{BLACK} - 出厂涂装
 STR_DETERIORATE,{BLACK} - Deteriorated Livery,{BLACK} - 老化后
 STR_BLACK,{BLACK} - Black Livery,{BLACK} - 黑色涂装
+STR_GRAY,{GRAY} - Gray Livery,{GRAY} - 灰色涂装
 STR_ORANGE,{ORANGE} - Orange Livery,{ORANGE} - 橘色涂装
+STR_YELLOW,{YELLOW} - Yellow Livery,{BLACK} - 黄色涂装
 STR_GREEN,{GREEN} - Green Livery,{GREEN} - 绿色涂装
-STR_SS7C_BANANA,{BLACK} - {YELLOW}Banana Yellow {BLACK}Livery,{BLACK} - {YELLOW}黄色{BLACK}涂装
+STR_SS7C_BANANA,{BLACK} - {YELLOW}Banana Yellow {BLACK}Livery,{BLACK} - {YELLOW}“香蕉”{BLACK}涂装
 STR_RED,{RED} - Red Livery,{RED} - 红色涂装
-STR_WHITE,{WHITE} - WhIte Livery,{WHITE} - 白色涂装
+STR_BROWN,{BROWN} - Brown Livery,{BROWN} - 褐色涂装
+STR_WHITE,{WHITE} - White Livery,{WHITE} - 白色涂装
 STR_BLUE,{BLUE} - Blue Livery,{BLUE} - 蓝色涂装
+STR_LAKEBLUE,{LTBLUE} - Lake Blue Livery,{BLUE} - 湖蓝色涂装
 STR_GRASSGREEN,{DKGREEN} - Dark Green Livery,{DKGREEN} - 草绿色涂装
 STR_LATER_ORANGE,{ORANGE} - Later Orange Livery,{ORANGE} - 后期橘色涂装
 STR_LATER_GREEN,{GREEN} - Later Green Livery,{GREEN} - 后期绿色涂装
 STR_RANDOM_COLOR,{BLACK} - Ramdom Color,{BLACK} - 随机颜色
+STR_RUSTYRED,{BROWN} - Rusty Red Color,{BROWN} - 锈红色
 STR_XIHU,{BLACK} - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery,{BLACK} - {GREEN}西户铁路{BLACK}涂装
 STR_XIHU_REVERSE,"{BLACK} - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery, reversed",{BLACK} - {GREEN}西户铁路{BLACK}涂装，倒转方向
 STR_DF4D_7000,{BLACK} - {GREEN}7000-{YELLOW}Series {BLACK}Livery,{BLACK} - {GREEN}7000{YELLOW}系{BLACK}涂装
@@ -726,6 +738,7 @@ STR_YW22_1966,"{BLACK} - 1966 Design - Capacity 60, Comfort 288",{BLACK} - 1966�
 STR_ORDINARY_GREEN,{BLACK} - {GREEN}Ordinary Green {BLACK}Livery,{BLACK} - {GREEN}绿皮车{BLACK}涂装
 STR_RED_WHITE,{BLACK} - {RED}Red {BLACK}and {WHITE}White,{BLACK} - {RED}红{WHITE}白{BLACK}相间
 STR_BLUE_RED_WHITE,{BLACK} - {BLUE}Blue-{RED}Red{WHITE}-White,{BLACK} - {BLUE}蓝{WHITE}白{RED}红{BLACK}相间涂装
+STR_BLUE_WHITE,{BLACK} - {BLUE}Blue-{RED}Red{WHITE}-White,{BLACK} - {BLUE}蓝{WHITE}白{BLACK}相间涂装
 STR_JITONG,{BLACK} - {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {BLACK}Livery,{BLACK} - {BLUE}集{RED}通{WHITE}铁{BLUE}路{BLACK}涂装
 STR_LUCHAOGANG,{BLACK} - {LTBLUE}Shanghai-Luchaogang {BLACK}Livery,{BLACK} - {LTBLUE}沪芦列车{BLACK}涂装
 STR_LIAODONG,{BLACK} - Liaodong Peninsula Livery,{BLACK} - 辽东半岛号涂装
@@ -737,7 +750,9 @@ STR_XIANXING,{BLACK} - Xianxing (Pioneer) Livery,{BLACK} - 先行号涂装
 STR_XIZI,"{BLACK} - ""Xizi"" Livery","{BLACK} - {LTBLUE}""西子号""{BLACK}涂装"
 STR_XIZI_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of ""Xizi"" Train","{BLACK} - {DKGREEN}""西子号""的刷绿{BLACK}涂装"
 STR_XIZI_BUILD_YEAR,"{BLACK} - ""Xizi"" (According to build year)","{BLACK} - ""西子号""（根据建造年份选择涂装）"
-STR_GMSR,{BLACK} - Guangzhou–Meizhou–Shantou Railway Livery,{BLACK} - 广梅汕铁路涂装
+STR_HEJIU,{BLACK} - Hefei-Jiujiang Railway Livery,{BLACK} - 合九铁路涂装
+STR_GYR,{BLACK} - GUangxi Yanhai Raiway,{BLACK} - 广西沿海铁路涂装
+STR_GMSR,{BLACK} - Guangzhou-Meizhou-Shantou Railway Livery,{BLACK} - 广梅汕铁路涂装
 STR_GUANGSHEN,{BLACK} - Guangzhou-Shenzhen Railway Livery,{BLACK} - 广深铁路涂装
 STR_GUANGSHEN_CHANGKE_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 1st)",{BLACK} - 广深铁路（长春客车厂一批次）涂装
 STR_GUANGSHEN_CHANGKE_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 2nd)",{BLACK} - 广深铁路（长春客车厂二批次）涂装
@@ -817,8 +832,9 @@ STR_DJF3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent t
 STR_CR200J_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, WE, WY, WG",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
 STR_CRH_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
 STR_CRH_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, WY, WG, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造
-STR_CR_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZS, WY, ZEC (As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}二等座、商务座、一等卧、二等/餐车合造 (实为软卧/餐车合造车)
+STR_CR_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZS, WY, ZEC (As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}二等座、商务座 (特等座)、一等卧、二等/餐车合造 (实为软卧/餐车合造车)
 STR_CRH_LSLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}一等卧、二等/餐车合造 (实为软卧/餐车合造车)
+STR_CRH5E_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造 (实为软卧/餐车合造车)
 STR_CJ1_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: {ORANGE}160",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
 STR_CRH6A2_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: {ORANGE}160{BLACK}), {GOLD}ZY",{BLACK}匹配的车厢：{GOLD}二等座{BLACK} (带站席，舒适度：{ORANGE}160{BLACK})、{GOLD}一等座
 STR_CRH6A3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: {ORANGE}160",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
@@ -836,7 +852,6 @@ STR_X2000_CONSIST,"{BLACK}Consist: {GOLD}One section at front, with wagons attac
 STR_DJJ1_CONSIST,"{BLACK}Consist: {GOLD}One section at front, with wagons attached; or one section at front, another section at back. At least 4 wagons",{BLACK}构成：{GOLD}头部一节，或头尾各一节，中间加挂至少四节车厢
 STR_DJJ2_CONSIST,"{BLACK}Consist: {GOLD}One section at front, another section at back, MU Wagins in Middle",{BLACK}构成：{GOLD}头尾各一节，中间加挂拖车车厢
 STR_DJF3_CONSIST,{BLACK}Consist: {GOLD}4 to 12 cars; with 9-car standard consist (M-T-M-M-T-M-M-T-M),{BLACK}构成：{GOLD}4-12节；9 节标准编组时为 (M-T-M-M-T-M-M-T-M)
-STR_CRH5A_CONSIST,"{BLACK}Consist: {GOLD}4 cars (Mc-M-Tp-Mc), 8 cars (Mc-M-Tp-M-T-Tp-M-Mc), 12 cars (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc), or 16 cars (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc), 1495 hpM for each motorised car",{BLACK}构成：{GOLD}4节 (Mc-M-Tp-Mc)，8节 (Mc-M-Tp-M-T-Tp-M-Mc)，12节 (Mc-M-Tp-M-Tp-M-T-Tp-M-Tp-M-Mc)，16节 (Mc-M-Tp-M-T-Tp-M-M-M-M-Tp-M-T-Tp-M-Mc)，每节动力车 1495 公制马力
 STR_CR400_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 T-M-T-M-M-T-M-T。大于12节时以重联方式运行
 STR_CR400_AB_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 16-car standard consist 2*(T-M-T-M-M-T-M-T),{BLACK}构成：{GOLD}4-24节；16 节标准编组时为 2*(T-M-T-M-M-T-M-T)
 STR_CR400_Z_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12. {RED}Intelligent {YELLOW}EMUs {GOLD}have lower running costs,{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 T-M-T-M-M-T-M-T。大于12节时以重联方式运行。智能动车运行费用更低
@@ -855,6 +870,8 @@ STR_CRH2G_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up)
 STR_CJ1_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
 STR_CRH3A_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
 STR_CRH3C_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
+STR_CRH5_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节：其中8节标准编组为5M3T。大于12节时以重联方式运行
+STR_CRH5E_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 16-car consist 10 motorised cars,{BLACK}构成：{GOLD}4-24节：其中16节标准编组为10M6T
 STR_CRH380A_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节；头尾拖车，中间全为动力车。大于12节时以重联方式运行
 STR_CRH380AL_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised",{BLACK}构成：{GOLD}4-24节；头尾拖车，中间全为动力车
 STR_CRH380B_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节；头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
@@ -881,7 +898,8 @@ STR_CRH2ELS_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class Sleeper (WY),{BLACK}头�
 STR_CJ1_HEAD_SEAT,"{BLACK}Head Seat: {GOLD}2nd-Class (ZE){BLACK} with standing places, Comfort: {ORANGE}160",{BLACK}头车座席：{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
 STR_CRH3A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
 STR_CRH3C_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}特等座 (商务座)
-STR_CRH5A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CRH5_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
+STR_CRH5E_HEAD_SEAT,{BLACK}Head Seat: {GOLD}2nd-Class (ZE),{BLACK}头车座席：{GOLD}二等座
 STR_CRH380A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
 STR_CRH380B_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}特等座 (商务座)
 STR_CRH380CL_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Business-Class (ZS),{BLACK}头车座席：{GOLD}特等座 (商务座)

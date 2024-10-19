@@ -9,18 +9,18 @@ switch (FEAT_TRAINS, SELF, switch_xl25b_name, getbits(extra_callback_info1, 0, 8
 
 // Purchase Menu
 spriteset (spriteset_xl25b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "xl25b")
+    template_purchase ("coaches", "25b/xl25b")
 }
 
 // Vehicle
 spriteset (spriteset_xl25b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "xl25b")
+    template_standard ("coaches", "25b/xl25b")
 }
 spriteset (spriteset_xl25b_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "xl25b-red")
+    template_standard ("coaches", "25b/xl25b-red")
 }
 spriteset (spriteset_xl25b_jy, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "xl25b-jy")
+    template_standard ("coaches", "25b/xl25b-jy")
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25b_articulated_part, extra_callback_info1) {
@@ -31,23 +31,28 @@ switch (FEAT_TRAINS, SELF, switch_xl25b_articulated_part, extra_callback_info1) 
 switch (FEAT_TRAINS, SELF, switch_xl25b_cargo_subtype, cargo_subtype) {
     0: return string(STR_BUILD_YEAR);
     1: return string(STR_ORIGINAL);
+/*     2: return string(STR_GAOZU_GREEN); */
     2: return string(STR_RED_WHITE);
-    3: return string(STR_GAOZU_GREEN);
-    4: return string(STR_RESCUE);
+    3: return string(STR_RESCUE);
     return CB_RESULT_NO_TEXT;
 }
 
-switch (FEAT_TRAINS, SELF, switch_xl25b_build_year, build_year) {
-    0..2014: spriteset_xl25b_original;
-    spriteset_xl25b_original; // UNFINISHED
+switch (FEAT_TRAINS, SELF, switch_xl25b_graphics_build_year_depend, build_year) {
+    0..2014: spriteset_uz25b_original; // Unfinished
+    spriteset_uz25b_original;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl25b_cargo_subtype_0, param_gaozulv) {
+    1: switch_xl25b_graphics_build_year_depend;
+    spriteset_xl25b_original;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25b_graphics_subtype, cargo_subtype) {
-    0: switch_xl25b_build_year;
+    0: switch_xl25b_cargo_subtype_0;
     1: spriteset_xl25b_original;
+/*     2: ; */
     2: spriteset_xl25b_red;
-    3: spriteset_xl25b_original; // UNFINISHED
-    4: spriteset_xl25b_jy;
+    3: spriteset_xl25b_jy;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25b_graphics, position_in_articulated_veh % 3) {

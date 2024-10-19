@@ -18,7 +18,7 @@ spriteset (spriteset_ndj3_cafe, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("dmu", "ndj3-ca25dt")
 }
 spriteset (spriteset_ndj3_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("dmu", "ndj3-m-b")
+    template_reversed_10 ("dmu", "ndj3-m")
 }
 
 switch (FEAT_TRAINS, SELF, switch_ndj3_articulated_part, extra_callback_info1) {

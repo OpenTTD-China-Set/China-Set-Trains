@@ -6,19 +6,19 @@ switch (FEAT_TRAINS, SELF, switch_yz22_name, getbits(extra_callback_info1, 0, 8)
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_22_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "22")
+spriteset (spriteset_yz22_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "22/yz22")
 }
 
 // Vehicle
-spriteset (spriteset_22_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "22")
+spriteset (spriteset_yz22_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "22/yz22")
 }
 spriteset (spriteset_22_wru, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "22-wru")
+    template_standard ("coaches", "22/22-wru")
 }
 spriteset (spriteset_yz22_jy, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "yz22-jy")
+    template_standard ("coaches", "22/yz22-jy")
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz22_articulated_part, extra_callback_info1) {
@@ -34,7 +34,7 @@ switch (FEAT_TRAINS, SELF, switch_yz22_cargo_subtype, cargo_subtype) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz22_graphics_subtype, cargo_subtype) {
-    0: spriteset_22_original;
+    0: spriteset_yz22_original;
     1: spriteset_22_wru;
     2: spriteset_yz22_jy;
 }
@@ -92,7 +92,7 @@ item (FEAT_TRAINS, yz22) {
 
         // Graphics
         default:                        switch_yz22_graphics;
-        purchase:                       spriteset_22_purchase_original;
+        purchase:                       spriteset_yz22_purchase_original;
         articulated_part:               switch_yz22_articulated_part;
 
         // Stats

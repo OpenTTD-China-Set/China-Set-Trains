@@ -22,6 +22,17 @@ random_switch (FEAT_TRAINS, SELF, random_w5) {
     1: spriteset_w5; // More colours waiting to be added
     1: spriteset_w5_white;
 }
+switch (FEAT_TRAINS, SELF, switch_w5_cargo_subtype, cargo_subtype) {
+    0: return string(STR_RANDOM_COLOR);
+    1: return string(STR_ORIGINAL);
+    2: return string(STR_WHITE);
+    return CB_RESULT_NO_TEXT;
+}
+switch (FEAT_TRAINS, SELF, switch_w5_graphics_subtype, cargo_subtype) {
+    0: random_w5;
+    1: spriteset_w5;
+    2: spriteset_w5_white;
+}
 
 switch (FEAT_TRAINS, SELF, switch_w5_articulated_part, extra_callback_info1) {
     1..2: return w5;
@@ -29,7 +40,7 @@ switch (FEAT_TRAINS, SELF, switch_w5_articulated_part, extra_callback_info1) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_w5_graphics, position_in_articulated_veh % 3) {
-    1: random_w5;
+    1: switch_w5_graphics_subtype;
     empty_sprites;
 }
 
@@ -80,6 +91,7 @@ item (FEAT_TRAINS, w5) {
         // Menu
         additional_text:                string(STR_DESC_2, string(STR_W_BOXCAR_LIVERY_AVAILABILITY), string(STR_FRESHNESS_MEDIUM, 185));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_w5_cargo_subtype;
 
         // Graphics
         default:                        switch_w5_graphics;

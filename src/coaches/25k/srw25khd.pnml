@@ -8,11 +8,13 @@ switch (FEAT_TRAINS, SELF, switch_srw25khd_name, getbits(extra_callback_info1, 0
 // Graphics
 
 // Purchase Menu
-
+spriteset (spriteset_srw25khd_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25k/srw25khd-xian")
+}
 
 // Vehicle
 spriteset (spriteset_srw25khd_xian, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "srw25khd-xian")
+    template_standard ("coaches", "25k/srw25khd-xian")
 }
 
 switch (FEAT_TRAINS, SELF, switch_srw25khd_articulated_part, extra_callback_info1) {
@@ -79,7 +81,7 @@ item (FEAT_TRAINS, srw25khd) {
 
         // Graphics
         default:                        switch_srw25khd_graphics;
-        purchase:                       spriteset_s25khd_purchase;
+        purchase:                       spriteset_srw25khd_purchase;
         articulated_part:               switch_srw25khd_articulated_part;
 
         // Stats

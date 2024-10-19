@@ -16,7 +16,7 @@ spriteset (spriteset_hxn5_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 }
 
 spriteset (spriteset_hxn5_reverse, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "hxn5-reverse")
+    template_reversed_11 ("diesel", "hxn5")
 }
 
 switch (FEAT_TRAINS, SELF, switch_hxn5_articulated_part, extra_callback_info1) {

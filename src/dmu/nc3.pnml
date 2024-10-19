@@ -15,7 +15,7 @@ spriteset (spriteset_nc3_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("dmu", "nc3-t")
 }
 spriteset (spriteset_nc3_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("dmu", "nc3-mc-r")
+    template_reversed_11 ("dmu", "nc3-mc")
 }
 
 switch (FEAT_TRAINS, SELF, switch_nc3_articulated_part, extra_callback_info1) {

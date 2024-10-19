@@ -16,6 +16,9 @@ spriteset (spriteset_kd25k_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP)
 spriteset (spriteset_kd25k_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25k", "kd25k")
 }
+spriteset (spriteset_kd25k_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "kd25k-green")
+}
 spriteset (spriteset_kd25k_gmsr, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25k", "kd25k-gmsr")
 }
@@ -28,6 +31,9 @@ spriteset (spriteset_kd25k_luchaogang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_kd25k_xian, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25k", "kd25k-xian")
 }
+spriteset (spriteset_kd25k_25t, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "kd25k-25t")
+}
 
 switch (FEAT_TRAINS, SELF, switch_kd25k_articulated_part, extra_callback_info1) {
     1..2: return kd25k;
@@ -37,27 +43,34 @@ switch (FEAT_TRAINS, SELF, switch_kd25k_articulated_part, extra_callback_info1) 
 switch (FEAT_TRAINS, SELF, switch_kd25k_cargo_subtype, cargo_subtype) {
     0: return string(STR_BUILD_YEAR);
     1: return string(STR_ORIGINAL);
-/*     2: return string(STR_GAOZU_GREEN); */
-    2: return string(STR_GMSR);
-    3: return string(STR_GUANGSHEN);
-    4: return string(STR_LUCHAOGANG);
-    5: return string(STR_XIAN);
+    2: return string(STR_GAOZU_GREEN);
+    3: return string(STR_GMSR);
+    4: return string(STR_GUANGSHEN);
+    5: return string(STR_LUCHAOGANG);
+    6: return string(STR_XIAN);
+    7: return string(STR_BLUE_WHITE);
     return CB_RESULT_NO_TEXT;
 }
 
-switch (FEAT_TRAINS, SELF, switch_kd25k_build_year_sprite, current_year) {
+switch (FEAT_TRAINS, SELF, switch_kd25k_graphics_subtype_year_depend, current_year) {
     0..2014: spriteset_kd25k_original; //Unfinished
+    spriteset_kd25k_green;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd25k_graphics_subtype_0, param_gaozulv) {
+    1: switch_kd25k_graphics_subtype_year_depend;
     spriteset_kd25k_original;
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25k_graphics_subtype, cargo_subtype) {
-    0: switch_kd25k_build_year_sprite;
+    0: switch_kd25k_graphics_subtype_0;
     1: spriteset_kd25k_original;
-/*     2: ; */
-    2: spriteset_kd25k_gmsr;
-    3: spriteset_kd25k_guangshen;
-    4: spriteset_kd25k_luchaogang;
-    5: spriteset_kd25k_xian;
+    2: spriteset_kd25k_green;
+    3: spriteset_kd25k_gmsr;
+    4: spriteset_kd25k_guangshen;
+    5: spriteset_kd25k_luchaogang;
+    6: spriteset_kd25k_xian;
+    7: spriteset_kd25k_25t;
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25k_graphics, position_in_articulated_veh % 3) {
@@ -104,7 +117,7 @@ item (FEAT_TRAINS, kd25k) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL)/* , string(STR_GAOZU_GREEN)*/, string(STR_GMSR), string(STR_GUANGSHEN), string(STR_LUCHAOGANG), string(STR_XIAN)), string(STR_AIR_CONDITIONER_EFFECT));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_GMSR), string(STR_GUANGSHEN), string(STR_LUCHAOGANG), string(STR_XIAN), string(STR_BLUE_WHITE)), string(STR_AIR_CONDITIONER_EFFECT));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_kd25k_cargo_subtype;
 

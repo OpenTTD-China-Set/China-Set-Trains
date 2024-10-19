@@ -85,13 +85,37 @@ switch (FEAT_TRAINS, SELF, random_p62_colour, current_year - 1979) {
 }
 
 
+switch (FEAT_TRAINS, SELF, switch_p62_cargo_subtype, cargo_subtype) {
+    0: return string(STR_RANDOM_COLOR);
+    1: return string(STR_BLACK);
+    2: return string(STR_BLUE);
+    3: return string(STR_DETERIORATE);
+    4: return string(STR_GRAY);
+    5: return string(STR_LV_COLOR_PREFIX, string(STR_LV_PRE_DETERIORATE), string(STR_GRAY));
+    6: return string(STR_RUSTYRED);
+    7: return string(STR_LV_COLOR_PREFIX, string(STR_LV_PRE_DETERIORATE), string(STR_RUSTYRED));
+    8: return string(STR_BROWN);
+    return CB_RESULT_NO_TEXT;
+}
+switch (FEAT_TRAINS, SELF, switch_p62_graphics_subtype, cargo_subtype) {
+    0: random_p62_colour;
+    1: spriteset_p62_black; // More colours waiting to be added
+    2: spriteset_p62_blue;
+    3: spriteset_p62_damaged_severe;
+    4: spriteset_p62_lightblack;
+    5: spriteset_p62_lightblack_damaged;
+    6: spriteset_p62_rustyred;
+    7: spriteset_p62_rustyred_damaged;
+    8: spriteset_p62_brown;
+}
+
 switch (FEAT_TRAINS, SELF, switch_p62_articulated_part, extra_callback_info1) {
     1..2: return p62;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
 switch (FEAT_TRAINS, SELF, switch_p62_graphics, position_in_articulated_veh % 3) {
-    1: random_p62_colour;
+    1: switch_p62_graphics_subtype;
     empty_sprites;
 }
 
@@ -170,6 +194,7 @@ item (FEAT_TRAINS, p62) {
         // Menu
         additional_text:                string(STR_DESC_3, string(STR_P62_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR), string(STR_DESC_PENGDAIKE));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_p62_cargo_subtype;
 
         // Graphics
         default:                        switch_p62_graphics;

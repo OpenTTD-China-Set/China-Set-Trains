@@ -116,10 +116,6 @@ item (FEAT_TRAINS, rw22aircon, 2115) {}
 item (FEAT_TRAINS, ca23aircon, 2116) {}
 item (FEAT_TRAINS, ca23, 2117) {}
 item (FEAT_TRAINS, tz, 2118) {}
-item (FEAT_TRAINS, yz25b, 2077) {}
-item (FEAT_TRAINS, rz25b, 2078) {}
-item (FEAT_TRAINS, yw25b, 2079) {}
-item (FEAT_TRAINS, rw25b, 2080) {}
 // JinLun DMU Series code by Babel
 item (FEAT_TRAINS, yz25dt_jinlun, 2119) {}
 item (FEAT_TRAINS, yw25dt_jinlun, 2120) {}
@@ -143,6 +139,8 @@ item (FEAT_TRAINS, rz225g, 2136) {}
 item (FEAT_TRAINS, rz125g, 2137) {}
 item (FEAT_TRAINS, yz1, 2138) {}
 item (FEAT_TRAINS, uz25k, 2139) {}
+item (FEAT_TRAINS, uz25b, 2140) {}
+item (FEAT_TRAINS, ca25b, 2141) {}
 
 
 
@@ -344,6 +342,8 @@ item (FEAT_TRAINS, crh380bl, 9257) {}
 item (FEAT_TRAINS, cj1, 9258) {}
 item (FEAT_TRAINS, x2000, 9259) {}
 item (FEAT_TRAINS, cr400afae, 9260) {}
+item (FEAT_TRAINS, crh5gjt, 9261) {}
+item (FEAT_TRAINS, crh5e, 9261) {}
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
 #define id_range_1500_emu 0x2800..0x2BFF

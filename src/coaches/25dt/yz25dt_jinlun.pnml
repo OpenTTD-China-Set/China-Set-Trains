@@ -98,6 +98,7 @@ item (FEAT_TRAINS, yz25dt_jinlun) {
         running_cost_factor:            5 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   20;
         purchase_cargo_capacity:        98/3;
+        name:                            switch_yz25dt_jinlun_name;
     }
 }
 
