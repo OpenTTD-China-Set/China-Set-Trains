@@ -63,6 +63,7 @@ switch (FEAT_TRAINS, SELF, switch_rw25g_graphics_subtype, cargo_subtype) {
     3: spriteset_rw25g_jinwen;
     4: spriteset_rw25g_jinwen_green;
     5: spriteset_rw25g_gmsr;
+    6: spriteset_rw25g_hejiu;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw25g_graphics, position_in_articulated_veh % 3) {
