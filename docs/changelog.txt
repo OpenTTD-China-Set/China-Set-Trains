@@ -5,6 +5,10 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.3.176 (21/10/2024)
+--------------------
+Fix #55: wagon sprite errors
+
 0.3.3.175 (20/10/2024)
 --------------------
 Fix #54: RW25G sprites

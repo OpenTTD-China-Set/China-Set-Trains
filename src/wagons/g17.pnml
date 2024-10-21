@@ -29,7 +29,7 @@ spriteset (spriteset_g17_yellow, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 random_switch (FEAT_TRAINS, SELF, random_g17_colour) {
     1: spriteset_g17_grey;
     1: spriteset_g17_red;
-    1: spriteset_g17_red;
+    1: spriteset_g17_yellow;
 }
 switch (FEAT_TRAINS, SELF, switch_g17_cargo_subtype, cargo_subtype) {
     0: return string(STR_RANDOM_COLOR);
@@ -41,8 +41,8 @@ switch (FEAT_TRAINS, SELF, switch_g17_cargo_subtype, cargo_subtype) {
 switch (FEAT_TRAINS, SELF, switch_gl7_graphics_subtype, cargo_subtype) {
     0: random_g17_colour;
     1: spriteset_g17_grey;
-    2: spriteset_yz25g_green;
-    3: spriteset_yz25g_jinwen;
+    2: spriteset_g17_red;
+    3: spriteset_g17_yellow;
 
 }
 
