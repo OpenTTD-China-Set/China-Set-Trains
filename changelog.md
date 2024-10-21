@@ -5,6 +5,20 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.3.175 (20/10/2024)
+--------------------
+Fix #54: RW25G sprites
+
+0.3.3.174 (19/10/2024)
+--------------------
+Fix #53: offset of sprites template
+Renew sprites of 22 Series, 25B Series
+Add Liveries: 25G Series, 25T Series, 25K Series (Gaozu Grenn, GMS, GYR, Xiaoyong)
+Allow wagons change colors
+Completed the CRH5 Sries:
+    - Refurbish and renewal the sprites of CRH5A
+    - Add: CRH5E
+
 0.3.2.173 (4/10/2024)
 ---------------------
 Fix #53: CR400AF-Z Sprite Errors
