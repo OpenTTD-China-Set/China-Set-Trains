@@ -37,7 +37,7 @@ spriteset (spriteset_cr200jb_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200j-b-c")
 }
 spriteset (spriteset_cr200jb_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr200j-b-mr")
+    template_reversed_10 ("25-emu", "cr200j-b-m")
 }
 spriteset (spriteset_cr200jb_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "cr200j-b-c-c")
@@ -309,7 +309,7 @@ item (FEAT_TRAINS, cr200jb) {
         // Menu
         additional_text:                string(STR_DESC_4, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CR200J_NICKNAME), string(STR_RELDEC_LOW, 12), string(STR_CR200J_CONSIST));
         can_attach_wagon:               cr200jbwagon;
-        start_stop:                     mu4car;
+        start_stop:                     switch_cr200jb_start_stop;
         // Graphics
         default:                        switch_cr200jb_graphics;
         purchase:                       spriteset_cr200jb_purchase_original;
@@ -322,7 +322,8 @@ item (FEAT_TRAINS, cr200jb) {
         running_cost_factor:            89 * runningcostfactor() + 20;
         purchase_running_cost_factor:   376;
         purchase_cargo_capacity:        0;
-        name:                            switch_cr200jb_name;
+        bitmask_vehicle_info:           switch_pushpull_consist_correction;
+        name:                           switch_cr200jb_name;
 
     }
 

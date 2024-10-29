@@ -267,20 +267,20 @@ switch (FEAT_TRAINS, SELF, switch_cr400afabz_wagon_running, vehicle_is_potential
 //POWER
 
 switch (FEAT_TRAINS, SELF, switch_cr400afabz_if_middle_wagon_tp_long_pw, position_in_consist % 24) {
-    2..5: return 3269;
-    9..14: return 3269;
-    18..20: return 3269;
+    2..5: return 3399;
+    9..14: return 3399;
+    18..20: return 3399;
     return 0;
 }
 
 
 switch (FEAT_TRAINS, SELF, switch_cr400afabz_if_middle_wagon_tp_meddium_pw, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 8)) || (((position_in_consist / 3) - 2) == (num_vehs_in_consist / 8))) {
-    0: return 3269;
+    0: return 3399;
     return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400afabz_if_middle_wagon_tp_short_pw, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) {
-    0: return 3269;
+    0: return 3399;
     return 0;
 }
 

@@ -9,45 +9,45 @@ switch (FEAT_TRAINS, SELF, switch_cr400afz_name, getbits(extra_callback_info1, 0
 
 // Purchase Menu
 spriteset (spriteset_cr400afz_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("25-emu", "cr400af-z-tc")
+    template_purchase ("25-emu/cr400af-z", "cr400af-z-tc")
 }
 
 // Vehicle
 spriteset (spriteset_cr400afz_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr400af-z-tc")
+    template_standard ("25-emu/cr400af-z", "cr400af-z-tc")
 }
 spriteset (spriteset_cr400afz_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr400af-z-m")
+    template_reversed ("25-emu/cr400af-z", "cr400af-z-m")
 }
 spriteset (spriteset_cr400afz_middle_m_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr400af-z-m")
+    template_standard ("25-emu/cr400af-z", "cr400af-z-m")
 }
 spriteset (spriteset_cr400afz_middle_m_c, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr400af-z-m-c")
+    template_reversed ("25-emu/cr400af-z", "cr400af-z-m-c")
 }
 spriteset (spriteset_cr400afz_middle_m_c_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr400af-z-m-c")
+    template_standard ("25-emu/cr400af-z", "cr400af-z-m-c")
 }
 spriteset (spriteset_cr400afz_middle_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr400af-z-tp")
+    template_reversed ("25-emu/cr400af-z", "cr400af-z-tp")
 }
 spriteset (spriteset_cr400afz_middle_tp_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr400af-z-tp")
+    template_standard ("25-emu/cr400af-z", "cr400af-z-tp")
 }
 spriteset (spriteset_cr400afz_middle_tp_r, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr400af-z-tp-r")
+    template_reversed ("25-emu/cr400af-z", "cr400af-z-tp-r")
 }
 spriteset (spriteset_cr400afz_middle_tp_r_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr400af-z-tp-r")
+    template_standard ("25-emu/cr400af-z", "cr400af-z-tp-r")
 }
 spriteset (spriteset_cr400afz_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr400af-z-tc")
+    template_reversed ("25-emu/cr400af-z", "cr400af-z-tc")
 }
 spriteset (spriteset_cr400afz_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr400af-z-tc-c")
+    template_reversed ("25-emu/cr400af-z", "cr400af-z-tc-c")
 }
 spriteset (spriteset_cr400afz_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr400af-z-tc-c")
+    template_standard ("25-emu/cr400af-z", "cr400af-z-tc-c")
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400afz_articulated_part, extra_callback_info1) {

@@ -16,8 +16,20 @@ spriteset (spriteset_xl25g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP)
 spriteset (spriteset_xl25g_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "xl25g")
 }
+spriteset (spriteset_xl25g_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "xl25g-green")
+}
 spriteset (spriteset_xl25g_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "xl25g-jinwen")
+}
+spriteset (spriteset_xl25g_jinwen_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "xl25g-jinwen-green")
+}
+spriteset (spriteset_xl25g_gmsr, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "xl25g-gmsr")
+}
+spriteset (spriteset_xl25g_hejiu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "xl25g-hejiu")
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25g_articulated_part, extra_callback_info1) {
@@ -28,14 +40,17 @@ switch (FEAT_TRAINS, SELF, switch_xl25g_articulated_part, extra_callback_info1) 
 switch (FEAT_TRAINS, SELF, switch_xl25g_cargo_subtype, cargo_subtype) {
     0: return string(STR_BUILD_YEAR);
     1: return string(STR_ORIGINAL);
-/*     2: return string(STR_GAOZU_GREEN); */
-    2: return string(STR_JINWEN);
+    2: return string(STR_GAOZU_GREEN);
+    3: return string(STR_JINWEN);
+    4: return string(STR_JINWEN_GREEN);
+    5: return string(STR_GMSR);
+    6: return string(STR_HEJIU);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25g_graphics_subtype_year_depend, build_year) {
-    0..2014: spriteset_xl25g_original; // Unfinished
-    spriteset_xl25g_original;
+    0..2014: spriteset_xl25g_original;
+    spriteset_xl25g_green;
 }
 switch (FEAT_TRAINS, SELF, switch_xl25g_graphics_subtype_0, param_gaozulv) {
     1: switch_xl25g_graphics_subtype_year_depend;
@@ -44,8 +59,11 @@ switch (FEAT_TRAINS, SELF, switch_xl25g_graphics_subtype_0, param_gaozulv) {
 switch (FEAT_TRAINS, SELF, switch_xl25g_graphics_subtype, cargo_subtype) {
     0: switch_xl25g_graphics_subtype_0;
     1: spriteset_xl25g_original;
-/*     2: ; */
-    2: spriteset_xl25g_jinwen;
+    2: spriteset_xl25g_green;
+    3: spriteset_xl25g_jinwen;
+    4: spriteset_xl25g_jinwen_green;
+    5: spriteset_xl25g_gmsr;
+    6: spriteset_xl25g_hejiu;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25g_graphics, position_in_articulated_veh % 3) {
@@ -96,7 +114,7 @@ item (FEAT_TRAINS, xl25g) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_XL25G), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL), /* string(STR_GAOZU_GREEN), */ string(STR_JINWEN)), string(STR_FRESHNESS_MEDIUM, 200));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_XL25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN), string(STR_GMSR), string(STR_HEJIU)), string(STR_FRESHNESS_MEDIUM, 200));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_xl25g_cargo_subtype;
 
@@ -108,7 +126,7 @@ item (FEAT_TRAINS, xl25g) {
         // Stats
         length:                         switch_length_2_8_2;
         cargo_capacity:                 switch_xl25g_capacity;
-        cargo_age_period:               200 << param_cargo_decay;
+        cargo_age_period:               200 << (param_cargo_decay + param_wagoncargodecay);
         cost_factor:                    7;
         running_cost_factor:            5 * runningcostfactor();
         purchase_running_cost_factor:   20;

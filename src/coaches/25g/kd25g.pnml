@@ -31,9 +31,25 @@ spriteset (spriteset_kd25g_xihu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_kd25g_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "kd25g-jinwen")
 }
+spriteset (spriteset_kd25g_jinwen_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "kd25g-jinwen-green")
+}
 spriteset (spriteset_kd25g_nanhu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "kd25g-nanhu")
 }
+spriteset (spriteset_kd25g_25t, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "kd25g-25t")
+}
+spriteset (spriteset_kd25g_gmsr, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "kd25g-gmsr")
+}
+spriteset (spriteset_kd25g_xiaoyong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "kd25g-xiaoyong")
+}
+spriteset (spriteset_kd25g_hejiu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "kd25g-hejiu")
+}
+
 
 switch (FEAT_TRAINS, SELF, switch_kd25g_articulated_part, extra_callback_info1) {
     1..2: return kd25g;
@@ -45,16 +61,20 @@ switch (FEAT_TRAINS, SELF, switch_kd25g_cargo_subtype, cargo_subtype) {
     1: return string(STR_ORIGINAL);
     2: return string(STR_GAOZU_GREEN);
     3: return string(STR_JINWEN);
-/*     4: return string(STR_JINWEN_GREEN); */
-    4: return string(STR_XIHU);
-    5: return string(STR_LUCHAOGANG);
-    6: return string(STR_ORANGE);
-    7: return string(STR_NANHU);
+    4: return string(STR_JINWEN_GREEN);
+    5: return string(STR_XIHU);
+    6: return string(STR_LUCHAOGANG);
+    7: return string(STR_ORANGE);
+    8: return string(STR_GMSR);
+    9: return string(STR_HEJIU);
+    10: return string(STR_XIAOYONG);
+    11: return string(STR_NANHU);
+    12: return string(STR_BLUE_WHITE);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25g_graphics_subtype_year_depend, build_year) {
-    0..2014: spriteset_kd25g_original; // Unfinished
+    0..2014: spriteset_kd25g_original;
     spriteset_kd25g_green;
 }
 switch (FEAT_TRAINS, SELF, switch_kd25g_graphics_subtype_0, param_gaozulv) {
@@ -67,11 +87,15 @@ switch (FEAT_TRAINS, SELF, switch_kd25g_graphics_subtype, cargo_subtype) {
     1: spriteset_kd25g_original;
     2: spriteset_kd25g_green;
     3: spriteset_kd25g_jinwen;
-/*     4: ; */
-    4: spriteset_kd25g_xihu;
-    5: spriteset_kd25g_luchaogang;
-    6: spriteset_kd25g_orange;
-    7: spriteset_kd25g_nanhu;
+    4: spriteset_kd25g_jinwen_green;
+    5: spriteset_kd25g_xihu;
+    6: spriteset_kd25g_luchaogang;
+    7: spriteset_kd25g_orange;
+    8: spriteset_kd25g_gmsr;
+    9: spriteset_kd25g_hejiu;
+    10: spriteset_kd25g_xiaoyong;
+    11: spriteset_kd25g_nanhu;
+    12: spriteset_kd25g_25t;
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25g_graphics, position_in_articulated_veh % 3) {
@@ -118,7 +142,7 @@ item (FEAT_TRAINS, kd25g) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), /*string(STR_JINWEN_GREEN), */string(STR_XIHU), string(STR_LUCHAOGANG), string(STR_ORANGE), string(STR_NANHU)), string(STR_AIR_CONDITIONER_EFFECT));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN),string(STR_XIHU), string(STR_LUCHAOGANG), string(STR_ORANGE), string(STR_GMSR), string(STR_HEJIU), string(STR_XIAOYONG), string(STR_NANHU), string(STR_BLUE_WHITE)), string(STR_AIR_CONDITIONER_EFFECT));
         can_attach_wagon:               locowagon;
 
         // Graphics
@@ -135,7 +159,7 @@ item (FEAT_TRAINS, kd25g) {
         running_cost_factor:            5 * runningcostfactor() + 20;
         purchase_running_cost_factor:   40;
         purchase_cargo_capacity:        0;
-        name:                            switch_kd25g_name;
+        name:                           switch_kd25g_name;
 
     }
 }

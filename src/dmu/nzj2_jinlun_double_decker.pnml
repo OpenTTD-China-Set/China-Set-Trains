@@ -17,7 +17,7 @@ spriteset (spriteset_nzj2_jinlun_2_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) 
     template_standard ("dmu", "nzj2-jinlun-2")
 }
 spriteset (spriteset_nzj2_jinlun_2_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("dmu", "nzj2-jinlun-2-r")
+    template_reversed_10 ("dmu", "nzj2-jinlun-2")
 }
 
 switch (FEAT_TRAINS, SELF, switch_nzj2_jinlun_2_start_stop, !hasbit(bitmask_consist_info, 0) && (count_veh_id(8194) == 6) && ((num_vehs_in_vehid_chain != 6) ^ (num_vehs_in_consist == 6))) {

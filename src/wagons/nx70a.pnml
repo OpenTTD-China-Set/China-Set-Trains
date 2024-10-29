@@ -545,8 +545,17 @@ switch (FEAT_TRAINS, SELF, switch_nx70a_articulated_part, extra_callback_info1) 
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+switch (FEAT_TRAINS, SELF, switch_nx70a_cargo_subtype, cargo_subtype) {
+    0: return string(STR_RANDOM_COLOR);
+    1: return string(STR_BLACK);
+    return CB_RESULT_NO_TEXT;
+}
+switch (FEAT_TRAINS, SELF, switch_nx70a_graphics_subtype, cargo_subtype) {
+    0: random_nx70a_colour;
+    1: switch_nx70a_black_all_cargo;
+}
 switch (FEAT_TRAINS, SELF, switch_nx70a_graphics, position_in_articulated_veh % 3) {
-    1: random_nx70a_colour;
+    1: switch_nx70a_graphics_subtype;
     empty_sprites;
 }
 
@@ -607,6 +616,7 @@ item (FEAT_TRAINS, nx70a) {
         // Menu
         additional_text:                string(STR_DESC_2, string(STR_NX70A_LIVERY_AVAILABILITY), string(STR_FRESHNESS_MEDIUM, 185));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_nx70a_cargo_subtype;
 
         // Graphics
         default:                        switch_nx70a_graphics;

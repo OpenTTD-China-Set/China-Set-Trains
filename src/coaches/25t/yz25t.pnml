@@ -7,21 +7,21 @@ switch (FEAT_TRAINS, SELF, switch_yz25t_name, getbits(extra_callback_info1, 0, 8
 
 // Purchase Menu
 spriteset (spriteset_yz25t_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "yz25t")
+    template_purchase ("coaches", "25t/yz25t")
 }
 
 // Vehicle
 spriteset (spriteset_yz25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "yz25t")
+    template_standard ("coaches", "25t/yz25t")
 }
-spriteset (spriteset_25t_gaozu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t-gaozu")
+spriteset (spriteset_yz25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/yz25t-green")
 }
 spriteset (spriteset_yz25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "yz25t-xz")
+    template_standard ("coaches", "25t/yz25t-xz-1")
 }
 spriteset (spriteset_bspyz25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "bspyz25t-xz")
+    template_standard ("coaches", "25t/bspyz25t-xz-1")
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25t_articulated_part, extra_callback_info1) {
@@ -40,7 +40,7 @@ switch (FEAT_TRAINS, SELF, switch_yz25t_cargo_subtype, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_yz25t_graphics_subtype_year_depend, build_year) {
      0..2014: spriteset_yz25t_original;
-    spriteset_25t_gaozu;
+    spriteset_yz25t_green;
 }
 switch (FEAT_TRAINS, SELF, switch_yz25t_graphics_subtype_0, param_gaozulv) {
     1: switch_yz25t_graphics_subtype_year_depend;
@@ -49,7 +49,7 @@ switch (FEAT_TRAINS, SELF, switch_yz25t_graphics_subtype_0, param_gaozulv) {
 switch (FEAT_TRAINS, SELF, switch_yz25t_graphics_subtype, cargo_subtype) {
     0: switch_yz25t_graphics_subtype_0;
     1: spriteset_yz25t_original;
-    2: spriteset_25t_gaozu;
+    2: spriteset_yz25t_green;
     3: spriteset_yz25t_qingzang;
     4: spriteset_bspyz25t_qingzang;
 }

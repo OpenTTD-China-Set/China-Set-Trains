@@ -4,7 +4,7 @@ grf {
     desc:    string(STR_DESC_4, string(STR_GRF_DESC), string(STR_GRF_DESC_EXTRA), string(STR_GRF_DESC_README), string(STR_LEAPING_LIU_NEVER_DIES));
     url:     string(STR_GRF_URL);
     version: REPO_REVISION;
-    min_compatible_version: 171;
+    min_compatible_version: 174;
 
     param 0 {
         param_loading_speed {
@@ -88,7 +88,7 @@ grf {
             max_value: 2;
             def_value: 0;
             names: {
-                0: string(STR_PARAM_DEFEAT);
+                0: string(STR_PARAM_DEFAULT);
                 1: string(STR_PARAM_LONG);
                 2: string(STR_PARAM_VERY_LONG);
             };
@@ -123,7 +123,7 @@ if (ttd_platform != PLATFORM_OPENTTD) {
 }
 else {
     if (openttd_version < version_openttd(13, 1)) {
-        //requires OpenTTD 13.0 or later since the introduction of variants.
+        //requires OpenTTD 13.1 or later since the introduction of variants and name callbacks.
         error(FATAL, REQUIRES_OPENTTD, "13.1");
     }
 }

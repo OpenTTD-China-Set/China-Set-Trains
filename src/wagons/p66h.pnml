@@ -24,6 +24,17 @@ random_switch (FEAT_TRAINS, SELF, random_p66h_colour) {
     1: spriteset_p66h_original; // More colours waiting to be added
     1: spriteset_p66h_alternative;
 }
+switch (FEAT_TRAINS, SELF, switch_p66h_cargo_subtype, cargo_subtype) {
+    0: return string(STR_RANDOM_COLOR);
+    1: return string(STR_ORIGINAL);
+    2: return string(STR_ALTERNATIVE);
+    return CB_RESULT_NO_TEXT;
+}
+switch (FEAT_TRAINS, SELF, switch_p66h_graphics_subtype, cargo_subtype) {
+    0: random_p66h_colour;
+    1: spriteset_p66h_original;
+    2: spriteset_p66h_alternative;
+}
 
 switch (FEAT_TRAINS, SELF, switch_p66h_articulated_part, extra_callback_info1) {
     1..2: return p66h;
@@ -31,7 +42,7 @@ switch (FEAT_TRAINS, SELF, switch_p66h_articulated_part, extra_callback_info1) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_p66h_graphics, position_in_articulated_veh % 3) {
-    1: random_p66h_colour;
+    1: switch_p66h_graphics_subtype;
     empty_sprites;
 }
 
@@ -97,6 +108,7 @@ item (FEAT_TRAINS, p66h) {
         // Menu
         additional_text:                string(STR_DESC_2, string(STR_DECAY_BOXCAR_NOPASS));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_p66h_cargo_subtype;
 
         // Graphics
         default:                        switch_p66h_graphics;

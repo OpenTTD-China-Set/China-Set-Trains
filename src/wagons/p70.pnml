@@ -57,6 +57,21 @@ switch (FEAT_TRAINS, SELF, random_p70_colour, current_year - 2002) {
     16..30: random_p70_colour_middium;
     random_p70_colour_late;
 }
+switch (FEAT_TRAINS, SELF, switch_p70_cargo_subtype, cargo_subtype) {
+    0: return string(STR_RANDOM_COLOR);
+    1: return string(STR_BLACK);
+    2: return string(STR_BROWN);
+    3: return string(STR_RUSTYRED);
+    4: return string(STR_BLUE);
+    return CB_RESULT_NO_TEXT;
+}
+switch (FEAT_TRAINS, SELF, switch_p70_graphics_subtype, cargo_subtype) {
+    0: random_p70_colour;
+    1: spriteset_p70_black;
+    2: spriteset_p70_brown;
+    3: spriteset_p70_rustyred;
+    4: spriteset_p70_blue;
+}
 
 switch (FEAT_TRAINS, SELF, switch_p70_articulated_part, extra_callback_info1) {
     1..2: return p70;
@@ -64,7 +79,7 @@ switch (FEAT_TRAINS, SELF, switch_p70_articulated_part, extra_callback_info1) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_p70_graphics, position_in_articulated_veh % 3) {
-    1: random_p70_colour;
+    1: switch_p70_graphics_subtype;
     empty_sprites;
 }
 
@@ -130,6 +145,7 @@ item (FEAT_TRAINS, p70) {
         // Menu
         additional_text:                string(STR_DESC_2, string(STR_P70_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR_NOPASS));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_p70_cargo_subtype;
 
         // Graphics
         default:                        switch_p70_graphics;

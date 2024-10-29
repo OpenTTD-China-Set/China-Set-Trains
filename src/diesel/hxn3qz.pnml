@@ -18,7 +18,7 @@ spriteset (spriteset_hxn3qz, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "hxn3qz")
 }
 spriteset (spriteset_hxn3qz_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("diesel", "hxn3qz-back")
+    template_reversed_11 ("diesel", "hxn3qz")
 }
 
 switch (FEAT_TRAINS, SELF, switch_hxn3qz_articulated_part, extra_callback_info1) {

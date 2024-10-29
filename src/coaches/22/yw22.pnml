@@ -1,24 +1,23 @@
 // Begin YW22
-switch (FEAT_TRAINS, SELF, switch_yw22_name_purchase, getbits(extra_callback_info1, 8, 8)) { 
+switch (FEAT_TRAINS, SELF, switch_yw22_name_purchase, getbits(extra_callback_info1, 8, 8)) {
     0: return string(STR_22_SERIES);
     1: return string(STR_NAME_YW22);
-    return CB_RESULT_NO_TEXT; 
-} 
-switch (FEAT_TRAINS, SELF, switch_yw22_name, getbits(extra_callback_info1, 0, 8)) { 
-  0x20: switch_yw22_name_purchase; 
+    return CB_RESULT_NO_TEXT;
+}
+switch (FEAT_TRAINS, SELF, switch_yw22_name, getbits(extra_callback_info1, 0, 8)) {
+  0x20: switch_yw22_name_purchase;
   return CB_RESULT_NO_TEXT;
   }
 // Graphics
 
-// // Purchase Menu
-// spriteset (spriteset_yw22_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-//     template_purchase ("coaches", "22")
-// }
+ spriteset (spriteset_yw22_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+     template_purchase ("coaches", "22/yw22")
+ }
 
-// // Vehicle
-// spriteset (spriteset_yw22_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-//     template_standard ("coaches", "22")
-// }
+ // Vehicle
+ spriteset (spriteset_yw22_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+     template_standard ("coaches", "22/yw22")
+ }
 
 switch (FEAT_TRAINS, SELF, switch_yw22_articulated_part, extra_callback_info1) {
     1..2: return yw22;
@@ -37,7 +36,7 @@ switch (FEAT_TRAINS, SELF, switch_yw22_cargo_subtype, cargo_subtype) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw22_graphics_subtype, cargo_subtype) {
-    0: spriteset_22_original;
+    0: spriteset_yw22_original;
     1: spriteset_22_wru;
 }
 
@@ -101,7 +100,7 @@ item (FEAT_TRAINS, yw22) {
 
         // Graphics
         default:                        switch_yw22_graphics;
-        purchase:                       spriteset_22_purchase_original;
+        purchase:                       spriteset_yw22_purchase_original;
         articulated_part:               switch_yw22_articulated_part;
         cargo_subtype_text:             switch_yw22_cargo_subtype;
 
@@ -166,7 +165,7 @@ item (FEAT_TRAINS, yw221966) {
 
         // Graphics
         default:                        switch_yw22_graphics;
-        purchase:                       spriteset_22_purchase_original;
+        purchase:                       spriteset_yw22_purchase_original;
         articulated_part:               switch_yw221966_articulated_part;
         cargo_subtype_text:             switch_yw22_cargo_subtype;
 

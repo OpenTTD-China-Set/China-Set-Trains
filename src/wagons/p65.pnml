@@ -85,7 +85,7 @@ item (FEAT_TRAINS, p65) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_2, string(STR_P65_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR_NOPASS));
+        additional_text:                string(STR_DESC_2, string(STR_P65_LIVERY_AVAILABILITY), string(STR_DECAY_BOXCAR_POST));
         can_attach_wagon:               locowagon;
 
         // Graphics
@@ -97,7 +97,7 @@ item (FEAT_TRAINS, p65) {
         length:                         switch_length_2_4_2;
         cargo_capacity:                 switch_p65_capacity;
         loading_speed:                  switch_p65_loading_speed() << param_loading_speed;
-        cargo_age_period:               185 << (param_cargo_decay + param_wagoncargodecay);
+        cargo_age_period:               200 << (param_cargo_decay + param_wagoncargodecay);
         cost_factor:                    5;
         running_cost_factor:            4 * runningcostfactor();
         purchase_running_cost_factor:   16;

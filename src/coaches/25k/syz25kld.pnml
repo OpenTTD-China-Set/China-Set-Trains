@@ -7,15 +7,15 @@ switch (FEAT_TRAINS, SELF, switch_syz25kld_name, getbits(extra_callback_info1, 0
 
 // Purchase Menu
 spriteset (spriteset_s25kld_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "s25kld-luchaogang")
+    template_purchase ("coaches", "25k/s25kld-luchaogang")
 }
 
 // Vehicle
 spriteset (spriteset_s25kld_luchaogang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "s25kld-luchaogang")
+    template_standard ("coaches", "25k/s25kld-luchaogang")
 }
 spriteset (spriteset_s25kld_liaodong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "s25kld-liaodong")
+    template_standard ("coaches", "25k/s25kld-liaodong")
 }
 
 switch (FEAT_TRAINS, SELF, switch_syz25kld_articulated_part, extra_callback_info1) {
