@@ -26,9 +26,9 @@ graphics on major part of wagons.
 List of available parameters:
   Loading speed: change wagon loading speed; default to be Normal.
   Purchase cost: change purchase cost; default to be 25%.
-  Running cost: change running cost; default to be 25% 
-  Cargo age period: change the rate cargo gets aged; default to be Standard.
-  Cargo age period for freight wagons: change the rate cargo in mail and freight wagons gets aged; independent from the parameter above; default to be Standard.
+  Running cost: change running cost; default to be 25%.
+  Cargo age period: change the rate cargo gets aged; default to be 100%.
+  Cargo age period for freight wagons: change the rate cargo in mail and freight wagons gets aged; independent from the parameter above; default to be 100%.
   25-Series coaches built after 2014 default to be green: change whether the Type 25 Series Coaches purchased after 2014 default to be olive green. In reality, before 2014, they had different colours. Default to be Yes.
 
 ## 2. Building
