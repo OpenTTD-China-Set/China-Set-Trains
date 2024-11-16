@@ -110,6 +110,9 @@ Contributors (in alphabetical order):
 - WenSim
 - wuwu (kaitokiwa)
 
+  
+If you want to know the author of the specific vox, click [here](docs/contributor.csv).
+
 Thanks to:
 
 - andythenorth
