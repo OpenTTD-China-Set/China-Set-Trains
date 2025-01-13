@@ -1,0 +1,6 @@
+spriteset (spriteset_cr200jsgmp_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP){
+    template_purchase("25-emu","cr200js-g-mp")
+    }
+spriteset (spriteset_cr200jsgmc_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP){
+    template_purchase("25-emu","cr200js-g-mc")
+    }
