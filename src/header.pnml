@@ -73,9 +73,9 @@ grf {
             max_value: 2;
             def_value: 0;
             names: {
-                0: string(STR_PARAM_STANDARD);
-                1: string(STR_PARAM_LONG);
-                2: string(STR_PARAM_VERY_LONG);
+                0: string(STR_PARAM_NORMAL);
+                1: string(STR_PARAM_TIMES_2);
+                2: string(STR_PARAM_TIMES_4);
             };
         }
     }
@@ -88,9 +88,9 @@ grf {
             max_value: 2;
             def_value: 0;
             names: {
-                0: string(STR_PARAM_DEFAULT);
-                1: string(STR_PARAM_LONG);
-                2: string(STR_PARAM_VERY_LONG);
+                0: string(STR_PARAM_NORMAL);
+                1: string(STR_PARAM_TIMES_2);
+                2: string(STR_PARAM_TIMES_4);
             };
 		}
 	}

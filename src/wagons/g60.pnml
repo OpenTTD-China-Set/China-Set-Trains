@@ -61,7 +61,7 @@ switch (FEAT_TRAINS, SELF, switch_g60_articulated_part, extra_callback_info1) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_g60_graphics, position_in_articulated_veh % 3) {
-    1: switch_g60_cargo_subtype;
+    1: switch_g60_graphics_subtype;
     empty_sprites;
 }
 

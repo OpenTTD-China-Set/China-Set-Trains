@@ -27,18 +27,18 @@ graphics on major part of wagons.
 
 List of available parameters:
 
-| Name                                                               | Function                                                                                                                                                    | Default value |
-| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| Loading speed                                                      | Change wagon loading speed                                                                                                                                  | Normal        |
-| Purchase cost                                                      | Change purchase cost                                                                                                                                        | 25%           |
-| Running cost                                                       | Change running cost                                                                                                                                         | 25%           |
-| Cargo age period                                                   | Change the rate cargo gets aged                                                                                                                             | Standard      |
-| Cargo age period<br />for freight wagons                           | Change the rate cargo in mail and freight wagons<br />gets aged; independent from the parameter above                                                      | Standard      |
-| 25-Series coaches<br />built after 2014 <br />default to be green | Change whether the Type 25 Series Coaches<br />purchased after 2014 default to be olive green. <br />In reality, before 2014, they had different colours. | Yes           |
+| Name     | Function    | Default value |
+| ------------ | ------------ | ------------- |
+| Loading speed         | Change wagon loading speed                       | Normal        |
+| Purchase cost         | Change purchase cost                             | 25%           |
+| Running cost          | Change running cost                              | 25%           |
+| Cargo age period      | Change the rate cargo gets aged                  | Standard      |
+| Cargo age period for freight wagons | Change the rate cargo in mail and freight wagons gets aged; independent from the parameter above | Standard      |
+| 25-Series coaches built after 2014 default to be green | Change whether the Type 25 Series Coaches purchased after 2014 default to be olive green. In reality, before 2014, they had different colours. | Yes           |
 
 ## 2. Building
 
-The source is available on [GitHub](https://github.com/OpenTTD-China-Set/China-Set-Trains).These tools are required to build the GRF:
+The source is available on [GitHub](https://github.com/OpenTTD-China-Set/China-Set-Trains). These tools are required to build the GRF:
 
 - nml
 - make
@@ -109,6 +109,9 @@ Contributors (in alphabetical order):
 - shentie106
 - WenSim
 - wuwu (kaitokiwa)
+
+  
+If you want to know the author of the specific vox, click [here](docs/contributor.csv).
 
 Thanks to:
 

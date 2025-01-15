@@ -2,10 +2,10 @@
 STR_GRF_NAME,China Set: Trains {VERSION_STRING},中国包：火车 {VERSION_STRING}
 STR_GRF_DESC,The Train sector of the China Set of OpenTTD.,OpenTTD中国包的火车部分。
 STR_GRF_URL,https://www.tt-forums.net/viewtopic.php?t=91092,
-STR_GRF_DESC_EXTRA," Locomotives, MUs, Coaches and Wagons in China Mainland. More contents in the future.",中国大陆的火车，包括机车、动车组、车厢。未来会有更多内容。{RED}在游戏中更新NewGRF时请注意最低兼容版本！请不要强行更新！
+STR_GRF_DESC_EXTRA,"Locomotives, MUs, Coaches and Wagons in China Mainland. More contents in the future.",中国大陆的火车，包括机车、动车组、车厢。未来会有更多内容。{RED}在游戏中更新NewGRF时请注意最低兼容版本！请不要强行更新！
 STR_GRF_DESC_README,See readme for details.,更多信息请查看Readme。
 STR_LEAPING_LIU_NEVER_DIES,{BLUE}Leaping Liu Never Dies.,{BLUE}跨越不死，曙光永生
-STR_PARAM_LOADING_SPEED,Loading Speed,装载速度
+STR_PARAM_LOADING_SPEED,Loading speed,装载速度
 STR_PARAM_LOADING_SPEED_DESC,Adjust vehicle loading speed. Default is 100%.,调整车辆装载速度。默认为100%。
 STR_PARAM_PURCHASE_COST,Purchase costs,购买费用
 STR_PARAM_PURCHASE_COST_DESC,Adjust vehicle purchase costs. Default is 25%.,调整车辆购买费用。默认为25%。
@@ -20,17 +20,13 @@ STR_PARAM_TIMES_2,200%,
 STR_PARAM_TIMES_4,400%,
 STR_PARAM_TIMES_8,800%,
 STR_PARAM_TIMES_16,1600%,
-STR_PARAM_DEFAULT,Default,默认
-STR_PARAM_CARGO_DECAY,Cargo Age Period,货物贬值周期
-STR_PARAM_CARGO_DECAY_DESC,"Adjust cargo age period of coaches and wagons. ""Long"" is ""Standard"" doubled, while ""Very Long"" is ""Long"" doubled. Even in ""Standard"" mode, cargo age period varies.",调整车厢的货物贬值周期。“较长”为“标准”的两倍，“很长”是“较长”的两倍。即使在“标准”设置下，货物贬值周期也随车厢种类而变化。
-STR_PARAM_STANDARD,Standard,标准
-STR_PARAM_LONG,Long,较长
-STR_PARAM_VERY_LONG,Very Long,很长
-STR_PARAM_GAOZULV,"Type 25 Passenger Coaches built after 2014 are {DKGREEN}""Gaozu Geeen""{BLACK} in default",2014年后建造的25型客车默认刷{DKGREEN}绿
-STR_PARAM_GAOZULV_DESC,"Choose whether to print{DKGREEN} Canarium Green (also called ""Gaozu Geeen""){BLACK} to Type 25 Passenger Coaches built after 2014 in default",决定2014年后建造的25型客车是否默认刷{DKGREEN}绿
-STR_PARAM_WAGON_CARGO_DECAY,Set Cargo Age Period of Wagons Individually,单独设置货车的货物贬值周期
-STR_PARAM_WAGON_CARGO_DECAY_DESC,"Set cargo age period of mail and freight wagons individually, and multiplied by ""Cargo Age Period"" again. It makes very-long-distance transport of frieght possible.","单独设置邮件车和货车的货物贬值周期，在选项""货物贬值周期""上叠加计算。这个选项使超长途货物运输成为可能"
-STR_USED_WITH_DYNAMIC_ENGINES,"This GRF needs dynamic_engines to be turned on. Open console, and type ""setting dynamic_engines 1"".","请切换至控制台模式, 键入 ""setting dynamic_engines 1"", 否则您无法游玩中国包."
+STR_PARAM_CARGO_DECAY,Cargo age period,货物贬值周期
+STR_PARAM_CARGO_DECAY_DESC,"Adjust cargo age period (the ability of keeping freshness of cargo and comfort for passengers) of coaches and wagons. Default is 100%. Cargo age period varies, so that a passenger would usually pay more for their long journey in a soft sleeper coach than in a hard seat coach.",调整车厢的货物贬值周期（旅客舒适度/货物保鲜度）。默认为100%。货物贬值周期随车厢种类而有不同；长途乘客使用软卧时一般会较使用硬座时付更多的钱。
+STR_PARAM_GAOZULV,"Type 25 Passenger Coaches built after 2014 are {DKGREEN}""Gaozu Green""{BLACK} by default",2014年后建造的25型客车默认刷{DKGREEN}绿
+STR_PARAM_GAOZULV_DESC,"Choose whether to print{DKGREEN} Canarium Green (also called ""Gaozu Green""){BLACK} to Type 25 Passenger Coaches built after 2014 by default",决定2014年后建造的25型客车是否默认刷{DKGREEN}绿
+STR_PARAM_WAGON_CARGO_DECAY,Cargo age period of mail and freight wagons,单独设置货车的货物贬值周期
+STR_PARAM_WAGON_CARGO_DECAY_DESC,"Set cargo age period of mail and freight wagons individually, multiplied by ""Cargo Age Period"" again. It makes very-long-distance transport of freight possible.","单独设置邮件车和货车的货物贬值周期，在选项""货物贬值周期""上叠加计算。这个选项使超长途货物运输成为可能"
+STR_USED_WITH_DYNAMIC_ENGINES,"This GRF needs dynamic_engines to be turned on. Open console, and type ""set dynamic_engines 1"".","请切换至控制台模式，键入 ""set dynamic_engines 1""， 否则您无法游玩中国包。"
 # Name,,
 STR_NAME_YZ1,YZ1 (Passenger Coach),YZ1 (客车)
 STR_NAME_YZ21,YZ21 (Passenger Coach),YZ21 (客车)

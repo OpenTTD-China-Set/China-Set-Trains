@@ -180,10 +180,10 @@ switch (FEAT_TRAINS, SELF, switch_jsq1_full_color, cargo_subtype) {
 }
 
 
-switch (FEAT_TRAINS, SELF, switch_jsq1_original, cargo_count < 2) {
-    0..2: random_jsq1_empty;
-    3..10: random_jsq1_half;
-    random_jsq1_full;
+switch (FEAT_TRAINS, SELF, switch_jsq1_colour, cargo_count) {
+    0..2: switch_jsq1_empty_color;
+    3..10: switch_jsq1_half_color;
+    switch_jsq1_full_color;
 }
 
 switch (FEAT_TRAINS, SELF, switch_jsq1_cargo_subtype, cargo_subtype) {
@@ -194,10 +194,8 @@ switch (FEAT_TRAINS, SELF, switch_jsq1_cargo_subtype, cargo_subtype) {
 }
 
 
-
-
 switch (FEAT_TRAINS, SELF, switch_jsq1_graphics, position_in_articulated_veh % 3) {
-    1: switch_jsq1_original;
+    1: switch_jsq1_colour;
     empty_sprites;
 }
 

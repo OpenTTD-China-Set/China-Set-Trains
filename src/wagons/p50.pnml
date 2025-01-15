@@ -66,7 +66,7 @@ switch (FEAT_TRAINS, SELF, switch_p50_graphics_subtype, cargo_subtype) {
     1: spriteset_p50_black;
     2: spriteset_p50_brown;
     3: spriteset_p50_rustyred;
-    1: spriteset_p50_rescue;
+    4: spriteset_p50_rescue;
 }
 
 switch (FEAT_TRAINS, SELF, switch_p50_graphics, position_in_articulated_veh % 3) {
