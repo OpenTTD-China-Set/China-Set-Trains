@@ -1,0 +1,99 @@
+spriteset (spriteset_cr200jsgmc_electric_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP){
+    template_purchase("25-emu","cr200jsg-mc-electric")
+}
+spriteset (spriteset_cr200jsgmc_diesel_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP){
+    template_purchase("25-emu","cr200jsg-mc-diesel")
+}
+
+spriteset (spriteset_cr200jsgmc_electric_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cr200jsg-mc-electric")
+}
+spriteset (spriteset_cr200jsgt_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cr200jsg-t")
+}
+spriteset (spriteset_cr200jsgt_middle_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "cr200jsg-t")
+}
+spriteset (spriteset_cr200jsg_motor_diesel, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cr200js-g-m-diesel")
+}
+spriteset (spriteset_cr200jspmc_diesel_motor_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cr200jsg-mc-diesel")
+}
+spriteset (spriteset_cr200jsgmc_electric_front_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed_10 ("25-emu", "cr200jsg-mc-electric")
+}
+spriteset (spriteset_cr200jsg_motor_diesel_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "cr200jsp-m-diesel")
+}
+spriteset (spriteset_cr200jsgmc_diesel_motor_cab_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "cr200jsg-mc-diesel")
+}
+
+ switch (FEAT_TRAINS, SELF, switch_cr200jsg_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_CR200J_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+switch (FEAT_TRAINS, SELF, switch_cr200jsg_articulated_part, extra_callback_info1) {
+    1..2: return cr200jsg;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item (FEAT_TRAINS, cr200js-g) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CR200JSG_EXECTRIC);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        variant_group:					9216;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2021,06,25);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SABA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          160 km/h;
+        power:                          7200 kW;
+        weight:                         78 ton;
+        tractive_effort_coefficient:    0.314;
+        cost_factor:                    96;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            44;
+        reliability_decay:              12;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        additional_text:                string(STR_DESC_4, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CR200J_NICKNAME), string(STR_RELDEC_LOW, 12), string(STR_CR200J_CONSIST));
+        can_attach_wagon:               cr200jbwagon;
+        start_stop:                     switch_cr200jsp_start_stop;
+        default:                        switch_cr200jsg_graphics;
+        purchase:                       riteset_cr200jsgmc_electric_original;
+        articulated_part:               switch_cr200jsg_articulated_part;
+        
+        length:                         switch_length_2_6_2;
+        cargo_capacity:                 0;
+        cost_factor:                    104;
+        running_cost_factor:            89 * runningcostfactor() + 20;
+        purchase_running_cost_factor:   376;
+        purchase_cargo_capacity:        0;
+        bitmask_vehicle_info:           switch_pushpull_consist_correction;
+        name:                           switch_cr200jsp_name;
+
+    }
+}
