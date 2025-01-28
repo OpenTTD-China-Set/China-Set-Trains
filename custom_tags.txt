@@ -1,0 +1,7 @@
+# 0 "Makefile.dist"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "Makefile.dist"
+REPO_REVISION := 177
+REPO_VERSION_STRING := 0.3.3.177
+VERSION_STRING :0.3.3.177

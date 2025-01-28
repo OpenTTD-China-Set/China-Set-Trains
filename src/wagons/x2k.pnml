@@ -80,8 +80,8 @@ random_switch (FEAT_TRAINS, SELF, random_x2k_half) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_x2k_not_empty, cargo_count < 50) {
-    0: random_x2k_half;
-    random_x2k_full;
+    0: random_x2k_full;
+    random_x2k_half;
 }
 
 switch (FEAT_TRAINS, SELF, switch_x2k_original, cargo_count < 5) {

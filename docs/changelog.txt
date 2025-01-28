@@ -5,6 +5,11 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.3.177 (29/10/2025)
+--------------------
+Fix #55: wagon sprite errors
+Add Liveries: CRH1A, CRH5A
+
 0.3.3.176 (21/10/2024)
 --------------------
 Fix #55: wagon sprite errors
