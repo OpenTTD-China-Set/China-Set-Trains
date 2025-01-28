@@ -249,7 +249,6 @@ switch (FEAT_TRAINS, SELF, mu2to16car, (num_vehs_in_consist < 6) || (num_vehs_in
     return CB_RESULT_NO_TEXT;
 }
 
-
 // MUs need at least 4 and at most 24 cars to start
 
 switch (FEAT_TRAINS, SELF, mu4to24car, (num_vehs_in_consist < 12) || (num_vehs_in_consist > 72)) {

@@ -345,8 +345,9 @@ item (FEAT_TRAINS, crh380bl, 9257) {}
 item (FEAT_TRAINS, cj1, 9258) {}
 item (FEAT_TRAINS, x2000, 9259) {}
 item (FEAT_TRAINS, cr400afae, 9260) {}
-item (FEAT_TRAINS, crh5gjt, 9261) {}
 item (FEAT_TRAINS, crh5e, 9261) {}
+item (FEAT_TRAINS, crh5gjt, 9262) {}
+
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
 #define id_range_1500_emu 0x2800..0x2BFF
@@ -362,7 +363,8 @@ item (FEAT_TRAINS, crh5e, 9261) {}
 
 //Multi Power MU, available ID range: 13312-14335 (hex 0x3400..0x37FF)
 #define id_range_multi_mu 0x3400..0x37FF
-
+item (FEAT_TRAINS, cr200jsg_electric, 13312) {}
+item (FEAT_TRAINS, cr200jsg_diesel, 13313) {}
 
 //Monorail MU, available ID range: 14336-14847 (hex 0x3800..0x39FF)
 #define id_range_mono_mu 0x3800..0x3BFF
