@@ -323,7 +323,7 @@
 
 
 // Multi Power MU
-
+#include "src/multipower-mu/cr200jsg.pnml"
 
 // Monorail MU
 

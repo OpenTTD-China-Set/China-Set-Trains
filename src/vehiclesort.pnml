@@ -117,6 +117,8 @@ sort (FEAT_TRAINS, [
     cr200ja,
     cr200jal,
     cr200jb,
+    cr200jsg_electric,
+    cr200jsg_diesel,
     cr200jc,
     cr200jcl,
     cr300af,

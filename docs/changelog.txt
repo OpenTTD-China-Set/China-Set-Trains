@@ -5,6 +5,10 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.4.177 (xx/02/2025)
+--------------------
+Add: CR200JSG
+
 0.3.3.176 (21/10/2024)
 --------------------
 Fix #55: wagon sprite errors
