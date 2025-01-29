@@ -5,9 +5,9 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
-0.3.4.177 (xx/02/2025)
+0.3.4.177 (29/01/2025)
 --------------------
-Add: CR200JSG, CRH5G (Technology-Enhanced),
+Add: CR200JSG, CRH5G (Technology-Enhanced), Beijing Seires Locomotive
 
 0.3.3.176 (21/10/2024)
 --------------------
