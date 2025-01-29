@@ -61,14 +61,20 @@ $(CUSTOM_TAGS): ./Makefile.dist
 	$(GCC) -E -x c -o $@ $<
 	$(_V) echo VERSION_STRING :$(REPO_VERSION_STRING) >> $@
 
-$(NML_FILE): $(CUSTOM_TAGS) $(CODE_FILES) $(VOX_GENREATED_FILES)
-	$(GCC) -E -x c -D REPO_REVISION=$(REPO_REVISION) -D VERSION_STRING=$(REPO_VERSION_STRING) -o $@ $(INDEX_FILE)
+#$(NML_FILE): $(CUSTOM_TAGS) $(CODE_FILES) $(VOX_GENREATED_FILES)  
+#	$(GCC) -E -x c -D REPO_REVISION=$(REPO_REVISION) -D VERSION_STRING=$(REPO_VERSION_STRING) -o $@ $(INDEX_FILE)
+.PHONY: regenerate_nml
+
+regenerate_nml:
+	$(GCC) -E -x c -D REPO_REVISION=$(REPO_REVISION) -D VERSION_STRING=$(REPO_VERSION_STRING) -o $(NML_FILE) $(INDEX_FILE)
+
+$(NML_FILE): regenerate_nml
 
 $(GRF_FILE): $(NML_FILE) $(CUSTOM_TAGS) lng_files
 	$(NMLC) $<
 	if [ ! -d $(TEMP_DIR) ]; then mkdir $(TEMP_DIR); fi
-	mv -f $(NML_FILE) $(TEMP_DIR)/$(NML_FILE)
-	mv -f $(CUSTOM_TAGS) $(TEMP_DIR)/$(CUSTOM_TAGS)
+#	mv -f $(NML_FILE) $(TEMP_DIR)/$(NML_FILE)
+#	mv -f $(CUSTOM_TAGS) $(TEMP_DIR)/$(CUSTOM_TAGS)
 # Rule to run nmlc when the NML file changes
 code: $(GRF_FILE)
 

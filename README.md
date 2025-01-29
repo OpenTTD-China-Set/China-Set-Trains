@@ -27,13 +27,13 @@ graphics on major part of wagons.
 
 List of available parameters:
 
-| Name     | Function    | Default value |
-| ------------ | ------------ | ------------- |
-| Loading speed         | Change wagon loading speed                       | Normal        |
-| Purchase cost         | Change purchase cost                             | 25%           |
-| Running cost          | Change running cost                              | 25%           |
-| Cargo age period      | Change the rate cargo gets aged                  | Standard      |
-| Cargo age period for freight wagons | Change the rate cargo in mail and freight wagons gets aged; independent from the parameter above | Standard      |
+| Name                                                    | Function                                                                                                                                         | Default value |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
+| Loading speed                                           | Change wagon loading speed                                                                                                                       | Normal        |
+| Purchase cost                                           | Change purchase cost                                                                                                                             | 25%           |
+| Running cost                                            | Change running cost                                                                                                                              | 25%           |
+| Cargo age period                                        | Change the rate cargo gets aged                                                                                                                  | Standard      |
+| Cargo age period for freight wagons                     | Change the rate cargo in mail and freight wagons gets aged; independent from the parameter above                                                | Standard      |
 | 25-Series coaches built after 2014 default to be green | Change whether the Type 25 Series Coaches purchased after 2014 default to be olive green. In reality, before 2014, they had different colours. | Yes           |
 
 ## 2. Building
@@ -102,6 +102,7 @@ Contributors (in alphabetical order):
 - FJZer0ich
 - Haiyan
 - huanfeng
+- Jiaojie (CR400-BF-5033)
 - John Franklin
 - Mikhail
 - NACHN
@@ -110,7 +111,6 @@ Contributors (in alphabetical order):
 - WenSim
 - wuwu (kaitokiwa)
 
-  
 If you want to know the author of the specific vox, click [here](docs/contributor.csv).
 
 Thanks to:
