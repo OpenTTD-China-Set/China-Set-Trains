@@ -4,7 +4,7 @@ STR_GRF_DESC,The Train sector of the China Set of OpenTTD.,OpenTTD中国包的�
 STR_GRF_URL,https://www.tt-forums.net/viewtopic.php?t=91092,
 STR_GRF_DESC_EXTRA,"Locomotives, MUs, Coaches and Wagons in China Mainland. More contents in the future.",中国大陆的火车，包括机车、动车组、车厢。未来会有更多内容。{RED}在游戏中更新NewGRF时请注意最低兼容版本！请不要强行更新！
 STR_GRF_DESC_README,See readme for details.,更多信息请查看Readme。
-STR_LEAPING_LIU_NEVER_DIES,{BLUE}The people's railway for the people,{BLUE}人民铁路为人民
+STR_GRF_DESC_4,{BLUE}The people's railway for the people,{BLUE}人民铁路为人民
 STR_PARAM_LOADING_SPEED,Loading speed,装载速度
 STR_PARAM_LOADING_SPEED_DESC,Adjust vehicle loading speed. Default is 100%.,调整车辆装载速度。默认为100%。
 STR_PARAM_PURCHASE_COST,Purchase costs,购买费用

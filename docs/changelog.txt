@@ -7,7 +7,7 @@ China Set: Trains Changelog
 
 0.3.4.177 (xx/02/2025)
 --------------------
-Add: CR200JSG
+Add: CR200JSG, CRH5G (Technology-Enhanced),
 
 0.3.3.176 (21/10/2024)
 --------------------
