@@ -219,6 +219,9 @@
 #include "src/diesel/hxn3qz.pnml"
 #include "src/diesel/hxn5.pnml"
 #include "src/diesel/hxn5b.pnml"
+#include "src/diesel/beijing_freight.pnml"
+#include "src/diesel/beijing_passenger.pnml"
+#include "src/diesel/beijing_special.pnml"
 
 // 25kV AC Electric
 #include "src/25-electric/ss1.pnml"

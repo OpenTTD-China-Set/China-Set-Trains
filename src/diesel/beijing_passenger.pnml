@@ -1,0 +1,112 @@
+//Begin BEIJING_PASSENGER
+switch (FEAT_TRAINS, SELF, switch_beijing_passenger_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_BEIJING_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_beijing_passenger_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel/beijing", "beijing-passenger")
+}
+
+//Adds Vehicle
+spriteset (spriteset_beijing_passenger, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel/beijing", "beijing-passenger")
+}
+spriteset (spriteset_beijing_passenger_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel/beijing", "beijing-passenger-green")
+}
+spriteset (spriteset_beijing_passenger_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel/beijing", "beijing-passenger-orange")
+}
+
+switch (FEAT_TRAINS, SELF, switch_beijing_passenger_articulated_part, extra_callback_info1) {
+    1..2: return beijing_passenger;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_beijing_passenger_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_GREEN);
+    2: return string(STR_ORANGE);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_beijing_passenger_graphics_subtype, cargo_subtype) {
+    1: spriteset_beijing_passenger_green;
+    2: spriteset_beijing_passenger_orange;
+    spriteset_beijing_passenger;
+}
+switch (FEAT_TRAINS, SELF, switch_beijing_passenger_graphics, position_in_articulated_veh % 3) {
+    1: switch_beijing_passenger_graphics_subtype;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, beijing_passenger) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_BEIJING_PASSENGER);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        variant_group:					beijing_freight;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1971,08,26);
+        model_life:                     60;
+        retire_early:                   35;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          2700 hpM;
+        weight:                         92 ton;
+        tractive_effort_coefficient:    0.2565;
+        cost_factor:                    1;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            1;
+        reliability_decay:              8;
+        bitmask_vehicle_info:           0;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_BEIJING_PASSENGER), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_BEIJING_PASSENGER_NICKNAME), string(STR_RELDEC_LOW, 8));
+        cargo_subtype_text:             switch_beijing_passenger_cargo_subtype;
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_beijing_passenger_graphics;
+        purchase:                       spriteset_beijing_passenger_purchase;
+        articulated_part:               switch_beijing_passenger_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_5_2;
+        cargo_capacity:                 0;
+        cost_factor:                    74;
+        running_cost_factor:            55 * runningcostfactor();
+        purchase_running_cost_factor:   220;
+        purchase_cargo_capacity:        0;
+        name:                           switch_beijing_passenger_name;
+
+    }
+}
+
+// End BEIJING_PASSENGER

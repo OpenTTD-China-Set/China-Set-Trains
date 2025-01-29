@@ -194,7 +194,11 @@ STR_NAME_DF11,DF11 (Diesel),DF11 (内燃)
 STR_NAME_DF11G,DF11G (Diesel),DF11G (内燃)
 STR_NAME_DF11Z,DF11Z (Diesel),DF11Z (内燃)
 STR_NAME_DFH3,DFH3 (Diesel),DFH3 (内燃)
-STR_NAME_DFH7,DFH7 (Diesel),DFH7 (内燃) (调车用)
+STR_NAME_DFH7,DFH7 (Diesel) (Diesel Shunter),DFH7 (内燃) (调车用)
+STR_NAME_BEIJING_PASSENGER,Beijing (Diesel) (Passenger Type),北京 (内燃)  (客运型)
+STR_NAME_BEIJING_FREIGHT,Beijing (Diesel) (Freight Type),北京 (内燃)  (货运型)
+STR_NAME_BEIJING_SPECIAL,Beijing (Diesel) (Special Type),北京 (内燃)  (专运型)
+STR_NAME_BEIJING_RECONNECT_FREIGHT,Beijing (Diesel) (Reconnect Freight Type),北京 (内燃)  (重联货运型)
 STR_NAME_ND5,ND5 (Diesel),ND5 (内燃)
 STR_NAME_NJ2,NJ2 (Diesel),NJ2 (内燃)
 STR_NAME_HXN3,HXN3 (Diesel),HXN3 (内燃)
@@ -410,6 +414,10 @@ STR_FULL_NAME_DF11G,{BLACK}FULLNAME: {BLUE}Dongfeng 11G {WHITE}Diesel Locomotive
 STR_FULL_NAME_DF11Z,{BLACK}FULLNAME: {GOLD}Dongfeng 11Z Diesel Locomotive,{BLACK}全称：{GOLD}东风11Z型内燃机车
 STR_FULL_NAME_DFH3,"{BLACK}FULLNAME: {GOLD}Dongfanghong 3 Diesel Locomotive{}{BLACK}Livery Availability: Ordinary {BLUE}Blue {BLACK}Livery, {RED}Red {BLACK}Livery, {BROWN}""Gongqingtuan"" {BLACK}Livery ,Liaodong Peninsula Livery",{BLACK}全称：{GOLD}东方红3型内燃机车{}{BLACK}可选择的涂装：原始蓝色涂装，红色涂装，共青团号涂装，辽东半岛号涂装
 STR_FULL_NAME_DFH7,{BLACK}FULLNAME: {GOLD}Dongfanghong 7 Diesel Locomotive,{BLACK}全称：{GOLD}东方红7型内燃机车
+STR_FULL_NAME_BEIJING_PASSENGER,{BLACK}FULLNAME: {GOLD}Passenger Type Beijing Diesel Locomotive,{BLACK}全称：{GOLD}北京客运型内燃机车
+STR_FULL_NAME_BEIJING_FREIGHT,{BLACK}FULLNAME: {GOLD}Freight Type Beijing Diesel Locomotive,{BLACK}全称：{GOLD}北京货运型内燃机车
+STR_FULL_NAME_BEIJING_SPECIAL,{BLACK}FULLNAME: {GOLD}Special Type Beijing Diesel Locomotive,{BLACK}全称：{GOLD}北京专运型内燃机车
+STR_FULL_NAME_BEIJING_RECONNECT_FREIGHT,{BLACK}FULLNAME: {GOLD}Reconnect Freight Type Beijing Diesel Locomotive,{BLACK}全称：{GOLD}北京重联货运型内燃机车
 STR_FULL_NAME_ND5,{BLACK}FULLNAME: {GOLD}Neidian 5 Diesel Locomotive,{BLACK}全称：{GOLD}内电5型内燃机车
 STR_FULL_NAME_HXN3,{BLACK}FULLNAME: {GOLD}Hexie 3 Diesel Locomotive,{BLACK}全称：{GOLD}和谐内3型内燃机车
 STR_FULL_NAME_HXN5,{BLACK}FULLNAME: {GOLD}Hexie 5 Diesel Locomotive,{BLACK}全称：{GOLD}和谐内5型内燃机车
@@ -453,6 +461,7 @@ STR_DF4_SERIES,DF4 Series (Diesel Locomotive),DF4系列 (内燃机车)
 STR_DF4D_SERIES,DF4D Series (Diesel Locomotive),DF4D系列 (内燃机车)
 STR_DF5_SERIES,DF5 Series (Diesel Locomotive),DF5系列 (内燃机车)
 STR_DF7G_SERIES,DF7G Series (Diesel Locomotive),DF7G系列 (内燃机车)
+STR_BEIJING_SERIES,Beijing Series (Diesel Locomotive),北京系列 (内燃机车)
 STR_SS4_SERIES,SS4 Series (Electric Locomotive),SS4系列 (电力机车)
 STR_SS6_SERIES,SS6 Series (Electric Locomotive),SS6系列 (电力机车)
 STR_SS7_SERIES,SS7 Series (Electric Locomotive),SS7系列 (电力机车)
@@ -600,6 +609,8 @@ STR_DF7G_NICKNAME,{BLACK}Nickname: {GOLD}Begger,{BLACK}昵称：{GOLD}乞丐
 STR_DF8B_NICKNAME,{BLACK}Nickname: {GOLD}Barbie,{BLACK}昵称：{GOLD}芭比
 STR_DF11_NICKNAME,{BLACK}Nickname: {GOLD}Lion,{BLACK}昵称：{GOLD}狮子
 STR_DF11G_NICKNAME,{BLACK}Nickname: {GOLD}Pig,{BLACK}昵称：{GOLD}猪
+STR_BEIJING_PASSENGER_NICKNAME,{BLACK}Nickname: {GOLD}Little Beijing,{BLACK}昵称：{GOLD}小北京
+STR_BEIJING_SPECIAL_NICKNAME,{BLACK}Nickname: {GOLD}Big Beijing,{BLACK}昵称：{GOLD}大北京
 STR_HXN5_NICKNAME,{BLACK}Nickname: {GOLD}Grasshopper,{BLACK}昵称：{GOLD}蚱蜢
 STR_HXN5B_NICKNAME,{BLACK}Nickname: {GOLD}Scrambled egg with tomato,{BLACK}昵称：{GOLD}番茄炒蛋
 STR_SS1_NICKNAME,{BLACK}Nickname: {GOLD}Peony,{BLACK}昵称：{BLUE}芍药

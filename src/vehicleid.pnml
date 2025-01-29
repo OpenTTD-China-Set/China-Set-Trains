@@ -243,6 +243,11 @@ item (FEAT_TRAINS, hxn3, 5148) {}
 item (FEAT_TRAINS, hxn3qz, 5149) {}
 item (FEAT_TRAINS, dfh3, 5150) {}
 
+item (FEAT_TRAINS, beijing_passenger, 5152) {}
+item (FEAT_TRAINS, beijing_freight, 5153) {}
+item (FEAT_TRAINS, beijing_special, 5154) {}
+item (FEAT_TRAINS, beijing_reconnect_freight, 5155) {}
+
 //25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
 #define id_range_25_electric 0x1800..0x1BFF
 item (FEAT_TRAINS, hxd3c, 6144) {}
