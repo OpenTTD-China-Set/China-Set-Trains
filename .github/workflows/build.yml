@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -30,31 +33,3 @@ jobs:
             scoop install openttd/nml
             scoop install openttd/gorender
             make
-            gcc -E -x c tracks.pnml > tracks.nml
-            nmlc tracks.nml --grf=china-set-tracks.grf
-
-      - name: Get Date
-        id: date
-        shell: pwsh
-        run: echo "RELEASE_DATE=$(Get-Date -Format 'yyyy-MM-dd')" >> $env:GITHUB_ENV
-
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ env.RELEASE_DATE }}
-          release_name: Release ${{ env.RELEASE_DATE }}
-          draft: false
-          prerelease: true
-
-      - name: Upload Release Asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./chinasettrains.grf
-          asset_name: chinasettrains.grf
-          asset_content_type: application/octet-stream
