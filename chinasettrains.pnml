@@ -210,6 +210,7 @@
 #include "src/diesel/df7g8000.pnml"
 #include "src/diesel/df8b.pnml"
 #include "src/diesel/df11.pnml"
+#include "src/diesel/df11palteau.pnml"
 #include "src/diesel/df11g.pnml"
 #include "src/diesel/df11z.pnml"
 #include "src/diesel/dfh3.pnml"

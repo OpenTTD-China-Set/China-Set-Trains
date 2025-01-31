@@ -87,7 +87,7 @@ item (FEAT_TRAINS, beijing_freight) {
         running_cost_factor:            74 * runningcostfactor();
         purchase_running_cost_factor:   296;
         purchase_cargo_capacity:        0;
-/*         name:                           switch_beijing_freight_name; */
+        name:                           switch_beijing_freight_name;
 
     }
 }

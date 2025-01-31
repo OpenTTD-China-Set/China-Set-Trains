@@ -22,6 +22,7 @@ sort (FEAT_TRAINS, [
     df7g8000,
     df8b,
     df11,
+    df11plateau,
     df11g,
     df11z,
     dfh3,
