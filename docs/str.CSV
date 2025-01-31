@@ -173,6 +173,7 @@ STR_NAME_JF1,JF1 (Steam),JF1 (蒸汽)
 STR_NAME_SL6,SL6 (Steam),SL6 (蒸汽)
 STR_NAME_SY,SY (Steam),SY (蒸汽)
 STR_NAME_DF,DF (Diesel),DF (内燃)
+STR_NAME_DF3,DF3 (Diesel),DF3 (内燃)
 STR_NAME_DF4K,DF4 (Diesel) (Passenger Type),DF4 (内燃) (客运型)
 STR_NAME_DF4H,DF4 (Diesel) (Freight Type),DF4 (内燃) (货运型)
 STR_NAME_DF4BK,DF4B (Diesel) (Passenger Type),DF4B (内燃) (客运型)
@@ -390,6 +391,7 @@ STR_FULL_NAME_JF1,{BLACK}FULLNAME: {GOLD}JieFang {BLACK}(Meaning: Liberate) {GOL
 STR_FULL_NAME_SL6,{BLACK}FULLNAME: {GOLD}ShengLi {BLACK}(Meaning: Victory) {GOLD}6 Steam Locomotive,{BLACK}全称：{GOLD}胜利6型蒸汽机车
 STR_FULL_NAME_SY,{BLACK}FULLNAME: {GOLD}Shangyou {BLACK}(Meaning: Aiming High) {GOLD}Steam Locomotive,{BLACK}全称：{GOLD}上游型蒸汽机车
 STR_FULL_NAME_DF,{BLACK}FULLNAME: {GOLD}Dongfeng Diesel Locomotive,{BLACK}全称：{GOLD}东风型内燃机车
+STR_FULL_NAME_DF3,{BLACK}FULLNAME: {GOLD}Dongfeng 3 Diesel Locomotive,{BLACK}全称：{GOLD}东风3型内燃机车
 STR_FULL_NAME_DF4,{BLACK}FULLNAME: {GOLD}Dongfeng 4 Diesel Locomotive,{BLACK}全称：{GOLD}东风4型内燃机车
 STR_FULL_NAME_DF4B,{BLACK}FULLNAME: {GOLD}Dongfeng 4B Diesel Locomotive,{BLACK}全称：{GOLD}东风4B型内燃机车
 STR_FULL_NAME_DF4C,{BLACK}FULLNAME: {GOLD}Dongfeng 4C Diesel Locomotive,{BLACK}全称：{GOLD}东风4C型内燃机车

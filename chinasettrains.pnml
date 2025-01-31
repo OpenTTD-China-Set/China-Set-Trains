@@ -191,6 +191,7 @@
 
 // Diesel
 #include "src/diesel/df.pnml"
+#include "src/diesel/df3.pnml"
 #include "src/diesel/df4h.pnml"
 #include "src/diesel/df4k.pnml"
 #include "src/diesel/df4bk.pnml"
