@@ -1,2 +1,3 @@
+REPO_NAME           := chinasettrains
 REPO_REVISION       := 177
 REPO_VERSION_STRING := 0.3.4.177
