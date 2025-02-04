@@ -1,11 +1,14 @@
 # general
--include Makefile.config
+-include Makefile.dist
 # tools, sprites, lang, code entries need to be specified in Makefile.config
 # though the Makefile itself provides default values that can be used if
 # following the build instructions in README.md (using scoop to install the tools)
 #
 # You can override the default values by specifying them in Makefile.config
 # this would be useful if e.g. you manually compiled gorender and it's not in your PATH
+
+# name of the repository (to be changed in Makefile.dist)
+REPO_NAME ?= mynewgrf 
 
 # tools
 PYTHON ?= python3
@@ -25,17 +28,20 @@ LANG_SRC    ?= docs/str.csv
 # code
 NMLC ?= nmlc -c
 GCC  ?= gcc
-INDEX_FILE ?= chinasettrains.pnml
-OUTPUT_NML ?= chinasettrains.nml
-OUTPUT_GRF ?= chinasettrains.grf
+INDEX_FILE ?= $(REPO_NAME).pnml
+OUTPUT_NML ?= $(REPO_NAME).nml
+OUTPUT_GRF ?= $(REPO_NAME).grf
 CUSTOM_TAG_FILE ?= custom_tags.txt
 
+# bundle_tar
+TAR       ?= tar -cf 
+DOC_FILES ?= docs/readme.txt docs/changelog.txt
+
 # version
--include Makefile.dist
 REPO_REVISION       ?= 1       # specify in Makefile.dist
 REPO_VERSION_STRING ?= 0.0.1.1 # specify in Makefile.dist
 
-.PHONY: all sprites custom_tags code clean clean_grf clean_png
+.PHONY: all sprites lang custom_tags code bundle_tar clean clean_grf clean_png clean_tar
 
 # default rule
 all: sprites lang code
@@ -72,17 +78,27 @@ code: custom_tags
 	@echo "Compiling"
 	@$(NMLC) $(OUTPUT_NML) -o $(OUTPUT_GRF)
 
+# bundle tar file
+bundle_tar: all
+	@echo "Generating tar archive"
+	@$(TAR) $(REPO_NAME)-$(REPO_VERSION_STRING).tar $(OUTPUT_GRF) $(DOC_FILES)
+
 # clean
-clean: clean_grf clean_png
+clean: clean_grf clean_png clean_tar
 
 clean_grf:
 	@echo "Cleaning GRF and NML files"
-	@echo "Warning: clean grf won't work when using powershell, please use bash instead."
+	@echo "Warning: clean grf won't work when using powershell; please use bash instead."
 	@rm -f *.grf
 	@rm -f *.nml
 	@rm -f $(CUSTOM_TAG_FILE)
 
 clean_png:
 	@echo "Cleaning PNG files"
-	@echo "Warning: clean png won't work when using powershell, please use bash instead."
+	@echo "Warning: clean png won't work when using powershell; please use bash instead."
 	@find $(VOX_DIR)/ -name '*.png' -type f -delete
+
+clean_tar:
+	@echo "Clean TAR files"
+	@echo "Warning: clean tar won't work when using powershell; please use bash instead."
+	@rm -f *.tar
