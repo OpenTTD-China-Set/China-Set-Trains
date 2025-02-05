@@ -61,6 +61,9 @@ STR_NAME_SYZ25BHD,SYZ25B (Passenger Coach) (High-Door),SYZ25B (客车) (高开�
 STR_NAME_SRZ25BHD,SRZ25B (Passenger Coach) (High-Door),SRZ25B (客车) (高开门)
 STR_NAME_SYW25BHD,SYW25B (Passenger Coach) (High-Door),SYW25B (客车) (高开门)
 STR_NAME_SRW25BHD,SRW25B (Passenger Coach) (High-Door),SRW25B (客车) (高开门)
+STR_NAME_RZ225C,RZ225C (Passenger Coach),RZ225C (客车)
+STR_NAME_RZ125C,RZ125C (Passenger Coach),RZ125C (客车)
+STR_NAME_CA25C,CA25C (Passenger Coach),CA25C (餐车)
 STR_NAME_YZ25G,YZ25G (Passenger Coach),YZ25G (客车)
 STR_NAME_RZ25G,RZ25G (Passenger Coach),RZ25G (客车)
 STR_NAME_RZ225G,RZ225G (Passenger Coach),RZ225G (客车)
@@ -104,6 +107,7 @@ STR_NAME_UZ25K,UZ25K (Railway Post Office),UZ25K (邮车)
 STR_NAME_UZ25T,UZ25T (Railway Post Office),UZ25T (邮车)
 STR_NAME_TZ,TZ (Air Conditioner Generator Car),TZ (空调发电车)
 STR_NAME_TZ2,TZ2 (Air Conditioner Generator Car),TZ2 (空调发电车)
+STR_NAME_KD25C,KD25C (Air Conditioner Generator Car),KD25C (空调发电车)
 STR_NAME_KD25G,KD25G (Air Conditioner Generator Car),KD25G (空调发电车)
 STR_NAME_KD25K,KD25K (Air Conditioner Generator Car),KD25K (空调发电车)
 STR_NAME_KD25Z,KD25Z (Air Conditioner Generator Car),KD25Z (空调发电车)
@@ -334,10 +338,13 @@ STR_FULL_NAME_SYZ25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Hard Seat
 STR_FULL_NAME_SRZ25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米标准型双层软座客车
 STR_FULL_NAME_SYW25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米标准型双层硬卧客车
 STR_FULL_NAME_SRW25B,{BLACK}FULLNAME: {GOLD}25m Standard Double Decker Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米标准型双层软卧客车
+STR_FULL_NAME_RZ225C,{BLACK}FULLNAME: {GOLD}Type 25 Second-Class Passenger Coache Type C,{BLACK}全称：{GOLD}25C型二等软座客车
+STR_FULL_NAME_RZ125C,{BLACK}FULLNAME: {GOLD}Type 25 First-Class Passenger Coache Type C,{BLACK}全称：{GOLD}25C型一等软座客车
+STR_FULL_NAME_CA25C,{BLACK}FULLNAME: {GOLD}Type 25 Restaurant Car Type C,{BLACK}全称：{GOLD}25C型餐车
 STR_FULL_NAME_YZ25G,{BLACK}FULLNAME: {GOLD}25m Improved Hard Seat Passenger Coach,{BLACK}全称：{GOLD}25米改进型硬座客车
 STR_FULL_NAME_RZ25G,{BLACK}FULLNAME: {GOLD}25m Improved Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米改进型软座客车
-STR_FULL_NAME_RZ225G,{BLACK}FULLNAME: {GOLD}25m Improved Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米改进型二等软座客车
-STR_FULL_NAME_RZ125G,{BLACK}FULLNAME: {GOLD}25m Improved Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米改进型一等软座客车
+STR_FULL_NAME_RZ225G,{BLACK}FULLNAME: {GOLD}25m Improved Second-Class Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米改进型二等软座客车
+STR_FULL_NAME_RZ125G,{BLACK}FULLNAME: {GOLD}25m Improved First-Class Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米改进型一等软座客车
 STR_FULL_NAME_RZT25G,{BLACK}FULLNAME: {GOLD}25m Improved Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25米改进型特等软座客车
 STR_FULL_NAME_YW25G,{BLACK}FULLNAME: {GOLD}25m Improved Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米改进型硬卧客车
 STR_FULL_NAME_RW25G,{BLACK}FULLNAME: {GOLD}25m Improved Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25米改进型软卧客车
@@ -374,6 +381,7 @@ STR_FULL_NAME_UZ25K,{BLACK}FULLNAME: {GOLD}25m Rapid Railway Post Office,{BLACK}
 STR_FULL_NAME_UZ25T,{BLACK}FULLNAME: {GOLD}25m Accelerated Railway Post Office,{BLACK}全称：{GOLD}25米提速型邮政车
 STR_FULL_NAME_TZ,{BLACK}FULLNAME: {GOLD}Special Purpose Car,{BLACK}全称：{GOLD}特种车
 STR_FULL_NAME_TZ2,{BLACK}FULLNAME: {GOLD}Special Purpose Car Type 2,{BLACK}全称：{GOLD}2型特种车
+STR_FULL_NAME_KD25C,{BLACK}FULLNAME: {GOLD}Type 25 Air Conditioner Generator Car Type C,{BLACK}全称：{GOLD}25C型空调发电车
 STR_FULL_NAME_KD25G,{BLACK}FULLNAME: {GOLD}25m Improved Air Conditioner Generator Car,{BLACK}全称：{GOLD}25米改进型空调发电车
 STR_FULL_NAME_KD25K,{BLACK}FULLNAME: {GOLD}25m Rapid Air Conditioner Generator Car,{BLACK}全称：{GOLD}25米快速型空调发电车
 STR_FULL_NAME_KD25Z,{BLACK}FULLNAME: {GOLD}25m Semi-Highspeed Air Conditioner Generator Car,{BLACK}全称：{GOLD}25米准高速空调发电车
@@ -499,6 +507,7 @@ STR_25_HK_SERIES,Type 25 Series Canton-Kowloon Railway Coaches,25型广九铁路
 STR_25B_SERIES,Type 25B Series Coaches,25B型客车
 STR_S25BLD_SERIES,Type S25B Series Coaches (Low-Door),S25B型双层客车 (低开门)
 STR_S25BHD_SERIES,Type S25B Series Coaches (High-Door),S25B型双层客车 (高开门)
+STR_25C_SERIES,Type 25C Series Coaches,25C型客车
 STR_25G_SERIES,Type 25G Series Coaches,25G型客车
 STR_25Z_SERIES,Type 25Z Series Coaches,25Z型客车
 STR_S25Z_SERIES,Type S25Z Series Coaches ,S25Z型双层客车
@@ -526,8 +535,8 @@ STR_DESC_4,{STRING}{}{STRING}{}{STRING}{}{STRING},
 STR_DESC_3,{STRING}{}{STRING}{}{STRING},
 STR_DESC_2,{STRING}{}{STRING},
 STR_LV_COLOR_PREFIX,{STRING}{STRING}{STRING}{STRING},
-STR_LV_AVAILABLE_S,{STRING}{STRING}|{STRING}|{STRING}|{STRING}|{STRING},
-STR_LV_AVAILABLE_L,{STRING}{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING}|{STRING},
+STR_LV_AVAILABLE_S,{STRING}{STRING} {STRING} {STRING} {STRING} {STRING},
+STR_LV_AVAILABLE_L,{STRING}{STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING},
 # Desc,,
 STR_JINLUN_25DT,"Coaches use for DMU {BLUE}""JIN{WHITE}LUN""",{BLUE}金{WHITE}轮{RED}号{GOLD}内燃动车组所使用的拖车
 STR_XL25T_SSPE_DESCRIPTION,"{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.",{BLACK}新时速运递公司使用的XL25T版本。
@@ -831,6 +840,7 @@ STR_DECAY_BOXCAR_NOPASS,"{BLACK}Cargo Age Period Factor: {YELLOW}185{BLACK}, Liv
 STR_DECAY_BOXCAR_POST,"{BLACK}Cargo Age Period Factor: {YELLOW}200{BLACK}, {RED}Unrefittable to Passengers",{BLACK}货物贬值周期因子：{YELLOW}200{BLACK}，棚代客{RED}不可用
 STR_CAFE_EFFECT,"{BLACK}Cafe Effect: {GOLD}Attaching Restaurant Car Halves Running Costs of Non-Commuter Passenger Cars except Restaurant Cars, and Increases Cargo Age Period by 1/4",{BLACK}餐车的作用：{GOLD}加挂餐车使除餐车外的所有非通勤客车运行费用减半，货物贬值周期增加1/4
 STR_AIR_CONDITIONER_EFFECT,{BLACK}Air Conditioner Effect: {GOLD}Attaching Air Conditioner Generator Car Increases Cargo Age Period of Most Passenger Cars Hauled by Locomotives without Electricity Supply by 1/4,{BLACK}空调发电车的作用：{GOLD}加挂空调发电车可使大部分非机供机车牵引客车的货物贬值周期增加1/4
+STR_AIR_CONDITIONER_NEED_POWER,{BLACK}Air Conditioner: {YELLOW}Requires external power supply,{BLACK}空调：{YELLOW}需要外部电源
 STR_NO_AIR_CONDITIONER,{BLACK}Air Conditioner: {RED}Unavailable,{BLACK}空调：{RED}不可用
 STR_SELF_AIR_CONDITIONER,{BLACK}With Air Conditioner Compartment {RED}ONLY USED BY ITSELF,{BLACK}自带空调发电机{RED}但仅用于本车厢
 STR_DESC_PENGDAIKE,"{BLACK}Passengers in Boxcars (Peng Dai Ke): From 1980s to 2008, to handle huge traffic amounts during the Spring Festival period, temporary trains where passengers crowding in boxcars had to be operated. This reflected a severe lack of railway transport resources at that time.",{BLACK}棚代客：从20世纪80年代至2008年，为适应春运期间极大的客流量，部分铁路局曾开行使用棚车装载旅客的临客列车，内部极度拥挤。该现象反映了当时铁路运输资源的严重缺乏。
