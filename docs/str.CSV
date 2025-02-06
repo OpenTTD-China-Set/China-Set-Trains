@@ -253,6 +253,7 @@ STR_NAME_NDJ3,"NDJ3 ""Great Wall"" (DMU)","NDJ3 ""长城号"" (内燃动车)"
 STR_NAME_X2000,X2000 (EMU),X2000 (电力动车)
 STR_NAME_DJJ1,"DJJ1 ""Blue Arrow"" (EMU)","DJJ1 ""蓝箭"" (电力动车)"
 STR_NAME_DJJ2,"DJJ2 ""China Star"" (EMU)","DJJ2 ""中华之星"" (电力动车)"
+STR_NAME_DJF1,"DJF2 ""Central Plains Star"" (EMU)","DJF1 ""中原之星"" (电力动车)"
 STR_NAME_DJF3,"DJF3 ""Changbai Mount"" (EMU)","DJF3 ""长白山号"" (电力动车)"
 STR_NAME_CR200JA,CR200J-A (EMU),CR200J-A (电力动车)
 STR_NAME_CR200JAL,CR200J-A (Long Version) (EMU),CR200J-A (长编组) (电力动车)
@@ -853,6 +854,7 @@ STR_NDJ3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC{BLACK}, Sec
 STR_X2000_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent to Soft Seat",{BLACK}匹配的车厢：{GOLD}一等座{BLACK}实为软座
 STR_DJJ1_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent to Soft Seat",{BLACK}匹配的车厢：{GOLD}一等座{BLACK}实为软座
 STR_DJJ2_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等座、二等/餐车合造
+STR_DJF1_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK}, equivalent to Hard Seat, {GOLD}ZY{BLACK}, equivalent to Soft Seat",{BLACK}匹配的车厢：{GOLD}二等座{BLACK}实为硬座 ，{GOLD}一等座{BLACK}实为软座
 STR_DJF3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent to Soft Seat",{BLACK}匹配的车厢：{GOLD}一等座{BLACK}实为软座
 STR_CR200J_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC, WE, WY, WG",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造、二等卧、一等卧、高级软卧
 STR_CRH_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等座、商务座、商务座 (复兴号智能动车组标准) 、二等/餐车合造
@@ -876,6 +878,7 @@ STR_NDJ3_CONSIST,"{BLACK}Consist: {GOLD}One section at front, another section at
 STR_X2000_CONSIST,"{BLACK}Consist: {GOLD}One section at front, with wagons attached. At least 4 wagons",{BLACK}构成：{GOLD}头部一节，至少四节车厢
 STR_DJJ1_CONSIST,"{BLACK}Consist: {GOLD}One section at front, with wagons attached; or one section at front, another section at back. At least 4 wagons",{BLACK}构成：{GOLD}头部一节，或头尾各一节，中间加挂至少四节车厢
 STR_DJJ2_CONSIST,"{BLACK}Consist: {GOLD}One section at front, another section at back, MU Wagins in Middle",{BLACK}构成：{GOLD}头尾各一节，中间加挂拖车车厢
+STR_DJF1_CONSIST,{BLACK}Consist: {GOLD}4 to 16 cars; with 14-car standard consist (M-T-M-T-…...-T-M-T-M),{BLACK}构成：{GOLD}4-16节；14 节标准编组时为 (M-T-M-T-…...-T-M-T-M)
 STR_DJF3_CONSIST,{BLACK}Consist: {GOLD}4 to 12 cars; with 9-car standard consist (M-T-M-M-T-M-M-T-M),{BLACK}构成：{GOLD}4-12节；9 节标准编组时为 (M-T-M-M-T-M-M-T-M)
 STR_CR400_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 T-M-T-M-M-T-M-T。大于12节时以重联方式运行
 STR_CR400_AB_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 16-car standard consist 2*(T-M-T-M-M-T-M-T),{BLACK}构成：{GOLD}4-24节；16 节标准编组时为 2*(T-M-T-M-M-T-M-T)
@@ -910,6 +913,7 @@ STR_CRH6AA_CONSIST,"{BLACK}Consist: {GOLD}Fixed consist of 4 cars (Mc-Tp-Tp-Mc),
 STR_CRH6F_CONSIST,"{BLACK}Consist: {GOLD}At least 4 cars, with a standard 8-car consist 4 motorised cars",{BLACK}构成：{GOLD}至少4节，其中8节标准编组为4M4T
 STR_CR300_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard consist T-M-T-M-M-T-M-T. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节；8 节标准编组时为 T-M-T-M-M-T-M-T。大于12节时以重联方式运行
 # Head Seat,,
+STR_DJF1_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Soft Seat (RZ) {BLACK} as 1st-Class (ZY),{BLACK}头车座席：一等座作为{GOLD}软座{BLACK}使用
 STR_DJF3_HEAD_SEAT,{BLACK}Head Seat: {GOLD}Soft Seat (RZ) {BLACK} as 1st-Class (ZY),{BLACK}头车座席：一等座作为{GOLD}软座{BLACK}使用
 STR_CRH1A_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
 STR_CRH1B_HEAD_SEAT,{BLACK}Head Seat: {GOLD}1st-Class (ZY),{BLACK}头车座席：{GOLD}一等座
@@ -949,6 +953,7 @@ STR_ONLY_TWO_SECTIONS,This locomotive must be in a consist of two sections to ru
 STR_MUST_BE_4_8_12_16_CARS,"This MU must be in a consist of 4, 8, 12 or 16 cars to run.",该动车组节数必须为4，8，12或16，否则无法运行
 STR_MUST_BE_5_TO_17_CARS,This MU must be in a consist of 5 to 17 cars to run.,该动车组节数必须在5至17之间，否则无法运行
 STR_MUST_BE_2_TO_16_CARS,This MU must be in a consist of 2 to 16 cars to run.,该动车组节数必须在2至16之间，否则无法运行
+STR_MUST_BE_4_TO_16_CARS,This MU must be in a consist of 4 to 16 cars to run.,该动车组节数必须在4至16之间，否则无法运行
 STR_MUST_BE_4_TO_24_CARS,This MU must be in a consist of 4 to 24 cars to run.,该动车组节数必须在4至24之间，否则无法运行
 STR_MUST_BE_4_TO_12_CARS,This MU must be in a consist of 4 to 12 cars to run.,该动车组节数必须在4至12之间，否则无法运行
 STR_MUST_BE_8_TO_24_CARS,This MU must be in a consist of 8 to 24 cars to run.,该动车组节数必须在8至24之间，否则无法运行
