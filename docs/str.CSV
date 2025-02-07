@@ -268,6 +268,7 @@ STR_NAME_CRH1B,CRH1B (Long Version) (EMU),CRH1B (电力动车)
 STR_NAME_CRH1E,CRH1E (EMU),CRH1E (电力动车)
 STR_NAME_CRH1AA,CRH1A-A (EMU),CRH1A-A (长编组) (电力动车)
 STR_NAME_CRH2A,CRH2A (EMU),CRH2A (电力动车)
+STR_NAME_CRH2A4020,CRH2A-4020 (Cargo EMU),CRH2A-4020 (货运电力动车)
 STR_NAME_CRH2B,CRH2B (Long Version) (EMU),CRH2B (长编组) (电力动车)
 STR_NAME_CRH2C,CRH2C (EMU),CRH2C (电力动车)
 STR_NAME_CRH2E,CRH2E (EMU),CRH2E (电力动车)
@@ -311,6 +312,7 @@ STR_NAME_ZECMUW,2nd-Class Restaurant Combined (ZEC) MU Wagon,动车组二等座/
 STR_NAME_WEMUW,2nd-Class Sleeper (WE) MU Wagon,动车组二等卧铺车厢
 STR_NAME_WYMUW,1st-Class Sleeper (WY) MU Wagon,动车组一等卧铺车厢
 STR_NAME_WGMUW,Top-Class Sleeper (WG) MU Wagon,动车组高级软卧车厢
+STR_NAME_KYMUW,Cargo MU Wagon,动车组货运车厢
 # Full Name,,
 STR_FULL_NAME_YZ1,{BLACK}FULLNAME: {GOLD}1 Type Hard Seat Passenger Coach,{BLACK}全称：{GOLD}1型硬座客车
 STR_FULL_NAME_YZ21,{BLACK}FULLNAME: {GOLD}21 Type Hard Seat Passenger Coach,{BLACK}全称：{GOLD}21型硬座客车
@@ -544,8 +546,9 @@ STR_LV_AVAILABLE_L,{STRING}{STRING} {STRING} {STRING} {STRING} {STRING} {STRING}
 # Desc,,
 STR_JINLUN_25DT,"Coaches use for DMU {BLUE}""JIN{WHITE}LUN""",{BLUE}金{WHITE}轮{RED}号{GOLD}内燃动车组所使用的拖车
 STR_XL25T_SSPE_DESCRIPTION,"{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.",{BLACK}新时速运递公司使用的XL25T版本。
-STR_CHA1C_DESC," {BLACK}Hybrid Locomotive using battery on non-electrified tracks providing {BLUE}2000 kW{BLACK}, and providing {RED}2400 kW{BLACK} on 25kV AC tracks", {BLACK}混合动力机车。在非电气化路段使用电池供电，功率为{BLUE}2000 kW{BLACK}。在25kV交流供电铁路上功率为{RED}2400 kW
+STR_CHA1C_DESC,"{BLACK}Hybrid Locomotive using battery on non-electrified tracks providing {BLUE}2000 kW{BLACK}, and providing {RED}2400 kW{BLACK} on 25kV AC tracks",{BLACK}混合动力机车。在非电气化路段使用电池供电，功率为{BLUE}2000 kW{BLACK}。在25kV交流供电铁路上功率为{RED}2400 kW
 STR_FIT_DESC,"{BLACK} Tilting Train, with higher max speed acrosing curves",{BLACK}摆式列车，更高的弯道最大通过速度
+STR_CRH2A4020_DESC,{RED}Salute to Driver Yang Yong,{RED}致敬杨勇师傅
 # Livery Availability,,
 STR_DF_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Yellow {GREEN}Line {BLACK}Livery, {WHITE}White {GREEN}Line {BLACK}Livery","{BLACK}可供选择的涂装：{GOLD}黄色{GREEN}窗线{BLACK}涂装, {WHITE}白色{GREEN}窗线{BLACK}涂装"
 STR_DF4_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea, DF4B only),{BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery, Jinhua-Wenzhou Livery (DF4B only)",{BLACK}可供选择的涂装：{GREEN}绿色涂装{GOLD}，{ORANGE}橘色涂装{BLACK}，{BLUE}“乌克兰”{YELLOW}涂装，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}
@@ -854,6 +857,7 @@ STR_DESC_PENGDAIKE,"{BLACK}Passengers in Boxcars (Peng Dai Ke): From 1980s to 20
 STR_ATTACH_ALL_CRH_CR,{BLACK}Matching MUs: {GOLD}Most of CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series MUs,{BLACK}匹配的动车组：{GOLD}大部分和谐/复兴号动车
 STR_ATTACH_SLEEPER_MU,{BLACK}Matching MUs: {GOLD}Part of CRH (Hexie/Harmony) and CR (Fuxing/Revival) Series Sleeper-Refit-Available MUs,{BLACK}匹配的动车组：{GOLD}部分提供卧铺的和谐/复兴号动车
 STR_ATTACH_CR200J,{BLACK}Matching MUs: {GOLD}CR200J Series,{BLACK}匹配的动车组：{GOLD}CR200J系列动车
+STR_ATTACH_CARGO_MU,{BLACK}Matching MUs: {GOLD}Cargo Series,{BLACK}匹配的动车组：{GOLD}货运动车
 STR_NZJ1_XINSHUGUANG_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK}, equivalent to Double-Decker Hard Seat, Capacity: 136, Comfort: {YELLOW}200{BLACK}; {GOLD}ZY{BLACK}, equivalent to Double-Decker Soft Seat, Capacity: 108, Comfort: {YELLOW}240",{BLACK}匹配的车厢：{GOLD}二等座{BLACK}实为双层硬座，载客量：136，舒适度：{YELLOW}200{BLACK}；{GOLD}一等座{BLACK}实为双层软座，载客量：108，舒适度：{YELLOW}240
 STR_NDJ3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZEC{BLACK}, Second Class Capacity: 114, Comfort: 200",{BLACK}匹配的车厢：{GOLD}二等座、一等座、二等/餐车合造{BLACK}，二等座载客量：114，舒适度：{YELLOW}200
 STR_X2000_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZY{BLACK}, equivalent to Soft Seat",{BLACK}匹配的车厢：{GOLD}一等座{BLACK}实为软座
@@ -866,6 +870,7 @@ STR_CRH_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZY, ZS, SW, ZEC",{BL
 STR_CRH_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, WY, WG, ZEC",{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造
 STR_CR_SLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE, ZS, WY, ZEC (As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}二等座、商务座 (特等座)、一等卧、二等/餐车合造 (实为软卧/餐车合造车)
 STR_CRH_LSLEEPER_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}一等卧、二等/餐车合造 (实为软卧/餐车合造车)
+STR_CARGOMU_CAN_ATTACH_WAGON,{BLACK}Matching Wagons: {GOLD}Cargo MU Wagom,{BLACK}匹配的车厢：{GOLD}动车组货运车厢
 STR_CRH5E_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}WY, ZEC(As 1st-Class Sleeper with Restaurant Wagon)",{BLACK}匹配的车厢：{GOLD}二等座、一等卧、高级软卧、二等/餐车合造 (实为软卧/餐车合造车)
 STR_CJ1_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, with standing places, Comfort: {ORANGE}160",{BLACK}匹配的车厢：仅有{GOLD}二等座{BLACK}带站席，舒适度：{ORANGE}160
 STR_CRH6A2_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: {GOLD}ZE{BLACK} (with standing places, Comfort: {ORANGE}160{BLACK}), {GOLD}ZY",{BLACK}匹配的车厢：{GOLD}二等座{BLACK} (带站席，舒适度：{ORANGE}160{BLACK})、{GOLD}一等座
@@ -901,6 +906,7 @@ STR_CRH2B_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up)
 STR_CRH2C_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾拖车，中间全为动力车。大于12节时以重联方式运行
 STR_CRH2E_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars,{BLACK}构成：{GOLD}4-24节：半数车厢为动力车
 STR_CRH2G_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节：半数 (向上取整) 车厢为动力车。大于12节时以重联方式运行
+STR_CRH2A4020_CONSIST,{BLACK}Consist: {GOLD}4 to 12 cars; half of which (ceiling up) are motorised cars,{BLACK}构成：{GOLD}4-12节：半数 (向上取整) 车厢为动力车
 STR_CJ1_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
 STR_CRH3A_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行
 STR_CRH3C_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head, cab and every other car motorised (M-T-M-T-...-T-M-T-M). Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾以及中间每隔一节车为动力车 (M-T-M-T-...-T-M-T-M)。大于12节时以重联方式运行

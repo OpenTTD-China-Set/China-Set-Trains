@@ -5,7 +5,12 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
-0.3.4.177 (04/02/2025)
+0.3.4.178 (08/02/2025)
+--------------------
+Fix #56: purchase te coefficient of CRH2A/B errors
+Add：CRH2A-4020
+
+0.3.4.177 (07/02/2025)
 --------------------
 Add: CR200JSG, CRH5G (Technology-Enhanced), Beijing Seires Locomotive, DF2, 25C Series, DF3, DJF1, CR380AJ
 

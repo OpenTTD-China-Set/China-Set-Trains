@@ -105,6 +105,7 @@ sort (FEAT_TRAINS, [
     crh2e,
     crh2g,
     crh2els,
+    crh2a4020,
     cj1,
     crh3a,
     crh3c,
@@ -301,4 +302,5 @@ sort (FEAT_TRAINS, [
     1046,
     1047,
     1051,
+    1536,
 ]);

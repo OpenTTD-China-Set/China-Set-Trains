@@ -194,6 +194,12 @@ switch (FEAT_TRAINS, SELF, muhead, vehicle_type_id) {
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
+switch (FEAT_TRAINS, SELF, cargomuhead, vehicle_type_id) {
+    1536..1633: onlyallowcst;
+    15616..16127: onlyallowcst;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
 switch (FEAT_TRAINS, SELF, singlemu, vehicle_type_id) {
     1024..1051: onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
@@ -217,6 +223,11 @@ switch (FEAT_TRAINS, SELF, onlyze, vehicle_type_id) {
 
 switch (FEAT_TRAINS, SELF, onlyzy, vehicle_type_id) {
     1025: onlyallowcst;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+switch (FEAT_TRAINS, SELF, onlycargo, vehicle_type_id) {
+    1536: onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 

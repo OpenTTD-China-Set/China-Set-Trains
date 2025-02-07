@@ -34,6 +34,7 @@ item (FEAT_TRAINS, xlmuw, 1051) {}
 
 //Unit Wagons for Cargoes on RAIL/ELRL: 1536-1663
 #define id_range_unit_wagons_RAIL_CARGO 0x0600..0x067F
+item (FEAT_TRAINS, kymuw, 1536) {}
 
 //Unit Wagons on MONO: 1663-1791
 #define id_range_unit_wagons_MONO 0x0680..0x06FF
@@ -391,7 +392,7 @@ item (FEAT_TRAINS, cr200jsg_diesel, 13313) {}
 
 //25kV AC Cargo EMU, available ID range: 15616-16127 (hex 0x3D00..0x3EFF)
 #define id_range_25_cargo_emu 0x3D00..0x3EFF
-
+item (FEAT_TRAINS, crh2a4020, 15616) {}
 
 //Multi Power Cargo MU, available range: 16128..16383 (hex 0x3F00..0x3FFF)
 #define id_range_multi_cargo_mu 0x3F00..0x3FFF

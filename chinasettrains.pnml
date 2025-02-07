@@ -29,7 +29,7 @@
 #include "src/unit-wagons-rail/wemuw.pnml"
 #include "src/unit-wagons-rail/wymuw.pnml"
 #include "src/unit-wagons-rail/wgmuw.pnml"
-
+#include "src/unit-wagons-rail/kymuw.pnml"
 
 // Coaches
 
@@ -297,6 +297,7 @@
 #include "src/25-emu/crh2e.pnml"
 #include "src/25-emu/crh2els.pnml"
 #include "src/25-emu/crh2g.pnml"
+#include "src/25-emu/crh2a4020.pnml"
 #include "src/25-emu/crh3c.pnml"
 #include "src/25-emu/cj1.pnml"
 #include "src/25-emu/crh3a.pnml"
