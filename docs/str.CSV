@@ -178,6 +178,7 @@ STR_NAME_SL6,SL6 (Steam),SL6 (蒸汽)
 STR_NAME_SY,SY (Steam),SY (蒸汽)
 STR_NAME_DF,DF (Diesel),DF (内燃)
 STR_NAME_DF2,DF2 (Diesel Shunter),DF2 (内燃) (调车用)
+STR_NAME_DF3,DF3 (Diesel),DF3 (内燃)
 STR_NAME_DF4K,DF4 (Diesel) (Passenger Type),DF4 (内燃) (客运型)
 STR_NAME_DF4H,DF4 (Diesel) (Freight Type),DF4 (内燃) (货运型)
 STR_NAME_DF4BK,DF4B (Diesel) (Passenger Type),DF4B (内燃) (客运型)
@@ -281,6 +282,7 @@ STR_NAME_CRH5G,CRH5G (EMU),CRH5G (电力动车)
 STR_NAME_CRH5GJT,CRH5G (Technology-Enhanced) (EMU),CRH5G (技术提升型) (电力动车)
 STR_NAME_CRH380A,CRH380A (EMU),CRH380A (电力动车)
 STR_NAME_CRH380AL,CRH380AL (Long Version) (EMU),CRH380AL (长编组) (电力动车)
+STR_NAME_CRH380AJ,CRH380AL (EMU) (Diagnostic Train),CRH380AJ (电力动车) (综合检测列车)
 STR_NAME_CRH380B,CRH380B (EMU),CRH380B (电力动车)
 STR_NAME_CRH380BL,CRH380BL (Long Version) (EMU),CRH380BL (长编组) (电力动车)
 STR_NAME_CRH380CL,CRH380CL (EMU),CRH380CL (电力动车)
@@ -408,6 +410,7 @@ STR_FULL_NAME_SL6,{BLACK}FULLNAME: {GOLD}ShengLi {BLACK}(Meaning: Victory) {GOLD
 STR_FULL_NAME_SY,{BLACK}FULLNAME: {GOLD}Shangyou {BLACK}(Meaning: Aiming High) {GOLD}Steam Locomotive,{BLACK}全称：{GOLD}上游型蒸汽机车
 STR_FULL_NAME_DF,{BLACK}FULLNAME: {GOLD}Dongfeng Diesel Locomotive,{BLACK}全称：{GOLD}东风型内燃机车
 STR_FULL_NAME_DF2,{BLACK}FULLNAME: {GOLD}Dongfeng Diesel 2 Locomotive,{BLACK}全称：{GOLD}东风2型内燃机车
+STR_FULL_NAME_DF3,{BLACK}FULLNAME: {GOLD}Dongfeng 3 Diesel Locomotive,{BLACK}全称：{GOLD}东风3型内燃机车
 STR_FULL_NAME_DF4,{BLACK}FULLNAME: {GOLD}Dongfeng 4 Diesel Locomotive,{BLACK}全称：{GOLD}东风4型内燃机车
 STR_FULL_NAME_DF4B,{BLACK}FULLNAME: {GOLD}Dongfeng 4B Diesel Locomotive,{BLACK}全称：{GOLD}东风4B型内燃机车
 STR_FULL_NAME_DF4C,{BLACK}FULLNAME: {GOLD}Dongfeng 4C Diesel Locomotive,{BLACK}全称：{GOLD}东风4C型内燃机车
@@ -701,10 +704,12 @@ STR_ORIGIN_SPEED, - Origin Speed, - 原始速度
 STR_310_KMH, - Max Speed 310 km/h, - 最高速度 310 km/h
 STR_350_KMH," - Max Speed 350 km/h, Running Costs Increase", - 最高速度 350 km/h，运营费用增加
 STR_380_KMH," - Max Speed 380 km/h, Running Costs Greatly Increase", - 最高速度 380 km/h，运营费用大幅增加
+STR_CRH380AJ_486_KMH, - Max Speed 452 km/h, - 最高速度 452 km/h
 STR_DJJ2_321_KMH, - {GOLD}321.5 km/h{BLACK}. Broke the Highest Speed Record of China's Railway on 27th Oct. 2002. Running Costs Greatly Increase, - {GOLD}321.5 km/h{BLACK}，2002年10月27日创下的当时中国铁路最高速。运营费用大幅增加
 STR_350_AVAILABLE,Refittable to Max Speed 350 km/h (Increasing running costs),可改装为最高速度 350 km/h，运营费用增加
 STR_350_380_AVAILABLE,Refittable to Max Speed 350 or 380 km/h (Increasing running costs),可改装为最高速度 350 或 380 km/h，运营费用增加
 STR_DJJ2_321_AVAILABLE,This train has broke the Highest Speed Record of China's Railway by {GOLD}321.5 km/h{BLACK} on 27th Oct. 2002. Refittable to this speed (Increasing running costs),这列车曾经在2002年10月27日创下了当时中国铁路的最高速321.5 km/h。可改装到这一速度，运营费用增加
+STR_CRH380AJ_AVAILABLE,Refittable to Max Speed 452 km/h ,可改装为最高速度 452 km/h
 # Livery,,
 STR_LV_PRE_GRAY,{GRAY} - Gray,{GRAY} - 灰色
 STR_LV_PRE_DETERIORATE,{BLACK} - Deteriorated,{BLACK} - 旧化

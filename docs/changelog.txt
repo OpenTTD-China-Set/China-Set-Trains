@@ -7,7 +7,7 @@ China Set: Trains Changelog
 
 0.3.4.177 (04/02/2025)
 --------------------
-Add: CR200JSG, CRH5G (Technology-Enhanced), Beijing Seires Locomotive, DF2, 25C Series
+Add: CR200JSG, CRH5G (Technology-Enhanced), Beijing Seires Locomotive, DF2, 25C Series, DF3, DJF1, CR380AJ
 
 0.3.3.176 (21/10/2024)
 --------------------

@@ -245,7 +245,7 @@ item (FEAT_TRAINS, hxn5, 5147) {}
 item (FEAT_TRAINS, hxn3, 5148) {}
 item (FEAT_TRAINS, hxn3qz, 5149) {}
 item (FEAT_TRAINS, dfh3, 5150) {}
-
+item (FEAT_TRAINS, df3, 5151) {}
 item (FEAT_TRAINS, beijing_passenger, 5152) {}
 item (FEAT_TRAINS, beijing_freight, 5153) {}
 item (FEAT_TRAINS, beijing_special, 5154) {}
@@ -354,7 +354,10 @@ item (FEAT_TRAINS, x2000, 9259) {}
 item (FEAT_TRAINS, cr400afae, 9260) {}
 item (FEAT_TRAINS, crh5e, 9261) {}
 item (FEAT_TRAINS, crh5gjt, 9262) {}
-item (FEAT_TRAINS, djf1, 9263) {}
+item (FEAT_TRAINS, crh380aj, 9263) {}
+item (FEAT_TRAINS, djf1, 9264) {}
+
+
 
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)

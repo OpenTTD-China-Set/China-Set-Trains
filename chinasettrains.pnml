@@ -197,6 +197,7 @@
 // Diesel
 #include "src/diesel/df.pnml"
 #include "src/diesel/df2.pnml"
+#include "src/diesel/df3.pnml"
 #include "src/diesel/df4h.pnml"
 #include "src/diesel/df4k.pnml"
 #include "src/diesel/df4bk.pnml"
@@ -304,6 +305,7 @@
 #include "src/25-emu/crh5gjt.pnml"
 #include "src/25-emu/crh380a.pnml"
 #include "src/25-emu/crh380al.pnml"
+#include "src/25-emu/crh380aj.pnml"
 #include "src/25-emu/crh380b.pnml"
 #include "src/25-emu/crh380bl.pnml"
 #include "src/25-emu/crh380cl.pnml"
