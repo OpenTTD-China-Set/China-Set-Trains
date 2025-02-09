@@ -107,7 +107,7 @@ switch (FEAT_TRAINS, SELF, switch_crh1a_head_capacity, position_in_articulated_v
 
 switch (FEAT_TRAINS, SELF, swtich_crh1a_cargo_subtype, cargo_subtype) {
     0: return string(STR_LATER);
-    1: return string(STR_PROTOTYPE);
+    1: return string(STR_EARLIER);
     return CB_RESULT_NO_TEXT;
 }
 

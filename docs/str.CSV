@@ -186,10 +186,13 @@ STR_NAME_DF4D7000,DF4D-7000 (Diesel),DF4D-7000 (内燃)
 STR_NAME_DF4E,DF4E (Diesel),DF4E (内燃)
 STR_NAME_DF5KZ,DF5 (Diesel Shunter),DF5 (内燃) (调车用)
 STR_NAME_DF5,DF5-1000 (Diesel Shunter),DF5-1000 (内燃) (调车用)
+STR_NAME_DF7D,DF7D (Diesel),DF7D (内燃)
+STR_NAME_DF7D3000,DF7D-3000 (Diesel),DF7D-3000 (内燃)
 STR_NAME_DF7G,DF7G (Diesel Shunter),DF7G (内燃) (调车用)
 STR_NAME_DF7G5000,DF7G-5000 (Diesel Shunter),DF7G-5000 (内燃) (调车用)
 STR_NAME_DF7G8000,DF7G-8000 (Diesel Shunter),DF7G-8000 (内燃) (调车用)
 STR_NAME_DF8B,DF8B (Diesel),DF8B (内燃)
+STR_NAME_DF9,DF9 (Diesel),DF9 (内燃)
 STR_NAME_DF11,DF11 (Diesel),DF11 (内燃)
 STR_NAME_DF11G,DF11G (Diesel),DF11G (内燃)
 STR_NAME_DF11Z,DF11Z (Diesel),DF11Z (内燃)
@@ -399,10 +402,13 @@ STR_FULL_NAME_DF4DF,{BLACK}FULLNAME: {GOLD}Dongfeng 4DF Diesel Locomotive,{BLACK
 STR_FULL_NAME_DF4E,{BLACK}FULLNAME: {GOLD}Dongfeng 4E Diesel Locomotive,{BLACK}全称：{GOLD}东风4E型内燃机车
 STR_FULL_NAME_DF5KZ,{BLACK}FULLNAME: {GOLD}Dongfeng 5 Diesel Locomotive ,{BLACK}全称：{GOLD}东风5型内燃机车
 STR_FULL_NAME_DF5,{BLACK}FULLNAME: {GOLD}Dongfeng 5 Diesel Locomotive 1000 Series,{BLACK}全称：{GOLD}东风5型内燃机车1000系
+STR_FULL_NAME_DF7D,"{BLACK}FULLNAME: {GOLD}Dongfeng 7D Diesel Locomotive{}{BLACK}Livery Availability: {GOLD}Orange Livery, Green Livery",{BLACK}全称：{GOLD}东风7D型内燃机车{}{BLACK}可选择的涂装：{GOLD}橘色涂装，绿色涂装
+STR_FULL_NAME_DF7D3000,"{BLACK}FULLNAME: {GOLD}Dongfeng 7D Diesel Locomotive 3000 Series{}{BLACK}Livery Availability: {GOLD}Orange Livery, Green Livery, Double Cab Livery",{BLACK}全称：{GOLD}东风7D型内燃机车3000系{}{BLACK}可选择的涂装：{GOLD}橘色涂装，绿色涂装，双司机室
 STR_FULL_NAME_DF7G,{BLACK}FULLNAME: {GOLD}Dongfeng 7G Diesel Locomotive,{BLACK}全称：{GOLD}东风7G型内燃机车
 STR_FULL_NAME_DF7G5000,{BLACK}FULLNAME: {GOLD}Dongfeng 7G Diesel Locomotive 5000 Series,{BLACK}全称：{GOLD}东风7G型内燃机车5000系
 STR_FULL_NAME_DF7G8000,{BLACK}FULLNAME: {GOLD}Dongfeng 7G Diesel Locomotive 8000 Series,{BLACK}全称：{GOLD}东风7G型内燃机车8000系
 STR_FULL_NAME_DF8B,{BLACK}FULLNAME: {GOLD}Dongfeng 8B Diesel Locomotive,{BLACK}全称：{GOLD}东风8B型内燃机车
+STR_FULL_NAME_DF9,"{BLACK}FULLNAME: {GOLD}Dongfeng 9 Diesel Locomotive{}{BLACK}Livery Availability: {GOLD}Blue Livery, Red Livery, Light Blue Livery",{BLACK}全称：{GOLD}东风9型内燃机车{}{BLACK}可选择的涂装：{GOLD}蓝色涂装，红色涂装，浅蓝色涂装
 STR_FULL_NAME_DF11,{BLACK}FULLNAME: {GOLD}Dongfeng 11 Diesel Locomotive,{BLACK}全称：{GOLD}东风11型内燃机车
 STR_FULL_NAME_DF11G,{BLACK}FULLNAME: {BLUE}Dongfeng 11G {WHITE}Diesel Locomotive,{BLACK}全称：{BLUE}东风11G型{WHITE}内燃机车
 STR_FULL_NAME_DF11Z,{BLACK}FULLNAME: {GOLD}Dongfeng 11Z Diesel Locomotive,{BLACK}全称：{GOLD}东风11Z型内燃机车
@@ -450,6 +456,7 @@ STR_SL_SERIES,ShengLi Series (Steam Locomotive),胜利系列 (蒸汽机车)
 STR_DF4_SERIES,DF4 Series (Diesel Locomotive),DF4系列 (内燃机车)
 STR_DF4D_SERIES,DF4D Series (Diesel Locomotive),DF4D系列 (内燃机车)
 STR_DF5_SERIES,DF5 Series (Diesel Locomotive),DF5系列 (内燃机车)
+STR_DF7D_SERIES,DF7D Series (Diesel Locomotive),DF7D系列 (内燃机车)
 STR_DF7G_SERIES,DF7G Series (Diesel Locomotive),DF7G系列 (内燃机车)
 STR_SS4_SERIES,SS4 Series (Electric Locomotive),SS4系列 (电力机车)
 STR_SS6_SERIES,SS6 Series (Electric Locomotive),SS6系列 (电力机车)
@@ -626,7 +633,7 @@ STR_HXD3D_NICKNAME,{BLACK}Nickname: {GOLD}Tomato,{BLACK}昵称：{GOLD}番茄
 STR_NDJ3_NICKNAME,{BLACK}Nickname: {WHITE}White Pig,{BLACK}昵称：{WHITE}大白猪
 STR_CR200J_NICKNAME,"{BLACK}Nickname: {GREEN}""Hulk"" {GOLD}(Official), {GREEN}""Trash Bin"" {GOLD}(Folk)",{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方)，{GREEN}“垃圾桶”{GOLD}(民间)
 STR_CR200JC_NICKNAME,"{BLACK}Nickname: {GREEN}""AD Bin"" {GOLD}(Folk)",{BLACK}昵称：{RED}“A{WHITE}D{GREEN}桶”{GOLD}(民间)
-STR_CRH1A_NICKNAME,{BLACK}Nickname: {GOLD}Metro ,{BLACK}昵称：{GOLD}地铁
+STR_CRH1A_NICKNAME,"{BLACK}Nickname: {GOLD}Metro {}{BLACK}Livery Availability: {GOLD}Early Livery, Current Livery",{BLACK}昵称：{GOLD}地铁{}{BLACK}可选涂装：{GOLD}早期涂装、现行涂装
 STR_CRH1B_NICKNAME,{BLACK}Nickname: {GOLD}Long Metro ,{BLACK}昵称：{GOLD}长地铁
 STR_CRH1E_NICKNAME,{BLACK}Nickname: {GOLD}Sleeping Metro ,{BLACK}昵称：{GOLD}睡地铁
 STR_CRH1AA_NICKNAME,{BLACK}Nickname: {GOLD}Cute Metro ,{BLACK}昵称：{GOLD}萌地铁
@@ -638,7 +645,7 @@ STR_CRH2G_NICKNAME,{BLACK}Nickname: {GOLD}Advanced Black Face,{BLACK}昵称：{G
 STR_CJ1_NICKNAME,{BLACK}Nickname: {GOLD}Toy Car,{BLACK}昵称：{GOLD}玩具车
 STR_CRH3A_NICKNAME,{BLACK}Nickname: {GOLD}Golden Eyes,{BLACK}昵称：{GOLD}黄金眼
 STR_CRH3C_NICKNAME,{BLACK}Nickname: {GOLD}Rabbit,{BLACK}昵称：{GOLD}兔子
-STR_CRH5A_NICKNAME,{BLACK}Nickname: {GOLD}Donkey,{BLACK}昵称：{GOLD}驴
+STR_CRH5A_NICKNAME,"{BLACK}Nickname: {GOLD}Donkey {}{BLACK}Livery Availability: {GOLD}Early Livery, Current Livery",{BLACK}昵称：{GOLD}驴 {}{BLACK}可选涂装：{GOLD}早期涂装、现行涂装
 STR_CRH6F_NICKNAME,{BLACK}Nickname: {GOLD}Real Metro,{BLACK}昵称：{GOLD}真地铁
 STR_CRH380A_NICKNAME,{BLACK}Nickname: {GOLD}Big Rat,{BLACK}昵称：{GOLD}大老鼠
 STR_CRH380B_NICKNAME,{BLACK}Nickname: {GOLD}Crazy Rabbit,{BLACK}昵称：{GOLD}疯兔子
@@ -723,6 +730,7 @@ STR_SHENHUA,{BLACK} - {GOLD}Shenhua Groups Livery,{BLACK} - {GOLD}神华集团�
 STR_GUONENG,{BLACK} - {GOLD}CHN Energy Livery,{BLACK} - {GOLD}国家能源集团涂装
 STR_CHN2LAOS,{BLACK} - {GOLD}China-Laos Railway Livery,{BLACK} - {GOLD}中老铁路涂装
 STR_WUJING,"{BLACK} - {GOLD}""Armed Police""Livery",{BLACK} - {GOLD}“武警”涂装
+STR_DOUBLE_CAB,{BLACK} - {GOLD}Locomotive with Double Cab,{BLACK} - {GOLD}改装为两端司机室
 STR_DFH7,{BLACK} - DFH7,
 STR_DFH7B,{BLACK} - DFH7B,
 STR_HXD_F,{BLACK} - HXD{COMMA}F,
