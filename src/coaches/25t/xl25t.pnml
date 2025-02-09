@@ -26,7 +26,7 @@ spriteset (spriteset_bspxl25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/bspxl25t-green")
 }
 spriteset (spriteset_xl25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t/xl25t-xz-1")
+    template_standard ("coaches", "25t/xl25t-xz")
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25t_articulated_part, extra_callback_info1) {

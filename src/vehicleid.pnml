@@ -146,7 +146,14 @@ item (FEAT_TRAINS, rz225c, 2142) {}
 item (FEAT_TRAINS, rz125c, 2143) {}
 item (FEAT_TRAINS, ca25c, 2144) {}
 item (FEAT_TRAINS, kd25c, 2145) {}
-
+item (FEAT_TRAINS, syz25, 2146) {}
+item (FEAT_TRAINS, srz25, 2147) {}
+item (FEAT_TRAINS, yz25sm, 2148) {}
+item (FEAT_TRAINS, rz25sm, 2149) {}
+item (FEAT_TRAINS, yw25sm, 2150) {}
+item (FEAT_TRAINS, rw25sm, 2151) {}
+item (FEAT_TRAINS, ca25sm, 2152) {}
+item (FEAT_TRAINS, kd25sm, 2153) {}
 
 item (FEAT_TRAINS, luggageroom_s25, 3070) {}
 item (FEAT_TRAINS, luggageroom_25, 3071) {}

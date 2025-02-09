@@ -20,10 +20,10 @@ spriteset (spriteset_yW25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/yw25t-green")
 }
 spriteset (spriteset_yw25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t/yw25t-xz-1")
+    template_standard ("coaches", "25t/yw25t-xz")
 }
 spriteset (spriteset_bspyw25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t/bspyw25t-xz-1")
+    template_standard ("coaches", "25t/bspyw25t-xz")
 }
 
 

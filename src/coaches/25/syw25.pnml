@@ -7,12 +7,12 @@ switch (FEAT_TRAINS, SELF, switch_syw25_name, getbits(extra_callback_info1, 0, 8
 
 // Purchase Menu
 spriteset (spriteset_syw25_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches","syw25")
+    template_purchase ("coaches/25","syw25")
 }
 
 // Vehicle
 spriteset (spriteset_syw25_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches","syw25")
+    template_standard ("coaches/25","syw25")
 }
 
 switch (FEAT_TRAINS, SELF, switch_syw25_articulated_part, extra_callback_info1) {
@@ -37,6 +37,7 @@ item (FEAT_TRAINS, syw25) {
         name:                           string(STR_NAME_SYW25);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					syz25;
  
 
         // Availability

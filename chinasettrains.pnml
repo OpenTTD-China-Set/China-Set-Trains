@@ -58,6 +58,10 @@
 #include "src/coaches/25/ca25ml.pnml"
 #include "src/coaches/25/rw25ml.pnml"
 #include "src/coaches/25/yw25ml.pnml"
+#include "src/coaches/25/syz25.pnml"
+#include "src/coaches/25/srz25.pnml"
+#include "src/coaches/25/syw25.pnml"
+#include "src/coaches/25/srw25.pnml"
 #include "src/coaches/25/tz2.pnml"
 
 #include "src/coaches/25b/yz25b.pnml"
@@ -129,8 +133,6 @@
 #include "src/coaches/25z/srz125z.pnml"
 #include "src/coaches/25z/sca25z.pnml"
 #include "src/coaches/25z/srzxl25z.pnml"
-#include "src/coaches/25z/syw25.pnml"
-#include "src/coaches/25z/srw25.pnml"
 #include "src/coaches/25z/kd25z.pnml"
 
 #include "src/coaches/25dt/yz25dt_jinlun.pnml"

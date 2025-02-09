@@ -27,10 +27,10 @@ spriteset (spriteset_bsprw25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/bsprw25t-green")
 }
 spriteset (spriteset_rw25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t/rw25t-xz-1")
+    template_standard ("coaches", "25t/rw25t-xz")
 }
 spriteset (spriteset_bsprw25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t/bsprw25t-xz-1")
+    template_standard ("coaches", "25t/bsprw25t-xz")
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw25t_articulated_part, extra_callback_info1) {

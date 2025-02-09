@@ -8,7 +8,7 @@ China Set: Trains Changelog
 0.3.4.178 (08/02/2025)
 --------------------
 Fix #56: purchase te coefficient of CRH2A/B errors
-Add：CRH2A-4020
+Add：CRH2A-4020, SYZ25, SRZ25
 
 0.3.4.177 (07/02/2025)
 --------------------

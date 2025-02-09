@@ -9,15 +9,15 @@ switch (FEAT_TRAINS, SELF, switch_ca25ml_name, getbits(extra_callback_info1, 0, 
 
 // Purchase Menu
 spriteset (spriteset_ca25ml_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "ca25ml-green")
+    template_purchase ("coaches/25", "ca25ml-green")
 }
 
 // Vehicle
 spriteset (spriteset_ca25ml_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "ca25ml-green")
+    template_standard ("coaches/25", "ca25ml-green")
 }
 spriteset (spriteset_ca25ml_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "ca25ml-red")
+    template_standard ("coaches/25", "ca25ml-red")
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca25ml_articulated_part, extra_callback_info1) {

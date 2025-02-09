@@ -1,5 +1,5 @@
 ﻿name,,Coder,Artist,Livery Artist
-CR200J1,,JF*Recoded by Babel,Babel,
+CR200J1,,JF*Recoded by Babel,Babel,prototype:EMB
 CRH2C,,JF*Recoded by Babel,Babel,
 CR200J-B,,JF*Recoded by Babel,Babel,
 CRH3A,,JF*Recoded by Babel,Qipaoxian,
@@ -11,7 +11,6 @@ CRH2G,,JF*Recoded by Babel,"Qipaoxian,Babel",
 CRH380CL,,JF,Qipaoxian,
 CRH6A2,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
 CRH6A3,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
-,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
 CRH6A-A,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
 CRH6F,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
 CRH380A,,Babel,"Qipaoxian,Babel",
@@ -38,7 +37,10 @@ CR400AFAE,,Babel,"Qipaoxian,Haiyan",
 CRH5A,,JF*Recoded by Babel,"Qipaoxian,Babel",
 CRH5GJT,,,Qipaoxian,
 CRH5E,,Babel,Qipaoxian,
-CR200JSG,,"JiaoJie,Babel","JiaoJie,EMB,Babel",
+CR200JSG,,"5033,Babel","5033,EMB,Babel",
+CRH380AJ,,"5033,Babel","Qipaoxian,Haiyan",
+DJF1,,Babel,Qipaoxian,
+CRH2A4020,,Babel,Babel,
 JF1,jf1,JF,EMB,
 Mikai,,,,
 SL6,sl6,JF,EMB,
@@ -97,7 +99,6 @@ HXD11000,hxd11000,wuwu,"DF43110,Babel",
 HXD1F,hxd1f,wuwu,DF43110,
 DF4E,df4e,wuwu,wuwu,
 SS1,ss1,wuwu,mikhail,
-DF4BNB,df4bnb,wuwu,Mikhail,"wuwu, DF43110"
 SS7D,ss7d,wuwu,wuwu,
 SS9,ss9,wuwu,wuwu,
 SS9G,ss9g,wuwu,wuwu,
@@ -112,7 +113,9 @@ SS4B,,wuwu,NACHN,
 SS4C,,wuwu,wuwu,
 DFH3,dfh3,wuwu,EMB,
 BEIJING Series,,Babel,EMB,EMB
-DF2,,Babel,EMB
+DF2,,Babel,EMB,
+DF11Plateau,,Babel,"NACHN,EMB",
+DF3,,5033,EMB,
 C64,,JF,Babel,
 P62,,JF,Babel,
 G60,,JF,Babel,Other Colaor: Sunjuzhensun
@@ -221,7 +224,7 @@ YW22AIRCON,yw22aircon,wuwu,Haiyan,
 RW22AIRCON,rw22aircon,wuwu,Haiyan,
 CA23AIRCON,ca23aircon,wuwu,Haiyan,
 CA23,ca23,wuwu,Haiyan,
-TZ,tz,wuwu,Haiyan,
+TZ,tz,wuwu,Haiyan,Haiyan
 YZ25DT-JINLUN,rw25dt-jinlun,wuwu,EMB,
 YW25DT-JINLUN,rw25dt-jinlun,wuwu,EMB,
 RW25DT-JINLUN,rw25dt-jinlun,wuwu,EMB,
@@ -245,3 +248,8 @@ UZ25K,,Babel,Haiyan,
 SRZX125Z,srzxl25z,Babel,wuwu,
 UZ25B,,Babel,Haiyan,
 CA25B,,Babel,Haiyan,
+RZ125C,,Babel,Haiyan,
+RZ225C,,Babel,Haiyan,
+CA25C,,Babel,Haiyan,
+SYZ25,,Babel,Haiyan,
+SRZ25,,Babel,Haiyan,
