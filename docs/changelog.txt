@@ -5,10 +5,12 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
-0.3.4.178 (08/02/2025)
+0.3.4.178 (10/02/2025)
 --------------------
 Fix #56: purchase te coefficient of CRH2A/B errors
+Fix #57: RW25K can't depend "Gazu" Green Livery by year atoumatically 
 Add：CRH2A-4020, SYZ25, SRZ25, 25 Series(Sanshui-Maoming Railway)
+Add LIveries: RW25K (Internatinal Transport), RW25T&YW25T (Internatinal Transport), 25G Series (GMS)
 
 0.3.4.177 (07/02/2025)
 --------------------

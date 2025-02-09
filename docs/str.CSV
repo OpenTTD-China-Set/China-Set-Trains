@@ -802,6 +802,7 @@ STR_XIZI_BUILD_YEAR,"{BLACK} - ""Xizi"" (According to build year)","{BLACK} - ""
 STR_HEJIU,{BLACK} - Hefei-Jiujiang Railway Livery,{BLACK} - 合九铁路涂装
 STR_GYR,{BLACK} - GUangxi Yanhai Raiway,{BLACK} - 广西沿海铁路涂装
 STR_GMSR,{BLACK} - Guangzhou-Meizhou-Shantou Railway Livery,{BLACK} - 广梅汕铁路涂装
+STR_GMSR_EARLY,{BLACK} - Guangzhou-Meizhou-Shantou Railway Early Livery,{BLACK} - 广梅汕铁路早期涂装
 STR_GUANGSHEN,{BLACK} - Guangzhou-Shenzhen Railway Livery,{BLACK} - 广深铁路涂装
 STR_GUANGSHEN_CHANGKE_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 1st)",{BLACK} - 广深铁路（长春客车厂一批次）涂装
 STR_GUANGSHEN_CHANGKE_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 2nd)",{BLACK} - 广深铁路（长春客车厂二批次）涂装
@@ -812,6 +813,7 @@ STR_GUANGSHEN_PUZHEN_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Puzhen Rail
 STR_GUANGSHEN_GREEN,{BLACK} - {DKGREEN}Guangzhou-Shenzhen Railway Green {BLACK}Livery,{BLACK} - {DKGREEN}广深铁路刷绿绿涂装
 STR_JINWEN,{BLACK} - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLACK}Company,{BLACK} - {WHITE}金{RED}温{BLUE}铁{WHITE}路{BLACK}公司
 STR_JINWEN_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of Jinhua-Wenzhou Railway Company",{BLACK} - 金温铁路涂装的{DKGREEN}刷绿版本
+STR_XIYAN,{BLACK} - Xi'Aan-Yan'an Railway Livery,{BLACK} - 西延铁路涂装
 STR_NANHU,"{BLACK} - {RED}""South Lake - 1921"" {BLACK}Tourist Train","{BLACK} - {RED}""南湖-1921"" {BLACK}旅游列车"
 STR_GAOZU_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}(unfinished except 25T)","{BLACK} - {DKGREEN}""高阻绿"" {BLACK}"
 STR_GAOZU_GREEN_BSP,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of BSP25T","{BLACK} - BSP25T 的{DKGREEN}""高阻绿"" {BLACK}涂装"
@@ -840,6 +842,12 @@ STR_JINSHAN,{BLACK} - Shanghai-Jinshan Livery,{BLACK} - 金山铁路涂装
 STR_GUANGQING,{BLACK} - Guangzhou-Qingyuan Livery,{BLACK} - 广清城际涂装
 STR_FOSHAN,{BLACK} - Foshan Livery,{BLACK} - 佛肇城际涂装
 STR_XIAOYONG,{BLACK} - Xiaoshan/Hangzhou-Ningbo Livery,{BLACK} - 萧甬铁路涂装
+STR_INTERNATIONAL,{BLACK} - International Transport Livery,{BLACK} - 国际联运涂装
+STR_INTERNATIONAL_USSR,{BLACK} - International Transport With Soviet Union Livery,{BLACK} - 对苏国际联运涂装
+STR_INTERNATIONAL_RU,{BLACK} - International Transport With Russia Livery,{BLACK} - 对俄国际联运涂装
+STR_INTERNATIONAL_MN,{BLACK} - International Transport With Mongolia Livery,{BLACK} - 对蒙国际联运涂装
+STR_INTERNATIONAL_DPRK,{BLACK} - International Transport With DPRK Livery,{BLACK} - 对朝国际联运涂装
+STR_INTERNATIONAL_VN,{BLACK} - International Transport With Vietnam Livery,{BLACK} - 对越国际联运涂装
 STR_ASIAGAME,{BLACK} - {PURPLE}The 19th Asian Games Hangzhou {BLACK}Livery,"{BLACK} - {PURPLE}杭州亚运会""润泽江南""{BLACK}涂装"
 STR_WINTER_OLYMPIC,{BLACK} - {LTBLUE}The XXIV Olympic Winter Games {BLACK}Livery,"{BLACK} - {LTBLUE}北京冬奥会""瑞雪迎春""{BLACK}涂装"
 STR_HXD3D1893,"{BLACK}{RED} - HXD3D-1893 {GOLD}""Mao Zedong""","{BLACK}{RED} - HXD3D-1893 {GOLD}""毛泽东号"""
