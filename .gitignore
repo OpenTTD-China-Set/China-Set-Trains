@@ -3,9 +3,6 @@
 *.grf
 *.nml
 *.tar
-~$*
-chinasettrains-*
 custom_tags.txt
 gfx/**/*.png
-change*.py
 *.lng
