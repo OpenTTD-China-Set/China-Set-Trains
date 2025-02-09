@@ -346,7 +346,7 @@ STR_FULL_NAME_YZ25SM,{BLACK}FULLNAME: {GOLD}Type 25 Sanshui-Maoming Raiway Hard 
 STR_FULL_NAME_RZ25SM,{BLACK}FULLNAME: {GOLD}Type 25 Sanshui-Maoming Raiway Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25型三茂铁路软座客车
 STR_FULL_NAME_YW25SM,{BLACK}FULLNAME: {GOLD}Type 25 Sanshui-Maoming Raiway Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25型三茂铁路硬卧客车
 STR_FULL_NAME_RW25SM,{BLACK}FULLNAME: {GOLD}Type 25 Sanshui-Maoming Raiway Soft Sleeper Passenger Coach,{BLACK}全称：{GOLD}25型三茂铁路软卧客车
-STR_FULL_NAME_CA25Sm,{BLACK}FULLNAME: {GOLD}Type 25 Sanshui-Maoming Raiway Restaurant Car,{BLACK}全称：{GOLD}25型三茂铁路餐车
+STR_FULL_NAME_CA25SM,{BLACK}FULLNAME: {GOLD}Type 25 Sanshui-Maoming Raiway Restaurant Car,{BLACK}全称：{GOLD}25型三茂铁路餐车
 STR_FULL_NAME_SYZ25,{BLACK}FULLNAME: {GOLD}Type 25 Double Decker Hard Seat Passenger Coach,{BLACK}全称：{GOLD}25型双层硬座客车
 STR_FULL_NAME_SRZ25,{BLACK}FULLNAME: {GOLD}Type 25 Double Decker Soft Seat Passenger Coach,{BLACK}全称：{GOLD}25型双层软座客车
 STR_FULL_NAME_SYW25,{BLACK}FULLNAME: {GOLD}Type 25 Double Decker Hard Sleeper Passenger Coach,{BLACK}全称：{GOLD}25型双层硬座客车
