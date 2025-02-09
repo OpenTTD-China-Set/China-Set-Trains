@@ -31,11 +31,17 @@ spriteset (spriteset_rz125z_guangzhou_changke_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32B
 spriteset (spriteset_rz125z_guangzhou_changke_b, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25z", "rz125z-guangzhou-changke-b")
 }
+spriteset (spriteset_rz125z_guangzhou_changke_skirts, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25z", "rz125z-guangzhou-changke-skirts")
+}
 spriteset (spriteset_rz125z_guangzhou_sifang_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25z", "rz125z-guangzhou-sifang-a")
 }
 spriteset (spriteset_rz125z_guangzhou_sifang_b, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25z", "rz125z-guangzhou-sifang-b")
+}
+spriteset (spriteset_rz125z_guangzhou_sifang_skirts, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25z", "rz125z-guangzhou-sifang-skirts")
 }
 /* spriteset (spriteset_rz125z_guangzhou_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25z", "rz125z-guangzhou-green")

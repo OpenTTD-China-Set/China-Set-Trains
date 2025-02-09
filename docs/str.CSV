@@ -796,6 +796,7 @@ STR_URUMQI,{BLACK} - Urumqi Railway Bureau,{BLACK} - 乌鲁木齐铁路局
 STR_XIAN,{BLACK} - Xi'an Railway Bureau,{BLACK} - 西安铁路局
 STR_SHENYANG,{BLACK} - Shenyang Railway Bureau,{BLACK} - 沈阳铁路局
 STR_XIANXING,{BLACK} - Xianxing (Pioneer) Livery,{BLACK} - 先行号涂装
+STR_FULONG,{BLACK} - Fulong Company Livery,{BLACK} - 福龙公司涂装
 STR_XIZI,"{BLACK} - ""Xizi"" Livery","{BLACK} - {LTBLUE}""西子号""{BLACK}涂装"
 STR_XIZI_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of ""Xizi"" Train","{BLACK} - {DKGREEN}""西子号""的刷绿{BLACK}涂装"
 STR_XIZI_BUILD_YEAR,"{BLACK} - ""Xizi"" (According to build year)","{BLACK} - ""西子号""（根据建造年份选择涂装）"
