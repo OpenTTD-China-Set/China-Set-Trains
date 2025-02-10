@@ -4,7 +4,7 @@ STR_GRF_DESC,The Train sector of the China Set of OpenTTD.,OpenTTD中国包的�
 STR_GRF_URL,https://www.tt-forums.net/viewtopic.php?t=91092,
 STR_GRF_DESC_EXTRA,"Locomotives, MUs, Coaches and Wagons in China Mainland. More contents in the future.",中国大陆的火车，包括机车、动车组、车厢。未来会有更多内容。{RED}在游戏中更新NewGRF时请注意最低兼容版本！请不要强行更新！
 STR_GRF_DESC_README,See readme for details.,更多信息请查看Readme。
-STR_LEAPING_LIU_NEVER_DIES,{BLUE}Leaping Liu Never Dies.,{BLUE}跨越不死，曙光永生
+STR_LEAPING_LIU_NEVER_DIES,{BLUE}The people's railway for the people,{BLUE}人民铁路为人民
 STR_PARAM_LOADING_SPEED,Loading speed,装载速度
 STR_PARAM_LOADING_SPEED_DESC,Adjust vehicle loading speed. Default is 100%.,调整车辆装载速度。默认为100%。
 STR_PARAM_PURCHASE_COST,Purchase costs,购买费用
@@ -252,6 +252,8 @@ STR_NAME_CR200JAL,CR200J-A (Long Version) (EMU),CR200J-A (长编组) (电力动�
 STR_NAME_CR200JB,CR200J-B (EMU),CR200J-B (电力动车)
 STR_NAME_CR200JC,CR200J-C (EMU),CR200J-C (电力动车)
 STR_NAME_CR200JCL,CR200J-C (Long Version) (EMU),CR200J-C (长编组) (电力动车)
+STR_NAME_CR200JSG_ELECTRIC,CR200JS-G (Hybrid MU) (Electric-side),CR200JS-G (双源动车) (电力端)
+STR_NAME_CR200JSG_DIESEL,CR200JS-G (Hybrid MU) (Diesel-side),CR200JS-G (双源动车) (内燃端)
 STR_NAME_CRH1A,CRH1A (EMU),CRH1A (电力动车)
 STR_NAME_CRH1B,CRH1B (Long Version) (EMU),CRH1B (电力动车)
 STR_NAME_CRH1E,CRH1E (EMU),CRH1E (电力动车)
@@ -632,7 +634,8 @@ STR_HXD3C_NICKNAME,{BLACK}Nickname: {GOLD}Electric Baboon,{BLACK}昵称：{GOLD}
 STR_HXD3D_NICKNAME,{BLACK}Nickname: {GOLD}Tomato,{BLACK}昵称：{GOLD}番茄
 STR_NDJ3_NICKNAME,{BLACK}Nickname: {WHITE}White Pig,{BLACK}昵称：{WHITE}大白猪
 STR_CR200J_NICKNAME,"{BLACK}Nickname: {GREEN}""Hulk"" {GOLD}(Official), {GREEN}""Trash Bin"" {GOLD}(Folk)",{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方)，{GREEN}“垃圾桶”{GOLD}(民间)
-STR_CR200JC_NICKNAME,"{BLACK}Nickname: {GREEN}""AD Bin"" {GOLD}(Folk)",{BLACK}昵称：{RED}“A{WHITE}D{GREEN}桶”{GOLD}(民间)
+STR_CR200JSG_NICKNAME,"{BLACK}Nickname: {GREEN}""Dual-Powerd Bin"" {GOLD}(Folk)",{BLACK}昵称：{GREEN}“双源桶”{GOLD}(民间)
+STR_CR200JC_NICKNAME,"{BLACK}Nickname: {RED}""A{WHITE}D {GREEN}Bin"" {GOLD}(Folk)",{BLACK}昵称：{RED}“A{WHITE}D{GREEN}桶”{GOLD}(民间)
 STR_CRH1A_NICKNAME,"{BLACK}Nickname: {GOLD}Metro {}{BLACK}Livery Availability: {GOLD}Early Livery, Current Livery",{BLACK}昵称：{GOLD}地铁{}{BLACK}可选涂装：{GOLD}早期涂装、现行涂装
 STR_CRH1B_NICKNAME,{BLACK}Nickname: {GOLD}Long Metro ,{BLACK}昵称：{GOLD}长地铁
 STR_CRH1E_NICKNAME,{BLACK}Nickname: {GOLD}Sleeping Metro ,{BLACK}昵称：{GOLD}睡地铁
@@ -862,6 +865,7 @@ STR_CR400_Z_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 8-car standard cons
 STR_CR400_AB_Z_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with 16-car standard consist 2*(T-M-T-M-M-T-M-T). {RED}Intelligent {YELLOW}EMUs {GOLD}have lower running costs,{BLACK}构成：{GOLD}4-24节；16 节标准编组时为 2*(T-M-T-M-M-T-M-T)。智能动车运行费用更低
 STR_CR200J_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, with wagons attached; or one section at front, another section at back. Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：动力车头部一节，或头尾各一节；当有两辆机车时节数超过11将重联运行
 STR_CR200JL_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; One section at front, another section at back.",{BLACK}构成：{GOLD}4-24节：动力车头尾各一节
+STR_CR200JSG_CONSIST,"{BLACK}Consist: {GOLD}4 to 15cars; Electric-side or Diesel-side at front, another section at back.",{BLACK}构成：{GOLD}4-15节：电力或内燃端一端在前，另一端在后
 STR_CRH1A_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节：其中8节标准编组为5M3T。大于12节时以重联方式运行
 STR_CRH1B_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars",{BLACK}构成：{GOLD}4-24节：其中8节标准编组为5M3T，16节标准编组为10M6T
 STR_CRH1E_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars",{BLACK}构成：{GOLD}4-24节：其中8节标准编组为5M3T，16节标准编组为10M6T
