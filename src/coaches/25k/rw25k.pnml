@@ -31,6 +31,9 @@ spriteset (spriteset_rw25k_gmsr, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_rw25k_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25k", "rw25k-guangshen")
 }
+spriteset (spriteset_rw25k_lakeblue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "rw25k-lakeblue")
+}
 spriteset (spriteset_rw25k_int_vn, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25k", "rw25k-int-vn")
 }
@@ -41,7 +44,8 @@ switch (FEAT_TRAINS, SELF, switch_rw25k_cargo_subtype, cargo_subtype) {
     2: return string(STR_GAOZU_GREEN);
     3: return string(STR_GMSR);
     4: return string(STR_GUANGSHEN);
-    5: return string(STR_INTERNATIONAL_VN);
+    5: return string(STR_LAKEBLUE);
+    6: return string(STR_INTERNATIONAL_VN);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -60,7 +64,8 @@ switch (FEAT_TRAINS, SELF, switch_rw25k_graphics_subtype, cargo_subtype) {
     2: spriteset_rw25k_green;
     3: spriteset_rw25k_gmsr;
     4: spriteset_rw25k_guangshen;
-    5: spriteset_rw25k_int_vn;
+    5: spriteset_rw25k_lakeblue;
+    6: spriteset_rw25k_int_vn;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw25k_graphics, position_in_articulated_veh % 3) {

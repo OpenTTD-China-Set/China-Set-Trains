@@ -535,8 +535,7 @@ STR_25G_SERIES,Type 25G Series Coaches,25G型客车
 STR_25Z_SERIES,Type 25Z Series Coaches,25Z型客车
 STR_S25Z_SERIES,Type S25Z Series Coaches ,S25Z型双层客车
 STR_25K_SERIES,Type 25K Series Coaches,25K型客车
-STR_S25KLD_SERIES,Type S25K Series Coaches (Low-Door),S25K型双层客车 (低开门)
-STR_S25KHD_SERIES,Type S25K Series Coaches (High-Door),S25K型双层客车 (高开门)
+STR_S25K_SERIES,Type S25K Series Coaches,S25K型双层客车
 STR_25T_SERIES,Type 25T Series Coaches,25T型客车
 STR_25DT_JINLUN_SERIES,NZJ2 JINLUN DMU Wagons,"NZJ2 ""金轮号""动车组拖车"
 STR_MU_WAGON,MU Wagons,动车组车厢
@@ -590,8 +589,6 @@ STR_22AIRCON_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Beijing-Shan
 STR_22B_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery,{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装
 STR_RW25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_XL25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
-STR_S25BLD_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {ORANGE}Orange-{YELLOW}Yellow {GOLD}Livery, deteriorated, with strengthening steel sheet, Urumqi, Xianxing (All low-door, higher loading speed, 120 km/h)",{BLACK}可供选择的涂装：{ORANGE}橙{YELLOW}黄{GOLD}相间涂装，老化版，加强筋版，乌鲁木齐局，先行号 (均为低开门，装载较快，120 km/h)
-STR_S25BHD_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}deteriorated, Shenyang (All high-door, lower loading speed, 140 km/h)",{BLACK}可供选择的涂装：{GOLD}老化涂装，沈阳铁路局 (均为高开门，装载较慢，140 km/h)
 STR_YZ_YW25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Only Made in China), {DKGREEN}""Gaozu Lv"" Green Livery (Only Made in China),  Qinghai-Tibet Railway Grenn Livery (Both have Made in China and Made by BSP)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (仅国产)，{DKGREEN}青藏铁路涂装 (国产和BSP版本)，""高祖绿""涂装 (仅国产)，{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)"
 STR_RZ25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Both have Made in China and Made by BSP), {DKGREEN}""Gaozu Lv"" Green Livery (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Grenn Livery (Only Made in China),{WHITE} Guangzhou-Kowloon Railway Livery {DKGREEN}(And its ""Gaozu Lv"" Green version)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (仅国产)，""高祖绿""涂装 (国产和BSP版本)，{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)"
 STR_RW25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Both have Made in China and Made by BSP), {DKGREEN}""Gaozu Lv"" Green Livery (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Grenn Livery (Also Both have Made in China and Made by BSP)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (国产和BSP版本)，""高祖绿""涂装 (国产和BSP版本)"
@@ -794,6 +791,8 @@ STR_JITONG,{BLACK} - {BLUE}Ji'ning{RED}-{WHITE}Tongliao {BLUE}Railway {BLACK}Liv
 STR_LUCHAOGANG,{BLACK} - {LTBLUE}Shanghai-Luchaogang {BLACK}Livery,{BLACK} - {LTBLUE}沪芦列车{BLACK}涂装
 STR_LIAODONG,{BLACK} - Liaodong Peninsula Livery,{BLACK} - 辽东半岛号涂装
 STR_STRENGTHEN,{BLACK} - With Strengthening Steel Sheet,{BLACK} - 带加强筋
+STR_PLUGDOOR,{BLACK} - Version With Plug Doors,{BLACK} - 安装塞拉门的版本
+STR_FOLDINGDOOR,{BLACK} - Version With Folding Doors,{BLACK} - 安装折页门的版本
 STR_URUMQI,{BLACK} - Urumqi Railway Bureau,{BLACK} - 乌鲁木齐铁路局
 STR_XIAN,{BLACK} - Xi'an Railway Bureau,{BLACK} - 西安铁路局
 STR_SHENYANG,{BLACK} - Shenyang Railway Bureau,{BLACK} - 沈阳铁路局

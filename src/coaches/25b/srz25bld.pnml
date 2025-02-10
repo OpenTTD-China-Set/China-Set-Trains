@@ -107,7 +107,7 @@ item (FEAT_TRAINS, srz25bld) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SRZ25B), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_LV_AVAILABLE_L , string(STR_RED), string(STR_URUMQI), string(STR_ORANGE), string(STR_HUHHOT), string(STR_XIANXING), string(STR_LIAODONG), string(STR_SHENYANG)), string(STR_COMFORT_MEDIUM, 192));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SRZ25B), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_LV_AVAILABLE_L , string(STR_LIVERY_AVALIABLE), string(STR_RED), string(STR_URUMQI), string(STR_ORANGE), string(STR_HUHHOT), string(STR_XIANXING), string(STR_LIAODONG), string(STR_SHENYANG)), string(STR_COMFORT_MEDIUM, 192));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_srz25bld_cargo_subtype;
 

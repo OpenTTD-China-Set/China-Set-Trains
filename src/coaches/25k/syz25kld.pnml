@@ -1,21 +1,18 @@
 // Begin SYZ25KLD
-switch (FEAT_TRAINS, SELF, switch_syz25kld_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_S25KLD_SERIES);
+switch (FEAT_TRAINS, SELF, switch_s25k_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_S25K_SERIES);
     return CB_RESULT_NO_TEXT;
 }
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_s25kld_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "25k/s25kld-luchaogang")
+spriteset (spriteset_syz25kld_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25k/syz25kld-luchaogang")
 }
 
 // Vehicle
-spriteset (spriteset_s25kld_luchaogang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25k/s25kld-luchaogang")
-}
-spriteset (spriteset_s25kld_liaodong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25k/s25kld-liaodong")
+spriteset (spriteset_syz25kld_luchaogang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25k/syz25kld-luchaogang")
 }
 
 switch (FEAT_TRAINS, SELF, switch_syz25kld_articulated_part, extra_callback_info1) {
@@ -23,20 +20,9 @@ switch (FEAT_TRAINS, SELF, switch_syz25kld_articulated_part, extra_callback_info
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_s25kld_graphics_subtype, cargo_subtype) {
-    0: spriteset_s25kld_luchaogang;
-    1: spriteset_s25kld_liaodong;
-}
-
-switch (FEAT_TRAINS, SELF, switch_s25kld_graphics, position_in_articulated_veh % 3) {
-    1: switch_s25kld_graphics_subtype;
+switch (FEAT_TRAINS, SELF, switch_syz25kld_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_syz25kld_luchaogang;
     empty_sprites;
-}
-
-switch (FEAT_TRAINS, SELF, switch_s25kld_cargo_subtype, cargo_subtype) {
-    0: return string(STR_LUCHAOGANG);
-    1: return string(STR_LIAODONG);
-    return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_syz25kld_capacity, position_in_articulated_veh % 3) {
@@ -81,13 +67,12 @@ item (FEAT_TRAINS, syz25kld) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SYZ25K), string(STR_S25KLD_LIVERY_AVAILABILITY), string(STR_COMFORT_LOW, 160));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SYZ25K), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_COMFORT_LOW, 160));
         can_attach_wagon:               locowagon;
-        cargo_subtype_text:             switch_s25kld_cargo_subtype;
 
         // Graphics
-        default:                        switch_s25kld_graphics;
-        purchase:                       spriteset_s25kld_purchase;
+        default:                        switch_syz25kld_graphics;
+        purchase:                       spriteset_syz25kld_purchase;
         articulated_part:               switch_syz25kld_articulated_part;
 
         // Stats
@@ -98,7 +83,7 @@ item (FEAT_TRAINS, syz25kld) {
         running_cost_factor:            8 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   32;
         purchase_cargo_capacity:        148/3;
-        name:                           switch_syz25kld_name;
+        name:                           switch_s25k_name;
     }
 }
 
