@@ -74,7 +74,7 @@ item (FEAT_TRAINS, beijing_special) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_BEIJING_SPECIAL), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_BEIJING_SPECIAL_NICKNAME), string(STR_RELDEC_LOW, 3));
+        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_BEIJING_SPECIAL), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_BEIJING_SPECIAL_NICKNAME), string(STR_RELDEC_VERY_LOW, 3));
         can_attach_wagon:               locowagon;
 
         // Graphics

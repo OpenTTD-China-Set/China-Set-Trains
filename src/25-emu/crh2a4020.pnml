@@ -33,7 +33,7 @@ switch (FEAT_TRAINS, SELF, switch_crh2a4020_head_capacity, position_in_articulat
 
 
 
-/* switch (FEAT_TRAINS, SELF, switch_crh2a_if_middle_wagon_tp_short, (position_in_consist / 3) + 1 - (num_vehs_in_consist / 12)) {//8节时，后面的参数时2，此时4,6节有动力
+/* switch (FEAT_TRAINS, SELF, switch_crh2a_if_middle_wagon_tp_short, (position_in_consist / 3) + 1 - (num_vehs_in_consist / 12)) {//8节时，后面的参数为2，此时4,6节有动力
     2: spriteset_crh2a_middle_p;
     4: spriteset_crh2a_middle_p_reversed;
     spriteset_crh2_middle_m;
