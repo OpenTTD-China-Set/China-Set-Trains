@@ -11,7 +11,7 @@ Fix #56: purchase te coefficient of CRH2A/B errors
 Fix #57: RW25K can't depend "Gazu" Green Livery by year atoumatically 
 Fix #58: DF11G use wrong sprites
 Add：CRH2A-4020, SYZ25, SRZ25, 25 Series(Sanshui-Maoming Railway)
-Add LIveries: RW25K (Internatinal Transport), RW25T&YW25T (Internatinal Transport), 25G Series (GMS, Fulong), 25B Series(XiYan), 25Z(GuangShen)
+Add LIveries: RW25K (Internatinal Transport), RW25T&YW25T (Internatinal Transport), 25G Series (GMS, Fulong), 25B Series (XiYan), 25Z Series (GuangShen), S25B Series (Urumqi, Huhhot, Harbin, Xianxing, 93/94 Train, Gaozu Green, Liaodong, Red, Orange, Dacheng, Xi'an), TZ(Xianxing)
 
 0.3.4.177 (07/02/2025)
 --------------------

@@ -154,6 +154,7 @@ item (FEAT_TRAINS, yw25sm, 2150) {}
 item (FEAT_TRAINS, rw25sm, 2151) {}
 item (FEAT_TRAINS, ca25sm, 2152) {}
 item (FEAT_TRAINS, kd25sm, 2153) {}
+item (FEAT_TRAINS, sca25bhd, 2154) {}
 
 item (FEAT_TRAINS, luggageroom_s25, 3070) {}
 item (FEAT_TRAINS, luggageroom_25, 3071) {}
