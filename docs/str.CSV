@@ -807,8 +807,12 @@ STR_GMSR_EARLY,{BLACK} - Guangzhou-Meizhou-Shantou Railway Early Livery,{BLACK} 
 STR_GUANGSHEN,{BLACK} - Guangzhou-Shenzhen Railway Livery,{BLACK} - 广深铁路涂装
 STR_GUANGSHEN_CHANGKE_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 1st)",{BLACK} - 广深铁路（长春客车厂一批次）涂装
 STR_GUANGSHEN_CHANGKE_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 2nd)",{BLACK} - 广深铁路（长春客车厂二批次）涂装
+STR_GUANGSHEN_CHANGKE_SKIRTS,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, With Skirts)",{BLACK} - 广深铁路（长春客车厂带裙板）涂装
 STR_GUANGSHEN_SIFANG_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Sifang Railway Vehicle Works, Production Batch 1st)",{BLACK} - 广深铁路（四方厂一批次）涂装
 STR_GUANGSHEN_SIFANG_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Sifang Railway Vehicle Works, Production Batch 2nd)",{BLACK} - 广深铁路（四方厂二批次）涂装
+STR_GUANGSHEN_SIFANG_SKIRTS,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Sifang Railway Vehicle Works, With Skirts)",{BLACK} - 广深铁路（四方厂带裙板）涂装
+STR_GUANGSHEN_SIFANG_DOUBLE_DECKER,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Sifang Railway Vehicle Works, Double Decker)",{BLACK} - 广深铁路（四方厂双层）涂装
+STR_GUANGSHEN_SIFANG_ALTERNATIVE,"{BLACK} - Alternative Guangzhou-Shenzhen Railway Livery (Sifang Railway Vehicle Works, With Skirts)",{BLACK} - 另一种广深铁路（四方厂带裙板）涂装
 STR_GUANGSHEN_PUZHEN_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Puzhen Railway Vehicle Works, Production Batch 1st)",{BLACK} - 广深铁路（浦镇厂一批次）涂装
 STR_GUANGSHEN_PUZHEN_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Puzhen Railway Vehicle Works, Production Batch 2nd)",{BLACK} - 广深铁路（浦镇厂二批次）涂装
 STR_GUANGSHEN_GREEN,{BLACK} - {DKGREEN}Guangzhou-Shenzhen Railway Green {BLACK}Livery,{BLACK} - {DKGREEN}广深铁路刷绿绿涂装
