@@ -13,7 +13,7 @@ spriteset (spriteset_df11g_leaping, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df11g")
 }
 spriteset (spriteset_df11g_leaping_back_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("diesel", "df11gbr")
+    template_reversed11 ("diesel", "df11g")
 }
 
 switch (FEAT_TRAINS, SELF, switch_df11g_articulated_part, extra_callback_info1) {
