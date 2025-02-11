@@ -636,7 +636,7 @@ STR_NDJ3_NICKNAME,{BLACK}Nickname: {WHITE}White Pig,{BLACK}昵称：{WHITE}大�
 STR_CR200J_NICKNAME,"{BLACK}Nickname: {GREEN}""Hulk"" {GOLD}(Official), {GREEN}""Trash Bin"" {GOLD}(Folk)",{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方)，{GREEN}“垃圾桶”{GOLD}(民间)
 STR_CR200JSG_NICKNAME,"{BLACK}Nickname: {GREEN}""Dual-Powerd Bin"" {GOLD}(Folk)",{BLACK}昵称：{GREEN}“双源桶”{GOLD}(民间)
 STR_CR200JC_NICKNAME,"{BLACK}Nickname: {RED}""A{WHITE}D {GREEN}Bin"" {GOLD}(Folk)",{BLACK}昵称：{RED}“A{WHITE}D{GREEN}桶”{GOLD}(民间)
-STR_CRH1A_NICKNAME,{BLACK}Nickname: {GOLD}Metro,{BLACK}昵称：{GOLD}地铁{}{BLACK}
+STR_CRH1A_NICKNAME,{BLACK}Nickname: {GOLD}Metro,{BLACK}昵称：{GOLD}地铁
 STR_CRH1B_NICKNAME,{BLACK}Nickname: {GOLD}Long Metro ,{BLACK}昵称：{GOLD}长地铁
 STR_CRH1E_NICKNAME,{BLACK}Nickname: {GOLD}Sleeping Metro ,{BLACK}昵称：{GOLD}睡地铁
 STR_CRH1AA_NICKNAME,{BLACK}Nickname: {GOLD}Cute Metro ,{BLACK}昵称：{GOLD}萌地铁
