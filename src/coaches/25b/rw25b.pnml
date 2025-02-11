@@ -16,6 +16,9 @@ spriteset (spriteset_rw25b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP)
 spriteset (spriteset_rw25b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25b/rw25b")
 }
+spriteset (spriteset_rw25b_xiyan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/rw25b-xiyan")
+}
 
 switch (FEAT_TRAINS, SELF, switch_rw25b_articulated_part, extra_callback_info1) {
     1..2: return rw25b;
@@ -26,6 +29,7 @@ switch (FEAT_TRAINS, SELF, switch_rw25b_cargo_subtype, cargo_subtype) {
     0: return string(STR_BUILD_YEAR);
     1: return string(STR_ORDINARY_GREEN);
 /*     2: return string(STR_GAOZU_GREEN); */
+    2: return string(STR_XIYAN);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -43,6 +47,7 @@ switch (FEAT_TRAINS, SELF, switch_rw25b_graphics_subtype, cargo_subtype) {
     0: switch_rw25b_cargo_subtype_0;
     1: spriteset_rw25b_original;
     /* 2: ; */
+    2: spriteset_rw25b_xiyan;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw25b_graphics, position_in_articulated_veh % 3) {
@@ -93,7 +98,7 @@ item (FEAT_TRAINS, rw25b) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_RW25B), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL)/* , string(STR_GAOZU_GREEN) */), string(STR_COMFORT_HIGH, 480), string(STR_SELF_AIR_CONDITIONER));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_RW25B), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL)/* , string(STR_GAOZU_GREEN)*/, string(STR_XIYAN)), string(STR_COMFORT_HIGH, 480), string(STR_SELF_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
 
         // Graphics

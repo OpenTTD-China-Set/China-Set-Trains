@@ -26,10 +26,10 @@ spriteset (spriteset_bspca25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/bspca25t-green")
 }
 spriteset (spriteset_ca25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t/ca25t-xz-1")
+    template_standard ("coaches", "25t/ca25t-xz")
 }
 spriteset (spriteset_bspca25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t/bspca25t-xz-1")
+    template_standard ("coaches", "25t/bspca25t-xz")
 }
 spriteset (spriteset_ca25t_hk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/ca25t-hk")

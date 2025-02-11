@@ -27,7 +27,7 @@ switch (FEAT_TRAINS, SELF, switch_df_articulated_part, extra_callback_info1) {
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_df_graphics_subtype_defeat, cargo_subtype) {
+switch (FEAT_TRAINS, SELF, switch_df_graphics_subtype_default, cargo_subtype) {
     1: spriteset_df_whiteline_standard;
     spriteset_df_standard;
 }
@@ -44,7 +44,7 @@ switch (FEAT_TRAINS, SELF, switch_df_cargo_subtype, cargo_subtype) {
 }
 
 switch (FEAT_TRAINS, SELF, switch_df_direction, (position_in_consist != 1) && (position_in_consist_from_end == 1) || ((position_in_vehid_chain % 6) == 4)) {
-    0: switch_df_graphics_subtype_defeat;
+    0: switch_df_graphics_subtype_default;
     switch_df_graphics_subtype_reversed;
 }
 

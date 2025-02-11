@@ -31,6 +31,9 @@ spriteset (spriteset_kd25z_guangzhou_sifang_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP
 spriteset (spriteset_kd25z_guangzhou_sifang_b, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25z", "kd25z-guangzhou-sifang-b")
 }
+spriteset (spriteset_kd25z_guangzhou_sifang_double, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25z", "kd25z-guangzhou-sifang-double")
+}
 /* spriteset (spriteset_kd25z_guangzhou_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25z", "kd25z-guangzhou-green")
 } */
@@ -57,7 +60,8 @@ switch (FEAT_TRAINS, SELF, switch_kd25z_cargo_subtype, cargo_subtype) {
     3: return string(STR_BEIJING_FADE);
     4: return string(STR_GUANGSHEN_SIFANG_1);
     5: return string(STR_GUANGSHEN_SIFANG_2);
-/*     7: return string(STR_GUANGSHEN_GREEN); */
+    6: return string(STR_GUANGSHEN_SIFANG_DOUBLE_DECKER);
+/*     8: return string(STR_GUANGSHEN_GREEN); */
     return CB_RESULT_NO_TEXT;
 }
 
@@ -69,7 +73,8 @@ switch (FEAT_TRAINS, SELF, switch_kd25z_graphics_subtype, cargo_subtype) {
     3: spriteset_kd25z_beijing_colourfading;
     4: spriteset_kd25z_guangzhou_sifang_a;
     5: spriteset_kd25z_guangzhou_sifang_b;
-/*     7: spriteset_kd25z_guangzhou_green; */
+    6: spriteset_kd25z_guangzhou_sifang_double;
+/*     8: spriteset_kd25z_guangzhou_green; */
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25z_graphics, position_in_articulated_veh % 3) {

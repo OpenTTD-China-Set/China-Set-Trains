@@ -1,0 +1,144 @@
+// Begin CRH380AJ
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_crh380aj_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-emu/crh380aj", "crh380aj-tc")
+}
+
+// Vehicle
+spriteset (spriteset_crh380aj_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh380aj", "crh380aj-tc")
+}
+spriteset (spriteset_crh380aj_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh380aj", "crh380aj-t")
+}
+spriteset (spriteset_crh380aj_middle_p, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh380aj", "crh380aj-tp")
+}
+spriteset (spriteset_crh380aj_middle_p_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh380aj", "crh380aj-tp-r")
+}
+spriteset (spriteset_crh380aj_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh380aj", "crh380aj-tc")
+}
+spriteset (spriteset_crh380aj_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh380aj", "crh380aj-tc-c")
+}
+spriteset (spriteset_crh380aj_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh380aj", "crh380aj-tc-c")
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380aj_articulated_part, extra_callback_info1) {
+    1..23: return crh380aj;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380aj_graphics_cab, position_in_consist_from_end) {
+    1: spriteset_crh380aj_cab;
+    spriteset_crh380aj_cab_reconect;
+}
+switch (FEAT_TRAINS, SELF, switch_crh380aj_graphics_front, position_in_consist) {
+    1: spriteset_crh380aj_front;
+    spriteset_crh380aj_cab_reconect_reversed;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh380aj_graphics, position_in_articulated_veh % 24) {
+    1: switch_crh380aj_graphics_front;
+    4: spriteset_crh380aj_middle_m;
+    7: spriteset_crh380aj_middle_m;  
+    10: spriteset_crh380aj_middle_p;
+    13: spriteset_crh380aj_middle_p_reversed;
+    16: spriteset_crh380aj_middle_m;
+    19: spriteset_crh380aj_middle_m;
+    22: switch_crh380aj_graphics_cab;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, onlycrh380aj, vehicle_type_id) {
+    crh380aj: onlyallowcst;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_crh380aj_speed, cargo_subtype) {
+    1: return 452;
+    return 385;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh380aj_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGIN_SPEED);
+    1: return string(STR_CRH380AJ_486_KMH);
+    return CB_RESULT_NO_TEXT;
+}
+
+
+item (FEAT_TRAINS, crh380aj) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CRH380AJ);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        variant_group:					crh380a;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2011,03,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   25;
+        track_type:                     SAAA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          385 km/h;
+        power:                          11200 kW;
+        weight:                         409 ton;
+        tractive_effort_coefficient:    0.0623;
+        cost_factor:                    1;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            1;
+        reliability_decay:              12;
+        bitmask_vehicle_info:           bitmask(2);
+
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_6, string(STR_RELDEC_VERY_LOW, 4), string(STR_CRH380AJ_AVAILABLE));
+        can_attach_wagon:               onlycrh380aj;
+        start_stop:                     mu4to24car;
+        cargo_subtype_text:             switch_crh380aj_cargo_subtype;
+
+        // Graphics
+        default:                        switch_crh380aj_graphics;
+        purchase:                       spriteset_crh380aj_purchase_original;
+        articulated_part:               switch_crh380aj_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        speed:                          switch_crh380aj_speed;
+        purchase_tractive_effort_coefficient: return int(0.083*255);
+        cargo_capacity:                 0;
+        cost_factor:                    67;
+        running_cost_factor:            0;
+        purchase_running_cost_factor:   0;
+        purchase_cargo_capacity:        0;
+        name:                           switch_crh380a_name;
+    }
+}
+
+// End CRH380AJ

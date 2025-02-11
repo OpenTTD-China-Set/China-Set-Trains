@@ -1,56 +1,61 @@
 // Begin SYZ25BLD
-switch (FEAT_TRAINS, SELF, switch_syz25bld_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_S25BLD_SERIES);
+switch (FEAT_TRAINS, SELF, switch_s25b_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_S25B_SERIES);
     return CB_RESULT_NO_TEXT;
 }
 // Graphics
 
 // Purchase Menu
-spriteset (spriteset_s25bld_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "s25bld")
+spriteset (spriteset_syz25bld_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25b/syz25bld-red")
 }
 
-// Vehicle
-spriteset (spriteset_s25bld_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "s25bld")
+//Graphics
+spriteset (spriteset_syz25bld_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/syz25bld-red")
 }
-spriteset (spriteset_s25bld_deteriorate, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "s25bld-deteriorate")
+spriteset (spriteset_syz25bld_urumqi, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/syz25bld-urumqi")
 }
-spriteset (spriteset_s25bld_strengthen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "s25bld-strengthen")
+spriteset (spriteset_syz25bld_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/syz25bld-orange")
 }
-spriteset (spriteset_s25bld_urumqi, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "s25bld-urumqi")
+spriteset (spriteset_syz25bld_harbin, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/syz25bld-harbin")
 }
-spriteset (spriteset_s25bld_xianxing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "s25bld-xianxing")
+spriteset (spriteset_syz25bld_xianxing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/syz25bld-xianxing")
 }
+spriteset (spriteset_syz25bld_xian, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/syz25bld-xian")
+}
+
 
 switch (FEAT_TRAINS, SELF, switch_syz25bld_articulated_part, extra_callback_info1) {
     1..2: return syz25bld;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
-
-switch (FEAT_TRAINS, SELF, switch_s25bld_cargo_subtype, cargo_subtype) {
-    0: return string(STR_ORIGINAL);
-    1: return string(STR_DETERIORATE);
-    2: return string(STR_STRENGTHEN);
-    3: return string(STR_URUMQI);
+switch (FEAT_TRAINS, SELF, switch_syz25bld_cargo_subtype, cargo_subtype) {
+    0: return string(STR_RED);
+    1: return string(STR_URUMQI);
+    2: return string(STR_ORANGE);
+    3: return string(STR_HARBIN);
     4: return string(STR_XIANXING);
+    5: return string(STR_XIAN);
     return CB_RESULT_NO_TEXT;
 }
 
-switch (FEAT_TRAINS, SELF, switch_s25bld_graphics_subtype, cargo_subtype) {
-    0: spriteset_s25bld_original;
-    1: spriteset_s25bld_deteriorate;
-    2: spriteset_s25bld_strengthen;
-    3: spriteset_s25bld_urumqi;
-    4: spriteset_s25bld_xianxing;
+switch (FEAT_TRAINS, SELF, switch_syz25bld_graphics_subtype, cargo_subtype) {
+    0: spriteset_syz25bld_red;
+    1: spriteset_syz25bld_urumqi;
+    2: spriteset_syz25bld_orange;
+    3: spriteset_syz25bld_harbin;
+    4: spriteset_syz25bld_xianxing;
+    5: spriteset_syz25bld_xian;
 }
 
-switch (FEAT_TRAINS, SELF, switch_s25bld_graphics, position_in_articulated_veh % 3) {
-    1: switch_s25bld_graphics_subtype;
+switch (FEAT_TRAINS, SELF, switch_syz25bld_graphics, position_in_articulated_veh % 3) {
+    1: switch_syz25bld_graphics_subtype;
     empty_sprites;
 }
 
@@ -96,13 +101,13 @@ item (FEAT_TRAINS, syz25bld) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SYZ25B), string(STR_S25BLD_LIVERY_AVAILABILITY), string(STR_COMFORT_LOW, 160));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SYZ25B), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_LV_AVAILABLE_L , string(STR_LIVERY_AVALIABLE), string(STR_RED), string(STR_URUMQI), string(STR_ORANGE), string(STR_HARBIN), string(STR_XIANXING),  string(STR_XIAN)), string(STR_COMFORT_LOW, 160));
         can_attach_wagon:               locowagon;
-        cargo_subtype_text:             switch_s25bld_cargo_subtype;
+        cargo_subtype_text:             switch_syz25bld_cargo_subtype;
 
         // Graphics
-        default:                        switch_s25bld_graphics;
-        purchase:                       spriteset_s25bld_purchase_original;
+        default:                        switch_syz25bld_graphics;
+        purchase:                       spriteset_syz25bld_purchase;
         articulated_part:               switch_syz25bld_articulated_part;
 
         // Stats
@@ -113,7 +118,7 @@ item (FEAT_TRAINS, syz25bld) {
         running_cost_factor:            7 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   28;
         purchase_cargo_capacity:        176/3;
-        name:                           switch_syz25bld_name;
+        name:                           switch_s25b_name;
     }
 }
 

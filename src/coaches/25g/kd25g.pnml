@@ -43,11 +43,17 @@ spriteset (spriteset_kd25g_25t, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_kd25g_gmsr, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "kd25g-gmsr")
 }
+spriteset (spriteset_kd25g_gmsr_early, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "kd25g-gmsr-early")
+}
 spriteset (spriteset_kd25g_xiaoyong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "kd25g-xiaoyong")
 }
 spriteset (spriteset_kd25g_hejiu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "kd25g-hejiu")
+}
+spriteset (spriteset_kd25g_fulong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "kd25g-fulong")
 }
 
 
@@ -66,10 +72,12 @@ switch (FEAT_TRAINS, SELF, switch_kd25g_cargo_subtype, cargo_subtype) {
     6: return string(STR_LUCHAOGANG);
     7: return string(STR_ORANGE);
     8: return string(STR_GMSR);
-    9: return string(STR_HEJIU);
-    10: return string(STR_XIAOYONG);
-    11: return string(STR_NANHU);
-    12: return string(STR_BLUE_WHITE);
+    9: return string(STR_GMSR_EARLY);
+    10: return string(STR_HEJIU);
+    11: return string(STR_XIAOYONG);
+    12: return string(STR_FULONG);
+    13: return string(STR_NANHU);
+    14: return string(STR_BLUE_WHITE);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -92,10 +100,12 @@ switch (FEAT_TRAINS, SELF, switch_kd25g_graphics_subtype, cargo_subtype) {
     6: spriteset_kd25g_luchaogang;
     7: spriteset_kd25g_orange;
     8: spriteset_kd25g_gmsr;
-    9: spriteset_kd25g_hejiu;
-    10: spriteset_kd25g_xiaoyong;
-    11: spriteset_kd25g_nanhu;
-    12: spriteset_kd25g_25t;
+    9: spriteset_kd25g_gmsr_early;
+    10: spriteset_kd25g_hejiu;
+    11: spriteset_kd25g_xiaoyong;
+    12: spriteset_kd25g_fulong;
+    13: spriteset_kd25g_nanhu;
+    14: spriteset_kd25g_25t;
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25g_graphics, position_in_articulated_veh % 3) {
@@ -142,7 +152,7 @@ item (FEAT_TRAINS, kd25g) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN),string(STR_XIHU), string(STR_LUCHAOGANG), string(STR_ORANGE), string(STR_GMSR), string(STR_HEJIU), string(STR_XIAOYONG), string(STR_NANHU), string(STR_BLUE_WHITE)), string(STR_AIR_CONDITIONER_EFFECT));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN),string(STR_XIHU), string(STR_LUCHAOGANG), string(STR_ORANGE), string(STR_GMSR), string(STR_GMSR_EARLY), string(STR_HEJIU), string(STR_XIAOYONG), string(STR_FULONG), string(STR_NANHU), string(STR_BLUE_WHITE)), string(STR_AIR_CONDITIONER_EFFECT));
         can_attach_wagon:               locowagon;
 
         // Graphics

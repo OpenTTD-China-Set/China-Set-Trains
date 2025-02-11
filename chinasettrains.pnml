@@ -29,7 +29,7 @@
 #include "src/unit-wagons-rail/wemuw.pnml"
 #include "src/unit-wagons-rail/wymuw.pnml"
 #include "src/unit-wagons-rail/wgmuw.pnml"
-
+#include "src/unit-wagons-rail/kymuw.pnml"
 
 // Coaches
 
@@ -58,7 +58,17 @@
 #include "src/coaches/25/ca25ml.pnml"
 #include "src/coaches/25/rw25ml.pnml"
 #include "src/coaches/25/yw25ml.pnml"
+#include "src/coaches/25/yz25sm.pnml"
+#include "src/coaches/25/rz25sm.pnml"
+#include "src/coaches/25/yw25sm.pnml"
+#include "src/coaches/25/rw25sm.pnml"
+#include "src/coaches/25/ca25sm.pnml"
+#include "src/coaches/25/syz25.pnml"
+#include "src/coaches/25/srz25.pnml"
+#include "src/coaches/25/syw25.pnml"
+#include "src/coaches/25/srw25.pnml"
 #include "src/coaches/25/tz2.pnml"
+#include "src/coaches/25/kd25sm.pnml"
 
 #include "src/coaches/25b/yz25b.pnml"
 #include "src/coaches/25b/rz25b.pnml"
@@ -73,6 +83,12 @@
 #include "src/coaches/25b/srz25bhd.pnml"
 #include "src/coaches/25b/syw25bhd.pnml"
 #include "src/coaches/25b/srw25bhd.pnml"
+#include "src/coaches/25b/sca25bhd.pnml"
+
+#include "src/coaches/25c/rz225c.pnml"
+#include "src/coaches/25c/rz125c.pnml"
+#include "src/coaches/25c/ca25c.pnml"
+#include "src/coaches/25c/kd25c.pnml"
 
 #include "src/coaches/25g/yz25g.pnml"
 #include "src/coaches/25g/rz25g.pnml"
@@ -124,8 +140,6 @@
 #include "src/coaches/25z/srz125z.pnml"
 #include "src/coaches/25z/sca25z.pnml"
 #include "src/coaches/25z/srzxl25z.pnml"
-#include "src/coaches/25z/syw25.pnml"
-#include "src/coaches/25z/srw25.pnml"
 #include "src/coaches/25z/kd25z.pnml"
 
 #include "src/coaches/25dt/yz25dt_jinlun.pnml"
@@ -191,6 +205,8 @@
 
 // Diesel
 #include "src/diesel/df.pnml"
+#include "src/diesel/df2.pnml"
+#include "src/diesel/df3.pnml"
 #include "src/diesel/df4h.pnml"
 #include "src/diesel/df4k.pnml"
 #include "src/diesel/df4bk.pnml"
@@ -204,11 +220,15 @@
 #include "src/diesel/df4e.pnml"
 #include "src/diesel/df5kz.pnml"
 #include "src/diesel/df5.pnml"
+#include "src/diesel/df7d.pnml"
+#include "src/diesel/df7d3000.pnml"
 #include "src/diesel/df7g.pnml"
 #include "src/diesel/df7g5000.pnml"
 #include "src/diesel/df7g8000.pnml"
 #include "src/diesel/df8b.pnml"
+#include "src/diesel/df9.pnml"
 #include "src/diesel/df11.pnml"
+#include "src/diesel/df11palteau.pnml"
 #include "src/diesel/df11g.pnml"
 #include "src/diesel/df11z.pnml"
 #include "src/diesel/dfh3.pnml"
@@ -219,6 +239,9 @@
 #include "src/diesel/hxn3qz.pnml"
 #include "src/diesel/hxn5.pnml"
 #include "src/diesel/hxn5b.pnml"
+#include "src/diesel/beijing_freight.pnml"
+#include "src/diesel/beijing_passenger.pnml"
+#include "src/diesel/beijing_special.pnml"
 
 // 25kV AC Electric
 #include "src/25-electric/ss1.pnml"
@@ -269,6 +292,7 @@
 #include "src/25-emu/x2000.pnml"
 #include "src/25-emu/djj1.pnml"
 #include "src/25-emu/djj2.pnml"
+#include "src/25-emu/djf1.pnml"
 #include "src/25-emu/djf3.pnml"
 #include "src/25-emu/cr200ja.pnml"
 #include "src/25-emu/cr200jal.pnml"
@@ -285,13 +309,16 @@
 #include "src/25-emu/crh2e.pnml"
 #include "src/25-emu/crh2els.pnml"
 #include "src/25-emu/crh2g.pnml"
+#include "src/25-emu/crh2a4020.pnml"
 #include "src/25-emu/crh3c.pnml"
 #include "src/25-emu/cj1.pnml"
 #include "src/25-emu/crh3a.pnml"
 #include "src/25-emu/crh5a.pnml"
 #include "src/25-emu/crh5e.pnml"
+#include "src/25-emu/crh5gjt.pnml"
 #include "src/25-emu/crh380a.pnml"
 #include "src/25-emu/crh380al.pnml"
+#include "src/25-emu/crh380aj.pnml"
 #include "src/25-emu/crh380b.pnml"
 #include "src/25-emu/crh380bl.pnml"
 #include "src/25-emu/crh380cl.pnml"

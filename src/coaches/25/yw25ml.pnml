@@ -9,15 +9,15 @@ switch (FEAT_TRAINS, SELF, switch_yw25ml_name, getbits(extra_callback_info1, 0, 
 
 // // Purchase Menu
 spriteset (spriteset_yw25ml_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "yw25ml-green")
+    template_purchase ("coaches/25", "yw25ml-green")
 }
 
 // Vehicle
 spriteset (spriteset_yw25ml_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "yw25ml-green")
+    template_standard ("coaches/25", "yw25ml-green")
 }
 spriteset (spriteset_yw25ml_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "yw25ml-red")
+    template_standard ("coaches/25", "yw25ml-red")
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw25ml_articulated_part, extra_callback_info1) {
@@ -89,7 +89,7 @@ item (FEAT_TRAINS, yw25ml) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YW25ML), string(STR_25ML_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 288));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW25ML), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_25ML_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 288));
         can_attach_wagon:               locowagon;
 
         // Graphics

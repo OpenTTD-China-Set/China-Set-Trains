@@ -5,27 +5,64 @@ switch (FEAT_TRAINS, SELF, switch_srz25bld_name, getbits(extra_callback_info1, 0
 }
 
 
-// Graphics
+// Purchase Menu
+spriteset (spriteset_srz25bld_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25b/srz25bld-red")
+}
 
-// // Purchase Menu
-// spriteset (spriteset_srz25bld_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-//     template_purchase ("coaches", "25b")
-// }
+//Graphics
+spriteset (spriteset_srz25bld_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/srz25bld-red")
+}
+spriteset (spriteset_srz25bld_urumqi, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/srz25bld-urumqi")
+}
+spriteset (spriteset_srz25bld_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/srz25bld-orange")
+}
+spriteset (spriteset_srz25bld_huhhot, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/srz25bld-huhhot")
+}
+spriteset (spriteset_srz25bld_xianxing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/srz25bld-xianxing")
+}
+spriteset (spriteset_srz25bld_liaodong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/srz25bld-liaodong")
+}
+spriteset (spriteset_srz25bld_shenyang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/srz25bld-shenyang")
+}
 
-// // Vehicle
-// spriteset (spriteset_srz25bld_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-//     template_standard ("coaches", "25b")
-// }
 
 switch (FEAT_TRAINS, SELF, switch_srz25bld_articulated_part, extra_callback_info1) {
     1..2: return srz25bld;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
+switch (FEAT_TRAINS, SELF, switch_srz25bld_cargo_subtype, cargo_subtype) {
+    0: return string(STR_RED);
+    1: return string(STR_URUMQI);
+    2: return string(STR_ORANGE);
+    3: return string(STR_HUHHOT);
+    4: return string(STR_XIANXING);
+    5: return string(STR_LIAODONG);
+    6: return string(STR_SHENYANG);
+    return CB_RESULT_NO_TEXT;
+}
 
-// switch (FEAT_TRAINS, SELF, switch_srz25bld_graphics, position_in_articulated_veh % 3) {
-//     1: spriteset_srz25bld_original;
-//     empty_sprites;
-// }
+switch (FEAT_TRAINS, SELF, switch_srz25bld_graphics_subtype, cargo_subtype) {
+    0: spriteset_srz25bld_red;
+    1: spriteset_srz25bld_urumqi;
+    2: spriteset_srz25bld_orange;
+    3: spriteset_srz25bld_huhhot;
+    4: spriteset_srz25bld_xianxing;
+    5: spriteset_srz25bld_liaodong;
+    6: spriteset_srz25bld_shenyang;
+}
+
+switch (FEAT_TRAINS, SELF, switch_srz25bld_graphics, position_in_articulated_veh % 3) {
+    1: switch_srz25bld_graphics_subtype;
+    empty_sprites;
+}
 
 switch (FEAT_TRAINS, SELF, switch_srz25bld_capacity, position_in_articulated_veh % 3) {
     1: return 108;
@@ -70,13 +107,13 @@ item (FEAT_TRAINS, srz25bld) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SRZ25B), string(STR_S25BLD_LIVERY_AVAILABILITY), string(STR_COMFORT_MEDIUM, 192));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SRZ25B), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_LV_AVAILABLE_L , string(STR_LIVERY_AVALIABLE), string(STR_RED), string(STR_URUMQI), string(STR_ORANGE), string(STR_HUHHOT), string(STR_XIANXING), string(STR_LIAODONG), string(STR_SHENYANG)), string(STR_COMFORT_MEDIUM, 192));
         can_attach_wagon:               locowagon;
-        cargo_subtype_text:             switch_s25bld_cargo_subtype;
+        cargo_subtype_text:             switch_srz25bld_cargo_subtype;
 
         // Graphics
-        default:                        switch_s25bld_graphics;
-        purchase:                       spriteset_s25bld_purchase_original;
+        default:                        switch_srz25bld_graphics;
+        purchase:                       spriteset_srz25bld_purchase;
         articulated_part:               switch_srz25bld_articulated_part;
 
         // Stats
@@ -87,7 +124,7 @@ item (FEAT_TRAINS, srz25bld) {
         running_cost_factor:            7 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   28;
         purchase_cargo_capacity:        108/3;
-        name:                            switch_srz25bld_name;
+        name:                           switch_s25b_name;
 
     }
 }

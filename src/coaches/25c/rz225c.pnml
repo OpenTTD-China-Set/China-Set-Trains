@@ -1,0 +1,94 @@
+// Begin RZ225C
+switch (FEAT_TRAINS, SELF, switch_25c_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_25C_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_rz225c_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches/25c", "rz225c")
+}
+
+// Vehicle
+spriteset (spriteset_rz225c, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25c", "rz225c")
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz225c_articulated_part, extra_callback_info1) {
+    1..2: return rz225c;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+
+
+switch (FEAT_TRAINS, SELF, switch_rz225c_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_rz225c;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz225c_capacity, position_in_articulated_veh % 3) {
+    1: return 72;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, rz225c) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_RZ225C);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        /* variant_group:					rz225c; */
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1994,01,01);
+        model_life:                     20;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          140 km/h;
+        power:                          0 hp;
+        weight:                         49.1 ton;
+        cost_factor:                    1;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            1;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RZ225C), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_COMFORT_MEDIUM, 192));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_rz225c_graphics;
+        purchase:                       spriteset_rz225c_purchase;
+        articulated_part:               switch_rz225c_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_rz225c_capacity;
+        cargo_age_period:               (12 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    9;
+        running_cost_factor:            6 * runningcostfactor() * cafecostfactor() + accostfactor();
+        purchase_running_cost_factor:   24;
+        purchase_cargo_capacity:        72/3;
+        name:                           switch_25c_name;
+    }
+}
+
+// End RZ225C

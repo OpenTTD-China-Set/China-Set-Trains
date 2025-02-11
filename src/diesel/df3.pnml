@@ -1,0 +1,94 @@
+// Begin DF3
+
+switch (FEAT_TRAINS, SELF, switch_df3_articulated_part, extra_callback_info1) {
+    1..2: return df3;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df3_graphics_subtype_default, cargo_subtype) {
+    1: spriteset_df_whiteline_standard;
+    spriteset_df_standard;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df3_graphics_subtype_reversed, cargo_subtype) {
+    1: spriteset_df_whiteline_reversed;
+    spriteset_df_reversed;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df3_cargo_subtype, cargo_subtype) {
+    0: return string(STR_DF_YELLOW);
+    1: return string(STR_DF_WHITE);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df3_direction, (position_in_consist != 1) && (position_in_consist_from_end == 1) || ((position_in_vehid_chain % 6) == 4)) {
+    0: switch_df3_graphics_subtype_default;
+    switch_df3_graphics_subtype_reversed;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df3_graphics, position_in_articulated_veh % 3) {
+    1: switch_df3_direction;
+    empty_sprites;
+}
+
+item (FEAT_TRAINS, df3) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_DF3);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1972,09,26);
+        model_life:                     40;
+        retire_early:                   30;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          1800 hpM;
+        weight:                         126 ton;
+        tractive_effort_coefficient:    0.186;
+        cost_factor:                    45;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            35;
+        reliability_decay:              16;
+        bitmask_vehicle_info:           0;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_DF3), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DF_LIVERY_AVAILABILITY), string(STR_RELDEC_MEDIUM, 16));
+        cargo_subtype_text:             switch_df3_cargo_subtype;
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_df3_graphics;
+        purchase:                       spriteset_df_purchase;
+        articulated_part:               switch_df3_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_4_2;
+        cargo_capacity:                 0;
+        cost_factor:                    68;
+        running_cost_factor:            46 * runningcostfactor();
+        purchase_running_cost_factor:   184;
+        purchase_cargo_capacity:        0;
+    }
+}
+
+// End DF3

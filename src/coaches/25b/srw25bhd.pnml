@@ -1,13 +1,50 @@
 //Begin SRW25BHD
-switch (FEAT_TRAINS, SELF, switch_srw25bhd_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_S25BHD_SERIES);
-    return CB_RESULT_NO_TEXT;
+// Purchase Menu
+spriteset (spriteset_srw25bhd_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25b/srw25bhd-changsha")
 }
 
+// Vehicle
+spriteset (spriteset_srw25bhd_changsha, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/srw25bhd-changsha")
+}
+spriteset (spriteset_srw25bhd_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/srw25bhd-green")
+}
+spriteset (spriteset_srw25bhd_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/srw25bhd-red")
+}
+spriteset (spriteset_srw25bhd_urumqi, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/srw25bhd-urumqi")
+}
+spriteset (spriteset_srw25bhd_93_94, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/srw25bhd-93-94")
+}
 
 switch (FEAT_TRAINS, SELF, switch_srw25bhd_articulated_part, extra_callback_info1) {
     1..2: return srw25bhd;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+switch (FEAT_TRAINS, SELF, switch_srw25bhd_cargo_subtype, cargo_subtype) {
+    0: return string(STR_CHANGSHA);
+    1: return string(STR_GAOZU_GREEN);
+    2: return string(STR_RED);
+    3: return string(STR_URUMQI);
+    4: return string(STR_93_94);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_srw25bhd_graphics_subtype, cargo_subtype) {
+    0: spriteset_srw25bhd_changsha;
+    1: spriteset_srw25bhd_green;
+    2: spriteset_srw25bhd_red;
+    3: spriteset_srw25bhd_urumqi;
+    4: spriteset_srw25bhd_93_94;
+}
+
+switch (FEAT_TRAINS, SELF, switch_srw25bhd_graphics, position_in_articulated_veh % 3) {
+    1: switch_srw25bhd_graphics_subtype;
+    empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_srw25bhd_capacity, position_in_articulated_veh % 3) {
@@ -22,7 +59,7 @@ item (FEAT_TRAINS, srw25bhd) {
         name:                           string(STR_NAME_SRW25BHD);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					2085;
+        variant_group:					syz25bld;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -53,13 +90,13 @@ item (FEAT_TRAINS, srw25bhd) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SRW25B), string(STR_S25BHD_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 384));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SRW25B), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_LV_AVAILABLE_S , string(STR_LIVERY_AVALIABLE), string(STR_CHANGSHA), string(STR_GAOZU_GREEN), string(STR_RED), string(STR_URUMQI), string(STR_93_94)), string(STR_COMFORT_HIGH, 384));
         can_attach_wagon:               locowagon;
-        cargo_subtype_text:             switch_s25bhd_cargo_subtype;
+        cargo_subtype_text:             switch_srw25bhd_cargo_subtype;
 
         // Graphics
-        default:                        switch_s25bhd_graphics;
-        purchase:                       spriteset_s25bhd_purchase_original;
+        default:                        switch_srw25bhd_graphics;
+        purchase:                       spriteset_srw25bhd_purchase;
         articulated_part:               switch_srw25bhd_articulated_part;
 
         // Stats
@@ -70,7 +107,7 @@ item (FEAT_TRAINS, srw25bhd) {
         running_cost_factor:            13 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   52;
         purchase_cargo_capacity:        50/3;
-        name:                            switch_srw25bhd_name;
+        name:                           switch_s25b_name;
 
     }
 }
