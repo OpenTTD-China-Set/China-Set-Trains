@@ -47,6 +47,7 @@ switch (FEAT_TRAINS, SELF, switch_rw25b_graphics_subtype, cargo_subtype) {
     0: switch_rw25b_cargo_subtype_0;
     1: spriteset_rw25b_original;
     /* 2: ; */
+    2: spriteset_rw25b_xiyan;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw25b_graphics, position_in_articulated_veh % 3) {
