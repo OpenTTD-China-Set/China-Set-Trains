@@ -34,8 +34,8 @@ switch (FEAT_TRAINS, SELF, switch_yz25k_cargo_subtype, cargo_subtype) {
     0: return string(STR_BUILD_YEAR);
     1: return string(STR_ORIGINAL);
     2: return string(STR_GAOZU_GREEN);
-    2: return string(STR_GMSR);
-    3: return string(STR_GUANGSHEN);
+    3: return string(STR_GMSR);
+    4: return string(STR_GUANGSHEN);
     return CB_RESULT_NO_TEXT;
 }
 

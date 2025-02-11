@@ -43,7 +43,7 @@ switch (FEAT_TRAINS, SELF, switch_uz25k_graphics_subtype_0, param_gaozulv) {
 
 switch (FEAT_TRAINS, SELF, switch_uz25k_graphics_subtype, cargo_subtype) {
     0: switch_uz25k_graphics_subtype_0;
-    1: spriteset_rw25t_original;
+    1: spriteset_uz25k_original;
     2: spriteset_uz25k_green;
 }
 
