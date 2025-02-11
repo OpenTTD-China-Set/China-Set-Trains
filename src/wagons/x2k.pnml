@@ -79,7 +79,7 @@ random_switch (FEAT_TRAINS, SELF, random_x2k_half) {
     1: spriteset_x2k_7_half;
 }
 
-switch (FEAT_TRAINS, SELF, switch_x2k_not_empty, cargo_count < 50) {
+switch (FEAT_TRAINS, SELF, switch_x2k_not_empty, cargo_count > 50) {
     0: random_x2k_half;
     random_x2k_full;
 }
