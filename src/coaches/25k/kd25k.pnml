@@ -76,7 +76,7 @@ switch (FEAT_TRAINS, SELF, switch_kd25k_graphics_subtype, cargo_subtype) {
     2: spriteset_kd25k_green;
     3: spriteset_kd25k_gmsr;
     4: spriteset_kd25k_blue_red;
-    4: spriteset_kd25k_shenyang;
+    5: spriteset_kd25k_shenyang;
     6: spriteset_kd25k_luchaogang;
     7: spriteset_kd25k_guangshen;
     8: spriteset_kd25k_lakeblue;
