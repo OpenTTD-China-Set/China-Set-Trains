@@ -123,7 +123,7 @@ item (FEAT_TRAINS, df7d3000) {
         running_cost_base:              RUNNING_COST_DIESEL;
         running_cost_factor:            35;
         reliability_decay:              8;
-        bitmask_vehicle_info:           bitmask(2);
+        bitmask_vehicle_info:           0;
     }
     graphics {
         // Menu

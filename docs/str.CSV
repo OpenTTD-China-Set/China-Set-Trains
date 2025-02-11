@@ -636,7 +636,7 @@ STR_NDJ3_NICKNAME,{BLACK}Nickname: {WHITE}White Pig,{BLACK}昵称：{WHITE}大�
 STR_CR200J_NICKNAME,"{BLACK}Nickname: {GREEN}""Hulk"" {GOLD}(Official), {GREEN}""Trash Bin"" {GOLD}(Folk)",{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方)，{GREEN}“垃圾桶”{GOLD}(民间)
 STR_CR200JSG_NICKNAME,"{BLACK}Nickname: {GREEN}""Dual-Powerd Bin"" {GOLD}(Folk)",{BLACK}昵称：{GREEN}“双源桶”{GOLD}(民间)
 STR_CR200JC_NICKNAME,"{BLACK}Nickname: {RED}""A{WHITE}D {GREEN}Bin"" {GOLD}(Folk)",{BLACK}昵称：{RED}“A{WHITE}D{GREEN}桶”{GOLD}(民间)
-STR_CRH1A_NICKNAME,"{BLACK}Nickname: {GOLD}Metro {}{BLACK}Livery Availability: {GOLD}Early Livery, Current Livery",{BLACK}昵称：{GOLD}地铁{}{BLACK}可选涂装：{GOLD}早期涂装、现行涂装
+STR_CRH1A_NICKNAME,{BLACK}Nickname: {GOLD}Metro,{BLACK}昵称：{GOLD}地铁{}{BLACK}
 STR_CRH1B_NICKNAME,{BLACK}Nickname: {GOLD}Long Metro ,{BLACK}昵称：{GOLD}长地铁
 STR_CRH1E_NICKNAME,{BLACK}Nickname: {GOLD}Sleeping Metro ,{BLACK}昵称：{GOLD}睡地铁
 STR_CRH1AA_NICKNAME,{BLACK}Nickname: {GOLD}Cute Metro ,{BLACK}昵称：{GOLD}萌地铁
@@ -648,7 +648,7 @@ STR_CRH2G_NICKNAME,{BLACK}Nickname: {GOLD}Advanced Black Face,{BLACK}昵称：{G
 STR_CJ1_NICKNAME,{BLACK}Nickname: {GOLD}Toy Car,{BLACK}昵称：{GOLD}玩具车
 STR_CRH3A_NICKNAME,{BLACK}Nickname: {GOLD}Golden Eyes,{BLACK}昵称：{GOLD}黄金眼
 STR_CRH3C_NICKNAME,{BLACK}Nickname: {GOLD}Rabbit,{BLACK}昵称：{GOLD}兔子
-STR_CRH5A_NICKNAME,"{BLACK}Nickname: {GOLD}Donkey {}{BLACK}Livery Availability: {GOLD}Early Livery, Current Livery",{BLACK}昵称：{GOLD}驴 {}{BLACK}可选涂装：{GOLD}早期涂装、现行涂装
+STR_CRH5A_NICKNAME,{BLACK}Nickname: {GOLD}Donkey,{BLACK}昵称：{GOLD}驴
 STR_CRH6F_NICKNAME,{BLACK}Nickname: {GOLD}Real Metro,{BLACK}昵称：{GOLD}真地铁
 STR_CRH380A_NICKNAME,{BLACK}Nickname: {GOLD}Big Rat,{BLACK}昵称：{GOLD}大老鼠
 STR_CRH380B_NICKNAME,{BLACK}Nickname: {GOLD}Crazy Rabbit,{BLACK}昵称：{GOLD}疯兔子
