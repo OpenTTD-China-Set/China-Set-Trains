@@ -1,0 +1,152 @@
+// Begin DF7D3000
+switch (FEAT_TRAINS, SELF, switch_df7d3000_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_DF7D_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_df7d3000_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "df7d3000")
+}
+
+
+// Vehicle
+spriteset (spriteset_df7d3000, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df7d3000")
+}
+spriteset (spriteset_df7d3000_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed_10 ("diesel", "df7d3000")
+}
+spriteset (spriteset_df7d3000_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df7d3000-green")
+}
+spriteset (spriteset_df7d3000_green_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed_10 ("diesel", "df7d3000-green")
+}
+spriteset (spriteset_df7d3000_double_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df7d3000-double-cab")
+}
+spriteset (spriteset_df7d3000_double_cab_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed_10 ("diesel", "df7d3000-double-cab")
+}
+
+switch (FEAT_TRAINS, SELF, switch_df7d3000_articulated_part, extra_callback_info1) {
+    1..2: return df7d3000;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df7d3000_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORANGE);
+    1: return string(STR_GREEN);
+    2: return string(STR_DOUBLE_CAB);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df7d3000_graphics_subtype_front, cargo_subtype) {
+    0: spriteset_df7d3000;
+    1: spriteset_df7d3000_green;
+    2: spriteset_df7d3000_double_cab;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df7d3000_graphics_subtype_back, cargo_subtype) {
+    0: spriteset_df7d3000_back;
+    1: spriteset_df7d3000_green_back;
+    2: spriteset_df7d3000_double_cab_back;
+}
+
+// "Splitting DF7D3000"
+
+switch (FEAT_TRAINS, SELF, switch_df7d3000_graphics_joint_front, position_in_vehid_chain % 6) {
+    1: switch_df7d3000_graphics_subtype_front;
+    4: switch_df7d3000_graphics_subtype_back;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df7d3000_graphics_joint, position_in_vehid_chain_from_end) {
+    1: switch_df7d3000_graphics_subtype_back;
+    switch_df7d3000_graphics_joint_front;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df7d3000_graphics_front, position_in_articulated_veh % 3) {
+    1: switch_df7d3000_graphics_subtype_front;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df7d3000_graphics_split, position_in_consist_from_end) {
+    1: switch_df7d3000_graphics_subtype_back;
+    switch_df7d3000_graphics_front;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df7d3000_graphics, num_vehs_in_vehid_chain % 6) {
+    0: switch_df7d3000_graphics_joint;
+    3: switch_df7d3000_graphics_split;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, df7d3000) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_DF7D3000);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        variant_group:					5158;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1995,12,01);
+        model_life:                     60;
+        retire_early:                   30;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          100 km/h;
+        power:                          2000 kW;
+        weight:                         138 ton;
+        tractive_effort_coefficient:    0.316;
+        cost_factor:                    93;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            35;
+        reliability_decay:              8;
+        bitmask_vehicle_info:           0;
+    }
+    graphics {
+        // Menu
+        additional_text:                        string(STR_DESC_3, string(STR_FULL_NAME_DF7D), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_LOW, 8));
+        // The Same as NJ2
+        can_attach_wagon:                       locowagon;
+        cargo_subtype_text:                     switch_df7d3000_cargo_subtype;
+
+        // Graphics
+        default:                                switch_df7d3000_graphics;
+        purchase:                               spriteset_df7d3000_purchase;
+        articulated_part:                       switch_df7d3000_articulated_part;
+
+        // Stats
+        length:                                 switch_length_2_6_2;
+        cargo_capacity:                         0;
+        cost_factor:                            71;
+        running_cost_factor:                    48 * runningcostfactor();
+        purchase_running_cost_factor:           196;
+        purchase_cargo_capacity:                0;
+        name:                                   switch_df7d3000_name;
+    }
+}
+
+// End DF7D3000
+
