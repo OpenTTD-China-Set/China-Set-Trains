@@ -73,7 +73,7 @@ item (FEAT_TRAINS, kd25c) {
         articulated_part:               switch_kd25c_articulated_part;
 
         // Stats
-        length:                         switch_length_2_7_2;
+        length:                         switch_length_2_6_2;
         cargo_capacity:                 0;
         cargo_age_period:               200 << param_cargo_decay;
         cost_factor:                    23;
