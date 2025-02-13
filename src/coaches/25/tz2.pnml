@@ -28,6 +28,7 @@ switch (FEAT_TRAINS, SELF, switch_tz2_articulated_part, extra_callback_info1) {
 switch (FEAT_TRAINS, SELF, switch_tz2_cargo_subtype, cargo_subtype) {
     0: string(STR_BUILD_YEAR);
     1: string(STR_ORIGINAL);
+    2: string(STR_RED);
     return CB_RESULT_NO_TEXT;
 }
 
