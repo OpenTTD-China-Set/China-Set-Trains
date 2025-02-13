@@ -25,6 +25,12 @@ spriteset (spriteset_tz_beijing2shanghai_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPT
 spriteset (spriteset_tz_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "tz-guangzhou")
 }
+spriteset (spriteset_tz_xianxing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "tz-xianxing")
+}
+spriteset (spriteset_tz_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "tz-alternative")
+}
 
 switch (FEAT_TRAINS, SELF, switch_tz_articulated_part, extra_callback_info1) {
     1..2: return tz;
@@ -36,6 +42,8 @@ switch (FEAT_TRAINS, SELF, switch_tz_cargo_subtype, cargo_subtype) {
     1: return string(STR_BEIJING2SHANGHAI);
     2: return string(STR_BEIJING2SHANGHAIALT);
     3: return string(STR_GUANGSHEN);
+    4: return string(STR_XIANXING);
+    5: return string(STR_ALTERNATIVE);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -44,6 +52,8 @@ switch (FEAT_TRAINS, SELF, switch_tz_graphics_subtype, cargo_subtype) {
     1: spriteset_tz_beijing2shanghai;
     2: spriteset_tz_beijing2shanghai_alternative;
     3: spriteset_tz_guangzhou;
+    4: spriteset_tz_xianxing;
+    5: spriteset_tz_alternative;
 }
 
 switch (FEAT_TRAINS, SELF, switch_tz_graphics, position_in_articulated_veh % 3) {

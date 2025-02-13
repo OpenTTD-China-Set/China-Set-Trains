@@ -20,10 +20,13 @@ spriteset (spriteset_yW25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/yw25t-green")
 }
 spriteset (spriteset_yw25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t/yw25t-xz-1")
+    template_standard ("coaches", "25t/yw25t-xz")
 }
 spriteset (spriteset_bspyw25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t/bspyw25t-xz-1")
+    template_standard ("coaches", "25t/bspyw25t-xz")
+}
+spriteset (spriteset_yw25t_int_dprk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/yw25t-int-dprk")
 }
 
 
@@ -38,6 +41,7 @@ switch (FEAT_TRAINS, SELF, switch_yw25t_cargo_subtype, cargo_subtype) {
     2: string(STR_GAOZU_GREEN);
     3: string(STR_QINGZANG);
     4: string(STR_QINGZANG_BSP);
+    5: string(STR_INTERNATIONAL_DPRK);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -56,6 +60,7 @@ switch (FEAT_TRAINS, SELF, switch_yw25t_graphics_subtype, cargo_subtype) {
     2: spriteset_yW25t_green;
     3: spriteset_yw25t_qingzang;
     4: spriteset_bspyw25t_qingzang;
+    5: spriteset_yw25t_int_dprk;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw25t_graphics, position_in_articulated_veh % 3) {

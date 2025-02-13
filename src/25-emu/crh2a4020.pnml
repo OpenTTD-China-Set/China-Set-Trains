@@ -1,0 +1,207 @@
+// Begin CRH2A4020
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_crh2a4020_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-emu/crh2a4020", "crh2a4020-c")
+}
+
+// Vehicle
+spriteset (spriteset_crh2a4020_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh2a4020", "crh2a4020-m") 
+}
+spriteset (spriteset_crh2a4020_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh2a4020", "crh2a4020-c")
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_articulated_part, extra_callback_info1) {
+    1..2: return crh2a4020;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_crh2a4020_front;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_head_capacity, position_in_articulated_veh % 3) {
+    1: return 25;
+    return 0;
+}
+
+//GFX
+
+
+
+/* switch (FEAT_TRAINS, SELF, switch_crh2a_if_middle_wagon_tp_short, (position_in_consist / 3) + 1 - (num_vehs_in_consist / 12)) {//8节时，后面的参数为2，此时4,6节有动力
+    2: spriteset_crh2a_middle_p;
+    4: spriteset_crh2a_middle_p_reversed;
+    spriteset_crh2_middle_m;
+} */
+
+
+switch (FEAT_TRAINS, SELF, switch_crh2a_2nd_wagon, (position_in_consist / 3) == 1) {
+    1: spriteset_crh2a4020_middle_m;
+    switch_crh2a_if_middle_wagon_tp_short;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_if_wagon_end, position_in_consist_from_end == 1) {
+    1: spriteset_crh2a_cab;
+    switch_crh2a_2nd_wagon;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_wagon_graphics, (position_in_consist_from_end % 3) == 1) {
+    1: switch_crh2a4020_if_wagon_end;
+    empty_sprites;
+}
+//cap
+
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_wagon_length, position_in_consist_from_end) {
+    switch_length_2_8_2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_middle_capacity_1, vehicle_type_id) {
+    kymuw: return 25;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_middle_capacity, position_in_articulated_veh % 3) {
+    1: switch_crh2a4020_middle_capacity_1;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_cab_capacity_1, vehicle_type_id) {
+    kymuw: return 25;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_cab_capacity, position_in_articulated_veh % 3) {
+    1: switch_crh2a4020_cab_capacity_1;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_wagon_capacity, position_in_consist_from_end <= 3) {
+    0: switch_crh2a4020_middle_capacity;
+    switch_crh2a4020_cab_capacity;
+}
+//Cost
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_wagon_running_power, vehicle_type_id) {
+    kymuw: return 43;
+    return 0;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_wagon_running_unpower, vehicle_type_id) {
+    kymuw: return 4;
+    return 0;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_wagon_running, vehicle_is_potentially_powered) {
+    1: switch_crh2a4020_wagon_running_power;
+    switch_crh2a4020_wagon_running_unpower;
+}
+
+//power
+
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_wagon_short_pw, position_in_consist % 12) {
+    3..8: return 1529; // 1529 HP = 1140 KW
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_wagon_power, position_in_consist_from_end) {
+    0..2: return 0;
+    switch_crh2a4020_wagon_short_pw;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh2a4020_wagon_traction, vehicle_is_potentially_powered) {
+    1: return int(0.118*255);
+    return 0;
+}
+
+
+item (FEAT_TRAINS, crh2a4020) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CRH2A4020);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        variant_group:					crh2a;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2024,04,23);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   20;
+        track_type:                     SAAA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_MAIL, CC_ARMOURED);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [MAIL, VALU, GOLD, DIAM, GOOD];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               200 << param_cargo_decay;
+
+        // Stats
+        speed:                          250 km/h;
+        power:                          1140 kW;
+        weight:                         47 ton;
+        tractive_effort_coefficient:    0.118;
+        cost_factor:                    1;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            1;
+        reliability_decay:              20;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_5, string(STR_CARGOMU_CAN_ATTACH_WAGON), string(STR_CRH2A4020_DESC), string(STR_RELDEC_HIGH, 20), string(STR_FRESHNESS_MEDIUM, 200), string(STR_CRH2A4020_CONSIST));
+        can_attach_wagon:               onlycargo;
+        start_stop:                     mu4to12car;
+        // Graphics
+        default:                        switch_crh2a4020_graphics;
+        purchase:                       spriteset_crh2a4020_purchase_original;
+        articulated_part:               switch_crh2a4020_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_crh2a4020_head_capacity;
+        power:                          return 0;
+        purchase_power:                 return 1529;
+        tractive_effort_coefficient:    return 0;
+        purchase_tractive_effort_coefficient: return int(0.118*255);
+        cargo_age_period:               (200) << (param_cargo_decay + param_wagoncargodecay);
+        cost_factor:                    48;
+        running_cost_factor:            43 * runningcostfactor() + 20;
+        purchase_running_cost_factor:   192;
+        purchase_cargo_capacity:        25/3;
+        name:                           switch_crh2a_name;
+    }
+
+    // Multiple Unit Wagons
+    livery_override(kymuw) {
+        default:                        switch_crh2a4020_wagon_graphics;
+        cargo_capacity:                 switch_crh2a4020_wagon_capacity;
+        power:                          switch_crh2a4020_wagon_power;
+        tractive_effort_coefficient:    switch_crh2a4020_wagon_traction;
+        length:                         switch_crh2a4020_wagon_length;
+        weight:                         47;
+        can_attach_wagon:               cargomuhead;
+        cargo_age_period:               (200) << (param_cargo_decay + param_wagoncargodecay);
+        bitmask_vehicle_info:           return 0;
+        articulated_part:               switch_kymuw_articulated_part;
+        running_cost_factor:            switch_crh2a4020_wagon_running() * runningcostfactor();
+    }
+}
+
+// End crh2a

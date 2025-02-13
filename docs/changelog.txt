@@ -5,6 +5,19 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.4.178 (11/02/2025)
+--------------------
+Fix #56: Incorrect tractive effort coefficient of CRH2A/B in purchase menu
+Fix #57: RW25K bought after 2014 not defaulting to "Gaozu Green" livery 
+Fix #58: DF11G use wrong sprites
+Fix #59: Remove unreal liveries of S25K series
+Add：CRH2A-4020, SYZ25, SRZ25, 25 Series (Sanshui-Maoming Railway), SCA25B, DF9, DF7D Series
+Add Liveries: RW25K (Internatinal Transport, Lake Blue), RW25T & YW25T (Internatinal Transport), 25G Series (GMS, Fulong), 25B Series (XiYan), 25Z Series (GuangShen), S25B Series (Urumqi, Hohhot, Harbin, Xianxing, 93/94 Train, Gaozu Green, Liaodong, Red, Orange, Dacheng, Xi'an), TZ (Xianxing), S25K Series, KD25K (Lake Blue), CRH1A/CRH5A (Early)
+
+0.3.4.177 (07/02/2025)
+--------------------
+Add: CR200JSG, CRH5G (Technology-Enhanced), Beijing Series Locomotives, DF2, 25C Series, DF3, DJF1, CR380AJ
+
 0.3.3.176 (21/10/2024)
 --------------------
 Fix #55: wagon sprite errors

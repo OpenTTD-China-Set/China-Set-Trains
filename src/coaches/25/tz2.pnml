@@ -9,15 +9,15 @@ switch (FEAT_TRAINS, SELF, switch_tz2_name, getbits(extra_callback_info1, 0, 8) 
 
 // Purchase Menu
 spriteset (spriteset_tz2_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "tz2-sfk50")
+    template_purchase ("coaches/25", "tz2-sfk50")
 }
 
 // Vehicle
 spriteset (spriteset_tz2_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "tz2-sfk50")
+    template_standard ("coaches/25", "tz2-sfk50")
 }
 spriteset (spriteset_tz2_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "tz2-sfk50-red")
+    template_standard ("coaches/25", "tz2-sfk50-red")
 }
 
 switch (FEAT_TRAINS, SELF, switch_tz2_articulated_part, extra_callback_info1) {
@@ -28,6 +28,7 @@ switch (FEAT_TRAINS, SELF, switch_tz2_articulated_part, extra_callback_info1) {
 switch (FEAT_TRAINS, SELF, switch_tz2_cargo_subtype, cargo_subtype) {
     0: string(STR_BUILD_YEAR);
     1: string(STR_ORIGINAL);
+    2: string(STR_RED);
     return CB_RESULT_NO_TEXT;
 }
 

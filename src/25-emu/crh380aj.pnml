@@ -1,36 +1,33 @@
-// Begin crh380aj
-switch (FEAT_TRAINS, SELF, switch_crh380aj_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_CRH380A_SERIES);
-    return CB_RESULT_NO_TEXT;
-}
+// Begin CRH380AJ
+
 // Graphics
 
 // Purchase Menu
 spriteset (spriteset_crh380aj_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("25-emu", "crh380aj-tc")
+    template_purchase ("25-emu/crh380aj", "crh380aj-tc")
 }
 
 // Vehicle
 spriteset (spriteset_crh380aj_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh380aj-tc")
+    template_standard ("25-emu/crh380aj", "crh380aj-tc")
 }
 spriteset (spriteset_crh380aj_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh380aj-t")
+    template_reversed ("25-emu/crh380aj", "crh380aj-t")
 }
 spriteset (spriteset_crh380aj_middle_p, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "crh380aj-tp")
+    template_reversed ("25-emu/crh380aj", "crh380aj-tp")
 }
 spriteset (spriteset_crh380aj_middle_p_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "crh380aj-tp-r")
+    template_reversed ("25-emu/crh380aj", "crh380aj-tp-r")
 }
 spriteset (spriteset_crh380aj_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "crh380aj-tc")
+    template_reversed ("25-emu/crh380aj", "crh380aj-tc")
 }
 spriteset (spriteset_crh380aj_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "crh380aj-tc-c")
+    template_reversed ("25-emu/crh380aj", "crh380aj-tc-c")
 }
 spriteset (spriteset_crh380aj_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh380aj-tc-c")
+    template_standard ("25-emu/crh380aj", "crh380aj-tc-c")
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh380aj_articulated_part, extra_callback_info1) {
@@ -38,35 +35,37 @@ switch (FEAT_TRAINS, SELF, switch_crh380aj_articulated_part, extra_callback_info
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh380aj_graphics_middle, position_in_articulated_veh % 24) {
-    1: spriteset_crh380aj_cab_reconect_reversed;
+switch (FEAT_TRAINS, SELF, switch_crh380aj_graphics_cab, position_in_consist_from_end) {
+    1: spriteset_crh380aj_cab;
+    spriteset_crh380aj_cab_reconect;
+}
+switch (FEAT_TRAINS, SELF, switch_crh380aj_graphics_front, position_in_consist) {
+    1: spriteset_crh380aj_front;
+    spriteset_crh380aj_cab_reconect_reversed;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh380aj_graphics, position_in_articulated_veh % 24) {
+    1: switch_crh380aj_graphics_front;
     4: spriteset_crh380aj_middle_m;
     7: spriteset_crh380aj_middle_m;  
     10: spriteset_crh380aj_middle_p;
     13: spriteset_crh380aj_middle_p_reversed;
     16: spriteset_crh380aj_middle_m;
     19: spriteset_crh380aj_middle_m;
-    22: spriteset_crh380aj_cab_reconect;
+    22: switch_crh380aj_graphics_cab;
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh380aj_graphics_cab, position_in_consist_from_end) {
-    1: spriteset_crh380aj_cab;
-    switch_crh380aj_graphics_middle;
+switch (FEAT_TRAINS, SELF, onlycrh380aj, vehicle_type_id) {
+    crh380aj: onlyallowcst;
+    return CB_RESULT_ATTACH_DISALLOW;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh380aj_graphics, position_in_consist) {
-    1: spriteset_crh380aj_front;
-    switch_crh380aj_graphics_cab;
-}
 
-switch (FEAT_TRAINS, SELF, switch_crh380aj_head_capacity, position_in_articulated_veh % 3) {
-    1: return 32;
-    return 0;
-}
 
 switch (FEAT_TRAINS, SELF, switch_crh380aj_speed, cargo_subtype) {
-    1: return 486;
+    1: return 452;
     return 385;
 }
 
@@ -84,7 +83,7 @@ item (FEAT_TRAINS, crh380aj) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        variant_group:					9236;
+        variant_group:					crh380a;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -103,23 +102,23 @@ item (FEAT_TRAINS, crh380aj) {
         ai_special_flag:                AI_FLAG_PASSENGER;
         cargo_capacity:                 1;
         loading_speed:                  8 << param_loading_speed;
-        cargo_age_period:               400 << param_cargo_decay;
+        cargo_age_period:               185 << param_cargo_decay;
 
         // Stats
         speed:                          385 km/h;
         power:                          11200 kW;
         weight:                         409 ton;
-        tractive_effort_coefficient:    0.6225;
-        cost_factor:                    68;
+        tractive_effort_coefficient:    0.0623;
+        cost_factor:                    1;
         running_cost_base:              RUNNING_COST_ELECTRIC;
-        running_cost_factor:            0;
+        running_cost_factor:            1;
         reliability_decay:              12;
         bitmask_vehicle_info:           bitmask(2);
 
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_6, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH380A_NICKNAME), string(STR_RELDEC_LOW, 12), string(STR_CRH380A_CONSIST), string(STR_CRH380A_HEAD_SEAT), string(STR_350_380_AVAILABLE));
+        additional_text:                string(STR_DESC_6, string(STR_RELDEC_VERY_LOW, 4), string(STR_CRH380AJ_AVAILABLE));
         can_attach_wagon:               onlycrh380aj;
         start_stop:                     mu4to24car;
         cargo_subtype_text:             switch_crh380aj_cargo_subtype;
@@ -134,13 +133,12 @@ item (FEAT_TRAINS, crh380aj) {
         speed:                          switch_crh380aj_speed;
         purchase_tractive_effort_coefficient: return int(0.083*255);
         cargo_capacity:                 0;
-        cargo_age_period:               100 * cafedecayfactor() << param_cargo_decay;
-        cost_factor:                    68;
+        cost_factor:                    67;
         running_cost_factor:            0;
         purchase_running_cost_factor:   0;
         purchase_cargo_capacity:        0;
-        name:                           switch_crh380aj_name;
+        name:                           switch_crh380a_name;
     }
 }
 
-// End crh380aj
+// End CRH380AJ

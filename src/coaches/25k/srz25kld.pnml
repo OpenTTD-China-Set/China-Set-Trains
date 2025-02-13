@@ -1,31 +1,25 @@
 //Begin SRZ25KLD
-switch (FEAT_TRAINS, SELF, switch_srz25kld_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_S25KLD_SERIES);
-    return CB_RESULT_NO_TEXT;
-}
-
-
 // Graphics
 
-// // Purchase Menu
-// spriteset (spriteset_srz25kld_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-//     template_purchase ("coaches", "25k")
-// }
+// Purchase Menu
+spriteset (spriteset_srz25kld_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25k/srz25kld-luchaogang")
+}
 
-// // Vehicle
-// spriteset (spriteset_srz25kld_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-//     template_12_standard ("coaches", "25k")
-// }
+// Vehicle
+spriteset (spriteset_srz25kld_luchaogang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25k/srz25kld-luchaogang")
+}
 
 switch (FEAT_TRAINS, SELF, switch_srz25kld_articulated_part, extra_callback_info1) {
     1..2: return srz25kld;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-// switch (FEAT_TRAINS, SELF, switch_srz25kld_graphics, position_in_articulated_veh % 3) {
-//     0: spriteset_srz25kld_original;
-//     empty_sprites;
-// }
+switch (FEAT_TRAINS, SELF, switch_srz25kld_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_srz25kld_luchaogang;
+    empty_sprites;
+}
 
 switch (FEAT_TRAINS, SELF, switch_srz25kld_capacity, position_in_articulated_veh % 3) {
     1: return 108;
@@ -39,7 +33,7 @@ item (FEAT_TRAINS, srz25kld) {
         name:                           string(STR_NAME_SRZ25KLD);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					2083;
+        variant_group:					syz25kld;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -70,13 +64,12 @@ item (FEAT_TRAINS, srz25kld) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SRZ25K), string(STR_S25KLD_LIVERY_AVAILABILITY), string(STR_COMFORT_MEDIUM, 192));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SRZ25K), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_COMFORT_MEDIUM, 192));
         can_attach_wagon:               locowagon;
-        cargo_subtype_text:             switch_s25kld_cargo_subtype;
 
         // Graphics
-        default:                        switch_s25kld_graphics;
-        purchase:                       spriteset_s25kld_purchase;
+        default:                        switch_srz25kld_graphics;
+        purchase:                       spriteset_srz25kld_purchase;
         articulated_part:               switch_srz25kld_articulated_part;
 
         // Stats
@@ -87,7 +80,7 @@ item (FEAT_TRAINS, srz25kld) {
         running_cost_factor:            8 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   32;
         purchase_cargo_capacity:        108/3;
-        name:                            switch_srz25kld_name;
+        name:                           switch_s25k_name;
 
     }
 }

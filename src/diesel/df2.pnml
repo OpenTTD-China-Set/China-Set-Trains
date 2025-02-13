@@ -1,0 +1,94 @@
+// Begin DF2
+/* switch (FEAT_TRAINS, SELF, switch_df2_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_DF5_SERIES);
+    return CB_RESULT_NO_TEXT;
+} */
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_df2_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "df2")
+}
+
+// Vehicle
+spriteset (spriteset_df2_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df2")
+}
+
+
+
+
+switch (FEAT_TRAINS, SELF, switch_df2_articulated_part, extra_callback_info1) {
+    1..2: return df2;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_df2_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_df2_original;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, df2) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_DF2);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1964,10,01);
+        model_life:                     60;
+        retire_early:                   35;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          100 km/h;
+        power:                          930 kW;
+        weight:                         120 ton;
+        tractive_effort_coefficient:    0.271;
+        cost_factor:                    1;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            1;
+        reliability_decay:              12;
+        bitmask_vehicle_info:           0;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_DF2), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_LOW, 12));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_df2_graphics;
+        purchase:                       spriteset_df2_purchase;
+        articulated_part:               switch_df2_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_4_2;
+        cargo_capacity:                 0;
+        cost_factor:                    53;
+        running_cost_factor:            35 * runningcostfactor();
+        purchase_running_cost_factor:   140;
+        purchase_cargo_capacity:        0;
+/*         name:                           switch_df2_name; */
+    }
+}
+
+// End DF2

@@ -1,20 +1,16 @@
 //Begin SRW25KHD
-switch (FEAT_TRAINS, SELF, switch_srw25khd_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_S25KHD_SERIES);
-    return CB_RESULT_NO_TEXT;
-}
 
 
 // Graphics
 
 // Purchase Menu
 spriteset (spriteset_srw25khd_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25k/srw25khd-xian")
+    template_standard ("coaches", "25k/srw25khd-blue-red")
 }
 
 // Vehicle
-spriteset (spriteset_srw25khd_xian, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25k/srw25khd-xian")
+spriteset (spriteset_srw25khd_blue_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25k/srw25khd-blue-red")
 }
 
 switch (FEAT_TRAINS, SELF, switch_srw25khd_articulated_part, extra_callback_info1) {
@@ -22,13 +18,9 @@ switch (FEAT_TRAINS, SELF, switch_srw25khd_articulated_part, extra_callback_info
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, switch_srw25khd_graphics_subtype, cargo_subtype) {
-    0: spriteset_s25khd_xianxing;
-    1: spriteset_srw25khd_xian;
-}
 
 switch (FEAT_TRAINS, SELF, switch_srw25khd_graphics, position_in_articulated_veh % 3) {
-    1: switch_srw25khd_graphics_subtype;
+    1: spriteset_srw25khd_blue_red;
     empty_sprites;
 }
 
@@ -44,7 +36,7 @@ item (FEAT_TRAINS, srw25khd) {
         name:                           string(STR_NAME_SRW25KHD);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					2089;
+        variant_group:					syz25kld;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -75,9 +67,8 @@ item (FEAT_TRAINS, srw25khd) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SRW25K), string(STR_S25KHD_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 384));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_SRW25K), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_COMFORT_HIGH, 384));
         can_attach_wagon:               locowagon;
-        cargo_subtype_text:             switch_s25khd_cargo_subtype;
 
         // Graphics
         default:                        switch_srw25khd_graphics;
@@ -92,7 +83,7 @@ item (FEAT_TRAINS, srw25khd) {
         running_cost_factor:            13 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   52;
         purchase_cargo_capacity:        50/3;
-        name:                            switch_srw25khd_name;
+        name:                           switch_s25k_name;
 
     }
 }

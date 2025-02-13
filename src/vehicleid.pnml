@@ -34,6 +34,7 @@ item (FEAT_TRAINS, xlmuw, 1051) {}
 
 //Unit Wagons for Cargoes on RAIL/ELRL: 1536-1663
 #define id_range_unit_wagons_RAIL_CARGO 0x0600..0x067F
+item (FEAT_TRAINS, kymuw, 1536) {}
 
 //Unit Wagons on MONO: 1663-1791
 #define id_range_unit_wagons_MONO 0x0680..0x06FF
@@ -141,8 +142,19 @@ item (FEAT_TRAINS, yz1, 2138) {}
 item (FEAT_TRAINS, uz25k, 2139) {}
 item (FEAT_TRAINS, uz25b, 2140) {}
 item (FEAT_TRAINS, ca25b, 2141) {}
-
-
+item (FEAT_TRAINS, rz225c, 2142) {}
+item (FEAT_TRAINS, rz125c, 2143) {}
+item (FEAT_TRAINS, ca25c, 2144) {}
+item (FEAT_TRAINS, kd25c, 2145) {}
+item (FEAT_TRAINS, syz25, 2146) {}
+item (FEAT_TRAINS, srz25, 2147) {}
+item (FEAT_TRAINS, yz25sm, 2148) {}
+item (FEAT_TRAINS, rz25sm, 2149) {}
+item (FEAT_TRAINS, yw25sm, 2150) {}
+item (FEAT_TRAINS, rw25sm, 2151) {}
+item (FEAT_TRAINS, ca25sm, 2152) {}
+item (FEAT_TRAINS, kd25sm, 2153) {}
+item (FEAT_TRAINS, sca25bhd, 2154) {}
 
 item (FEAT_TRAINS, luggageroom_s25, 3070) {}
 item (FEAT_TRAINS, luggageroom_25, 3071) {}
@@ -243,6 +255,15 @@ item (FEAT_TRAINS, hxn3, 5148) {}
 item (FEAT_TRAINS, hxn3qz, 5149) {}
 item (FEAT_TRAINS, dfh3, 5150) {}
 item (FEAT_TRAINS, df3, 5151) {}
+item (FEAT_TRAINS, beijing_passenger, 5152) {}
+item (FEAT_TRAINS, beijing_freight, 5153) {}
+item (FEAT_TRAINS, beijing_special, 5154) {}
+item (FEAT_TRAINS, beijing_reconnect_freight, 5155) {}
+item (FEAT_TRAINS, df2, 5156) {}
+item (FEAT_TRAINS, df11plateau, 5157) {}
+item (FEAT_TRAINS, df7d, 5158) {}
+item (FEAT_TRAINS, df7d3000, 5159) {}
+item (FEAT_TRAINS, df9, 5160) {}
 
 //25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
 #define id_range_25_electric 0x1800..0x1BFF
@@ -346,6 +367,8 @@ item (FEAT_TRAINS, cr400afae, 9260) {}
 item (FEAT_TRAINS, crh5e, 9261) {}
 item (FEAT_TRAINS, crh5gjt, 9262) {}
 item (FEAT_TRAINS, crh380aj, 9263) {}
+item (FEAT_TRAINS, djf1, 9264) {}
+
 
 
 
@@ -380,7 +403,7 @@ item (FEAT_TRAINS, cr200jsg_diesel, 13313) {}
 
 //25kV AC Cargo EMU, available ID range: 15616-16127 (hex 0x3D00..0x3EFF)
 #define id_range_25_cargo_emu 0x3D00..0x3EFF
-
+item (FEAT_TRAINS, crh2a4020, 15616) {}
 
 //Multi Power Cargo MU, available range: 16128..16383 (hex 0x3F00..0x3FFF)
 #define id_range_multi_cargo_mu 0x3F00..0x3FFF

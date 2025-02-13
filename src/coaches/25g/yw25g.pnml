@@ -26,8 +26,14 @@ spriteset (spriteset_yw25g_jinwen_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_yw25g_gmsr, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "yw25g-gmsr")
 }
+spriteset (spriteset_yw25g_gmsr_early, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "yw25g-gmsr-early")
+}
 spriteset (spriteset_yw25g_hejiu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "yw25g-hejiu")
+}
+spriteset (spriteset_yw25g_fulong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "yw25g-fulong")
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw25g_articulated_part, extra_callback_info1) {
@@ -42,7 +48,9 @@ switch (FEAT_TRAINS, SELF, switch_yw25g_cargo_subtype, cargo_subtype) {
     3: return string(STR_JINWEN);
     4: return string(STR_JINWEN_GREEN);
     5: return string(STR_GMSR);
-    6: return string(STR_HEJIU);
+    6: return string(STR_GMSR_EARLY);
+    7: return string(STR_HEJIU);
+    8: return string(STR_FULONG);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -61,7 +69,9 @@ switch (FEAT_TRAINS, SELF, switch_yw25g_graphics_subtype, cargo_subtype) {
     3: spriteset_yw25g_jinwen;
     4: spriteset_yw25g_jinwen_green;
     5: spriteset_yw25g_gmsr;
-    6: spriteset_yw25g_hejiu;
+    6: spriteset_yw25g_gmsr_early;
+    7: spriteset_yw25g_hejiu;
+    8: spriteset_yw25g_fulong;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw25g_graphics, position_in_articulated_veh % 3) {
@@ -112,7 +122,7 @@ item (FEAT_TRAINS, yw25g) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YW25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN), string(STR_GMSR), string(STR_HEJIU)), string(STR_COMFORT_HIGH, 288));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YW25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN), string(STR_GMSR), string(STR_GMSR_EARLY), string(STR_HEJIU), string(STR_FULONG)), string(STR_COMFORT_HIGH, 288));
         can_attach_wagon:               locowagon;
 
         // Graphics

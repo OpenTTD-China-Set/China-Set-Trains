@@ -1,0 +1,91 @@
+//Begin RW25SM
+
+
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_rw25sm_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches/25", "rw25-sm")
+}
+
+// Vehicle
+spriteset (spriteset_rw25sm_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25", "rw25-sm")
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25sm_articulated_part, extra_callback_info1) {
+    1..2: return rw25sm;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25sm_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_rw25sm_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25sm_capacity, position_in_articulated_veh % 3) {
+    1: return 36;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, rw25sm) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_RW25SM);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					yz25ml;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1992,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 36;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               444 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          0 hp;
+        weight:                         47.5 ton;
+        cost_factor:                    13;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            11;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RW25SM), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_COMFORT_HIGH, 384));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_rw25sm_graphics;
+        purchase:                       spriteset_rw25sm_purchase_original;
+        articulated_part:               switch_rw25sm_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_rw25sm_capacity;
+        cargo_age_period:               (24 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    14;
+        running_cost_factor:            11 * runningcostfactor() * cafecostfactor() + accostfactor();
+        purchase_running_cost_factor:   44;
+        purchase_cargo_capacity:        36/3;
+        name:                           switch_25sm_name;
+
+    }
+}
+
+// End RW25SM

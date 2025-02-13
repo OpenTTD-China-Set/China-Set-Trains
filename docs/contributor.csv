@@ -1,5 +1,5 @@
 ﻿name,,Coder,Artist,Livery Artist
-CR200J1,,JF*Recoded by Babel,Babel,
+CR200J1,,JF*Recoded by Babel,Babel,prototype:EMB
 CRH2C,,JF*Recoded by Babel,Babel,
 CR200J-B,,JF*Recoded by Babel,Babel,
 CRH3A,,JF*Recoded by Babel,Qipaoxian,
@@ -11,7 +11,6 @@ CRH2G,,JF*Recoded by Babel,"Qipaoxian,Babel",
 CRH380CL,,JF,Qipaoxian,
 CRH6A2,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
 CRH6A3,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
-,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
 CRH6A-A,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
 CRH6F,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
 CRH380A,,Babel,"Qipaoxian,Babel",
@@ -21,20 +20,16 @@ CRH380D,,Babel,"Qipaoxian,Babel",
 CRH2A/B,,Babel,Babel,
 CRH2E,,Babel,Babel,
 CRH2ELS,,Babel,"Haiyan,Qipaoxian",
-"CR400AF/
-AF-A/AF-B",,Babel,Qipaoxian,
-"CR400AF-C/Z/S/AZ
-/BZ/BS",,Babel,"Qipaoxian,Nengyeqing",
+CR400AF/AF-A/AF-B,,Babel,Qipaoxian,
+CR400AF-C/Z/S/AZ/BZ/BS,,Babel,"Qipaoxian,Nengyeqing",
 CR300AF,,Babel,"Qipaoxian,Nengyeqing",
 CR300BF,,Babel,"Qipaoxian,Babel",
 NC3,,Babel,EMB,
 CRH1A/B,,JF*Recoded by Babel,"Qipaoxian,Babel",
 CRH1E,,JF,Qipaoxian,
 CRH1AA,,Babel,"Qipaoxian,Babel",
-"CR400BF/
-BF-A/BF-B",,Babel,"Qipaoxian,Babel",
-"CR400BF-Z/S/AZ
-/BZ/BS",,Babel,"Qipaoxian,Nengyeqing",
+CR400BF/BF-A/BF-B,,Babel,"Qipaoxian,Babel",
+CR400BF-Z/S/AZ/BZ/BS,,Babel,"Qipaoxian,Nengyeqing",
 CR400BF-C,,Babel,"Qipaoxian,Babel",
 DJF3,,Babel,Qipaoxian,
 DJJ2,,Babel,Qipaoxian,
@@ -42,6 +37,10 @@ CR400AFAE,,Babel,"Qipaoxian,Haiyan",
 CRH5A,,JF*Recoded by Babel,"Qipaoxian,Babel",
 CRH5GJT,,,Qipaoxian,
 CRH5E,,Babel,Qipaoxian,
+CR200JSG,,"5033,Babel","5033,EMB,Babel",
+CRH380AJ,,"5033,Babel","Qipaoxian,Haiyan",
+DJF1,,Babel,Qipaoxian,
+CRH2A4020,,Babel,Babel,
 JF1,jf1,JF,EMB,
 Mikai,,,,
 SL6,sl6,JF,EMB,
@@ -100,7 +99,6 @@ HXD11000,hxd11000,wuwu,"DF43110,Babel",
 HXD1F,hxd1f,wuwu,DF43110,
 DF4E,df4e,wuwu,wuwu,
 SS1,ss1,wuwu,mikhail,
-DF4BNB,df4bnb,wuwu,Mikhail,"wuwu, DF43110"
 SS7D,ss7d,wuwu,wuwu,
 SS9,ss9,wuwu,wuwu,
 SS9G,ss9g,wuwu,wuwu,
@@ -114,6 +112,12 @@ CHA1A,,Babel,NACHN,
 SS4B,,wuwu,NACHN,
 SS4C,,wuwu,wuwu,
 DFH3,dfh3,wuwu,EMB,
+BEIJING Series,,Babel,EMB,EMB
+DF2,,Babel,EMB,
+DF11Plateau,,Babel,"NACHN,EMB",
+DF3,,5033,EMB,
+DF7D,,wuwu,"EMB, wuwu",
+DF9,,wuwu,wuwu,
 C64,,JF,Babel,
 P62,,JF,Babel,
 G60,,JF,Babel,Other Colaor: Sunjuzhensun
@@ -173,13 +177,13 @@ YZ25K,yz25k,JF,Haiyan,All: Haiyan
 RZ25K,rz25k,JF,Haiyan,All: Haiyan
 YW25K,yw25k,JF,Haiyan,All: Haiyan
 RW25K,rw25k,JF,Haiyan,All: Haiyan
-SYZ25KLD,syz25kld,JF,wuwu,
-SRZ25KLD,srz25kld,JF,wuwu,
-SYZ25KHD,syz25khd,JF,wuwu,
-SRZ25KHD,srz25khd,JF,wuwu,
-SYW25KHD,syw25khd,JF,wuwu,
-SRW25KHD,srw25khd,JF,wuwu,
-SCA25KHD,sca25khd,JF,wuwu,
+SYZ25KLD,syz25kld,JF,Haiyan,
+SRZ25KLD,srz25kld,JF,Haiyan,
+SYZ25KHD,syz25khd,JF,Haiyan,All: Haiyan
+SRZ25KHD,srz25khd,JF,Haiyan,All: Haiyan
+SYW25KHD,syw25khd,JF,Haiyan,
+SRW25KHD,srw25khd,JF,Haiyan,
+SCA25KHD,sca25khd,JF,Haiyan,
 KD25G,kd25g,JF,Haiyan,"Nanhu: wuwu,Other: Haiyan"
 KD25K,kd25k,JF,Haiyan,All: Haiyan
 XL25T-SSPE,xl25t-sspe,JF,Babel,
@@ -187,12 +191,12 @@ YZ25B,yz25b,JF,Haiyan,All: Haiyan
 RZ25B,rz25b,JF,Haiyan,All: Haiyan
 YW25B,yw25b,JF,Haiyan,All: Haiyan
 RW25B,rw25b,JF,Haiyan,All: Haiyan
-SYZ25BLD,syz25bld,JF,Babel,wuwu
-SRZ25BLD,srz25bld,JF,Babel,wuwu
-SYZ25BHD,syz25bhd,JF,Babel,wuwu
-SRZ25BHD,srz25bhd,JF,Babel,wuwu
-SYW25BHD,syw25bhd,JF,Babel,wuwu
-SRW25BHD,srw25bhd,JF,Babel,wuwu
+SYZ25BLD,syz25bld,JF,Haiyan,All: Haiyan
+SRZ25BLD,srz25bld,JF,Haiyan,All: Haiyan
+SYZ25BHD,syz25bhd,JF,Haiyan,All: Haiyan
+SRZ25BHD,srz25bhd,JF,Haiyan,All: Haiyan
+SYW25BHD,syw25bhd,JF,Haiyan,All: Haiyan
+SRW25BHD,srw25bhd,JF,Haiyan,All: Haiyan
 YZ22B,yz22b,JF,Babel,AD: wuwu
 YW22B,yw22b,JF,Babel,
 RW22B,rw22b,JF,Babel,
@@ -222,7 +226,7 @@ YW22AIRCON,yw22aircon,wuwu,Haiyan,
 RW22AIRCON,rw22aircon,wuwu,Haiyan,
 CA23AIRCON,ca23aircon,wuwu,Haiyan,
 CA23,ca23,wuwu,Haiyan,
-TZ,tz,wuwu,Haiyan,
+TZ,tz,wuwu,Haiyan,Haiyan
 YZ25DT-JINLUN,rw25dt-jinlun,wuwu,EMB,
 YW25DT-JINLUN,rw25dt-jinlun,wuwu,EMB,
 RW25DT-JINLUN,rw25dt-jinlun,wuwu,EMB,
@@ -246,3 +250,9 @@ UZ25K,,Babel,Haiyan,
 SRZX125Z,srzxl25z,Babel,wuwu,
 UZ25B,,Babel,Haiyan,
 CA25B,,Babel,Haiyan,
+RZ125C,,Babel,Haiyan,
+RZ225C,,Babel,Haiyan,
+CA25C,,Babel,Haiyan,
+SYZ25,,Babel,Haiyan,
+SRZ25,,Babel,Haiyan,
+25SM Series,,Babel,Haiyan,

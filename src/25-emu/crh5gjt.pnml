@@ -15,7 +15,10 @@ spriteset (spriteset_crh5gjt_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu/crh5gjt", "crh5gjt-mc")
 }
 spriteset (spriteset_crh5gjt_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu/crh5gjt", "crh5gjt-m")
+    template_standard ("25-emu/crh5gjt", "crh5gjt-m1")
+}
+spriteset (spriteset_crh5gjt_middle_m2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh5gjt", "crh5gjt-m2")
 }
 spriteset (spriteset_crh5gjt_middle_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu/crh5gjt", "crh5gjt-tp")
@@ -53,10 +56,12 @@ switch (FEAT_TRAINS, SELF, switch_crh5gjt_head_capacity, position_in_articulated
 
 switch (FEAT_TRAINS, SELF, switch_crh5gjt_middle_graphics_unit_front, (position_in_consist / 3) + 1) {
     3: spriteset_crh5gjt_middle_tp;
+    4: spriteset_crh5gjt_middle_m2;
     spriteset_crh5gjt_middle_m;
 }
 switch (FEAT_TRAINS, SELF, switch_crh5gjt_middle_graphics_unit_back, (position_in_consist_from_end / 3) + 1) {
     3: spriteset_crh5gjt_middle_tp_r;
+    5: spriteset_crh5gjt_middle_m2;
     spriteset_crh5gjt_middle_m;
 }
 switch (FEAT_TRAINS, SELF, switch_crh5gjt_middle_graphics_short, (position_in_consist_from_end / 3) + 1) {
@@ -211,6 +216,7 @@ item (FEAT_TRAINS, crh5gjt) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
+        variant_group:                  crh5a;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -244,7 +250,7 @@ item (FEAT_TRAINS, crh5gjt) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH5GJT_NICKNAME), string(STR_RELDEC_LOW, 8), string(STR_CRH5GJT_CONSIST), string(STR_CRH5_HEAD_SEAT));
+        additional_text:                string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), /* string(STR_CRH5GJT_NICKNAME), */ string(STR_RELDEC_LOW, 8), string(STR_CRH5_CONSIST), string(STR_CRH5_HEAD_SEAT));
         can_attach_wagon:               crhwagon;
         start_stop:                     mu4to24car;
         // Graphics
