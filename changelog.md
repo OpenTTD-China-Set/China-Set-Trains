@@ -5,6 +5,10 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.4.179 (15/02/2025)
+--------------------
+Fix #60: DF11G sprite misalignments
+
 0.3.4.178 (11/02/2025)
 --------------------
 Fix #56: Incorrect tractive effort coefficient of CRH2A/B in purchase menu
