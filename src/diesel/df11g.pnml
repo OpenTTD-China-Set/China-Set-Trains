@@ -12,8 +12,14 @@ spriteset (spriteset_df11g_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_df11g_leaping, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("diesel", "df11g")
 }
-spriteset (spriteset_df11g_leaping_back_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed_11 ("diesel", "df11g")
+spriteset (spriteset_df11g_leaping_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed_10 ("diesel", "df11g")
+}
+spriteset (spriteset_df11g, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df11gb")
+}
+spriteset (spriteset_df11g_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed_10 ("diesel", "df11gb")
 }
 
 switch (FEAT_TRAINS, SELF, switch_df11g_articulated_part, extra_callback_info1) {
@@ -21,22 +27,38 @@ switch (FEAT_TRAINS, SELF, switch_df11g_articulated_part, extra_callback_info1) 
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+switch (FEAT_TRAINS, SELF, switch_df11g_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_LATER);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df11g_standard_graphics_subtype, cargo_subtype) {
+    0: spriteset_df11g_leaping;
+    1: spriteset_df11g;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df11g_reversed_graphics_subtype, cargo_subtype) {
+    0: spriteset_df11g_leaping_reversed;
+    1: spriteset_df11g_reversed;
+}
+
 // "Splitting Pig"
 
 switch (FEAT_TRAINS, SELF, switch_df11g_graphics_joint, position_in_vehid_chain % 6) {
-    1: spriteset_df11g_leaping;
-    4: spriteset_df11g_leaping_back_reversed;
+    1: switch_df11g_standard_graphics_subtype;
+    4: switch_df11g_reversed_graphics_subtype;
     empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df11g_graphics_front, position_in_articulated_veh % 3) {
-    1: spriteset_df11g_leaping;
+    1: switch_df11g_standard_graphics_subtype;
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, switch_df11g_graphics_split, position_in_consist) {
-    1: switch_df11g_graphics_front;
-    spriteset_df11g_leaping_back_reversed;
+switch (FEAT_TRAINS, SELF, switch_df11g_graphics_split, position_in_consist_from_end) {
+    1: switch_df11g_reversed_graphics_subtype;
+    switch_df11g_graphics_front;
 }
 
 switch (FEAT_TRAINS, SELF, switch_df11g_graphics, num_vehs_in_vehid_chain % 6) {
@@ -121,8 +143,9 @@ item (FEAT_TRAINS, df11g) {
     }
     graphics {
         // Menu
-        additional_text:                        string(STR_DESC_6, string(STR_FULL_NAME_DF11G), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_DF11G_NICKNAME), string(STR_RELDEC_VERY_LOW, 6));
+        additional_text:                        string(STR_DESC_5, string(STR_FULL_NAME_DF11G), string(STR_ELECTRICITY_SUPPLY_YES), string(STR_DF11G_NICKNAME), string(STR_RELDEC_VERY_LOW, 6), string(STR_DF11G_CONSIST));
         can_attach_wagon:                       locowagon;
+        cargo_subtype_text:                     switch_df11g_cargo_subtype;
 
         // Graphics
         default:                                switch_df11g_graphics;
