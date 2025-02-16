@@ -318,6 +318,7 @@
 #include "src/25-emu/crh5gjt.pnml"
 #include "src/25-emu/crh380a.pnml"
 #include "src/25-emu/crh380al.pnml"
+#include "src/25-emu/crh380al_2541.pnml"
 #include "src/25-emu/crh380aj.pnml"
 #include "src/25-emu/crh380b.pnml"
 #include "src/25-emu/crh380bl.pnml"
