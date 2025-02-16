@@ -295,6 +295,7 @@ STR_NAME_CRH5G,CRH5G (EMU),CRH5G (电力动车)
 STR_NAME_CRH5GJT,CRH5G (Technology-Enhanced) (EMU),CRH5G (技术提升型) (电力动车)
 STR_NAME_CRH380A,CRH380A (EMU),CRH380A (电力动车)
 STR_NAME_CRH380AL,CRH380AL (Long Version) (EMU),CRH380AL (长编组) (电力动车)
+STR_NAME_CRH380AL_2541,CRH380AL-2541 (Long Version) (EMU) (Speed of impact test),CRH380AL-2541 (长编组) (电力动车) (冲高试验速度)
 STR_NAME_CRH380AJ,CRH380AL (EMU) (Diagnostic Train),CRH380AJ (电力动车) (综合检测列车)
 STR_NAME_CRH380B,CRH380B (EMU),CRH380B (电力动车)
 STR_NAME_CRH380BL,CRH380BL (Long Version) (EMU),CRH380BL (长编组) (电力动车)
@@ -733,6 +734,7 @@ STR_DJJ2_321_KMH, - {GOLD}321.5 km/h{BLACK}. Broke the Highest Speed Record of C
 STR_350_AVAILABLE,Refittable to Max Speed 350 km/h (Increasing running costs),可改装为最高速度 350 km/h，运营费用增加
 STR_350_380_AVAILABLE,Refittable to Max Speed 350 or 380 km/h (Increasing running costs),可改装为最高速度 350 或 380 km/h，运营费用增加
 STR_DJJ2_321_AVAILABLE,This train has broke the Highest Speed Record of China's Railway by {GOLD}321.5 km/h{BLACK} on 27th Oct. 2002. Refittable to this speed (Increasing running costs),这列车曾经在2002年10月27日创下了当时中国铁路的最高速321.5 km/h。可改装到这一速度，运营费用增加
+STR_CRH380AL_2541_486_AVAILABLE,"On the 13 of December, 2010, the train achieved the then-world's highest operational testing speed of 486.1 km/h.",这列车曾经在2010年12月13日创下了当时世界铁路运营试验最高速486.1 km/h
 STR_CRH380AJ_AVAILABLE,Refittable to Max Speed 452 km/h ,可改装为最高速度 452 km/h
 # Livery,,
 STR_LV_PRE_GRAY,{GRAY} - Gray,{GRAY} - 灰色
