@@ -35,7 +35,7 @@ CUSTOM_TAG_FILE ?= custom_tags.txt
 REPO_REVISION       ?= 1       # specify in Makefile.dist
 REPO_VERSION_STRING ?= 0.0.1.1 # specify in Makefile.dist
 
-.PHONY: all sprites custom_tags code clean clean_grf clean_png
+.PHONY: all sprites custom_tags code clean clean_grf clean_png FORCE
 
 # default rule
 all: sprites lang code
@@ -57,16 +57,16 @@ VOX_GENREATED_FILES = $(VOX_8BPP_FILES) $(VOX_32BPP_FILES) $(VOX_MASK_FILES)
 sprites: $(VOX_GENREATED_FILES)
 
 # lang
-lang:
+lang: FORCE
 	@echo "Generating lang files"
 	@$(PYTHON) $(LANG_SCRIPT) $(LANG_SRC)
 
 # code
-custom_tags:
+custom_tags: FORCE
 	@echo "Generating custom tags"
 	@echo "VERSION_STRING :$(REPO_VERSION_STRING)" > $(CUSTOM_TAG_FILE)
 
-code: custom_tags
+code: custom_tags FORCE
 	@echo "Preprocessing"
 	@$(GCC) -E -x c -D REPO_REVISION=$(REPO_REVISION) -D VERSION_STRING=$(REPO_VERSION_STRING) $(INDEX_FILE) > $(OUTPUT_NML)
 	@echo "Compiling"
@@ -86,3 +86,6 @@ clean_png:
 	@echo "Cleaning PNG files"
 	@echo "Warning: clean png won't work when using powershell, please use bash instead."
 	@find $(VOX_DIR)/ -name '*.png' -type f -delete
+
+# dummy rule for force rebuilding
+FORCE: ;
