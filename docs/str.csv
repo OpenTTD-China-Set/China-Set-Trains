@@ -170,6 +170,8 @@ STR_NAME_G17,G17 (Tanker),G17 (罐车)
 STR_NAME_G50,G50 (Tanker),G50 (罐车)
 STR_NAME_G60,G60 (Tanker),G60 (罐车)
 STR_NAME_G70,G70 (Tanker),G70 (罐车)
+STR_NAME_G70A,G70A (Tanker),G70A (罐车)
+STR_NAME_GH70B,GH70B (Tanker),GH70B (罐车)
 STR_NAME_GN70,GN70 (Tanker),GN70 (罐车)
 STR_NAME_GN80,GN80 (Tanker),GN80 (罐车)
 STR_NAME_N5,N5 (Flatcar),N5 (平车)
@@ -619,6 +621,8 @@ STR_25ML_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {WHITE}White-{GREEN}-G
 STR_G17_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{GRAY}黑色{GOLD}加随机颜色条带 (未完成)
 STR_G60_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GRAY}Gray {GOLD}with Random-Colour Stripes ,{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带
 STR_G70_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GRAY}Gray {GOLD}with Random-Colour Stripes ,{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带
+STR_G70A_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GRAY}Gray {GOLD}with Random-Colour Stripes ,{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带
+STR_GH70B_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GRAY}Gray {GOLD}with Random-Colour Stripes ,{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带
 STR_GN70_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{BLACK}黑色{GOLD}加随机颜色条带 (未完成)
 STR_GN80_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{BLACK}黑色{GOLD}加随机颜色条带 (未完成)
 STR_C62_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
@@ -738,7 +742,7 @@ STR_CRH380AL_2541_486_AVAILABLE,"On the 13 of December, 2010, the train achieved
 STR_CRH380AJ_AVAILABLE,Refittable to Max Speed 452 km/h ,可改装为最高速度 452 km/h
 # Livery,,
 STR_LV_PRE_GRAY,{GRAY} - Gray,{GRAY} - 灰色
-STR_LV_PRE_DETERIORATE,{BLACK} - Deteriorated,{BLACK} - 旧化
+STR_LV_PRE_DETERIORATE,{BLACK} - Deteriorated,{BLACK} - 老化后
 STR_ORIGINAL,{BLACK} - Original Livery,{BLACK} - 原版涂装
 STR_ALTERNATIVE,{BLACK} - Alternative Original Livery,{BLACK} - 另一种原版涂装
 STR_REVERSE,{BLACK} └ the Reverse of the Livery Above,{BLACK} └ 翻转的涂装
