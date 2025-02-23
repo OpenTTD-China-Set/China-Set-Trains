@@ -179,6 +179,8 @@
 #include "src/wagons/g50.pnml"
 #include "src/wagons/g60.pnml"
 #include "src/wagons/g70.pnml"
+#include "src/wagons/g70a.pnml"
+#include "src/wagons/gh70b.pnml"
 #include "src/wagons/gn70.pnml"
 #include "src/wagons/gn80.pnml"
 #include "src/wagons/n60.pnml"
