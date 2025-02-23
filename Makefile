@@ -25,6 +25,8 @@ LANG_SRC    ?= docs/str.csv
 # code
 NMLC ?= nmlc -c
 GCC  ?= gcc
+PROJECT ?= chinasettrains
+DOC_FILES ?= license.txt readme.txt changelog.txt
 INDEX_FILE ?= chinasettrains.pnml
 OUTPUT_NML ?= chinasettrains.nml
 OUTPUT_GRF ?= chinasettrains.grf
@@ -35,7 +37,7 @@ CUSTOM_TAG_FILE ?= custom_tags.txt
 REPO_REVISION       ?= 1       # specify in Makefile.dist
 REPO_VERSION_STRING ?= 0.0.1.1 # specify in Makefile.dist
 
-.PHONY: all sprites custom_tags code clean clean_grf clean_png FORCE
+.PHONY: all sprites custom_tags code clean clean_grf clean_png bundle FORCE
 
 # default rule
 all: sprites lang code
@@ -66,7 +68,7 @@ custom_tags: FORCE
 	@echo "Generating custom tags"
 	@echo "VERSION_STRING :$(REPO_VERSION_STRING)" > $(CUSTOM_TAG_FILE)
 
-code: custom_tags FORCE
+code: custom_tags lang $(VOX_GENERATED_FILES) FORCE
 	@echo "Preprocessing"
 	@$(GCC) -E -x c -D REPO_REVISION=$(REPO_REVISION) -D VERSION_STRING=$(REPO_VERSION_STRING) $(INDEX_FILE) > $(OUTPUT_NML)
 	@echo "Compiling"
@@ -86,6 +88,13 @@ clean_png:
 	@echo "Cleaning PNG files"
 	@echo "Warning: clean png won't work when using powershell, please use bash instead."
 	@find $(VOX_DIR)/ -name '*.png' -type f -delete
+
+bundle: code FORCE
+	@echo "Bundling"
+	cd docs
+	cp $(OUTPUT_GRF) docs/
+	cd docs; tar -cf ../$(PROJECT)-$(REPO_VERSION_STRING).tar $(DOC_FILES) $(OUTPUT_GRF)
+	rm docs/$(OUTPUT_GRF)
 
 # dummy rule for force rebuilding
 FORCE: ;
