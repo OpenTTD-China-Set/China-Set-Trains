@@ -5,6 +5,10 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.5.180 (15/03/2025)
+--------------------
+Fix #61: GN80 capacity errors
+
 0.3.4.179 (15/02/2025)
 --------------------
 Fix #60: DF11G sprite misalignments
