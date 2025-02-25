@@ -111,6 +111,7 @@ sort (FEAT_TRAINS, [
     crh2a4020,
     cj1,
     crh3a,
+    crh3aa,
     crh3c,
     crh5a,
 /*     crh5g, */
@@ -119,6 +120,7 @@ sort (FEAT_TRAINS, [
     crh6a2,
     crh6a3,
     crh6aa,
+    crh6aacinova,
     crh6f,
     crh380a,
     crh380al,
@@ -146,6 +148,7 @@ sort (FEAT_TRAINS, [
     cr400bfc,
     cr400bfz,
     cr400bfabz,
+    cj6,
     yz1,
     yz22,
     rz22,

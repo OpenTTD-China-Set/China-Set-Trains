@@ -1,0 +1,128 @@
+// Begin CRH3AA
+switch (FEAT_TRAINS, SELF, switch_crh3aa_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_CRH3_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_crh3aa_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-emu/crh3aa", "crh3aa-c")
+}
+
+// Vehicle
+spriteset (spriteset_crh3aa_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh3aa", "crh3aa-c")
+}
+spriteset (spriteset_crh3aa_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh3aa", "crh3aa-c")
+}
+spriteset (spriteset_crh3aa2_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh3aa", "crh3aa-c-2")
+}
+spriteset (spriteset_crh3aa2_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh3aa", "crh3aa-c-2")
+}
+spriteset (spriteset_crh3aa_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh3aa", "crh3aa-p")
+}
+spriteset (spriteset_crh3aa2_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh3aa", "crh3aa-p")
+}
+switch (FEAT_TRAINS, SELF, switch_crh3aa_articulated_part, extra_callback_info1) {
+    1..11: return crh3aa;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh3aa_graphics_middle, position_in_articulated_veh % 12) {
+    1: spriteset_crh3aa2_front;
+    4: spriteset_crh3aa_middle;
+    7: spriteset_crh3aa2_middle;
+    10: spriteset_crh3aa2_cab;
+    empty_sprites;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh3aa_graphics_cab, position_in_consist_from_end) {
+    1: spriteset_crh3aa_cab;
+    switch_crh3aa_graphics_middle;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh3aa_graphics, position_in_consist) {
+    1: spriteset_crh3aa_front;
+    switch_crh3aa_graphics_cab;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh3aa_section_capacity, position_in_articulated_veh % 12) {
+    1: return 130;
+    4: return 180;
+    7: return 180;
+    10: return 130;
+    return 0;
+}
+item (FEAT_TRAINS, crh3aa) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CRH3AA);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        variant_group:					cj1;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2022,3,21);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SABA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  14 << param_loading_speed;
+        cargo_age_period:               200 << param_cargo_decay;
+
+        // Stats
+        speed:                          200 km/h;
+        power:                          2800 kW;
+        weight:                         192 ton;
+        tractive_effort_coefficient:    0.085;
+        cost_factor:                    61;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            26;
+        reliability_decay:              6;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_RELDEC_VERY_LOW, 6), string(STR_CRH6AA_CONSIST), string(STR_COMFORT_LOW, 160));
+        can_attach_wagon:               onlycrh3aa;
+        start_stop:                     mu4car;
+        
+
+        // Graphics
+        default:                        switch_crh3aa_graphics;
+        purchase:                       spriteset_crh3aa_purchase_original;
+        articulated_part:               switch_crh3aa_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_crh3aa_section_capacity;
+        cargo_age_period:               160 << param_cargo_decay;
+        cost_factor:                    184;
+        running_cost_factor:            128 * runningcostfactor() + 20;
+        purchase_running_cost_factor:   478;
+        purchase_cargo_capacity:        702/12;
+        name:                            switch_crh3aa_name;
+
+    }
+}
+
+// End CRH3A-A (Section)
+
