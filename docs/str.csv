@@ -287,7 +287,9 @@ STR_NAME_CRH2E,CRH2E (EMU),CRH2E (电力动车)
 STR_NAME_CRH2G,CRH2G (EMU),CRH2G (电力动车)
 STR_NAME_CRH2ELS,CRH2E (Longitudinal Sleeper) (EMU),CRH2E (纵向卧铺) (电力动车)
 STR_NAME_CJ1,CJ1 (EMU),CJ1 (电力动车)
+STR_NAME_CJ6,CJ6 (Section) (EMU),CJ6 (整节) (电力动车)
 STR_NAME_CRH3A,CRH3A (EMU),CRH3A (电力动车)
+STR_NAME_CRH3AA,CRH3A-A (Section) (EMU),CRH3A-A (整节) (电力动车)
 STR_NAME_CRH3C,CRH3C (EMU),CRH3C (电力动车)
 STR_NAME_CRH5A,CRH5A (EMU),CRH5A (电力动车)
 STR_NAME_CRH5E,CRH5E (EMU),CRH5E (电力动车)
@@ -316,6 +318,7 @@ STR_NAME_CR400BFABZ,CR400BF-AZ/BZ/BS (Intelligent EMU),CR400BF-AZ/BZ/BS (长编�
 STR_NAME_CRH6A2,CRH6A (2-Door Version) (EMU),CRH6A (二门版) (电力动车)
 STR_NAME_CRH6A3,CRH6A (3-Door Version) (EMU),CRH6A (三门版) (电力动车)
 STR_NAME_CRH6AA,CRH6A-A (Section) (EMU),CRH6A-A (整节) (电力动车)
+STR_NAME_CRH6AACINOVA,CRH6A-A (CINOVA2.0) (Section) (EMU),CRH6A-A (CINOVA2.0) (整节) (电力动车)
 STR_NAME_CRH6F,CRH6F (EMU),CRH6F (电力动车)
 STR_NAME_ZEMUW,2nd-Class (ZE) MU Wagon,动车组二等座车厢
 STR_NAME_ZYMUW,1st-Class (ZY) MU Wagon,动车组一等座车厢
