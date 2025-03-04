@@ -742,7 +742,7 @@ STR_CRH380AL_2541_486_AVAILABLE,"On the 13 of December, 2010, the train achieved
 STR_CRH380AJ_AVAILABLE,Refittable to Max Speed 452 km/h ,可改装为最高速度 452 km/h
 # Livery,,
 STR_LV_PRE_GRAY,{GRAY} - Gray,{GRAY} - 灰色
-STR_LV_PRE_DETERIORATE,{BLACK} - Deteriorated,{BLACK} - 旧化
+STR_LV_PRE_DETERIORATE,{BLACK} - Deteriorated,{BLACK} - 老化后
 STR_ORIGINAL,{BLACK} - Original Livery,{BLACK} - 原版涂装
 STR_ALTERNATIVE,{BLACK} - Alternative Original Livery,{BLACK} - 另一种原版涂装
 STR_REVERSE,{BLACK} └ the Reverse of the Livery Above,{BLACK} └ 翻转的涂装
