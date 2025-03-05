@@ -34,8 +34,9 @@ CUSTOM_TAG_FILE ?= custom_tags.txt
 
 # version
 -include Makefile.dist
-REPO_REVISION       ?= 1       # specify in Makefile.dist
-REPO_VERSION_STRING ?= 0.0.1.1 # specify in Makefile.dist
+REPO_VERSION_STRING ?= 0.1.0 # specify in Makefile.dist
+REPO_REVISION       := $(shell git rev-list --count HEAD || echo 1000) # in case git is not available, use 1000
+REPO_HASH           := $(shell git rev-parse --short HEAD || echo 0000000) # in case git is not available, use 0000000
 
 .PHONY: all sprites custom_tags code clean clean_grf clean_png bundle FORCE
 
@@ -91,10 +92,9 @@ clean_png:
 
 bundle: code FORCE
 	@echo "Bundling"
-	cd docs
-	cp $(OUTPUT_GRF) docs/
-	cd docs; tar -cf ../$(PROJECT)-$(REPO_VERSION_STRING).tar $(DOC_FILES) $(OUTPUT_GRF)
-	rm docs/$(OUTPUT_GRF)
+	@cp $(OUTPUT_GRF) docs/
+	@cd docs && tar -cf ../$(PROJECT)-$(strip $(REPO_VERSION_STRING))-$(strip $(REPO_HASH)).tar $(DOC_FILES) $(OUTPUT_GRF)
+	@rm docs/$(OUTPUT_GRF)
 
 # dummy rule for force rebuilding
 FORCE: ;
