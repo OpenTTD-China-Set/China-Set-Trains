@@ -312,7 +312,9 @@
 #include "src/25-emu/crh2a4020.pnml"
 #include "src/25-emu/crh3c.pnml"
 #include "src/25-emu/cj1.pnml"
+#include "src/25-emu/cj6.pnml"
 #include "src/25-emu/crh3a.pnml"
+#include "src/25-emu/crh3aa.pnml"
 #include "src/25-emu/crh5a.pnml"
 #include "src/25-emu/crh5e.pnml"
 #include "src/25-emu/crh5gjt.pnml"
@@ -339,6 +341,7 @@
 #include "src/25-emu/crh6a2.pnml"
 #include "src/25-emu/crh6a3.pnml"
 #include "src/25-emu/crh6aa.pnml"
+#include "src/25-emu/crh6aacinova.pnml"
 #include "src/25-emu/crh6f.pnml"
 
 // 1.5kV DC EMU

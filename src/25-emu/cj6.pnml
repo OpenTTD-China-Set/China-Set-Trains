@@ -1,0 +1,122 @@
+// Begin CJ6
+// Purchase Menu
+spriteset (spriteset_cj6_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-emu/cj6", "cj6-c")
+}
+
+// Vehicle
+spriteset (spriteset_cj6_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cj6", "cj6-c")
+}
+spriteset (spriteset_cj6_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cj6", "cj6-c")
+}
+spriteset (spriteset_cj6_front_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cj6", "cj6-c-2")
+}
+spriteset (spriteset_cj6_cab_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cj6", "cj6-c-2")
+}
+spriteset (spriteset_cj6_middle_1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cj6", "cj6-tp-b")
+}
+spriteset (spriteset_cj6_middle_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cj6", "cj6-tp-f")
+}
+switch (FEAT_TRAINS, SELF, switch_cj6_articulated_part, extra_callback_info1) {
+    1..11: return cj6;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj6_graphics_middle, position_in_articulated_veh % 12) {
+    1: spriteset_cj6_front_2;
+    4: spriteset_cj6_middle_1;
+    7: spriteset_cj6_middle_2;
+    10: spriteset_cj6_cab_2;
+    empty_sprites;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_cj6_graphics_cab, position_in_consist_from_end) {
+    1: spriteset_cj6_cab;
+    switch_cj6_graphics_middle;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj6_graphics, position_in_consist) {
+    1: spriteset_cj6_front;
+    switch_cj6_graphics_cab;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cj6_section_capacity, position_in_articulated_veh % 12) {
+    1: return 140;
+    4: return 190;
+    7: return 190;
+    10: return 140;
+    return 0;
+}
+item (FEAT_TRAINS, cj6) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CJ6);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2019,12,24);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SABA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  14 << param_loading_speed;
+        cargo_age_period:               200 << param_cargo_decay;
+
+        // Stats
+        speed:                          160 km/h;
+        power:                          2576 kW;
+        weight:                         195 ton;
+        tractive_effort_coefficient:    0.084;
+        cost_factor:                    62;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            25;
+        reliability_decay:              6;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_RELDEC_VERY_LOW, 6), string(STR_CRH6AA_CONSIST), string(STR_COMFORT_LOW, 160));
+        can_attach_wagon:               onlycj6;
+        start_stop:                     mu4car;
+        
+
+        // Graphics
+        default:                        switch_cj6_graphics;
+        purchase:                       spriteset_cj6_purchase_original;
+        articulated_part:               switch_cj6_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_cj6_section_capacity;
+        cargo_age_period:               160 << param_cargo_decay;
+        cost_factor:                    184;
+        running_cost_factor:            128 * runningcostfactor() + 20;
+        purchase_running_cost_factor:   478;
+        purchase_cargo_capacity:        702/12;
+        
+
+    }
+}
+
+// End CJ6 (Section)
+
