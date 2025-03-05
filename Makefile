@@ -33,9 +33,13 @@ OUTPUT_GRF ?= chinasettrains.grf
 CUSTOM_TAG_FILE ?= custom_tags.txt
 
 # version
--include Makefile.dist
-REPO_REVISION       ?= 1       # specify in Makefile.dist
-REPO_VERSION_STRING ?= 0.0.1.1 # specify in Makefile.dist
+# in case git is not available, use 0.0.0-0-0000000
+REPO_VERSION_STRING := $(shell git describe --tags --always --dirty || echo 0.0.0-0-0000000)
+# in case git is not available, use 1000
+REPO_REVISION       := $(shell git rev-list --count HEAD || echo 1000)
+# in case git is not available, use 0
+# the file min_compatible_version should either contain a commit hash or a tag
+MIN_COMPATIBLE_VERSION := $(shell git rev-list --count $$(cat min_compatible_version) || echo 0)
 
 .PHONY: all sprites custom_tags code clean clean_grf clean_png bundle FORCE
 
@@ -70,7 +74,11 @@ custom_tags: FORCE
 
 code: custom_tags lang $(VOX_GENERATED_FILES) FORCE
 	@echo "Preprocessing"
-	@$(GCC) -E -x c -D REPO_REVISION=$(REPO_REVISION) -D VERSION_STRING=$(REPO_VERSION_STRING) $(INDEX_FILE) > $(OUTPUT_NML)
+	@$(GCC) -E -x c $(INDEX_FILE) \
+		-D REPO_REVISION=$(REPO_REVISION) \
+		-D VERSION_STRING=$(REPO_VERSION_STRING) \
+		-D MIN_COMPATIBLE_VERSION=$(MIN_COMPATIBLE_VERSION) \
+		> $(OUTPUT_NML)
 	@echo "Compiling"
 	@$(NMLC) $(OUTPUT_NML) -o $(OUTPUT_GRF)
 
@@ -91,10 +99,9 @@ clean_png:
 
 bundle: code FORCE
 	@echo "Bundling"
-	cd docs
-	cp $(OUTPUT_GRF) docs/
-	cd docs; tar -cf ../$(PROJECT)-$(REPO_VERSION_STRING).tar $(DOC_FILES) $(OUTPUT_GRF)
-	rm docs/$(OUTPUT_GRF)
+	@cp $(OUTPUT_GRF) docs/
+	@cd docs && tar -cf ../$(PROJECT)-$(REPO_VERSION_STRING).tar $(DOC_FILES) $(OUTPUT_GRF)
+	@rm docs/$(OUTPUT_GRF)
 
 # dummy rule for force rebuilding
 FORCE: ;
