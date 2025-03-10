@@ -284,6 +284,8 @@ sort (FEAT_TRAINS, [
     g50,
     g60,
     g70,
+    g70a,
+    gh70b,
     gn70,
     gn80,
     n5,
