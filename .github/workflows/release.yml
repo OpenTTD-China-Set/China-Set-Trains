@@ -1,12 +1,12 @@
-name: Build
+name: Release
+
+permissions:
+  contents: write
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    tags:
+      - "*.*.*"
   workflow_dispatch:
 
 jobs:
@@ -29,7 +29,6 @@ jobs:
             scoop install openttd/gorender
             make
 
-      - uses: actions/upload-artifact@v4
+      - uses: softprops/action-gh-release@v2
         with:
-          name: chinasettrains.grf
-          path: chinasettrains.grf
+          files: chinasettrains.grf
