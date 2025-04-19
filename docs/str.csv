@@ -277,6 +277,7 @@ STR_NAME_CR200JSG_ELECTRIC,CR200JS-G (Hybrid MU) (Electric-side),CR200JS-G (双�
 STR_NAME_CR200JSG_DIESEL,CR200JS-G (Hybrid MU) (Diesel-side),CR200JS-G (双源动车) (内燃端)
 STR_NAME_CRH1A,CRH1A (EMU),CRH1A (电力动车)
 STR_NAME_CRH1B,CRH1B (Long Version) (EMU),CRH1B (电力动车)
+STR_NAME_CRH1E_NG,CRH1E-NG (EMU),CRH1E-NG (电力动车)
 STR_NAME_CRH1E,CRH1E (EMU),CRH1E (电力动车)
 STR_NAME_CRH1AA,CRH1A-A (EMU),CRH1A-A (长编组) (电力动车)
 STR_NAME_CRH2A,CRH2A (EMU),CRH2A (电力动车)
@@ -284,6 +285,7 @@ STR_NAME_CRH2A4020,CRH2A-4020 (Cargo EMU),CRH2A-4020 (货运电力动车)
 STR_NAME_CRH2B,CRH2B (Long Version) (EMU),CRH2B (长编组) (电力动车)
 STR_NAME_CRH2C,CRH2C (EMU),CRH2C (电力动车)
 STR_NAME_CRH2E,CRH2E (EMU),CRH2E (电力动车)
+STR_NAME_CRH2E_NG,CRH2E-NG (EMU),CRH2E-NG (电力动车)
 STR_NAME_CRH2G,CRH2G (EMU),CRH2G (电力动车)
 STR_NAME_CRH2ELS,CRH2E (Longitudinal Sleeper) (EMU),CRH2E (纵向卧铺) (电力动车)
 STR_NAME_CJ1,CJ1 (EMU),CJ1 (电力动车)
@@ -311,6 +313,8 @@ STR_NAME_CR400AFZ,CR400AF-C/Z/S (Intelligent EMU),CR400AF-C/Z/S (智能动车)
 STR_NAME_CR400AFABZ,CR400AF-AZ/BZ/BS (Long Version) (Intelligent EMU),CR400AF-AZ/BZ/BS (长编组) (智能动车)
 STR_NAME_CR400AFAE,CR400AF-AE (Intelligent EMU),CR400AF-AE (智能动车)
 STR_NAME_CR400BF,CR400BF (EMU),CR400BF (电力动车)
+STR_NAME_CR400BF_0031,CR400BF-0031 (EMU) (The original variable gauge EMU),CR400BF-0031 (电力动车) (原可变轨距)
+STR_NAME_CR400BF_0051,CR400BF-0051 (EMU) (The original variable gauge EMU),CR400BF-0051 (电力动车) (原可变轨距)
 STR_NAME_CR400BFAB,CR400BF-A/B (Long Version) (EMU),CR400BF-A/B (长编组) (电力动车)
 STR_NAME_CR400BFC,CR400BF-C (Intelligent EMU),CR400BF-C (智能动车)
 STR_NAME_CR400BFZ,CR400BF-Z/S (Intelligent EMU),CR400BF-Z/S (智能动车)
@@ -602,6 +606,7 @@ STR_RW25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN
 STR_XL25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_YZ_YW25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Only Made in China), {DKGREEN}""Gaozu Lv"" Green Livery (Only Made in China),  Qinghai-Tibet Railway Grenn Livery (Both have Made in China and Made by BSP)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (仅国产)，{DKGREEN}青藏铁路涂装 (国产和BSP版本)，""高祖绿""涂装 (仅国产)，{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)"
 STR_RZ25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Both have Made in China and Made by BSP), {DKGREEN}""Gaozu Lv"" Green Livery (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Grenn Livery (Only Made in China),{WHITE} Guangzhou-Kowloon Railway Livery {DKGREEN}(And its ""Gaozu Lv"" Green version)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (仅国产)，""高祖绿""涂装 (国产和BSP版本)，{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)"
+STR_PANGANG,{YELLOW} - PANGANG Livery,{YELLOW} - 攀钢号涂装
 STR_RW25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Both have Made in China and Made by BSP), {DKGREEN}""Gaozu Lv"" Green Livery (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Grenn Livery (Also Both have Made in China and Made by BSP)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (国产和BSP版本)，""高祖绿""涂装 (国产和BSP版本)"
 STR_CA25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Both have Made in China and Made by BSP), {DKGREEN}""Gaozu Lv"" Green Livery (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Grenn Livery (Also Both have Made in China and Made by BSP),{WHITE} Guangzhou-Kowloon Railway Livery {DKGREEN}(And its ""Gaozu Lv"" Green version)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (国产和BSP版本)，""高祖绿""涂装，{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)"
 STR_XL25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery (Both have Made in China and Made by BSP) , {DKGREEN}""Gaozu Lv""  Green Livery  (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Livery  (Only Made in China)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (仅国产)，""高祖绿""涂装 (国产和BSP版本)"
@@ -689,6 +694,7 @@ STR_CR200JC_NICKNAME,"{BLACK}Nickname: {RED}""A{WHITE}D {GREEN}Bin"" {GOLD}(Folk
 STR_CRH1A_NICKNAME,{BLACK}Nickname: {GOLD}Metro,{BLACK}昵称：{GOLD}地铁
 STR_CRH1B_NICKNAME,{BLACK}Nickname: {GOLD}Long Metro ,{BLACK}昵称：{GOLD}长地铁
 STR_CRH1E_NICKNAME,{BLACK}Nickname: {GOLD}Sleeping Metro ,{BLACK}昵称：{GOLD}睡地铁
+STR_CRH1E_NG_NICKNAME,{BLACK}Nickname: {GOLD}Cute Sleeping Metro ,{BLACK}昵称：{GOLD}萌睡地铁
 STR_CRH1AA_NICKNAME,{BLACK}Nickname: {GOLD}Cute Metro ,{BLACK}昵称：{GOLD}萌地铁
 STR_CRH2A_NICKNAME,{BLACK}Nickname: {GOLD}Hairtail,{BLACK}昵称：{GOLD}带鱼
 STR_CRH2B_NICKNAME,{BLACK}Nickname: {GOLD}Long Hairtail,{BLACK}昵称：{GOLD}长带鱼
@@ -706,6 +712,7 @@ STR_CRH380CL_NICKNAME,{BLACK}Nickname: {GOLD}Shark,{BLACK}昵称：{GOLD}大鲨�
 STR_CRH380D_NICKNAME,{BLACK}Nickname: {GOLD}Crazy Metro,{BLACK}昵称：{GOLD}疯地铁
 STR_CR400AF_NICKNAME,{BLACK}Nickname: {GOLD}Red Loong,{BLACK}昵称：{RED}红神龙
 STR_CR400BF_NICKNAME,{BLACK}Nickname: {GOLD}Golden Phoenix,{BLACK}昵称：{GOLD}金凤凰
+STR_CR400BF_KEBIAN," {GOLD}The original variable gauge EMU was replaced with an ordinary CR400BF bogie in actual operation, and the variable gauge function was cancelled",{GOLD}原可变轨距动车，实际运营中更换为普通CR400BF转向架，并取消了可变轨距功能
 STR_CR400_Z_NICKNAME,{BLACK}Nickname: {GOLD}Dragon and {RED}Phoenix bring prosperity,{BLACK}昵称：{GOLD}龙凤{RED}呈祥
 STR_CR400BFC_NICKNAME,{BLACK}Nickname: {LTBLUE}Blessed Snow Welcomes Spring (Winter Olympic Livery Only),{BLACK}冬奥涂装版昵称：{LTBLUE}瑞雪迎春
 STR_CR400BFZ_NICKNAME,"{BLACK}Nickname: {GOLD}Dragon and {RED}Phoenix bring prosperity,  {PURPLE}Egglpant (Folk)/ Aussie on Yangtze (Official) (Asia Game Livery Only)",{BLACK}昵称：{GOLD}龙凤{RED}呈祥{BLACK}，{PURPLE}茄子 (民间)/润泽江南 (官方) (亚运涂装)

@@ -370,9 +370,10 @@ item (FEAT_TRAINS, crh380aj, 9263) {}
 item (FEAT_TRAINS, djf1, 9264) {}
 item (FEAT_TRAINS, crh3aa, 9265) {}
 item (FEAT_TRAINS, cj6, 9266) {}
-item (FEAT_TRAINS, crh6aacinova, 9267) {}
-
-
+item (FEAT_TRAINS, crh2e_ng, 9267) {}
+item (FEAT_TRAINS, crh1e_ng, 9268) {}
+item (FEAT_TRAINS, cr400bf_0031, 9269) {}
+item (FEAT_TRAINS, cr400bf_0051, 9270) {}
 
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
