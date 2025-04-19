@@ -32,4 +32,4 @@ jobs:
             scoop bucket add openttd https://github.com/WenSimEHRP/OpenTTD-Bucket
             scoop install openttd/nml
             scoop install openttd/gorender
-            make
+            make -j 10
