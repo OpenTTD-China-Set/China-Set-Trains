@@ -39,7 +39,7 @@ item (FEAT_TRAINS, kymuw) {
         introduction_date:              date(1950,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SAAN;
+        track_type:                     DCDA;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_MAIL, CC_ARMOURED);
