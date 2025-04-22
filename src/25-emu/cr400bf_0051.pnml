@@ -7,30 +7,30 @@ switch (FEAT_TRAINS, SELF, switch_cr400bf_0051_name, getbits(extra_callback_info
 
 // Purchase Menu
 spriteset (spriteset_cr400bf_0051_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("25-emu\cr400bf0051", "cr400bf-0051-c")
+    template_purchase ("25-emu/cr400bf0051", "cr400bf-0051-c")
 }
 
 // Vehicle
 spriteset (spriteset_cr400bf_0051_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu\cr400bf0051", "cr400bf-0051-c")
+    template_standard ("25-emu/cr400bf0051", "cr400bf-0051-c")
 }
 spriteset (spriteset_cr400bf_0051_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu\cr400bf0051", "cr400bf-0051-m")
+    template_standard ("25-emu/cr400bf0051", "cr400bf-0051-m")
 }
 spriteset (spriteset_cr400bf_0051_middle_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu\cr400bf0051", "cr400bf-0051-p")
+    template_standard ("25-emu/cr400bf0051", "cr400bf-0051-p")
 }
 spriteset (spriteset_cr400bf_0051_middle_tp_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu\cr400bf0051", "cr400bf-0051-p")
+    template_reversed ("25-emu/cr400bf0051", "cr400bf-0051-p")
 }
 spriteset (spriteset_cr400bf_0051_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu\cr400bf0051", "cr400bf-0051-c")
+    template_reversed ("25-emu/cr400bf0051", "cr400bf-0051-c")
 }
 spriteset (spriteset_cr400bf_0051_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu\cr400bf0051", "cr400bf-0051-c-c")
+    template_reversed ("25-emu/cr400bf0051", "cr400bf-0051-c-c")
 }
 spriteset (spriteset_cr400bf_0051_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu\cr400bf0051", "cr400bf-0051-c-c")
+    template_standard ("25-emu/cr400bf0051", "cr400bf-0051-c-c")
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_0051_articulated_part, extra_callback_info1) {
