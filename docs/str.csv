@@ -266,7 +266,8 @@ STR_NAME_NDJ3,"NDJ3 ""Great Wall"" (DMU)","NDJ3 ""长城号"" (内燃动车)"
 STR_NAME_X2000,X2000 (EMU),X2000 (电力动车)
 STR_NAME_DJJ1,"DJJ1 ""Blue Arrow"" (EMU)","DJJ1 ""蓝箭"" (电力动车)"
 STR_NAME_DJJ2,"DJJ2 ""China Star"" (EMU)","DJJ2 ""中华之星"" (电力动车)"
-STR_NAME_DJF1,"DJF2 ""Central Plains Star"" (EMU)","DJF1 ""中原之星"" (电力动车)"
+STR_NAME_DJF1,"DJF1 ""Central Plains Star"" (EMU)","DJF1 ""中原之星"" (电力动车)"
+STR_NAME_DJF2,"DJF2 ""Xian Feng"" (EMU)","DJF2 ""先锋号"" (电力动车)"
 STR_NAME_DJF3,"DJF3 ""Changbai Mount"" (EMU)","DJF3 ""长白山号"" (电力动车)"
 STR_NAME_CR200JA,CR200J-A (EMU),CR200J-A (电力动车)
 STR_NAME_CR200JAL,CR200J-A (Long Version) (EMU),CR200J-A (长编组) (电力动车)
@@ -649,6 +650,8 @@ STR_NX70A_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Black Livery Onl
 STR_X2K_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random Containers,{BLACK}可供选择的涂装：{GOLD}随机集装箱
 STR_JSQ1_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Random (Red, Blue)",{BLACK}可供选择的涂装：{GOLD}随机颜色（蓝色，红色）
 STR_W_BOXCAR_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Yellow Livery with Yellow or White Roof,{BLACK}涂装：{GOLD}黄色，车顶颜色随机（黄色，白色）
+STR_DJF2_01,{BLACK}Livery Availability: {GOLD}Red and blue livery,{BLACK}涂装：{GOLD}红蓝色涂装
+STR_DJF2_02,{BLACK}Livery Availability: {GOLD}White-purple livery,{BLACK}涂装：{GOLD}白紫色涂装
 STR_LIVERY_AVALIABLE,{BLACK}Livery Availability:,{BLACK}可供选择的涂装：
 # Nickname,,
 STR_DF_NICKNAME,{BLACK}Nickname: {GOLD}Old DongFeng,{BLACK}昵称：{GOLD}老东风
