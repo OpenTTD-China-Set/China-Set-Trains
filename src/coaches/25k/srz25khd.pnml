@@ -31,7 +31,7 @@ switch (FEAT_TRAINS, SELF, switch_srz25khd_cargo_subtype, cargo_subtype) {
     1: return string(STR_PLUGDOOR);
     2: return string(STR_SHENYANG);
     3: return string(STR_LAKEBLUE);
-    return CB_RESULT_NO_TEXT;
+        return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_srz25khd_graphics_subtype, cargo_subtype) {
@@ -39,7 +39,7 @@ switch (FEAT_TRAINS, SELF, switch_srz25khd_graphics_subtype, cargo_subtype) {
     1: spriteset_srz25khd_plugdoor;
     2: spriteset_srz25khd_shenyang;
     3: spriteset_srz25khd_lakeblue;
-}
+    }
 switch (FEAT_TRAINS, SELF, switch_srz25khd_graphics, position_in_articulated_veh % 3) {
     1: switch_srz25khd_graphics_subtype;
     empty_sprites;

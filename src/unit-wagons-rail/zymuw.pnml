@@ -26,7 +26,7 @@ item (FEAT_TRAINS, zymuw) {
         introduction_date:              date(1950,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     DCDA;
+        track_type:                     SAAN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);

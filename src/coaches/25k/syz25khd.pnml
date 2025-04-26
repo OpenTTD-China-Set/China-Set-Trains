@@ -19,7 +19,6 @@ spriteset (spriteset_syz25khd_shenyang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_syz25khd_lakeblue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25k/syz25khd-lakeblue")
 }
-
 switch (FEAT_TRAINS, SELF, switch_syz25khd_articulated_part, extra_callback_info1) {
     1..2: return syz25khd;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
@@ -30,7 +29,7 @@ switch (FEAT_TRAINS, SELF, switch_syz25khd_cargo_subtype, cargo_subtype) {
     1: return string(STR_PLUGDOOR);
     2: return string(STR_SHENYANG);
     3: return string(STR_LAKEBLUE);
-    return CB_RESULT_NO_TEXT;
+        return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_syz25khd_graphics_subtype, cargo_subtype) {
@@ -38,7 +37,7 @@ switch (FEAT_TRAINS, SELF, switch_syz25khd_graphics_subtype, cargo_subtype) {
     1: spriteset_syz25khd_plugdoor;
     2: spriteset_syz25khd_shenyang;
     3: spriteset_syz25khd_lakeblue;
-}
+    }
 switch (FEAT_TRAINS, SELF, switch_syz25khd_graphics, position_in_articulated_veh % 3) {
     1: switch_syz25khd_graphics_subtype;
     empty_sprites;

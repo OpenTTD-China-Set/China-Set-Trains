@@ -13,14 +13,25 @@ spriteset (spriteset_kd25sm_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP
 spriteset (spriteset_kd25sm_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25", "kd25-sm")
 }
-
+spriteset (spriteset_kt25_beidaihe, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25", "kt25-beidaihe")
+}
 switch (FEAT_TRAINS, SELF, switch_kd25sm_articulated_part, extra_callback_info1) {
     1..2: return kd25sm;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
+switch (FEAT_TRAINS, SELF, switch_kt25b_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORDINARY_GREEN);
+    1: return string(STR_BEIDAIHE);
+    return CB_RESULT_NO_TEXT;
+}
+switch (FEAT_TRAINS, SELF, switch_kd25_graphics, cargo_subtype) {
+    0: spriteset_kd25sm_original;
+    1: spriteset_kt25_beidaihe;
+}
 
 switch (FEAT_TRAINS, SELF, switch_kd25sm_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_kd25sm_original;
+    1: switch_kd25_graphics;
     empty_sprites;
 }
 
@@ -65,6 +76,7 @@ item (FEAT_TRAINS, kd25sm) {
         // Menu
         additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25SM), string(STR_AIR_CONDITIONER_EFFECT));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_kt25b_cargo_subtype;
 
         // Graphics
         default:                        switch_kd25sm_graphics;

@@ -253,7 +253,7 @@ item (FEAT_TRAINS, cr400bf_0031) {
         introduction_date:              date(2024,04,20);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     DCDA;
+        track_type:                     SAAN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
