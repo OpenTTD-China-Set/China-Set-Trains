@@ -107,7 +107,6 @@ item (FEAT_TRAINS, srz25bhd) {
         purchase_running_cost_factor:   32;
         purchase_cargo_capacity:        108/3;
         name:                           switch_s25b_name;
-
     }
 }
 

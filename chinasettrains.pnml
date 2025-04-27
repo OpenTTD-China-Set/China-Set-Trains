@@ -350,6 +350,7 @@
 #include "src/25-emu/crh6aa.pnml"
 #include "src/25-emu/crh6aacinova.pnml"
 #include "src/25-emu/crh6f.pnml"
+#include "src/25-emu/crh6fa.pnml"
 
 // 1.5kV DC EMU
 

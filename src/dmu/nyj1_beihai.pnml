@@ -97,38 +97,6 @@ switch (FEAT_TRAINS, SELF, switch_beihai_wagon_weight, vehicle_is_potentially_po
     return 45;
 }
 
-// Power
-switch (FEAT_TRAINS, SELF, switch_beihai_pw_2, position_in_consist) {
-    9..14: return 493;
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_beihai_pw_3, position_in_consist) {
-    9..14: return 493;
-    21..26: return 493;
-    return 0;
-}
-
-switch (FEAT_TRAINS, SELF, switch_beihai_pw_4, position_in_consist) {
-    9..14: return 493;
-    21..26: return 493;
-    33..38: return 493;
-    return 0;
-}
-
-
-switch (FEAT_TRAINS, SELF, switch_beihai_wagon_pw_length, num_vehs_in_consist / 3) {
-    1..5: return 0;
-    6..9: switch_beihai_pw_2;
-    10..13: switch_beihai_pw_3;
-    switch_beihai_pw_4;
-}
-
-switch (FEAT_TRAINS, SELF, switch_beihai_wagon_power, position_in_consist_from_end) {
-    0..2: return 493;
-    switch_beihai_wagon_pw_length;
-}
-
 
 
 item (FEAT_TRAINS, beihai) {
@@ -162,8 +130,8 @@ item (FEAT_TRAINS, beihai) {
 
         // Stats
         speed:                          140 km/h;
-        power:                          736 kW;
-        weight:                         58 ton;
+        power:                          2944 kW;
+        weight:                         126 ton;
         tractive_effort_coefficient:    0.094;
         cost_factor:                    37;
         running_cost_base:              RUNNING_COST_DIESEL;
@@ -196,7 +164,6 @@ item (FEAT_TRAINS, beihai) {
         default:                        switch_beihai_wagon_graphics;
         cargo_capacity:                 switch_beihai_wagon_capacity;
         length:                         switch_length_2_8_2;
-        power:                          switch_beihai_wagon_power;
         tractive_effort_coefficient:    switch_beihai_wagon_traction;
         weight:                         switch_beihai_wagon_weight;
         can_attach_wagon:               muhead;
@@ -211,7 +178,6 @@ item (FEAT_TRAINS, beihai) {
         default:                        switch_beihai_wagon_graphics;
         cargo_capacity:                 switch_beihai_wagon_capacity;
         length:                         switch_length_2_8_2;
-        power:                          switch_beihai_wagon_power;
         tractive_effort_coefficient:    switch_beihai_wagon_traction;
         weight:                         switch_beihai_wagon_weight;
         can_attach_wagon:               muhead;

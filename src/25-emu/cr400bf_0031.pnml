@@ -98,7 +98,6 @@ switch (FEAT_TRAINS, SELF, switch_cr400bf_0031_if_middle_wagon_tp_short, ((posit
     spriteset_cr400bf_0031_middle_m;
 }
 
-
 switch (FEAT_TRAINS, SELF, switch_cr400bf_0031_length_class, num_vehs_in_consist / 3) {
     2..6:   switch_cr400bf_0031_if_middle_wagon_tp_short;
     7..12:  switch_cr400bf_0031_if_middle_wagon_tp_meddium;
@@ -149,7 +148,6 @@ switch (FEAT_TRAINS, SELF, switch_cr400bf_0031_cab_capacity, position_in_articul
     1: switch_cr400bf_0031_cab_capacity_id;
     return 0;
 }
-
 
 switch (FEAT_TRAINS, SELF, switch_cr400bf_0031_wagon_capacity_if_reconect_cab, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
     0: switch_cr400bf_0031_middle_capacity;
