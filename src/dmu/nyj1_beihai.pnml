@@ -1,0 +1,227 @@
+// Begin NYJ1_BEIHAI
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_beihai_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("dmu", "nyj1-beihai-c")
+}
+
+// Vehicle
+spriteset (spriteset_beihai_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu", "nyj1-beihai-c")
+}
+spriteset (spriteset_beihai_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu", "nyj1-beihai-t")
+}
+spriteset (spriteset_beihai_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("dmu", "nyj1-beihai-c")
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_beihai_articulated_part, extra_callback_info1) {
+    1..2: return beihai;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_beihai_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_beihai_front;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_beihai_head_capacity, position_in_articulated_veh % 3) {
+    1: return 33;
+    return 0;
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_beihai_middle_gfx_back, (position_in_consist_from_end / 3) + 1) {
+    1: spriteset_beihai_back;
+    spriteset_beihai_middle;
+}
+
+switch (FEAT_TRAINS, SELF, switch_beihai_middle_gfx_front, (position_in_consist / 3) + 1) {
+    1: spriteset_beihai_front;
+    spriteset_beihai_middle;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_beihai_graphics_side, position_in_consist >= num_vehs_in_consist / 2) {
+    1: switch_beihai_middle_gfx_back;
+    switch_beihai_middle_gfx_front;
+}
+
+switch (FEAT_TRAINS, SELF, switch_beihai_wagon_graphics, position_in_articulated_veh % 3) {
+    1: switch_beihai_graphics_side;
+    empty_sprites;
+}
+
+
+
+//Cap
+switch (FEAT_TRAINS, SELF, switch_beihai_middle_capacity_1, vehicle_type_id) {
+    1024: return 128;
+    1025: return 80;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_beihai_middle_capacity, position_in_articulated_veh % 3) {
+    1: switch_beihai_middle_capacity_1;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_beihai_cab_capacity_1, vehicle_type_id) {
+    1024: return 68;
+    1025: return 33;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_beihai_cab_capacity, position_in_articulated_veh % 3) {
+    1: switch_beihai_cab_capacity_1;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_beihai_wagon_capacity, position_in_consist_from_end) {
+    0..2: switch_beihai_cab_capacity;
+    switch_beihai_middle_capacity;
+}
+
+switch (FEAT_TRAINS, SELF, switch_beihai_wagon_traction, vehicle_is_potentially_powered) {
+    1: return int(0.094*255);
+    return 0;
+}
+switch (FEAT_TRAINS, SELF, switch_beihai_wagon_weight, vehicle_is_potentially_powered) {
+    1: return 58;
+    return 45;
+}
+
+// Power
+switch (FEAT_TRAINS, SELF, switch_beihai_pw_2, position_in_consist) {
+    9..14: return 493;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_beihai_pw_3, position_in_consist) {
+    9..14: return 493;
+    21..26: return 493;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_beihai_pw_4, position_in_consist) {
+    9..14: return 493;
+    21..26: return 493;
+    33..38: return 493;
+    return 0;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_beihai_wagon_pw_length, num_vehs_in_consist / 3) {
+    1..5: return 0;
+    6..9: switch_beihai_pw_2;
+    10..13: switch_beihai_pw_3;
+    switch_beihai_pw_4;
+}
+
+switch (FEAT_TRAINS, SELF, switch_beihai_wagon_power, position_in_consist_from_end) {
+    0..2: return 493;
+    switch_beihai_wagon_pw_length;
+}
+
+
+
+item (FEAT_TRAINS, beihai) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_NYJ1_BEIHAI);   
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2000,12,20);
+        model_life:                     40;
+        vehicle_life:                   12;
+        retire_early:                   15;
+        track_type:                     SACN;
+        visual_effect_and_powered:      visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 0, ENABLE_WAGON_POWER);
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          140 km/h;
+        power:                          736 kW;
+        weight:                         58 ton;
+        tractive_effort_coefficient:    0.094;
+        cost_factor:                    37;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            27;
+        reliability_decay:              16;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_DJF1_CONSIST),  string(STR_COMFORT_MEDIUM, 185), string(STR_RELDEC_MEDIUM, 16));
+        can_attach_wagon:               onlyzezy;
+        start_stop:                     mu2to16car;
+
+        // Graphics
+        default:                        switch_beihai_graphics;
+        purchase:                       spriteset_beihai_purchase_original;
+        articulated_part:               switch_beihai_articulated_part;
+        cargo_capacity:                 switch_beihai_head_capacity;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cost_factor:                    37;
+        running_cost_factor:            27 * runningcostfactor();
+        purchase_running_cost_factor:   108;
+        purchase_cargo_capacity:        78/3;
+    }
+
+    // Multiple Unit Wagons
+    livery_override(zemuw) {
+        default:                        switch_beihai_wagon_graphics;
+        cargo_capacity:                 switch_beihai_wagon_capacity;
+        length:                         switch_length_2_8_2;
+        power:                          switch_beihai_wagon_power;
+        tractive_effort_coefficient:    switch_beihai_wagon_traction;
+        weight:                         switch_beihai_wagon_weight;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (185) << param_cargo_decay;
+        bitmask_vehicle_info:           bitmask(2);
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    16;
+        running_cost_factor:            7 * runningcostfactor() + 2; // WITH AC
+        visual_effect_and_powered:      switch_dmu_visual_power;
+    }
+     livery_override(zymuw) {
+        default:                        switch_beihai_wagon_graphics;
+        cargo_capacity:                 switch_beihai_wagon_capacity;
+        length:                         switch_length_2_8_2;
+        power:                          switch_beihai_wagon_power;
+        tractive_effort_coefficient:    switch_beihai_wagon_traction;
+        weight:                         switch_beihai_wagon_weight;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (185) << param_cargo_decay;
+        bitmask_vehicle_info:           bitmask(2);
+        articulated_part:               switch_crh_wagon_articulated_part;
+        cost_factor:                    16;
+        running_cost_factor:            7 * runningcostfactor() + 2; // WITH AC
+        visual_effect_and_powered:      switch_dmu_visual_power;
+    }
+}
+
+// End NYJ1_BEIHAI
