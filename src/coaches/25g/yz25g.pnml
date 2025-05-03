@@ -141,7 +141,7 @@ item (FEAT_TRAINS, yz25g) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YZ25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN), string(STR_GMSR), string(STR_GMSR_EARLY), string(STR_GYR), string(STR_XIAOYONG), string(STR_NANHU), string(STR_FULONG)), string(STR_COMFORT_LOW, 160));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YZ25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN), string(STR_GMSR), string(STR_GMSR_EARLY), string(STR_GYR), string(STR_XIAOYONG), string(STR_NANHU), string(STR_FULONG)), string(STR_COMFORT_LOW, 160));
         can_attach_wagon:               locowagon;
 
         // Graphics

@@ -156,7 +156,7 @@ item (FEAT_TRAINS, kd25g) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN),string(STR_XIHU), string(STR_CHANGSHA2), string(STR_LUCHAOGANG), string(STR_ORANGE), string(STR_GMSR), string(STR_GMSR_EARLY), string(STR_HEJIU), string(STR_XIAOYONG), string(STR_FULONG), string(STR_NANHU), string(STR_BLUE_WHITE)), string(STR_AIR_CONDITIONER_EFFECT));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN),string(STR_XIHU), string(STR_CHANGSHA2), string(STR_LUCHAOGANG), string(STR_ORANGE), string(STR_GMSR), string(STR_GMSR_EARLY), string(STR_HEJIU), string(STR_XIAOYONG), string(STR_FULONG), string(STR_NANHU), string(STR_BLUE_WHITE)), string(STR_AIR_CONDITIONER_EFFECT));
         can_attach_wagon:               locowagon;
 
         // Graphics

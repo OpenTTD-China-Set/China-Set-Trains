@@ -124,7 +124,7 @@ item (FEAT_TRAINS, syz25bhd) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SYZ25B), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_LV_AVAILABLE_L , string(STR_LIVERY_AVALIABLE), string(STR_CHANGSHA), string(STR_JINAN2), string(STR_K35K36), string(STR_CHANGSHA_SHENZHEN), string(STR_KT), string(STR_ZHENGZHOU2), string(STR_GAOZU_GREEN), string(STR_DACHENG), string(STR_RED), string(STR_URUMQI), string(STR_ORANGE), string(STR_93_94)), string(STR_COMFORT_LOW, 160));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SYZ25B), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_LV_AVAILABLE_L , string(STR_LIVERY_AVAILABLE), string(STR_CHANGSHA), string(STR_JINAN2), string(STR_K35K36), string(STR_CHANGSHA_SHENZHEN), string(STR_KT), string(STR_ZHENGZHOU2), string(STR_GAOZU_GREEN), string(STR_DACHENG), string(STR_RED), string(STR_URUMQI), string(STR_ORANGE), string(STR_93_94)), string(STR_COMFORT_LOW, 160));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_syz25bhd_cargo_subtype;
 
