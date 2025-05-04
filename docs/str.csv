@@ -909,7 +909,7 @@ STR_K35K36,{BLACK} - Beijing-Jinan K35-K36 Livery,{BLACK} - 北京-济南K35-K36
 STR_BEIDAIHE,{ORANGE} - Beidaihe Livery,{ORANGE} - 北戴河号涂装
 STR_JINAN2,{ORANGE} - Jinan Railway Bureau,{ORANGE} - 济南铁路局
 STR_TAIYUAN,{ORANGE} - Taiyuan Railway Bureau,{ORANGE} - 太原铁路局
-STR_CHANGSHA2,{ORANGE} - Changsha Railway Bureau,{ORANGE} - 长沙铁路局
+STR_CHANGSHA2,{ORANGE} - Changsha Locomotive Depot,{ORANGE} - 长沙机务段
 STR_CHANGSHA_SHENZHEN,{ORANGE} - Changsha-Shenzhen Livery,{ORANGE} - 长沙-深圳涂装
 STR_ZHENGZHOU2,{ORANGE} - Zhengzhou Railway Bureau,{ORANGE} - 郑州铁路局
 STR_NENGYEQING48,"{BLACK} - {LTBLUE}""Little Bear of Neng-Yeqing"" {BLACK}Livery","{BLACK} - {LTBLUE}""能也庆的小熊"" {BLACK}涂装"

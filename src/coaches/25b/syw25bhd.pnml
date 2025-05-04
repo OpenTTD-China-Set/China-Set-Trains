@@ -58,7 +58,7 @@ switch (FEAT_TRAINS, SELF, switch_syw25bhd_graphics_subtype, cargo_subtype) {
     5: spriteset_syw25bhd_hu;
     6: spriteset_syw25bhd_jinan;
     7: spriteset_syw25bhd_cs;
-    7: spriteset_syw25bhd_zz;
+    8: spriteset_syw25bhd_zz;
 }
 
 switch (FEAT_TRAINS, SELF, switch_syw25bhd_graphics, position_in_articulated_veh % 3) {
