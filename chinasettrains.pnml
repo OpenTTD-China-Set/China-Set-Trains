@@ -285,6 +285,7 @@
 
 // DMU
 #include "src/dmu/nc3.pnml"
+#include "src/dmu/nyj1_beihai.pnml"
 #include "src/dmu/ndj3.pnml"
 #include "src/dmu/nzj1_xinshuguang.pnml"
 #include "src/dmu/nzj2_jinlun_unilaminar.pnml"
@@ -295,6 +296,7 @@
 #include "src/25-emu/djj1.pnml"
 #include "src/25-emu/djj2.pnml"
 #include "src/25-emu/djf1.pnml"
+#include "src/25-emu/djf2.pnml"
 #include "src/25-emu/djf3.pnml"
 #include "src/25-emu/cr200ja.pnml"
 #include "src/25-emu/cr200jal.pnml"
@@ -304,11 +306,13 @@
 #include "src/25-emu/crh1a.pnml"
 #include "src/25-emu/crh1b.pnml"
 #include "src/25-emu/crh1e.pnml"
+#include "src/25-emu/crh1eng.pnml"
 #include "src/25-emu/crh1aa.pnml"
 #include "src/25-emu/crh2a.pnml"
 #include "src/25-emu/crh2b.pnml"
 #include "src/25-emu/crh2c.pnml"
 #include "src/25-emu/crh2e.pnml"
+#include "src/25-emu/crh2eng.pnml"
 #include "src/25-emu/crh2els.pnml"
 #include "src/25-emu/crh2g.pnml"
 #include "src/25-emu/crh2a4020.pnml"
@@ -324,6 +328,7 @@
 #include "src/25-emu/crh380al.pnml"
 #include "src/25-emu/crh380al_2541.pnml"
 #include "src/25-emu/crh380aj.pnml"
+#include "src/25-emu/crh380am.pnml"
 #include "src/25-emu/crh380b.pnml"
 #include "src/25-emu/crh380bl.pnml"
 #include "src/25-emu/crh380cl.pnml"
@@ -336,6 +341,8 @@
 #include "src/25-emu/cr400afabz.pnml"
 #include "src/25-emu/cr400afae.pnml"
 #include "src/25-emu/cr400bf.pnml"
+#include "src/25-emu/cr400bf_0031.pnml"
+#include "src/25-emu/cr400bf_0051.pnml"
 #include "src/25-emu/cr400bfab.pnml"
 #include "src/25-emu/cr400bfc.pnml"
 #include "src/25-emu/cr400bfz.pnml"
@@ -345,6 +352,7 @@
 #include "src/25-emu/crh6aa.pnml"
 #include "src/25-emu/crh6aacinova.pnml"
 #include "src/25-emu/crh6f.pnml"
+#include "src/25-emu/crh6fa.pnml"
 
 // 1.5kV DC EMU
 

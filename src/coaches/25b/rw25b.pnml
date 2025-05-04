@@ -98,7 +98,7 @@ item (FEAT_TRAINS, rw25b) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_RW25B), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL)/* , string(STR_GAOZU_GREEN)*/, string(STR_XIYAN)), string(STR_COMFORT_HIGH, 480), string(STR_SELF_AIR_CONDITIONER));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_RW25B), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL)/* , string(STR_GAOZU_GREEN)*/, string(STR_XIYAN)), string(STR_COMFORT_HIGH, 480), string(STR_SELF_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
 
         // Graphics

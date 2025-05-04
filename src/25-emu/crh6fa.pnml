@@ -1,0 +1,284 @@
+// Begin CRH6AACINOVA
+switch (FEAT_TRAINS, SELF, switch_crh6fa_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_CRH6_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+// Purchase Menu
+spriteset (spriteset_crh6fa_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-emu/crh6fa", "crh6f-a-c-changzhutan")
+}
+
+// Vehicle
+spriteset (spriteset_crh6fa_changzhutan_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-c-changzhutan")
+}
+spriteset (spriteset_crh6fa_changzhutan_front2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-c-changzhutan2")
+}
+spriteset (spriteset_crh6fa_changzhutan_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh6fa", "crh6f-a-c-changzhutan")
+}
+spriteset (spriteset_crh6fa_changzhutan_cab2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh6fa", "crh6f-a-c-changzhutan2")
+}
+spriteset (spriteset_crh6fa_changzhutan_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-t-changzhutan")
+}
+spriteset (spriteset_crh6fa_changzhutan2_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-t2-changzhutan")
+}
+
+spriteset (spriteset_crh6fa_huaimi_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-c-huaimi")
+}
+spriteset (spriteset_crh6fa_huaimi_front2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-c-huaimi2")
+}
+spriteset (spriteset_crh6fa_huaimi_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh6fa", "crh6f-a-c-huaimi")
+}
+spriteset (spriteset_crh6fa_huaimi_cab2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh6fa", "crh6f-a-c-huaimi2")
+}
+spriteset (spriteset_crh6fa_huaimi_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-t-huaimi")
+}
+spriteset (spriteset_crh6fa_huaimi2_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-t2-huaimi")
+}
+
+spriteset (spriteset_crh6fa_jintai_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-c-jintai")
+}
+spriteset (spriteset_crh6fa_jintai_front2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-c-jintai2")
+}
+spriteset (spriteset_crh6fa_jintai_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh6fa", "crh6f-a-c-jintai")
+}
+spriteset (spriteset_crh6fa_jintai_cab2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh6fa", "crh6f-a-c-jintai2")
+}
+spriteset (spriteset_crh6fa_jintai_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-t-jintai")
+}
+spriteset (spriteset_crh6fa_jintai2_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-t2-jintai")
+}
+
+spriteset (spriteset_crh6fa_lianyungang_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-c-lianyungang")
+}
+spriteset (spriteset_crh6fa_lianyungang_front2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-c-lianyungang2")
+}
+spriteset (spriteset_crh6fa_lianyungang_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh6fa", "crh6f-a-c-lianyungang")
+}
+spriteset (spriteset_crh6fa_lianyungang_cab2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh6fa", "crh6f-a-c-lianyungang2")
+}
+spriteset (spriteset_crh6fa_lianyungang_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-t-lianyungang")
+}
+spriteset (spriteset_crh6fa_lianyungang2_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-t2-lianyungang")
+}
+
+spriteset (spriteset_crh6fa_xiaoyong_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-c-xiaoyong")
+}
+spriteset (spriteset_crh6fa_xiaoyong_front2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-c-xiaoyong2")
+}
+spriteset (spriteset_crh6fa_xiaoyong_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh6fa", "crh6f-a-c-xiaoyong")
+}
+spriteset (spriteset_crh6fa_xiaoyong_cab2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh6fa", "crh6f-a-c-xiaoyong2")
+}
+spriteset (spriteset_crh6fa_xiaoyong_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-t-xiaoyong")
+}
+spriteset (spriteset_crh6fa_xiaoyong2_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-t2-xiaoyong")
+}
+
+spriteset (spriteset_crh6fa_yangquan_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-c-yangquan")
+}
+spriteset (spriteset_crh6fa_yangquan_front2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-c-yangquan2")
+}
+spriteset (spriteset_crh6fa_yangquan_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh6fa", "crh6f-a-c-yangquan")
+}
+spriteset (spriteset_crh6fa_yangquan_cab2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/crh6fa", "crh6f-a-c-yangquan2")
+}
+spriteset (spriteset_crh6fa_yangquan_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-t-yangquan")
+}
+spriteset (spriteset_crh6fa_yangquan2_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/crh6fa", "crh6f-a-t2-yangquan")
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_crh6fa_articulated_part, extra_callback_info1) {
+    1..11: return crh6fa;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6fa_cargo_subtype, cargo_subtype) {
+    0: return string(STR_CHANGZHUTAN);
+    1: return string(STR_HUAIMI);
+    2: return string(STR_JINTAI);
+    3: return string(STR_LIANYUNGANG);
+    4: return string(STR_XIAOYONG);
+    5: return string(STR_YANGQUAN);
+    return CB_RESULT_NO_TEXT;
+}
+switch (FEAT_TRAINS, SELF, switch_crh6fa_front, cargo_subtype) {
+    0: spriteset_crh6fa_changzhutan_front;
+    1: spriteset_crh6fa_huaimi_front;
+    2: spriteset_crh6fa_jintai_front;
+    3: spriteset_crh6fa_lianyungang_front;
+    4: spriteset_crh6fa_xiaoyong_front;
+    5: spriteset_crh6fa_yangquan_front;
+}
+switch (FEAT_TRAINS, SELF, switch_crh6fa_front2, cargo_subtype) {
+    0: spriteset_crh6fa_changzhutan_front2;
+    1: spriteset_crh6fa_huaimi_front2;
+    2: spriteset_crh6fa_jintai_front2;
+    3: spriteset_crh6fa_lianyungang_front2;
+    4: spriteset_crh6fa_xiaoyong_front2;
+    5: spriteset_crh6fa_yangquan_front2;
+}
+switch (FEAT_TRAINS, SELF, switch_crh6fa_middle, cargo_subtype) {
+    0: spriteset_crh6fa_changzhutan_middle;
+    1: spriteset_crh6fa_huaimi_middle;
+    2: spriteset_crh6fa_jintai_middle;
+    3: spriteset_crh6fa_lianyungang_middle;
+    4: spriteset_crh6fa_xiaoyong_middle;
+    5: spriteset_crh6fa_yangquan_middle;
+}
+switch (FEAT_TRAINS, SELF, switch_crh6fa2_middle, cargo_subtype) {
+    0: spriteset_crh6fa_changzhutan2_middle;
+    1: spriteset_crh6fa_huaimi2_middle;
+    2: spriteset_crh6fa_jintai2_middle;
+    3: spriteset_crh6fa_lianyungang2_middle;
+    4: spriteset_crh6fa_xiaoyong2_middle;
+    5: spriteset_crh6fa_yangquan2_middle;
+}
+switch (FEAT_TRAINS, SELF, switch_crh6fa_cab, cargo_subtype) {
+    0: spriteset_crh6fa_changzhutan_cab;
+    1: spriteset_crh6fa_huaimi_cab;
+    2: spriteset_crh6fa_jintai_cab;
+    3: spriteset_crh6fa_lianyungang_cab;
+    4: spriteset_crh6fa_xiaoyong_cab;
+    5: spriteset_crh6fa_yangquan_cab;
+}
+switch (FEAT_TRAINS, SELF, switch_crh6fa_cab2, cargo_subtype) {
+    0: spriteset_crh6fa_changzhutan_cab2;
+    1: spriteset_crh6fa_huaimi_cab2;
+    2: spriteset_crh6fa_jintai_cab2;
+    3: spriteset_crh6fa_lianyungang_cab2;
+    4: spriteset_crh6fa_xiaoyong_cab2;
+    5: spriteset_crh6fa_yangquan_cab2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6fa_graphics_middle, position_in_articulated_veh % 12) {
+    1: switch_crh6fa_front2;
+    4: switch_crh6fa_middle;
+    7: switch_crh6fa2_middle;
+    10: switch_crh6fa_cab2;
+    empty_sprites;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh6fa_graphics_cab, position_in_consist_from_end) {
+    1: switch_crh6fa_cab;
+    switch_crh6fa_graphics_middle;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6fa_graphics, position_in_consist) {
+    1: switch_crh6fa_front;
+    switch_crh6fa_graphics_cab;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6fa_section_capacity, position_in_articulated_veh % 12) {
+    1: return 150;
+    4: return 190;
+    7: return 190;
+    10: return 150;
+    return 0;
+}
+item (FEAT_TRAINS, crh6fa) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CRH6FA);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        variant_group:					9228;
+
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2017,9,20);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SABA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  14 << param_loading_speed;
+        cargo_age_period:               200 << param_cargo_decay;
+
+        // Stats
+        speed:                          160 km/h;
+        power:                          2376 kW;
+        weight:                         179 ton;
+        tractive_effort_coefficient:    0.073;
+        cost_factor:                    54;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            23;
+        reliability_decay:              6;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_5, string(STR_CRH6FA_NICKNAME), string(STR_LV_AVAILABLE_L, string(STR_LIVERY_AVAILABLE), string(STR_CHANGZHUTAN), string(STR_HUAIMI), string(STR_JINTAI), string(STR_LIANYUNGANG), string(STR_XIAOYONG), string(STR_YANGQUAN)), string(STR_RELDEC_VERY_LOW, 6), string(STR_CRH6AA_CONSIST),string(STR_COMFORT_LOW, 160));
+        can_attach_wagon:               onlycrh6fa;
+        start_stop:                     mu4car;
+        cargo_subtype_text:             switch_crh6fa_cargo_subtype;
+
+        // Graphics
+        default:                        switch_crh6fa_graphics;
+        purchase:                       spriteset_crh6fa_purchase_original;
+        articulated_part:               switch_crh6fa_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_crh6fa_section_capacity;
+        cargo_age_period:               160 << param_cargo_decay;
+        cost_factor:                    183;
+        running_cost_factor:            128 * runningcostfactor() + 20;
+        purchase_running_cost_factor:   478;
+        purchase_cargo_capacity:        702/12;
+        name:                           switch_crh6fa_name;
+        
+
+    }
+}
+
+// End CRH6FA 
+

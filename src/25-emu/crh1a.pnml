@@ -334,7 +334,7 @@ item (FEAT_TRAINS, crh1a) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_6, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH1A_NICKNAME), string(STR_LV_AVAILABLE_S, string(STR_LIVERY_AVALIABLE), string(STR_LATER), string(STR_EARLIER)), string(STR_RELDEC_LOW, 12), string(STR_CRH1A_CONSIST), string(STR_CRH1A_HEAD_SEAT));
+        additional_text:                string(STR_DESC_6, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CRH1A_NICKNAME), string(STR_LV_AVAILABLE_S, string(STR_LIVERY_AVAILABLE), string(STR_LATER), string(STR_EARLIER)), string(STR_RELDEC_LOW, 12), string(STR_CRH1A_CONSIST), string(STR_CRH1A_HEAD_SEAT));
         can_attach_wagon:               crhwagon;
         start_stop:                     mu4to24car;
         cargo_subtype_text:             swtich_crh1a_cargo_subtype;
