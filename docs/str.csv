@@ -699,7 +699,7 @@ STR_HXD3C_NICKNAME,{BLACK}Nickname: {GOLD}Electric Baboon,{BLACK}昵称：{GOLD}
 STR_HXD3D_NICKNAME,{BLACK}Nickname: {GOLD}Tomato,{BLACK}昵称：{GOLD}番茄
 STR_NDJ3_NICKNAME,{BLACK}Nickname: {WHITE}White Pig,{BLACK}昵称：{WHITE}大白猪
 STR_CR200J_NICKNAME,"{BLACK}Nickname: {GREEN}""Hulk"" {GOLD}(Official), {GREEN}""Trash Bin"" {GOLD}(Folk)",{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方)，{GREEN}“垃圾桶”{GOLD}(民间)
-STR_CR200JSG_NICKNAME,"{BLACK}Nickname: {GREEN}""Dual-Powerd Bin"" {GOLD}(Folk)",{BLACK}昵称：{GREEN}“双源桶”{GOLD}(民间)
+STR_CR200JSG_NICKNAME,"{BLACK}Nickname: {GREEN}""Dual-Powered Bin"" {GOLD}(Folk)",{BLACK}昵称：{GREEN}“双源桶”{GOLD}(民间)
 STR_CR200JC_NICKNAME,"{BLACK}Nickname: {RED}""A{WHITE}D {GREEN}Bin"" {GOLD}(Folk)",{BLACK}昵称：{RED}“A{WHITE}D{GREEN}桶”{GOLD}(民间)
 STR_CRH1A_NICKNAME,{BLACK}Nickname: {GOLD}Metro,{BLACK}昵称：{GOLD}地铁
 STR_CRH1B_NICKNAME,{BLACK}Nickname: {GOLD}Long Metro ,{BLACK}昵称：{GOLD}长地铁
@@ -716,7 +716,7 @@ STR_CRH3A_NICKNAME,{BLACK}Nickname: {GOLD}Golden Eyes,{BLACK}昵称：{GOLD}黄�
 STR_CRH3C_NICKNAME,{BLACK}Nickname: {GOLD}Rabbit,{BLACK}昵称：{GOLD}兔子
 STR_CRH5A_NICKNAME,{BLACK}Nickname: {GOLD}Donkey,{BLACK}昵称：{GOLD}驴
 STR_CRH6F_NICKNAME,{BLACK}Nickname: {GOLD}Real Metro,{BLACK}昵称：{GOLD}真地铁
-STR_CRH6FA_NICKNAME,"{BLACK}Nickname: {GOLD}Real Metro , Changzhutan paint, Huairou paint, Jintai railway paint, Lianyungang suburban railway paint, Xiaoyong railway paint, Yangquan railway paint",{BLACK}昵称：{GOLD}真地铁 可使用长株潭涂装，怀柔号涂装，金台铁路涂装，连云港市郊铁路涂装，萧甬铁路涂装，阳泉铁路涂装
+STR_CRH6FA_NICKNAME,{BLACK}Nickname: {GOLD}Real Metro,{BLACK}昵称：{GOLD}真地铁
 STR_CRH380A_NICKNAME,{BLACK}Nickname: {GOLD}Big Rat,{BLACK}昵称：{GOLD}大老鼠
 STR_CRH380AM_NICKNAME,{BLACK}Nickname: {GOLD}Bronze Sword,{BLACK}昵称：{GOLD}青铜剑
 STR_CRH380B_NICKNAME,{BLACK}Nickname: {GOLD}Crazy Rabbit,{BLACK}昵称：{GOLD}疯兔子
@@ -729,7 +729,7 @@ STR_CR400_Z_NICKNAME,{BLACK}Nickname: {GOLD}Dragon and {RED}Phoenix bring prospe
 STR_CR400BFC_NICKNAME,{BLACK}Nickname: {LTBLUE}Blessed Snow Welcomes Spring (Winter Olympic Livery Only),{BLACK}冬奥涂装版昵称：{LTBLUE}瑞雪迎春
 STR_CR400BFZ_NICKNAME,"{BLACK}Nickname: {GOLD}Dragon and {RED}Phoenix bring prosperity,  {PURPLE}Egglpant (Folk)/ Aussie on Yangtze (Official) (Asia Game Livery Only)",{BLACK}昵称：{GOLD}龙凤{RED}呈祥{BLACK}，{PURPLE}茄子 (民间)/润泽江南 (官方) (亚运涂装)
 STR_CR300AF_NICKNAME,{BLACK}Nickname: {LTBLUE}Smurfette,{BLACK}昵称：{LTBLUE}蓝妹妹
-STR_CR300BF_NICKNAME,"{BLACK}Nickname: {LTBLUE}""Blue Antidote"" {GOLD}(Official), {LTBLUE}""Zoombie Blue"" {GOLD}(Folk)",{BLACK}昵称：{LTBLUE}“蓝暖男”{GOLD}(官方)，{LTBLUE}“僵尸蓝”{GOLD}(民间)
+STR_CR300BF_NICKNAME,"{BLACK}Nickname: {LTBLUE}""Blue Antidote"" {GOLD}(Official), {LTBLUE}""Zombie Blue"" {GOLD}(Folk)",{BLACK}昵称：{LTBLUE}“蓝暖男”{GOLD}(官方)，{LTBLUE}“僵尸蓝”{GOLD}(民间)
 # Alias Name,,
 STR_ALIASNAME_JF1,"{BLACK}Alias Name: {GOLD}Mikai, MK1",{BLACK}曾用名：{GOLD}ミカイ，ㄇㄎ1型
 STR_ALIASNAME_SL6,"{BLACK}Alias Name: {GOLD}Pashiku, PX6",{BLACK}曾用名：{GOLD}パシク，ㄆㄒ6型
