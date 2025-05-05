@@ -788,7 +788,7 @@ STR_RUSTYRED,{BROWN} - Rusty Red Color,{BROWN} - 锈红色
 STR_XIHU,{BLACK} - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery,{BLACK} - {GREEN}西户铁路{BLACK}涂装
 STR_XIHU_REVERSE,"{BLACK} - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery, reversed",{BLACK} - {GREEN}西户铁路{BLACK}涂装，倒转方向
 STR_DF4D_7000,{BLACK} - {GREEN}7000-{YELLOW}Series {BLACK}Livery,{BLACK} - {GREEN}7000{YELLOW}系{BLACK}涂装
-STR_CHANGSHA,{BLACK} - Changsha Livery,{BLACK} - 长沙客运段涂装
+STR_CHANGSHA,{BLACK} - Changsha Livery,{BLACK} - 长沙机务段涂装
 STR_FUZHOU,{BLACK} - Fuzhou Livery,{BLACK} - 福州机务段涂装
 STR_UKRAINE,{BLACK} - {YELLOW}Yellow {BLACK}and {BLUE}Blue {BLACK}Livery,{BLACK} - {YELLOW}“乌克兰”{BLUE}涂装
 STR_DF4B_DPRK,{BLACK} - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery,{BLACK} - {BLUE}蓝{DKGREEN}绿{BLACK}相间涂装
@@ -826,7 +826,7 @@ STR_STRENGTHEN,{BLACK} - With Strengthening Steel Sheet,{BLACK} - 带加强筋
 STR_PLUGDOOR,{BLACK} - Version With Plug Doors,{BLACK} - 安装塞拉门的版本
 STR_FOLDINGDOOR,{BLACK} - Version With Folding Doors,{BLACK} - 安装折页门的版本
 STR_URUMQI,{BLACK} - Urumqi Railway Bureau,{BLACK} - 乌鲁木齐局灰色低开门涂装
-STR_URUMQI2,{BLACK} - Urumqi Bureau gray high door livery,{BLACK} - 乌鲁木齐局灰色高开门涂装
+STR_URUMQI2,{BLACK} - Urumqi Railway Bureau,{BLACK} - 乌鲁木齐局灰色高开门涂装
 STR_XIAN,{BLACK} - Xi'an Railway Bureau,{BLACK} - 西安铁路局
 STR_SHENYANG,{BLACK} - Shenyang Railway Bureau,{BLACK} - 沈阳铁路局
 STR_HUHHOT,{BLACK} - Huhhot Railway Bureau,{BLACK} - 呼和浩特铁路局
@@ -910,7 +910,7 @@ STR_K35K36,{BLACK} - Beijing-Jinan K35-K36 Livery,{BLACK} - 北京-济南K35-K36
 STR_BEIDAIHE,{ORANGE} - Beidaihe Livery,{ORANGE} - 北戴河号涂装
 STR_JINAN2,{ORANGE} - Jinan Railway Bureau,{ORANGE} - 济南铁路局
 STR_TAIYUAN,{ORANGE} - Taiyuan Railway Bureau,{ORANGE} - 太原铁路局
-STR_CHANGSHA2,{ORANGE} - Changsha Locomotive Depot,{ORANGE} - 长沙机务段
+STR_CHANGSHA2,{ORANGE} - Changsha Passenger Depot,{ORANGE} - 长沙客运段
 STR_CHANGSHA_SHENZHEN,{ORANGE} - Changsha-Shenzhen Livery,{ORANGE} - 长沙-深圳涂装
 STR_ZHENGZHOU2,{ORANGE} - Zhengzhou Railway Bureau,{ORANGE} - 郑州铁路局
 STR_NENGYEQING48,"{BLACK} - {LTBLUE}""Little Bear of Neng-Yeqing"" {BLACK}Livery","{BLACK} - {LTBLUE}""能也庆的小熊"" {BLACK}涂装"
