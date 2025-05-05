@@ -826,6 +826,7 @@ STR_STRENGTHEN,{BLACK} - With Strengthening Steel Sheet,{BLACK} - 带加强筋
 STR_PLUGDOOR,{BLACK} - Version With Plug Doors,{BLACK} - 安装塞拉门的版本
 STR_FOLDINGDOOR,{BLACK} - Version With Folding Doors,{BLACK} - 安装折页门的版本
 STR_URUMQI,{BLACK} - Urumqi Railway Bureau,{BLACK} - 乌鲁木齐局灰色低开门涂装
+STR_URUMQI2,{BLACK} - Urumqi Bureau gray high door livery,{BLACK} - 乌鲁木齐局灰色高开门涂装
 STR_XIAN,{BLACK} - Xi'an Railway Bureau,{BLACK} - 西安铁路局
 STR_SHENYANG,{BLACK} - Shenyang Railway Bureau,{BLACK} - 沈阳铁路局
 STR_HUHHOT,{BLACK} - Huhhot Railway Bureau,{BLACK} - 呼和浩特铁路局
