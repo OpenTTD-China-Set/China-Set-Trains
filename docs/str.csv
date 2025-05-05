@@ -788,7 +788,7 @@ STR_RUSTYRED,{BROWN} - Rusty Red Color,{BROWN} - 锈红色
 STR_XIHU,{BLACK} - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery,{BLACK} - {GREEN}西户铁路{BLACK}涂装
 STR_XIHU_REVERSE,"{BLACK} - {GREEN}Xi'an{YELLOW}-{GREEN}Huxian {BLACK}Railway Livery, reversed",{BLACK} - {GREEN}西户铁路{BLACK}涂装，倒转方向
 STR_DF4D_7000,{BLACK} - {GREEN}7000-{YELLOW}Series {BLACK}Livery,{BLACK} - {GREEN}7000{YELLOW}系{BLACK}涂装
-STR_CHANGSHA,{BLACK} - Changsha Livery,{BLACK} - 长沙机务段涂装
+STR_CHANGSHA,{BLACK} - Changsha Livery,{BLACK} - 长沙客运段涂装
 STR_FUZHOU,{BLACK} - Fuzhou Livery,{BLACK} - 福州机务段涂装
 STR_UKRAINE,{BLACK} - {YELLOW}Yellow {BLACK}and {BLUE}Blue {BLACK}Livery,{BLACK} - {YELLOW}“乌克兰”{BLUE}涂装
 STR_DF4B_DPRK,{BLACK} - {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery,{BLACK} - {BLUE}蓝{DKGREEN}绿{BLACK}相间涂装
