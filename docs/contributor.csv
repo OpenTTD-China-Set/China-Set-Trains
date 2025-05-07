@@ -3,8 +3,10 @@ CR200J1,,JF*Recoded by Babel,Babel,prototype:EMB
 CRH2C,,JF*Recoded by Babel,Babel,
 CR200J-B,,JF*Recoded by Babel,Babel,
 CRH3A,,JF*Recoded by Babel,Qipaoxian,
+CRH3A-A,,Qipaoxian,Qipaoxian,
 NDJ3,,JF,"Qipaoxian, Babel",
 DJJ1,,JF,"NACHN, Babel",
+DJF2,,Qipaoxian,Qipaoxian,Qipaoxian
 CRH380B,,JF,Qipaoxian,
 CRH3C,,JF,Qipaoxian,
 CRH2G,,JF*Recoded by Babel,"Qipaoxian,Babel",
@@ -13,6 +15,9 @@ CRH6A2,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
 CRH6A3,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
 CRH6A-A,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
 CRH6F,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
+CRH6FA,,Qipaoxian,"Qipaoxian,Nengyeqing",All:Nengyeqing
+CJ6,,Qipaoxian,"Qipaoxian,Ahyangyi",
+CINOVA2.0,,Qipaoxian,Qipaoxian,
 CRH380A,,Babel,"Qipaoxian,Babel",
 CR200J-C,,Babel,Babel,
 NZJ1-XSG,,JF,wuwu,
@@ -31,8 +36,10 @@ CRH1AA,,Babel,"Qipaoxian,Babel",
 CR400BF/BF-A/BF-B,,Babel,"Qipaoxian,Babel",
 CR400BF-Z/S/AZ/BZ/BS,,Babel,"Qipaoxian,Nengyeqing",
 CR400BF-C,,Babel,"Qipaoxian,Babel",
+CR400BF-0031/0051,,Qipaoxian,Qipaoxian,Qipaoxian
 DJF3,,Babel,Qipaoxian,
 DJJ2,,Babel,Qipaoxian,
+NYJ1,,Qipaoxian,Qipaoxian,
 CR400AFAE,,Babel,"Qipaoxian,Haiyan",
 CRH5A,,JF*Recoded by Babel,"Qipaoxian,Babel",
 CRH5GJT,,,Qipaoxian,
@@ -40,6 +47,7 @@ CRH5E,,Babel,Qipaoxian,
 CR200JSG,,"5033,Babel","5033,EMB,Babel",
 CRH380AJ,,"5033,Babel","Qipaoxian,Haiyan",
 CRH380AL_2541,,5033,"Qipaoxian,Babel",
+CRH380AM,,Qipaoxian,Qipaoxian,
 DJF1,,Babel,Qipaoxian,
 CRH2A4020,,Babel,Babel,
 JF1,jf1,JF,EMB,
@@ -180,13 +188,13 @@ YZ25K,yz25k,JF,Haiyan,All: Haiyan
 RZ25K,rz25k,JF,Haiyan,All: Haiyan
 YW25K,yw25k,JF,Haiyan,All: Haiyan
 RW25K,rw25k,JF,Haiyan,All: Haiyan
-SYZ25KLD,syz25kld,JF,Haiyan,
-SRZ25KLD,srz25kld,JF,Haiyan,
-SYZ25KHD,syz25khd,JF,Haiyan,All: Haiyan
-SRZ25KHD,srz25khd,JF,Haiyan,All: Haiyan
-SYW25KHD,syw25khd,JF,Haiyan,
-SRW25KHD,srw25khd,JF,Haiyan,
-SCA25KHD,sca25khd,JF,Haiyan,
+SYZ25KLD,syz25kld,JF*Qipaoxian,Haiyan,
+SRZ25KLD,srz25kld,JF*Qipaoxian,Haiyan,
+SYZ25KHD,syz25khd,JF*Qipaoxian,Haiyan,All: Haiyan
+SRZ25KHD,srz25khd,JF*Qipaoxian,Haiyan,All: Haiyan
+SYW25KHD,syw25khd,JF*Qipaoxian,Haiyan,
+SRW25KHD,srw25khd,JF*Qipaoxian,Haiyan,
+SCA25KHD,sca25khd,JF*Qipaoxian,Haiyan,
 KD25G,kd25g,JF,Haiyan,"Nanhu: wuwu,Other: Haiyan"
 KD25K,kd25k,JF,Haiyan,All: Haiyan
 XL25T-SSPE,xl25t-sspe,JF,Babel,
