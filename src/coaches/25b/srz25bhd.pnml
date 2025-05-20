@@ -19,6 +19,9 @@ spriteset (spriteset_srz25bhd_bj, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_srz25bhd_hu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25b/srz25bhd-hu")
 }
+spriteset (spriteset_srz25bhd_jinan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/srz25bhd-jinan")
+}
 
 switch (FEAT_TRAINS, SELF, switch_srz25bhd_articulated_part, extra_callback_info1) {
     1..2: return srz25bhd;
@@ -30,6 +33,7 @@ switch (FEAT_TRAINS, SELF, switch_srz25bhd_cargo_subtype, cargo_subtype) {
     2: return string(STR_ORANGE);
     3: return string(STR_K35K36);
     4: return string(STR_KT);
+    5: return string(STR_JINAN2);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -39,6 +43,7 @@ switch (FEAT_TRAINS, SELF, switch_srz25bhd_graphics_subtype, cargo_subtype) {
     2: spriteset_srz25bhd_orange;
     3: spriteset_srz25bhd_bj;
     4: spriteset_srz25bhd_hu;
+    5: spriteset_srz25bhd_jinan;
 }
 
 switch (FEAT_TRAINS, SELF, switch_srz25bhd_graphics, position_in_articulated_veh % 3) {
