@@ -144,8 +144,8 @@ railtypetable {
 //    BCDA: [BCDA, BADA, BAAA, BAAE, ERA1, ELRL],
 //    BDDA: [BDDA, BADA, BAAA, BAAE, ERA1, ELRL],
 //    BECA: [BECA, BACA, BAAA, BAAE, ERA1, ELRL],
-//    DBDN: [DBDN, DADN, DAAN, RAIL],
-//    DCDA: [DCDA, DADA, DAAA, DAAE, ELRL],
+    DBDN: [DBDN, DADN, DAAN, SADN, BADN, RAIL],
+    DCDA: [DCDA, DADA, DAAA, DAAE, SADA, BADA, ELRL],
 //    dBDN: [dBDN, dADN, dAAN, RAIL],
 //    dCDA: [dCDA, dADA, dAAA, dAAE, ELRL],
 }
