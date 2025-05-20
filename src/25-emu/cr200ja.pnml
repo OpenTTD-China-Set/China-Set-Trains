@@ -410,7 +410,7 @@ item (FEAT_TRAINS, cr200ja) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL), string(STR_PROTOTYPE)), string(STR_CR200J_NICKNAME), string(STR_RELDEC_HIGH, 20), string(STR_CR200J_CONSIST));
+        additional_text:                string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_PROTOTYPE)), string(STR_CR200J_NICKNAME), string(STR_RELDEC_HIGH, 20), string(STR_CR200J_CONSIST));
         can_attach_wagon:               cr200jawagon;
         start_stop:                     switch_cr200ja_start_stop;
         cargo_subtype_text:             swtich_cr200ja_cargo_subtype;

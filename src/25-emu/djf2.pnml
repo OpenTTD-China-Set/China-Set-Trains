@@ -1,0 +1,267 @@
+//Begin DJF2
+
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_djf2_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-emu/djf2", "djf2-c")
+}
+
+// Vehicle
+spriteset (spriteset_djf2_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/djf2", "djf2-c")
+}
+spriteset (spriteset_djf2_middle_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/djf2", "djf2-p")
+}
+spriteset (spriteset_djf2_middle_m_r, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/djf2", "djf2-p")
+}
+spriteset (spriteset_djf2_middle_t, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/djf2", "djf2-t")
+}
+spriteset (spriteset_djf2_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/djf2", "djf2-c")
+}
+
+spriteset (spriteset_djf2_front2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/djf2", "djf2-c2")
+}
+spriteset (spriteset_djf2_middle_m2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/djf2", "djf2-p2")
+}
+spriteset (spriteset_djf2_middle_m_r2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/djf2", "djf2-p2")
+}
+spriteset (spriteset_djf2_middle_t2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/djf2", "djf2-t2")
+}
+spriteset (spriteset_djf2_cab2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/djf2", "djf2-c2")
+}
+
+switch (FEAT_TRAINS, SELF, switch_djf2_articulated_part, extra_callback_info1) {
+    1..2: return djf2;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+
+//改装
+switch (FEAT_TRAINS, SELF, switch_djf2_subtype, cargo_subtype) {
+    0: return string(STR_DJF2_01);
+    1: return string(STR_DJF2_02);
+    return CB_RESULT_NO_TEXT;
+}
+switch (FEAT_TRAINS, SELF, switch_djf2_front, cargo_subtype) {
+   0: spriteset_djf2_front;
+   1: spriteset_djf2_front2;
+}
+switch (FEAT_TRAINS, SELF, switch_djf2_cab, cargo_subtype) {
+   0: spriteset_djf2_cab;
+   1: spriteset_djf2_cab2;
+}
+switch (FEAT_TRAINS, SELF, switch_djf2_middle_m, cargo_subtype) {
+   0: spriteset_djf2_middle_m;
+   1: spriteset_djf2_middle_m2;
+}
+switch (FEAT_TRAINS, SELF, switch_djf2_middle_m_r, cargo_subtype) {
+   0: spriteset_djf2_middle_m_r;
+   1: spriteset_djf2_middle_m_r2;
+}
+switch (FEAT_TRAINS, SELF, switch_djf2_middle_t, cargo_subtype) {
+   0: spriteset_djf2_middle_t;
+   1: spriteset_djf2_middle_t2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djf2_head_capacity, position_in_articulated_veh % 3) {
+    1: return 68;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djf2_04_graphics, position_in_articulated_veh % 3) {
+    1: switch_djf2_middle_t;
+    empty_sprites;
+}
+switch (FEAT_TRAINS, SELF, switch_djf2_03_graphics, position_in_consist_from_end){
+    4: switch_djf2_middle_m_r;
+    switch_djf2_04_graphics;
+}
+switch (FEAT_TRAINS, SELF, switch_djf2_02_graphics, position_in_consist){
+    4: switch_djf2_middle_m;
+    switch_djf2_03_graphics;
+}
+switch (FEAT_TRAINS, SELF, switch_djf2_01_graphics, position_in_consist_from_end){
+    1: switch_djf2_cab;
+    switch_djf2_02_graphics;
+}
+switch (FEAT_TRAINS, SELF, switch_djf2_graphics, position_in_consist) {
+    1: switch_djf2_front;
+    switch_djf2_01_graphics;
+}
+//Cap
+switch (FEAT_TRAINS, SELF, switch_djf2_middle_capacity_1, vehicle_type_id) {
+    1024: return 108;
+    1025: return 72;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djf2_middle_capacity, position_in_articulated_veh % 3) {
+    1: switch_djf2_middle_capacity_1;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djf2_cab_capacity_1, vehicle_type_id) {
+    1024: return 94;
+    1025: return 68;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djf2_cab_capacity, position_in_articulated_veh % 3) {
+    1: switch_djf2_cab_capacity_1;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djf2_wagon_capacity, position_in_consist_from_end) {
+    0..2: switch_djf2_cab_capacity;
+    switch_djf2_middle_capacity;
+}
+
+//Cost
+
+switch (FEAT_TRAINS, SELF, switch_djf2_wagon_running_power, vehicle_type_id) {
+    1024: return 41;
+    1025: return 44;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djf2_wagon_running_unpower, vehicle_type_id) {
+    1024: return 9;
+    1025: return 9;
+    return 0;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_djf2_wagon_running, vehicle_is_potentially_powered) {
+    1: switch_djf2_wagon_running_power;
+    switch_djf2_wagon_running_unpower;
+}
+
+
+//Power
+
+switch (FEAT_TRAINS, SELF, switch_djf2_wagon_power_back, position_in_consist_from_end % 6) {
+    0..2: return 1073;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djf2_wagon_power_front, position_in_consist % 6) {
+    0..2: return 1073;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_djf2_wagon_power, position_in_consist >= num_vehs_in_consist / 2) {
+    1: switch_djf2_wagon_power_back;
+    switch_djf2_wagon_power_front;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_djf2_wagon_traction, vehicle_is_potentially_powered) {
+    1: return int(0.061*255);
+    return 0;
+}
+
+
+item (FEAT_TRAINS, djf2) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_DJF2);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2001,05,22);
+        model_life:                     10;
+        retire_early:                   20;
+        vehicle_life:                   10;
+        track_type:                     SABA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               400 << param_cargo_decay;
+
+        // Stats
+        speed:                          200 km/h;
+        power:                          883 kW;
+        weight:                         58 ton;
+        tractive_effort_coefficient:    0.061;
+        cost_factor:                    1;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            1;
+        reliability_decay:              16;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_6, string(STR_DJF1_CAN_ATTACH_WAGON), string(STR_DJF1_CONSIST), string(STR_DJF1_HEAD_SEAT),string(STR_RELDEC_MEDIUM, 16));
+        can_attach_wagon:               onlyzezy;
+        start_stop:                     mu4to16car;
+        // Graphics
+        default:                        switch_djf2_graphics;
+        purchase:                       spriteset_djf2_purchase_original;
+        articulated_part:               switch_djf2_articulated_part;
+        cargo_subtype_text:             switch_djf2_subtype;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_djf2_head_capacity;
+        cargo_age_period:               100 * cafedecayfactor() << param_cargo_decay;
+        cost_factor:                    53;
+        running_cost_factor:            (44 + crhspeedcost()) * runningcostfactor() * cafecostfactor() + 20;
+        purchase_running_cost_factor:   198;
+        purchase_cargo_capacity:        68/3;
+
+    }
+
+    // Multiple Unit Wagons
+    livery_override(zemuw) {
+        default:                        switch_djf2_graphics;
+        cargo_capacity:                 switch_djf2_wagon_capacity;
+        power:                          switch_djf2_wagon_power;
+        tractive_effort_coefficient:    switch_djf2_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        running_cost_factor:            (switch_djf2_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+    livery_override(zymuw) {
+        default:                        switch_djf2_graphics;
+        cargo_capacity:                 switch_djf2_wagon_capacity;
+        power:                          switch_djf2_wagon_power;
+        tractive_effort_coefficient:    switch_djf2_wagon_traction;
+        length:                         switch_length_2_8_2;
+        weight:                         56;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        bitmask_vehicle_info:           switch_crh_wagon_bitmask;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        running_cost_factor:            (switch_djf2_wagon_running() + crhspeedcost()) * runningcostfactor() * cafecostfactor() + accostfactor();
+    }
+
+}
+
+// End djf2

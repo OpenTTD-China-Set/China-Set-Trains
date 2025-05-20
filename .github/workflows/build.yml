@@ -1,4 +1,4 @@
-name: Build Trains
+name: Build
 
 on:
   push:
@@ -14,15 +14,10 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
         with:
           python-version: 3.12
-
-      # I wish there could be an Action for this.
 
       - name: Install Scoop - setup - build
         shell: pwsh
@@ -33,3 +28,8 @@ jobs:
             scoop install openttd/nml
             scoop install openttd/gorender
             make
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chinasettrains.grf
+          path: chinasettrains.grf

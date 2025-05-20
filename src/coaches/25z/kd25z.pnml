@@ -121,7 +121,7 @@ item (FEAT_TRAINS, kd25z) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25Z), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_XIZI)/* , string(STR_XIZI_GREEN) */, string(STR_BEIJING), string(STR_BEIJING_FADE), string(STR_GUANGSHEN)/* , string(STR_GUANGSHEN_GREEN) */), string(STR_AIR_CONDITIONER_EFFECT));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25Z), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_XIZI)/* , string(STR_XIZI_GREEN) */, string(STR_BEIJING), string(STR_BEIJING_FADE), string(STR_GUANGSHEN)/* , string(STR_GUANGSHEN_GREEN) */), string(STR_AIR_CONDITIONER_EFFECT));
         can_attach_wagon:               locowagon;
 
         // Graphics

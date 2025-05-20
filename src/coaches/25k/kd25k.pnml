@@ -127,7 +127,7 @@ item (FEAT_TRAINS, kd25k) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVALIABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_GMSR), string(STR_GUANGSHEN), string(STR_LUCHAOGANG), string(STR_BLUE_RED_WHITE), string(STR_LAKEBLUE), string(STR_BLUE_WHITE)), string(STR_AIR_CONDITIONER_EFFECT));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_GMSR), string(STR_GUANGSHEN), string(STR_LUCHAOGANG), string(STR_BLUE_RED_WHITE), string(STR_LAKEBLUE), string(STR_BLUE_WHITE)), string(STR_AIR_CONDITIONER_EFFECT));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_kd25k_cargo_subtype;
 

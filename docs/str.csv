@@ -170,6 +170,8 @@ STR_NAME_G17,G17 (Tanker),G17 (罐车)
 STR_NAME_G50,G50 (Tanker),G50 (罐车)
 STR_NAME_G60,G60 (Tanker),G60 (罐车)
 STR_NAME_G70,G70 (Tanker),G70 (罐车)
+STR_NAME_G70A,G70A (Tanker),G70A (罐车)
+STR_NAME_GH70B,GH70B (Tanker),GH70B (罐车)
 STR_NAME_GN70,GN70 (Tanker),GN70 (罐车)
 STR_NAME_GN80,GN80 (Tanker),GN80 (罐车)
 STR_NAME_N5,N5 (Flatcar),N5 (平车)
@@ -266,8 +268,10 @@ STR_NAME_NDJ3,"NDJ3 ""Great Wall"" (DMU)","NDJ3 ""长城号"" (内燃动车)"
 STR_NAME_X2000,X2000 (EMU),X2000 (电力动车)
 STR_NAME_DJJ1,"DJJ1 ""Blue Arrow"" (EMU)","DJJ1 ""蓝箭"" (电力动车)"
 STR_NAME_DJJ2,"DJJ2 ""China Star"" (EMU)","DJJ2 ""中华之星"" (电力动车)"
-STR_NAME_DJF1,"DJF2 ""Central Plains Star"" (EMU)","DJF1 ""中原之星"" (电力动车)"
+STR_NAME_DJF1,"DJF1 ""Central Plains Star"" (EMU)","DJF1 ""中原之星"" (电力动车)"
+STR_NAME_DJF2,"DJF2 ""Xian Feng"" (EMU)","DJF2 ""先锋号"" (电力动车)"
 STR_NAME_DJF3,"DJF3 ""Changbai Mount"" (EMU)","DJF3 ""长白山号"" (电力动车)"
+STR_NAME_NYJ1_BEIHAI,"NYJ1 ""BEIHAI"" (DMU)","NYJ1 ""北海号"" (内燃动车)"
 STR_NAME_CR200JA,CR200J-A (EMU),CR200J-A (电力动车)
 STR_NAME_CR200JAL,CR200J-A (Long Version) (EMU),CR200J-A (长编组) (电力动车)
 STR_NAME_CR200JB,CR200J-B (EMU),CR200J-B (电力动车)
@@ -277,6 +281,7 @@ STR_NAME_CR200JSG_ELECTRIC,CR200JS-G (Hybrid MU) (Electric-side),CR200JS-G (双�
 STR_NAME_CR200JSG_DIESEL,CR200JS-G (Hybrid MU) (Diesel-side),CR200JS-G (双源动车) (内燃端)
 STR_NAME_CRH1A,CRH1A (EMU),CRH1A (电力动车)
 STR_NAME_CRH1B,CRH1B (Long Version) (EMU),CRH1B (电力动车)
+STR_NAME_CRH1E_NG,CRH1E-NG (EMU),CRH1E-NG (电力动车)
 STR_NAME_CRH1E,CRH1E (EMU),CRH1E (电力动车)
 STR_NAME_CRH1AA,CRH1A-A (EMU),CRH1A-A (长编组) (电力动车)
 STR_NAME_CRH2A,CRH2A (EMU),CRH2A (电力动车)
@@ -284,10 +289,13 @@ STR_NAME_CRH2A4020,CRH2A-4020 (Cargo EMU),CRH2A-4020 (货运电力动车)
 STR_NAME_CRH2B,CRH2B (Long Version) (EMU),CRH2B (长编组) (电力动车)
 STR_NAME_CRH2C,CRH2C (EMU),CRH2C (电力动车)
 STR_NAME_CRH2E,CRH2E (EMU),CRH2E (电力动车)
+STR_NAME_CRH2E_NG,CRH2E-NG (EMU),CRH2E-NG (电力动车)
 STR_NAME_CRH2G,CRH2G (EMU),CRH2G (电力动车)
 STR_NAME_CRH2ELS,CRH2E (Longitudinal Sleeper) (EMU),CRH2E (纵向卧铺) (电力动车)
 STR_NAME_CJ1,CJ1 (EMU),CJ1 (电力动车)
+STR_NAME_CJ6,CJ6 (Section) (EMU),CJ6 (整节) (电力动车)
 STR_NAME_CRH3A,CRH3A (EMU),CRH3A (电力动车)
+STR_NAME_CRH3AA,CRH3A-A (Section) (EMU),CRH3A-A (整节) (电力动车)
 STR_NAME_CRH3C,CRH3C (EMU),CRH3C (电力动车)
 STR_NAME_CRH5A,CRH5A (EMU),CRH5A (电力动车)
 STR_NAME_CRH5E,CRH5E (EMU),CRH5E (电力动车)
@@ -297,6 +305,7 @@ STR_NAME_CRH380A,CRH380A (EMU),CRH380A (电力动车)
 STR_NAME_CRH380AL,CRH380AL (Long Version) (EMU),CRH380AL (长编组) (电力动车)
 STR_NAME_CRH380AL_2541,CRH380AL-2541 (Long Version) (EMU) (Speed of impact test),CRH380AL-2541 (长编组) (电力动车) (冲高试验速度)
 STR_NAME_CRH380AJ,CRH380AL (EMU) (Diagnostic Train),CRH380AJ (电力动车) (综合检测列车)
+STR_NAME_CRH380AM,CRH380AM (EMU) (Diagnostic Train),CRH380AM (电力动车) (综合检测列车)
 STR_NAME_CRH380B,CRH380B (EMU),CRH380B (电力动车)
 STR_NAME_CRH380BL,CRH380BL (Long Version) (EMU),CRH380BL (长编组) (电力动车)
 STR_NAME_CRH380CL,CRH380CL (EMU),CRH380CL (电力动车)
@@ -309,6 +318,8 @@ STR_NAME_CR400AFZ,CR400AF-C/Z/S (Intelligent EMU),CR400AF-C/Z/S (智能动车)
 STR_NAME_CR400AFABZ,CR400AF-AZ/BZ/BS (Long Version) (Intelligent EMU),CR400AF-AZ/BZ/BS (长编组) (智能动车)
 STR_NAME_CR400AFAE,CR400AF-AE (Intelligent EMU),CR400AF-AE (智能动车)
 STR_NAME_CR400BF,CR400BF (EMU),CR400BF (电力动车)
+STR_NAME_CR400BF_0031,CR400BF-0031 (EMU) (The original variable gauge EMU),CR400BF-0031 (电力动车) (原可变轨距)
+STR_NAME_CR400BF_0051,CR400BF-0051 (EMU) (The original variable gauge EMU),CR400BF-0051 (电力动车) (原可变轨距)
 STR_NAME_CR400BFAB,CR400BF-A/B (Long Version) (EMU),CR400BF-A/B (长编组) (电力动车)
 STR_NAME_CR400BFC,CR400BF-C (Intelligent EMU),CR400BF-C (智能动车)
 STR_NAME_CR400BFZ,CR400BF-Z/S (Intelligent EMU),CR400BF-Z/S (智能动车)
@@ -316,6 +327,8 @@ STR_NAME_CR400BFABZ,CR400BF-AZ/BZ/BS (Intelligent EMU),CR400BF-AZ/BZ/BS (长编�
 STR_NAME_CRH6A2,CRH6A (2-Door Version) (EMU),CRH6A (二门版) (电力动车)
 STR_NAME_CRH6A3,CRH6A (3-Door Version) (EMU),CRH6A (三门版) (电力动车)
 STR_NAME_CRH6AA,CRH6A-A (Section) (EMU),CRH6A-A (整节) (电力动车)
+STR_NAME_CRH6AACINOVA,CRH6A-A (CINOVA2.0) (Section) (EMU),CRH6A-A (CINOVA2.0) (整节) (电力动车)
+STR_NAME_CRH6FA,CRH6F-A (Section) (EMU),CRH6F-A (整节) (电力动车)
 STR_NAME_CRH6F,CRH6F (EMU),CRH6F (电力动车)
 STR_NAME_ZEMUW,2nd-Class (ZE) MU Wagon,动车组二等座车厢
 STR_NAME_ZYMUW,1st-Class (ZY) MU Wagon,动车组一等座车厢
@@ -589,7 +602,7 @@ STR_DJJ1_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Original Livery,
 STR_CRH6A2_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Prototype, Guangzhou-Shenzhen, Guangzhou-Zhuhai, Tianfu (A nickname of Chengdu, meaning ""Paradise"") (with or without green stripes), Zhengzhou-Jiaozuo, Zhuhai-Airport, Pearl River Delta (Blue or Orange)",{BLACK}可供选择的涂装：{GOLD}原型，广深城际定制版，广珠城际，成都天府号 (有/无绿色条带)，郑焦城际，珠海机场，珠三角城际(蓝/橙色)
 STR_CRH6A3_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Beijing-Tongzhou, Shanghai-Jinshan",{BLACK}可供选择的涂装：{GOLD}京通号，金山铁路
 STR_CRH6AA_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Pearl River Delta, Guangzhou-Zhuhai, Tianfu (A nickname of Chengdu, meaning ""Paradise"") (with or without green stripes)",{BLACK}可供选择的涂装：{GOLD}珠三角城际，广珠城际，成都天府号 (有/无绿色条带)
-STR_CRH6F_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Pearl River Delta, Shanghai-Jinshan, Xiaoshan/Hangzhou-Ningbo",{BLACK}可供选择的涂装：{GOLD}珠三角城际，金山铁路，萧甬铁路
+STR_CRH6F_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Pearl River Delta, Shanghai-Jinshan, Xiaoshan/Hangzhou-Ningbo, Changsha-Zhuzhou-Xiangtan",{BLACK}可供选择的涂装：{GOLD}珠三角城际、金山铁路、萧甬铁路、长株潭铁路
 STR_CR400BFC_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {LTBLUE}Winter Olypics Livery, {GOLD}Origin Livery,",{BLACK}可供选择的涂装：{LTBLUE}冬奥涂装，{GOLD}原版涂装
 STR_CR400BFZ_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {RED}Origin {GOLD}Livery, {PURPLE}Asia Game Livery ",{BLACK}可供选择的涂装：{RED}原版龙凤{GOLD}呈祥涂装，{PURPLE}亚运涂装
 STR_22_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, Wuhan Railway Vocational College Livery (only coaches), Sanshui-Maoming Livery (unfinish), ""Longqingxia"" Livery (unfinish), Beijing-Shanghai Direct Express Livery (XL22, UZ22), Guangzhou-Hongkong Livery (XL22, UZ22) (unfinish)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，武汉铁路技术学院涂装 (仅客车)，龙庆峡号{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，京沪直达特快{CREAM}奶油色-{BROWN}-棕红色{GOLD}涂装、{BLUE}蓝色-{WHITE}-白色{GOLD}涂装，广九直通车涂装 (仅XL22，UZ22)
@@ -599,6 +612,7 @@ STR_RW25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN
 STR_XL25B_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Ordinary {GREEN}Green {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Green"" {GOLD}Livery (unfinished)",{BLACK}可供选择的涂装：{GREEN}绿皮车{GOLD}涂装，{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高阻绿”{GOLD}涂装 (未完成)
 STR_YZ_YW25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Only Made in China), {DKGREEN}""Gaozu Lv"" Green Livery (Only Made in China),  Qinghai-Tibet Railway Grenn Livery (Both have Made in China and Made by BSP)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (仅国产)，{DKGREEN}青藏铁路涂装 (国产和BSP版本)，""高祖绿""涂装 (仅国产)，{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)"
 STR_RZ25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Both have Made in China and Made by BSP), {DKGREEN}""Gaozu Lv"" Green Livery (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Grenn Livery (Only Made in China),{WHITE} Guangzhou-Kowloon Railway Livery {DKGREEN}(And its ""Gaozu Lv"" Green version)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (仅国产)，""高祖绿""涂装 (国产和BSP版本)，{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)"
+STR_PANGANG,{YELLOW} - PANGANG Livery,{YELLOW} - 攀钢号涂装
 STR_RW25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Both have Made in China and Made by BSP), {DKGREEN}""Gaozu Lv"" Green Livery (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Grenn Livery (Also Both have Made in China and Made by BSP)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (国产和BSP版本)，""高祖绿""涂装 (国产和BSP版本)"
 STR_CA25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE} Blue{WHITE} White {GOLD}Livery (Both have Made in China and Made by BSP), {DKGREEN}""Gaozu Lv"" Green Livery (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Grenn Livery (Also Both have Made in China and Made by BSP),{WHITE} Guangzhou-Kowloon Railway Livery {DKGREEN}(And its ""Gaozu Lv"" Green version)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (国产和BSP版本)，""高祖绿""涂装，{WHITE}广九直通车涂装 {DKGREEN}(及其刷绿版本)"
 STR_XL25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery (Both have Made in China and Made by BSP) , {DKGREEN}""Gaozu Lv""  Green Livery  (Also Both have Made in China and Made by BSP),  Qinghai-Tibet Railway Livery  (Only Made in China)","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装 (国产和BSP版本)，{DKGREEN}青藏铁路涂装 (仅国产)，""高祖绿""涂装 (国产和BSP版本)"
@@ -619,6 +633,8 @@ STR_25ML_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {WHITE}White-{GREEN}-G
 STR_G17_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{GRAY}黑色{GOLD}加随机颜色条带 (未完成)
 STR_G60_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GRAY}Gray {GOLD}with Random-Colour Stripes ,{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带
 STR_G70_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GRAY}Gray {GOLD}with Random-Colour Stripes ,{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带
+STR_G70A_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GRAY}Gray {GOLD}with Random-Colour Stripes ,{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带
+STR_GH70B_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GRAY}Gray {GOLD}with Random-Colour Stripes ,{BLACK}可供选择的涂装：{GRAY}灰色{GOLD}加随机颜色条带
 STR_GN70_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{BLACK}黑色{GOLD}加随机颜色条带 (未完成)
 STR_GN80_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {BLACK}Black {GOLD}with Random-Colour Stripes (unfinished),{BLACK}可供选择的涂装：{BLACK}黑色{GOLD}加随机颜色条带 (未完成)
 STR_C62_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random (unfinished),{BLACK}可供选择的涂装：{GOLD}随机 (未完成)
@@ -640,7 +656,9 @@ STR_NX70A_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Black Livery Onl
 STR_X2K_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Random Containers,{BLACK}可供选择的涂装：{GOLD}随机集装箱
 STR_JSQ1_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Random (Red, Blue)",{BLACK}可供选择的涂装：{GOLD}随机颜色（蓝色，红色）
 STR_W_BOXCAR_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {GOLD}Yellow Livery with Yellow or White Roof,{BLACK}涂装：{GOLD}黄色，车顶颜色随机（黄色，白色）
-STR_LIVERY_AVALIABLE,{BLACK}Livery Availability:,{BLACK}可供选择的涂装：
+STR_DJF2_01,{BLACK}Livery Availability: {GOLD}Red and blue livery,{BLACK}涂装：{GOLD}红蓝色涂装
+STR_DJF2_02,{BLACK}Livery Availability: {GOLD}White-purple livery,{BLACK}涂装：{GOLD}白紫色涂装
+STR_LIVERY_AVAILABLE,{BLACK}Livery Availability:,{BLACK}可供选择的涂装：
 # Nickname,,
 STR_DF_NICKNAME,{BLACK}Nickname: {GOLD}Old DongFeng,{BLACK}昵称：{GOLD}老东风
 STR_DF4_NICKNAME,"{BLACK}Nickname: {GOLD}""Watermelon"" for {GREEN}Green {GOLD}Livery, ""Orange"" for {ORANGE}Orange {GOLD}Livery",{BLACK}昵称：{GREEN}绿色{GOLD}涂装——“西瓜”，{ORANGE}橘色{GOLD}涂装——“橘子”
@@ -681,11 +699,12 @@ STR_HXD3C_NICKNAME,{BLACK}Nickname: {GOLD}Electric Baboon,{BLACK}昵称：{GOLD}
 STR_HXD3D_NICKNAME,{BLACK}Nickname: {GOLD}Tomato,{BLACK}昵称：{GOLD}番茄
 STR_NDJ3_NICKNAME,{BLACK}Nickname: {WHITE}White Pig,{BLACK}昵称：{WHITE}大白猪
 STR_CR200J_NICKNAME,"{BLACK}Nickname: {GREEN}""Hulk"" {GOLD}(Official), {GREEN}""Trash Bin"" {GOLD}(Folk)",{BLACK}昵称：{GREEN}“绿巨人”{GOLD}(官方)，{GREEN}“垃圾桶”{GOLD}(民间)
-STR_CR200JSG_NICKNAME,"{BLACK}Nickname: {GREEN}""Dual-Powerd Bin"" {GOLD}(Folk)",{BLACK}昵称：{GREEN}“双源桶”{GOLD}(民间)
+STR_CR200JSG_NICKNAME,"{BLACK}Nickname: {GREEN}""Dual-Powered Bin"" {GOLD}(Folk)",{BLACK}昵称：{GREEN}“双源桶”{GOLD}(民间)
 STR_CR200JC_NICKNAME,"{BLACK}Nickname: {RED}""A{WHITE}D {GREEN}Bin"" {GOLD}(Folk)",{BLACK}昵称：{RED}“A{WHITE}D{GREEN}桶”{GOLD}(民间)
 STR_CRH1A_NICKNAME,{BLACK}Nickname: {GOLD}Metro,{BLACK}昵称：{GOLD}地铁
 STR_CRH1B_NICKNAME,{BLACK}Nickname: {GOLD}Long Metro ,{BLACK}昵称：{GOLD}长地铁
 STR_CRH1E_NICKNAME,{BLACK}Nickname: {GOLD}Sleeping Metro ,{BLACK}昵称：{GOLD}睡地铁
+STR_CRH1E_NG_NICKNAME,{BLACK}Nickname: {GOLD}Cute Sleeping Metro ,{BLACK}昵称：{GOLD}萌睡地铁
 STR_CRH1AA_NICKNAME,{BLACK}Nickname: {GOLD}Cute Metro ,{BLACK}昵称：{GOLD}萌地铁
 STR_CRH2A_NICKNAME,{BLACK}Nickname: {GOLD}Hairtail,{BLACK}昵称：{GOLD}带鱼
 STR_CRH2B_NICKNAME,{BLACK}Nickname: {GOLD}Long Hairtail,{BLACK}昵称：{GOLD}长带鱼
@@ -697,17 +716,20 @@ STR_CRH3A_NICKNAME,{BLACK}Nickname: {GOLD}Golden Eyes,{BLACK}昵称：{GOLD}黄�
 STR_CRH3C_NICKNAME,{BLACK}Nickname: {GOLD}Rabbit,{BLACK}昵称：{GOLD}兔子
 STR_CRH5A_NICKNAME,{BLACK}Nickname: {GOLD}Donkey,{BLACK}昵称：{GOLD}驴
 STR_CRH6F_NICKNAME,{BLACK}Nickname: {GOLD}Real Metro,{BLACK}昵称：{GOLD}真地铁
+STR_CRH6FA_NICKNAME,{BLACK}Nickname: {GOLD}Real Metro,{BLACK}昵称：{GOLD}真地铁
 STR_CRH380A_NICKNAME,{BLACK}Nickname: {GOLD}Big Rat,{BLACK}昵称：{GOLD}大老鼠
+STR_CRH380AM_NICKNAME,{BLACK}Nickname: {GOLD}Bronze Sword,{BLACK}昵称：{GOLD}青铜剑
 STR_CRH380B_NICKNAME,{BLACK}Nickname: {GOLD}Crazy Rabbit,{BLACK}昵称：{GOLD}疯兔子
 STR_CRH380CL_NICKNAME,{BLACK}Nickname: {GOLD}Shark,{BLACK}昵称：{GOLD}大鲨鱼
 STR_CRH380D_NICKNAME,{BLACK}Nickname: {GOLD}Crazy Metro,{BLACK}昵称：{GOLD}疯地铁
 STR_CR400AF_NICKNAME,{BLACK}Nickname: {GOLD}Red Loong,{BLACK}昵称：{RED}红神龙
 STR_CR400BF_NICKNAME,{BLACK}Nickname: {GOLD}Golden Phoenix,{BLACK}昵称：{GOLD}金凤凰
+STR_CR400BF_KEBIAN," {GOLD}The original variable gauge EMU was replaced with an ordinary CR400BF bogie in actual operation, and the variable gauge function was cancelled",{GOLD}原可变轨距动车，实际运营中更换为普通CR400BF转向架，并取消了可变轨距功能
 STR_CR400_Z_NICKNAME,{BLACK}Nickname: {GOLD}Dragon and {RED}Phoenix bring prosperity,{BLACK}昵称：{GOLD}龙凤{RED}呈祥
 STR_CR400BFC_NICKNAME,{BLACK}Nickname: {LTBLUE}Blessed Snow Welcomes Spring (Winter Olympic Livery Only),{BLACK}冬奥涂装版昵称：{LTBLUE}瑞雪迎春
 STR_CR400BFZ_NICKNAME,"{BLACK}Nickname: {GOLD}Dragon and {RED}Phoenix bring prosperity,  {PURPLE}Egglpant (Folk)/ Aussie on Yangtze (Official) (Asia Game Livery Only)",{BLACK}昵称：{GOLD}龙凤{RED}呈祥{BLACK}，{PURPLE}茄子 (民间)/润泽江南 (官方) (亚运涂装)
 STR_CR300AF_NICKNAME,{BLACK}Nickname: {LTBLUE}Smurfette,{BLACK}昵称：{LTBLUE}蓝妹妹
-STR_CR300BF_NICKNAME,"{BLACK}Nickname: {LTBLUE}""Blue Antidote"" {GOLD}(Official), {LTBLUE}""Zoombie Blue"" {GOLD}(Folk)",{BLACK}昵称：{LTBLUE}“蓝暖男”{GOLD}(官方)，{LTBLUE}“僵尸蓝”{GOLD}(民间)
+STR_CR300BF_NICKNAME,"{BLACK}Nickname: {LTBLUE}""Blue Antidote"" {GOLD}(Official), {LTBLUE}""Zombie Blue"" {GOLD}(Folk)",{BLACK}昵称：{LTBLUE}“蓝暖男”{GOLD}(官方)，{LTBLUE}“僵尸蓝”{GOLD}(民间)
 # Alias Name,,
 STR_ALIASNAME_JF1,"{BLACK}Alias Name: {GOLD}Mikai, MK1",{BLACK}曾用名：{GOLD}ミカイ，ㄇㄎ1型
 STR_ALIASNAME_SL6,"{BLACK}Alias Name: {GOLD}Pashiku, PX6",{BLACK}曾用名：{GOLD}パシク，ㄆㄒ6型
@@ -738,7 +760,7 @@ STR_CRH380AL_2541_486_AVAILABLE,"On the 13 of December, 2010, the train achieved
 STR_CRH380AJ_AVAILABLE,Refittable to Max Speed 452 km/h ,可改装为最高速度 452 km/h
 # Livery,,
 STR_LV_PRE_GRAY,{GRAY} - Gray,{GRAY} - 灰色
-STR_LV_PRE_DETERIORATE,{BLACK} - Deteriorated,{BLACK} - 旧化
+STR_LV_PRE_DETERIORATE,{BLACK} - Deteriorated,{BLACK} - 老化后
 STR_ORIGINAL,{BLACK} - Original Livery,{BLACK} - 原版涂装
 STR_ALTERNATIVE,{BLACK} - Alternative Original Livery,{BLACK} - 另一种原版涂装
 STR_REVERSE,{BLACK} └ the Reverse of the Livery Above,{BLACK} └ 翻转的涂装
@@ -803,7 +825,8 @@ STR_LIAODONG,{BLACK} - Liaodong Peninsula Livery,{BLACK} - 辽东半岛号涂装
 STR_STRENGTHEN,{BLACK} - With Strengthening Steel Sheet,{BLACK} - 带加强筋
 STR_PLUGDOOR,{BLACK} - Version With Plug Doors,{BLACK} - 安装塞拉门的版本
 STR_FOLDINGDOOR,{BLACK} - Version With Folding Doors,{BLACK} - 安装折页门的版本
-STR_URUMQI,{BLACK} - Urumqi Railway Bureau,{BLACK} - 乌鲁木齐铁路局
+STR_URUMQI,{BLACK} - Urumqi Railway Bureau,{BLACK} - 乌鲁木齐局灰色低开门涂装
+STR_URUMQI2,{BLACK} - Urumqi Railway Bureau,{BLACK} - 乌鲁木齐局灰色高开门涂装
 STR_XIAN,{BLACK} - Xi'an Railway Bureau,{BLACK} - 西安铁路局
 STR_SHENYANG,{BLACK} - Shenyang Railway Bureau,{BLACK} - 沈阳铁路局
 STR_HUHHOT,{BLACK} - Huhhot Railway Bureau,{BLACK} - 呼和浩特铁路局
@@ -817,7 +840,7 @@ STR_XIZI,"{BLACK} - ""Xizi"" Livery","{BLACK} - {LTBLUE}""西子号""{BLACK}涂�
 STR_XIZI_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of ""Xizi"" Train","{BLACK} - {DKGREEN}""西子号""的刷绿{BLACK}涂装"
 STR_XIZI_BUILD_YEAR,"{BLACK} - ""Xizi"" (According to build year)","{BLACK} - ""西子号""（根据建造年份选择涂装）"
 STR_HEJIU,{BLACK} - Hefei-Jiujiang Railway Livery,{BLACK} - 合九铁路涂装
-STR_GYR,{BLACK} - GUangxi Yanhai Raiway,{BLACK} - 广西沿海铁路涂装
+STR_GYR,{BLACK} - Guangxi Yanhai Raiway,{BLACK} - 广西沿海铁路涂装
 STR_GMSR,{BLACK} - Guangzhou-Meizhou-Shantou Railway Livery,{BLACK} - 广梅汕铁路涂装
 STR_GMSR_EARLY,{BLACK} - Guangzhou-Meizhou-Shantou Railway Early Livery,{BLACK} - 广梅汕铁路早期涂装
 STR_GUANGSHEN,{BLACK} - Guangzhou-Shenzhen Railway Livery,{BLACK} - 广深铁路涂装
@@ -831,10 +854,10 @@ STR_GUANGSHEN_SIFANG_DOUBLE_DECKER,"{BLACK} - Guangzhou-Shenzhen Railway Livery 
 STR_GUANGSHEN_SIFANG_ALTERNATIVE,"{BLACK} - Alternative Guangzhou-Shenzhen Railway Livery (Sifang Railway Vehicle Works, With Skirts)",{BLACK} - 另一种广深铁路（四方厂带裙板）涂装
 STR_GUANGSHEN_PUZHEN_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Puzhen Railway Vehicle Works, Production Batch 1st)",{BLACK} - 广深铁路（浦镇厂一批次）涂装
 STR_GUANGSHEN_PUZHEN_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Puzhen Railway Vehicle Works, Production Batch 2nd)",{BLACK} - 广深铁路（浦镇厂二批次）涂装
-STR_GUANGSHEN_GREEN,{BLACK} - {DKGREEN}Guangzhou-Shenzhen Railway Green {BLACK}Livery,{BLACK} - {DKGREEN}广深铁路刷绿绿涂装
+STR_GUANGSHEN_GREEN,{BLACK} - {DKGREEN}Guangzhou-Shenzhen Railway Green {BLACK}Livery,{BLACK} - {DKGREEN}广深铁路刷绿涂装
 STR_JINWEN,{BLACK} - {WHITE}Jinhua{RED}-{BLUE}Wenzhou {WHITE}Railway {BLACK}Company,{BLACK} - {WHITE}金{RED}温{BLUE}铁{WHITE}路{BLACK}公司
 STR_JINWEN_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of Jinhua-Wenzhou Railway Company",{BLACK} - 金温铁路涂装的{DKGREEN}刷绿版本
-STR_XIYAN,{BLACK} - Xi'Aan-Yan'an Railway Livery,{BLACK} - 西延铁路涂装
+STR_XIYAN,{BLACK} - Xi'An-Yan'an Railway Livery,{BLACK} - 西延铁路涂装
 STR_DACHENG,{BLACK} - Dazhou-Chengdu Railway Livery,{BLACK} - 达成铁路涂装
 STR_NANHU,"{BLACK} - {RED}""South Lake - 1921"" {BLACK}Tourist Train","{BLACK} - {RED}""南湖-1921"" {BLACK}旅游列车"
 STR_GAOZU_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}(unfinished except 25T)","{BLACK} - {DKGREEN}""高阻绿"" {BLACK}"
@@ -851,6 +874,7 @@ STR_BEIJING2SHANGHAIALT,{BLACK} - Beijing-Shanghai Express Train Livery {BLUE}Bl
 STR_93_94,{BLACK} - Dalian-Changchun No.93/94 Train Livery,{BLACK} - 大连至长春93/94次列车涂装
 STR_RESCUE,{BLACK} - Wrecker Livery,{BLACK} - 救援涂装
 STR_JINGTONG,{BLACK} - Beijing-Tongzhou Livery,{BLACK} - 京通号涂装
+STR_CHANGZHUTAN,{BLACK} - ChangSha-ZhuZhou-XiangTan Livery,{BLACK} - 长株潭涂装
 STR_TIANFU,{BLACK} - Tianfu (Chengdu) Livery,{BLACK} - 成都天府号涂装
 STR_TIANFU_GREEN,{BLACK} - Tianfu (Chengdu) Livery with green stripes,{BLACK} - 成都天府号涂装，带绿色条带
 STR_GUANGZHU,{BLACK} - Guangzhou-Zhuhai Livery,{BLACK} - 广珠城际涂装
@@ -861,7 +885,11 @@ STR_ZHUSANJIAO_ORANGE,"{BLACK} - Pearl River Delta Intercity Railway, Orange",{B
 STR_JINSHAN,{BLACK} - Shanghai-Jinshan Livery,{BLACK} - 金山铁路涂装
 STR_GUANGQING,{BLACK} - Guangzhou-Qingyuan Livery,{BLACK} - 广清城际涂装
 STR_FOSHAN,{BLACK} - Foshan Livery,{BLACK} - 佛肇城际涂装
-STR_XIAOYONG,{BLACK} - Xiaoshan/Hangzhou-Ningbo Livery,{BLACK} - 萧甬铁路涂装
+STR_XIAOYONG,{BLACK} - XiaoYong Livery,{BLACK} - 萧甬铁路涂装
+STR_HUAIMI,{BLACK} - HuaiMi Livery,{BLACK} - 怀密号涂装
+STR_JINTAI,{BLACK} - JinTai Livery,{BLACK} - 金台铁路涂装
+STR_LIANYUNGANG,{BLACK} - LianYunGang Livery,{BLACK} - 连云港铁路涂装
+STR_YANGQUAN,{BLACK} - YangQuan Livery,{BLACK} - 阳泉铁路涂装
 STR_INTERNATIONAL,{BLACK} - International Transport Livery,{BLACK} - 国际联运涂装
 STR_INTERNATIONAL_USSR,{BLACK} - International Transport With Soviet Union Livery,{BLACK} - 对苏国际联运涂装
 STR_INTERNATIONAL_RU,{BLACK} - International Transport With Russia Livery,{BLACK} - 对俄国际联运涂装
@@ -874,6 +902,17 @@ STR_HXD3D1893,"{BLACK}{RED} - HXD3D-1893 {GOLD}""Mao Zedong""","{BLACK}{RED} - H
 STR_HXD1D1898,"{BLACK}{RED} - HXD1D-1893 {GOLD}""Zhou Enlai""","{BLACK}{RED} - HXD1D-1898 {GOLD}""周恩来号"""
 STR_HXD3D1886,"{BLACK}{RED} - HXD3D-1886 {GOLD}""Zhu De""","{BLACK}{RED} - HXD3D-1886 {GOLD}""朱德号"""
 STR_HXD3D1921,"{BLACK}{RED} - HXD3D-1921 {GOLD}""Communist""","{BLACK}{RED} - HXD3D-1921 ""共产党员号"""
+STR_OG,{ORANGE} - Gray Door Orange Livery,{ORANGE} - 灰色门橘色涂装
+STR_OO,{ORANGE} - Orange Door Orange Livery,{ORANGE} - 橘色门橘色涂装
+STR_WHITEURUMQI,{ORANGE} - Urumqi Bureau White Low Door Livery,{ORANGE} - 乌鲁木齐局白色低开门涂装
+STR_KT,{ORANGE} - Urumqi-Kuitun Livery,{ORANGE} - 乌鲁木齐-奎屯涂装
+STR_K35K36,{BLACK} - Beijing-Jinan K35-K36 Livery,{BLACK} - 北京-济南K35-K36次涂装
+STR_BEIDAIHE,{ORANGE} - Beidaihe Livery,{ORANGE} - 北戴河号涂装
+STR_JINAN2,{ORANGE} - Jinan Railway Bureau,{ORANGE} - 济南铁路局
+STR_TAIYUAN,{ORANGE} - Taiyuan Railway Bureau,{ORANGE} - 太原铁路局
+STR_CHANGSHA2,{ORANGE} - Changsha Passenger Depot,{ORANGE} - 长沙客运段
+STR_CHANGSHA_SHENZHEN,{ORANGE} - Changsha-Shenzhen Livery,{ORANGE} - 长沙-深圳涂装
+STR_ZHENGZHOU2,{ORANGE} - Zhengzhou Railway Bureau,{ORANGE} - 郑州铁路局
 STR_NENGYEQING48,"{BLACK} - {LTBLUE}""Little Bear of Neng-Yeqing"" {BLACK}Livery","{BLACK} - {LTBLUE}""能也庆的小熊"" {BLACK}涂装"
 # Decay,,
 STR_COMFORT_VERY_LOW,{BLACK}Comfort: {RED}Very low ({COMMA}),{BLACK}舒适度：{RED}极低（{COMMA}）

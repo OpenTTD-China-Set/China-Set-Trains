@@ -46,39 +46,74 @@ spriteset (spriteset_cr200jb_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_
     template_reversed ("25-emu", "cr200j-b-c-c")
 }
 
+spriteset (spriteset_cr200jb_pangang_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cr200j-pangang-m")
+}
+spriteset (spriteset_cr200jb_pangang_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cr200j-pangang-t")
+}
+spriteset (spriteset_cr200jb_pangang_middle_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "cr200j-pangang-t")
+}
+spriteset (spriteset_cr200jb_pangang_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cr200j-pangang-c")
+}
+spriteset (spriteset_cr200jb_pangang_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed_10 ("25-emu", "cr200j-pangang-m")
+}
+spriteset (spriteset_cr200jb_pangang_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "cr200j-pangang-c-c")
+}
+spriteset (spriteset_cr200jb_pangang_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "cr200j-pangang-c-c")
+}
+
 
 switch (FEAT_TRAINS, SELF, switch_cr200jb_articulated_part, extra_callback_info1) {
     1..2: return cr200jb;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-/* switch (FEAT_TRAINS, SELF, switch_cr200jb_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_cr200jb_front;
-    empty_sprites;
-}
-
-
-switch (FEAT_TRAINS, SELF, switch_cr200jb_middle_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_cr200jb_middle;
-    empty_sprites;
-}
-
-switch (FEAT_TRAINS, SELF, switch_cr200jb_cab_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_cr200jb_cab;
-    empty_sprites;
-}
-
-switch (FEAT_TRAINS, SELF, switch_cr200jb_wagon_graphics, position_in_consist_from_end) {
-    0..2: switch_cr200jb_cab_graphics;
-    switch_cr200jb_middle_graphics;
-} */
 switch (FEAT_TRAINS, SELF, cr200jbwagon, vehicle_type_id) {
     1024..1035: onlyallowcst;
     9223: onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
+switch (FEAT_TRAINS, SELF, swtich_cr200jb_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_PANGANG);
+    return CB_RESULT_NO_TEXT;
+}
 
-
+//GFX
+switch (FEAT_TRAINS, SELF, switch_cr200jb_graphics_front1, cargo_subtype) {
+    0: spriteset_cr200jb_front;
+    1: spriteset_cr200jb_pangang_front;
+}
+switch (FEAT_TRAINS, SELF, switch_spriteset_cr200jb_back, cargo_subtype) {
+    0: spriteset_cr200jb_back;
+    1: spriteset_cr200jb_pangang_back;
+}
+switch (FEAT_TRAINS, SELF, switch_spriteset_cr200jb_cab_reconect, cargo_subtype) {
+    0: spriteset_cr200jb_cab_reconect;
+    1: spriteset_cr200jb_pangang_cab_reconect;
+}
+switch (FEAT_TRAINS, SELF, switch_spriteset_cr200jb_cab_reconect_reversed, cargo_subtype) {
+    0: spriteset_cr200jb_cab_reconect_reversed;
+    1: spriteset_cr200jb_pangang_cab_reconect_reversed;
+}
+switch (FEAT_TRAINS, SELF, switch_cr200jb_if_middle_wagon, cargo_subtype) {
+    0: spriteset_cr200jb_middle;
+    1: spriteset_cr200jb_pangang_middle;
+}
+switch (FEAT_TRAINS, SELF, switch_cr200jb_if_middle_wagon_reversed1, cargo_subtype) {
+    0: spriteset_cr200jb_middle_reversed;
+    1: spriteset_cr200jb_pangang_middle_reversed;
+}
+switch (FEAT_TRAINS, SELF, switch_spriteset_cr200jb_cab, cargo_subtype) {
+    0: spriteset_cr200jb_cab;
+    1: spriteset_cr200jb_pangang_cab;
+}
 
 //(((count_veh_id(9223) == 3) && (num_vehs_in_consist != 3)) || ((count_veh_id(9223) == 6) && (hasbit(bitmask_consist_info, 0) == 0))) && (((num_vehs_in_consist < 12) ^ (num_vehs_in_vehid_chain == 6)) || (num_vehs_in_consist > 72))
 
@@ -105,23 +140,23 @@ switch (FEAT_TRAINS, SELF, switch_cr200jb_graphics_position_error_control, posit
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jb_graphics_front, position_in_consist) {
-    1: spriteset_cr200jb_front;
+    1: switch_cr200jb_graphics_front1;
     switch_cr200jb_graphics_position_error_control;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jb_graphics, (position_in_consist_from_end == 1) && (position_in_consist != 1)) {
-    1: spriteset_cr200jb_back;
+    1: switch_spriteset_cr200jb_back;
     switch_cr200jb_graphics_front;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jb_cab_half, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) {
-    1: spriteset_cr200jb_cab_reconect;
-    spriteset_cr200jb_cab_reconect_reversed;
+    1: switch_spriteset_cr200jb_cab_reconect;
+    switch_spriteset_cr200jb_cab_reconect_reversed;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jb_if_middle_wagon_reversed, ((position_in_consist / 3) + 1) > (num_vehs_in_consist / 6)) {
-    1: spriteset_cr200jb_middle_reversed;
-    spriteset_cr200jb_middle;
+    1: switch_cr200jb_if_middle_wagon_reversed1;
+    switch_cr200jb_if_middle_wagon;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jb_middle_wagon_reconect, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
@@ -130,12 +165,12 @@ switch (FEAT_TRAINS, SELF, switch_cr200jb_middle_wagon_reconect, (((position_in_
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jb_length_class, count_veh_id(9223)) {
-    0: spriteset_cr200jb_middle;
+    0: switch_cr200jb_if_middle_wagon;
     switch_cr200jb_middle_wagon_reconect;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jb_if_wagon_end, position_in_consist_from_end == 1) {
-    1: spriteset_cr200jb_cab;
+    1: switch_spriteset_cr200jb_cab;
     switch_cr200jb_length_class;
 }
 
@@ -307,9 +342,10 @@ item (FEAT_TRAINS, cr200jb) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_CR200J_NICKNAME), string(STR_RELDEC_LOW, 12), string(STR_CR200J_CONSIST));
+        additional_text:                string(STR_DESC_5, string(STR_CRH_CAN_ATTACH_WAGON), string(STR_LV_AVAILABLE_S, string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_PANGANG)), string(STR_CR200J_NICKNAME), string(STR_RELDEC_LOW, 12), string(STR_CR200J_CONSIST));
         can_attach_wagon:               cr200jbwagon;
         start_stop:                     switch_cr200jb_start_stop;
+        cargo_subtype_text:             swtich_cr200jb_cargo_subtype;
         // Graphics
         default:                        switch_cr200jb_graphics;
         purchase:                       spriteset_cr200jb_purchase_original;
