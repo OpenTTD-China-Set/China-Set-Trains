@@ -1,4 +1,4 @@
-﻿# STRING,ENGLISH,SIMPLIFIED CHINESE
+# STRING,ENGLISH,SIMPLIFIED CHINESE
 STR_GRF_NAME,China Set: Trains {VERSION_STRING},中国包：火车 {VERSION_STRING}
 STR_GRF_DESC,The Train sector of the China Set of OpenTTD.,OpenTTD中国包的火车部分。
 STR_GRF_URL,https://www.tt-forums.net/viewtopic.php?t=91092,
@@ -318,8 +318,8 @@ STR_NAME_CR400AFZ,CR400AF-C/Z/S (Intelligent EMU),CR400AF-C/Z/S (智能动车)
 STR_NAME_CR400AFABZ,CR400AF-AZ/BZ/BS (Long Version) (Intelligent EMU),CR400AF-AZ/BZ/BS (长编组) (智能动车)
 STR_NAME_CR400AFAE,CR400AF-AE (Intelligent EMU),CR400AF-AE (智能动车)
 STR_NAME_CR400BF,CR400BF (EMU),CR400BF (电力动车)
-STR_NAME_CR400BF_0031,CR400BF-0031 (EMU) (The original variable gauge EMU),CR400BF-0031 (电力动车) (原可变轨距)
-STR_NAME_CR400BF_0051,CR400BF-0051 (EMU) (The original variable gauge EMU),CR400BF-0051 (电力动车) (原可变轨距)
+STR_NAME_CR400BF_0031,CR400BF-0031 (Variable gauge EMU),CR400BF-0031 (电力动车) (可变轨距)
+STR_NAME_CR400BF_0051,CR400BF-0051 (Variable gauge EMU),CR400BF-0051 (电力动车) (可变轨距)
 STR_NAME_CR400BFAB,CR400BF-A/B (Long Version) (EMU),CR400BF-A/B (长编组) (电力动车)
 STR_NAME_CR400BFC,CR400BF-C (Intelligent EMU),CR400BF-C (智能动车)
 STR_NAME_CR400BFZ,CR400BF-Z/S (Intelligent EMU),CR400BF-Z/S (智能动车)
@@ -968,6 +968,7 @@ STR_NC3_CONSIST,{BLACK}Consist: {GOLD}2 to 16 cars; cabs are powered,{BLACK}构�
 STR_NZJ1_XINSHUGUANG_CONSIST,"{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle",{BLACK}构成：{GOLD}头尾各一节，中间加挂至少四节车厢
 STR_JINLUN_LOCOMOTIVE_CONSIST,"{BLACK}Consist: {GOLD}One section at front, another section at back. Only can attach ""{BLUE}JIN{WHITE}LUN{GOLD}"" 25DT Series coaches.","{BLACK}构成：{GOLD}头尾各一节，仅可挂载""{BLUE}金{WHITE}轮{RED}号{GOLD}""25DT车厢"
 STR_NDJ3_CONSIST,"{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle",{BLACK}构成：{GOLD}头尾各一节，中间加挂至少四节车厢
+STR_NYJ1_CONSIST,"{BLACK}Consist: {GOLD}One section at front, with 2 to 16 wagons attached.",{BLACK}构成：{GOLD}头部一节，2-16 节车厢
 STR_X2000_CONSIST,"{BLACK}Consist: {GOLD}One section at front, with wagons attached. At least 4 wagons",{BLACK}构成：{GOLD}头部一节，至少四节车厢
 STR_DJJ1_CONSIST,"{BLACK}Consist: {GOLD}One section at front, with wagons attached; or one section at front, another section at back. At least 4 wagons",{BLACK}构成：{GOLD}头部一节，或头尾各一节，中间加挂至少四节车厢
 STR_DJJ2_CONSIST,"{BLACK}Consist: {GOLD}One section at front, another section at back, MU Wagins in Middle",{BLACK}构成：{GOLD}头尾各一节，中间加挂拖车车厢

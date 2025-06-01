@@ -47,7 +47,7 @@ switch (FEAT_TRAINS, SELF, switch_yw25ml_graphics, position_in_articulated_veh %
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw25ml_capacity, position_in_articulated_veh % 3) {
-    1: return 118;
+    1: return 66;
     return 0;
 }
 

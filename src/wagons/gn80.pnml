@@ -41,7 +41,7 @@ switch (FEAT_TRAINS, SELF, switch_gn80_graphics, position_in_articulated_veh % 3
 }
 
 switch (FEAT_TRAINS, SELF, switch_gn80_capacity, position_in_articulated_veh % 3) {
-    1: return 70;
+    1: return 80;
     return 0;
 }
 

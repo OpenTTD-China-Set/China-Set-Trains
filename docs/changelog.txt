@@ -5,6 +5,16 @@ China Set: Trains Changelog
 
 ## Initial-0-3 Updates
 
+0.3.5 (2025-06-01)
+--------------------
+Drop revision in version number
+Add: CRH1E-NG, CRH2E-NG, CR400BF-0031/0051, CRH380AM, DJF2, NYJ1, CRH6F-A, CRH3A-A, CJ6, CRH6A-A, GH70B, G70A
+Add Livery: CR200J-B Pan'gang, SRZ25B Ji'nan, 25B, CRH6F
+Fix: GN80 capacity errors
+Fix: cargo capacity of 25ML series
+Fix: sprite errors of SCA25B and SYW25B Zhengzhou livery
+Fix: CR200J original livery
+
 0.3.4.179 (15/02/2025)
 --------------------
 Fix #60: DF11G sprite misalignments

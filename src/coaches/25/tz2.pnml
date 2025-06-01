@@ -19,6 +19,9 @@ spriteset (spriteset_tz2_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_tz2_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25", "tz2-sfk50-red")
 }
+spriteset (spriteset_tz2_beidaihe, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25", "kd25-beidaihe")
+}
 
 switch (FEAT_TRAINS, SELF, switch_tz2_articulated_part, extra_callback_info1) {
     1..2: return tz2;
@@ -29,6 +32,7 @@ switch (FEAT_TRAINS, SELF, switch_tz2_cargo_subtype, cargo_subtype) {
     0: string(STR_BUILD_YEAR);
     1: string(STR_ORIGINAL);
     2: string(STR_RED);
+    3: return string(STR_BEIDAIHE);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -40,6 +44,8 @@ switch (FEAT_TRAINS, SELF, switch_tz2_graphics_subtype_0, build_year) {
 switch (FEAT_TRAINS, SELF, switch_tz2_graphics_subtype, cargo_subtype) {
     0: switch_tz2_graphics_subtype_0;
     1: spriteset_tz2_original;
+    2: spriteset_tz2_red;
+    3: spriteset_tz2_beidaihe;
 }
 
 switch (FEAT_TRAINS, SELF, switch_tz2_graphics, position_in_articulated_veh % 3) {

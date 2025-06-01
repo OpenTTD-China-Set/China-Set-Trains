@@ -98,7 +98,7 @@ railtypetable {
 //    SEDA: [SEDA, SADA, SAAA, SAAE, ELRL],
 //    SFCA: [SFCA, SACA, SAAA, SAAE, ELRL],
 //    SGCA: [SGCA, SACA, SAAA, SAAE, ELRL],
-    SAA28 : ["SAA(", SAAE, ELRL],         // NOT IN CHINA SET: RAILS, there is problem having the character "(", using its ASCII code instead
+    SAA28 : ["SAA(", SAAE, ELRL],         // NOT IN CHINA SET: RAILS
     SAB28 : ["SAB(", "SAA(", SAAE, ELRL], // NOT IN CHINA SET: RAILS
     SAC28 : ["SAC(", "SAA(", SAAE, ELRL], // NOT IN CHINA SET: RAILS
     SAD28 : ["SAD(", "SAA(", SAAE, ELRL], // NOT IN CHINA SET: RAILS
@@ -144,8 +144,13 @@ railtypetable {
 //    BCDA: [BCDA, BADA, BAAA, BAAE, ERA1, ELRL],
 //    BDDA: [BDDA, BADA, BAAA, BAAE, ERA1, ELRL],
 //    BECA: [BECA, BACA, BAAA, BAAE, ERA1, ELRL],
-//    DBDN: [DBDN, DADN, DAAN, RAIL],
-//    DCDA: [DCDA, DADA, DAAA, DAAE, ELRL],
+    DAAN: [DAAN, SAAN, BAAN, RAIL],
+    DABN: [DABN, DAAN, SABN, BABN, SAAN, BAAN, RAIL],
+    DABA: [DABA, DAAA, SABA, BABA, SAAA, BAAA, ELRL],
+    DBDN: [DBDN, DADN, DAAN, SADN, BADN, RAIL],
+    DCDA: [DCDA, DADA, DAAA, DAAE, SADA, BADA, ELRL],
+    AC25DC3_1435_1520_AXLA: ["DAA)", "SAA)", "BAA)", SAAE, BAAE, ELRL],
+    AC25DC3_1435_1520_AXLB: ["DAB)", "DAA)", "SAA)", "BAA)", SAAE, BAAE, ELRL],
 //    dBDN: [dBDN, dADN, dAAN, RAIL],
 //    dCDA: [dCDA, dADA, dAAA, dAAE, ELRL],
 }
