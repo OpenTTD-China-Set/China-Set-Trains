@@ -9,35 +9,41 @@ switch (FEAT_TRAINS, SELF, switch_crh6a3_name, getbits(extra_callback_info1, 0, 
 
 // Purchase Menu
 spriteset (spriteset_crh6a3_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("25-emu", "crh6a-c-jingtong-1")
+    template_purchase ("25-emu", "crh6a/crh6a-c-jingtong-1")
 }
 
 // Vehicle
 spriteset (spriteset_crh6a3_front_jingtong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6a-c-jingtong-1")
+    template_standard ("25-emu", "crh6a/crh6a-c-jingtong-1")
 }
 spriteset (spriteset_crh6a3_middle_m_jingtong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6a-m-3-jingtong")
+    template_standard ("25-emu", "crh6a/crh6a-m-3-jingtong")
 }
 spriteset (spriteset_crh6a3_middle_p_jingtong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6a-p-3-jingtong")
+    template_standard ("25-emu", "crh6a/crh6a-p-3-jingtong")
+}
+spriteset (spriteset_crh6a3_middle_p_r_jingtong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh6a/crh6a-p-r-3-jingtong")
 }
 spriteset (spriteset_crh6a3_cab_jingtong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "crh6a-c-jingtong-2")
+    template_reversed ("25-emu", "crh6a/crh6a-c-jingtong-2")
 }
 
 
 spriteset (spriteset_crh6a3_front_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6a-c-jinshan-1")
+    template_standard ("25-emu", "crh6a/crh6a-c-jinshan-1")
 }
 spriteset (spriteset_crh6a3_middle_m_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6a-m-3-jinshan")
+    template_standard ("25-emu", "crh6a/crh6a-m-3-jinshan")
 }
 spriteset (spriteset_crh6a3_middle_p_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6a-p-3-jinshan")
+    template_standard ("25-emu", "crh6a/crh6a-p-3-jinshan")
+}
+spriteset (spriteset_crh6a3_middle_p_r_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh6a/crh6a-p-r-3-jinshan")
 }
 spriteset (spriteset_crh6a3_cab_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "crh6a-c-jinshan-2")
+    template_reversed ("25-emu", "crh6a/crh6a-c-jinshan-2")
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh6a3_articulated_part, extra_callback_info1) {
@@ -60,6 +66,10 @@ switch (FEAT_TRAINS, PARENT, switch_crh6a3_middle_p, cargo_subtype) {
     0: spriteset_crh6a3_middle_p_jingtong;
     1: spriteset_crh6a3_middle_p_jinshan;
 }
+switch (FEAT_TRAINS, PARENT, switch_crh6a3_middle_p_r, cargo_subtype) {
+    0: spriteset_crh6a3_middle_p_r_jingtong;
+    1: spriteset_crh6a3_middle_p_r_jinshan;
+}
 
 switch (FEAT_TRAINS, PARENT, switch_crh6a3_middle_m, cargo_subtype) {
     0: spriteset_crh6a3_middle_m_jingtong;
@@ -76,10 +86,66 @@ switch (FEAT_TRAINS, SELF, switch_crh6a3_graphics, position_in_articulated_veh %
     empty_sprites;
 }
 
+switch (FEAT_TRAINS, SELF, switch_crh6a3_middle_wagon_back, (position_in_consist_from_end / 3) + 1 - (num_vehs_in_consist / 24)) {
+    2: switch_crh6a3_middle_p_r;
+    4: switch_crh6a3_middle_p;
+    switch_crh6a3_middle_m;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6a3_middle_wagon_front, (position_in_consist / 3) + 1 - (num_vehs_in_consist / 24)) {
+    2: switch_crh6a3_middle_p;
+    4: switch_crh6a3_middle_p_r;
+    switch_crh6a3_middle_m;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh6a3_if_middle_wagon_front_or_back, (position_in_consist / 3) + 1 <= (num_vehs_in_consist / 6)) {
+    1: switch_crh6a3_middle_wagon_front;
+    switch_crh6a3_middle_wagon_back;
+}
+
+/* switch (FEAT_TRAINS, SELF, switch_crh6a2_middle_wagon_half_long, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) {
+    1: spriteset_crh2a_cab_reconect;
+    spriteset_crh2a_cab_reconect_reversed;
+} */
+
+switch (FEAT_TRAINS, SELF, switch_crh6a3_middle_wagon_long, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
+    1: switch_crh6a3_middle_m;
+    switch_crh6a3_if_middle_wagon_front_or_back;
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_crh6a3_if_middle_wagon_tp_short, (position_in_consist / 3) + 1 - (num_vehs_in_consist / 12)) {//8节时，后面的参数为2，此时4,6节有动力
+    2: switch_crh6a3_middle_p;
+    4: switch_crh6a3_middle_p_r;
+    switch_crh6a3_middle_m;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh6a3_length_class, num_vehs_in_consist / 3) {
+    2..12:   switch_crh6a3_if_middle_wagon_tp_short;
+    switch_crh6a3_middle_wagon_long;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6a3_if_wagon_end, position_in_consist_from_end == 1) {
+    1: switch_crh6a3_cab;
+    switch_crh6a3_length_class;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6a3_wagon_graphics, (position_in_consist_from_end % 3) == 1) {
+    1: switch_crh6a3_if_wagon_end;
+    empty_sprites;
+}
+
+
 switch (FEAT_TRAINS, SELF, switch_crh6a3_head_capacity, position_in_articulated_veh % 3) {
     1: return 150;
     return 0;
 }
+
+
+/* 
 
 switch (FEAT_TRAINS, SELF, switch_crh6a3_short_graphics, (position_in_consist_from_end == position_in_consist) || (position_in_consist_from_end == position_in_consist + 3)) {
     1: switch_crh6a3_middle_p;
@@ -110,7 +176,7 @@ switch (FEAT_TRAINS, SELF, switch_crh6a3_wagon_graphics, position_in_consist_fro
     0..2: switch_crh6a3_cab_graphics;
     switch_crh6a3_middle_graphics;
 }
-
+ */
 switch (FEAT_TRAINS, SELF, switch_crh6a3_wagon_length, position_in_consist_from_end) {
     switch_length_2_8_2;
 }
@@ -198,9 +264,9 @@ item (FEAT_TRAINS, crh6a3) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_CRH6A3_CAN_ATTACH_WAGON), string(STR_CRH6A3_LIVERY_AVAILABILITY), string(STR_RELDEC_LOW, 8), string(STR_CRH6A3_CONSIST), string(STR_CRH6A3_HEAD_SEAT));
+        additional_text:                string(STR_DESC_5, string(STR_CRH6A_CAN_ATTACH_WAGON), string(STR_CRH6A3_LIVERY_AVAILABILITY), string(STR_RELDEC_LOW, 8), string(STR_CRH6A_CONSIST), string(STR_CRH6A_HEAD_SEAT));
         can_attach_wagon:               onlyze;
-        start_stop:                     mu4car;
+        start_stop:                     mu4to24car;
         cargo_subtype_text:             switch_crh6a3_cargo_subtype;
 
         // Graphics

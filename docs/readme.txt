@@ -90,18 +90,22 @@ make
 Contributors (in alphabetical order):
 
 - Ahyangyi
+- asAn0
 - babel
-- ctx
+- ctx (Qipaoxian)
 - DF43110
 - EMB190
 - FJZer0ich
+- guangming
 - Haiyan
 - huanfeng
+- jackgqj 
 - John Franklin
 - Mikhail
 - NACHN
 - nengyeqing
 - shentie106
+- SL-1230
 - WenSim
 - wuwu (kaitokiwa)
 
@@ -130,7 +134,7 @@ OpenTTD Developers; and Chris Sawyer.
 
 China Set: Trains
 
-Copyright (C) 2024 China Set Team
+Copyright (C) 2023-2025 China Set Team
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

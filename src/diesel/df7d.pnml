@@ -99,7 +99,7 @@ item (FEAT_TRAINS, df7d) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_DF7D), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_MEDIUM, 8));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_DF7D), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_LOW, 8));
         cargo_subtype_text:             switch_df7d_cargo_subtype;
         can_attach_wagon:               locowagon;
 

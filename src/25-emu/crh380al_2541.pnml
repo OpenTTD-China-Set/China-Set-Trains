@@ -46,7 +46,7 @@ item (FEAT_TRAINS, crh380al_2541) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        variant_group:					9238;
+        variant_group:					crh380a;
 
         // Availability
         climates_available:             ALL_CLIMATES;

@@ -1,0 +1,118 @@
+//Begin RW19T_TANGGULA
+
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_rw19t_tanggula_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches","25t/rw19t-tanggula")
+}
+
+// Vehicle
+spriteset (spriteset_rw19t_tanggula_standard, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/rw19t-tanggula")
+}
+spriteset (spriteset_rw19t_tanggula_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("coaches", "25t/rw19t-tanggula")
+}
+spriteset (spriteset_ca25t_tanggula_standard, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/ca25t-tanggula")
+}
+spriteset (spriteset_ca25t_tanggula_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("coaches", "25t/ca25t-tanggula")
+}
+spriteset (spriteset_ca25t_tanggula_salong_origin, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/ca25t-tanggula-salong")
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw19t_tanggula_articulated_part, extra_callback_info1) {
+    1..44: return rw19t_tanggula;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw19t_tanggula_graphics, position_in_articulated_veh) {
+    1: spriteset_rw19t_tanggula_standard;
+    4: spriteset_rw19t_tanggula_reversed;
+    7: spriteset_rw19t_tanggula_standard;
+    10: spriteset_rw19t_tanggula_reversed;
+    13: spriteset_rw19t_tanggula_standard;
+    16: spriteset_rw19t_tanggula_reversed;
+    19: spriteset_ca25t_tanggula_standard;
+    22: spriteset_ca25t_tanggula_salong_origin;
+    25: spriteset_ca25t_tanggula_reversed;
+    28: spriteset_rw19t_tanggula_standard;
+    31: spriteset_rw19t_tanggula_reversed;
+    34: spriteset_rw19t_tanggula_standard;
+    37: spriteset_rw19t_tanggula_reversed;
+    40: spriteset_rw19t_tanggula_standard;
+    43: spriteset_rw19t_tanggula_reversed;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw19t_tanggula_capacity, position_in_articulated_veh) {
+    1: return 96;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, rw19t_tanggula) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_RW19T_TANGGULA);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					2052;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2008,09,01);
+        model_life:                     60;
+        retire_early:                   50;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 16;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          160 km/h;
+        power:                          0 hp;
+        weight:                         867 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+        bitmask_vehicle_info:           bitmask(1);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_2, string(STR_COMFORT_VERY_HIGH, 3200));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_rw19t_tanggula_graphics;
+        purchase:                       spriteset_rw19t_tanggula_purchase;
+        articulated_part:               switch_rw19t_tanggula_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_rw19t_tanggula_capacity;
+        cargo_age_period:               (160 * acdecayfactor() * 5) << param_cargo_decay;
+        cost_factor:                    400;
+        running_cost_factor:            400 * runningcostfactor() * cafecostfactor() + accostfactor() + 50;
+        purchase_running_cost_factor:   1650;
+        purchase_cargo_capacity:        2;
+        name:                           switch_rw19t_name;
+
+    }
+}
+
+// End RW19T_TANGGULA

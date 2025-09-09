@@ -11,10 +11,9 @@ CRH380B,,JF,Qipaoxian,
 CRH3C,,JF,Qipaoxian,
 CRH2G,,JF*Recoded by Babel,"Qipaoxian,Babel",
 CRH380CL,,JF,Qipaoxian,
-CRH6A2,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
-CRH6A3,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
+CRH6A Series,,JF*Recoded by Babel,"Qipaoxian,,Nengyeqing",All:Nengyeqing
 CRH6A-A,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
-CRH6F,,JF,"Qipaoxian,,Nengyeqing",All:Nengyeqing
+CRH6F,,JF,"Qipaoxian,,Nengyeqing","Nengyeqing, Qipaoxian"
 CRH6FA,,Qipaoxian,"Qipaoxian,Nengyeqing",All:Nengyeqing
 CJ6,,Qipaoxian,"Qipaoxian,Ahyangyi",
 CINOVA2.0,,Qipaoxian,Qipaoxian,
@@ -44,20 +43,21 @@ CR400AFAE,,Babel,"Qipaoxian,Haiyan",
 CRH5A,,JF*Recoded by Babel,"Qipaoxian,Babel",
 CRH5GJT,,,Qipaoxian,
 CRH5E,,Babel,Qipaoxian,
-CR200JSG,,"5033,Babel","5033,EMB,Babel",
-CRH380AJ,,"5033,Babel","Qipaoxian,Haiyan",
-CRH380AL_2541,,5033,"Qipaoxian,Babel",
+CR200JSG,,"GUANGMING,Babel","GUANGMING,EMB,Babel",
+CRH380AJ,,"GUANGMING,Babel","Qipaoxian,Haiyan",
+CRH380AL_2541,,GUANGMING,"Qipaoxian,Babel",
 CRH380AM,,Qipaoxian,Qipaoxian,
 DJF1,,Babel,Qipaoxian,
 CRH2A4020,,Babel,Babel,
 JF1,jf1,JF,EMB,
-Mikai,,,,
+Mikai,,Babel,EMB,
 SL6,sl6,JF,EMB,
 Pasguku,,,,
 JF6,jf6,,,
-QJ,qj,,,
+QJ,qj,Babel,EMB,
 RM,rm,,,
 SY,sy,John Franklin,JF,
+KD7,,Babel,EMB
 DF4K,df4k,JF,Mikhail,
 DF4H,df4h,JF,Mikhail,
 DF4D-0000,df4d0000,JF,Babel,
@@ -124,9 +124,23 @@ DFH3,dfh3,wuwu,EMB,
 BEIJING Series,,Babel,EMB,EMB
 DF2,,Babel,EMB,
 DF11Plateau,,Babel,"NACHN,EMB",
-DF3,,5033,EMB,
+DF3,,GUANGMING,EMB,
 DF7D,,wuwu,"EMB, wuwu",
 DF9,,wuwu,wuwu,
+DFH1 Series,,Babel,EMB,
+HXN3C,,Babel,"asAn0,Babel","asAn0,Babel"
+8K,,Babel,EMB,
+ND4,,Babel,EMB,
+NY5,,Babel,EMB,EMB
+NY6,,Babel,EMB,EMB
+NY7,,Babel,EMB,EMB
+HXD1C,,Babel,"SL-1230,EMB",
+6K,,wuwu,wuwu
+DJ1,,wuwu,wuwu
+HXD2D,,wuwu,wuwu
+DF10,,wuwu,wuwu
+GC160,,wuwu,wuwu
+GC220,,wuwu,wuwu
 C64,,JF,Babel,
 P62,,JF,Babel,
 G60,,JF,Babel,Other Colaor: Sunjuzhensun
@@ -170,8 +184,20 @@ C80,,wuwu,Sunjuzhensun,
 G70,,wuwu,Sunjuzhensun,
 P1,,wuwu,Sunjuzhensun,
 P50,,wuwu,Sunjuzhensun,
-GH70B,,5033,Sunjuzhensun,
-G70A,,5033,Sunjuzhensun,
+GH70B,,GUANGMING,Sunjuzhensun,
+G70A,,GUANGMING,Sunjuzhensun,
+G11,,wuwu,Sunjuzhensun,
+G70B,,wuwu,Sunjuzhensun,
+GF1M,,wuwu,Sunjuzhensun,
+GF70,,wuwu,Sunjuzhensun,
+GH40LK,,wuwu,Sunjuzhensun,
+GH65K,,wuwu,Sunjuzhensun,
+GHA70,,wuwu,Sunjuzhensun,
+GHA70A,,wuwu,Sunjuzhensun,
+GS,,wuwu,Sunjuzhensun,
+GQ80,,wuwu,Sunjuzhensun,
+GN60,,wuwu,Sunjuzhensun,
+Yai,,Babel,Babel,
 YZ25G,yz25g,JF,Haiyan,"Nanhu: wuwu,Other: Haiyan"
 RZ25G,rz25g,JF,Haiyan,All: Haiyan
 YW25G,yw25g,JF,Haiyan,All: Haiyan
@@ -267,3 +293,7 @@ CA25C,,Babel,Haiyan,
 SYZ25,,Babel,Haiyan,
 SRZ25,,Babel,Haiyan,
 25SM Series,,Babel,Haiyan,
+18Series Gen4,,Babel,Haiyan,
+RW19T"Tanggula",,Babel,Haiyan,
+21 Series,,Babel,jackgqj,
+Ha1,,Babel,Babel

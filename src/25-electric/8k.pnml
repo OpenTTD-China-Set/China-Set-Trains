@@ -1,0 +1,91 @@
+// Begin 8k
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_8k_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-electric", "8k-a")
+}
+
+// Vehicle
+spriteset (spriteset_8k_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "8k-a")
+}
+spriteset (spriteset_8k_b, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "8k-b")
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_8k_articulated_part, extra_callback_info1) {
+    1..5: return _8k;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_8k_graphics, position_in_articulated_veh % 6) {
+    1: spriteset_8k_a;
+    4: spriteset_8k_b;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, _8k) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_8K);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1987,01,01);
+        model_life:                     60;
+        retire_early:                   40;
+        vehicle_life:                   30;
+        track_type:                     SACA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          100 km/h;
+        power:                          6400 kW;
+        weight:                         184 ton;
+        tractive_effort_coefficient:    0.348;
+        cost_factor:                    83;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            72;
+        reliability_decay:              8;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_FR_IMPORT), string(STR_ELECTRICITY_SUPPLY_NO),  /* string(STR_8K_LIVERY_AVAILABILITY), */string(STR_RELDEC_LOW, 8));
+        can_attach_wagon:               locowagon;
+        // Graphics
+        default:                        switch_8k_graphics;
+        purchase:                       spriteset_8k_purchase_original;
+        articulated_part:               switch_8k_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_4_2;
+        cargo_capacity:                 0;
+        cost_factor:                    126;
+        running_cost_factor:            120 * runningcostfactor();
+        purchase_running_cost_factor:   402;
+        purchase_cargo_capacity:        0;
+        bitmask_vehicle_info:           0;
+    }
+}
+
+// End 8K

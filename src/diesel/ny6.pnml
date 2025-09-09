@@ -1,0 +1,87 @@
+// Begin NY6
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_ny6_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "ny6")
+}
+
+// Vehicle
+spriteset (spriteset_ny6_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "ny6")
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_ny6_articulated_part, extra_callback_info1) {
+    1..2: return ny6;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_ny6_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_ny6_original;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, ny6) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_NY6);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1972,06,01);
+        model_life:                     60;
+        retire_early:                   45;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          3200 hp;
+        weight:                         138 ton;
+        tractive_effort_coefficient:    0.336;
+        cost_factor:                    10;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            10;
+        reliability_decay:              8;
+        bitmask_vehicle_info:           0;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_NY6), string(STR_NY5_NICKNAME), string(STR_DBR_IMPORT),  string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_LOW, 8));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_ny6_graphics;
+        purchase:                       spriteset_ny6_purchase;
+        articulated_part:               switch_ny6_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_7_2;
+        cargo_capacity:                 0;
+        cost_factor:                    70;
+        running_cost_factor:            55 * runningcostfactor();
+        purchase_running_cost_factor:   220;
+        purchase_cargo_capacity:        0;
+    }
+}
+
+// End NY6

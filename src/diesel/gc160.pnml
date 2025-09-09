@@ -1,0 +1,112 @@
+//Begin GC160
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_gc160_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "gc160")
+}
+
+// Vehicle
+spriteset (spriteset_gc160_blue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "gc160")
+}
+
+spriteset (spriteset_gc160_jixi, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "gc160-jixi")
+}
+
+switch (FEAT_TRAINS, SELF, switch_gc160_articulated_part, extra_callback_info1) {
+    1..2: return gc160;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_gc160_cargo_subtype, cargo_subtype) {
+    0: return string(STR_BLUE);
+    1: return string(STR_JIXI);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_gc160_graphics_subtype, cargo_subtype) {
+    0: spriteset_gc160_blue;
+    1: spriteset_gc160_jixi;
+}
+
+switch (FEAT_TRAINS, SELF, switch_gc160_graphics, position_in_articulated_veh % 3) {
+    1: switch_gc160_graphics_subtype;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_gc160_capacity_cargo, cargo_type_in_veh) {
+    PASS: return 20;
+    MAIL: return 40;
+    GOOD: return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_gc160_capacity, position_in_articulated_veh % 3) {
+    1: switch_gc160_capacity_cargo;
+    return 0;
+}
+
+item (FEAT_TRAINS, gc160) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_GC160);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1985,01,01);
+        model_life:                     50;
+        retire_early:                   35;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, MAIL, GOOD];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 20;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          80 km/h;
+        power:                          160 kW;
+        weight:                         12 ton;
+        tractive_effort_coefficient:    0.204;
+        cost_factor:                    53;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            50;
+        reliability_decay:              24;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_GC160), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_HIGH, 24));
+        cargo_subtype_text:             switch_gc160_cargo_subtype;
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_gc160_graphics;
+        purchase:                       spriteset_gc160_purchase;
+        articulated_part:               switch_gc160_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_1_2;
+        cargo_capacity:                 switch_gc160_capacity;
+        cost_factor:                    13;
+        running_cost_factor:            15 * runningcostfactor();
+        purchase_running_cost_factor:   60;
+        purchase_cargo_capacity:        switch_gc160_capacity_cargo() / 3;
+
+    }
+}
+
+// End GC160
+

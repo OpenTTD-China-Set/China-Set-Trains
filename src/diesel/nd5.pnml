@@ -88,7 +88,7 @@ item (FEAT_TRAINS, nd5) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_ND5), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_MEDIUM, 14));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_ND5), string(STR_US_IMPORT), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_MEDIUM, 14));
         cargo_subtype_text:             switch_nd5_cargo_subtype;
         can_attach_wagon:               locowagon;
 

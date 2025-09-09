@@ -3,6 +3,28 @@ China Set: Trains Changelog
 
 # Initial-0 Updates
 
+## Initial-0-4 Updates
+
+0.4.0 (2025-09-01)
+--------------------
+Add vehicles of South Manchuria Railways, which was a railway company established by the Japanese during their invasion of China in WWII:
+    - Mikai Steam locomotive
+    - Ha 1 Coaches
+    - Yai Boxcars
+Add: QJ, KD7, DF10, NY5, NY6, NY7, ND4, FXN3C, DFH1 Series, GC160, GC220, JY600, 18 Series Gen4, 21 Series, RW19T "Tanggula" Excursion Trainset, 6K, 8K, DJ1, HXD1C, HXD2D, G11, G70B, GF1M, GF70, GH40LK, GH65K, GHA70, GHA70A, GS, GQ80, GN60, BGW70
+Completed the CRH6 Series:
+    - CRH6A (2 Doors) can't attach 1st-Seat MU Wagons now
+    - The seat type of CRH6A (2 Doors) has been changed to 2nd-Seat MU Wagon now, with its capacity change
+    - Refurbish the sprites of CRH6A (2 Doors & 3 Doors), CRH6F
+    - Add: CRH6A (Comfort Version)
+Fix: CR400BF-0031/0057 can't run on 1520mm gauge 
+Fix: luggage room in RZXL coaches with wrong electric visual effects
+Fix: RZXL25Z can't change livery normally
+Fix: Power of NYJ1 "Beihai"
+Fix: add warning sprites when NDJ3 and NZJ1 are in wrong consist
+Fix: Corrected a typo in the code: changed 'gl7' back to 'g17'
+Fix: some wrong or misspelt language strings
+
 ## Initial-0-3 Updates
 
 0.3.5 (2025-06-01)
@@ -17,14 +39,14 @@ Fix: CR200J original livery
 
 0.3.4.179 (15/02/2025)
 --------------------
-Fix #60: DF11G sprite misalignments
+Fix: DF11G sprite misalignments
 
 0.3.4.178 (11/02/2025)
 --------------------
-Fix #56: Incorrect tractive effort coefficient of CRH2A/B in purchase menu
-Fix #57: RW25K bought after 2014 not defaulting to "Gaozu Green" livery 
-Fix #58: DF11G use wrong sprites
-Fix #59: Remove unreal liveries of S25K series
+Fix: Incorrect tractive effort coefficient of CRH2A/B in purchase menu
+Fix: RW25K bought after 2014 not defaulting to "Gaozu Green" livery 
+Fix: DF11G use wrong sprites
+Fix: Remove unreal liveries of S25K series
 Add：CRH2A-4020, SYZ25, SRZ25, 25 Series (Sanshui-Maoming Railway), SCA25B, DF9, DF7D Series
 Add Liveries: RW25K (Internatinal Transport, Lake Blue), RW25T & YW25T (Internatinal Transport), 25G Series (GMS, Fulong), 25B Series (XiYan), 25Z Series (GuangShen), S25B Series (Urumqi, Hohhot, Harbin, Xianxing, 93/94 Train, Gaozu Green, Liaodong, Red, Orange, Dacheng, Xi'an), TZ (Xianxing), S25K Series, KD25K (Lake Blue), CRH1A/CRH5A (Early)
 
@@ -34,15 +56,48 @@ Add: CR200JSG, CRH5G (Technology-Enhanced), Beijing Series Locomotives, DF2, 25C
 
 0.3.3.176 (21/10/2024)
 --------------------
-Fix #55: wagon sprite errors
+Fix: wagon sprite errors
+
+## Initial-0-3 Updates
+
+0.3.5 (2025-06-01)
+--------------------
+Drop revision in version number
+Add: CRH1E-NG, CRH2E-NG, CR400BF-0031/0051, CRH380AM, DJF2, NYJ1, CRH6F-A, CRH3A-A, CJ6, CRH6A-A, GH70B, G70A
+Add Livery: CR200J-B Pan'gang, SRZ25B Ji'nan, 25B, CRH6F
+Fix: GN80 capacity errors
+Fix: cargo capacity of 25ML series
+Fix: sprite errors of SCA25B and SYW25B Zhengzhou livery
+Fix: CR200J original livery
+
+0.3.4.179 (15/02/2025)
+--------------------
+Fix: DF11G sprite misalignments
+
+0.3.4.178 (11/02/2025)
+--------------------
+Fix: Incorrect tractive effort coefficient of CRH2A/B in purchase menu
+Fix: RW25K bought after 2014 not defaulting to "Gaozu Green" livery 
+Fix: DF11G use wrong sprites
+Fix: Remove unreal liveries of S25K series
+Add：CRH2A-4020, SYZ25, SRZ25, 25 Series (Sanshui-Maoming Railway), SCA25B, DF9, DF7D Series
+Add Liveries: RW25K (Internatinal Transport, Lake Blue), RW25T & YW25T (Internatinal Transport), 25G Series (GMS, Fulong), 25B Series (XiYan), 25Z Series (GuangShen), S25B Series (Urumqi, Hohhot, Harbin, Xianxing, 93/94 Train, Gaozu Green, Liaodong, Red, Orange, Dacheng, Xi'an), TZ (Xianxing), S25K Series, KD25K (Lake Blue), CRH1A/CRH5A (Early)
+
+0.3.4.177 (07/02/2025)
+--------------------
+Add: CR200JSG, CRH5G (Technology-Enhanced), Beijing Series Locomotives, DF2, 25C Series, DF3, DJF1, CR380AJ
+
+0.3.3.176 (21/10/2024)
+--------------------
+Fix: wagon sprite errors
 
 0.3.3.175 (20/10/2024)
 --------------------
-Fix #54: RW25G sprites
+Fix: RW25G sprites
 
 0.3.3.174 (19/10/2024)
 --------------------
-Fix #53: offset of sprites template
+Fix: offset of sprites template
 Renew sprites of 22 Series, 25B Series
 Add Liveries: 25G Series, 25T Series, 25K Series (Gaozu Grenn, GMS, GYR, Xiaoyong)
 Allow wagons change colors
@@ -52,13 +107,13 @@ Completed the CRH5 Sries:
 
 0.3.2.173 (4/10/2024)
 ---------------------
-Fix #53: CR400AF-Z Sprite Errors
+Fix: CR400AF-Z Sprite Errors
 
 0.3.2.171 (1/10/2024)
 ---------------------
 
 Add: RZ225G, UZ25G, P1, YZ1, RZ125G, UZ25K, CR400AF-AE
-Fix #52: length of N5
+Fix: length of N5
 Renewal the sprites of RZ125Z, RZ225Z, RZT25Z
 Renewal the sprites of 25K Series, and add liveries of 25K Series
 
@@ -77,8 +132,8 @@ Merge the str-csv python script into command "make"
 0.3.1.169 (19/8/2024)
 ---------------------
 
-Fix #50: P80 weight
-Fix #51: P70 sprite errors
+Fix: P80 weight
+Fix: P70 sprite errors
 
 0.3.1.168 (19/8/2024)
 ---------------------
@@ -94,24 +149,24 @@ Feature: improved language strings of reliability decay and comfort
 Add: NC3, P80, UZ25T, P50, P65
 Renewal the sprites of HXD1D, 25T
 Wagons with aging liveries now have new feature: The probabilities of aging liveries will change by years
-Fix #47: The Cargo Type of PB
+Fix: The Cargo Type of PB
 Completed the CRH1 Series:
     - Refurbish CRH1A
     - Add CRH1B, CRH1A-A
-    - Fix #48: Fix the power of CRH1E
+    - Fix: Fix the power of CRH1E
 Add the CR400BF(Intelligent EMU) Series:
     - Add CR400BF-C, CR400BF-Z/S, CR400BF-AZ/BZ/BS
-Fix #49: The capacity and running cost of CR400AF-AZ/BZ/BS
+Fix: The capacity and running cost of CR400AF-AZ/BZ/BS
 
 0.3.0.166 (16/6/2024)
 ---------------------
 
-Fix #46: CRH2E (Longitudinal Sleeper) capacity
+Fix: CRH2E (Longitudinal Sleeper) capacity
 
 0.3.0.165 (16/6/2024)
 ---------------------
 
-Fix #45: Simplified Chinese language file unattached
+Fix: Simplified Chinese language file unattached
 
 0.3.0.164 (16/6/2024)
 ---------------------
@@ -128,7 +183,7 @@ Add: CR400BF-A/B, CR300AF
 Completed the CRH2 Series:
     - Refurbish CRH2A, CRH2C, CRH2G
     - Add CRH2B, CRH2E, CRH2E (Longitudinal Sleeper)
-Fix #44: power of EMUs
+Fix: power of EMUs
 
 0.3.0.161 & 162 (10/6/2024)
 ---------------------------
@@ -155,14 +210,14 @@ Add: HXN3, J5, N5
 0.2.3.158 (14/4/2024)
 ---------------------
 
-Fix #43: Some language display problems
+Fix: Some language display problems
 
 0.2.2.157 (11/4/2024)
 ---------------------
 
 Add: SS7D, SS9, SS9G, ND5, HXN5, 25 Mainline Coach (YZ25ML, YW25ML, RW25ML, CA25ML, XL25ML, TZ2), G17, GN80, P61, P63, PB
 Add Alternative Livery: 22 Coach (Air-conditioned), XL25B, YZ22, GN70, NX17, NX70A
-Fix #42: SS7E 160km/h -> 170km/h
+Fix: SS7E 160km/h -> 170km/h
 
 0.2.2.156 (7/4/2024)
 --------------------
@@ -173,24 +228,24 @@ Add: SY, CR300BF, DF4E, DF4B with new bodyshell, HXD1 1000 series, HXD1F, DF5KZ,
 ---------------------
 
 Add: YZ31, Jinwen Livery for DF4B, CA25G, KD25G and XL25G
-Fix #42: Description of 22-coaches
+Fix: Description of 22-coaches
 
 0.2.1.153 (21/3/2024)
 ---------------------
 
-Fix #41: It is probable to make locos of pushpull trains / Concentrated power MUs in the middle
+Fix: It is probable to make locos of pushpull trains / Concentrated power MUs in the middle
 
 0.2.1.152 (20/3/2024)
 ---------------------
 
 Add: NZJ2-Jinlun, 25DT-Jinlun (Single and double decker), NZJ1-Xinshuguang, DF, 6Y2, CRH380A, CRH380AL, CR400AF
-Fix #39: Unification of different colours of CR200J
-Fix #40: Low-axle-weight EMUs able to run on unelectrified tracks
+Fix: Unification of different colours of CR200J
+Fix: Low-axle-weight EMUs able to run on unelectrified tracks
 
 0.2.0.151 (2/3/2024)
 --------------------
 
-Fix #38: CRH1E unable to attach sleeper carriages
+Fix: CRH1E unable to attach sleeper carriages
 
 0.2.0.150 (2/3/2024)
 --------------------
@@ -205,7 +260,7 @@ Add: CRH6A-(Jingtong, Tianfu, Guangshen, Guangzhu, Jinshan, Zhengjiao, Zhuji, Zh
 ---------------------
 
 Merged wuwu (kaitokiwa) branch
-Fix #37: p62-brown, DF11G (graphic fix)
+Fix: p62-brown, DF11G (graphic fix)
 ADD: SS3B, B22, L70 (all coded by wuwu)
 
 0.1.5.148 (15/2/2024)
@@ -223,7 +278,7 @@ ADD: JSQ6, B6, RW19K, RW19T, YZ22-Air-conditioned, RZ22-Air-conditioned, YW22-Ai
 ---------------------
 
 Merged wuwu (kaitokiwa) branch
-Fix #36: DF4B for passenger uses incorrect sprite mistakenly
+Fix: DF4B for passenger uses incorrect sprite mistakenly
 ADD: DF4D7000, DF4C, DF4DF, DF8B, alternative sprites for DF4BK, DF4BH, DF4D, DF4D-4000, P62 (all coded by wuwu)
 
 0.1.5.145 (30/1/2024)
@@ -242,7 +297,7 @@ Add: DF7G, DF7G-5000, DF7G-8000, DFH7, DFH7B, HXN5B, RZ225Z, RZ125Z, RZT25Z, RZX
 ---------------------
 
 Change: Vehicle sorting (minor)
-Fix #35: CRH3C, CRH380B not displaying higher-speed refit option
+Fix: CRH3C, CRH380B not displaying higher-speed refit option
 
 0.1.4.142 (18/1/2024)
 ---------------------
@@ -260,13 +315,13 @@ Change: DF4 sprites (coded by wuwu)
 ---------------------
 
 Add: NDJ3
-Fix #34: DJJ1 failing to form long consist
+Fix: DJJ1 failing to form long consist
 
 0.1.3.139 (15/1/2024)
 ---------------------
 
 Add: DJJ1 (Short and Long)
-Fix #33: CR200J-B Head Car sprites
+Fix: CR200J-B Head Car sprites
 
 0.1.3.138 (15/1/2024)
 ---------------------
@@ -282,8 +337,8 @@ Add: CRH3A
 ---------------------
 
 Add: CRH2C
-Fix #31: CRH2A Power
-Fix #32: CR400BF Power and tractive effort
+Fix: CRH2A Power
+Fix: CR400BF Power and tractive effort
 
 0.1.3.135 (13/1/2024)
 ---------------------
@@ -294,7 +349,7 @@ Change: YETI Lives Matter - All MUs refittable to YETI workers
 0.1.2.134 (9/1/2024)
 --------------------
 
-Fix #30: NJ2 Sprites
+Fix: NJ2 Sprites
 
 0.1.2.133 (9/1/2024)
 --------------------
@@ -306,7 +361,7 @@ Change: all livery refits are available at anytime
 0.1.1.132 (3/1/2024)
 --------------------
 
-Fix #29: HXD1 Back sprites
+Fix: HXD1 Back sprites
 
 0.1.1.131 (3/1/2024)
 --------------------
@@ -317,8 +372,8 @@ Change: sprites of HXD1B
 0.1.1.130 (2/1/2024)
 --------------------
 
-Fix #27: Sprite scales and misalignments
-Fix #28: XL25K/T and DF4 (orange) sprites
+Fix: Sprite scales and misalignments
+Fix: XL25K/T and DF4 (orange) sprites
 
 From 0.0.8 (6/9/2023) to 0.1.0 (31/12/2023):
 --------------------------------------------
@@ -343,12 +398,12 @@ Add: HXD1B, C62
 Remove: Limited Class MU Wagon
 Change: Sprites of CR400BF, DF4 (Orange) changed to MagicaVoxel output
 Change: Minor adjustment of sprites of DF4 (Green)
-Fix #26: C64 (covered) wheels
+Fix: C64 (covered) wheels
 
 0.1.0.128 (31/12/2023)
 ----------------------
 
-Fix #25: CR200J-A-L sprite problem
+Fix: CR200J-A-L sprite problem
 
 0.1.0.127 (31/12/2023)
 ----------------------
@@ -356,7 +411,7 @@ Fix #25: CR200J-A-L sprite problem
 Add: CR200J-A long version
 Change: CR200J1 name changed to CR200J-A
 Change: Sprites of CR200J-A to MagicaVoxel output
-Fix #24: sprite misalignments of some passenger coaches
+Fix: sprite misalignments of some passenger coaches
 
 0.1.0.126 (30/12/2023)
 ----------------------
@@ -366,13 +421,13 @@ Change: Push-Pull failed, removed
 0.1.0.125 (30/12/2023)
 ----------------------
 
-Fix #22: Push-Pull functionality (again)
-Fix #23: CRH5A head seat cargo aging
+Fix: Push-Pull functionality (again)
+Fix: CRH5A head seat cargo aging
 
 0.1.0.124 (29/12/2023)
 ----------------------
 
-Fix #21: Push-Pull functionality
+Fix: Push-Pull functionality
 
 0.1.0.123 (29/12/2023)
 ----------------------
@@ -424,23 +479,23 @@ Change: Exclusive sprites for RW22B
 
 Change: Makefile.dist mechanics
 Change: Lower the comfort of "Peng Dai Ke" to 80
-Fix #20: CR400BF head seat display in simplified_chinese.lng
+Fix: CR400BF head seat display in simplified_chinese.lng
 
 0.1.0.112 (24/12/2023)
 ----------------------
 
 GitHub push, but no release
-Fix #17: YW22 comfort when using build year design
-Fix #18: "Peng Dai Ke" capacity
-Fix #19: YZ22, RW22, G60 introducing year
+Fix: YW22 comfort when using build year design
+Fix: "Peng Dai Ke" capacity
+Fix: YZ22, RW22, G60 introducing year
 
 0.1.0.111 (24/12/2023)
 ----------------------
 
 NOT COMPATIBLE WITH ANY VERSION BEFORE r111
 Add: YZ22, RZ22, YW22, RW22, YZ22B, YW22B, RW22B, YZ25B, RZ25B, YW25B, RW25B, XL25T, G60
-Fix #15: "Passengers in Boxcars" (Peng Dai Ke) are now as crowded as expected, and tourists now refuse to crowd in boxcars
-Fix #16: Boxcars now have double capacity of mail
+Fix: "Passengers in Boxcars" (Peng Dai Ke) are now as crowded as expected, and tourists now refuse to crowd in boxcars
+Fix: Boxcars now have double capacity of mail
 Change: Length of C64 to 6
 Change: Sprites of XL25T_SSPE, C64 to MagicaVoxel output
 Change: Sprites of P62 to MagicaVoxel output, but temporarily using P60 models
@@ -451,18 +506,18 @@ Change: Sprites of P62 to MagicaVoxel output, but temporarily using P60 models
 GitHub push, but no release
 Add: CA25G, CA25K
 Change: Sprites of KD25G, XL25G, KD25K, XL25K to MagicaVoxel output
-Fix #14: 25G "red door"
+Fix: 25G "red door"
 
 0.1.0.109 (21/12/2023)
 ----------------------
 
-Fix #13: sprite misalignments of vehicles (again)
+Fix: sprite misalignments of vehicles (again)
 
 0.1.0.108 (21/12/2023)
 ----------------------
 
-Fix #11: sprite misalignments of vehicles (again)
-Fix #12: dedicated sprite for reversed DF11G
+Fix: sprite misalignments of vehicles (again)
+Fix: dedicated sprite for reversed DF11G
 
 0.1.0.107 (21/12/2023)
 ----------------------
@@ -471,7 +526,7 @@ NOT COMPATIBLE WITH ANY VERSION BEFORE r107
 Change: length calculations of vehicles shorter than length 11
 Change: sprites attached to the middle section of vehicles again
 Change: running costs of trains of different max speeds
-Fix #10: sprite misalignments of vehicles
+Fix: sprite misalignments of vehicles
 
 0.1.0.106 (21/12/2023)
 ----------------------
@@ -501,7 +556,7 @@ Change: sprites now attached to the front section of vehicles
 Change: cargo_age_period basis and display
 Change: half running_cost_base, double running_cost_factor for locomotives
 Change: CR200J1 cab
-Fix #9: sprite misalignments of C64
+Fix: sprite misalignments of C64
 
 ## Initial-0-0 Updates
 
@@ -510,7 +565,7 @@ Fix #9: sprite misalignments of C64
 
 Add: CR400BF, DF11G, XL25T, KD25K
 Change: mechanics of running_cost of air conditioner generator cars and restaurant cars
-Fix #8: Sprites of CRH5A
+Fix: Sprites of CRH5A
 
 0.0.7.90 (28/8/2023)
 --------------------
@@ -522,26 +577,26 @@ Add: CRH5A
 
 Add: P62
 Add: Text showing whether a locomotive is able to supply electricity for cars
-Fix #6: Some passenger cars never support air conditioner
-Fix #7: Running Costs vary as expected
+Fix: Some passenger cars never support air conditioner
+Fix: Running Costs vary as expected
 
 0.0.5.78 (21/8/2023)
 --------------------
 
 Add: HXD3D, KD25G, C64
-Fix #4: Normal and MU coach attach issue
-Fix #5: Electric engines MUST BE ELECTRIFIED to supply electricity
+Fix: Normal and MU coach attach issue
+Fix: Electric engines MUST BE ELECTRIFIED to supply electricity
 
 0.0.4.44 (18/8/2023)
 --------------------
 
-Fix #3: CR200J livery misplace and cargo_age_period problem
+Fix: CR200J livery misplace and cargo_age_period problem
 
 0.0.4.43 (18/8/2023)
 --------------------
 
 Add: CR200J EMU and corresponding MU Cars
-Fix #2: DF4 Orange Livery Misplace
+Fix: DF4 Orange Livery Misplace
 
 0.0.3.34 (15/8/2023)
 --------------------
@@ -574,7 +629,7 @@ Change: 25G Capacity and Weight adjustment
 --------------------
 
 Add: HXD3C
-Fix #1: 25G Sprites Overlap
+Fix: 25G Sprites Overlap
 
 0.0.1.1 (11/8/2023)
 -------------------

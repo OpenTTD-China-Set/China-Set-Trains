@@ -9,62 +9,74 @@ switch (FEAT_TRAINS, SELF, switch_crh6f_name, getbits(extra_callback_info1, 0, 8
 
 // Purchase Menu
 spriteset (spriteset_crh6f_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("25-emu", "crh6f-c-foshan")
+    template_purchase ("25-emu", "crh6f/crh6f-c-foshan")
 }
 
 // Vehicle
 spriteset (spriteset_crh6f_front_foshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6f-c-foshan")
+    template_standard ("25-emu", "crh6f/crh6f-c-foshan")
 }
 spriteset (spriteset_crh6f_middle_m_foshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6f-m-foshan")
+    template_standard ("25-emu", "crh6f/crh6f-m-foshan")
 }
 spriteset (spriteset_crh6f_middle_p_foshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6f-p-foshan")
+    template_standard ("25-emu", "crh6f/crh6f-p-foshan")
+}
+spriteset (spriteset_crh6f_middle_p_r_foshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh6f/crh6f-p-foshan")
 }
 spriteset (spriteset_crh6f_cab_foshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "crh6f-c-foshan")
+    template_reversed ("25-emu", "crh6f/crh6f-c-foshan")
 }
 
 
 spriteset (spriteset_crh6f_front_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6f-c-jinshan")
+    template_standard ("25-emu", "crh6f/crh6f-c-jinshan")
 }
 spriteset (spriteset_crh6f_middle_m_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6f-m-jinshan")
+    template_standard ("25-emu", "crh6f/crh6f-m-jinshan")
 }
 spriteset (spriteset_crh6f_middle_p_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6f-p-jinshan")
+    template_standard ("25-emu", "crh6f/crh6f-p-jinshan")
+}
+spriteset (spriteset_crh6f_middle_p_r_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh6f/crh6f-p-jinshan")
 }
 spriteset (spriteset_crh6f_cab_jinshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "crh6f-c-jinshan")
+    template_reversed ("25-emu", "crh6f/crh6f-c-jinshan")
 }
 
 
 spriteset (spriteset_crh6f_front_xiaoyong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6f-c-xiaoyong")
+    template_standard ("25-emu", "crh6f/crh6f-c-xiaoyong")
 }
 spriteset (spriteset_crh6f_middle_m_xiaoyong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6f-m-xiaoyong")
+    template_standard ("25-emu", "crh6f/crh6f-m-xiaoyong")
 }
 spriteset (spriteset_crh6f_middle_p_xiaoyong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6f-p-xiaoyong")
+    template_standard ("25-emu", "crh6f/crh6f-p-xiaoyong")
+}
+spriteset (spriteset_crh6f_middle_p_r_xiaoyong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh6f/crh6f-p-xiaoyong")
 }
 spriteset (spriteset_crh6f_cab_xiaoyong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "crh6f-c-xiaoyong")
+    template_reversed ("25-emu", "crh6f/crh6f-c-xiaoyong")
 }
 
 spriteset (spriteset_crh6f_front_changzhutan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6f-changzhutan-tc")
+    template_standard ("25-emu", "crh6f/crh6f-changzhutan-tc")
 }
 spriteset (spriteset_crh6f_middle_p_changzhutan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6f-changzhutan-m")
+    template_standard ("25-emu", "crh6f/crh6f-changzhutan-m")
+}
+spriteset (spriteset_crh6f_middle_p_r_changzhutan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh6f/crh6f-changzhutan-m")
 }
 spriteset (spriteset_crh6f_middle_m_changzhutan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "crh6f-changzhutan-t")
+    template_standard ("25-emu", "crh6f/crh6f-changzhutan-t")
 }
 spriteset (spriteset_crh6f_cab_changzhutan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "crh6f-changzhutan-tc")
+    template_reversed ("25-emu", "crh6f/crh6f-changzhutan-tc")
 }
 
 
@@ -94,6 +106,12 @@ switch (FEAT_TRAINS, PARENT, switch_crh6f_middle_p, cargo_subtype) {
     2: spriteset_crh6f_middle_p_xiaoyong;
     3: spriteset_crh6f_middle_p_changzhutan;
 }
+switch (FEAT_TRAINS, PARENT, switch_crh6f_middle_p_r, cargo_subtype) {
+    0: spriteset_crh6f_middle_p_r_foshan;
+    1: spriteset_crh6f_middle_p_r_jinshan;
+    2: spriteset_crh6f_middle_p_r_xiaoyong;
+    3: spriteset_crh6f_middle_p_r_changzhutan;
+}
 
 switch (FEAT_TRAINS, PARENT, switch_crh6f_middle_m, cargo_subtype) {
     0: spriteset_crh6f_middle_m_foshan;
@@ -119,7 +137,60 @@ switch (FEAT_TRAINS, SELF, switch_crh6f_head_capacity, position_in_articulated_v
     return 0;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh6f_short_graphics, (position_in_consist_from_end == position_in_consist) || (position_in_consist_from_end == position_in_consist + 3)) {
+
+switch (FEAT_TRAINS, SELF, switch_crh6f_middle_wagon_back, (position_in_consist_from_end / 3) + 1 - (num_vehs_in_consist / 24)) {
+    1: switch_crh6f_middle_p_r;
+    4: switch_crh6f_middle_p;
+    switch_crh6f_middle_m;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6f_middle_wagon_front, (position_in_consist / 3) + 1 - (num_vehs_in_consist / 24)) {
+    1: switch_crh6f_middle_p;
+    4: switch_crh6f_middle_p_r;
+    switch_crh6f_middle_m;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh6f_if_middle_wagon_front_or_back, (position_in_consist / 3) + 1 <= (num_vehs_in_consist / 6)) {
+    1: switch_crh6f_middle_wagon_front;
+    switch_crh6f_middle_wagon_back;
+}
+
+/* switch (FEAT_TRAINS, SELF, switch_crh6a2_middle_wagon_half_long, ((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) {
+    1: spriteset_crh2a_cab_reconect;
+    spriteset_crh2a_cab_reconect_reversed;
+} */
+
+switch (FEAT_TRAINS, SELF, switch_crh6f_middle_wagon_long, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
+    1: switch_crh6f_middle_m;
+    switch_crh6f_if_middle_wagon_front_or_back;
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_crh6f_if_middle_wagon_tp_short, (position_in_consist / 3) + 1 - (num_vehs_in_consist / 12)) {//8节时，后面的参数为2，此时4,6节有动力
+    1: switch_crh6f_middle_p;
+    4: switch_crh6f_middle_p_r;
+    switch_crh6f_middle_m;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh6f_length_class, num_vehs_in_consist / 3) {
+    2..12:   switch_crh6f_if_middle_wagon_tp_short;
+    switch_crh6f_middle_wagon_long;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6f_if_wagon_end, position_in_consist_from_end == 1) {
+    1: switch_crh6f_cab;
+    switch_crh6f_length_class;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh6f_wagon_graphics, (position_in_consist_from_end % 3) == 1) {
+    1: switch_crh6f_if_wagon_end;
+    empty_sprites;
+}
+
+/* switch (FEAT_TRAINS, SELF, switch_crh6f_short_graphics, (position_in_consist_from_end == position_in_consist) || (position_in_consist_from_end == position_in_consist + 3)) {
     1: switch_crh6f_middle_p;
     switch_crh6f_middle_m;
 }
@@ -147,7 +218,7 @@ switch (FEAT_TRAINS, SELF, switch_crh6f_cab_graphics, position_in_articulated_ve
 switch (FEAT_TRAINS, SELF, switch_crh6f_wagon_graphics, position_in_consist_from_end) {
     0..2: switch_crh6f_cab_graphics;
     switch_crh6f_middle_graphics;
-}
+} */
 
 switch (FEAT_TRAINS, SELF, switch_crh6f_middle_capacity, position_in_articulated_veh % 3) {
     1: return 281;
@@ -159,10 +230,10 @@ switch (FEAT_TRAINS, SELF, switch_crh6f_wagon_capacity, position_in_consist_from
     switch_crh6f_middle_capacity;
 }
 
-switch (FEAT_TRAINS, SELF, switch_crh6f_wagon_cost, vehicle_is_potentially_powered) {
+/* switch (FEAT_TRAINS, SELF, switch_crh6f_wagon_cost, vehicle_is_potentially_powered) {
     1: return 66;
     return 25;
-}
+} */
 
 switch (FEAT_TRAINS, SELF, switch_crh6f_wagon_running, vehicle_is_potentially_powered) {
     1: return 52;
@@ -229,7 +300,7 @@ item (FEAT_TRAINS, crh6f) {
         // Menu
         additional_text:                string(STR_DESC_5, string(STR_CRH6F_CAN_ATTACH_WAGON), string(STR_CRH6F_NICKNAME), string(STR_CRH6F_LIVERY_AVAILABILITY), string(STR_RELDEC_VERY_LOW, 6), string(STR_CRH6F_CONSIST), string(STR_CRH6F_HEAD_SEAT));
         can_attach_wagon:               onlyze;
-        start_stop:                     mu4car;
+        start_stop:                     mu4to24car;
         cargo_subtype_text:             switch_crh6f_cargo_subtype;
 
         // Graphics
@@ -249,7 +320,7 @@ item (FEAT_TRAINS, crh6f) {
         running_cost_factor:            50 * runningcostfactor() + 20;
         purchase_running_cost_factor:   220;
         purchase_cargo_capacity:        216/3;
-        name:                            switch_crh6f_name;
+        name:                           switch_crh6f_name;
 
     }
 
@@ -265,7 +336,7 @@ item (FEAT_TRAINS, crh6f) {
         cargo_age_period:               128 << param_cargo_decay;
         bitmask_vehicle_info:           switch_crh_wagon_bitmask;
         articulated_part:               switch_crh_wagon_articulated_part;
-        cost_factor:                    switch_crh6f_wagon_cost;
+/*         cost_factor:                    switch_crh6f_wagon_cost; */
         running_cost_factor:            switch_crh6f_wagon_running() * runningcostfactor() + accostfactor();
     }
 }

@@ -1,0 +1,96 @@
+// Begin NY1
+switch (FEAT_TRAINS, SELF, switch_dfh1_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_DFH1_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+// Graphics
+
+spriteset (spriteset_ny1_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "dfh1/ny1")
+}
+
+spriteset (spriteset_ny1_standard, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "dfh1/ny1")
+}
+spriteset (spriteset_ny1_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed_9 ("diesel", "dfh1/ny1")
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_ny1_articulated_part, extra_callback_info1) {
+    1..2: return ny1;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ny1_direction, (position_in_consist != 1) && (position_in_consist_from_end == 1) || ((position_in_vehid_chain % 6) == 4)) {
+    0: spriteset_ny1_standard;
+    spriteset_ny1_reversed;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ny1_graphics, position_in_articulated_veh % 3) {
+    1: switch_ny1_direction;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, ny1) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_NY1);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        variant_group:					ny1;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1959,10,01);
+        model_life:                     30;
+        retire_early:                   20;
+        vehicle_life:                   25;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          140 km/h;
+        power:                          1810 hp;
+        weight:                         84 ton;
+        tractive_effort_coefficient:    0.336;
+        cost_factor:                    72;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            53;
+        reliability_decay:              8;
+        bitmask_vehicle_info:           0;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_NY1), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_VERY_HIGH, 32));
+        can_attach_wagon:               locowagon;
+        // Graphics
+        default:                        switch_ny1_graphics;
+        purchase:                       spriteset_ny1_purchase;
+        articulated_part:               switch_ny1_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_5_2;
+        cargo_capacity:                 0;
+        cost_factor:                    72;
+        running_cost_factor:            53 * runningcostfactor();
+        purchase_running_cost_factor:   212;
+        purchase_cargo_capacity:        0;
+        name:                           switch_dfh1_name;
+    }
+}
+
+// End NY1

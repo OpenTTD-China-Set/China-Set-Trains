@@ -31,6 +31,7 @@ item (FEAT_TRAINS, jf1) {
         // Don't Change - It is crucial
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         climates_available:             ALL_CLIMATES;
+        variant_group:					mikai;
 
         // Don't Change - Unless it is not a steam locomotive
         engine_class:                   ENGINE_CLASS_STEAM;
@@ -83,6 +84,7 @@ item (FEAT_TRAINS, jf1) {
         running_cost_factor:            45 * runningcostfactor();
         purchase_running_cost_factor:   180;
         purchase_cargo_capacity:        0;
+        name:                           switch_jf1_name;
     }
 }
 

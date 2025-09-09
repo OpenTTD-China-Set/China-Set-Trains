@@ -88,6 +88,11 @@ switch (FEAT_TRAINS, SELF, switch_beihai_wagon_capacity, position_in_consist_fro
     switch_beihai_middle_capacity;
 }
 
+switch (FEAT_TRAINS, SELF, switch_beihai_wagon_power, position_in_consist_from_end) {
+    0..2: return 987;
+    return 0;
+}
+
 switch (FEAT_TRAINS, SELF, switch_beihai_wagon_traction, vehicle_is_potentially_powered) {
     1: return int(0.094*255);
     return 0;
@@ -130,7 +135,7 @@ item (FEAT_TRAINS, beihai) {
 
         // Stats
         speed:                          140 km/h;
-        power:                          2944 kW;
+        power:                          736 kW;
         weight:                         126 ton;
         tractive_effort_coefficient:    0.094;
         cost_factor:                    37;
@@ -165,6 +170,7 @@ item (FEAT_TRAINS, beihai) {
         cargo_capacity:                 switch_beihai_wagon_capacity;
         length:                         switch_length_2_8_2;
         tractive_effort_coefficient:    switch_beihai_wagon_traction;
+        power:                          switch_beihai_wagon_power;
         weight:                         switch_beihai_wagon_weight;
         can_attach_wagon:               muhead;
         cargo_age_period:               (185) << param_cargo_decay;
@@ -179,6 +185,7 @@ item (FEAT_TRAINS, beihai) {
         cargo_capacity:                 switch_beihai_wagon_capacity;
         length:                         switch_length_2_8_2;
         tractive_effort_coefficient:    switch_beihai_wagon_traction;
+        power:                          switch_beihai_wagon_power;
         weight:                         switch_beihai_wagon_weight;
         can_attach_wagon:               muhead;
         cargo_age_period:               (185) << param_cargo_decay;

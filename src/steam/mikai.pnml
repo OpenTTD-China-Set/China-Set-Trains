@@ -1,0 +1,94 @@
+// Begin MIKAI
+
+switch (FEAT_TRAINS, SELF, switch_jf1_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_JF1_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+// Graphics
+
+spriteset (spriteset_mikai_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase_xl ("steam/extralength", "mikai")
+}
+
+spriteset (spriteset_mikai_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("steam", "mikai-front")
+}
+
+spriteset (spriteset_mikai_tender, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("steam", "mikai-tender")
+}
+
+switch (FEAT_TRAINS, SELF, switch_mikai_articulated_part, extra_callback_info1) {
+    1..2: return mikai;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_mikai_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_mikai_front;
+    2: spriteset_mikai_tender;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, mikai) {
+    property {
+        // Don't Change - It is crucial
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        climates_available:             ALL_CLIMATES;
+
+        // Don't Change - Unless it is not a steam locomotive
+        engine_class:                   ENGINE_CLASS_STEAM;
+        running_cost_base:              RUNNING_COST_STEAM;
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        // This is for freight locos
+        ai_special_flag:                AI_FLAG_CARGO;
+
+        // Don't Change - It is useless
+        cargo_capacity:                 1;
+        cost_factor:                    1;
+        running_cost_factor:            1;
+
+        // Change them accordingly
+        name:                           string(STR_NAME_MIKAI);
+        introduction_date:              date(1918,01,01);
+        model_life:                     60;
+        retire_early:                   40;
+        vehicle_life:                   30;
+        track_type:                     SABN;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+        speed:                          80 km/h;
+        power:                          1545 hpM;
+        weight:                         185.11 ton;
+        tractive_effort_coefficient:    0.1375;
+        reliability_decay:              18;
+        bitmask_vehicle_info:           0;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_SMR_VEHICLE), /* string(STR_DESC_MIKAI), */ string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_HIGH, 18));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_mikai_graphics;
+        purchase:                       spriteset_mikai_purchase;
+        articulated_part:               switch_mikai_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_6_5;
+        cargo_capacity:                 0;
+        cost_factor:                    72;
+        running_cost_factor:            46 * runningcostfactor();
+        purchase_running_cost_factor:   184;
+        purchase_cargo_capacity:        0;
+        name:                           switch_jf1_name;
+    }
+}
+
+// End MIKAI

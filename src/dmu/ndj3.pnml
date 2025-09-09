@@ -39,12 +39,29 @@ switch (FEAT_TRAINS, SELF, switch_ndj3_start_stop, !hasbit(bitmask_consist_info,
     return CB_RESULT_NO_TEXT;
 }
 
-switch (FEAT_TRAINS, SELF, switch_ndj3_graphics_front, position_in_consist) {
+/* switch (FEAT_TRAINS, SELF, switch_ndj3_graphics_front, position_in_consist) {
     1: spriteset_ndj3_front;
     empty_sprites;
 }
 
 switch (FEAT_TRAINS, SELF, switch_ndj3_graphics, position_in_consist_from_end) {
+    1: spriteset_ndj3_back;
+    switch_ndj3_graphics_front;
+}
+ */
+
+switch (FEAT_TRAINS, SELF, switch_ndj3_graphics_position_error_control, position_in_consist_from_end % 3) {
+    0: empty_sprites;
+    2: empty_sprites;
+    spriteset_erroremu;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ndj3_graphics_front, position_in_consist) {
+    1: spriteset_ndj3_front;
+    switch_ndj3_graphics_position_error_control;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ndj3_graphics, (position_in_consist_from_end == 1) && (position_in_consist != 1)) {
     1: spriteset_ndj3_back;
     switch_ndj3_graphics_front;
 }

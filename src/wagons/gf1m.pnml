@@ -1,0 +1,122 @@
+//Begin GF1M
+switch (FEAT_TRAINS, SELF, switch_gf1m_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_TANKER);
+    return CB_RESULT_NO_TEXT;
+}
+
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_gf1m_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons", "gf1m")
+}
+
+// Vehicle
+spriteset (spriteset_gf1m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "gf1m")
+}
+spriteset (spriteset_gf1m_white_weathered, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "gf1m-white-weathered")
+}
+spriteset (spriteset_gf1m_black, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons", "gf1m-black")
+}
+
+random_switch (FEAT_TRAINS, SELF, random_gf1m_colour) {
+    2: spriteset_gf1m;
+    1: spriteset_gf1m_white_weathered;
+    1: spriteset_gf1m_black;
+}
+switch (FEAT_TRAINS, SELF, switch_gf1m_cargo_subtype, cargo_subtype) {
+    0: return string(STR_RANDOM_COLOR);
+    1: return string(STR_FACTORY);
+    2: return string(STR_WHITE);
+    3: return string(STR_BLACK);
+    return CB_RESULT_NO_TEXT;
+}
+switch (FEAT_TRAINS, SELF, switch_gf1m_graphics_subtype, cargo_subtype) {
+    0: random_gf1m_colour;
+    1: spriteset_gf1m;
+    2: spriteset_gf1m_white_weathered;
+    3: spriteset_gf1m_black;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_gf1m_articulated_part, extra_callback_info1) {
+    1..2: return gf1m;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_gf1m_graphics, position_in_articulated_veh % 3) {
+    1: switch_gf1m_graphics_subtype;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_gf1m_capacity, position_in_articulated_veh % 3) {
+    1: return 52;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, gf1m) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_GF1M);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					3088;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1998,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_POWDERIZED);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [CMNT, ALO_, CBLK];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             DEFAULT_CARGO_FIRST_REFITTABLE;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 52;
+        loading_speed:                  4 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          100 km/h;
+        power:                          0 hp;
+        weight:                         23.2 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_2, string(STR_FULL_NAME_GF1M), string(STR_FRESHNESS_MEDIUM, 185));
+        can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_gf1m_cargo_subtype;
+
+        // Graphics
+        default:                        switch_gf1m_graphics;
+        purchase:                       spriteset_gf1m_purchase;
+        articulated_part:               switch_gf1m_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_2_2;
+        cargo_capacity:                 switch_gf1m_capacity;
+        cargo_age_period:               185 << (param_cargo_decay + param_wagoncargodecay);
+        cost_factor:                    5;
+        running_cost_factor:            4 * runningcostfactor();
+        purchase_running_cost_factor:   16;
+        purchase_cargo_capacity:        52/3;
+        name:                           switch_gf1m_name;
+
+    }
+}
+
+// End GF1M
+

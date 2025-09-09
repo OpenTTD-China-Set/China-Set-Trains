@@ -29,7 +29,7 @@ switch (FEAT_TRAINS, SELF, switch_nj2_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_nj2_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGINAL);
-    1: return string(STR_QINGZANG);
+    1: return string(STR_QINGZANG_LOCO);
     return CB_RESULT_NO_TEXT;
 }
 

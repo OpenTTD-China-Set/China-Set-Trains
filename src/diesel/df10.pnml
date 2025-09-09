@@ -1,0 +1,137 @@
+// Begin DF10
+switch (FEAT_TRAINS, SELF, switch_df10_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_DF10_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_df10_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "df10")
+}
+
+// Vehicle
+spriteset (spriteset_df10_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df10")
+}
+spriteset (spriteset_df10_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df10-reverse")
+}
+spriteset (spriteset_df10_blue_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df10-darkblue")
+}
+spriteset (spriteset_df10_blue_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df10-reverse-darkblue")
+}
+spriteset (spriteset_df10_ukraine_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df10-ukraine")
+}
+spriteset (spriteset_df10_ukraine_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "df10-reverse-ukraine")
+}
+
+switch (FEAT_TRAINS, SELF, switch_df10_articulated_part, extra_callback_info1) {
+    1..5: return df10;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df10_cargo_subtype, cargo_subtype) {
+    0: return string(STR_FACTORY);
+    1: return string(STR_BLUE);
+    2: return string(STR_UKRAINE);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df10_factory_livery_graphics, position_in_articulated_veh % 6) {
+    1: spriteset_df10_front;
+    4: spriteset_df10_back;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df10_blue_livery_graphics, position_in_articulated_veh % 6) {
+    1: spriteset_df10_blue_front;
+    4: spriteset_df10_blue_back;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df10_ukraine_livery_graphics, position_in_articulated_veh % 6) {
+    1: spriteset_df10_ukraine_front;
+    4: spriteset_df10_ukraine_back;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df10_graphics_subtype, cargo_subtype) {
+    0: switch_df10_factory_livery_graphics;
+    1: switch_df10_blue_livery_graphics;
+    2: switch_df10_ukraine_livery_graphics;
+}
+
+switch (FEAT_TRAINS, SELF, switch_df10_graphics, position_in_articulated_veh % 3) {
+    1: switch_df10_graphics_subtype;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, df10) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_DF10);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1990,06,01);
+        model_life:                     60;
+        retire_early:                   30;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          100 km/h;
+        power:                          3900 kW;
+        weight:                         184 ton;
+        tractive_effort_coefficient:    0.322;
+        cost_factor:                    53;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            50;
+        reliability_decay:              24;
+        bitmask_vehicle_info:           0;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_DF10), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_HIGH, 24));
+        cargo_subtype_text:             switch_df10_cargo_subtype;
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_df10_graphics;
+        purchase:                       spriteset_df10_purchase_original;
+        articulated_part:               switch_df10_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_3_2;
+        cargo_capacity:                 0;
+        cost_factor:                    88;
+        running_cost_factor:            73 * runningcostfactor();
+        purchase_running_cost_factor:   292;
+        purchase_cargo_capacity:        0;
+        name:                           switch_df10_name;
+    }
+}
+
+// End DF10
+

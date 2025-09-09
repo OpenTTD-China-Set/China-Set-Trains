@@ -1,0 +1,90 @@
+//Begin RW21
+
+// Graphics
+
+// // Purchase Menu
+/*  spriteset (spriteset_rw21_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+     template_purchase ("coaches", "21/rw21")
+ }
+
+ // Vehicle
+ spriteset (spriteset_rw21_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+     template_standard ("coaches", "21/rw21")
+ } */
+
+switch (FEAT_TRAINS, SELF, switch_rw21_articulated_part, extra_callback_info1) {
+    1..2: return rw21;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+/* switch (FEAT_TRAINS, SELF, switch_rw21_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_rw21_original;
+    empty_sprites;
+} */
+
+switch (FEAT_TRAINS, SELF, switch_rw21_capacity, position_in_articulated_veh % 3) {
+    1: return 28;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, rw21) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_RW21);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					yz21early;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1959,01,01);
+        model_life:                     20;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 28;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               384 << param_cargo_decay;
+
+        // Stats
+        speed:                          100 km/h;
+        power:                          0 hp;
+        weight:                         40 ton;
+        cost_factor:                    13;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            11;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_RW21), string(STR_COMFORT_HIGH, 384), string(STR_NO_AIR_CONDITIONER));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_yw21_graphics;
+        purchase:                       spriteset_yw21_purchase_original;
+        articulated_part:               switch_rw21_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_6_2;
+        cargo_capacity:                 switch_rw21_capacity;
+        cargo_age_period:               (24 * 4 * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    12;
+        running_cost_factor:            10 * runningcostfactor() * cafecostfactor() ;
+        purchase_running_cost_factor:   40;
+        purchase_cargo_capacity:        28/3;
+        name:                           switch_21_name;
+
+    }
+}
+
+// End RW21

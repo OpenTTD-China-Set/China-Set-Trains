@@ -155,6 +155,19 @@ item (FEAT_TRAINS, rw25sm, 2151) {}
 item (FEAT_TRAINS, ca25sm, 2152) {}
 item (FEAT_TRAINS, kd25sm, 2153) {}
 item (FEAT_TRAINS, sca25bhd, 2154) {}
+item (FEAT_TRAINS, yw18gen4, 2155) {}
+item (FEAT_TRAINS, rw18gen4, 2156) {}
+item (FEAT_TRAINS, rw19gen4, 2157) {}
+item (FEAT_TRAINS, ca18gen4, 2158) {}
+item (FEAT_TRAINS, xl18gen4, 2159) {}
+item (FEAT_TRAINS, rw19t_tanggula, 2160) {}
+item (FEAT_TRAINS, yz21, 2161) {}
+item (FEAT_TRAINS, yw21, 2162) {}
+item (FEAT_TRAINS, rw21, 2163) {}
+item (FEAT_TRAINS, ca21, 2164) {}
+item (FEAT_TRAINS, xl21, 2165) {}
+item (FEAT_TRAINS, yz21early, 2166) {}
+item (FEAT_TRAINS, ha1, 2167) {}
 
 item (FEAT_TRAINS, luggageroom_s25, 3070) {}
 item (FEAT_TRAINS, luggageroom_25, 3071) {}
@@ -211,12 +224,28 @@ item (FEAT_TRAINS, g70, 3114) {}
 item (FEAT_TRAINS, p1, 3115) {}
 item (FEAT_TRAINS, gh70b, 3116) {}
 item (FEAT_TRAINS, g70a, 3117) {}
+item (FEAT_TRAINS, g11, 3118) {}
+item (FEAT_TRAINS, g70b, 3119) {}
+item (FEAT_TRAINS, gf1m, 3120) {}
+item (FEAT_TRAINS, gf70, 3121) {}
+item (FEAT_TRAINS, gh40lk, 3122) {}
+item (FEAT_TRAINS, gh65k, 3123) {}
+item (FEAT_TRAINS, gha70, 3124) {}
+item (FEAT_TRAINS, gha70a, 3125) {}
+item (FEAT_TRAINS, gs, 3126) {}
+item (FEAT_TRAINS, gq80, 3127) {}
+item (FEAT_TRAINS, gn60, 3128) {}
+item (FEAT_TRAINS, bgw70, 3129) {}
+item (FEAT_TRAINS, yai, 3130) {}
 
 //Steam, available ID range: 4096-5119 (hex 0x1000..0x13FF)
 #define id_range_steam 0x1000..0x13FF
 item (FEAT_TRAINS, sy, 4096) {}
 item (FEAT_TRAINS, jf1, 4097) {}
 item (FEAT_TRAINS, sl6, 4098) {}
+item (FEAT_TRAINS, qj, 4099) {}
+item (FEAT_TRAINS, mikai, 4100) {}
+item (FEAT_TRAINS, kd7, 4101) {}
 
 //Diesel, available ID range: 5120-6143 (hex 0x1400..0x17FF)
 #define id_range_diesel 0x1400..0x17FF
@@ -266,6 +295,20 @@ item (FEAT_TRAINS, df11plateau, 5157) {}
 item (FEAT_TRAINS, df7d, 5158) {}
 item (FEAT_TRAINS, df7d3000, 5159) {}
 item (FEAT_TRAINS, df9, 5160) {}
+item (FEAT_TRAINS, ny1, 5161) {}
+item (FEAT_TRAINS, dfh1_early, 5162) {}
+item (FEAT_TRAINS, dfh1_late, 5163) {}
+item (FEAT_TRAINS, fxn3c, 5164) {}
+item (FEAT_TRAINS, fxn5c, 5165) {}
+item (FEAT_TRAINS, nd4, 5166) {}
+item (FEAT_TRAINS, ny5_freight, 5167) {}
+item (FEAT_TRAINS, ny5_passenger, 5168) {}
+item (FEAT_TRAINS, ny6, 5169) {}
+item (FEAT_TRAINS, ny7, 5170) {}
+item (FEAT_TRAINS, gc220, 5171) {}
+item (FEAT_TRAINS, df10, 5172) {}
+item (FEAT_TRAINS, gc160, 5173) {}
+item (FEAT_TRAINS, jy600, 5174) {}
 
 //25kV AC Electric, available ID range: 6144-7167 (hex 0x1800..0x1BFF)
 #define id_range_25_electric 0x1800..0x1BFF
@@ -305,6 +348,11 @@ item (FEAT_TRAINS, hxd3, 6172) {}
 item (FEAT_TRAINS, hxd2b, 6173) {}
 item (FEAT_TRAINS, fxd2b, 6174) {}
 item (FEAT_TRAINS, fxd2b1000, 6175) {}
+item (FEAT_TRAINS, _8k, 6176) {}
+item (FEAT_TRAINS, hxd1c, 6177) {}
+item (FEAT_TRAINS, hxd2d, 6178) {}
+item (FEAT_TRAINS, dj1, 6179) {}
+item (FEAT_TRAINS, _6k, 6180) {}
 
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
 #define id_range_multi_loco 0x1C00..0x1FFF
@@ -381,6 +429,7 @@ item (FEAT_TRAINS, djf2, 9272) {}
 item (FEAT_TRAINS, beihai, 9273) {}
 item (FEAT_TRAINS, crh6fa, 9274) {}
 item (FEAT_TRAINS, crh6aacinova, 9275) {}
+item (FEAT_TRAINS, crh6a_comfort, 9276) {}
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
 #define id_range_1500_emu 0x2800..0x2BFF

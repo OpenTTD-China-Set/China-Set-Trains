@@ -1,0 +1,114 @@
+//Begin G70B
+switch (FEAT_TRAINS, SELF, switch_g70b_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_TANKER);
+    return CB_RESULT_NO_TEXT;
+}
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_g70b_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons/g70", "g70b")
+}
+
+// Vehicle
+spriteset (spriteset_g70b, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/g70", "g70b")
+}
+spriteset (spriteset_g70b_weathered, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/g70", "g70b-weathered")
+}
+
+random_switch (FEAT_TRAINS, SELF, random_g70b_colour) {
+    1: spriteset_g70b;
+    1: spriteset_g70b_weathered;
+}
+
+switch (FEAT_TRAINS, SELF, switch_g70b_cargo_subtype, cargo_subtype) {
+    0: return string(STR_RANDOM_COLOR);
+    1: return string(STR_FACTORY);
+    2: return string(STR_DETERIORATE);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_g70b_graphics_subtype, cargo_subtype) {
+    0: random_g70b_colour;
+    1: spriteset_g70b;
+    2: spriteset_g70b_weathered;
+}
+
+switch (FEAT_TRAINS, SELF, switch_g70b_articulated_part, extra_callback_info1) {
+    1..2: return g70b;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_g70b_graphics, position_in_articulated_veh % 3) {
+    1: switch_g70b_graphics_subtype;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_g70b_capacity, position_in_articulated_veh % 3) {
+    1: return 63;
+    return 0;
+}
+
+item (FEAT_TRAINS, g70b) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_G70B);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					3088;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1998,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_LIQUID, CC_HAZARDOUS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             DEFAULT_CARGO_FIRST_REFITTABLE;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 63;
+        loading_speed:                  4 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          100 km/h;
+        power:                          0 hp;
+        weight:                         20.3 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_2, string(STR_FULL_NAME_G70B), string(STR_FRESHNESS_MEDIUM, 185));
+        can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_g70b_cargo_subtype;
+
+        // Graphics
+        default:                        switch_g70b_graphics;
+        purchase:                       spriteset_g70b_purchase;
+        articulated_part:               switch_g70b_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_2_2;
+        cargo_capacity:                 switch_g70b_capacity;
+        cargo_age_period:               185 << (param_cargo_decay + param_wagoncargodecay);
+        cost_factor:                    5;
+        running_cost_factor:            4 * runningcostfactor();
+        purchase_running_cost_factor:   16;
+        purchase_cargo_capacity:        21;
+        name:                           switch_g70_name;
+
+    }
+}
+
+//End G70B

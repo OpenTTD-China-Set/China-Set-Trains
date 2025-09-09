@@ -23,23 +23,23 @@ switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_articulated_part, extra_callb
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch (FEAT_TRAINS, SELF, nzj1_xinshuguang_wagon_right_consist, vehicle_type_id) {
+switch (FEAT_TRAINS, SELF, nzj1_xinshuguang_wagon, vehicle_type_id) {
     1024..1025: onlyallowcst;
     8195: onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
-switch (FEAT_TRAINS, SELF, nzj1_xinshuguang_wagon, hasbit(bitmask_consist_info, 0)) {
+/* switch (FEAT_TRAINS, SELF, nzj1_xinshuguang_wagon, hasbit(bitmask_consist_info, 0)) {
     1: return CB_RESULT_ATTACH_DISALLOW;
     nzj1_xinshuguang_wagon_right_consist;
-}
+} */
 
 switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_start_stop, !hasbit(bitmask_consist_info, 0) && (num_vehs_in_consist >= 12) && (count_veh_id(8195) == 6) && ((position_in_consist < 3) || (position_in_consist_from_end < 3))) {
     0: return string(STR_NZJ1_XINSHUGUANG_CONSIST);
     return CB_RESULT_NO_TEXT;
 }
 
-switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_graphics_front, position_in_consist) {
+/* switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_graphics_front, position_in_consist) {
     1: spriteset_nzj1_xinshuguang_front;
     empty_sprites;
 }
@@ -47,7 +47,24 @@ switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_graphics_front, position_in_c
 switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_graphics, position_in_consist_from_end) {
     1: spriteset_nzj1_xinshuguang_back;
     switch_nzj1_xinshuguang_graphics_front;
+} */
+
+switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_graphics_position_error_control, position_in_consist_from_end % 3) {
+    0: empty_sprites;
+    2: empty_sprites;
+    spriteset_erroremu;
 }
+
+switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_graphics_front, position_in_consist) {
+    1: spriteset_nzj1_xinshuguang_front;
+    switch_nzj1_xinshuguang_graphics_position_error_control;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_graphics, (position_in_consist_from_end == 1) && (position_in_consist != 1)) {
+    1: spriteset_nzj1_xinshuguang_back;
+    switch_nzj1_xinshuguang_graphics_front;
+}
+
 
 switch (FEAT_TRAINS, SELF, switch_nzj1_xinshuguang_wagon_graphics, position_in_articulated_veh % 3) {
     1: spriteset_nzj1_xinshuguang_middle;

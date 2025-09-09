@@ -1,0 +1,88 @@
+// Begin DJ1
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_dj1_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("25-electric", "dj1-front")
+}
+
+// Vehicle
+spriteset (spriteset_dj1_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "dj1-front")
+}
+spriteset (spriteset_dj1_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "dj1-back")
+}
+
+switch (FEAT_TRAINS, SELF, switch_dj1_articulated_part, extra_callback_info1) {
+    1..5: return dj1;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_dj1_graphics, position_in_articulated_veh % 6) {
+    1: spriteset_dj1_front;
+    4: spriteset_dj1_back;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, dj1) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_DJ1);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2001,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          6400 kW;
+        weight:                         184 ton;
+        tractive_effort_coefficient:    0.388;
+        cost_factor:                    53;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            50;
+        reliability_decay:              10;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_FR_IMPORT), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_DJ1_NICKNAME), string(STR_RELDEC_LOW, 10));
+        can_attach_wagon:               locowagon;
+        // Graphics
+        default:                        switch_dj1_graphics;
+        purchase:                       spriteset_dj1_purchase_original;
+        articulated_part:               switch_dj1_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_4_2;
+        cargo_capacity:                 0;
+        cost_factor:                    123;
+        running_cost_factor:            96 * runningcostfactor();
+        purchase_running_cost_factor:   384;
+        purchase_cargo_capacity:        0;
+        bitmask_vehicle_info:           0;
+    }
+}
+
+// End DJ1
+

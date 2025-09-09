@@ -1,0 +1,89 @@
+// Begin KD7
+
+// Graphics
+
+spriteset (spriteset_kd7_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase_xl ("steam/extralength", "kd7")
+}
+
+spriteset (spriteset_kd7_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("steam", "kd7-front")
+}
+
+spriteset (spriteset_kd7_tender, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("steam", "kd7-tender")
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd7_articulated_part, extra_callback_info1) {
+    1..2: return kd7;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_kd7_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_kd7_front;
+    2: spriteset_kd7_tender;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, kd7) {
+    property {
+        // Don't Change - It is crucial
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        climates_available:             ALL_CLIMATES;
+
+        // Don't Change - Unless it is not a steam locomotive
+        engine_class:                   ENGINE_CLASS_STEAM;
+        running_cost_base:              RUNNING_COST_STEAM;
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        // This is for freight locos
+        ai_special_flag:                AI_FLAG_CARGO;
+
+        // Don't Change - It is useless
+        cargo_capacity:                 1;
+        cost_factor:                    1;
+        running_cost_factor:            1;
+
+        // Change them accordingly
+        name:                           string(STR_NAME_KD7);
+        introduction_date:              date(1946,01,01);
+        model_life:                     60;
+        retire_early:                   50;
+        vehicle_life:                   40;
+        track_type:                     SABN;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+        speed:                          90 km/h;
+        power:                          1203 hpM;
+        weight:                         149 ton;
+        tractive_effort_coefficient:    0.132;
+        reliability_decay:              16;
+        bitmask_vehicle_info:           0;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_UNRRA_DONATE), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_MEDIUM, 16));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_kd7_graphics;
+        purchase:                       spriteset_kd7_purchase;
+        articulated_part:               switch_kd7_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_6_4;
+        cargo_capacity:                 0;
+        cost_factor:                    50;
+        running_cost_factor:            35 * runningcostfactor();
+        purchase_running_cost_factor:   140;
+        purchase_cargo_capacity:        0;
+    }
+}
+
+// End KD7

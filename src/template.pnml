@@ -107,6 +107,17 @@ template template_reversed_9 (a, b) {
     [372,   0, 120, 116, -65, -84, "gfx/"+a+"/"+b+"_32bpp.png"]
 }
 
+template template_reversed_8 (a, b) {
+    [500,   0,  36, 166, -14, -112, "gfx/"+a+"/"+b+"_32bpp.png"]
+    [544,   0, 120, 116, -43, -88, "gfx/"+a+"/"+b+"_32bpp.png"]
+    [672,   0, 192,  80, -32, -62, "gfx/"+a+"/"+b+"_32bpp.png"]
+    [872,   0, 120, 116, -9, -56, "gfx/"+a+"/"+b+"_32bpp.png"]
+    [  0,   0,  36, 166, -14, -48, "gfx/"+a+"/"+b+"_32bpp.png"]
+    [ 44,   0, 120, 116, -107, -56, "gfx/"+a+"/"+b+"_32bpp.png"]
+    [172,   0, 192,  80, -160, -62, "gfx/"+a+"/"+b+"_32bpp.png"]
+    [372,   0, 120, 116, -73, -88, "gfx/"+a+"/"+b+"_32bpp.png"]
+}
+
 // Below shamelessly stolen from JP+ Shinkansen
 spriteset (spriteset_too_many_12, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP, "gfx/misc/less12_32bpp.png") {
     [  0,   0,  36, 166, -14, -80]

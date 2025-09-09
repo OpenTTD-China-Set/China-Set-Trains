@@ -1,0 +1,104 @@
+// Begin NY5
+
+// Graphics
+
+// Purchase Menu
+/* spriteset (spriteset_ny5_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "ny5-green")
+}
+
+// Vehicle
+spriteset (spriteset_ny5_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "ny5-green")
+}
+spriteset (spriteset_ny5_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "ny5-blue")
+}
+ */
+
+switch (FEAT_TRAINS, SELF, switch_ny5_passenger_articulated_part, extra_callback_info1) {
+    1..2: return ny5_passenger;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+/* switch (FEAT_TRAINS, SELF, switch_ny5_cargo_subtype, cargo_subtype) {
+    0: return string(STR_GREEN);
+    1: return string(STR_ORIGINAL);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ny5_graphics_subtype, cargo_subtype) {
+    0: spriteset_ny5_green;
+    1: spriteset_ny5_original;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ny5_graphics, position_in_articulated_veh % 3) {
+    1: switch_ny5_graphics_subtype;
+    empty_sprites;
+} */
+
+
+item (FEAT_TRAINS, ny5_passenger) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_NY5_PASSENGER);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        variant_group:					ny5_freight;
+
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1967,03,01);
+        model_life:                     60;
+        retire_early:                   40;
+        vehicle_life:                   20;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          160 km/h;
+        power:                          2700 hp;
+        weight:                         130 ton;
+        tractive_effort_coefficient:    0.314;
+        cost_factor:                    10;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            10;
+        reliability_decay:              16;
+        bitmask_vehicle_info:           0;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_NY5), string(STR_NY5_NICKNAME), string(STR_DBR_IMPORT), string(STR_RELDEC_MEDIUM, 16));
+        cargo_subtype_text:             switch_ny5_cargo_subtype;
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_ny5_graphics;
+        purchase:                       spriteset_ny5_purchase;
+        articulated_part:               switch_ny5_passenger_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_7_2;
+        cargo_capacity:                 0;
+        cost_factor:                    55;
+        running_cost_factor:            48 * runningcostfactor();
+        purchase_running_cost_factor:   192;
+        purchase_cargo_capacity:        0;
+        name:                           switch_ny5_name;
+    }
+}
+
+// End NY5
