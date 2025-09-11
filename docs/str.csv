@@ -949,6 +949,10 @@ STR_GYR,{BLACK} - Guangxi Yanhai Raiway,{BLACK} - 广西沿海铁路涂装
 STR_GMSR,{BLACK} - Guangzhou-Meizhou-Shantou Railway Livery,{BLACK} - 广梅汕铁路涂装
 STR_GMSR_EARLY,{BLACK} - Guangzhou-Meizhou-Shantou Railway Early Livery,{BLACK} - 广梅汕铁路早期涂装
 STR_GUANGSHEN,{BLACK} - Guangzhou-Shenzhen Railway Livery,{BLACK} - 广深铁路涂装
+STR_DHZN,{BLACK} - Dahezhinan Tourist Train ,{BLACK} - 大河之南旅游列车
+STR_DHZN1,{BLACK} - Dahezhinan Tourist Train (3 person),{BLACK} - 大河之南旅游列车（三人间）
+STR_DHZN2,{BLACK} - Dahezhinan Tourist Train (2 person),{BLACK} - 大河之南旅游列车（双人间）
+STR_DHZN3,{BLACK} - Dahezhinan Tourist Train (4 person),{BLACK} - 大河之南旅游列车（四人间）
 STR_GUANGSHEN_CHANGKE_1,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 1st)",{BLACK} - 广深铁路（长春客车厂一批次）涂装
 STR_GUANGSHEN_CHANGKE_2,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, Production Batch 2nd)",{BLACK} - 广深铁路（长春客车厂二批次）涂装
 STR_GUANGSHEN_CHANGKE_SKIRTS,"{BLACK} - Guangzhou-Shenzhen Railway Livery (Changchun Railway Vehicle Works, With Skirts)",{BLACK} - 广深铁路（长春客车厂带裙板）涂装
