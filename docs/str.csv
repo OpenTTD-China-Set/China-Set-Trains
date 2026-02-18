@@ -213,7 +213,7 @@ STR_NAME_J5,J5 (Livestock Wagon),J5 (家畜运输车)
 STR_NAME_MIKAI,Mikai (Steam),ミカイ (蒸汽)
 STR_NAME_JF1,JF1 (Steam),JF1 (蒸汽)
 STR_NAME_SL6,SL6 (Steam),SL6 (蒸汽)
-STR_NAME_SL7,Pashina (Steam),パシナ/SL7（蒸汽）
+STR_NAME_SL7,Pashina/SL7 (Steam),パシナ/SL7（蒸汽）
 STR_NAME_KD7,KD7 (Steam),KD7 (蒸汽)
 STR_NAME_QJ,QJ (Steam),QJ (蒸汽)
 STR_NAME_SY,SY (Steam),SY (蒸汽)
@@ -517,7 +517,7 @@ STR_FULL_NAME_GN60,{BLACK}FULLNAME: GN60-type{GOLD} Heavy Oil {BLACK}Tank Wagon,
 STR_FULL_NAME_BGW70,{BLACK}FULLNAME: BGW70-type{GOLD} Edible Oil {BLACK}Tank Wagon,{BLACK}全称：BGW70型{GOLD}食用油{BLACK}罐车
 STR_FULL_NAME_JF1,{BLACK}FULLNAME: {GOLD}JieFang {BLACK}(Meaning: Liberate) {GOLD}1 Steam Locomotive,{BLACK}全称：{GOLD}解放1型蒸汽机车
 STR_FULL_NAME_SL6,{BLACK}FULLNAME: {GOLD}ShengLi {BLACK}(Meaning: Victory) {GOLD}6 Steam Locomotive,{BLACK}全称：{GOLD}胜利6型蒸汽机车
-STR_FULL_NAME_SL7,{BLACK}FULLNAME: {GOLD}Pashina Steam Locomotive,{BLACK}全称：{GOLD}パシナ型蒸汽机车
+STR_FULL_NAME_SL7,{BLACK}FULLNAME: {GOLD}Pashina Steam Locomotive,{BLACK}全称：{GOLD}パシナ型蒸汽机车，胜利7型蒸汽机车
 STR_FULL_NAME_QJ,{BLACK}FULLNAME: {GOLD}Qianjin {BLACK}(Meaning: Forward) {GOLD}Steam Locomotive,{BLACK}全称：{GOLD}前进型蒸汽机车
 STR_FULL_NAME_SY,{BLACK}FULLNAME: {GOLD}Shangyou {BLACK}(Meaning: Aiming High) {GOLD}Steam Locomotive,{BLACK}全称：{GOLD}上游型蒸汽机车
 STR_FULL_NAME_DF,{BLACK}FULLNAME: {GOLD}Dongfeng Diesel Locomotive,{BLACK}全称：{GOLD}东风型内燃机车
@@ -843,7 +843,7 @@ STR_CR300BF_NICKNAME,"{BLACK}Nickname: {LTBLUE}""Blue Antidote"" {GOLD}(Official
 # Alias Name,,
 STR_ALIASNAME_JF1,"{BLACK}Alias Name: {GOLD}Mikai, MK1",{BLACK}曾用名：{GOLD}ミカイ，ㄇㄎ1型
 STR_ALIASNAME_SL6,"{BLACK}Alias Name: {GOLD}Pashiku, PX6",{BLACK}曾用名：{GOLD}パシク，ㄆㄒ6型
-STR_ALIASNAME_SL7,"{BLACK}Alias Name: {GOLD}PX7, SL7",{BLACK}别名：{GOLD}帕西7型，胜利7型
+STR_ALIASNAME_SL7,"{BLACK}Alias Name: {GOLD}PX7",{BLACK}别名：{GOLD}帕西7型
 STR_ALIASNAME_KD7,"{BLACK}Alias Name: {GOLD}SL7",{BLACK}曾用名：{GOLD}ㄙㄌ7型
 STR_ALIASNAME_QJ,"{BLACK}Alias Name: {GOLD}Heping (HP), Fandi (FD)",{BLACK}曾用名：{GOLD}和平型（HP），反帝型（FD）
 STR_ALIASNAME_DF,"{BLACK}Alias Name: {GOLD}Great Loong, ND",{BLACK}曾用名：{GOLD}巨龙，ND
