@@ -1,0 +1,124 @@
+//Begin RW25T_JT
+switch (FEAT_TRAINS, SELF, switch_rw25t_jt_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_25T_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_rw25t_jt_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches","25t/rw25t-jt")
+}
+
+// Vehicle
+spriteset (spriteset_rw25t_jt_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/rw25t-jt")
+}
+spriteset (spriteset_rw25t_jt_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/rw25t-jt-green")
+}
+spriteset (spriteset_rw25t_jt_yili, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/rw25t-jt-yili")
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25t_jt_articulated_part, extra_callback_info1) {
+    1..2: return rw25t_jt;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25t_jt_cargo_subtype, cargo_subtype) {
+    0: string(STR_BUILD_YEAR);
+    1: string(STR_ORIGINAL);
+    2: string(STR_GAOZU_GREEN);
+    3: string(STR_YILI);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25t_jt_graphics_subtype_year_depend, build_year) {
+     0..2014: spriteset_rw25t_jt_original;
+    spriteset_rw25t_jt_green;
+}
+switch (FEAT_TRAINS, SELF, switch_rw25t_jt_graphics_subtype_0, param_gaozulv) {
+    1: switch_rw25t_jt_graphics_subtype_year_depend;
+    spriteset_rw25t_jt_original;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25t_jt_graphics_subtype, cargo_subtype) {
+    0: switch_rw25t_jt_graphics_subtype_0;
+    1: spriteset_rw25t_jt_original;
+    2: spriteset_rw25t_jt_green;
+    3: spriteset_rw25t_jt_yili;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25t_jt_graphics, position_in_articulated_veh % 3) {
+    1: switch_rw25t_jt_graphics_subtype;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25t_jt_capacity, position_in_articulated_veh % 3) {
+    1: return 16;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, rw25t_jt) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_RW25T_JT);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					2052;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2013,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 16;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               444 << param_cargo_decay;
+
+        // Stats
+        speed:                          160 km/h;
+        power:                          0 hp;
+        weight:                         52 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RW25T_JT), string(STR_RW25T_JT_LIVERY_AVAILABILITY), string(STR_COMFORT_VERY_HIGH, 384));
+        can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_rw25t_jt_cargo_subtype;
+
+        // Graphics
+        default:                        switch_rw25t_jt_graphics;
+        purchase:                       spriteset_rw25t_jt_purchase;
+        articulated_part:               switch_rw25t_jt_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_rw25t_jt_capacity;
+        cargo_age_period:               (24 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    13;
+        running_cost_factor:            14 * runningcostfactor() * cafecostfactor() + accostfactor();
+        purchase_running_cost_factor:   56;
+        purchase_cargo_capacity:        16/3;
+        name:                            switch_rw25t_jt_name;
+
+    }
+}
+
+// End RW25T_JT

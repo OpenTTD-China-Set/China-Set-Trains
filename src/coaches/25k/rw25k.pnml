@@ -37,6 +37,9 @@ spriteset (spriteset_rw25k_lakeblue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_rw25k_int_vn, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25k", "rw25k-int-vn")
 }
+spriteset (spriteset_rw25k_int_mg, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "rw25k-int-mg")
+}
 
 switch (FEAT_TRAINS, SELF, switch_rw25k_cargo_subtype, cargo_subtype) {
     0: return string(STR_BUILD_YEAR);
@@ -46,6 +49,7 @@ switch (FEAT_TRAINS, SELF, switch_rw25k_cargo_subtype, cargo_subtype) {
     4: return string(STR_GUANGSHEN);
     5: return string(STR_BJ_JN_T35);
     6: return string(STR_INTERNATIONAL_VN);
+    7: return string(STR_INTERNATIONAL_MN);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -66,6 +70,7 @@ switch (FEAT_TRAINS, SELF, switch_rw25k_graphics_subtype, cargo_subtype) {
     4: spriteset_rw25k_guangshen;
     5: spriteset_rw25k_lakeblue;
     6: spriteset_rw25k_int_vn;
+    7: spriteset_rw25k_int_mg;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw25k_graphics, position_in_articulated_veh % 3) {
@@ -118,7 +123,7 @@ item (FEAT_TRAINS, rw25k) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RW25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_GMSR), string(STR_GUANGSHEN), string(STR_BJ_JN_T35), string(STR_INTERNATIONAL_VN)), string(STR_COMFORT_HIGH, 384));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RW25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_GMSR), string(STR_GUANGSHEN), string(STR_BJ_JN_T35), string(STR_INTERNATIONAL_VN), string(STR_INTERNATIONAL_MN)), string(STR_COMFORT_HIGH, 384));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_rw25k_cargo_subtype;
 

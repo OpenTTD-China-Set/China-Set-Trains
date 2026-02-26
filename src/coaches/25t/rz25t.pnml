@@ -27,13 +27,28 @@ spriteset (spriteset_bsprz25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/bsprz25t-green")
 }
 spriteset (spriteset_rz25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t/rz25t-xz")
+    template_standard ("coaches", "25t/rz25t-xz-1")
 }
 spriteset (spriteset_rz25t_hk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/rz25t-hk")
 }
 spriteset (spriteset_rz25t_hk_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/rz25t-hk-green")
+}
+spriteset (spriteset_rz25t_hk_special, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/rz25t-hk-special")
+}
+spriteset (spriteset_rz25t_hk_special_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/rz25t-hk-special-green")
+}
+spriteset (spriteset_rz25t_jinlun, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/rz25t-jinlun")
+}
+spriteset (spriteset_rz25t_yili, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/rz25t-yili")
+}
+spriteset (spriteset_rz25t_2008, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/rz25t-2008")
 }
 
 switch (FEAT_TRAINS, SELF, switch_rz25t_articulated_part, extra_callback_info1) {
@@ -50,6 +65,11 @@ switch (FEAT_TRAINS, SELF, switch_rz25t_cargo_subtype, cargo_subtype) {
     5: string(STR_QINGZANG);
     6: string(STR_25T_HK);
     7: string(STR_25T_HK_GREEN);
+    8: string(STR_25T_HK_SPECIAL);
+    9: string(STR_25T_HK_SPECIAL_GREEN);
+    10: string(STR_JINLUN);
+    11: string(STR_YILI);
+    12: string(STR_2008);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -71,6 +91,11 @@ switch (FEAT_TRAINS, SELF, switch_rz25t_graphics_subtype, cargo_subtype) {
     5: spriteset_rz25t_qingzang;
     6: spriteset_rz25t_hk;
     7: spriteset_rz25t_hk_green;
+    8: spriteset_rz25t_hk_special;
+    9: spriteset_rz25t_hk_special_green;
+    10: spriteset_rz25t_jinlun;
+    11: spriteset_rz25t_yili;
+    12: spriteset_rz25t_2008;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rz25t_graphics, position_in_articulated_veh % 3) {

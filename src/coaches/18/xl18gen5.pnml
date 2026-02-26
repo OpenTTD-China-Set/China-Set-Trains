@@ -1,0 +1,94 @@
+//Begin XL18GEN5
+
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_xl18gen5_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches/18", "xl18gen5")
+}
+
+// Vehicle
+spriteset (spriteset_xl18gen5_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/18", "xl18gen5")
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl18gen5_articulated_part, extra_callback_info1) {
+    1..2: return xl18gen5;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl18gen5_graphics_subtype, cargo_subtype) {
+    0: spriteset_xl18gen5_original;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl18gen5_graphics, position_in_articulated_veh % 3) {
+    1: switch_xl18gen5_graphics_subtype;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_xl18gen5_capacity, position_in_articulated_veh % 3) {
+    1: return 71;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, xl18gen5) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_XL18GEN5);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					yw18gen4;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2003,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_MAIL, CC_ARMOURED);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [MAIL];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             MAIL;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 71;
+        loading_speed:                  6 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          140 km/h;
+        power:                          0 hp;
+        weight:                         42 ton;
+        cost_factor:                    7;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            4;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_2, string(STR_FULL_NAME_XL18), string(STR_FRESHNESS_MEDIUM, 200));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_xl18gen5_graphics;
+        purchase:                       spriteset_xl18gen5_purchase_original;
+        articulated_part:               switch_xl18gen5_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_xl18gen5_capacity;
+        cargo_age_period:               200 << (param_cargo_decay + param_wagoncargodecay);
+        cost_factor:                    7;
+        running_cost_factor:            5 * runningcostfactor();
+        purchase_running_cost_factor:   20;
+        purchase_cargo_capacity:        71/3;
+        name:                           switch_18_name;
+
+    }
+}
+
+// End XL18GEN5

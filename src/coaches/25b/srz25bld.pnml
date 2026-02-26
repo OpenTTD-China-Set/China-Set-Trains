@@ -17,8 +17,8 @@ spriteset (spriteset_srz25bld_urumqi, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_srz25bld_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25b/srz25bld-orange")
 }
-spriteset (spriteset_srz25bld_huhhot, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25b/srz25bld-huhhot")
+spriteset (spriteset_srz25bld_hohhot, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/srz25bld-hohhot")
 }
 spriteset (spriteset_srz25bld_xianxing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25b/srz25bld-xianxing")
@@ -55,7 +55,7 @@ switch (FEAT_TRAINS, SELF, switch_srz25bld_cargo_subtype, cargo_subtype) {
     0: return string(STR_RED);
     1: return string(STR_URUMQI);
     2: return string(STR_ORANGE);
-    3: return string(STR_HUHHOT);
+    3: return string(STR_HOHHOT);
     4: return string(STR_XIANXING);
     5: return string(STR_LIAODONG);
     6: return string(STR_SHENYANG);
@@ -72,7 +72,7 @@ switch (FEAT_TRAINS, SELF, switch_srz25bld_graphics_subtype, cargo_subtype) {
     0: spriteset_srz25bld_red;
     1: spriteset_srz25bld_urumqi;
     2: spriteset_srz25bld_orange;
-    3: spriteset_srz25bld_huhhot;
+    3: spriteset_srz25bld_hohhot;
     4: spriteset_srz25bld_xianxing;
     5: spriteset_srz25bld_liaodong;
     6: spriteset_srz25bld_shenyang;
@@ -132,7 +132,7 @@ item (FEAT_TRAINS, srz25bld) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SRZ25B), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_LV_AVAILABLE_L , string(STR_LIVERY_AVAILABLE), string(STR_RED), string(STR_URUMQI), string(STR_ZHENGZHOU2), string(STR_BEIDAIHE), string(STR_ORANGE), string(STR_OG), string(STR_TAIYUAN), string(STR_OO), string(STR_HUHHOT), string(STR_XIANXING), string(STR_LIAODONG), string(STR_SHENYANG)), string(STR_COMFORT_MEDIUM, 192));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SRZ25B), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_LV_AVAILABLE_L , string(STR_LIVERY_AVAILABLE), string(STR_RED), string(STR_URUMQI), string(STR_ZHENGZHOU2), string(STR_BEIDAIHE), string(STR_ORANGE), string(STR_OG), string(STR_TAIYUAN), string(STR_OO), string(STR_HOHHOT), string(STR_XIANXING), string(STR_LIAODONG), string(STR_SHENYANG)), string(STR_COMFORT_MEDIUM, 192));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_srz25bld_cargo_subtype;
 

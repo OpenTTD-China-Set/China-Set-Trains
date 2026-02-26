@@ -47,6 +47,18 @@ spriteset (spriteset_yz25g_gyr, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_yz25g_fulong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "yz25g-fulong")
 }
+spriteset (spriteset_yz25g_urumqi, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "yz25g-urumqi")
+}
+spriteset (spriteset_yz25g_dys_dkblue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "yz25g-dys1")
+}
+spriteset (spriteset_yz25g_dys_ltblue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "yz25g-dys2")
+}
+spriteset (spriteset_yz25g_dys_25z, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "yz25g-dys3")
+}
 
 switch (FEAT_TRAINS, SELF, switch_yz25g_articulated_part, extra_callback_info1) {
     1..2: return yz25g;
@@ -67,6 +79,10 @@ switch (FEAT_TRAINS, SELF, switch_yz25g_cargo_subtype, cargo_subtype) {
     10: return string(STR_XIAOYONG);
     11: return string(STR_FULONG);
     12: return string(STR_NANHU);
+    13: return string(STR_URUMQI_NORMAL);
+    14: return string(STR_DAYAOSHAN_DKBLUE);
+    15: return string(STR_DAYAOSHAN_LTBLUE);
+    16: return string(STR_DAYAOSHAN_25Z);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -92,6 +108,10 @@ switch (FEAT_TRAINS, SELF, switch_yz25g_graphics_subtype, cargo_subtype) {
     10: spriteset_yz25g_xiaoyong;
     11: spriteset_yz25g_fulong;
     12: spriteset_yz25g_nanhu;
+    13: spriteset_yz25g_urumqi;
+    14: spriteset_yz25g_dys_dkblue;
+    15: spriteset_yz25g_dys_ltblue;
+    16: spriteset_yz25g_dys_25z;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25g_graphics, position_in_articulated_veh % 3) {
@@ -141,7 +161,7 @@ item (FEAT_TRAINS, yz25g) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YZ25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN), string(STR_GMSR), string(STR_GMSR_EARLY), string(STR_GYR), string(STR_XIAOYONG), string(STR_NANHU), string(STR_FULONG)), string(STR_COMFORT_LOW, 160));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YZ25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN), string(STR_GMSR), string(STR_GMSR_EARLY), string(STR_GYR), string(STR_XIAOYONG), string(STR_NANHU), string(STR_FULONG), string(STR_URUMQI_NORMAL), string(STR_DAYAOSHAN_DKBLUE), string(STR_DAYAOSHAN_LTBLUE), string(STR_DAYAOSHAN_25Z)), string(STR_COMFORT_LOW, 160));
         can_attach_wagon:               locowagon;
 
         // Graphics

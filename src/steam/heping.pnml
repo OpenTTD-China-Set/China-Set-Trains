@@ -1,0 +1,138 @@
+// Begin heping
+
+switch (FEAT_TRAINS, SELF, switch_hp_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_QJ_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+
+// Graphics
+
+spriteset (spriteset_hp_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase_xl ("steam/extralength", "hp")
+}
+
+spriteset (spriteset_hp_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("steam", "hp-front")
+}
+spriteset (spriteset_hp_back4, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("steam", "qj-back4")
+}
+spriteset (spriteset_hp_back6, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("steam", "qj-back6")
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_hp_cargo_subtype, cargo_subtype) {
+    0: return string(STR_LIVERY_4AXLE);
+    1: return string(STR_LIVERY_6AXLE);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hp_articulated_part, extra_callback_info1) {
+    1..2: return heping;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_gfx_hp_back, cargo_subtype) {
+    0: spriteset_hp_back4;
+    1: spriteset_hp_back6;
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_hp_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_hp_front;
+    2: switch_gfx_hp_back;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_length_hp_tender, cargo_subtype) {
+    0: return 6;
+    return 8;
+
+}
+switch (FEAT_TRAINS, SELF, switch_length_hp, position_in_articulated_veh % 3) {
+    0: return 2;
+    1: return 8;
+    return switch_length_hp_tender;
+}
+
+switch (FEAT_TRAINS, SELF, switch_weight_hp, cargo_subtype) {
+    0: return 213;
+    return 253;
+
+}
+
+switch (FEAT_TRAINS, SELF, switch_hp_te, cargo_subtype) {
+    0: return int(0.1587*255);
+    return int(0.1334*255);
+
+}
+
+
+
+item (FEAT_TRAINS, heping) {
+    property {
+        // Don't Change - It is crucial
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        climates_available:             ALL_CLIMATES;
+
+        // Don't Change - Unless it is not a steam locomotive
+        engine_class:                   ENGINE_CLASS_STEAM;
+        running_cost_base:              RUNNING_COST_STEAM;
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        // This is for freight locos
+        ai_special_flag:                AI_FLAG_CARGO;
+
+        // Don't Change - It is useless
+        cargo_capacity:                 1;
+        cost_factor:                    1;
+        running_cost_factor:            1;
+
+        // Change them accordingly
+        name:                           string(STR_NAME_HP);
+        introduction_date:              date(1956,10,01);
+        model_life:                     60;
+        retire_early:                   50;
+        vehicle_life:                   35;
+        track_type:                     SABN;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+        speed:                          80 km/h;
+        power:                          2960 hpM;
+        weight:                         213 ton;
+        tractive_effort_coefficient:    0.1587;
+        reliability_decay:              20;
+        bitmask_vehicle_info:           0;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_HP), string(STR_ALIASNAME_HP), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVAILABLE), string(STR_LIVERY_4AXLE), string(STR_LIVERY_6AXLE)), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_HIGH, 20));
+        can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_hp_cargo_subtype;
+
+        // Graphics
+        default:                        switch_hp_graphics;
+        purchase:                       spriteset_hp_purchase;
+        articulated_part:               switch_hp_articulated_part;
+
+        // Stats
+        length:                         switch_length_hp;
+        cargo_capacity:                 0;
+        cost_factor:                    56;
+        running_cost_factor:            39 * runningcostfactor();
+        purchase_running_cost_factor:   156;
+        purchase_cargo_capacity:        0;
+        weight:                         switch_weight_hp;
+        tractive_effort_coefficient:    switch_hp_te;
+        name:                           switch_hp_name;
+    }
+}
+
+// End heping

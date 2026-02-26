@@ -40,6 +40,13 @@ spriteset (spriteset_ca25g_hejiu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_ca25g_fulong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "ca25g-fulong")
 }
+spriteset (spriteset_ca25g_russia, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "ca25g-ly")
+}
+spriteset (spriteset_ca25g_dayaoshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "ca25g-dys")
+}
+
 switch (FEAT_TRAINS, SELF, switch_ca25g_articulated_part, extra_callback_info1) {
     1..2: return ca25g;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
@@ -56,6 +63,8 @@ switch (FEAT_TRAINS, SELF, switch_ca25g_cargo_subtype, cargo_subtype) {
     7: return string(STR_GMSR_EARLY);
     8: return string(STR_HEJIU);
     9: return string(STR_FULONG);
+    10: return string(STR_INTERNATIONAL_RU_MN);
+    11: return string(STR_DAYAOSHAN);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -79,6 +88,8 @@ switch (FEAT_TRAINS, SELF, switch_ca25g_graphics_subtype, cargo_subtype) {
     7: spriteset_ca25g_gmsr_early;
     8: spriteset_ca25g_hejiu;
     9: spriteset_ca25g_fulong;
+    10: spriteset_ca25g_russia;
+    11: spriteset_ca25g_dayaoshan;
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca25g_graphics, position_in_articulated_veh % 3) {
@@ -130,7 +141,7 @@ item (FEAT_TRAINS, ca25g) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_CA25G), string(STR_CAFE_EFFECT), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN), string(STR_ORANGE), string(STR_GMSR), string(STR_GMSR_EARLY), string(STR_HEJIU), string(STR_FULONG)), string(STR_COMFORT_MEDIUM, 200));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_CA25G), string(STR_CAFE_EFFECT), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN), string(STR_ORANGE), string(STR_GMSR), string(STR_GMSR_EARLY), string(STR_HEJIU), string(STR_FULONG), string(STR_INTERNATIONAL_RU_MN), string(STR_DAYAOSHAN)), string(STR_COMFORT_MEDIUM, 200));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_ca25g_cargo_subtype;
 

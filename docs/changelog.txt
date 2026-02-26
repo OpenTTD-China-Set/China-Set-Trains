@@ -7,8 +7,9 @@ China Set: Trains Changelog
 
 0.4.1 (2026-02-18)
 --------------------
-Add: SL7, ND2, DF8
-Add Liveries for 25K and S25K
+Add: SL7, ND2, DF8, 18 Series Gen5, 25A Series
+Add Liveries for 25K, 25T, 25Z, 25G, 25B
+Renew sprites of 25K, 25T, 25Z, 25G, 25B
 Fix: some wrong or misspelt language strings
 Fix: CR200JA sprite errors
 Fix: SLeeper EMUs cargo decay wrong
