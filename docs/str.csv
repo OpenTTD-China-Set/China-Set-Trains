@@ -967,6 +967,7 @@ STR_JINWEN_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of Jinhua-Wen
 STR_XIYAN,{BLACK} - Xi'An-Yan'an Railway Livery,{BLACK} - 西延铁路涂装
 STR_DACHENG,{BLACK} - Dazhou-Chengdu Railway Livery,{BLACK} - 达成铁路涂装
 STR_NANHU,"{BLACK} - {RED}""South Lake - 1921"" {BLACK}Tourist Train","{BLACK} - {RED}""南湖-1921"" {BLACK}旅游列车"
+STR_YANZHAO,{BLACK} - ""Xingguang Yanzhao"" Tourist Train,{BLACK} - ""星光燕赵号""旅游列车涂装
 STR_GAOZU_GREEN,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}(unfinished except 25T)","{BLACK} - {DKGREEN}""高阻绿"" {BLACK}"
 STR_GAOZU_GREEN_BSP,"{BLACK} - {DKGREEN}""Gaozu Green"" {BLACK}livery of BSP25T","{BLACK} - BSP25T 的{DKGREEN}""高阻绿"" {BLACK}涂装"
 STR_BSP25T,{BLACK} - Made by BSP,{BLACK} - BSP制造
