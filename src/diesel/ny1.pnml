@@ -40,7 +40,7 @@ item (FEAT_TRAINS, ny1) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
-        variant_group:					ny1;
+        /* variant_group:					ny1; */
 
         // Availability
         climates_available:             ALL_CLIMATES;

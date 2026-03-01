@@ -43,7 +43,7 @@ item (FEAT_TRAINS, yw18gen4) {
         name:                           string(STR_NAME_YW18_4);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					yw18gen4;
+        /* variant_group:					yw18gen4; */
 
         // Availability
         climates_available:             ALL_CLIMATES;

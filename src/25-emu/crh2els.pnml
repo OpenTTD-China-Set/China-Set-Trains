@@ -236,7 +236,7 @@ item (FEAT_TRAINS, crh2els) {
         length:                         switch_crh2els_wagon_length;
         weight:                         51;
         can_attach_wagon:               muhead;
-        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        cargo_age_period:               (160 * cafedecayfactor()) << param_cargo_decay;
         bitmask_vehicle_info:           switch_crh_wagon_bitmask;
         articulated_part:               switch_crh_wagon_articulated_part;
         running_cost_factor:            switch_crh2els_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();

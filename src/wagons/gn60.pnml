@@ -59,7 +59,7 @@ item (FEAT_TRAINS, gn60) {
         name:                           string(STR_NAME_GN60);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					3088;
+        variant_group:					g11;
 
 
         // Availability

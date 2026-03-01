@@ -61,10 +61,10 @@ spriteset (spriteset_cr200ja_prototype_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) 
     template_reversed_10 ("25-emu/cr200ja", "cr200j-prototype-m")
 }
 spriteset (spriteset_cr200ja_prototype_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu/cr200ja", "cr200j-prototype-c-c")
+    template_reversed ("25-emu/cr200ja", "cr200j-prototype-c-c")
 }
 spriteset (spriteset_cr200ja_prototype_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu/cr200ja", "cr200j-prototype-c-c")
+    template_standard ("25-emu/cr200ja", "cr200j-prototype-c-c")
 }
 
 //Can Attach

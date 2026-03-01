@@ -58,7 +58,7 @@ item (FEAT_TRAINS, g70b) {
         name:                           string(STR_NAME_G70B);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					3088;
+        variant_group:					g70;
 
         // Availability
         climates_available:             ALL_CLIMATES;

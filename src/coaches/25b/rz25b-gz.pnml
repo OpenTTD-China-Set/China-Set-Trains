@@ -1,0 +1,118 @@
+//Begin RZ25B_GZ
+switch (FEAT_TRAINS, SELF, switch_rz25b_gz_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_25B_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+
+
+// Graphics
+
+spriteset (spriteset_rz25b_gz_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25b/rz25b-guangzhou-kowloon")
+}
+
+// Vehicle
+spriteset (spriteset_rz25b_gz_kl, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/rz25b-guangzhou-kowloon")
+}
+spriteset (spriteset_rz25b_gz_25z, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/rz25b-25z")
+}
+spriteset (spriteset_rz25b_gz_dys1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/rz25b-dys1")
+}
+spriteset (spriteset_rz25b_gz_dys2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/rz25b-dys2")
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz25b_gz_articulated_part, extra_callback_info1) {
+    1..2: return rz25b_gz;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz25b_gz_cargo_subtype, cargo_subtype) {
+    0: return string(STR_HK_LTBLUE);
+    1: return string(STR_IMITATION_25Z);
+    2: return string(STR_DAYAOSHAN_DKBLUE);
+    3: return string(STR_DAYAOSHAN_LTBLUE);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz25b_gz_graphics_subtype, cargo_subtype) {
+    0: spriteset_rz25b_gz_kl;
+    1: spriteset_rz25b_gz_25z;
+    2: spriteset_rz25b_gz_dys1;
+    3: spriteset_rz25b_gz_dys2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz25b_gz_graphics, position_in_articulated_veh % 3) {
+    1: switch_rz25b_gz_graphics_subtype;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz25b_gz_capacity, position_in_articulated_veh % 3) {
+    1: return 80;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, rz25b_gz) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_RZ25B_GZ);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					2077;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1992,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 80;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               222 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          0 hp;
+        weight:                         50.2 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RZ25B_GZ), string(STR_LV_AVAILABLE_S , string(STR_HK_LTBLUE), string(STR_IMITATION_25Z), string(STR_DAYAOSHAN_DKBLUE), string(STR_DAYAOSHAN_LTBLUE)), string(STR_COMFORT_MEDIUM, 192));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_rz25b_gz_graphics;
+        purchase:                       spriteset_rz25b_gz_purchase_original;
+        articulated_part:               switch_rz25b_gz_articulated_part;
+        cargo_subtype_text:             switch_rz25b_gz_cargo_subtype;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_rz25b_gz_capacity;
+        cargo_age_period:               (12 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    8;
+        running_cost_factor:            5 * runningcostfactor() * cafecostfactor() + accostfactor();
+        purchase_running_cost_factor:   20;
+        purchase_cargo_capacity:        80/3;
+        name:                            switch_rz25b_gz_name;
+
+    }
+}
+
+// End RZ25B_GZ

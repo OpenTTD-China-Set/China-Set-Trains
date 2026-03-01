@@ -89,7 +89,7 @@ item (FEAT_TRAINS, yai) {
         name:                           string(STR_NAME_YAI);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					yai;
+        /* variant_group:					yai; */
 
 
         // Availability

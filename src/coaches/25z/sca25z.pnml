@@ -71,7 +71,7 @@ item (FEAT_TRAINS, sca25z) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SCA25Z), string(STR_CAFE_EFFECT), string(STR_S25Z_LIVERY_AVAILABILITY), string(STR_COMFORT_MEDIUM, 240));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SCA25Z), string(STR_CAFE_EFFECT), /* string(STR_S25Z_LIVERY_AVAILABILITY),  */string(STR_COMFORT_MEDIUM, 240));
         can_attach_wagon:               locowagon;
 
         // Graphics

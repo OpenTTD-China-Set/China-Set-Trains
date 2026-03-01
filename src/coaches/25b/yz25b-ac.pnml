@@ -1,0 +1,137 @@
+// Begin YZ25B_AC
+switch (FEAT_TRAINS, SELF, switch_yz25b_ac_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_25B_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_yz25b_ac_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches", "25b/yz25b-hhb")
+}
+
+// Vehicle
+spriteset (spriteset_yz25b_ac_baotou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "yz25b-hhb")
+}
+spriteset (spriteset_yz25b_ac_jixu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "yz25b-jnx")
+}
+spriteset (spriteset_yz25b_ac_qingdao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "yz25b-jqd")
+}
+spriteset (spriteset_yz25b_ac_shenji, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "yz25b-ssj")
+}
+spriteset (spriteset_yz25b_ac_dalian, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "yz25b-sdl")
+}
+spriteset (spriteset_yz25b_ac_changchun, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "yz25b-scc")
+}
+spriteset (spriteset_yz25b_ac_harbin, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "yz25b-sks")
+}
+spriteset (spriteset_yz25b_ac_mujia, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "yz25b-hjm")
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25b_ac_articulated_part, extra_callback_info1) {
+    1..2: return yz25b_ac;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25b_ac_cargo_subtype, cargo_subtype) {
+    0: return string(STR_BAOTOU);
+    1: return string(STR_JN_XZ);
+    2: return string(STR_QINGDAO);
+    3: return string(STR_SY_JL_COLD);
+    4: return string(STR_DALIAN_COLD);
+    5: return string(STR_CHANGCHUN_COLD);
+    6: return string(STR_HARBIN_COLD);
+    7: return string(STR_MTK_KMS_COLD);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25b_ac_graphics_subtype, cargo_subtype) {
+    0: spriteset_yz25b_ac_baotou;
+    1: spriteset_yz25b_ac_jixu;
+    2: spriteset_yz25b_ac_qingdao;
+    3: spriteset_yz25b_ac_shenji;
+    4: spriteset_yz25b_ac_dalian;
+    5: spriteset_yz25b_ac_changchun;
+    6: spriteset_yz25b_ac_harbin;
+    7: spriteset_yz25b_ac_mujia;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25b_ac_graphics, position_in_articulated_veh % 3) {
+    1: switch_yz25b_ac_graphics_subtype;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz25b_ac_capacity, position_in_articulated_veh % 3) {
+    1: return 128;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, yz25b_ac) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_YZ25B_AC);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					2077;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1992,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 118;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          0 hp;
+        weight:                         44.7 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YZ25B_AC), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVAILABLE), string(STR_BAOTOU), string(STR_JN_XZ), string(STR_QINGDAO), string(STR_SY_JL_COLD), string(STR_DALIAN_COLD), string(STR_CHANGCHUN_COLD), string(STR_HARBIN_COLD), string(STR_MTK_KMS_COLD)), string(STR_COMFORT_LOW, 144));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_yz25b_ac_graphics;
+        purchase:                       spriteset_yz25b_ac_purchase_original;
+        articulated_part:               switch_yz25b_ac_articulated_part;
+        cargo_subtype_text:             switch_yz25b_ac_cargo_subtype;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_yz25b_ac_capacity;
+        cargo_age_period:               (9 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    7;
+        running_cost_factor:            4 * runningcostfactor() * cafecostfactor() + accostfactor();
+        purchase_running_cost_factor:   16;
+        purchase_cargo_capacity:        128/3;
+        name:                           switch_yz25b_ac_name;
+    }
+}
+
+// End YZ25B_AC
+

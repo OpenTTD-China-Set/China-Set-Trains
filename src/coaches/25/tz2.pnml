@@ -19,8 +19,29 @@ spriteset (spriteset_tz2_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_tz2_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25", "tz2-sfk50-red")
 }
-spriteset (spriteset_tz2_beidaihe, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches/25", "kd25-beidaihe")
+spriteset (spriteset_tz2_baotou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "tz2-hhb")
+}
+spriteset (spriteset_tz2_jixu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "tz2-jnx")
+}
+spriteset (spriteset_tz2_qingdao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "tz2-jqd")
+}
+spriteset (spriteset_tz2_shenji, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "tz2-ssj")
+}
+spriteset (spriteset_tz2_dalian, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "tz2-sdl")
+}
+spriteset (spriteset_tz2_changchun, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "tz2-scc")
+}
+spriteset (spriteset_tz2_harbin, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "tz2-sks")
+}
+spriteset (spriteset_tz2_mujia, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "tz2-hjm")
 }
 
 switch (FEAT_TRAINS, SELF, switch_tz2_articulated_part, extra_callback_info1) {
@@ -30,9 +51,16 @@ switch (FEAT_TRAINS, SELF, switch_tz2_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_tz2_cargo_subtype, cargo_subtype) {
     0: string(STR_BUILD_YEAR);
-    1: string(STR_ORIGINAL);
+    1: string(STR_GREEN);
     2: string(STR_RED);
-    3: return string(STR_BEIDAIHE);
+    3: return string(STR_BAOTOU);
+    4: return string(STR_JN_XZ);
+    5: return string(STR_QINGDAO);
+    6: return string(STR_SY_JL_COLD);
+    7: return string(STR_DALIAN_COLD);
+    8: return string(STR_CHANGCHUN_COLD);
+    9: return string(STR_HARBIN_COLD);
+    10: return string(STR_MTK_KMS_COLD);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -45,7 +73,14 @@ switch (FEAT_TRAINS, SELF, switch_tz2_graphics_subtype, cargo_subtype) {
     0: switch_tz2_graphics_subtype_0;
     1: spriteset_tz2_original;
     2: spriteset_tz2_red;
-    3: spriteset_tz2_beidaihe;
+    3: spriteset_tz2_baotou;
+    4: spriteset_tz2_jixu;
+    5: spriteset_tz2_qingdao;
+    6: spriteset_tz2_shenji;
+    7: spriteset_tz2_dalian;
+    8: spriteset_tz2_changchun;
+    9: spriteset_tz2_harbin;
+    10: spriteset_tz2_mujia;
 }
 
 switch (FEAT_TRAINS, SELF, switch_tz2_graphics, position_in_articulated_veh % 3) {
@@ -92,7 +127,7 @@ item (FEAT_TRAINS, tz2) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_TZ2), string(STR_25ML_LIVERY_AVAILABILITY), string(STR_AIR_CONDITIONER_EFFECT));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_TZ2), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVAILABLE), string(STR_BUILD_YEAR), string(STR_ORIGINAL), string(STR_RED), string(STR_BAOTOU), string(STR_JN_XZ), string(STR_QINGDAO), string(STR_SY_JL_COLD), string(STR_DALIAN_COLD), string(STR_CHANGCHUN_COLD), string(STR_HARBIN_COLD), string(STR_MTK_KMS_COLD)), string(STR_AIR_CONDITIONER_EFFECT));
         can_attach_wagon:               locowagon;
 
         // Graphics

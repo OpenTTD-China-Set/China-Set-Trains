@@ -84,7 +84,7 @@ item (FEAT_TRAINS, syz25) {
         cost_factor:                    10;
         running_cost_factor:            7 * runningcostfactor() * cafecostfactor() + accostfactor();
         purchase_running_cost_factor:   28;
-        purchase_cargo_capacity:        108/3;
+        purchase_cargo_capacity:        176/3;
         name:                           switch_syz25_name;
 
     }

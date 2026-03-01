@@ -16,6 +16,9 @@ spriteset (spriteset_xl25b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP)
 spriteset (spriteset_xl25b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25b/xl25b")
 }
+spriteset (spriteset_xl25b_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/xl25b-green")
+}
 spriteset (spriteset_xl25b_xiyan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25b/xl25b-xiyan")
 }
@@ -24,6 +27,30 @@ spriteset (spriteset_xl25b_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 }
 spriteset (spriteset_xl25b_jy, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25b/xl25b-jy")
+}
+spriteset (spriteset_xl25b_baotou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "xl25b-hhb")
+}
+spriteset (spriteset_xl25b_jixu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "xl25b-jnx")
+}
+spriteset (spriteset_xl25b_qingdao, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "xl25b-jqd")
+}
+spriteset (spriteset_xl25b_shenji, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "xl25b-ssj")
+}
+spriteset (spriteset_xl25b_dalian, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "xl25b-sdl")
+}
+spriteset (spriteset_xl25b_changchun, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "xl25b-scc")
+}
+spriteset (spriteset_xl25b_harbin, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "xl25b-sks")
+}
+spriteset (spriteset_xl25b_mujia, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "xl25b-hjm")
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25b_articulated_part, extra_callback_info1) {
@@ -34,16 +61,24 @@ switch (FEAT_TRAINS, SELF, switch_xl25b_articulated_part, extra_callback_info1) 
 switch (FEAT_TRAINS, SELF, switch_xl25b_cargo_subtype, cargo_subtype) {
     0: return string(STR_BUILD_YEAR);
     1: return string(STR_ORDINARY_GREEN);
-/*     2: return string(STR_GAOZU_GREEN); */
-    2: return string(STR_XIYAN);
-    3: return string(STR_RED_WHITE);
-    4: return string(STR_RESCUE);
+    2: return string(STR_GAOZU_GREEN);
+    3: return string(STR_XIYAN);
+    4: return string(STR_RED_WHITE);
+    5: return string(STR_RESCUE);
+    6: return string(STR_BAOTOU);
+    7: return string(STR_JN_XZ);
+    8: return string(STR_QINGDAO);
+    9: return string(STR_SY_JL_COLD);
+    10: return string(STR_DALIAN_COLD);
+    11: return string(STR_CHANGCHUN_COLD);
+    12: return string(STR_HARBIN_COLD);
+    13: return string(STR_MTK_KMS_COLD);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25b_graphics_build_year_depend, build_year) {
-    0..2014: spriteset_uz25b_original; // Unfinished
-    spriteset_uz25b_original;
+    0..2014: spriteset_xl25b_original;
+    spriteset_xl25b_green;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25b_cargo_subtype_0, param_gaozulv) {
@@ -54,10 +89,18 @@ switch (FEAT_TRAINS, SELF, switch_xl25b_cargo_subtype_0, param_gaozulv) {
 switch (FEAT_TRAINS, SELF, switch_xl25b_graphics_subtype, cargo_subtype) {
     0: switch_xl25b_cargo_subtype_0;
     1: spriteset_xl25b_original;
-/*     2: ; */
-    2: spriteset_xl25b_xiyan;
-    3: spriteset_xl25b_red;
-    4: spriteset_xl25b_jy;
+    2: spriteset_xl25b_green;
+    3: spriteset_xl25b_xiyan;
+    4: spriteset_xl25b_red;
+    5: spriteset_xl25b_jy;
+    6: spriteset_xl25b_baotou;
+    7: spriteset_xl25b_jixu;
+    8: spriteset_xl25b_qingdao;
+    9: spriteset_xl25b_shenji;
+    10: spriteset_xl25b_dalian;
+    11: spriteset_xl25b_changchun;
+    12: spriteset_xl25b_harbin;
+    13: spriteset_xl25b_mujia;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25b_graphics, position_in_articulated_veh % 3) {
@@ -108,7 +151,7 @@ item (FEAT_TRAINS, xl25b) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_XL25B), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL)/* , string(STR_GAOZU_GREEN) */, string(STR_XIYAN), string(STR_RED_WHITE), string(STR_RESCUE)), string(STR_FRESHNESS_MEDIUM, 200));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_XL25B), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_XIYAN), string(STR_RED_WHITE), string(STR_RESCUE), string(STR_BAOTOU), string(STR_JN_XZ), string(STR_QINGDAO), string(STR_SY_JL_COLD), string(STR_DALIAN_COLD), string(STR_CHANGCHUN_COLD), string(STR_HARBIN_COLD), string(STR_MTK_KMS_COLD)), string(STR_FRESHNESS_MEDIUM, 200));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_xl25b_cargo_subtype;
 

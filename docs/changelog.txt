@@ -5,6 +5,15 @@ China Set: Trains Changelog
 
 ## Initial-0-4 Updates
 
+0.4.1 (2025-09-02)
+--------------------
+Add: 
+    - Locomotives: SL67, ND2, DF8B
+    - Coaches: 25A
+    - Liveries: a lot for 25K, 25T, 25Z, 25G Coaches
+Renew: 25K, 25T, 25Z, 25G, liveries
+Fix: some wrong or misspelt language strings
+
 0.4.0 (2025-09-01)
 --------------------
 Add vehicles of South Manchuria Railways, which was a railway company established by the Japanese during their invasion of China in WWII:

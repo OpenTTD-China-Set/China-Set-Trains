@@ -28,6 +28,9 @@ spriteset (spriteset_uz22_beijing2shanghai_alternative, ZOOM_LEVEL_IN_4X, BIT_DE
 spriteset (spriteset_uz22_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "22/uz22-guangzhou")
 }
+spriteset (spriteset_uz22_guangzhou_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "22/uz22-guangzhou-2")
+}
 
 switch (FEAT_TRAINS, SELF, switch_uz22_articulated_part, extra_callback_info1) {
     1..2: return uz22;
@@ -40,6 +43,7 @@ switch (FEAT_TRAINS, SELF, switch_uz22_cargo_subtype, cargo_subtype) {
     2: return string(STR_BEIJING2SHANGHAIALT);
     3: return string(STR_GUANGSHEN);
     4: return string(STR_WRU);
+    5: return string(STR_CREAM_DKBLUE);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -49,6 +53,7 @@ switch (FEAT_TRAINS, SELF, switch_uz22_graphics_subtype, cargo_subtype) {
     2: spriteset_uz22_beijing2shanghai_alternative;
     3: spriteset_uz22_guangzhou;
     4: spriteset_uz22_wru;
+    5: spriteset_uz22_guangzhou_2;
 }
 
 switch (FEAT_TRAINS, SELF, switch_uz22_graphics, position_in_articulated_veh % 3) {
@@ -99,7 +104,7 @@ item (FEAT_TRAINS, uz22) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_UZ22), string(STR_22_LIVERY_AVAILABILITY), string(STR_FRESHNESS_MEDIUM, 200));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_UZ22), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_BEIJING2SHANGHAI), string(STR_BEIJING2SHANGHAIALT), string(STR_GUANGSHEN), string(STR_WRU), string(STR_CREAM_DKBLUE)), string(STR_FRESHNESS_MEDIUM, 200));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_uz22_cargo_subtype;
 

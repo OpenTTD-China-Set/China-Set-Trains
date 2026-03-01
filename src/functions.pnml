@@ -399,6 +399,12 @@ switch (FEAT_TRAINS, SELF, mu5to17car, num_vehs_in_consist) {
         1: return 6;
         return 6;
     }
+// For steam locos - 2-8-6
+    switch (FEAT_TRAINS, SELF, switch_length_2_8_6, position_in_articulated_veh % 3) {
+        0: return 2;
+        1: return 8;
+        return 6;
+    }
 /* End Functions */
 
 

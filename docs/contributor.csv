@@ -52,6 +52,7 @@ CRH2A4020,,Babel,Babel,
 JF1,jf1,JF,EMB,
 Mikai,,Babel,EMB,
 SL6,sl6,JF,EMB,
+SL7,,EMB,EMB
 Pasguku,,,,
 JF6,jf6,,,
 QJ,qj,Babel,EMB,
@@ -130,6 +131,7 @@ DF9,,wuwu,wuwu,
 DFH1 Series,,Babel,EMB,
 HXN3C,,Babel,"asAn0,Babel","asAn0,Babel"
 8K,,Babel,EMB,
+ND2,,EMB,EMB
 ND4,,Babel,EMB,
 NY5,,Babel,EMB,EMB
 NY6,,Babel,EMB,EMB
@@ -198,6 +200,11 @@ GS,,wuwu,Sunjuzhensun,
 GQ80,,wuwu,Sunjuzhensun,
 GN60,,wuwu,Sunjuzhensun,
 Yai,,Babel,Babel,
+YZ25A,yz25a,Haiyan,EMB
+YW25A,yz25a,Haiyan,EMB
+RW25A,yz25a,Haiyan,EMB
+CA25A,yz25a,Haiyan,EMB
+KD25A,yz25a,Haiyan,EMB
 YZ25G,yz25g,JF,Haiyan,"Nanhu: wuwu,Other: Haiyan"
 RZ25G,rz25g,JF,Haiyan,All: Haiyan
 YW25G,yw25g,JF,Haiyan,All: Haiyan

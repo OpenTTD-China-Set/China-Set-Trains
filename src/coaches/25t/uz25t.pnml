@@ -19,6 +19,12 @@ spriteset (spriteset_uz25t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_uz25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/uz25t-green")
 }
+spriteset (spriteset_uz25t_25k, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/uz25t-25k")
+}
+spriteset (spriteset_uz25t_25g, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/uz25t-25g")
+}
 
 switch (FEAT_TRAINS, SELF, switch_uz25t_articulated_part, extra_callback_info1) {
     1..2: return uz25t;
@@ -30,6 +36,8 @@ switch (FEAT_TRAINS, SELF, switch_uz25t_cargo_subtype, cargo_subtype) {
     0: string(STR_BUILD_YEAR);
     1: string(STR_ORIGINAL);
     2: string(STR_GAOZU_GREEN);
+    3: string(STR_IMITATION_25K);
+    4: string(STR_IMITATION_25G);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -50,6 +58,8 @@ switch (FEAT_TRAINS, SELF, switch_uz25t_graphics_subtype, cargo_subtype) {
     0: switch_uz25t_graphics_subtype_0;
     1: spriteset_uz25t_original;
     2: spriteset_uz25t_green;
+    3: spriteset_uz25t_25k;
+    4: spriteset_uz25t_25g;
 }
 
 switch (FEAT_TRAINS, SELF, switch_uz25t_graphics, position_in_articulated_veh % 3) {

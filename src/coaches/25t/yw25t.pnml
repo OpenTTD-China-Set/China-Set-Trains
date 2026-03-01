@@ -20,7 +20,7 @@ spriteset (spriteset_yW25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/yw25t-green")
 }
 spriteset (spriteset_yw25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t/yw25t-xz")
+    template_standard ("coaches", "25t/yw25t-xz-1")
 }
 spriteset (spriteset_bspyw25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/bspyw25t-xz")
@@ -28,7 +28,12 @@ spriteset (spriteset_bspyw25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_yw25t_int_dprk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/yw25t-int-dprk")
 }
-
+spriteset (spriteset_yw25t_yili, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/yw25t-yili")
+}
+spriteset (spriteset_yw25t_2008, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/yw25t-2008")
+}
 
 switch (FEAT_TRAINS, SELF, switch_yw25t_articulated_part, extra_callback_info1) {
     1..2: return yw25t;
@@ -42,6 +47,8 @@ switch (FEAT_TRAINS, SELF, switch_yw25t_cargo_subtype, cargo_subtype) {
     3: string(STR_QINGZANG);
     4: string(STR_QINGZANG_BSP);
     5: string(STR_INTERNATIONAL_DPRK);
+    6: string(STR_YILI);
+    7: string(STR_2008);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -61,6 +68,8 @@ switch (FEAT_TRAINS, SELF, switch_yw25t_graphics_subtype, cargo_subtype) {
     3: spriteset_yw25t_qingzang;
     4: spriteset_bspyw25t_qingzang;
     5: spriteset_yw25t_int_dprk;
+    6: spriteset_yw25t_yili;
+    7: spriteset_yw25t_2008;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw25t_graphics, position_in_articulated_veh % 3) {
@@ -112,7 +121,7 @@ item (FEAT_TRAINS, yw25t) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YW25T), string(STR_YZ_YW25T_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 288));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YW25T), string(STR_YW25T_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 288));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_yw25t_cargo_subtype;
 
