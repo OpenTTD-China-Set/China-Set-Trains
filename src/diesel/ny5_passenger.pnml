@@ -81,7 +81,7 @@ item (FEAT_TRAINS, ny5_passenger) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_NY5), string(STR_NY5_NICKNAME), string(STR_DBR_IMPORT), string(STR_RELDEC_MEDIUM, 16));
+        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_NY5), string(STR_NY5_NICKNAME), string(STR_DBR_IMPORT), string(STR_ELECTRICITY_SUPPLY_NO),  string(STR_RELDEC_MEDIUM, 16));
         cargo_subtype_text:             switch_ny5_cargo_subtype;
         can_attach_wagon:               locowagon;
 

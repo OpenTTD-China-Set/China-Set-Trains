@@ -231,7 +231,7 @@ item (FEAT_TRAINS, crh5e) {
         length:                         switch_crh5e_wagon_length;
         weight:                         58;
         can_attach_wagon:               muhead;
-        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        cargo_age_period:               (switch_cr200j_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
         bitmask_vehicle_info:           switch_crh_wagon_bitmask;
         articulated_part:               switch_crh_wagon_articulated_part;
         running_cost_factor:            switch_crh5e_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();
@@ -244,7 +244,7 @@ item (FEAT_TRAINS, crh5e) {
         length:                         switch_crh5e_wagon_length;
         weight:                         58;
         can_attach_wagon:               muhead;
-        cargo_age_period:               (switch_crh_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
+        cargo_age_period:               (switch_cr200j_wagon_cargo_decay() * cafedecayfactor()) << param_cargo_decay;
         bitmask_vehicle_info:           switch_crh_wagon_bitmask;
         articulated_part:               switch_crh_wagon_articulated_part;
         running_cost_factor:            switch_crh5e_wagon_running() * runningcostfactor() * cafecostfactor() + accostfactor();

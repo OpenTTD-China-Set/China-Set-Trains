@@ -40,6 +40,9 @@ spriteset (spriteset_kd25k_lakeblue, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_kd25k_25t, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25k", "kd25k-25t")
 }
+spriteset (spriteset_kd25k_shiqin, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "kd25k-sq")
+}
 
 switch (FEAT_TRAINS, SELF, switch_kd25k_articulated_part, extra_callback_info1) {
     1..2: return kd25k;
@@ -51,12 +54,13 @@ switch (FEAT_TRAINS, SELF, switch_kd25k_cargo_subtype, cargo_subtype) {
     1: return string(STR_ORIGINAL);
     2: return string(STR_GAOZU_GREEN);
     3: return string(STR_GMSR);
-    4: return string(STR_BLUE_RED_WHITE);
-    5: return string(STR_SHENYANG);
+    4: return string(STR_RBG_FOLD);
+    5: return string(STR_RED_SKYBLUE_GRAY);
     6: return string(STR_LUCHAOGANG);
     7: return string(STR_GUANGSHEN);
     8: return string(STR_LAKEBLUE);
     9: return string(STR_BLUE_WHITE);
+    10: return string(STR_SHIQIN);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -81,6 +85,7 @@ switch (FEAT_TRAINS, SELF, switch_kd25k_graphics_subtype, cargo_subtype) {
     7: spriteset_kd25k_guangshen;
     8: spriteset_kd25k_lakeblue;
     9: spriteset_kd25k_25t;
+    10: spriteset_kd25k_shiqin;
 }
 
 switch (FEAT_TRAINS, SELF, switch_kd25k_graphics, position_in_articulated_veh % 3) {
@@ -127,7 +132,7 @@ item (FEAT_TRAINS, kd25k) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_GMSR), string(STR_GUANGSHEN), string(STR_LUCHAOGANG), string(STR_BLUE_RED_WHITE), string(STR_LAKEBLUE), string(STR_BLUE_WHITE)), string(STR_AIR_CONDITIONER_EFFECT));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_KD25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_GMSR), string(STR_GUANGSHEN), string(STR_LUCHAOGANG), string(STR_RBG_FOLD), string(STR_RED_SKYBLUE_GRAY), string(STR_LAKEBLUE), string(STR_BLUE_WHITE), string(STR_SHIQIN)), string(STR_AIR_CONDITIONER_EFFECT));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_kd25k_cargo_subtype;
 

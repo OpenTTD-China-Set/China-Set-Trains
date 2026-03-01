@@ -111,7 +111,7 @@ item (FEAT_TRAINS, yz21) {
         name:                           string(STR_NAME_YZ21_IMPROVED);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					yz21early;
+        /* variant_group:					yz21early; */
 
         // Availability
         climates_available:             ALL_CLIMATES;

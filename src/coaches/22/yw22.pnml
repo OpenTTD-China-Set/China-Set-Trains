@@ -1,5 +1,5 @@
 // Begin YW22
-switch (FEAT_TRAINS, SELF, switch_yw22_name_purchase, getbits(extra_callback_info1, 8, 8)) {
+/* switch (FEAT_TRAINS, SELF, switch_yw22_name_purchase, getbits(extra_callback_info1, 8, 8)) {
     0: return string(STR_22_SERIES);
     1: return string(STR_NAME_YW22);
     return CB_RESULT_NO_TEXT;
@@ -7,7 +7,7 @@ switch (FEAT_TRAINS, SELF, switch_yw22_name_purchase, getbits(extra_callback_inf
 switch (FEAT_TRAINS, SELF, switch_yw22_name, getbits(extra_callback_info1, 0, 8)) {
   0x20: switch_yw22_name_purchase;
   return CB_RESULT_NO_TEXT;
-  }
+  } */
 // Graphics
 
  spriteset (spriteset_yw22_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
@@ -94,7 +94,7 @@ item (FEAT_TRAINS, yw22) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 300), string(STR_NO_AIR_CONDITIONER));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 240), string(STR_NO_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
 
 
@@ -112,7 +112,7 @@ item (FEAT_TRAINS, yw22) {
         running_cost_factor:            7 * runningcostfactor() * cafecostfactor(); // NO AIR CONDITIONER
         purchase_running_cost_factor:   28;
         purchase_cargo_capacity:        77 / 3;
-        name:                           switch_yw22_name;
+        name:                           switch_22_name;
     }
 }
 
@@ -159,7 +159,7 @@ item (FEAT_TRAINS, yw221966) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 360), string(STR_NO_AIR_CONDITIONER));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 288), string(STR_NO_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
 
 
@@ -177,7 +177,7 @@ item (FEAT_TRAINS, yw221966) {
         running_cost_factor:            7 * runningcostfactor() * cafecostfactor(); // NO AIR CONDITIONER
         purchase_running_cost_factor:   28;
         purchase_cargo_capacity:        60 / 3;
-        name:                           switch_yw22_name;
+        name:                           switch_22_name;
     }
 }
 

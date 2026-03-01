@@ -16,6 +16,9 @@ spriteset (spriteset_ca25b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP)
 spriteset (spriteset_ca25b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25b", "ca25b")
 }
+spriteset (spriteset_ca25b_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25b", "ca25b-green")
+}
 spriteset (spriteset_ca25b_xiyan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25b", "ca25b-xiyan")
 }
@@ -28,14 +31,14 @@ switch (FEAT_TRAINS, SELF, switch_ca25b_articulated_part, extra_callback_info1) 
 switch (FEAT_TRAINS, SELF, switch_ca25b_cargo_subtype, cargo_subtype) {
     0: return string(STR_BUILD_YEAR);
     1: return string(STR_ORDINARY_GREEN);
-/*     2: return string(STR_GAOZU_GREEN); */
-    2: return string(STR_XIYAN);
+    2: return string(STR_GAOZU_GREEN);
+    3: return string(STR_XIYAN);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca25b_graphics_subtype_year_depend, build_year) {
-    0..2014: spriteset_ca25b_original; // Unfinished
-    spriteset_ca25b_original;
+    0..2014: spriteset_ca25b_original;
+    spriteset_ca25b_green;
 }
 switch (FEAT_TRAINS, SELF, switch_ca25b_graphics_subtype_0, param_gaozulv) {
     1: switch_ca25b_graphics_subtype_year_depend;
@@ -45,8 +48,8 @@ switch (FEAT_TRAINS, SELF, switch_ca25b_graphics_subtype_0, param_gaozulv) {
 switch (FEAT_TRAINS, SELF, switch_ca25b_graphics_subtype, cargo_subtype) {
     0: switch_ca25b_graphics_subtype_0;
     1: spriteset_ca25b_original;
-/*     2: ;  // Will change to "spriteset_ca25b _gaozu" once the "gaozu green" sprite is finished */
-    2: spriteset_ca25b_xiyan;
+    2: spriteset_ca25b_green;
+    3: spriteset_ca25b_xiyan;
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca25b_graphics, position_in_articulated_veh % 3) {
@@ -98,7 +101,7 @@ item (FEAT_TRAINS, ca25b ) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_CA25B), string(STR_CAFE_EFFECT), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVAILABLE), string(STR_XIYAN), /* string(STR_GAOZU_GREEN),*/ string(STR_ORIGINAL)), string(STR_COMFORT_MEDIUM, 180));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_CA25B), string(STR_CAFE_EFFECT), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVAILABLE), string(STR_XIYAN), string(STR_GAOZU_GREEN), string(STR_ORIGINAL)), string(STR_COMFORT_MEDIUM, 180));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_ca25b_cargo_subtype;
 

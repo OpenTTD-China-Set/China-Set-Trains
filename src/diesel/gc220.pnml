@@ -80,7 +80,7 @@ item (FEAT_TRAINS, gc220) {
         ai_special_flag:                AI_FLAG_PASSENGER;
         cargo_capacity:                 20;
         loading_speed:                  8 << param_loading_speed;
-        cargo_age_period:               185 << param_cargo_decay;
+        cargo_age_period:               180 << param_cargo_decay;
 
         // Stats
         speed:                          120 km/h;

@@ -26,7 +26,7 @@ spriteset (spriteset_bspca25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/bspca25t-green")
 }
 spriteset (spriteset_ca25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t/ca25t-xz")
+    template_standard ("coaches", "25t/ca25t-xz-1")
 }
 spriteset (spriteset_bspca25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/bspca25t-xz")
@@ -36,6 +36,18 @@ spriteset (spriteset_ca25t_hk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 }
 spriteset (spriteset_ca25t_hk_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/ca25t-hk-green")
+}
+spriteset (spriteset_ca25t_dongfang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/bspca25t-dongfang")
+}
+spriteset (spriteset_ca25t_xinshiji, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/bspca25t-xinshiji")
+}
+spriteset (spriteset_ca25t_yili, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/ca25t-yili")
+}
+spriteset (spriteset_ca25t_2008, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/ca25t-2008")
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca25t_articulated_part, extra_callback_info1) {
@@ -53,6 +65,10 @@ switch (FEAT_TRAINS, SELF, switch_ca25t_cargo_subtype, cargo_subtype) {
     6: string(STR_QINGZANG_BSP);
     7: string(STR_25T_HK);
     8: string(STR_25T_HK_GREEN);
+    9: string(STR_DONGFANG);
+    10: string(STR_XINSHIJI);
+    11: string(STR_YILI);
+    12: string(STR_2008);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -73,6 +89,10 @@ switch (FEAT_TRAINS, SELF, switch_ca25t_graphics_subtype, cargo_subtype) {
     6: spriteset_bspca25t_qingzang;
     7: spriteset_ca25t_hk;
     8: spriteset_ca25t_hk_green;
+    9: spriteset_ca25t_dongfang;
+    10: spriteset_ca25t_xinshiji;
+    11: spriteset_ca25t_yili;
+    12: spriteset_ca25t_2008;
 }
 
 switch (FEAT_TRAINS, SELF, switch_ca25t_graphics, position_in_articulated_veh % 3) {

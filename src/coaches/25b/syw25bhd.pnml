@@ -20,8 +20,8 @@ spriteset (spriteset_syw25bhd_urumqi, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_syw25bhd_93_94, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25b/syw25bhd-93-94")
 }
-spriteset (spriteset_syw25bhd_hu, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25b/syw25bhd-hu")
+spriteset (spriteset_syw25bhd_kuitun, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25b/syw25bhd-kuitun")
 }
 spriteset (spriteset_syw25bhd_jinan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25b/syw25bhd-jinan")
@@ -42,7 +42,7 @@ switch (FEAT_TRAINS, SELF, switch_syw25bhd_cargo_subtype, cargo_subtype) {
     2: return string(STR_RED);
     3: return string(STR_URUMQI);
     4: return string(STR_93_94);
-    5: return string(STR_KT);
+    5: return string(STR_KUITUN);
     6: return string(STR_JINAN2);
     7: return string(STR_CHANGSHA_SHENZHEN);
     8: return string(STR_ZHENGZHOU2);
@@ -55,7 +55,7 @@ switch (FEAT_TRAINS, SELF, switch_syw25bhd_graphics_subtype, cargo_subtype) {
     2: spriteset_syw25bhd_red;
     3: spriteset_syw25bhd_urumqi;
     4: spriteset_syw25bhd_93_94;
-    5: spriteset_syw25bhd_hu;
+    5: spriteset_syw25bhd_kuitun;
     6: spriteset_syw25bhd_jinan;
     7: spriteset_syw25bhd_cs;
     8: spriteset_syw25bhd_zz;
@@ -109,7 +109,7 @@ item (FEAT_TRAINS, syw25bhd) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SYW25B), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_LV_AVAILABLE_S , string(STR_LIVERY_AVAILABLE), string(STR_CHANGSHA2), string(STR_GAOZU_GREEN), string(STR_CHANGSHA_SHENZHEN), string(STR_JINAN2), string(STR_ZHENGZHOU2), string(STR_RED), string(STR_KT), string(STR_URUMQI), string(STR_93_94)), string(STR_COMFORT_HIGH, 288));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_SYW25B), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_LV_AVAILABLE_S , string(STR_LIVERY_AVAILABLE), string(STR_CHANGSHA2), string(STR_GAOZU_GREEN), string(STR_CHANGSHA_SHENZHEN), string(STR_JINAN2), string(STR_ZHENGZHOU2), string(STR_RED), string(STR_KUITUN), string(STR_URUMQI), string(STR_93_94)), string(STR_COMFORT_HIGH, 288));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_syw25bhd_cargo_subtype;
 

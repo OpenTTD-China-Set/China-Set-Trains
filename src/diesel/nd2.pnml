@@ -1,0 +1,85 @@
+// Begin ND2
+
+// Graphics
+
+//Purchase Menu
+spriteset (spriteset_nd2_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "nd2")
+}
+
+//Vehicle
+spriteset (spriteset_nd2_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "nd2")
+}
+switch (FEAT_TRAINS, SELF, switch_nd2_articulated_part, extra_callback_info1) {
+    1..2: return nd2;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+switch (FEAT_TRAINS, SELF, switch_nd2_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_nd2_original;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, nd2) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_ND2);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1972,07,01);
+        model_life:                     50;
+        retire_early:                   25;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          1717 hp;
+        weight:                         118 ton;
+        tractive_effort_coefficient:    0.242;
+        cost_factor:                    127;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            104;
+        reliability_decay:              12;
+
+
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_ND2),string(STR_ND2_NICKNAME) ,string(STR_RO_IMPORT), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_RELDEC_LOW, 12));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_nd2_graphics;
+        purchase:                       spriteset_nd2_purchase_original;
+        articulated_part:               switch_nd2_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_4_2;
+        cargo_capacity:                 0;
+        cost_factor:                    45;
+        running_cost_factor:            35 * runningcostfactor();
+        purchase_running_cost_factor:   140;
+        purchase_cargo_capacity:        0;
+
+    }
+}
+
+//End ND2

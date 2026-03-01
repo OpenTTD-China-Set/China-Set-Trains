@@ -9,12 +9,12 @@ switch (FEAT_TRAINS, SELF, switch_xl25t_sspe_name, getbits(extra_callback_info1,
 
 // Purchase Menu
 spriteset (spriteset_xl25t_sspe_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "25t/xl25t_sspe")
+    template_purchase ("coaches", "25t/xl25t-sspe2-1")
 }
 
 // Vehicle
 spriteset (spriteset_xl25t_sspe_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t/xl25t_sspe")
+    template_standard ("coaches", "25t/xl25t-sspe2-1")
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25t_sspe_articulated_part, extra_callback_info1) {

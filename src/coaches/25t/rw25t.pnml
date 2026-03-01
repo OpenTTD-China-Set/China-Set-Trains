@@ -27,13 +27,22 @@ spriteset (spriteset_bsprw25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/bsprw25t-green")
 }
 spriteset (spriteset_rw25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t/rw25t-xz")
+    template_standard ("coaches", "25t/rw25t-xz-1")
 }
 spriteset (spriteset_bsprw25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/bsprw25t-xz")
 }
 spriteset (spriteset_rw25t_int_dprk, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/rw25t-int-dprk")
+}
+spriteset (spriteset_rw25t_int_vn, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/rw25t-int-vn")
+}
+spriteset (spriteset_rw25t_yili, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/rw25t-yili")
+}
+spriteset (spriteset_rw25t_2008, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/rw25t-2008")
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw25t_articulated_part, extra_callback_info1) {
@@ -50,6 +59,9 @@ switch (FEAT_TRAINS, SELF, switch_rw25t_cargo_subtype, cargo_subtype) {
     5: string(STR_QINGZANG);
     6: string(STR_QINGZANG_BSP);
     7: string(STR_INTERNATIONAL_DPRK);
+    8: string(STR_INTERNATIONAL_VN);
+    9: string(STR_YILI);
+    10: string(STR_2008);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -74,6 +86,9 @@ switch (FEAT_TRAINS, SELF, switch_rw25t_graphics_subtype, cargo_subtype) {
     5: spriteset_rw25t_qingzang;
     6: spriteset_bsprw25t_qingzang;
     7: spriteset_rw25t_int_dprk;
+    8: spriteset_rw25t_int_vn;
+    9: spriteset_rw25t_yili;
+    10: spriteset_rw25t_2008;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw25t_graphics, position_in_articulated_veh % 3) {

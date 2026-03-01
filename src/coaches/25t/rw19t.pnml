@@ -4,7 +4,6 @@ switch (FEAT_TRAINS, SELF, switch_rw19t_name, getbits(extra_callback_info1, 0, 8
     return CB_RESULT_NO_TEXT;
 }
 
-
 // Graphics
 
 // Purchase Menu
@@ -13,8 +12,11 @@ spriteset (spriteset_rw19t_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 }
 
 // Vehicle
-spriteset (spriteset_rw19t, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_rw19t_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/rw19t")
+}
+spriteset (spriteset_rw19t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/rw19t-green")
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw19t_articulated_part, extra_callback_info1) {
@@ -22,8 +24,30 @@ switch (FEAT_TRAINS, SELF, switch_rw19t_articulated_part, extra_callback_info1) 
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+switch (FEAT_TRAINS, SELF, switch_rw19t_cargo_subtype, cargo_subtype) {
+    0: string(STR_BUILD_YEAR);
+    1: string(STR_ORIGINAL);
+    2: string(STR_GAOZU_GREEN);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw19t_graphics_subtype_year_depend, build_year) {
+     0..2014: spriteset_rw19t_original;
+    spriteset_rw19t_green;
+}
+switch (FEAT_TRAINS, SELF, switch_rw19t_graphics_subtype_0, param_gaozulv) {
+    1: switch_rw19t_graphics_subtype_year_depend;
+    spriteset_rw19t_original;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw19t_graphics_subtype, cargo_subtype) {
+    0: switch_rw19t_graphics_subtype_0;
+    1: spriteset_rw19t_original;
+    2: spriteset_rw19t_green;
+}
+
 switch (FEAT_TRAINS, SELF, switch_rw19t_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_rw19t;
+    1: switch_rw19t_graphics_subtype;
     empty_sprites;
 }
 
@@ -70,8 +94,9 @@ item (FEAT_TRAINS, rw19t) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_2, string(STR_FULL_NAME_RW19T), string(STR_COMFORT_VERY_HIGH, 640));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RW19T), string(STR_RW19T_LIVERY_AVAILABILITY), string(STR_COMFORT_VERY_HIGH, 640));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_rw19t_cargo_subtype;
 
         // Graphics
         default:                        switch_rw19t_graphics;

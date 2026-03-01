@@ -1,5 +1,8 @@
 // Begin DF8B
-
+switch (FEAT_TRAINS, SELF, switch_df8b_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_DF8_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
 // Graphics
 
 // Purchase Menu
@@ -44,6 +47,7 @@ item (FEAT_TRAINS, df8b) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
+        variant_group:					df8;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -93,6 +97,7 @@ item (FEAT_TRAINS, df8b) {
         running_cost_factor:            58 * runningcostfactor();
         purchase_running_cost_factor:   232;
         purchase_cargo_capacity:        0;
+        name:                           switch_df8b_name;
     }
 }
 

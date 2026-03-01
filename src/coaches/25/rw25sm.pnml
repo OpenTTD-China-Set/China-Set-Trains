@@ -14,13 +14,28 @@ spriteset (spriteset_rw25sm_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25", "rw25-sm")
 }
 
+spriteset (spriteset_rw25sm_name, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25", "rw25-smname")
+}
+
 switch (FEAT_TRAINS, SELF, switch_rw25sm_articulated_part, extra_callback_info1) {
     1..2: return rw25sm;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+switch (FEAT_TRAINS, SELF, switch_rw25sm_cargo_subtype, cargo_subtype) {
+    0: string(STR_WITHOUT_NAMEPLATE);
+    1: string(STR_WITH_NAMEPLATE);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25sm_graphics_subtype, cargo_subtype) {
+    0: spriteset_rw25sm_original;
+    1: spriteset_rw25sm_name;
+}
+
 switch (FEAT_TRAINS, SELF, switch_rw25sm_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_rw25sm_original;
+    1: switch_rw25sm_graphics_subtype;
     empty_sprites;
 }
 
@@ -67,8 +82,9 @@ item (FEAT_TRAINS, rw25sm) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RW25SM), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_COMFORT_HIGH, 384));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_RW25SM), string(STR_AIR_CONDITIONER_NEED_POWER), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_WITHOUT_NAMEPLATE), string(STR_WITH_NAMEPLATE)), string(STR_COMFORT_HIGH, 384));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_rw25sm_cargo_subtype;
 
         // Graphics
         default:                        switch_rw25sm_graphics;

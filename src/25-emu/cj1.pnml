@@ -44,7 +44,7 @@ switch (FEAT_TRAINS, SELF, switch_cj1_graphics, position_in_articulated_veh % 3)
 }
 
 switch (FEAT_TRAINS, SELF, switch_cj1_head_capacity, position_in_articulated_veh % 3) {
-    1: return 48;
+    1: return 120;
     return 0;
 }
 

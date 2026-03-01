@@ -1,5 +1,10 @@
 // Begin qj
 
+switch (FEAT_TRAINS, SELF, switch_qj_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_QJ_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+
 // Graphics
 
 spriteset (spriteset_qj_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
@@ -78,12 +83,12 @@ switch (FEAT_TRAINS, SELF, switch_weight_qj, cargo_subtype) {
 
 switch (FEAT_TRAINS, SELF, switch_qj_te_year_depend, build_year) {
     0..1980: return int(0.1587*255);
-    return int(0.1337*255);
+    return int(0.1334*255);
 }
 switch (FEAT_TRAINS, SELF, switch_qj_te, cargo_subtype) {
     0: switch_qj_te_year_depend;
     1: return int(0.1587*255);
-    return int(0.1337*255);
+    return int(0.1334*255);
 
 }
 
@@ -94,6 +99,7 @@ item (FEAT_TRAINS, qj) {
         // Don't Change - It is crucial
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         climates_available:             ALL_CLIMATES;
+        variant_group:					heping;
 
         // Don't Change - Unless it is not a steam locomotive
         engine_class:                   ENGINE_CLASS_STEAM;
@@ -115,15 +121,15 @@ item (FEAT_TRAINS, qj) {
 
         // Change them accordingly
         name:                           string(STR_NAME_QJ);
-        introduction_date:              date(1956,10,01);
+        introduction_date:              date(1964,10,01);
         model_life:                     60;
-        retire_early:                   28;
+        retire_early:                   36;
         vehicle_life:                   35;
         track_type:                     SABN;
         loading_speed:                  8 << param_loading_speed;
         cargo_age_period:               185 << param_cargo_decay;
         speed:                          80 km/h;
-        power:                          2940 hpM;
+        power:                          2980 hpM;
         weight:                         214 ton;
         tractive_effort_coefficient:    0.1587;
         reliability_decay:              12;
@@ -149,6 +155,7 @@ item (FEAT_TRAINS, qj) {
         purchase_cargo_capacity:        0;
         weight:                         switch_weight_qj;
         tractive_effort_coefficient:    switch_qj_te;
+        name:                           switch_qj_name;
     }
 }
 

@@ -16,6 +16,19 @@ spriteset (spriteset_rz225g_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP
 spriteset (spriteset_rz225g_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "rz225g-jinwen")
 }
+spriteset (spriteset_rz225g_jinggangshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "rz225g-jinggangshan")
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz225g_cargo_subtype, cargo_subtype) {
+    0: return string(STR_JINWEN);
+    1: return string(STR_JINGGANGSHAN);
+}
+
+switch (FEAT_TRAINS, SELF, switch_rz225g_graphics_subtype, cargo_subtype) {
+    0: spriteset_rz225g_jinwen;
+    1: spriteset_rz225g_jinggangshan;
+}
 
 switch (FEAT_TRAINS, SELF, switch_rz225g_articulated_part, extra_callback_info1) {
     1..2: return rz225g;
@@ -23,7 +36,7 @@ switch (FEAT_TRAINS, SELF, switch_rz225g_articulated_part, extra_callback_info1)
 }
 
 switch (FEAT_TRAINS, SELF, switch_rz225g_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_rz225g_jinwen;
+    1: switch_rz225g_graphics_subtype;
     empty_sprites;
 }
 
@@ -70,12 +83,13 @@ item (FEAT_TRAINS, rz225g) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RZ225G), string(STR_COMFORT_MEDIUM, 192));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RZ225G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_JINWEN), string(STR_JINGGANGSHAN)), string(STR_COMFORT_MEDIUM, 192));
         can_attach_wagon:               locowagon;
 
         // Graphics
         default:                        switch_rz225g_graphics;
         purchase:                       spriteset_rz225g_purchase_original;
+        cargo_subtype_text:             switch_rz225g_cargo_subtype;
         articulated_part:               switch_rz225g_articulated_part;
 
         // Stats

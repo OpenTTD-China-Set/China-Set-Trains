@@ -30,6 +30,15 @@ spriteset (spriteset_xl25k_gmsr, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_xl25k_guangshen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25k", "xl25k-guangshen")
 }
+spriteset (spriteset_xl25k_blue_red, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "xl25k-blue-red")
+}
+spriteset (spriteset_xl25k_shenyang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "xl25k-shenyang")
+}
+spriteset (spriteset_xl25k_shiqin, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "xl25k-sq")
+}
 
 switch (FEAT_TRAINS, SELF, switch_xl25k_cargo_subtype, cargo_subtype) {
     0: return string(STR_BUILD_YEAR);
@@ -37,6 +46,9 @@ switch (FEAT_TRAINS, SELF, switch_xl25k_cargo_subtype, cargo_subtype) {
     2: return string(STR_GAOZU_GREEN);
     3: return string(STR_GMSR);
     4: return string(STR_GUANGSHEN);
+    5: return string(STR_RBG_PLUG);
+    6: return string(STR_RED_SKYBLUE_GRAY);
+    7: return string(STR_SHIQIN);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -55,6 +67,9 @@ switch (FEAT_TRAINS, SELF, switch_xl25k_graphics_subtype, cargo_subtype) {
     2: spriteset_xl25k_green;
     3: spriteset_xl25k_gmsr;
     4: spriteset_xl25k_guangshen;
+    5: spriteset_xl25k_blue_red;
+    6: spriteset_xl25k_shenyang;
+    7: spriteset_xl25k_shiqin;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25k_graphics, position_in_articulated_veh % 3) {
@@ -107,7 +122,7 @@ item (FEAT_TRAINS, xl25k) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_XL25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_GMSR), string(STR_GUANGSHEN)), string(STR_FRESHNESS_MEDIUM, 200));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_XL25K), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_GMSR), string(STR_GUANGSHEN), string(STR_RBG_PLUG), string(STR_RED_SKYBLUE_GRAY), string(STR_SHIQIN)), string(STR_FRESHNESS_MEDIUM, 200));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_xl25k_cargo_subtype;
 

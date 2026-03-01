@@ -18,10 +18,19 @@ spriteset (spriteset_yz25t_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/yz25t-green")
 }
 spriteset (spriteset_yz25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "25t/yz25t-xz")
+    template_standard ("coaches", "25t/yz25t-xz-1")
 }
 spriteset (spriteset_bspyz25t_qingzang, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "25t/bspyz25t-xz")
+}
+spriteset (spriteset_yz25t_jinlun, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/yz25t-jinlun")
+}
+spriteset (spriteset_yz25t_yili, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/yz25t-yili")
+}
+spriteset (spriteset_yz25t_2008, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "25t/yz25t-2008")
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25t_articulated_part, extra_callback_info1) {
@@ -35,6 +44,9 @@ switch (FEAT_TRAINS, SELF, switch_yz25t_cargo_subtype, cargo_subtype) {
     2: string(STR_GAOZU_GREEN);
     3: string(STR_QINGZANG);
     4: string(STR_QINGZANG_BSP);
+    5: string(STR_JINLUN);
+    6: string(STR_YILI);
+    7: string(STR_2008);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -52,6 +64,9 @@ switch (FEAT_TRAINS, SELF, switch_yz25t_graphics_subtype, cargo_subtype) {
     2: spriteset_yz25t_green;
     3: spriteset_yz25t_qingzang;
     4: spriteset_bspyz25t_qingzang;
+    5: spriteset_yz25t_jinlun;
+    6: spriteset_yz25t_yili;
+    7: spriteset_yz25t_2008;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz25t_graphics, position_in_articulated_veh % 3) {
@@ -101,7 +116,7 @@ item (FEAT_TRAINS, yz25t) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YZ25T), string(STR_YZ_YW25T_LIVERY_AVAILABILITY), string(STR_COMFORT_LOW, 160));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YZ25T), string(STR_YZ25T_LIVERY_AVAILABILITY), string(STR_COMFORT_LOW, 160));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_yz25t_cargo_subtype;
 

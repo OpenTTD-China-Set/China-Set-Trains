@@ -1,0 +1,109 @@
+//Begin 25K_Prototype
+switch (FEAT_TRAINS, SELF, switch_rw25k_prototype_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_25K_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_rw25k_prototype_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches/25k","rw25k-t31")
+}
+
+// Vehicle
+spriteset (spriteset_rw25k_prototype_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "rw25k-t31")
+}
+spriteset (spriteset_rw25k_prototype_green, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25k", "rw25k-t31-green")
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25k_prototype_articulated_part, extra_callback_info1) {
+    1..2: return rw25k_prototype;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25k_prototype_graphics_subtype, cargo_subtype) {
+    0: spriteset_rw25k_prototype_original;
+    1: spriteset_rw25k_prototype_green;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25k_prototype_graphics, position_in_articulated_veh % 3) {
+    1: switch_rw25k_prototype_graphics_subtype;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25k_prototype_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_GAOZU_GREEN);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_rw25k_prototype_capacity, position_in_articulated_veh % 3) {
+    1: return 24;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, rw25k_prototype) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_RW25K_PROTOTYPE);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					2058;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1999,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 24;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          160 km/h;
+        power:                          0 hp;
+        weight:                         50 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_RW25K_PROTOTYPE), string(STR_RW25K_PROTOTYPE_LIVERY_AVAILABILITY), string(STR_COMFORT_VERY_HIGH, 640));
+        can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_rw25k_prototype_cargo_subtype;
+
+        // Graphics
+        default:                        switch_rw25k_prototype_graphics;
+        purchase:                       spriteset_rw25k_prototype_purchase;
+        articulated_part:               switch_rw25k_prototype_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_rw25k_prototype_capacity;
+        cargo_age_period:               (40 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    18;
+        running_cost_factor:            15 * runningcostfactor() * cafecostfactor() + accostfactor();
+        purchase_running_cost_factor:   60;
+        purchase_cargo_capacity:        24/3;
+        name:                            switch_rw25k_prototype_name;
+
+    }
+}
+
+// End RW25K_Prototype

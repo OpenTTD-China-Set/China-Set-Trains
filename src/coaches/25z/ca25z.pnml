@@ -9,21 +9,15 @@ switch (FEAT_TRAINS, SELF, switch_ca25z_name, getbits(extra_callback_info1, 0, 8
 
 // Purchase Menu
 spriteset (spriteset_ca25z_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches/25z", "ca25z-1")
+    template_purchase ("coaches/25z", "ca25z")
 }
 
 // Vehicle
-spriteset (spriteset_ca25z_beijing_1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches/25z", "ca25z-1")
+spriteset (spriteset_ca25z_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25z", "ca25z")
 }
-spriteset (spriteset_ca25z_beijing_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches/25z", "ca25z-2")
-}
-spriteset (spriteset_ca25z_beijing_colourfading_1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches/25z", "ca25z-colourfading-1")
-}
-spriteset (spriteset_ca25z_beijing_colourfading_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches/25z", "ca25z-colourfading-2")
+spriteset (spriteset_ca25z_beijing_colourfading, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25z", "ca25z-colourfading")
 }
 spriteset (spriteset_ca25z_guangzhou_changke_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25z", "ca25z-guangzhou-changke-a")
@@ -49,20 +43,9 @@ switch (FEAT_TRAINS, SELF, switch_ca25z_cargo_subtype, cargo_subtype) {
     return CB_RESULT_NO_TEXT;
 }
 
-random_switch (FEAT_TRAINS, SELF, random_ca25z_beijing) {
-    1: spriteset_ca25z_beijing_1;
-    1: spriteset_ca25z_beijing_2;
-}
-
-random_switch (FEAT_TRAINS, SELF, random_ca25z_beijing_colourfading) {
-    1: spriteset_ca25z_beijing_colourfading_1;
-    1: spriteset_ca25z_beijing_colourfading_2;
-}
-
-
 switch (FEAT_TRAINS, SELF, switch_ca25z_graphics_subtype, cargo_subtype) {
-    0: random_ca25z_beijing;
-    1: random_ca25z_beijing_colourfading;
+    0: spriteset_ca25z_beijing;
+    1: spriteset_ca25z_beijing_colourfading;
     2: spriteset_ca25z_guangzhou_changke_a;
     3: spriteset_ca25z_guangzhou_sifang_a;
 /*     4: spriteset_ca25z_guangzhou_green; */

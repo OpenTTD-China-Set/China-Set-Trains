@@ -1,0 +1,91 @@
+//Begin CA25A
+
+// Graphics
+
+// Purchase Menu
+
+spriteset (spriteset_ca25a_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("coaches/25a", "ca25a")
+}
+
+// Vehicle
+spriteset (spriteset_ca25a_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25a", "ca25a")
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25a_articulated_part, extra_callback_info1) {
+    1..2: return ca25a;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25a_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_ca25a_original;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_ca25a_capacity, position_in_articulated_veh % 3) {
+    1: return 48;
+    return 0;
+}
+
+item (FEAT_TRAINS, ca25a) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CA25A);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					yz25a;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1989,01,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 48;
+        loading_speed:                  4 << param_loading_speed;
+        cargo_age_period:               200 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          0 hp;
+        weight:                         44.5 ton;
+        cost_factor:                    8;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+        bitmask_vehicle_info:           bitmask(1);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_CA25A), string(STR_CAFE_EFFECT),  string(STR_COMFORT_MEDIUM, 200));
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_ca25a_graphics;
+        purchase:                       spriteset_ca25a_purchase_original;
+        articulated_part:               switch_ca25a_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        cargo_capacity:                 switch_ca25a_capacity;
+        cargo_age_period:               (10 * acdecayfactor() * cafedecayfactor()) << param_cargo_decay;
+        cost_factor:                    26;
+        running_cost_factor:            5 * runningcostfactor() + accostfactor() + 50; // IT IS A RESTAURANT CAR!
+        purchase_running_cost_factor:   70;
+        purchase_cargo_capacity:        48/3;
+        name:                           switch_25a_name;
+
+    }
+}
+
+// End CA25A
+
