@@ -33,7 +33,7 @@ switch (FEAT_TRAINS, SELF, switch_sca25bhd_articulated_part, extra_callback_info
 
 switch (FEAT_TRAINS, SELF, switch_sca25bhd_cargo_subtype, cargo_subtype) {
     0: return string(STR_CHANGSHA2);
-    1: return string(STR_URUMQI);
+    1: return string(STR_LIVERY_VERITY_URUMQI);
     2: return string(STR_KUITUN);
     3: return string(STR_JINAN2);
     4: return string(STR_CHANGSHA_SHENZHEN);

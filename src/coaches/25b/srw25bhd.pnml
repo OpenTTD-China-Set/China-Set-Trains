@@ -40,7 +40,7 @@ switch (FEAT_TRAINS, SELF, switch_srw25bhd_cargo_subtype, cargo_subtype) {
     0: return string(STR_CHANGSHA2);
     1: return string(STR_GAOZU_GREEN);
     2: return string(STR_RED);
-    3: return string(STR_URUMQI);
+    3: return string(STR_LIVERY_VERITY_URUMQI);
     4: return string(STR_93_94);
     5: return string(STR_KUITUN);
     6: return string(STR_JINAN2);

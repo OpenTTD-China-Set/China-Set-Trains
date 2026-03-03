@@ -43,6 +43,9 @@ spriteset (spriteset_xl25g_changsha, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_xl25g_russia, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25g", "xl25g-ly")
 }
+spriteset (spriteset_xl25g_orange, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches/25g", "xl25g-orange")
+}
 switch (FEAT_TRAINS, SELF, switch_xl25g_articulated_part, extra_callback_info1) {
     1..2: return xl25g;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
@@ -60,6 +63,7 @@ switch (FEAT_TRAINS, SELF, switch_xl25g_cargo_subtype, cargo_subtype) {
     8: return string(STR_FULONG);
     9: return string(STR_CHANGSHA2);
     10: return string(STR_INTERNATIONAL_RU_MN);
+    11: return string(STR_ORANGE);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -83,6 +87,7 @@ switch (FEAT_TRAINS, SELF, switch_xl25g_graphics_subtype, cargo_subtype) {
     8: spriteset_xl25g_fulong;
     9: spriteset_xl25g_changsha;
     10: spriteset_xl25g_russia;
+    11: spriteset_xl25g_orange;
 }
 
 switch (FEAT_TRAINS, SELF, switch_xl25g_graphics, position_in_articulated_veh % 3) {
@@ -133,7 +138,7 @@ item (FEAT_TRAINS, xl25g) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_XL25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN), string(STR_CHANGSHA2), string(STR_GMSR), string(STR_GMSR_EARLY), string(STR_HEJIU), string(STR_FULONG), string(STR_INTERNATIONAL_RU_MN)), string(STR_FRESHNESS_MEDIUM, 200));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_XL25G), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GAOZU_GREEN), string(STR_JINWEN), string(STR_JINWEN_GREEN), string(STR_CHANGSHA2), string(STR_GMSR), string(STR_GMSR_EARLY), string(STR_HEJIU), string(STR_FULONG), string(STR_INTERNATIONAL_RU_MN), string(STR_ORANGE)), string(STR_FRESHNESS_MEDIUM, 200));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_xl25g_cargo_subtype;
 
