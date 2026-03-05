@@ -9,63 +9,113 @@ switch (FEAT_TRAINS, SELF, switch_cr200jb_name, getbits(extra_callback_info1, 0,
 
 // Purchase Menu
 spriteset (spriteset_cr200jb_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("25-emu", "cr200j-b-m")
+    template_purchase ("25-emu/cr200jb", "cr200j-b-m")
 }
 
 // Vehicle
-/* spriteset (spriteset_cr200jb_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr200j-b-m")
-}
-spriteset (spriteset_cr200jb_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr200j-b-t")
-}
-spriteset (spriteset_cr200jb_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr200j-b-c")
-}
- */
+
+ 
 
 spriteset (spriteset_cr200jb_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr200j-b-m")
+    template_standard ("25-emu/cr200jb", "cr200j-b-m")
 }
-spriteset (spriteset_cr200jb_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr200j-b-t")
+/* spriteset (spriteset_cr200jb_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200jb", "cr200j-b-t")
 }
 spriteset (spriteset_cr200jb_middle_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr200j-b-t")
+    template_reversed ("25-emu/cr200jb", "cr200j-b-t")
+} */
+spriteset (spriteset_cr200jb_ze, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200jb", "cr200j-b-t-ze")
+}
+spriteset (spriteset_cr200jb_ze_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200jb", "cr200j-b-t-ze")
+}
+spriteset (spriteset_cr200jb_zec, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200jb", "cr200j-b-t-zec")
+}
+spriteset (spriteset_cr200jb_zec_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200jb", "cr200j-b-t-zec")
 }
 spriteset (spriteset_cr200jb_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr200j-b-c")
+    template_standard ("25-emu/cr200jb", "cr200j-b-c")
 }
 spriteset (spriteset_cr200jb_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed_10 ("25-emu", "cr200j-b-m")
+    template_reversed_10 ("25-emu/cr200jb", "cr200j-b-m")
 }
 spriteset (spriteset_cr200jb_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr200j-b-c-c")
+    template_standard ("25-emu/cr200jb", "cr200j-b-c-c")
 }
 spriteset (spriteset_cr200jb_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr200j-b-c-c")
+    template_reversed ("25-emu/cr200jb", "cr200j-b-c-c")
 }
 
 spriteset (spriteset_cr200jb_pangang_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr200j-pangang-m")
+    template_standard ("25-emu/cr200jb", "cr200j-b-pangang-m")
 }
-spriteset (spriteset_cr200jb_pangang_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr200j-pangang-t")
+/* spriteset (spriteset_cr200jb_pangang_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200jb", "cr200j-b-pangang-t")
 }
 spriteset (spriteset_cr200jb_pangang_middle_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr200j-pangang-t")
+    template_reversed ("25-emu/cr200jb", "cr200j-b-pangang-t")
+} */
+spriteset (spriteset_cr200jb_pangang_ze, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200jb", "cr200j-b-pangang-t-ze")
+}
+spriteset (spriteset_cr200jb_pangang_ze_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200jb", "cr200j-b-pangang-t-ze")
+}
+spriteset (spriteset_cr200jb_pangang_zec, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200jb", "cr200j-b-pangang-t-zec")
+}
+spriteset (spriteset_cr200jb_pangang_zec_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200jb", "cr200j-b-pangang-t-zec")
 }
 spriteset (spriteset_cr200jb_pangang_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr200j-pangang-c")
+    template_standard ("25-emu/cr200jb", "cr200j-b-pangang-c")
 }
 spriteset (spriteset_cr200jb_pangang_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed_10 ("25-emu", "cr200j-pangang-m")
+    template_reversed_10 ("25-emu/cr200jb", "cr200j-b-pangang-m")
 }
 spriteset (spriteset_cr200jb_pangang_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr200j-pangang-c-c")
+    template_standard ("25-emu/cr200jb", "cr200j-b-pangang-c-c")
 }
 spriteset (spriteset_cr200jb_pangang_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_reversed ("25-emu", "cr200j-pangang-c-c")
+    template_reversed ("25-emu/cr200jb", "cr200j-b-pangang-c-c")
+}
+
+spriteset (spriteset_cr200jb_int_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200jb", "cr200j-b-int-m")
+}
+/* spriteset (spriteset_cr200jb_int_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200jb", "cr200j-b-int-t")
+}
+spriteset (spriteset_cr200jb_int_middle_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200jb", "cr200j-b-int-t")
+} */
+spriteset (spriteset_cr200jb_int_ze, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200jb", "cr200j-b-int-t-ze")
+}
+spriteset (spriteset_cr200jb_int_ze_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200jb", "cr200j-b-int-t-ze")
+}
+spriteset (spriteset_cr200jb_int_zec, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200jb", "cr200j-b-int-t-zec")
+}
+spriteset (spriteset_cr200jb_int_zec_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200jb", "cr200j-b-int-t-zec")
+}
+spriteset (spriteset_cr200jb_int_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200jb", "cr200j-b-int-c")
+}
+spriteset (spriteset_cr200jb_int_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed_10 ("25-emu/cr200jb", "cr200j-b-int-m")
+}
+spriteset (spriteset_cr200jb_int_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200jb", "cr200j-b-int-c-c")
+}
+spriteset (spriteset_cr200jb_int_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200jb", "cr200j-b-int-c-c")
 }
 
 
@@ -82,37 +132,77 @@ switch (FEAT_TRAINS, SELF, cr200jbwagon, vehicle_type_id) {
 switch (FEAT_TRAINS, SELF, swtich_cr200jb_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGINAL);
     1: return string(STR_PANGANG);
+    2: return string(STR_INTERNATIONAL_LA);
     return CB_RESULT_NO_TEXT;
 }
 
 //GFX
+switch (FEAT_TRAINS, SELF, switch_cr200jb_middle_wagon_type, vehicle_type_id) {
+    1024..1028: spriteset_cr200jb_ze;
+    1035: spriteset_cr200jb_zec;
+    return spriteset_erroremu;
+}
+switch (FEAT_TRAINS, SELF, switch_cr200jb_middle_wagon_reversed_type, vehicle_type_id) {
+    1024..1028: spriteset_cr200jb_ze_reversed;
+    1035: spriteset_cr200jb_zec_reversed;
+    return spriteset_erroremu;
+}
+switch (FEAT_TRAINS, SELF, switch_cr200jb_pangang_middle_wagon_type, vehicle_type_id) {
+    1024..1028: spriteset_cr200jb_pangang_ze;
+    1035: spriteset_cr200jb_pangang_zec;
+    return spriteset_erroremu;
+}
+switch (FEAT_TRAINS, SELF, switch_cr200jb_pangang_middle_wagon_reversed_type, vehicle_type_id) {
+    1024..1028: spriteset_cr200jb_pangang_ze_reversed;
+    1035: spriteset_cr200jb_pangang_zec_reversed;
+    return spriteset_erroremu;
+}
+switch (FEAT_TRAINS, SELF, switch_cr200jb_int_middle_wagon_type, vehicle_type_id) {
+    1024..1028: spriteset_cr200jb_int_ze;
+    1035: spriteset_cr200jb_int_zec;
+    return spriteset_erroremu;
+}
+switch (FEAT_TRAINS, SELF, switch_cr200jb_int_middle_wagon_reversed_type, vehicle_type_id) {
+    1024..1028: spriteset_cr200jb_int_ze_reversed;
+    1035: spriteset_cr200jb_int_zec_reversed;
+    return spriteset_erroremu;
+}
+
+
 switch (FEAT_TRAINS, SELF, switch_cr200jb_graphics_front1, cargo_subtype) {
     0: spriteset_cr200jb_front;
     1: spriteset_cr200jb_pangang_front;
+    2: spriteset_cr200jb_int_front;
 }
 switch (FEAT_TRAINS, SELF, switch_spriteset_cr200jb_back, cargo_subtype) {
     0: spriteset_cr200jb_back;
     1: spriteset_cr200jb_pangang_back;
+    2: spriteset_cr200jb_int_back;
 }
 switch (FEAT_TRAINS, SELF, switch_spriteset_cr200jb_cab_reconect, cargo_subtype) {
     0: spriteset_cr200jb_cab_reconect;
     1: spriteset_cr200jb_pangang_cab_reconect;
+    2: spriteset_cr200jb_int_cab_reconect;
 }
 switch (FEAT_TRAINS, SELF, switch_spriteset_cr200jb_cab_reconect_reversed, cargo_subtype) {
     0: spriteset_cr200jb_cab_reconect_reversed;
     1: spriteset_cr200jb_pangang_cab_reconect_reversed;
+    2: spriteset_cr200jb_int_cab_reconect_reversed;
 }
-switch (FEAT_TRAINS, SELF, switch_cr200jb_if_middle_wagon, cargo_subtype) {
-    0: spriteset_cr200jb_middle;
-    1: spriteset_cr200jb_pangang_middle;
+switch (FEAT_TRAINS, SELF, switch_cr200jb_if_middle_wagon_livery, cargo_subtype) {
+    0: switch_cr200jb_middle_wagon_type;
+    1: switch_cr200jb_pangang_middle_wagon_type;
+    2: switch_cr200jb_int_middle_wagon_type;
 }
-switch (FEAT_TRAINS, SELF, switch_cr200jb_if_middle_wagon_reversed1, cargo_subtype) {
-    0: spriteset_cr200jb_middle_reversed;
-    1: spriteset_cr200jb_pangang_middle_reversed;
+switch (FEAT_TRAINS, SELF, switch_cr200jb_if_middle_wagon_reversed_livery, cargo_subtype) {
+    0: switch_cr200jb_middle_wagon_reversed_type;
+    1: switch_cr200jb_pangang_middle_wagon_reversed_type;
+    2: switch_cr200jb_int_middle_wagon_reversed_type;
 }
 switch (FEAT_TRAINS, SELF, switch_spriteset_cr200jb_cab, cargo_subtype) {
     0: spriteset_cr200jb_cab;
     1: spriteset_cr200jb_pangang_cab;
+    2: spriteset_cr200jb_int_cab;
 }
 
 //(((count_veh_id(9223) == 3) && (num_vehs_in_consist != 3)) || ((count_veh_id(9223) == 6) && (hasbit(bitmask_consist_info, 0) == 0))) && (((num_vehs_in_consist < 12) ^ (num_vehs_in_vehid_chain == 6)) || (num_vehs_in_consist > 72))
@@ -155,8 +245,8 @@ switch (FEAT_TRAINS, SELF, switch_cr200jb_cab_half, ((position_in_consist / 3) +
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jb_if_middle_wagon_reversed, ((position_in_consist / 3) + 1) > (num_vehs_in_consist / 6)) {
-    1: switch_cr200jb_if_middle_wagon_reversed1;
-    switch_cr200jb_if_middle_wagon;
+    1: switch_cr200jb_if_middle_wagon_reversed_livery;
+    switch_cr200jb_if_middle_wagon_livery;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jb_middle_wagon_reconect, (((position_in_consist / 3) + 1) == (num_vehs_in_consist / 6)) || ((position_in_consist / 3) == (num_vehs_in_consist / 6))) {
@@ -165,7 +255,7 @@ switch (FEAT_TRAINS, SELF, switch_cr200jb_middle_wagon_reconect, (((position_in_
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jb_length_class, count_veh_id(9223)) {
-    0: switch_cr200jb_if_middle_wagon;
+    0: switch_cr200jb_if_middle_wagon_livery;
     switch_cr200jb_middle_wagon_reconect;
 }
 

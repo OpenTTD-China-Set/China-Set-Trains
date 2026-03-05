@@ -42,11 +42,35 @@ spriteset (spriteset_cr200jsg_m_diesel_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32B
     template_reversed_10 ("multipower-mu/cr200jsg", "cr200jsg-m-diesel")
 }
 
-spriteset (spriteset_cr200jsg_t_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+/* spriteset (spriteset_cr200jsg_t_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("multipower-mu/cr200jsg", "cr200jsg-t")
 }
 spriteset (spriteset_cr200jsg_t_middle_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("multipower-mu/cr200jsg", "cr200jsg-t")
+} */
+spriteset (spriteset_cr200jsg_t_ze, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("multipower-mu/cr200jsg", "cr200jsg-t-ze")
+}
+spriteset (spriteset_cr200jsg_t_ze_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("multipower-mu/cr200jsg", "cr200jsg-t-ze")
+}
+spriteset (spriteset_cr200jsg_t_zy, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("multipower-mu/cr200jsg", "cr200jsg-t-zy")
+}
+spriteset (spriteset_cr200jsg_t_zy_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("multipower-mu/cr200jsg", "cr200jsg-t-zy")
+}
+spriteset (spriteset_cr200jsg_t_zys, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("multipower-mu/cr200jsg", "cr200jsg-t-zys")
+}
+spriteset (spriteset_cr200jsg_t_zys_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("multipower-mu/cr200jsg", "cr200jsg-t-zys")
+}
+spriteset (spriteset_cr200jsg_t_zec, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("multipower-mu/cr200jsg", "cr200jsg-t-zec")
+}
+spriteset (spriteset_cr200jsg_t_zec_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("multipower-mu/cr200jsg", "cr200jsg-t-zec")
 }
 
 
@@ -93,6 +117,22 @@ switch (FEAT_TRAINS, SELF, switch_cr200jsg_consist_correction, vehicle_type_id) 
 }
 
 // Graphics
+
+switch (FEAT_TRAINS, SELF, switch_spriteset_cr200jsg_middle_type, vehicle_type_id) {
+    1024: spriteset_cr200jsg_t_ze;
+    1025: spriteset_cr200jsg_t_ze;
+    1027..1028: spriteset_cr200jsg_t_ze;
+    1035: spriteset_cr200jsg_t_zec;
+    return spriteset_erroremu;
+}
+switch (FEAT_TRAINS, SELF, switch_spriteset_cr200jsg_middle_type_reversed, vehicle_type_id) {
+    1024: spriteset_cr200jsg_t_ze_reversed;
+    1025: spriteset_cr200jsg_t_ze_reversed;
+    1027..1028: spriteset_cr200jsg_t_ze_reversed;
+    1035: spriteset_cr200jsg_t_zec_reversed;
+    return spriteset_erroremu;
+}
+
 switch(FEAT_TRAINS, SELF, switch_cr200jsg_mc_electric_front, tile_powers_railtype("SACA")) {
     1: spriteset_cr200jsg_mc_electric_front_up;
     spriteset_cr200jsg_mc_electric_front_down;
@@ -138,8 +178,8 @@ switch (FEAT_TRAINS, SELF, switch_cr200jsg_diesel_graphics, position_in_articula
 
 
 switch (FEAT_TRAINS, SELF, switch_cr200jsg_if_middle_wagon_reversed, ((position_in_consist / 3) + 1) > (num_vehs_in_consist / 6)) {
-    1: spriteset_cr200jsg_t_middle_reversed;
-    spriteset_cr200jsg_t_middle;
+    1: switch_spriteset_cr200jsg_middle_type_reversed;
+    switch_spriteset_cr200jsg_middle_type;
 }
 
 switch (FEAT_TRAINS, SELF, switch_cr200jsg_wagon_graphics, (position_in_consist_from_end % 3) == 1) {

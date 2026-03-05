@@ -10,6 +10,10 @@ China Set: Trains Changelog
 Add: SL7, ND2, DF8, 18 Series Gen5, 25A Series
 Add Liveries for 25K, 25T, 25Z, 25G, 25B
 Renew sprites of 25K, 25T, 25Z, 25G, 25B
+Completed the CR200J Series:
+    - ADD CR200J-D
+    - Now sprites of wagon change by type of seat
+    - CR200JCL now can attach luggage wagon(kymuw)
 Fix: some wrong or misspelt language strings
 Fix: CR200JA sprite errors
 Fix: SLeeper EMUs cargo decay wrong
