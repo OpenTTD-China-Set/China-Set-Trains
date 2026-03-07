@@ -29,6 +29,11 @@ STR_PARAM_WAGON_CARGO_DECAY_DESC,"Set cargo age period of mail and freight wagon
 STR_USED_WITH_DYNAMIC_ENGINES,"This GRF needs dynamic_engines to be turned on. Open console, and type ""set dynamic_engines 1"".","请切换至控制台模式，键入 ""set dynamic_engines 1""， 否则您无法游玩中国包。"
 # Name,,
 STR_NAME_HA1,Ha 1 (Passenger Coach),ハ1 (客车)
+STR_NAME_HA8,Ha 8 (Passenger Coach),ハ8 (客车)
+STR_NAME_RO8,Ro 8 (Passenger Coach),ロ8 (客车)
+STR_NAME_I8,I 8 (Passenger Coach),イ8 (客车)
+STR_NAME_TENI8,Ten'i 8 (Observation Carriage),テンイ8 (展望车)
+STR_NAME_SHI8,Shi 8 (Restaurant Car),シ8 (餐车)
 STR_NAME_YZ1,YZ1 (Passenger Coach),YZ1 (客车)
 STR_NAME_YW18_4,YW18 (Gen4) (Passenger Coach),YW18 (第四代) (客车)
 STR_NAME_RW18_4,RW18 (Gen4) (Passenger Coach),RW18 (第四代) (客车)
@@ -115,7 +120,7 @@ STR_NAME_YZ25K,YZ25K (Passenger Coach),YZ25K (客车)
 STR_NAME_RZ25K,RZ25K (Passenger Coach),RZ25K (客车)
 STR_NAME_YW25K,YW25K (Passenger Coach),YW25K (客车)
 STR_NAME_RW25K,RW25K (Passenger Coach),RW25K (客车)
-STR_NAME_RW25K_PROTOTYPE,RW25K Prototype (Passenger Coach),RW25K长客实验版 (客车)
+STR_NAME_RW25K_PROTOTYPE,RW25K (Experimental)(Passenger Coach),RW25K (长客实验版) (客车)
 STR_NAME_SYZ25KLD,SYZ25K (Passenger Coach) (Low-Door),SYZ25K (客车) (低开门)
 STR_NAME_SRZ25KLD,SRZ25K (Passenger Coach) (Low-Door),SRZ25K (客车) (低开门)
 STR_NAME_SYZ25KHD,SYZ25K (Passenger Coach) (High-Door),SYZ25K (客车) (高开门)
@@ -134,6 +139,7 @@ STR_NAME_RW25T,RW25T (Passenger Coach),RW25T (客车)
 STR_NAME_RW25T_JT,RW25T (Jitong Railway) (Passenger Coach),RW25T (集通铁路) (客车)
 STR_NAME_CA25T,CA25T (Restaurant Car),CA25T (餐车)
 STR_NAME_YZ31,YZ31 (Passenger Coach),YZ31 (客车)
+STR_NAME_TEYU8,Teyu 8 (Luggage Railway Post Office),テユ8 (行李邮政车)
 STR_NAME_XL18_4,XL18 (Gen4) (Luggage Car),XL18 (第四代) (行李车)
 STR_NAME_XL18GEN5,XL18 (Gen5) (Luggage Car),XL18 (第五代) (行李车)
 STR_NAME_XL21,XL21 (Luggage Car),XL21 (行李车)
@@ -332,7 +338,7 @@ STR_NAME_FXD1B,FXD1B (Electric),FXD1B (电力)
 STR_NAME_FXD1B1000,FXD1B-1000 (Electric),FXD1B-1000 (电力)
 STR_NAME_FXD2B,FXD2B (Electric),FXD2B (电力)
 STR_NAME_FXD2B1000,FXD2B-1000 (Electric),FXD2B-1000 (电力)
-STR_NAME_FXSY,FXSY (Electric),FXSY (电力)
+STR_NAME_FXSY,FXSY (Hybrid),FXSY (混合动力)
 STR_NAME_CHA1C,CHA1C (Hybrid),CHA1C (混合动力)
 STR_NAME_NC3,NC3 (DMU),NC3 (内燃动车)
 STR_NAME_NZJ1_XINSHUGUANG,"NZJ1 ""Xinshuguang"" (DMU)","NZJ1 ""新曙光号"" (内燃动车)"
@@ -683,6 +689,7 @@ STR_CR200J_SERIES,CR200J Series (EMU),CR200J系列 (电力动车组)
 STR_CR400AF_SERIES,CR400AF Series (EMU),CR400AF系列 (电力动车组)
 STR_CR400BF_SERIES,CR400BF Series (EMU),CR400BF系列 (电力动车组)
 STR_SMR_COACHES_SERIES,SMR Coaches,满铁客车
+STR_ASIA_COACHES_SERIES,Asia Express Coaches,"亚细亚号"列车客车
 STR_FIXED_COACHES_SERIES,Fixed Coaches,杂型客车
 STR_18_SERIES,Type 18 Series Coaches,18型客车
 STR_21_SERIES,Type 21 Series Coaches,21型客车
@@ -778,7 +785,7 @@ STR_UZ25T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE}Blue {
 STR_KD25T_LIVERY_AVAILABILITY,{BLACK}Livery Availability: Only {DKGREEN}Qinghai-Tibet Railway Livery,{BLACK}可供选择的涂装：仅有{DKGREEN}青藏铁路涂装
 STR_RW19T_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Original {BLUE}Blue {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Lv""  Green Livery","{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白 {GOLD}相间涂装，{DKGREEN}“高祖绿”涂装"
 STR_RW19K_2_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue-{RED}Red{WHITE}-White {GOLD}Livery, {RED}Red {GOLD}and {WHITE}White {GOLD}Livery, {DKGREEN}""Gaozu Lv"" Green Livery, {BLUE}""Dongfang"", {BLUE}""New Century"" Blue Livery, {RED}""New Century"" Red Livery, {BLUE}""Lu'neng"", {RED}""Vast Grassland""",{BLACK}可供选择的涂装：{BLUE}蓝{WHITE}白{RED}红{GOLD}相间涂装，{RED}红{WHITE}白{GOLD}相间涂装，{DKGREEN}“高祖绿”{GOLD}涂装，{BLUE}“东方号”{GOLD}涂装，{BLUE}“新世纪”蓝色{GOLD}涂装，{RED}“新世纪”红色{GOLD}涂装，{BLUE}“鲁能号”{GOLD}涂装，{RED}“大草原号”涂装
-STR_RW25K_PROTOTYPE_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Original {WHITE}livery, {DKGREEN}""Gaozu Lv"" Green {GOLD}Livery",{BLACK}可供选择的涂装：{BLUE}原版{RED}涂{WHITE}装，{DKBLUE}“高祖绿”{GOLD}涂装
+STR_RW25K_PROTOTYPE_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Original {WHITE}livery, {DKGREEN}""Gaozu Lv"" Green {GOLD}Livery",{BLACK}可供选择的涂装：{BLUE}原版{RED}涂{WHITE}装，{DKGREEN}“高祖绿”{GOLD}涂装
 STR_S25Z_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {LTBLUE}Shijiazhuang-Qinhuangdao {WHITE}Slow Train {GOLD}Livery, {BLUE}Guangzhou-{DKGREEN}-Shenzhen{WHITE} Railway{GOLD} Livery","{BLACK}可供选择的涂装：{LTBLUE}石秦{WHITE}特慢{GOLD}涂装, {BLUE}广深{DKGREEN}铁{WHITE}路{GOLD}涂装"
 STR_S25_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Blue-{GOLD}-Orange-{WHITE}-White {BLACK}Livery, other livery (unfinished}",{BLACK}可供选择的涂装：{GOLD}蓝-橙-白涂装，其他彩绘涂装尚未完成
 STR_S25KLD_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {LTBLUE}Shanghai-Luchaogang {GOLD}Livery, Liaodong Peninsula Livery (All low-door, higher loading speed)",{BLACK}可供选择的涂装：{LTBLUE}沪芦列车{GOLD}涂装，辽东半岛号 (均为低开门，装载较快)

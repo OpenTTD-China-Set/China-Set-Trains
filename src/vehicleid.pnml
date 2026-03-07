@@ -190,6 +190,13 @@ item (FEAT_TRAINS, rw19gen5, 2185){}
 item (FEAT_TRAINS, yw18gen5, 2186){}
 item (FEAT_TRAINS, kd18gen5, 2187){}
 item (FEAT_TRAINS, xl18gen5, 2188){}
+//2189- code by Babel
+item (FEAT_TRAINS, ha8, 2189){}
+item (FEAT_TRAINS, ro8, 2190){}
+item (FEAT_TRAINS, i8, 2191){}
+item (FEAT_TRAINS, teni8, 2192){}
+item (FEAT_TRAINS, shi8, 2193){}
+item (FEAT_TRAINS, teyu8, 2194){}
 
 item (FEAT_TRAINS, luggageroom_s25, 3070) {}
 item (FEAT_TRAINS, luggageroom_25, 3071) {}
