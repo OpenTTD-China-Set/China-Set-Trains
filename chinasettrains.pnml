@@ -366,6 +366,7 @@
 
 
 // Multi Power Locomotive
+#include "src/multipower-loco/fxsy.pnml"
 #include "src/multipower-loco/cha1c.pnml"
 
 // DMU

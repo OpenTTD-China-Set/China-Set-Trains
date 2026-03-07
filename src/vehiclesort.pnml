@@ -109,6 +109,7 @@ sort (FEAT_TRAINS, [
     fxd1b1000,
 /*     fxd2b, */
     fxd2b1000,
+    fxsy,
     cha1c,
     gc160,
     gc220,
@@ -169,6 +170,7 @@ sort (FEAT_TRAINS, [
     cr200jsg_diesel,
     cr200jc,
     cr200jcl,
+    cr200jd,
     cr300af,
     cr300bf,
     cr400af,

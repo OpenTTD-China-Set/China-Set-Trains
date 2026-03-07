@@ -208,7 +208,7 @@ switch (FEAT_TRAINS, SELF, switch_cr200jd_wagon_capacity_single, (position_in_co
     switch_cr200jd_cab_capacity;
 }
 
-switch (FEAT_TRAINS, SELF, switch_cr200jd_wagon_capacity, count_veh_id(9237)) {
+switch (FEAT_TRAINS, SELF, switch_cr200jd_wagon_capacity, count_veh_id(9277)) {
     0: switch_cr200jd_wagon_capacity_single;
     switch_cr200jd_wagon_capacity_reconect;
 }

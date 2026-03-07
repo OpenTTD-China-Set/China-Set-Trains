@@ -332,6 +332,7 @@ STR_NAME_FXD1B,FXD1B (Electric),FXD1B (电力)
 STR_NAME_FXD1B1000,FXD1B-1000 (Electric),FXD1B-1000 (电力)
 STR_NAME_FXD2B,FXD2B (Electric),FXD2B (电力)
 STR_NAME_FXD2B1000,FXD2B-1000 (Electric),FXD2B-1000 (电力)
+STR_NAME_FXSY,FXSY (Electric),FXSY (电力)
 STR_NAME_CHA1C,CHA1C (Hybrid),CHA1C (混合动力)
 STR_NAME_NC3,NC3 (DMU),NC3 (内燃动车)
 STR_NAME_NZJ1_XINSHUGUANG,"NZJ1 ""Xinshuguang"" (DMU)","NZJ1 ""新曙光号"" (内燃动车)"
@@ -643,6 +644,7 @@ STR_FULL_NAME_FXD2B1000,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 2B Electric Locomo
 STR_FULL_NAME_HXD3,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3 Electric Locomotive,{BLACK}全称：{GOLD}和谐3型电力机车
 STR_FULL_NAME_HXD3C,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3C Electric Locomotive,{BLACK}全称：{GOLD}和谐3C型电力机车
 STR_FULL_NAME_HXD3D,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3D Electric Locomotive,{BLACK}全称：{GOLD}和谐3D型电力机车
+STR_FULL_NAME_FXSY,{BLACK}FULLNAME: {GOLD}Fuxing Hibrid Locomotive,{BLACK}全称：{GOLD}复兴型双源机车
 # Series Name,,
 STR_JF1_SERIES,JF1 (Steam Locomotive),解放1型 (蒸汽机车)
 STR_QJ_SERIES,QJ Series (Steam Locomotive),前进系列 (蒸汽机车)
@@ -735,6 +737,7 @@ STR_SMR_VEHICLE,"{BLACK}Vehicle used by the South Manchuria Railway, a railway c
 STR_JINLUN_25DT,"Coaches use for DMU {BLUE}""JIN{WHITE}LUN""",{BLUE}金{WHITE}轮{RED}号{GOLD}内燃动车组所使用的拖车
 STR_XL25T_SSPE_DESCRIPTION,"{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.",{BLACK}新时速运递公司使用的XL25T版本。
 STR_CHA1C_DESC,"{BLACK}Hybrid Locomotive using battery on non-electrified tracks providing {BLUE}2000 kW{BLACK}, and providing {RED}2400 kW{BLACK} on 25kV AC tracks",{BLACK}混合动力机车。在非电气化路段使用电池供电，功率为{BLUE}2000 kW{BLACK}。在25kV交流供电铁路上功率为{RED}2400 kW
+STR_FXSY_DESC,"{BLACK}Hybrid  Locomotive using diesel on non-electrified tracks providing {BLUE}3250 kW{BLACK}, and providing {RED}7200 kW{BLACK} on 25kV AC tracks",{BLACK}双源机车。在非电气化路段使用内燃驱动，功率为{BLUE}3250 kW{BLACK}。在25kV交流供电铁路上功率为{RED}7200 kW
 STR_FIT_DESC,"{BLACK} Tilting Train, with higher max speed acrosing curves",{BLACK}摆式列车，更高的弯道最大通过速度
 STR_CRH2A4020_DESC,{RED}Salute to Driver Yang Yong,{RED}致敬杨勇师傅
 # Livery Availability,,

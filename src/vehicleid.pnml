@@ -385,6 +385,7 @@ item (FEAT_TRAINS, _6k, 6180) {}
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
 #define id_range_multi_loco 0x1C00..0x1FFF
 item (FEAT_TRAINS, cha1c, 7168) {}
+item (FEAT_TRAINS, fxsy, 7169) {}
 
 
 //DMU, available ID range: 8192-9215 (hex 0x2000..0x23FF)
