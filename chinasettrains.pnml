@@ -79,6 +79,14 @@
 #include "src/coaches/22b/yw22b.pnml"
 #include "src/coaches/22b/rw22b.pnml"
 
+#include "src/coaches/24/rz24hk.pnml"
+#include "src/coaches/24/rz24ca.pnml"
+#include "src/coaches/24/rz24ddr.pnml"
+#include "src/coaches/24/rw24ddr.pnml"
+#include "src/coaches/24/rw24tour.pnml"
+#include "src/coaches/24/ca24ddr.pnml"
+#include "src/coaches/24/tz24.pnml"
+
 #include "src/coaches/25/yz25ml.pnml"
 #include "src/coaches/25/xl25ml.pnml"
 #include "src/coaches/25/ca25ml.pnml"

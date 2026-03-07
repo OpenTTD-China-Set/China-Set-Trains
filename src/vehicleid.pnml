@@ -197,6 +197,13 @@ item (FEAT_TRAINS, i8, 2191){}
 item (FEAT_TRAINS, teni8, 2192){}
 item (FEAT_TRAINS, shi8, 2193){}
 item (FEAT_TRAINS, teyu8, 2194){}
+item (FEAT_TRAINS, rz24hk, 2195){}
+item (FEAT_TRAINS, rz24ca, 2196){}
+item (FEAT_TRAINS, tz24, 2197){}
+item (FEAT_TRAINS, rz24ddr, 2198){}
+item (FEAT_TRAINS, rw24ddr, 2199){}
+item (FEAT_TRAINS, rw24tour, 2200){}
+item (FEAT_TRAINS, ca24ddr, 2201){}
 
 item (FEAT_TRAINS, luggageroom_s25, 3070) {}
 item (FEAT_TRAINS, luggageroom_25, 3071) {}
