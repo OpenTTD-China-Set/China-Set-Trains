@@ -1,7 +1,7 @@
 ﻿name,,Coder,Artist,Livery Artist
 CR200J1,,JF*Recoded by Babel,Babel,prototype:EMB
 CRH2C,,JF*Recoded by Babel,Babel,
-CR200J-B,,JF*Recoded by Babel,Babel,
+CR200J-B,,JF*Recoded by Babel,"Babel,Haiyan","Qipaoxian,Haiyan"
 CRH3A,,JF*Recoded by Babel,Qipaoxian,
 CRH3A-A,,Qipaoxian,Qipaoxian,
 NDJ3,,JF,"Qipaoxian, Babel",
@@ -18,7 +18,7 @@ CRH6FA,,Qipaoxian,"Qipaoxian,Nengyeqing",All:Nengyeqing
 CJ6,,Qipaoxian,"Qipaoxian,Ahyangyi",
 CINOVA2.0,,Qipaoxian,Qipaoxian,
 CRH380A,,Babel,"Qipaoxian,Babel",
-CR200J-C,,Babel,Babel,
+CR200J-C/D,,Babel,"Babel,Haiyan",
 NZJ1-XSG,,JF,wuwu,
 CRH380D,,Babel,"Qipaoxian,Babel",
 CRH2A/B,,Babel,Babel,
@@ -43,12 +43,13 @@ CR400AFAE,,Babel,"Qipaoxian,Haiyan",
 CRH5A,,JF*Recoded by Babel,"Qipaoxian,Babel",
 CRH5GJT,,,Qipaoxian,
 CRH5E,,Babel,Qipaoxian,
-CR200JSG,,"GUANGMING,Babel","GUANGMING,EMB,Babel",
+CR200JSG,,"GUANGMING,Babel","GUANGMING,EMB,Babel,Haiyan",
 CRH380AJ,,"GUANGMING,Babel","Qipaoxian,Haiyan",
 CRH380AL_2541,,GUANGMING,"Qipaoxian,Babel",
 CRH380AM,,Qipaoxian,Qipaoxian,
 DJF1,,Babel,Qipaoxian,
 CRH2A4020,,Babel,Babel,
+CR200JD,,"Babel","EMB,Babel,Haiyan",
 JF1,jf1,JF,EMB,
 Mikai,,Babel,EMB,
 SL6,sl6,JF,EMB,
@@ -106,7 +107,7 @@ SS3B,ss3b,wuwu,wuwu,
 DF,,Babel,EMB,
 6Y2,,Babel,wuwu,
 DF11Z,df11z,wuwu,DF43110,
-HXD11000,hxd11000,wuwu,"DF43110,Babel",
+HXD11000,hxd11000,wuwu,"DF43110,Babel,SL-1230",
 HXD1F,hxd1f,wuwu,DF43110,
 DF4E,df4e,wuwu,wuwu,
 SS1,ss1,wuwu,mikhail,
@@ -138,14 +139,14 @@ NY5,,Babel,EMB,EMB
 NY6,,Babel,EMB,EMB
 NY7,,Babel,EMB,EMB
 HXD1C,,Babel,"SL-1230,EMB",
-6K,,wuwu,wuwu,
-DJ1,,wuwu,wuwu,
-HXD2D,,wuwu,wuwu,
-DF10,,wuwu,wuwu,
-ND2,,EMB,EMB,EMB
-GC160,,wuwu,wuwu,
-GC220,,wuwu,wuwu,
-GY600,,wuwu,wuwu,
+6K,,wuwu,wuwu
+DJ1,,wuwu,wuwu
+HXD2D,,wuwu,wuwu
+FXSY,,Babel,"asAn0,Haoyan",
+DF10,,wuwu,wuwu
+GC160,,wuwu,wuwu
+GC220,,wuwu,wuwu
+DF8,,EMB,EMB
 C64,,JF,Babel,
 P62,,JF,Babel,
 G60,,JF,Babel,Other Colaor: Sunjuzhensun
@@ -308,4 +309,10 @@ SRZ25,,Babel,Haiyan,
 18Series Gen4,,Babel,Haiyan,
 "RW19T""Tanggula""",,Babel,Haiyan,
 21 Series,,Babel,jackgqj,
-Ha1,,Babel,Babel,
+Ha1,,Babel,Babel
+18Series Gen5,,EMB,Haiyan,
+25B AC,,EMB,Haiyan,
+25 HK,,EMB,Haiyan,
+ASIA EXPRESS,,Babel,Haiyan,
+24 DDR,,Babel,Haiyan,
+24 HK,,Babel,Haiyan,

@@ -34,6 +34,12 @@
 // Coaches
 
 #include "src/coaches/smr/ha1.pnml"
+#include "src/coaches/smr/ha8.pnml"
+#include "src/coaches/smr/ro8.pnml"
+#include "src/coaches/smr/i8.pnml"
+#include "src/coaches/smr/teni8.pnml"
+#include "src/coaches/smr/shi8.pnml"
+#include "src/coaches/smr/teyu8.pnml"
 
 #include "src/coaches/fixed-coaches/yz1.pnml"
 
@@ -72,6 +78,14 @@
 #include "src/coaches/22b/yz22b.pnml"
 #include "src/coaches/22b/yw22b.pnml"
 #include "src/coaches/22b/rw22b.pnml"
+
+#include "src/coaches/24/rz24hk.pnml"
+#include "src/coaches/24/rz24ca.pnml"
+#include "src/coaches/24/rz24ddr.pnml"
+#include "src/coaches/24/rw24ddr.pnml"
+#include "src/coaches/24/rw24tour.pnml"
+#include "src/coaches/24/ca24ddr.pnml"
+#include "src/coaches/24/tz24.pnml"
 
 #include "src/coaches/25/yz25ml.pnml"
 #include "src/coaches/25/xl25ml.pnml"
@@ -367,6 +381,7 @@
 
 
 // Multi Power Locomotive
+#include "src/multipower-loco/fxsy.pnml"
 #include "src/multipower-loco/cha1c.pnml"
 
 // DMU
@@ -389,6 +404,7 @@
 #include "src/25-emu/cr200jb.pnml"
 #include "src/25-emu/cr200jc.pnml"
 #include "src/25-emu/cr200jcl.pnml"
+#include "src/25-emu/cr200jd.pnml"
 #include "src/25-emu/crh1a.pnml"
 #include "src/25-emu/crh1b.pnml"
 #include "src/25-emu/crh1e.pnml"

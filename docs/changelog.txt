@@ -5,14 +5,22 @@ China Set: Trains Changelog
 
 ## Initial-0-4 Updates
 
-0.4.1 (2025-09-02)
+0.4.1 (2026-02-18)
 --------------------
-Add: 
-    - Locomotives: SL67, ND2, DF8B
-    - Coaches: 25A
-    - Liveries: a lot for 25K, 25T, 25Z, 25G Coaches
-Renew: 25K, 25T, 25Z, 25G, liveries
+Add: ND2, DF8, 18 Series Gen5, 25A Series, FXSY, 24 HK Series, 24 DDR Series
+Add Liveries for 25K, 25T, 25Z, 25G, 25B
+Renew sprites of 25K, 25T, 25Z, 25G, 25B
+Add the Asia Express Series:
+    - ADD SL7 Steam Locomotive
+    - ADD Ha 8, Ro 8, I 8, Ten'i 8, Teyu 8, Shi 8 Passenger coaches
+Completed the CR200J Series:
+    - ADD CR200J-D
+    - Now sprites of wagon change by type of seat
+    - CR200JCL now can attach luggage wagon(kymuw)
 Fix: some wrong or misspelt language strings
+Fix: CR200JA sprite errors
+Fix: SLeeper EMUs cargo decay wrong
+
 
 0.4.0 (2025-09-01)
 --------------------
