@@ -10,27 +10,18 @@ spriteset (spriteset_cr200ja_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BP
     template_purchase ("25-emu/cr200ja", "cr200j-m")
 }
 
-// Vehicle
-/* spriteset (spriteset_cr200ja_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr200j-m")
-}
-spriteset (spriteset_cr200ja_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr200j-t")
-}
-spriteset (spriteset_cr200ja_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("25-emu", "cr200j-c")
-} */
+
 //New Vehicle
 // Vehicle
 spriteset (spriteset_cr200ja_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu/cr200ja", "cr200j-m")
 }
-spriteset (spriteset_cr200ja_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+/* spriteset (spriteset_cr200ja_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu/cr200ja", "cr200j-t")
 }
 spriteset (spriteset_cr200ja_middle_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu/cr200ja", "cr200j-t")
-}
+} */
 spriteset (spriteset_cr200ja_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu/cr200ja", "cr200j-c")
 }
@@ -44,16 +35,48 @@ spriteset (spriteset_cr200ja_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_
     template_reversed ("25-emu/cr200ja", "cr200j-c-c")
 }
 
+spriteset (spriteset_cr200ja_ze, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200ja", "cr200j-t-ze")
+}
+spriteset (spriteset_cr200ja_ze_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200ja", "cr200j-t-ze")
+}
+spriteset (spriteset_cr200ja_we, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200ja", "cr200j-t-we")
+}
+spriteset (spriteset_cr200ja_we_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200ja", "cr200j-t-we")
+}
+spriteset (spriteset_cr200ja_wy, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200ja", "cr200j-t-wy")
+}
+spriteset (spriteset_cr200ja_wy_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200ja", "cr200j-t-wy")
+}
+spriteset (spriteset_cr200ja_zec, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200ja", "cr200j-t-zec")
+}
+spriteset (spriteset_cr200ja_zec_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200ja", "cr200j-t-zec")
+}
+spriteset (spriteset_cr200ja_zec_l, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200ja", "cr200j-t-zec-l")
+}
+spriteset (spriteset_cr200ja_zec_l_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200ja", "cr200j-t-zec-l")
+}
+
+
 
 spriteset (spriteset_cr200ja_prototype_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu/cr200ja", "cr200j-prototype-m")
 }
-spriteset (spriteset_cr200ja_prototype_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+/* spriteset (spriteset_cr200ja_prototype_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu/cr200ja", "cr200j-prototype-t")
 }
 spriteset (spriteset_cr200ja_prototype_middle_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu/cr200ja", "cr200j-prototype-t")
-}
+} */
 spriteset (spriteset_cr200ja_prototype_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu/cr200ja", "cr200j-prototype-c")
 }
@@ -66,6 +89,44 @@ spriteset (spriteset_cr200ja_prototype_cab_reconect, ZOOM_LEVEL_IN_4X, BIT_DEPTH
 spriteset (spriteset_cr200ja_prototype_cab_reconect_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu/cr200ja", "cr200j-prototype-c-c")
 }
+
+spriteset (spriteset_cr200ja_prototype_ze, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200ja", "cr200j-prototype-t-ze")
+}
+spriteset (spriteset_cr200ja_prototype_ze_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200ja", "cr200j-prototype-t-ze")
+}
+spriteset (spriteset_cr200ja_prototype_ze_l, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200ja", "cr200j-prototype-t-ze-l")
+}
+spriteset (spriteset_cr200ja_prototype_ze_l_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200ja", "cr200j-prototype-t-ze-l")
+}
+spriteset (spriteset_cr200ja_prototype_we, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200ja", "cr200j-prototype-t-we")
+}
+spriteset (spriteset_cr200ja_prototype_we_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200ja", "cr200j-prototype-t-we")
+}
+spriteset (spriteset_cr200ja_prototype_wy, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200ja", "cr200j-prototype-t-wy")
+}
+spriteset (spriteset_cr200ja_prototype_wy_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200ja", "cr200j-prototype-t-wy")
+}
+spriteset (spriteset_cr200ja_prototype_zec, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200ja", "cr200j-prototype-t-zec")
+}
+spriteset (spriteset_cr200ja_prototype_zec_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200ja", "cr200j-prototype-t-zec")
+}
+spriteset (spriteset_cr200ja_prototype_zec_l, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu/cr200ja", "cr200j-prototype-t-zec-l")
+}
+spriteset (spriteset_cr200ja_prototype_zec_l_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu/cr200ja", "cr200j-prototype-t-zec-l")
+}
+
 
 //Can Attach
 
@@ -106,6 +167,29 @@ switch (FEAT_TRAINS, SELF, swtich_cr200ja_cargo_subtype, cargo_subtype) {
 }
 
 //GFX
+switch (FEAT_TRAINS, SELF, switch_spriteset_cr200ja_middle_type, vehicle_type_id) {
+    1024..1028: spriteset_cr200ja_ze;
+    1035: spriteset_cr200ja_zec;
+    return spriteset_erroremu;
+}
+switch (FEAT_TRAINS, SELF, switch_spriteset_cr200ja_middle_reversed_type, vehicle_type_id) {
+    1024..1028: spriteset_cr200ja_ze_reversed;
+    1035: spriteset_cr200ja_zec_reversed;
+    return spriteset_erroremu;
+}
+
+switch (FEAT_TRAINS, SELF, switch_spriteset_cr200ja_prototype_middle_type, vehicle_type_id) {
+    1024..1028: spriteset_cr200ja_prototype_ze;
+    1035: spriteset_cr200ja_prototype_zec;
+    return spriteset_erroremu;
+}
+switch (FEAT_TRAINS, SELF, switch_spriteset_cr200ja_prototype_middle_reversed_type, vehicle_type_id) {
+    1024..1028: spriteset_cr200ja_prototype_ze_reversed;
+    1035: spriteset_cr200ja_prototype_zec_reversed;
+    return spriteset_erroremu;
+}
+
+
 switch (FEAT_TRAINS, SELF, switch_spriteset_cr200ja_front, cargo_subtype) {
     0: spriteset_cr200ja_front;
     1: spriteset_cr200ja_prototype_front;
@@ -123,12 +207,12 @@ switch (FEAT_TRAINS, SELF, switch_spriteset_cr200ja_cab_reconect_reversed, cargo
     1: spriteset_cr200ja_prototype_cab_reconect_reversed;
 }
 switch (FEAT_TRAINS, SELF, switch_spriteset_cr200ja_middle_reversed, cargo_subtype) {
-    0: spriteset_cr200ja_middle_reversed;
-    1: spriteset_cr200ja_prototype_middle_reversed;
+    0: switch_spriteset_cr200ja_middle_reversed_type;
+    1: switch_spriteset_cr200ja_prototype_middle_reversed_type;
 }
 switch (FEAT_TRAINS, SELF, switch_spriteset_cr200ja_middle, cargo_subtype) {
-    0: spriteset_cr200ja_middle;
-    1: spriteset_cr200ja_prototype_middle;
+    0: switch_spriteset_cr200ja_middle_type;
+    1: switch_spriteset_cr200ja_prototype_middle_type;
 }
 switch (FEAT_TRAINS, SELF, switch_spriteset_cr200ja_cab, cargo_subtype) {
     0: spriteset_cr200ja_cab;

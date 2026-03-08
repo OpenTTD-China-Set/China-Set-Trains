@@ -190,6 +190,20 @@ item (FEAT_TRAINS, rw19gen5, 2185){}
 item (FEAT_TRAINS, yw18gen5, 2186){}
 item (FEAT_TRAINS, kd18gen5, 2187){}
 item (FEAT_TRAINS, xl18gen5, 2188){}
+//2189- code by Babel
+item (FEAT_TRAINS, ha8, 2189){}
+item (FEAT_TRAINS, ro8, 2190){}
+item (FEAT_TRAINS, i8, 2191){}
+item (FEAT_TRAINS, teni8, 2192){}
+item (FEAT_TRAINS, shi8, 2193){}
+item (FEAT_TRAINS, teyu8, 2194){}
+item (FEAT_TRAINS, rz24hk, 2195){}
+item (FEAT_TRAINS, rz24ca, 2196){}
+item (FEAT_TRAINS, tz24, 2197){}
+item (FEAT_TRAINS, rz24ddr, 2198){}
+item (FEAT_TRAINS, rw24ddr, 2199){}
+item (FEAT_TRAINS, rw24tour, 2200){}
+item (FEAT_TRAINS, ca24ddr, 2201){}
 
 item (FEAT_TRAINS, luggageroom_s25, 3070) {}
 item (FEAT_TRAINS, luggageroom_25, 3071) {}
@@ -385,6 +399,7 @@ item (FEAT_TRAINS, _6k, 6180) {}
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
 #define id_range_multi_loco 0x1C00..0x1FFF
 item (FEAT_TRAINS, cha1c, 7168) {}
+item (FEAT_TRAINS, fxsy, 7169) {}
 
 
 //DMU, available ID range: 8192-9215 (hex 0x2000..0x23FF)
@@ -458,6 +473,7 @@ item (FEAT_TRAINS, beihai, 9273) {}
 item (FEAT_TRAINS, crh6fa, 9274) {}
 item (FEAT_TRAINS, crh6aacinova, 9275) {}
 item (FEAT_TRAINS, crh6a_comfort, 9276) {}
+item (FEAT_TRAINS, cr200jd, 9277) {}
 
 //1.5kV DC EMU, available ID range: 10240-11263 (hex 0x2800..0x2BFF)
 #define id_range_1500_emu 0x2800..0x2BFF
