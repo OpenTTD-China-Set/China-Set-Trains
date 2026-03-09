@@ -260,6 +260,7 @@
 #include "src/wagons/jsq1.pnml"
 #include "src/wagons/jsq5.pnml"
 #include "src/wagons/jsq6.pnml"
+#include "src/wagons/sq8.pnml"
 
 #include "src/wagons/b6.pnml"
 #include "src/wagons/b22.pnml"
