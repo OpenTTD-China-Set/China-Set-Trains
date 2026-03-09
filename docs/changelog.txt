@@ -8,8 +8,8 @@ China Set: Trains Changelog
 0.4.1 (2026-02-18)
 --------------------
 Add: ND2, DF8, 18 Series Gen5, 25A Series, FXSY, 24 HK Series, 24 DDR Series, DQ35
-Add Liveries for 25K, 25T, 25Z, 25G, 25B
-Renew sprites of 25K, 25T, 25Z, 25G, 25B
+Add Liveries for 25K, 25T, 25Z, 25G, 25B, HXD1C
+Renew sprites of 25K, 25T, 25Z, 25G, 25B, HXD1B
 Add the Asia Express Series:
     - ADD SL7 Steam Locomotive
     - ADD Ha 8, Ro 8, I 8, Ten'i 8, Teyu 8, Shi 8 Passenger coaches

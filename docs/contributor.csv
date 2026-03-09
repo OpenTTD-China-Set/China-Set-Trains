@@ -88,7 +88,7 @@ SS8,ss8,JF,Babel,
 HXD3C,hxd3c,JF,NACHN,
 HXD1D,hxd1d,Babel,EMB,1898: GBL
 HXD3D,hxd3d,JF,NACHN,"1893,1921,1886:GBL"
-HXD1B,,JF,"Babel,wuwu",
+HXD1B,,JF,"Babel,wuwu,SL-1230",
 HXD1,hxd1,JF,"DF43110,Babel",
 SS4G,ss4g,wuwu,wuwu,
 SS5,ss5,wuwu,wuwu,
@@ -138,7 +138,7 @@ ND4,,Babel,EMB,
 NY5,,Babel,EMB,EMB
 NY6,,Babel,EMB,EMB
 NY7,,Babel,EMB,EMB
-HXD1C,,Babel,"SL-1230,EMB",
+HXD1C,,Babel,"SL-1230,EMB",SL-1230
 6K,,wuwu,wuwu
 DJ1,,wuwu,wuwu
 HXD2D,,wuwu,wuwu
@@ -314,5 +314,5 @@ Ha1,,Babel,Babel
 25B AC,,EMB,Haiyan,
 25 HK,,EMB,Haiyan,
 ASIA EXPRESS,,Babel,Haiyan,
-24 DDR,,Babel,Haiyan,
+24 DDR,,Babel,Haiyan,"holiday travel:SL-1230,Haiyan"
 24 HK,,Babel,Haiyan,

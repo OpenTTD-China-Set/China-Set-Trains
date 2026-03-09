@@ -1066,6 +1066,7 @@ STR_DAYAOSHAN_25Z,{BLUE} - {RED}"Da{WHITE}yao{BLUE}shan" {BLACK}Imitation {BLUE}
 STR_JINLUN,{BLACK} - {BLUE}"Ji{RED}nl{WHITE}un",{BLACK} - {BLACK}“{BLUE}金{RED}轮{WHITE}号{BLACK}”{GRAY}涂装
 STR_JINGGANGSHAN,{BLACK} - {WHITE}"Jinggang{RED}shan",{BLACK} - {WHITE}“井冈{RED}山号”{BLACK}涂装
 STR_YILI,{BLUE} - Yili's Advertisement Livery,{BLUE} - 伊利广告涂装
+STR_SDHS,{DKGREEN} - "Shandong High Speed",{DKGREEN} - “山东高速”涂装
 STR_HEJIU,{BLACK} - Hefei-Jiujiang Railway Livery,{BLACK} - 合九铁路涂装
 STR_GYR,{BLACK} - Guangxi Yanhai Raiway,{BLACK} - 广西沿海铁路涂装
 STR_GMSR,{BLACK} - Guangzhou-Meizhou-Shantou Railway Livery,{BLACK} - 广梅汕铁路涂装
@@ -1147,6 +1148,7 @@ STR_HXD3D1893,"{BLACK}{RED} - HXD3D-1893 {GOLD}""Mao Zedong""","{BLACK}{RED} - H
 STR_HXD1D1898,"{BLACK}{RED} - HXD1D-1893 {GOLD}""Zhou Enlai""","{BLACK}{RED} - HXD1D-1898 {GOLD}""周恩来号"""
 STR_HXD3D1886,"{BLACK}{RED} - HXD3D-1886 {GOLD}""Zhu De""","{BLACK}{RED} - HXD3D-1886 {GOLD}""朱德号"""
 STR_HXD3D1921,"{BLACK}{RED} - HXD3D-1921 {GOLD}""Communist""","{BLACK}{RED} - HXD3D-1921 ""共产党员号"""
+STR_HXD1C1927,"{BLACK}{RED} - HXD1C-1927 {GOLD}""August 1st""","{BLACK}{RED} - HXD1C-1927 ""八一号"""
 STR_FXN3C0001,"{BLACK}{RED} - FXN3C-0001 {GOLD}"" Communist Youth League Member""","{BLACK}{RED} - FXN3C-0001 ""共青团员号"""
 STR_OG,{ORANGE} - Gray Door Orange Livery,{ORANGE} - 灰色门橘色涂装
 STR_OO,{ORANGE} - Orange Door Orange Livery,{ORANGE} - 橘色门橘色涂装
