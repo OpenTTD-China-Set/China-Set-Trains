@@ -269,6 +269,7 @@
 
 #include "src/wagons/j5.pnml"
 
+#include "src/wagons/dq35.pnml"
 
 // Another Function File
 #include "src/function2.pnml"

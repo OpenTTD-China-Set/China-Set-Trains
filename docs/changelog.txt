@@ -7,7 +7,7 @@ China Set: Trains Changelog
 
 0.4.1 (2026-02-18)
 --------------------
-Add: ND2, DF8, 18 Series Gen5, 25A Series, FXSY, 24 HK Series, 24 DDR Series
+Add: ND2, DF8, 18 Series Gen5, 25A Series, FXSY, 24 HK Series, 24 DDR Series, DQ35
 Add Liveries for 25K, 25T, 25Z, 25G, 25B
 Renew sprites of 25K, 25T, 25Z, 25G, 25B
 Add the Asia Express Series:

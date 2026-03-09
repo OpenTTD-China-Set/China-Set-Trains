@@ -53,13 +53,13 @@ CR200JD,,"Babel","EMB,Babel,Haiyan",
 JF1,jf1,JF,EMB,
 Mikai,,Babel,EMB,
 SL6,sl6,JF,EMB,
-SL7,,EMB,EMB
+SL7,,EMB,EMB,
 Pasguku,,,,
 JF6,jf6,,,
 QJ,qj,Babel,EMB,
 RM,rm,,,
 SY,sy,John Franklin,JF,
-KD7,,Babel,EMB
+KD7,,Babel,EMB,
 DF4K,df4k,JF,Mikhail,
 DF4H,df4h,JF,Mikhail,
 DF4D-0000,df4d0000,JF,Babel,
@@ -101,6 +101,7 @@ SS7E,ss7e,wuwu,EMB,
 DF4DF,df4df,wuwu,DF43110,
 DF4C,df4c,wuwu,DF43110,
 DF8B,df8b,wuwu,EMB,
+DF8,df8,EMB,EMB,EMB
 DF4D-7000,df4d7000,wuwu,wuwu,
 SS3B,ss3b,wuwu,wuwu,
 DF,,Babel,EMB,
@@ -132,7 +133,7 @@ DF9,,wuwu,wuwu,
 DFH1 Series,,Babel,EMB,
 HXN3C,,Babel,"asAn0,Babel","asAn0,Babel"
 8K,,Babel,EMB,
-ND2,,EMB,EMB
+ND2,,EMB,EMB,
 ND4,,Babel,EMB,
 NY5,,Babel,EMB,EMB
 NY6,,Babel,EMB,EMB
@@ -203,11 +204,12 @@ GS,,wuwu,Sunjuzhensun,
 GQ80,,wuwu,Sunjuzhensun,
 GN60,,wuwu,Sunjuzhensun,
 Yai,,Babel,Babel,
-YZ25A,yz25a,Haiyan,EMB
-YW25A,yz25a,Haiyan,EMB
-RW25A,yz25a,Haiyan,EMB
-CA25A,yz25a,Haiyan,EMB
-KD25A,yz25a,Haiyan,EMB
+DQ35,,wuwu,wuwu,
+YZ25A,yz25a,Haiyan,EMB,
+YW25A,yz25a,Haiyan,EMB,
+RW25A,yz25a,Haiyan,EMB,
+CA25A,yz25a,Haiyan,EMB,
+KD25A,yz25a,Haiyan,EMB,
 YZ25G,yz25g,JF,Haiyan,"Nanhu: wuwu,Other: Haiyan"
 RZ25G,rz25g,JF,Haiyan,All: Haiyan
 YW25G,yw25g,JF,Haiyan,All: Haiyan
@@ -238,12 +240,13 @@ YZ25B,yz25b,JF,Haiyan,All: Haiyan
 RZ25B,rz25b,JF,Haiyan,All: Haiyan
 YW25B,yw25b,JF,Haiyan,All: Haiyan
 RW25B,rw25b,JF,Haiyan,All: Haiyan
-SYZ25BLD,syz25bld,JF,Haiyan,All: Haiyan
-SRZ25BLD,srz25bld,JF,Haiyan,All: Haiyan
-SYZ25BHD,syz25bhd,JF,Haiyan,All: Haiyan
-SRZ25BHD,srz25bhd,JF,Haiyan,All: Haiyan
-SYW25BHD,syw25bhd,JF,Haiyan,All: Haiyan
-SRW25BHD,srw25bhd,JF,Haiyan,All: Haiyan
+SYZ25BLD,syz25bld,JF*EMB,Haiyan,All: Haiyan
+SRZ25BLD,srz25bld,JF*EMB,Haiyan,All: Haiyan
+SYZ25BHD,syz25bhd,JF*EMB,Haiyan,All: Haiyan
+SRZ25BHD,srz25bhd,JF*EMB,Haiyan,All: Haiyan
+SYW25BHD,syw25bhd,JF*EMB,Haiyan,All: Haiyan
+SRW25BHD,srw25bhd,JF*EMB,Haiyan,All: Haiyan
+SCA25BHD,sca25bhd,JF*EMB,Haiyan,All: Haiyan
 YZ22B,yz22b,JF,Babel,AD: wuwu
 YW22B,yw22b,JF,Babel,
 RW22B,rw22b,JF,Babel,
@@ -304,7 +307,7 @@ SYZ25,,Babel,Haiyan,
 SRZ25,,Babel,Haiyan,
 25SM Series,,Babel,Haiyan,
 18Series Gen4,,Babel,Haiyan,
-RW19T"Tanggula",,Babel,Haiyan,
+"RW19T""Tanggula""",,Babel,Haiyan,
 21 Series,,Babel,jackgqj,
 Ha1,,Babel,Babel
 18Series Gen5,,EMB,Haiyan,
