@@ -243,6 +243,7 @@ STR_NAME_X2K,X2K (Flatcar for Containers),X2K (集装箱专用车)
 STR_NAME_JSQ1,JSQ1 (Vehicle Transporter),JSQ1 (汽车运输车)
 STR_NAME_JSQ5,JSQ5 (Vehicle Transporter),JSQ5 (汽车运输车)
 STR_NAME_JSQ6,JSQ6 (Vehicle Transporter),JSQ6 (汽车运输车)
+STR_NAME_SQ8,SQ8 (Vehicle Transporter),SQ8 (汽车运输车)
 STR_NAME_L70,L70 (Hopper),L70 (粮食漏斗车)
 STR_NAME_J5,J5 (Livestock Wagon),J5 (家畜运输车)
 STR_NAME_MIKAI,Mikai (Steam),ミカイ (蒸汽)
@@ -407,8 +408,8 @@ STR_NAME_CR400AFZ,CR400AF-C/Z/S (Intelligent EMU),CR400AF-C/Z/S (智能动车)
 STR_NAME_CR400AFABZ,CR400AF-AZ/BZ/BS (Long Version) (Intelligent EMU),CR400AF-AZ/BZ/BS (长编组) (智能动车)
 STR_NAME_CR400AFAE,CR400AF-AE (Intelligent EMU),CR400AF-AE (智能动车)
 STR_NAME_CR400BF,CR400BF (EMU),CR400BF (电力动车)
-STR_NAME_CR400BF_0031,CR400BF-0031 (Variable gauge EMU),CR400BF-0031 (电力动车) (可变轨距)
-STR_NAME_CR400BF_0051,CR400BF-0051 (Variable gauge EMU),CR400BF-0051 (电力动车) (可变轨距)
+STR_NAME_CR400BF_0031,CR400BF-0031  (Section) (Variable gauge EMU),CR400BF-0031  (整节) (电力动车) (可变轨距)
+STR_NAME_CR400BF_0051,CR400BF-0051  (Section) (Variable gauge EMU),CR400BF-0051  (整节) (电力动车) (可变轨距)
 STR_NAME_CR400BFAB,CR400BF-A/B (Long Version) (EMU),CR400BF-A/B (长编组) (电力动车)
 STR_NAME_CR400BFC,CR400BF-C (Intelligent EMU),CR400BF-C (智能动车)
 STR_NAME_CR400BFZ,CR400BF-Z/S (Intelligent EMU),CR400BF-Z/S (智能动车)
@@ -1065,6 +1066,7 @@ STR_DAYAOSHAN_25Z,{BLUE} - {RED}"Da{WHITE}yao{BLUE}shan" {BLACK}Imitation {BLUE}
 STR_JINLUN,{BLACK} - {BLUE}"Ji{RED}nl{WHITE}un",{BLACK} - {BLACK}“{BLUE}金{RED}轮{WHITE}号{BLACK}”{GRAY}涂装
 STR_JINGGANGSHAN,{BLACK} - {WHITE}"Jinggang{RED}shan",{BLACK} - {WHITE}“井冈{RED}山号”{BLACK}涂装
 STR_YILI,{BLUE} - Yili's Advertisement Livery,{BLUE} - 伊利广告涂装
+STR_SDHS,{DKGREEN} - "Shandong High Speed",{DKGREEN} - “山东高速”涂装
 STR_HEJIU,{BLACK} - Hefei-Jiujiang Railway Livery,{BLACK} - 合九铁路涂装
 STR_GYR,{BLACK} - Guangxi Yanhai Raiway,{BLACK} - 广西沿海铁路涂装
 STR_GMSR,{BLACK} - Guangzhou-Meizhou-Shantou Railway Livery,{BLACK} - 广梅汕铁路涂装
@@ -1146,6 +1148,7 @@ STR_HXD3D1893,"{BLACK}{RED} - HXD3D-1893 {GOLD}""Mao Zedong""","{BLACK}{RED} - H
 STR_HXD1D1898,"{BLACK}{RED} - HXD1D-1893 {GOLD}""Zhou Enlai""","{BLACK}{RED} - HXD1D-1898 {GOLD}""周恩来号"""
 STR_HXD3D1886,"{BLACK}{RED} - HXD3D-1886 {GOLD}""Zhu De""","{BLACK}{RED} - HXD3D-1886 {GOLD}""朱德号"""
 STR_HXD3D1921,"{BLACK}{RED} - HXD3D-1921 {GOLD}""Communist""","{BLACK}{RED} - HXD3D-1921 ""共产党员号"""
+STR_HXD1C1927,"{BLACK}{RED} - HXD1C-1927 {GOLD}""August 1st""","{BLACK}{RED} - HXD1C-1927 ""八一号"""
 STR_FXN3C0001,"{BLACK}{RED} - FXN3C-0001 {GOLD}"" Communist Youth League Member""","{BLACK}{RED} - FXN3C-0001 ""共青团员号"""
 STR_OG,{ORANGE} - Gray Door Orange Livery,{ORANGE} - 灰色门橘色涂装
 STR_OO,{ORANGE} - Orange Door Orange Livery,{ORANGE} - 橘色门橘色涂装

@@ -1,0 +1,135 @@
+//Begin SQ8
+switch (FEAT_TRAINS, SELF, switch_sq8_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_VEHICLE_TRANSPORTER);
+    return CB_RESULT_NO_TEXT;
+}
+
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_sq8_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons/jsq8", "jsq8-side")
+}
+
+// Vehicle
+spriteset (spriteset_sq8_side, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/jsq8", "jsq8-side")
+}
+spriteset (spriteset_sq8_side_r, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("wagons/jsq8", "jsq8-side")
+}
+spriteset (spriteset_sq8_middle, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/jsq8", "jsq8-among")
+}
+
+spriteset (spriteset_sq8_side_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/jsq8", "jsq8-side-fill")
+}
+spriteset (spriteset_sq8_side_r_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("wagons/jsq8", "jsq8-side-fill")
+}
+spriteset (spriteset_sq8_middle_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/jsq8", "jsq8-among-fill")
+}
+
+switch (FEAT_TRAINS, SELF, switch_sq8_articulated_part, extra_callback_info1) {
+    1..8: return sq8;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+switch (FEAT_TRAINS, SELF, switch_length_sq8, position_in_articulated_veh % 9) {
+        1: return 8;
+        4: return 7;
+        7: return 8;
+        return 2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_sq8_graphics_full, position_in_articulated_veh % 9) {
+    1: spriteset_sq8_side_full;
+    4: spriteset_sq8_middle_full;
+    7: spriteset_sq8_side_r_full;
+    empty_sprites;
+}
+switch (FEAT_TRAINS, SELF, switch_sq8_graphics_empty, position_in_articulated_veh % 9) {
+    1: spriteset_sq8_side;
+    4: spriteset_sq8_middle;
+    7: spriteset_sq8_side_r;
+    empty_sprites;
+}
+switch (FEAT_TRAINS, SELF, switch_sq8_graphics, cargo_count < 20) {
+    0: switch_sq8_graphics_full;
+    switch_sq8_graphics_empty;
+}
+
+switch (FEAT_TRAINS, SELF, switch_sq8_capacity_cargo, cargo_type_in_veh) {
+    VEHI: return 61;
+    ENSP: return 122;
+    FMSP: return 122;
+}
+
+switch (FEAT_TRAINS, SELF, switch_sq8_capacity, position_in_articulated_veh) {
+    1: switch_sq8_capacity_cargo;
+    return 0;
+}
+
+
+
+item (FEAT_TRAINS, sq8) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_SQ8);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        variant_group:					3110;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2016,01,27);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       0;
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [VEHI, ENSP, FMSP];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             VEHI;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 66;
+        loading_speed:                  3 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          120 km/h;
+        power:                          0 hp;
+        weight:                         93 ton;
+        cost_factor:                    24;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            18;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_FRESHNESS_HIGH, 400);
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_sq8_graphics;
+        purchase:                       spriteset_sq8_purchase;
+        articulated_part:               switch_sq8_articulated_part;
+
+        // Stats
+        length:                         switch_length_sq8;
+        cargo_capacity:                 switch_sq8_capacity;
+        cargo_age_period:               400 << (param_cargo_decay + param_wagoncargodecay);
+        cost_factor:                    33;
+        running_cost_factor:            27 * runningcostfactor();
+        purchase_running_cost_factor:   108;
+        purchase_cargo_capacity:        switch_sq8_capacity_cargo() / 3;
+        name:                           switch_sq8_name;
+
+    }
+}
+
+// End SQ8
