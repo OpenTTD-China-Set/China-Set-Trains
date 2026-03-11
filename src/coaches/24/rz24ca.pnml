@@ -65,10 +65,11 @@ item (FEAT_TRAINS, rz24ca) {
         cost_factor:                    8;
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            6;
+        bitmask_vehicle_info:           bitmask(1);
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_RZ24CA), string(STR_SELF_AIR_CONDITIONER), string(STR_COMFORT_MEDIUM, 192));
+        additional_text:                string(STR_DESC_5, string(STR_FULL_NAME_RZ24CA), string(STR_CAFE_EFFECT), string(STR_SELF_AIR_CONDITIONER), string(STR_COMFORT_MEDIUM, 192));
         can_attach_wagon:               locowagon;
 
         // Graphics
