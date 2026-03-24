@@ -126,7 +126,7 @@ switch (FEAT_TRAINS, SELF, crhwagon, vehicle_type_id) {
 
 switch (FEAT_TRAINS, SELF, crhwagonxl, vehicle_type_id) {
     1024..1035: onlyallowcst;
-    1051: onlyallowcst;
+    1051: onlyallowcst;//Not used
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
