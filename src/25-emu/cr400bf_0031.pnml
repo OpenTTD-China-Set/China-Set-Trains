@@ -127,7 +127,7 @@ item (FEAT_TRAINS, cr400bf_0031) {
         cost_factor:                    105;
         running_cost_factor:            522 * runningcostfactor() * cafecostfactor() + 20;
         purchase_running_cost_factor:   316;
-        purchase_cargo_capacity:        576/8;
+        purchase_cargo_capacity:        576/24;
         name:                           switch_cr400bf_name;
     }
 }
