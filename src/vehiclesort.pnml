@@ -106,6 +106,7 @@ sort (FEAT_TRAINS, [
     hxd3c,
     hxd3d,
     hxd1f,
+    fxd1,
     fxd1b1000,
 /*     fxd2b, */
     fxd2b1000,
