@@ -27,6 +27,9 @@ spriteset(spriteset_crh5j_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset(spriteset_crh5j_rear, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh5j-mc")
 }
+spriteset(spriteset_crh5j_tp2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh5j-tp2")
+}
 
 switch(FEAT_TRAINS, SELF, switch_crh5j_articulated_part, extra_callback_info1) {
     1..23: return crh5j;
@@ -47,7 +50,7 @@ switch(FEAT_TRAINS, SELF, switch_crh5j_articulated_part, extra_callback_info1) {
 switch(FEAT_TRAINS, SELF, switch_crh5j_graphics, position_in_articulated_veh % 24) {
     1: return spriteset_crh5j_head;
     4: return spriteset_crh5j_235;
-    7: return spriteset_crh5j_235;
+    7: return spriteset_crh5j_tp2;
     10: return spriteset_crh5j_47;
     13: return spriteset_crh5j_235;
     16: return spriteset_crh5j_tp;
