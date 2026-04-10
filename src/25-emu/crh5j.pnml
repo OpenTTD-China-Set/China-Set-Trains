@@ -142,3 +142,5 @@ item (FEAT_TRAINS, crh5j) {
         name:                           switch_crh5j_name;
     }
 }
+
+//End crh5j
