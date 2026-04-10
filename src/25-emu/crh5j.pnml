@@ -120,7 +120,7 @@ item (FEAT_TRAINS, crh5j) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_6, string(STR_RELDEC_VERY_LOW, 4), string(STR_CRH5J_AVAILABLE));
+        additional_text:                string(STR_DESC_6, string(STR_RELDEC_LOW, 12), string(STR_CRH5J_AVAILABLE));
         can_attach_wagon:               onlycrh5j;
         start_stop:                     mu4to24car;
         cargo_subtype_text:             switch_crh5j_cargo_subtype;
