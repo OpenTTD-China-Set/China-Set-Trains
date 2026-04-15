@@ -106,6 +106,7 @@ sort (FEAT_TRAINS, [
     hxd3c,
     hxd3d,
     hxd1f,
+    fxd1,
     fxd1b1000,
 /*     fxd2b, */
     fxd2b1000,
@@ -147,6 +148,7 @@ sort (FEAT_TRAINS, [
 /*     crh5g, */
     crh5e,
     crh5gjt,
+    crh5j,
     crh6a2,
     crh6a_comfort,
     crh6a3,

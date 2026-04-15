@@ -343,6 +343,7 @@ STR_NAME_HXD21000,HXD2-1000 (Electric),HXD2-1000 (电力)
 STR_NAME_HXD3,HXD3 (Electric),HXD3 (电力)
 STR_NAME_HXD3C,HXD3C (Electric),HXD3C (电力)
 STR_NAME_HXD3D,HXD3D (Electric),HXD3D (电力)
+STR_NAME_FXD1,FXD1 (Electric),FXD1 (电力)
 STR_NAME_FXD1B,FXD1B (Electric),FXD1B (电力)
 STR_NAME_FXD1B1000,FXD1B-1000 (Electric),FXD1B-1000 (电力)
 STR_NAME_FXD2B,FXD2B (Electric),FXD2B (电力)
@@ -391,6 +392,7 @@ STR_NAME_CRH5A,CRH5A (EMU),CRH5A (电力动车)
 STR_NAME_CRH5E,CRH5E (EMU),CRH5E (电力动车)
 STR_NAME_CRH5G,CRH5G (EMU),CRH5G (电力动车)
 STR_NAME_CRH5GJT,CRH5G (Technology-Enhanced) (EMU),CRH5G (技术提升型) (电力动车)
+STR_NAME_CRH5J,CRH5J (EMU) (Diagnostic Train) (EMU),CRH5J (电力动车) (综合检测列车)
 STR_NAME_CRH380A,CRH380A (EMU),CRH380A (电力动车)
 STR_NAME_CRH380AL,CRH380AL (Long Version) (EMU),CRH380AL (长编组) (电力动车)
 STR_NAME_CRH380AL_2541,CRH380AL-2541 (Long Version) (EMU) (Speed of impact test),CRH380AL-2541 (长编组) (电力动车) (冲高试验速度)
@@ -661,6 +663,7 @@ STR_FULL_NAME_HXD2,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2 Electric Locomotive,{B
 STR_FULL_NAME_HXD21000,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2 Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}和谐2型电力机车1000系
 STR_FULL_NAME_HXD2B,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2B Electric Locomotive,{BLACK}全称：{GOLD}和谐2B型电力机车
 STR_FULL_NAME_HXD2D,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2D Electric Locomotive,{BLACK}全称：{GOLD}和谐2D型电力机车
+STR_FULL_NAME_FXD1,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 1 Electric Locomotive,{BLACK}全称：{GOLD}复兴1型电力机车
 STR_FULL_NAME_FXD2B,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 2B Electric Locomotive,{BLACK}全称：{GOLD}复兴2B型电力机车
 STR_FULL_NAME_FXD2B1000,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 2B Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}复兴2B型电力机车1000系
 STR_FULL_NAME_HXD3,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3 Electric Locomotive,{BLACK}全称：{GOLD}和谐3型电力机车
@@ -928,6 +931,7 @@ STR_ALIASNAME_QJ,"{BLACK}Alias Name: {GOLD}Heping (HP), Fandi (FD)",{BLACK}曾�
 STR_ALIASNAME_DF,"{BLACK}Alias Name: {GOLD}Great Loong, ND",{BLACK}曾用名：{GOLD}巨龙，ND
 STR_ALIASNAME_SS1,{BLACK}Alias Name: {GOLD}6Y1,{BLACK}曾用名：{GOLD}6Y1
 STR_ALIASNAME_HXD3,{BLACK}Alias Name: {GOLD}DJ3,{BLACK}曾用名：{GOLD}DJ3
+STR_ALIASNAME_FXD1, {BLACK}Alias Name: {GOLD}HXD1G (Hexie/Harmony 1G Electric Locomotive),{BLACK}曾用名：{GOLD}HXD1G(和谐1G型电力机车)
 STR_ALIASNAME_FXD1B,{BLACK}Alias Name: {GOLD}HXD1F (Hexie/Harmony 1F Electric Locomotive),{BLACK}曾用名：{GOLD}HXD1F(和谐1F型电力机车)
 STR_ALIASNAME_FXD2B,{BLACK}Alias Name: {GOLD}HXD2F (Hexie/Harmony 2F Electric Locomotive),{BLACK}曾用名：{GOLD}HXD2F(和谐2F型电力机车)
 STR_ALIASNAME_CJ1,{BLACK}Alias Name: {GOLD}CRH3A {BLACK}(Inter-City Version),{BLACK}曾用名：{GOLD}CRH3A {BLACK}(城际版)
@@ -944,6 +948,9 @@ STR_310_KMH, - Max Speed 310 km/h, - 最高速度 310 km/h
 STR_350_KMH," - Max Speed 350 km/h, Running Costs Increase", - 最高速度 350 km/h，运营费用增加
 STR_380_KMH," - Max Speed 380 km/h, Running Costs Greatly Increase", - 最高速度 380 km/h，运营费用大幅增加
 STR_CRH380AJ_486_KMH, - Max Speed 452 km/h, - 最高速度 452 km/h
+STR_CRH5J_DESIGNED_SPEED, - Designed Speed 275 km/h, - 设计速度 275 km/h
+STR_CRH5J_EXPERIMENTAL_SPEED, - The Highest Experimental Speed 300 km/h, - 最高实验速度 300 km/h
+STR_CRH5J_AVAILABLE,Refittable to Designed Speed and the Higest Experimental Speed,可改装为设计速度与最高试验速度
 STR_DJJ2_321_KMH, - {GOLD}321.5 km/h{BLACK}. Broke the Highest Speed Record of China's Railway on 27th Oct. 2002. Running Costs Greatly Increase, - {GOLD}321.5 km/h{BLACK}，2002年10月27日创下的当时中国铁路最高速。运营费用大幅增加
 STR_350_AVAILABLE,Refittable to Max Speed 350 km/h (Increasing running costs),可改装为最高速度 350 km/h，运营费用增加
 STR_350_380_AVAILABLE,Refittable to Max Speed 350 or 380 km/h (Increasing running costs),可改装为最高速度 350 或 380 km/h，运营费用增加
@@ -1012,6 +1019,8 @@ STR_DOUBLE_CAB,{BLACK} - {GOLD}Locomotive with Double Cab,{BLACK} - {GOLD}改装
 STR_DFH7,{BLACK} - DFH7,
 STR_DFH7B,{BLACK} - DFH7B,
 STR_HXD_F,{BLACK} - HXD{COMMA}F,
+STR_HXD_G,{BLACK} - HXD{COMMA}G,
+STR_FXD,{BLACK} - FXD{COMMA},
 STR_FXD_B,{BLACK} - FXD{COMMA}B,
 STR_GONGQINGTUAN,"{BLACK} - ""Gongqingtuan"" Livery",{BLACK} - 共青团号涂装
 STR_BUILD_YEAR,{BLACK} - According to build year,{BLACK} - 根据建造年份选择设计
