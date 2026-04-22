@@ -16,7 +16,7 @@ spriteset (spriteset_srz225z_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 }
 spriteset (spriteset_srz225z_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25z", "srz225z-guangzhou")
-}
+}//待删除
 
 switch (FEAT_TRAINS, SELF, switch_srz225z_articulated_part, extra_callback_info1) {
     1..2: return srz225z;

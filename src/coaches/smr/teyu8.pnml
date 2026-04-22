@@ -39,7 +39,7 @@ item (FEAT_TRAINS, teyu8) {
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(1955,01,01);
+        introduction_date:              date(1934,11,01);
         model_life:                     20;
         vehicle_life:                   30;
         track_type:                     SACN;

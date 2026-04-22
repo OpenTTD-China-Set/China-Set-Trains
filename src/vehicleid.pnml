@@ -397,7 +397,7 @@ item (FEAT_TRAINS, hxd1c, 6177) {}
 item (FEAT_TRAINS, hxd2d, 6178) {}
 item (FEAT_TRAINS, dj1, 6179) {}
 item (FEAT_TRAINS, _6k, 6180) {}
-item (FEAT_TRAINS, fxd1, 6181) {}
+/* item (FEAT_TRAINS, fxd1, 6181) {} */
 
 //Multi Power Locomotive, available ID range: 7168-8191 (hex 0x1C00..0x1FFF)
 #define id_range_multi_loco 0x1C00..0x1FFF

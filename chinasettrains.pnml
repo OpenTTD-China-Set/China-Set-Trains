@@ -369,7 +369,7 @@
 #include "src/25-electric/hxd1b.pnml"
 #include "src/25-electric/hxd1c.pnml"
 #include "src/25-electric/hxd1d.pnml"
-#include "src/25-electric/fxd1.pnml"
+
 #include "src/25-electric/fxd1b.pnml"
 #include "src/25-electric/fxd1b1000.pnml"
 #include "src/25-electric/hxd2.pnml"
