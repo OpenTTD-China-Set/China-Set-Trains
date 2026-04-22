@@ -110,7 +110,7 @@ item (FEAT_TRAINS, crh5j) {
         speed:                          250 km/h;
         power:                          5500 kW;
         weight:                         480 ton;
-        tractive_effort_coefficient:    0.141;
+        tractive_effort_coefficient:    0.081;
         cost_factor:                    1;
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            1;
@@ -133,7 +133,7 @@ item (FEAT_TRAINS, crh5j) {
         // Stats
         length:                         switch_length_2_8_2;
         speed:                          switch_crh5j_speed;
-        purchase_tractive_effort_coefficient: return int(0.083*255);//I don't know what does it represent
+        purchase_tractive_effort_coefficient: return int(0.083*255);
         cargo_capacity:                 0;
         cost_factor:                    67;
         running_cost_factor:            0;
