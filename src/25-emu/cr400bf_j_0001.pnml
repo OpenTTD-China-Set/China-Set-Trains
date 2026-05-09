@@ -1,0 +1,137 @@
+switch (FEAT_TRAINS, SELF, switch_cr400bf_j_0001_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_CR400BF_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+
+spriteset(spriteset_cr400bf_j_0001_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/cr400bf-j-0001", "cr400bf-j-0001-tc")
+}
+
+spriteset(spriteset_cr400bf_j_0001_head, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/cr400bf-j-0001", "cr400bf-j-0001-tc")
+}
+
+spriteset(spriteset_cr400bf_j_0001_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/cr400bf-j-0001", "cr400bf-j-0001-m")
+}
+
+spriteset(spriteset_cr400bf_j_0001_3, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/cr400bf-j-0001", "cr400bf-j-0001-tp2")
+}
+
+spriteset(spriteset_cr400bf_j_0001_4, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/cr400bf-j-0001", "cr400bf-j-0001-m")
+}
+
+spriteset(spriteset_cr400bf_j_0001_5, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/cr400bf-j-0001", "cr400bf-j-0001-m")
+}
+
+spriteset(spriteset_cr400bf_j_0001_6, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/cr400bf-j-0001", "cr400bf-j-0001-tp")
+}
+
+spriteset(spriteset_cr400bf_j_0001_7, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/cr400bf-j-0001", "cr400bf-j-0001-m")
+}
+
+spriteset(spriteset_cr400bf_j_0001_rear, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/cr400bf-j-0001", "cr400bf-j-0001-tc")
+}
+
+switch(FEAT_TRAINS, SELF, switch_cr400bf_j_0001_articulated_part, extra_callback_info1) {
+    1..23: return cr400bf_j_0001;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS, SELF, switch_cr400bf_j_0001_graphics, position_in_articulated_veh % 24) {
+    1: return spriteset_cr400bf_j_0001_head;
+    4: return spriteset_cr400bf_j_0001_2;
+    7: return spriteset_cr400bf_j_0001_3;
+    10: return spriteset_cr400bf_j_0001_4;
+    13: return spriteset_cr400bf_j_0001_5;
+    16: return spriteset_cr400bf_j_0001_6;
+    19: return spriteset_cr400bf_j_0001_7;
+    22: return spriteset_cr400bf_j_0001_rear;
+    empty_sprites;
+}
+
+switch(FEAT_TRAINS, SELF, switch_cr400bf_j_0001_speed, cargo_subtype) {
+    0: return 400;
+    1: return 453;
+}
+
+switch(FEAT_TRAINS, SELF, switch_cr400bf_j_0001_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGIN_SPEED);
+    1: return string(STR_CR400BF_J_0001_EXPERIMENTAL_SPEED);
+}
+
+switch (FEAT_TRAINS, SELF, onlycr400bf_j_0001, vehicle_type_id) {
+    cr400bf_j_0001: onlyallowcst;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+item (FEAT_TRAINS, cr400bf_j_0001) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CR400BF_J_0001);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        variant_group:                  9218;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2021,06,11);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   25;
+        track_type:                     SAAA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          400 km/h;
+        power:                          12000 kW;
+        weight:                         480 ton;
+        tractive_effort_coefficient:    0.059;
+        cost_factor:                    1;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            1;
+        reliability_decay:              4;
+        bitmask_vehicle_info:           bitmask(2);
+
+    }
+        graphics {
+        // Menu
+        additional_text:                string(STR_DESC_6, string(STR_RELDEC_VERY_LOW, 4), string(STR_CR400BF_J_0001_AVAILABLE));
+        can_attach_wagon:               onlycr400bf_j_0001;
+        start_stop:                     mu4to24car;
+        cargo_subtype_text:             switch_cr400bf_j_0001_cargo_subtype;
+
+        // Graphics
+        default:                        switch_cr400bf_j_0001_graphics;
+        purchase:                       spriteset_cr400bf_j_0001_purchase_original;
+        articulated_part:               switch_cr400bf_j_0001_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        speed:                          switch_cr400bf_j_0001_speed;
+        purchase_tractive_effort_coefficient: return int(0.083*255);
+        cargo_capacity:                 0;
+        cost_factor:                    67;
+        running_cost_factor:            0;
+        purchase_running_cost_factor:   0;
+        purchase_cargo_capacity:        0;
+        name:                           switch_cr400bf_j_0001_name;
+    }
+}
