@@ -32,6 +32,7 @@ item (FEAT_TRAINS, kymuw) {
         name:                           string(STR_NAME_KYMUW);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        extra_flags:                    bitmask(VEHICLE_FLAG_TRAIN_HAS_CAB);
         variant_group:					zemuw;
 
         // Availability

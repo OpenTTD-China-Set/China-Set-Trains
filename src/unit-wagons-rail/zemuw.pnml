@@ -32,6 +32,7 @@ item (FEAT_TRAINS, zemuw) {
         name:                           string(STR_NAME_ZEMUW);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        extra_flags:                    bitmask(VEHICLE_FLAG_TRAIN_HAS_CAB);
 
         // Availability
         climates_available:             ALL_CLIMATES;
