@@ -4,33 +4,33 @@
 
 // Purchase Menu
 spriteset (spriteset_dq35_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("wagons\dq35", "dq35-purchase")
+    template_purchase ("wagons/dq35", "dq35-purchase")
 }
 
 // Vehicle
 /* spriteset (spriteset_dq35_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_speciel_0 ("wagons\dq35", "dq35-a")
+    template_speciel_0 ("wagons/dq35", "dq35-a")
 }
 spriteset (spriteset_dq35_b, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_speciel_0 ("wagons\dq35", "dq35-b")
+    template_speciel_0 ("wagons/dq35", "dq35-b")
 } */
 spriteset (spriteset_dq35_cargo, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_speciel_0 ("wagons\dq35", "dq35-cargo")
+    template_speciel_0 ("wagons/dq35", "dq35-cargo")
 }
 /* spriteset (spriteset_dq35_c, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_speciel_0 ("wagons\dq35", "dq35-c")
+    template_speciel_0 ("wagons/dq35", "dq35-c")
 }
 spriteset (spriteset_dq35_d, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_speciel_0 ("wagons\dq35", "dq35-d")
+    template_speciel_0 ("wagons/dq35", "dq35-d")
 } */
 spriteset (spriteset_dq35_nx17, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_speciel_0 ("wagons\dq35", "dq35-nx17")
+    template_speciel_0 ("wagons/dq35", "dq35-nx17")
 }
 spriteset (spriteset_dq35_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_speciel_0 ("wagons\dq35", "dq35-front")
+    template_speciel_0 ("wagons/dq35", "dq35-front")
 }
 spriteset (spriteset_dq35_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_speciel_0 ("wagons\dq35", "dq35-back")
+    template_speciel_0 ("wagons/dq35", "dq35-back")
 }
 
 switch (FEAT_TRAINS, SELF, switch_dq35_articulated_part, extra_callback_info1) {
