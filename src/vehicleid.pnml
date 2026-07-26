@@ -30,6 +30,7 @@ item (FEAT_TRAINS, sywmuw, 1046) {}
 item (FEAT_TRAINS, srwmuw, 1047) {}
 // 1048-1050 Deleted
 item (FEAT_TRAINS, xlmuw, 1051) {}
+//an unexisted xlmuw
 
 
 //Unit Wagons for Cargoes on RAIL/ELRL: 1536-1663
