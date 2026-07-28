@@ -403,6 +403,7 @@ STR_NAME_CRH380AM,CRH380AM (EMU) (Diagnostic Train),CRH380AM (电力动车) (综
 STR_NAME_CRH380B,CRH380B (EMU),CRH380B (电力动车)
 STR_NAME_CRH380BL,CRH380BL (Long Version) (EMU),CRH380BL (长编组) (电力动车)
 STR_NAME_CRH380BJ,CRH380BJ (EMU) (Diagnostic Train),CRH380BJ (电力动车) (综合检测列车)
+STR_NAME_CRH380BJA,CRH380BJA (EMU) (Diagnostic Train),CRH380BJA (电力动车) (综合检测列车)
 STR_NAME_CRH380CL,CRH380CL (EMU),CRH380CL (电力动车)
 STR_NAME_CRH380D,CRH380D (EMU),CRH380D (电力动车)
 STR_NAME_CR300AF,CR300AF (EMU),CR300AF (电力动车)
@@ -958,6 +959,7 @@ STR_CRH5J_DESIGNED_SPEED, - Designed Speed 275 km/h, - 设计速度 275 km/h
 STR_CRH5J_EXPERIMENTAL_SPEED, - The Highest Experimental Speed 300 km/h, - 最高实验速度 300 km/h
 STR_CRH5J_AVAILABLE,{BLACK} Refittable to Designed Speed and the Higest Experimental Speed,{BLACK} 可改装为设计速度与最高实验速度
 STR_CRH380BJ_EXPERIMENTAL_SPEED,{BLACK} - the Highest Experimental Speed 418 km/h,{BLACK} - 最高实验速度 418 km/h
+STR_CRH380BJA_DESIGNED_SPEED,{BLACK} - its designed speed 385 km/h,{BLACK} 设计速度 385 km/h
 STR_CRH2C_2150_EXPERIMENTAL_SPEED,{BLACK} - the Highest Experimental Speed 402 km/h,{BLACK} - 最高实验速度 402 km/h
 STR_CRH2C_20612068_EXPERIMENTAL_SPEED,{BLACK} - the Highest Experimental Speed about 380 km/h,{BLACK} - 最高试验速度约 380 km/h
 STR_CR400BF_J_0001_EXPERIMENTAL_SPEED,{BLACK} - the Highest Experimental Speed about 453 km/h,{BLACK} - 最高试验速度 453 km/h
@@ -968,6 +970,7 @@ STR_DJJ2_321_AVAILABLE,This train has broke the Highest Speed Record of China's 
 STR_CRH380AL_2541_486_AVAILABLE,"On the 13 of December, 2010, the train achieved the then-world's highest operational testing speed of 486.1 km/h.",这列车曾经在2010年12月13日创下了当时世界铁路运营试验最高速486.1 km/h
 STR_CRH380AJ_AVAILABLE,Refittable to Max Speed 452 km/h ,可改装为最高速度 452 km/h
 STR_CRH380BJ_AVAILABLE,{BLACK}Refittable to the Highest Experimental Speed 418 km/h,{BLACK}可改装为最高实验速度 418 km/h
+STR_CRH380BJA_AVAILABLE,{BLACK}Refittable to the designed Speed 385 km/h,{BLACK}可改装为设计速度 385 km/h
 STR_CRH2C_2150_AVAILABLE,{BLACK}Refittable to the Highest Experimental Speed 402 km/h,{BLACK}可改装为最高实验速度 402 km/h
 STR_CRH2C_20612068_AVAILABLE,{BLACK}Refittable to the Highest Experimental Speed 380 km/h,{BLACK}可改装为最高实验速度 380 km/h
 STR_CR400BF_J_0001_AVAILABLE,{BLACK}Refittable to the Highest Experimental Speed 453 km/h,{BLACK}可改装为最高实验速度 453 km/h
