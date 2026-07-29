@@ -209,6 +209,7 @@ item (FEAT_TRAINS, ca24ddr, 2201){}
 item (FEAT_TRAINS, ssy25k998329, 2202){}
 item (FEAT_TRAINS, sy25t999209, 2203){}
 item (FEAT_TRAINS, wx25t999318, 2204){}
+item (FEAT_TRAINS, wx25t999305, 2205){}
 
 item (FEAT_TRAINS, luggageroom_s25, 3070) {}
 item (FEAT_TRAINS, luggageroom_25, 3071) {}
