@@ -200,6 +200,10 @@
 #include "src/coaches/25dt/syz25dt_jinlun.pnml"
 #include "src/coaches/25dt/srz25dt_jinlun.pnml"
 
+#include "src/coaches/inspection/998329.pnml"
+#include "src/coaches/inspection/999209.pnml"
+#include "src/coaches/inspection/999318.pnml"
+
 
 
 // Wagons

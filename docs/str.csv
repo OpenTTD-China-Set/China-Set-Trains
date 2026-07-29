@@ -184,6 +184,9 @@ STR_NAME_YW25DT_JINLUN,YW25DT (JINLUN DMU) (Passenger Coach),YW25DT (金轮号�
 STR_NAME_RW25DT_JINLUN,RW25DT (JINLUN DMU) (Passenger Coach),RW25DT (金轮号动车组) (客车)
 STR_NAME_SYZ25DT_JINLUN,SYZ25DT (JINLUN DMU) (Passenger Coach),SYZ25DT (金轮号动车组) (客车)
 STR_NAME_SRZ25DT_JINLUN,SRZ25DT (JINLUN DMU) (Passenger Coach),SRZ25DT (金轮号动车组) (客车)
+STR_NAME_998329,SSY25K998329 (CATENARY INSPECTION TRAIN),SSY25K998329 (接触网检测列车)
+STR_NAME_999209,SY25T999209 (ELECTRICAL INSPECTION TRAIN),SY25T999209 (电务检测车)
+STR_NAME_999318,WX25T999318 (TUNNEL INSPECTION TRAIN),WX25T999318 (隧道检测车)
 STR_NAME_C1,C1 (Gondola),C1 (敞车)
 STR_NAME_C11949,C1 (Mixed Model) (Gondola),C1 (杂型) (敞车)
 STR_NAME_C11956,C1 (Redesigned) (Gondola),C1 (后生产型) (敞车)
@@ -573,6 +576,9 @@ STR_FULL_NAME_YW25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}Type 25 Unilaminar Hard Slee
 STR_FULL_NAME_RW25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}Type 25 Unilaminar Soft Sleeper Passenger Trail Car of ""Jinlun"" DMU",{BLACK}全称：{GOLD}“金轮号”内燃动车组25系单层软卧拖车
 STR_FULL_NAME_SYZ25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}Type 25 Double Decker Hard Seat Passenger Trail Car of ""Jinlun"" DMU",{BLACK}全称：{GOLD}“金轮号”内燃动车组25系双层硬座拖车
 STR_FULL_NAME_SRZ25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}Type 25 Double Decker Hard Seat Passenger Trail Car of ""Jinlun"" DMU",{BLACK}全称：{GOLD}“金轮号”内燃动车组25系双层软座拖车
+STR_FULL_NAME_998329,{BLACK}FULLNAME: {GOLD}Type 25 Rapid Double Decker Inspection Train numbered SSY25K998329,{BLACK}全称: {GOLD}编号为SSY25K998329的25系快速型双层检测列车
+STR_FULL_NAME_999209,{BLACK}FULLNAME: {GOLD}Type 25 Accelerated Inspection Train numbered SY25T999209,{BLACK}全称: {GOLD}编号为SY25T999209的25系提速型检测列车
+STR_FULL_NAME_999318,{BLACK}FULLNAME: {GOLD}Type 25 Accelerated Inspection Train numbered WX25T999318,{BLACK}全称: {GOLD}编号为WX25T999318的25系提速型检测列车
 STR_FULL_NAME_DQ35,{BLACK}FULLNAME: DQ35-type Schnabel Car,{BLACK}全称：DQ35型钳夹车
 STR_FULL_NAME_G11,{BLACK}FULLNAME: G11-type{GOLD} Acid-Alkali {BLACK}Tank Wagon,{BLACK}全称：G11型{GOLD}酸碱{BLACK}罐车
 STR_FULL_NAME_G70B,{BLACK}FULLNAME: G70B-type{GOLD} Light Oil {BLACK}Tank Wagon,{BLACK}全称：G70B型低重心{GOLD}轻油{BLACK}罐车
@@ -736,6 +742,7 @@ STR_25K_SERIES,Type 25K Series Coaches,25K型客车
 STR_S25K_SERIES,Type S25K Series Coaches,S25K型双层客车
 STR_25T_SERIES,Type 25T Series Coaches,25T型客车
 STR_25DT_JINLUN_SERIES,NZJ2 JINLUN DMU Wagons,"NZJ2 ""金轮号""动车组拖车"
+STR_INSPECTION_SERIES,Inspection trains,特种检测列车
 STR_MU_WAGON,MU Wagons,动车组车厢
 STR_BOXCAR,Boxcar,棚车
 STR_FLATCAR,Flatcar,平车

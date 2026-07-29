@@ -191,7 +191,7 @@ item (FEAT_TRAINS, rw19gen5, 2185){}
 item (FEAT_TRAINS, yw18gen5, 2186){}
 item (FEAT_TRAINS, kd18gen5, 2187){}
 item (FEAT_TRAINS, xl18gen5, 2188){}
-//2189- code by Babel
+//2189-2201 code by Babel
 item (FEAT_TRAINS, ha8, 2189){}
 item (FEAT_TRAINS, ro8, 2190){}
 item (FEAT_TRAINS, i8, 2191){}
@@ -205,6 +205,10 @@ item (FEAT_TRAINS, rz24ddr, 2198){}
 item (FEAT_TRAINS, rw24ddr, 2199){}
 item (FEAT_TRAINS, rw24tour, 2200){}
 item (FEAT_TRAINS, ca24ddr, 2201){}
+//2202-2204 code by JustinLi
+item (FEAT_TRAINS, ssy25k998329, 2202){}
+item (FEAT_TRAINS, sy25t999209, 2203){}
+item (FEAT_TRAINS, wx25t999318, 2204){}
 
 item (FEAT_TRAINS, luggageroom_s25, 3070) {}
 item (FEAT_TRAINS, luggageroom_25, 3071) {}
