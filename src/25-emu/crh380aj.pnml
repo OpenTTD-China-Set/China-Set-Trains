@@ -112,7 +112,7 @@ item (FEAT_TRAINS, crh380aj) {
         cost_factor:                    1;
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            1;
-        reliability_decay:              12;
+        reliability_decay:              4;
         bitmask_vehicle_info:           bitmask(2);
 
     }

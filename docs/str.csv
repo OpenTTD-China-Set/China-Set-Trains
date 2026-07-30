@@ -184,6 +184,10 @@ STR_NAME_YW25DT_JINLUN,YW25DT (JINLUN DMU) (Passenger Coach),YW25DT (金轮号�
 STR_NAME_RW25DT_JINLUN,RW25DT (JINLUN DMU) (Passenger Coach),RW25DT (金轮号动车组) (客车)
 STR_NAME_SYZ25DT_JINLUN,SYZ25DT (JINLUN DMU) (Passenger Coach),SYZ25DT (金轮号动车组) (客车)
 STR_NAME_SRZ25DT_JINLUN,SRZ25DT (JINLUN DMU) (Passenger Coach),SRZ25DT (金轮号动车组) (客车)
+STR_NAME_998329,SSY25K998329 (CATENARY INSPECTION TRAIN),SSY25K998329 (接触网检测列车)
+STR_NAME_999209,SY25T999209 (ELECTRICAL INSPECTION TRAIN),SY25T999209 (电务检测车)
+STR_NAME_999318,WX25T999318 (TUNNEL INSPECTION TRAIN),WX25T999318 (隧道检测车)
+STR_NAME_999305,WX25T999305 (TRACK INSPECTION TRAIN),WX25T999305 (轨道检测车)
 STR_NAME_C1,C1 (Gondola),C1 (敞车)
 STR_NAME_C11949,C1 (Mixed Model) (Gondola),C1 (杂型) (敞车)
 STR_NAME_C11956,C1 (Redesigned) (Gondola),C1 (后生产型) (敞车)
@@ -374,11 +378,13 @@ STR_NAME_CRH1A,CRH1A (EMU),CRH1A (电力动车)
 STR_NAME_CRH1B,CRH1B (Long Version) (EMU),CRH1B (电力动车)
 STR_NAME_CRH1E_NG,CRH1E-NG (EMU),CRH1E-NG (电力动车)
 STR_NAME_CRH1E,CRH1E (EMU),CRH1E (电力动车)
-STR_NAME_CRH1AA,CRH1A-A (EMU),CRH1A-A (长编组) (电力动车)
+STR_NAME_CRH1AA,CRH1A-A (EMU),CRH1A-A (电力动车)
 STR_NAME_CRH2A,CRH2A (EMU),CRH2A (电力动车)
 STR_NAME_CRH2A4020,CRH2A-4020 (Cargo EMU),CRH2A-4020 (货运电力动车)
 STR_NAME_CRH2B,CRH2B (Long Version) (EMU),CRH2B (长编组) (电力动车)
 STR_NAME_CRH2C,CRH2C (EMU),CRH2C (电力动车)
+STR_NAME_CRH2C_2150,CRH2C-2150 (EMU) (Diagnostic train),CRH2C-2150 (电力动车) (综合检测列车)
+STR_NAME_CRH2C_20612068,CRH2C-2061/2068 (EMU) (Diagnostic train),CRH2C-2061/2068 (电力动车) (综合检测列车)
 STR_NAME_CRH2E,CRH2E (EMU),CRH2E (电力动车)
 STR_NAME_CRH2E_NG,CRH2E-NG (EMU),CRH2E-NG (电力动车)
 STR_NAME_CRH2G,CRH2G (EMU),CRH2G (电力动车)
@@ -396,10 +402,12 @@ STR_NAME_CRH5J,CRH5J (EMU) (Diagnostic Train) (EMU),CRH5J (电力动车) (综合
 STR_NAME_CRH380A,CRH380A (EMU),CRH380A (电力动车)
 STR_NAME_CRH380AL,CRH380AL (Long Version) (EMU),CRH380AL (长编组) (电力动车)
 STR_NAME_CRH380AL_2541,CRH380AL-2541 (Long Version) (EMU) (Speed of impact test),CRH380AL-2541 (长编组) (电力动车) (冲高试验速度)
-STR_NAME_CRH380AJ,CRH380AL (EMU) (Diagnostic Train),CRH380AJ (电力动车) (综合检测列车)
+STR_NAME_CRH380AJ,CRH380AJ (EMU) (Diagnostic Train),CRH380AJ (电力动车) (综合检测列车)
 STR_NAME_CRH380AM,CRH380AM (EMU) (Diagnostic Train),CRH380AM (电力动车) (综合检测列车)
 STR_NAME_CRH380B,CRH380B (EMU),CRH380B (电力动车)
 STR_NAME_CRH380BL,CRH380BL (Long Version) (EMU),CRH380BL (长编组) (电力动车)
+STR_NAME_CRH380BJ,CRH380BJ (EMU) (Diagnostic Train),CRH380BJ (电力动车) (综合检测列车)
+STR_NAME_CRH380BJA,CRH380BJA (EMU) (Diagnostic Train),CRH380BJA (电力动车) (综合检测列车)
 STR_NAME_CRH380CL,CRH380CL (EMU),CRH380CL (电力动车)
 STR_NAME_CRH380D,CRH380D (EMU),CRH380D (电力动车)
 STR_NAME_CR300AF,CR300AF (EMU),CR300AF (电力动车)
@@ -415,6 +423,7 @@ STR_NAME_CR400BF_0051,CR400BF-0051  (Section) (Variable gauge EMU),CR400BF-0051 
 STR_NAME_CR400BFAB,CR400BF-A/B (Long Version) (EMU),CR400BF-A/B (长编组) (电力动车)
 STR_NAME_CR400BFC,CR400BF-C (Intelligent EMU),CR400BF-C (智能动车)
 STR_NAME_CR400BFZ,CR400BF-Z/S (Intelligent EMU),CR400BF-Z/S (智能动车)
+STR_NAME_CR400BF_J_0001,CR400BF-J-0001 (EMU) (Diagnostic Train),CR400BF-J-0001 (电力动车) (综合检测列车) 
 STR_NAME_CR400BFABZ,CR400BF-AZ/BZ/BS (Intelligent EMU),CR400BF-AZ/BZ/BS (长编组) (智能动车)
 STR_NAME_CRH6A2,CRH6A (2-Door Version) (EMU),CRH6A (二门版) (电力动车)
 STR_NAME_CRH6A_COMFORT,CRH6A (Comfort Version) (EMU),CRH6A (舒适版) (电力动车)
@@ -568,6 +577,10 @@ STR_FULL_NAME_YW25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}Type 25 Unilaminar Hard Slee
 STR_FULL_NAME_RW25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}Type 25 Unilaminar Soft Sleeper Passenger Trail Car of ""Jinlun"" DMU",{BLACK}全称：{GOLD}“金轮号”内燃动车组25系单层软卧拖车
 STR_FULL_NAME_SYZ25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}Type 25 Double Decker Hard Seat Passenger Trail Car of ""Jinlun"" DMU",{BLACK}全称：{GOLD}“金轮号”内燃动车组25系双层硬座拖车
 STR_FULL_NAME_SRZ25DT_JINLUN,"{BLACK}FULLNAME: {GOLD}Type 25 Double Decker Hard Seat Passenger Trail Car of ""Jinlun"" DMU",{BLACK}全称：{GOLD}“金轮号”内燃动车组25系双层软座拖车
+STR_FULL_NAME_998329,{BLACK}FULLNAME: {GOLD}Type 25 Rapid Double Decker Inspection Train numbered SSY25K998329,{BLACK}全称: {GOLD}编号为SSY25K998329的25系快速型双层检测列车
+STR_FULL_NAME_999209,{BLACK}FULLNAME: {GOLD}Type 25 Accelerated Inspection Train numbered SY25T999209,{BLACK}全称: {GOLD}编号为SY25T999209的25系提速型检测列车
+STR_FULL_NAME_999318,{BLACK}FULLNAME: {GOLD}Type 25 Accelerated Inspection Train numbered WX25T999318,{BLACK}全称: {GOLD}编号为WX25T999318的25系提速型检测列车
+STR_FULL_NAME_999305,{BLACK}FULLNAME: {GOLD}Type 25 Accelerated Inspection Train numbered WX25T999305,{BLACK}全称: {GOLD}编号为WX25T999305的25系提速型检测列车
 STR_FULL_NAME_DQ35,{BLACK}FULLNAME: DQ35-type Schnabel Car,{BLACK}全称：DQ35型钳夹车
 STR_FULL_NAME_G11,{BLACK}FULLNAME: G11-type{GOLD} Acid-Alkali {BLACK}Tank Wagon,{BLACK}全称：G11型{GOLD}酸碱{BLACK}罐车
 STR_FULL_NAME_G70B,{BLACK}FULLNAME: G70B-type{GOLD} Light Oil {BLACK}Tank Wagon,{BLACK}全称：G70B型低重心{GOLD}轻油{BLACK}罐车
@@ -731,6 +744,7 @@ STR_25K_SERIES,Type 25K Series Coaches,25K型客车
 STR_S25K_SERIES,Type S25K Series Coaches,S25K型双层客车
 STR_25T_SERIES,Type 25T Series Coaches,25T型客车
 STR_25DT_JINLUN_SERIES,NZJ2 JINLUN DMU Wagons,"NZJ2 ""金轮号""动车组拖车"
+STR_INSPECTION_SERIES,Inspection trains,特种检测列车
 STR_MU_WAGON,MU Wagons,动车组车厢
 STR_BOXCAR,Boxcar,棚车
 STR_FLATCAR,Flatcar,平车
@@ -780,7 +794,7 @@ STR_NJ2_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {WHITE}Original {GOLD}an
 STR_GC220_LIVERY_AVAILABILITY,{BLACK}Livery Availability: {RED}Original Livery {BLUE}Blue Livery {GOLD}Orange Livery,{BLACK}可供选择的涂装：{RED}原版涂装 {BLUE}蓝色涂装 {GOLD}橙色涂装
 STR_SS7C_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Original Livery, {YELLOW}Banana Yellow {GOLD}Livery",{BLACK}可供选择的涂装：{GOLD}大脸猫涂装，{YELLOW}香蕉{GOLD}涂装
 STR_6Y2_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {BLUE}Original Livery, Factory Livery, {GREEN}Late Livery",{BLACK}可供选择的涂装：{BLUE}原始涂装，出厂涂装，{GREEN}晚期涂装
-STR_SS3_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Ordinary {BLACK}Livery, {DKGREEN}Grassgreen {BLACK}Livery, {BLUE}Blue {BLACK}Livery, {RED}Red {BLACK}Livery and Fuzhou Livery",{BLACK}可替换的涂装：原始涂装，红色涂装，蓝色涂装，草绿色涂装，福州机务段涂装
+STR_SS3_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Ordinary {BLACK}Livery, {DKGREEN}Grassgreen {BLACK}Livery, {BLUE}Blue {BLACK}Livery, {RED}Red {BLACK}Livery, Fuzhou Livery and 'Yilutongda,changxingchengkun' Commemorative Livery",{BLACK}可替换的涂装：原始涂装，红色涂装，蓝色涂装，草绿色涂装，福州机务段涂装, 彝路通达畅行成昆纪念涂装
 STR_SS4_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: Ordinary {BLUE}Blue {BLACK}Livery, {WHITE}White {BLACK}Livery, {WHITE}White {BLACK}Livery with {BLUE}Blue {BLACK}Roof, Factory Livery",{BLACK}可替换的涂装：蓝色涂装，白色涂装，车顶为蓝色的白色涂装，出厂涂装
 STR_DJJ1_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Original Livery, Guangzhou-Shenzhen Railway Livery",{BLACK}可供选择的涂装：{GOLD}蓝箭涂装，广深铁路涂装
 STR_CRH6A3_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Beijing-Tongzhou, Shanghai-Jinshan",{BLACK}可供选择的涂装：{GOLD}京通号，金山铁路
@@ -900,6 +914,8 @@ STR_CRH1AA_NICKNAME,{BLACK}Nickname: {GOLD}Cute Metro ,{BLACK}昵称：{GOLD}萌
 STR_CRH2A_NICKNAME,{BLACK}Nickname: {GOLD}Hairtail,{BLACK}昵称：{GOLD}带鱼
 STR_CRH2B_NICKNAME,{BLACK}Nickname: {GOLD}Long Hairtail,{BLACK}昵称：{GOLD}长带鱼
 STR_CRH2C_NICKNAME,{BLACK}Nickname: {GOLD}Crazy Hairtail,{BLACK}昵称：{GOLD}疯带鱼
+STR_CRH2C_20612068_NICKNAME,{BLACK}Nickname: {GOLD}White Doctor,{BLACK}昵称： {GOLD}白医生
+STR_CRH2C_2150_NICKNAME,{BLACK}Nickname: {GOLD}False Mouse,{BLACK}昵称： {GOLD}假老鼠
 STR_CRH2E_NICKNAME,{BLACK}Nickname: {GOLD}Sleeper Hairtail,{BLACK}昵称：{GOLD}睡带鱼
 STR_CRH2G_NICKNAME,{BLACK}Nickname: {GOLD}Advanced Black Face,{BLACK}昵称：{GOLD}先进黑脸
 STR_CJ1_NICKNAME,{BLACK}Nickname: {GOLD}Toy Car,{BLACK}昵称：{GOLD}玩具车
@@ -950,13 +966,24 @@ STR_380_KMH," - Max Speed 380 km/h, Running Costs Greatly Increase", - 最高速
 STR_CRH380AJ_486_KMH, - Max Speed 452 km/h, - 最高速度 452 km/h
 STR_CRH5J_DESIGNED_SPEED, - Designed Speed 275 km/h, - 设计速度 275 km/h
 STR_CRH5J_EXPERIMENTAL_SPEED, - The Highest Experimental Speed 300 km/h, - 最高实验速度 300 km/h
-STR_CRH5J_AVAILABLE,Refittable to Designed Speed and the Higest Experimental Speed,可改装为设计速度与最高试验速度
+STR_CRH5J_AVAILABLE,{BLACK} Refittable to Designed Speed and the Higest Experimental Speed,{BLACK} 可改装为设计速度与最高实验速度
+STR_CRH380BJ_EXPERIMENTAL_SPEED,{BLACK} - the Highest Experimental Speed 418 km/h,{BLACK} - 最高实验速度 418 km/h
+STR_CRH380BJA_DESIGNED_SPEED,{BLACK} - its designed speed 385 km/h,{BLACK} 设计速度 385 km/h
+STR_CRH2C_2150_EXPERIMENTAL_SPEED,{BLACK} - the Highest Experimental Speed 402 km/h,{BLACK} - 最高实验速度 402 km/h
+STR_CRH2C_20612068_EXPERIMENTAL_SPEED,{BLACK} - the Highest Experimental Speed about 380 km/h,{BLACK} - 最高试验速度约 380 km/h
+STR_CR400BF_J_0001_EXPERIMENTAL_SPEED,{BLACK} - the Highest Experimental Speed about 453 km/h,{BLACK} - 最高试验速度 453 km/h
 STR_DJJ2_321_KMH, - {GOLD}321.5 km/h{BLACK}. Broke the Highest Speed Record of China's Railway on 27th Oct. 2002. Running Costs Greatly Increase, - {GOLD}321.5 km/h{BLACK}，2002年10月27日创下的当时中国铁路最高速。运营费用大幅增加
 STR_350_AVAILABLE,Refittable to Max Speed 350 km/h (Increasing running costs),可改装为最高速度 350 km/h，运营费用增加
 STR_350_380_AVAILABLE,Refittable to Max Speed 350 or 380 km/h (Increasing running costs),可改装为最高速度 350 或 380 km/h，运营费用增加
 STR_DJJ2_321_AVAILABLE,This train has broke the Highest Speed Record of China's Railway by {GOLD}321.5 km/h{BLACK} on 27th Oct. 2002. Refittable to this speed (Increasing running costs),这列车曾经在2002年10月27日创下了当时中国铁路的最高速321.5 km/h。可改装到这一速度，运营费用增加
 STR_CRH380AL_2541_486_AVAILABLE,"On the 13 of December, 2010, the train achieved the then-world's highest operational testing speed of 486.1 km/h.",这列车曾经在2010年12月13日创下了当时世界铁路运营试验最高速486.1 km/h
 STR_CRH380AJ_AVAILABLE,Refittable to Max Speed 452 km/h ,可改装为最高速度 452 km/h
+STR_CRH380BJ_AVAILABLE,{BLACK}Refittable to the Highest Experimental Speed 418 km/h,{BLACK}可改装为最高实验速度 418 km/h
+STR_CRH380BJA_AVAILABLE,{BLACK}Refittable to the designed Speed 385 km/h,{BLACK}可改装为设计速度 385 km/h
+STR_CRH2C_2150_AVAILABLE,{BLACK}Refittable to the Highest Experimental Speed 402 km/h,{BLACK}可改装为最高实验速度 402 km/h
+STR_CRH2C_20612068_AVAILABLE,{BLACK}Refittable to the Highest Experimental Speed 380 km/h,{BLACK}可改装为最高实验速度 380 km/h
+STR_CR400BF_J_0001_AVAILABLE,{BLACK}Refittable to the Highest Experimental Speed 453 km/h,{BLACK}可改装为最高实验速度 453 km/h
+STR_CRH2C_20612068_INTRODUCTION,This train has broke the Highest Speed Record of China's Railway created by "China Star" by about {GOLD}370 km/h{BLACK} on 24th Apr. 2008.,这列车在2008年4月24日以将近 370 km/h 的时速打破了由“中华之星”创下的中国铁路最高速记录
 # Livery,,
 STR_LV_PRE_GRAY,{GRAY} - Gray,{GRAY} - 灰色
 STR_LV_PRE_DETERIORATE,{BLACK} - Deteriorated,{BLACK} - 老化后
@@ -1023,6 +1050,7 @@ STR_HXD_G,{BLACK} - HXD{COMMA}G,
 STR_FXD,{BLACK} - FXD{COMMA},
 STR_FXD_B,{BLACK} - FXD{COMMA}B,
 STR_GONGQINGTUAN,"{BLACK} - ""Gongqingtuan"" Livery",{BLACK} - 共青团号涂装
+STR_REMEMBER,{BLACK} - Remember Livery,{BLACK} - 纪念涂装
 STR_BUILD_YEAR,{BLACK} - According to build year,{BLACK} - 根据建造年份选择设计
 STR_YW22_ORIGINAL,"{BLACK} - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240",{BLACK} - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
 STR_YW22_1966,"{BLACK} - 1966 Design - Capacity 60, Comfort 288",{BLACK} - 1966年新设计 - 定员60，舒适度288

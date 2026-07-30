@@ -70,7 +70,7 @@ item (FEAT_TRAINS, crh380al_2541) {
         // Stats
         speed:                          486 km/h;
         power:                          11200 kW;
-        weight:                         409 ton;
+        weight:                         818 ton;
         tractive_effort_coefficient:    0.6225;
         cost_factor:                    68;
         running_cost_base:              RUNNING_COST_ELECTRIC;
