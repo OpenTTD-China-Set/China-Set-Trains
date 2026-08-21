@@ -254,6 +254,12 @@ switch (FEAT_TRAINS, SELF, onlycrh6fa, vehicle_type_id) {
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
+switch (FEAT_TRAINS, SELF, citonly, vehicle_type_id) {
+    crh380aj: onlyallowcst;
+    crh380am: onlyallowcst;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
 switch (FEAT_TRAINS, SELF, locowagon, vehicle_type_id) {
     1024..1051: onlydisallowcst;
     8192..14335: onlydisallowcst;

@@ -57,10 +57,6 @@ switch (FEAT_TRAINS, SELF, switch_crh380aj_graphics, position_in_articulated_veh
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, onlycrh380aj, vehicle_type_id) {
-    crh380aj: onlyallowcst;
-    return CB_RESULT_ATTACH_DISALLOW;
-}
 
 
 
@@ -119,7 +115,7 @@ item (FEAT_TRAINS, crh380aj) {
     graphics {
         // Menu
         additional_text:                string(STR_DESC_6, string(STR_RELDEC_VERY_LOW, 4), string(STR_CRH380AJ_AVAILABLE));
-        can_attach_wagon:               onlycrh380aj;
+        can_attach_wagon:               citonly;
         start_stop:                     mu4to24car;
         cargo_subtype_text:             switch_crh380aj_cargo_subtype;
 
