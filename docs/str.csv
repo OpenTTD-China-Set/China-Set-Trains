@@ -389,6 +389,7 @@ STR_NAME_CRH2E,CRH2E (EMU),CRH2E (电力动车)
 STR_NAME_CRH2E_NG,CRH2E-NG (EMU),CRH2E-NG (电力动车)
 STR_NAME_CRH2G,CRH2G (EMU),CRH2G (电力动车)
 STR_NAME_CRH2ELS,CRH2E (Longitudinal Sleeper) (EMU),CRH2E (纵向卧铺) (电力动车)
+STR_NAME_CRH2J,CRH2J (EMU) (Diagnostic Train),CRH2J (电力动车) (综合检测列车)
 STR_NAME_CJ1,CJ1 (EMU),CJ1 (电力动车)
 STR_NAME_CJ6,CJ6 (Section) (EMU),CJ6 (整节) (电力动车)
 STR_NAME_CRH3A,CRH3A (EMU),CRH3A (电力动车)
@@ -781,6 +782,7 @@ STR_CHA1C_DESC,"{BLACK}Hybrid Locomotive using battery on non-electrified tracks
 STR_FXSY_DESC,"{BLACK}Hybrid  Locomotive using diesel on non-electrified tracks providing {BLUE}3250 kW{BLACK}, and providing {RED}7200 kW{BLACK} on 25kV AC tracks",{BLACK}双源机车。在非电气化路段使用内燃驱动，功率为{BLUE}3250 kW{BLACK}。在25kV交流供电铁路上功率为{RED}7200 kW
 STR_FIT_DESC,"{BLACK} Tilting Train, with higher max speed acrosing curves",{BLACK}摆式列车，更高的弯道最大通过速度
 STR_CRH2A4020_DESC,{RED}Salute to Driver Yang Yong,{RED}致敬杨勇师傅
+STR_CRH2J_DESC,{RED}Salute to Driver Pan,{RED}致敬潘师傅
 # Livery Availability,,
 STR_DF_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GOLD}Yellow {GREEN}Line {BLACK}Livery, {WHITE}White {GREEN}Line {BLACK}Livery","{BLACK}可供选择的涂装：{GOLD}黄色{GREEN}窗线{BLACK}涂装, {WHITE}白色{GREEN}窗线{BLACK}涂装"
 STR_DF4_LIVERY_AVAILABILITY,"{BLACK}Livery Availability: {GREEN}Green {GOLD}Livery, {ORANGE}Orange {GOLD}Livery, {BLUE}Blue-{DKGREEN}-Green {BLACK}Livery (used in North Korea, DF4B only),{BLUE}Blue {GOLD}and {YELLOW}Yellow {GOLD}Livery, Jinhua-Wenzhou Livery (DF4B only)",{BLACK}可供选择的涂装：{GREEN}绿色涂装{GOLD}，{ORANGE}橘色涂装{BLACK}，{BLUE}“乌克兰”{YELLOW}涂装，使用于朝鲜的{BLUE}蓝{DKGREEN}绿{BLACK}色涂装，{WHITE}金{RED}温{BLUE}铁{WHITE}路{GOLD}涂装{DKGREEN}
@@ -1210,6 +1212,7 @@ STR_NENGYEQING48,"{BLACK} - {LTBLUE}""Little Bear of Neng-Yeqing"" {BLACK}Livery
 STR_JIXI,{BLACK} - Jixi Coal Mine Livery,{BLACK} - 鸡西煤矿涂装
 STR_DF8_ORIGINAL,{BLACK} - {BLUE}China Raiway Blue Livery,{BLACK} - {BLUE}国铁蓝色涂装
 STR_DF8_LT,{BLACK} - {BLUE}Rio {YELLOW}Tinto {BLUE}Group {YELLOW}Livery,{BLACK} - {BLUE}力拓{YELLOW}公司{GOLD}涂装
+STR_HEXIEHAO,{BLACK} - Livery with Hexie Hao Text,{BLACK} - 带“和谐号”字样涂装
 # Decay,,
 STR_COMFORT_VERY_LOW,{BLACK}Comfort: {RED}Very low ({COMMA}),{BLACK}舒适度：{RED}极低（{COMMA}）
 STR_COMFORT_LOW,{BLACK}Comfort: {ORANGE}Low ({COMMA}),{BLACK}舒适度：{ORANGE}较低（{COMMA}）

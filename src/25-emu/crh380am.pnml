@@ -105,7 +105,7 @@ item (FEAT_TRAINS, crh380am) {
         speed:                          450 km/h;
         power:                          21120 kW;
         weight:                         268 ton;
-        tractive_effort_coefficient:    0.15;
+        tractive_effort_coefficient:    0.08;
         cost_factor:                    240;
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            0;
@@ -128,8 +128,8 @@ item (FEAT_TRAINS, crh380am) {
         cargo_capacity:                 0;
         cargo_age_period:               100 * cafedecayfactor() << param_cargo_decay;
         cost_factor:                    68;
-        running_cost_factor:            (54 + crhspeedcost()) * runningcostfactor() + 20;
-        purchase_running_cost_factor:   236;
+        running_cost_factor:            0;
+        purchase_running_cost_factor:   0;
         purchase_cargo_capacity:        0;
 
     }

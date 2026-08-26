@@ -427,6 +427,7 @@
 #include "src/25-emu/crh2els.pnml"
 #include "src/25-emu/crh2g.pnml"
 #include "src/25-emu/crh2a4020.pnml"
+#include "src/25-emu/crh2j.pnml"
 #include "src/25-emu/crh3c.pnml"
 #include "src/25-emu/cj1.pnml"
 #include "src/25-emu/cj6.pnml"
