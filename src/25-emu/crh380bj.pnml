@@ -6,35 +6,27 @@ switch (FEAT_TRAINS, SELF, switch_crh380bj_name, getbits(extra_callback_info1, 0
 spriteset(spriteset_crh380bj_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard("25-emu/crh380bj", "crh380bj-c")
 }
-
 spriteset(spriteset_crh380bj_head, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard("25-emu/crh380bj", "crh380bj-c")
 }
-
 spriteset(spriteset_crh380bj_tp2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed("25-emu/crh380bj", "crh380bj-tp2")
 }
-
 spriteset(spriteset_crh380bj_m03, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed("25-emu/crh380bj", "crh380bj-m03")
 }
-
 spriteset(spriteset_crh380bj_m04, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard("25-emu/crh380bj", "crh380bj-m04")
 }
-
 spriteset(spriteset_crh380bj_m05, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed("25-emu/crh380bj", "crh380bj-m05")
 }
-
 spriteset(spriteset_crh380bj_m06, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed("25-emu/crh380bj", "crh380bj-m06")
 }
-
 spriteset(spriteset_crh380bj_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard("25-emu/crh380bj", "crh380bj-tp")
 }
-
 spriteset(spriteset_crh380bj_rear, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed("25-emu/crh380bj", "crh380bj-c")
 }

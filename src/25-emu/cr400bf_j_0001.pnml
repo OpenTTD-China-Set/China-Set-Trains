@@ -81,7 +81,7 @@ item (FEAT_TRAINS, cr400bf_j_0001) {
         variant_group:                  9218;
 
         // Availability
-        climates_available:             ALL_CLIMATES;
+        climates_available:             NO_CLIMATE;
         introduction_date:              date(2021,06,11);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   25;

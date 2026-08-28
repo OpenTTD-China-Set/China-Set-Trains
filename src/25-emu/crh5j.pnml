@@ -15,6 +15,9 @@ spriteset(spriteset_crh5j_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) 
 spriteset(spriteset_crh5j_head, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh5j-mc")
 }
+spriteset(spriteset_crh5j_head_reconnect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-emu", "crh5j-mc-c")
+}
 spriteset(spriteset_crh5j_47, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh5j-m47")
 }
@@ -27,6 +30,9 @@ spriteset(spriteset_crh5j_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset(spriteset_crh5j_rear, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed ("25-emu", "crh5j-mc")
 }
+spriteset(spriteset_crh5j_rear_reconnect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed ("25-emu", "crh5j-mc-c")
+}
 spriteset(spriteset_crh5j_tp2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-emu", "crh5j-tp2")
 }
@@ -37,43 +43,37 @@ switch(FEAT_TRAINS, SELF, switch_crh5j_articulated_part, extra_callback_info1) {
 }
 
 //reserved for reconnect
-//switch(FEAT_TRAINS, SELF, switch_crh5j_head, position_in_consist_from_end) {
-   // 1: spriteset_crh5j_reconnect_rear;
-   // spriteset_crh5j_rear;
-//}
-//switch(FEAT_TRAINS, SELF, switch_crh5j_rear, position_in_consist) {
-   // 1: spriteset_crh5j_reconnect_head;
-    //spriteset_crh5j_head;
-//}
+switch(FEAT_TRAINS, SELF, switch_crh5j_rear, position_in_consist_from_end / 3) {
+    0: spriteset_crh5j_rear;
+    spriteset_crh5j_rear_reconnect;
+}
+switch(FEAT_TRAINS, SELF, switch_crh5j_head, position_in_consist / 3) {
+    0: spriteset_crh5j_head;
+    spriteset_crh5j_head_reconnect;
+}
 //end the reservation
 
 switch(FEAT_TRAINS, SELF, switch_crh5j_graphics, position_in_articulated_veh % 24) {
-    1: return spriteset_crh5j_head;
+    1: return switch_crh5j_head;
     4: return spriteset_crh5j_25;
     7: return spriteset_crh5j_tp2;
     10: return spriteset_crh5j_47;
     13: return spriteset_crh5j_25;
     16: return spriteset_crh5j_tp;
     19: return spriteset_crh5j_47;
-    22: return spriteset_crh5j_rear;
+    22: return switch_crh5j_rear;
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, onlycrh5j, vehicle_type_id) {
-    crh5j: onlyallowcst;
-    return CB_RESULT_ATTACH_DISALLOW;
-}
 
 switch(FEAT_TRAINS, SELF, switch_crh5j_speed, cargo_subtype) {
-    1: return 275;
-    2: return 300;
-    return 250;
+    1: return 300;
+    return 275;
 }
 
 switch(FEAT_TRAINS, SELF, switch_crh5j_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGIN_SPEED);
-    1: return string(STR_CRH5J_DESIGNED_SPEED);
-    2: return string(STR_CRH5J_EXPERIMENTAL_SPEED);
+    1: return string(STR_CRH5J_EXPERIMENTAL_SPEED);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -109,8 +109,8 @@ item (FEAT_TRAINS, crh5j) {
         // Stats
         speed:                          250 km/h;
         power:                          5500 kW;
-        weight:                         480 ton;
-        tractive_effort_coefficient:    0.081;
+        weight:                         424 ton;
+        tractive_effort_coefficient:    0.0712;
         cost_factor:                    1;
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            1;
@@ -121,7 +121,7 @@ item (FEAT_TRAINS, crh5j) {
     graphics {
         // Menu
         additional_text:                string(STR_DESC_6, string(STR_RELDEC_LOW, 12), string(STR_CRH5J_AVAILABLE));
-        can_attach_wagon:               onlycrh5j;
+        can_attach_wagon:               citonly;
         start_stop:                     mu4to24car;
         cargo_subtype_text:             switch_crh5j_cargo_subtype;
 
@@ -133,7 +133,6 @@ item (FEAT_TRAINS, crh5j) {
         // Stats
         length:                         switch_length_2_8_2;
         speed:                          switch_crh5j_speed;
-        purchase_tractive_effort_coefficient: return int(0.083*255);
         cargo_capacity:                 0;
         cost_factor:                    67;
         running_cost_factor:            0;

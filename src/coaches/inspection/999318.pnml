@@ -35,7 +35,7 @@ item (FEAT_TRAINS, wx25t999318) {
         variant_group:					2202;
 
         // Availability
-        climates_available:             ALL_CLIMATES;
+        climates_available:             NO_CLIMATE;
         introduction_date:              date(2011,03,01);
         model_life:                     30;
         vehicle_life:                   30;

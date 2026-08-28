@@ -127,7 +127,6 @@ item (FEAT_TRAINS, crh380aj) {
         // Stats
         length:                         switch_length_2_8_2;
         speed:                          switch_crh380aj_speed;
-        purchase_tractive_effort_coefficient: return int(0.083*255);
         cargo_capacity:                 0;
         cost_factor:                    67;
         running_cost_factor:            0;
