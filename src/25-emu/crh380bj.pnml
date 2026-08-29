@@ -1,13 +1,15 @@
-switch (FEAT_TRAINS, SELF, switch_crh380bj_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_CRH380B_SERIES);
-    return CB_RESULT_NO_TEXT;
-}
+//CRH380BJ
 
 spriteset(spriteset_crh380bj_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard("25-emu/crh380bj", "crh380bj-c")
 }
+
+
 spriteset(spriteset_crh380bj_head, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard("25-emu/crh380bj", "crh380bj-c")
+}
+spriteset(spriteset_crh380bj_head_reconnect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh380bj", "crh380bj-c-c")
 }
 spriteset(spriteset_crh380bj_tp2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed("25-emu/crh380bj", "crh380bj-tp2")
@@ -30,21 +32,32 @@ spriteset(spriteset_crh380bj_tp, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset(spriteset_crh380bj_rear, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed("25-emu/crh380bj", "crh380bj-c")
 }
+spriteset(spriteset_crh380bj_rear_reconnect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/crh380bj", "crh380bj-c-c")
+}
 
 switch(FEAT_TRAINS, SELF, switch_crh380bj_articulated_part, extra_callback_info1) {
     1..23: return crh380bj;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+switch (FEAT_TRAINS, SELF, switch_crh380bj_graphics_head, position_in_consist / 3) {
+    0: spriteset_crh380bj_head;
+    spriteset_crh380bj_head_reconnect;
+}
+switch (FEAT_TRAINS, SELF, switch_crh380bj_graphics_rear, position_in_consist / 3) {
+    0: spriteset_crh380bj_rear;
+    spriteset_crh380bj_rear_reconnect;
+}
 switch(FEAT_TRAINS, SELF, switch_crh380bj_graphics, position_in_articulated_veh % 24) {
-    1: return spriteset_crh380bj_head;
+    1: return switch_crh380bj_graphics_head;
     4: return spriteset_crh380bj_tp2;
     7: return spriteset_crh380bj_m03;
     10: return spriteset_crh380bj_m04;
     13: return spriteset_crh380bj_m05;
     16: return spriteset_crh380bj_m06;
     19: return spriteset_crh380bj_tp;
-    22: return spriteset_crh380bj_rear;
+    22: return switch_crh380bj_graphics_rear;
     empty_sprites;
 }
 
@@ -94,7 +107,7 @@ item (FEAT_TRAINS, crh380bj) {
         // Stats
         speed:                          385 km/h;
         power:                          13800 kW;
-        weight:                         482 ton;
+        weight:                         448 ton;
         tractive_effort_coefficient:    0.051;
         cost_factor:                    1;
         running_cost_base:              RUNNING_COST_ELECTRIC;
@@ -106,7 +119,7 @@ item (FEAT_TRAINS, crh380bj) {
         graphics {
         // Menu
         additional_text:                string(STR_DESC_6, string(STR_RELDEC_LOW, 8), string(STR_CRH380BJ_AVAILABLE));
-        can_attach_wagon:               onlycrh380bj;
+        can_attach_wagon:               citonly;
         start_stop:                     mu4to24car;
         cargo_subtype_text:             switch_crh380bj_cargo_subtype;
 
@@ -118,12 +131,11 @@ item (FEAT_TRAINS, crh380bj) {
         // Stats
         length:                         switch_length_2_8_2;
         speed:                          switch_crh380bj_speed;
-        purchase_tractive_effort_coefficient: return int(0.083*255);
         cargo_capacity:                 0;
-        cost_factor:                    67;
+        cost_factor:                    80;
         running_cost_factor:            0;
         purchase_running_cost_factor:   0;
         purchase_cargo_capacity:        0;
-        name:                           switch_crh380bj_name;
+        name:                           switch_crh380b_name;
     }
 }
