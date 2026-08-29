@@ -101,7 +101,7 @@ item (FEAT_TRAINS, crh380bja) {
 
         // Stats
         speed:                          350 km/h;
-        power:                          13800 kW;
+        power:                          9200 kW;
         weight:                         482 ton;
         tractive_effort_coefficient:    0.051;
         cost_factor:                    1;
