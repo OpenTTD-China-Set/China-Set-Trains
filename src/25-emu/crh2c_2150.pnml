@@ -1,7 +1,4 @@
-switch (FEAT_TRAINS, SELF, switch_crh2c_2150_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_CRH2_SERIES);
-    return CB_RESULT_NO_TEXT;
-}
+//CRH2C-2150
 
 spriteset(spriteset_crh2c_2150_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard("25-emu/crh2c-2150", "crh2c-2150-tc")
@@ -10,33 +7,32 @@ spriteset(spriteset_crh2c_2150_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32
 spriteset(spriteset_crh2c_2150_head, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard("25-emu/crh2c-2150", "crh2c-2150-tc")
 }
-
+spriteset(spriteset_crh2c_2150_head_reconnect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2c-2150", "crh2c-2150-tc-c")
+}
 spriteset(spriteset_crh2c_2150_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed("25-emu/crh2c-2150", "crh2c-2150-m2")
 }
-
 spriteset(spriteset_crh2c_2150_3, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed("25-emu/crh2c-2150", "crh2c-2150-m3")
 }
-
 spriteset(spriteset_crh2c_2150_4, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard("25-emu/crh2c-2150", "crh2c-2150-mp4")
 }
-
 spriteset(spriteset_crh2c_2150_5, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard("25-emu/crh2c-2150", "crh2c-2150-m5")
 }
-
 spriteset(spriteset_crh2c_2150_6, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard("25-emu/crh2c-2150", "crh2c-2150-mp6")
 }
-
 spriteset(spriteset_crh2c_2150_7, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard("25-emu/crh2c-2150", "crh2c-2150-m7")
 }
-
 spriteset(spriteset_crh2c_2150_rear, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_reversed("25-emu/crh2c-2150", "crh2c-2150-tc")
+}
+spriteset(spriteset_crh2c_2150_rear_reconnect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/crh2c-2150", "crh2c-2150-tc-c")
 }
 
 switch(FEAT_TRAINS, SELF, switch_crh2c_2150_articulated_part, extra_callback_info1) {
@@ -44,15 +40,24 @@ switch(FEAT_TRAINS, SELF, switch_crh2c_2150_articulated_part, extra_callback_inf
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+
+switch (FEAT_TRAINS, SELF, switch_crh2c_2150_graphics_head, position_in_consist / 3) {
+    0: spriteset_crh2c_2150_head;
+    spriteset_crh2c_2150_head_reconnect;
+}
+switch (FEAT_TRAINS, SELF, switch_crh2c_2150_graphics_rear, position_in_consist_from_end / 3) {
+    0: spriteset_crh2c_2150_rear;
+    spriteset_crh2c_2150_rear_reconnect;
+}
 switch(FEAT_TRAINS, SELF, switch_crh2c_2150_graphics, position_in_articulated_veh % 24) {
-    1: return spriteset_crh2c_2150_head;
+    1: return switch_crh2c_2150_graphics_head;
     4: return spriteset_crh2c_2150_2;
     7: return spriteset_crh2c_2150_3;
     10: return spriteset_crh2c_2150_4;
     13: return spriteset_crh2c_2150_5;
     16: return spriteset_crh2c_2150_6;
     19: return spriteset_crh2c_2150_7;
-    22: return spriteset_crh2c_2150_rear;
+    22: return switch_crh2c_2150_graphics_rear;
     empty_sprites;
 }
 
@@ -66,10 +71,6 @@ switch(FEAT_TRAINS, SELF, switch_crh2c_2150_cargo_subtype, cargo_subtype) {
     1: return string(STR_CRH2C_2150_EXPERIMENTAL_SPEED);
 }
 
-switch (FEAT_TRAINS, SELF, onlycrh2c_2150, vehicle_type_id) {
-    crh2c_2150: onlyallowcst;
-    return CB_RESULT_ATTACH_DISALLOW;
-}
 
 item (FEAT_TRAINS, crh2c_2150) {
     property {
@@ -101,9 +102,9 @@ item (FEAT_TRAINS, crh2c_2150) {
 
         // Stats
         speed:                          350 km/h;
-        power:                          8196 kW;
-        weight:                         420 ton;
-        tractive_effort_coefficient:    0.039;
+        power:                          8322 kW;
+        weight:                         400 ton;
+        tractive_effort_coefficient:    0.0618;
         cost_factor:                    1;
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            1;
@@ -114,7 +115,7 @@ item (FEAT_TRAINS, crh2c_2150) {
         graphics {
         // Menu
         additional_text:                string(STR_DESC_6, string(STR_CRH2C_2150_NICKNAME), string(STR_RELDEC_LOW, 8), string(STR_CRH2C_2150_AVAILABLE));
-        can_attach_wagon:               onlycrh2c_2150;
+        can_attach_wagon:               citonly;
         start_stop:                     mu4to24car;
         cargo_subtype_text:             switch_crh2c_2150_cargo_subtype;
 
@@ -126,12 +127,11 @@ item (FEAT_TRAINS, crh2c_2150) {
         // Stats
         length:                         switch_length_2_8_2;
         speed:                          switch_crh2c_2150_speed;
-        purchase_tractive_effort_coefficient: return int(0.083*255);
         cargo_capacity:                 0;
-        cost_factor:                    67;
+        cost_factor:                    70;
         running_cost_factor:            0;
         purchase_running_cost_factor:   0;
         purchase_cargo_capacity:        0;
-        name:                           switch_crh2c_2150_name;
+        name:                           switch_crh2c_name;
     }
 }

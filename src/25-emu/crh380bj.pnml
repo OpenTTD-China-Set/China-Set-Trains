@@ -45,7 +45,7 @@ switch (FEAT_TRAINS, SELF, switch_crh380bj_graphics_head, position_in_consist / 
     0: spriteset_crh380bj_head;
     spriteset_crh380bj_head_reconnect;
 }
-switch (FEAT_TRAINS, SELF, switch_crh380bj_graphics_rear, position_in_consist / 3) {
+switch (FEAT_TRAINS, SELF, switch_crh380bj_graphics_rear, position_in_consist_from_end / 3) {
     0: spriteset_crh380bj_rear;
     spriteset_crh380bj_rear_reconnect;
 }
