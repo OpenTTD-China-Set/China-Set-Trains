@@ -5,8 +5,10 @@ China Set: Trains Changelog
 
 ## Initial-0-4 Updates
 
-0.4.2 (2026-08-15)
+0.4.2 (2026-08-30)
 --------------------
+Add: Inspection EMUs and coaches, includin CR400BF-J-0001, CRH2C-2061-2068, CRH2C-2150, CRH2J, CRH380BJ, CRH380BJA, CRH5J; SSY25K998329, SY25T999209, WX25T999305, WX25T999318;
+Add Livery: SS3 Remembrance Livery;
 Fix: Multiple Units did not work as expected in the "real reversing" feature of newer versions of OpenTTD.
 
 0.4.1 (2026-02-18)
