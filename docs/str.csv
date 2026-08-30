@@ -1051,7 +1051,7 @@ STR_HXD_G,{BLACK} - HXD{COMMA}G,
 STR_FXD,{BLACK} - FXD{COMMA},
 STR_FXD_B,{BLACK} - FXD{COMMA}B,
 STR_GONGQINGTUAN,"{BLACK} - ""Gongqingtuan"" Livery",{BLACK} - 共青团号涂装
-STR_REMEMBER,{BLACK} - Remember Livery,{BLACK} - 纪念涂装
+STR_REMEMBRANCE,{BLACK} - Remembrance Livery,{BLACK} - 纪念涂装
 STR_BUILD_YEAR,{BLACK} - According to build year,{BLACK} - 根据建造年份选择设计
 STR_YW22_ORIGINAL,"{BLACK} - Original Design {RED}(Crowded) {BLACK}- Capacity 77, Comfort 240",{BLACK} - 初始设计 {RED}(拥挤) {BLACK}- 定员77，舒适度240
 STR_YW22_1966,"{BLACK} - 1966 Design - Capacity 60, Comfort 288",{BLACK} - 1966年新设计 - 定员60，舒适度288
@@ -1104,7 +1104,14 @@ STR_DAYAOSHAN_25Z,{BLUE} - {RED}"Da{WHITE}yao{BLUE}shan" {BLACK}Imitation {BLUE}
 STR_JINLUN,{BLACK} - {BLUE}"Ji{RED}nl{WHITE}un",{BLACK} - {BLACK}“{BLUE}金{RED}轮{WHITE}号{BLACK}”{GRAY}涂装
 STR_JINGGANGSHAN,{BLACK} - {WHITE}"Jinggang{RED}shan",{BLACK} - {WHITE}“井冈{RED}山号”{BLACK}涂装
 STR_YILI,{BLUE} - Yili's Advertisement Livery,{BLUE} - 伊利广告涂装
-STR_SDHS,{DKGREEN} - "Shandong High Speed",{DKGREEN} - “山东高速”涂装
+STR_SDHS,{DKGREEN} - "Shandong High Speed",{DKG舒适度240
+STR_YW22_1966,"{BLACK} - 1966 Design - Capacity 60, Comfort 288",{BLACK} - 1966年新设计 - 定员60，舒适度288
+STR_ORDINARY_GREEN,{BLACK} - {GREEN}Ordinary Green {BLACK}Livery,{BLACK} - {GREEN}绿皮车{BLACK}涂装
+STR_RED_WHITE,{BLACK} - {RED}Red {BLACK}and {WHITE}White,{BLACK} - {RED}红{WHITE}白{BLACK}相间
+STR_BLUE_RED_WHITE,{BLACK} - {BLUE}Blue-{RED}Red{WHITE}-White,{BLACK} - {BLUE}蓝{WHITE}白{RED}红{BLACK}相间涂装
+STR_BLUE_WHITE,{BLACK} - {BLUE}Blue-{RED}Red{WHITE}-White,{BLACK} - {BLUE}蓝{WHITE}白{BLACK}相间涂装
+STR_RED_BLUE_GRAY,{BLACK} - {RED}Red-{BLUE}Blue-{GRAY}Gray,{BLACK} - {RED}红{BLUE}蓝{GRAY}灰{BLACK}相间涂装
+STR_RBG_PLUG,{BLACK} - {RED}Red-{BLUE}Blue-{GRAY}Gray {BLACK}Version With Plug Doors,{BLACK} - {RED}红{BLUE}蓝{GRAY}灰{BLACK}相间涂装，塞拉门REEN} - “山东高速”涂装
 STR_HEJIU,{BLACK} - Hefei-Jiujiang Railway Livery,{BLACK} - 合九铁路涂装
 STR_GYR,{BLACK} - Guangxi Yanhai Raiway,{BLACK} - 广西沿海铁路涂装
 STR_GMSR,{BLACK} - Guangzhou-Meizhou-Shantou Railway Livery,{BLACK} - 广梅汕铁路涂装
