@@ -66,7 +66,7 @@ item (FEAT_TRAINS, teni8) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_SMR_VEHICLE), string(STR_COMFORT_HIGH, 256), string(STR_NO_AIR_CONDITIONER));
+        additional_text:                string(STR_DESC_4, string(STR_SMR_VEHICLE), string(STR_COMFORT_MEDIUM, 256), string(STR_NO_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
 
         // Graphics

@@ -1,0 +1,168 @@
+//CRH2J
+
+//GFX
+spriteset(spriteset_crh2j_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2j", "crh2j-c")
+}
+
+
+spriteset(spriteset_crh2j_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2j", "crh2j-c")
+}
+spriteset(spriteset_crh2j_crhtxt, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2j", "crh2j-c-crh")
+}
+spriteset(spriteset_crh2j_original_r, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/crh2j", "crh2j-c")
+}
+spriteset(spriteset_crh2j_crhtxt_r, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/crh2j", "crh2j-c-crh")
+}
+
+spriteset(spriteset_crh2j_original_c, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2j", "crh2j-c-c")
+}
+spriteset(spriteset_crh2j_crhtxt_c, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2j", "crh2j-c-crh-c")
+}
+spriteset(spriteset_crh2j_original_r_c, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/crh2j", "crh2j-c-c")
+}
+spriteset(spriteset_crh2j_crhtxt_r_c, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/crh2j", "crh2j-c-crh-c")
+}
+
+spriteset(spriteset_crh2j_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2j", "crh2j-m")
+}
+spriteset(spriteset_crh2j_p_a, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2j", "crh2j-p-a")
+}
+spriteset(spriteset_crh2j_p_b, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2j", "crh2j-p-b")
+}
+
+
+
+
+switch(FEAT_TRAINS, SELF, switch_crh2j_articulated_part, extra_callback_info1) {
+    1..23: return crh2j;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_crh2j_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_HEXIEHAO);
+    return CB_RESULT_NO_TEXT;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh2j_graphics_origin_head, position_in_consist / 3) {
+    0: spriteset_crh2j_original;
+    spriteset_crh2j_original_c;
+}
+switch (FEAT_TRAINS, SELF, switch_crh2j_graphics_origin_end, position_in_consist_from_end / 3) {
+    0: spriteset_crh2j_original_r;
+    spriteset_crh2j_original_r_c;
+}
+switch (FEAT_TRAINS, SELF, switch_crh2j_graphics_crhtxt_head, position_in_consist / 3) {
+    0: spriteset_crh2j_crhtxt;
+    spriteset_crh2j_crhtxt_c;
+}
+switch (FEAT_TRAINS, SELF, switch_crh2j_graphics_crhtxt_end, position_in_consist_from_end / 3) {
+    0: spriteset_crh2j_crhtxt_r;
+    spriteset_crh2j_crhtxt_r_c;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh2j_graphics_subtype_head, cargo_subtype) {
+    0: switch_crh2j_graphics_origin_head;
+    switch_crh2j_graphics_crhtxt_head;
+}
+switch (FEAT_TRAINS, SELF, switch_crh2j_graphics_subtype_end, cargo_subtype) {
+    0: switch_crh2j_graphics_origin_end;
+    switch_crh2j_graphics_crhtxt_end;
+}
+switch(FEAT_TRAINS, SELF, switch_crh2j_graphics, position_in_articulated_veh % 24) {
+    1: return switch_crh2j_graphics_subtype_head;
+    4: return spriteset_crh2j_m;
+    7: return spriteset_crh2j_p_b;
+    10: return spriteset_crh2j_m;
+    13: return spriteset_crh2j_p_a;
+    16: return spriteset_crh2j_m;
+    19: return spriteset_crh2j_m;
+    22: return switch_crh2j_graphics_subtype_end;
+    empty_sprites;
+}
+
+
+
+
+switch (FEAT_TRAINS, SELF, onlycrh2j, vehicle_type_id) {
+    crh2j: onlyallowcst;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+item (FEAT_TRAINS, crh2j) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CRH2J);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        variant_group:                  crh2a;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2015,07,01);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   25;
+        track_type:                     SAAA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          275 km/h;
+        power:                          4560 kW;
+        weight:                         376 ton;
+        tractive_effort_coefficient:    0.0589;
+        cost_factor:                    1;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            1;
+        reliability_decay:              8;
+        bitmask_vehicle_info:           bitmask(2);
+
+    }
+        graphics {
+        // Menu
+        additional_text:                string(STR_DESC_6, string(STR_CRH2J_DESC), string(STR_RELDEC_VERY_LOW, 4));
+        can_attach_wagon:               citonly;
+        start_stop:                     mu4to24car;
+        cargo_subtype_text:             switch_crh2j_cargo_subtype;
+
+        // Graphics
+        default:                        switch_crh2j_graphics;
+        purchase:                       spriteset_crh2j_purchase_original;
+        articulated_part:               switch_crh2j_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        purchase_tractive_effort_coefficient: return int(0.0589*255);
+        cargo_capacity:                 0;
+        cost_factor:                    65;
+        running_cost_factor:            0;
+        purchase_running_cost_factor:   0;
+        purchase_cargo_capacity:        0;
+        name:                           switch_crh2a_name;
+    }
+}

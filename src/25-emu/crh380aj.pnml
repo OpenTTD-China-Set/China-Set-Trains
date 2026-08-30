@@ -57,10 +57,6 @@ switch (FEAT_TRAINS, SELF, switch_crh380aj_graphics, position_in_articulated_veh
     empty_sprites;
 }
 
-switch (FEAT_TRAINS, SELF, onlycrh380aj, vehicle_type_id) {
-    crh380aj: onlyallowcst;
-    return CB_RESULT_ATTACH_DISALLOW;
-}
 
 
 
@@ -112,14 +108,14 @@ item (FEAT_TRAINS, crh380aj) {
         cost_factor:                    1;
         running_cost_base:              RUNNING_COST_ELECTRIC;
         running_cost_factor:            1;
-        reliability_decay:              12;
+        reliability_decay:              4;
         bitmask_vehicle_info:           bitmask(2);
 
     }
     graphics {
         // Menu
         additional_text:                string(STR_DESC_6, string(STR_RELDEC_VERY_LOW, 4), string(STR_CRH380AJ_AVAILABLE));
-        can_attach_wagon:               onlycrh380aj;
+        can_attach_wagon:               citonly;
         start_stop:                     mu4to24car;
         cargo_subtype_text:             switch_crh380aj_cargo_subtype;
 
@@ -131,7 +127,6 @@ item (FEAT_TRAINS, crh380aj) {
         // Stats
         length:                         switch_length_2_8_2;
         speed:                          switch_crh380aj_speed;
-        purchase_tractive_effort_coefficient: return int(0.083*255);
         cargo_capacity:                 0;
         cost_factor:                    67;
         running_cost_factor:            0;

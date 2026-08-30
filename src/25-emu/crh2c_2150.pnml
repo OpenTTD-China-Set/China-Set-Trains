@@ -1,0 +1,137 @@
+//CRH2C-2150
+
+spriteset(spriteset_crh2c_2150_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2c-2150", "crh2c-2150-tc")
+}
+
+spriteset(spriteset_crh2c_2150_head, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2c-2150", "crh2c-2150-tc")
+}
+spriteset(spriteset_crh2c_2150_head_reconnect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2c-2150", "crh2c-2150-tc-c")
+}
+spriteset(spriteset_crh2c_2150_2, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/crh2c-2150", "crh2c-2150-m2")
+}
+spriteset(spriteset_crh2c_2150_3, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/crh2c-2150", "crh2c-2150-m3")
+}
+spriteset(spriteset_crh2c_2150_4, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2c-2150", "crh2c-2150-mp4")
+}
+spriteset(spriteset_crh2c_2150_5, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2c-2150", "crh2c-2150-m5")
+}
+spriteset(spriteset_crh2c_2150_6, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2c-2150", "crh2c-2150-mp6")
+}
+spriteset(spriteset_crh2c_2150_7, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/crh2c-2150", "crh2c-2150-m7")
+}
+spriteset(spriteset_crh2c_2150_rear, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/crh2c-2150", "crh2c-2150-tc")
+}
+spriteset(spriteset_crh2c_2150_rear_reconnect, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/crh2c-2150", "crh2c-2150-tc-c")
+}
+
+switch(FEAT_TRAINS, SELF, switch_crh2c_2150_articulated_part, extra_callback_info1) {
+    1..23: return crh2c_2150;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_crh2c_2150_graphics_head, position_in_consist / 3) {
+    0: spriteset_crh2c_2150_head;
+    spriteset_crh2c_2150_head_reconnect;
+}
+switch (FEAT_TRAINS, SELF, switch_crh2c_2150_graphics_rear, position_in_consist_from_end / 3) {
+    0: spriteset_crh2c_2150_rear;
+    spriteset_crh2c_2150_rear_reconnect;
+}
+switch(FEAT_TRAINS, SELF, switch_crh2c_2150_graphics, position_in_articulated_veh % 24) {
+    1: return switch_crh2c_2150_graphics_head;
+    4: return spriteset_crh2c_2150_2;
+    7: return spriteset_crh2c_2150_3;
+    10: return spriteset_crh2c_2150_4;
+    13: return spriteset_crh2c_2150_5;
+    16: return spriteset_crh2c_2150_6;
+    19: return spriteset_crh2c_2150_7;
+    22: return switch_crh2c_2150_graphics_rear;
+    empty_sprites;
+}
+
+switch(FEAT_TRAINS, SELF, switch_crh2c_2150_speed, cargo_subtype) {
+    0: return 350;
+    1: return 402;
+}
+
+switch(FEAT_TRAINS, SELF, switch_crh2c_2150_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGIN_SPEED);
+    1: return string(STR_CRH2C_2150_EXPERIMENTAL_SPEED);
+}
+
+
+item (FEAT_TRAINS, crh2c_2150) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CRH2C_2150);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        variant_group:                  9220;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2010,05,04);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   25;
+        track_type:                     SAAA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          350 km/h;
+        power:                          8322 kW;
+        weight:                         400 ton;
+        tractive_effort_coefficient:    0.0618;
+        cost_factor:                    1;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            1;
+        reliability_decay:              8;
+        bitmask_vehicle_info:           bitmask(2);
+
+    }
+        graphics {
+        // Menu
+        additional_text:                string(STR_DESC_6, string(STR_CRH2C_2150_NICKNAME), string(STR_RELDEC_LOW, 8), string(STR_CRH2C_2150_AVAILABLE));
+        can_attach_wagon:               citonly;
+        start_stop:                     mu4to24car;
+        cargo_subtype_text:             switch_crh2c_2150_cargo_subtype;
+
+        // Graphics
+        default:                        switch_crh2c_2150_graphics;
+        purchase:                       spriteset_crh2c_2150_purchase_original;
+        articulated_part:               switch_crh2c_2150_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_8_2;
+        speed:                          switch_crh2c_2150_speed;
+        cargo_capacity:                 0;
+        cost_factor:                    70;
+        running_cost_factor:            0;
+        purchase_running_cost_factor:   0;
+        purchase_cargo_capacity:        0;
+        name:                           switch_crh2c_name;
+    }
+}

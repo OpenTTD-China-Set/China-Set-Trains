@@ -63,7 +63,7 @@ item (FEAT_TRAINS, xl25ml) {
         variant_group:					2125;
 
         // Availability
-        climates_available:             ALL_CLIMATES;
+        climates_available:             NO_CLIMATE;
         introduction_date:              date(1981,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;

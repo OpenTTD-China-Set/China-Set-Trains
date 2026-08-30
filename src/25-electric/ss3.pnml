@@ -26,6 +26,9 @@ spriteset (spriteset_ss3_fuzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_ss3_shenhua, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("25-electric", "ss3-shenhua")
 }
+spriteset (spriteset_ss3_remember, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("25-electric", "ss3-remember")
+}
 
 switch (FEAT_TRAINS, SELF, switch_ss3_articulated_part, extra_callback_info1) {
     1..2: return ss3;
@@ -38,6 +41,7 @@ switch (FEAT_TRAINS, SELF, switch_ss3_graphics_subtype, cargo_subtype) {
     3: spriteset_ss3_red;
     4: spriteset_ss3_grassgreen;
     5: spriteset_ss3_fuzhou;
+    6: spriteset_ss3_remember;
     spriteset_ss3_original;
 }
 
@@ -48,6 +52,7 @@ switch (FEAT_TRAINS, SELF, switch_ss3_cargo_subtype, cargo_subtype) {
     3: return string(STR_RED);
     4: return string(STR_GRASSGREEN);
     5: return string(STR_FUZHOU);
+    6: return string(STR_REMEMBER);
     return CB_RESULT_NO_TEXT;
 }
 

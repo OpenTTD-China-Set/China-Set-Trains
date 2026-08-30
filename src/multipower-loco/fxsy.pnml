@@ -32,7 +32,7 @@ switch (FEAT_TRAINS, SELF, switch_fxsy_articulated_part, extra_callback_info1) {
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-switch(FEAT_TRAINS, SELF, switch_fxsy_gfx_elect, tile_is_railtype("SACA")) {
+switch(FEAT_TRAINS, SELF, switch_fxsy_gfx_elect, tile_powers_railtype("SACA")) {
     1: spriteset_fxsy_elect_on;
     spriteset_fxsy_elect_off;
 }
@@ -48,7 +48,7 @@ switch(FEAT_TRAINS, SELF, switch_fxsy_power, tile_powers_railtype("SACA")) {
     return 4358;
 }
 
-switch(FEAT_TRAINS, SELF, switch_fxsy_visual_effect_and_powered_railtype, tile_is_railtype("SACA")) {
+switch(FEAT_TRAINS, SELF, switch_fxsy_visual_effect_and_powered_railtype, tile_powers_railtype("SACA")) {
     1: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 0, DISABLE_WAGON_POWER);
     return visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);
 }
