@@ -200,6 +200,11 @@
 #include "src/coaches/25dt/syz25dt_jinlun.pnml"
 #include "src/coaches/25dt/srz25dt_jinlun.pnml"
 
+#include "src/coaches/inspection/998329.pnml"
+#include "src/coaches/inspection/999209.pnml"
+#include "src/coaches/inspection/999318.pnml"
+#include "src/coaches/inspection/999305.pnml"
+
 
 
 // Wagons
@@ -369,6 +374,7 @@
 #include "src/25-electric/hxd1b.pnml"
 #include "src/25-electric/hxd1c.pnml"
 #include "src/25-electric/hxd1d.pnml"
+
 #include "src/25-electric/fxd1b.pnml"
 #include "src/25-electric/fxd1b1000.pnml"
 #include "src/25-electric/hxd2.pnml"
@@ -414,11 +420,14 @@
 #include "src/25-emu/crh2a.pnml"
 #include "src/25-emu/crh2b.pnml"
 #include "src/25-emu/crh2c.pnml"
+#include "src/25-emu/crh2c_2150.pnml"
+#include "src/25-emu/crh2c_20612068.pnml"
 #include "src/25-emu/crh2e.pnml"
 #include "src/25-emu/crh2eng.pnml"
 #include "src/25-emu/crh2els.pnml"
 #include "src/25-emu/crh2g.pnml"
 #include "src/25-emu/crh2a4020.pnml"
+#include "src/25-emu/crh2j.pnml"
 #include "src/25-emu/crh3c.pnml"
 #include "src/25-emu/cj1.pnml"
 #include "src/25-emu/cj6.pnml"
@@ -427,6 +436,7 @@
 #include "src/25-emu/crh5a.pnml"
 #include "src/25-emu/crh5e.pnml"
 #include "src/25-emu/crh5gjt.pnml"
+#include "src/25-emu/crh5j.pnml"
 #include "src/25-emu/crh380a.pnml"
 #include "src/25-emu/crh380al.pnml"
 #include "src/25-emu/crh380al_2541.pnml"
@@ -434,6 +444,8 @@
 #include "src/25-emu/crh380am.pnml"
 #include "src/25-emu/crh380b.pnml"
 #include "src/25-emu/crh380bl.pnml"
+#include "src/25-emu/crh380bj.pnml"
+#include "src/25-emu/crh380bja.pnml"
 #include "src/25-emu/crh380cl.pnml"
 #include "src/25-emu/crh380d.pnml"
 #include "src/25-emu/cr300af.pnml"
@@ -449,6 +461,7 @@
 #include "src/25-emu/cr400bfab.pnml"
 #include "src/25-emu/cr400bfc.pnml"
 #include "src/25-emu/cr400bfz.pnml"
+#include "src/25-emu/cr400bf_j_0001.pnml"
 #include "src/25-emu/cr400bfabz.pnml"
 #include "src/25-emu/crh6a2.pnml"
 #include "src/25-emu/crh6a_comfort.pnml"

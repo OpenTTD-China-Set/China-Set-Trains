@@ -101,7 +101,7 @@ switch (FEAT_TRAINS, SELF, switch_cr200jcl_middle_capacity, vehicle_type_id) {
     1036: switch_cr200jc_middle_capacity_we;
     1037: switch_cr200jc_middle_capacity_wy;
     1039: switch_cr200jc_middle_capacity_wg;
-    1051: switch_cr200jc_middle_capacity_wex;
+    1536: switch_cr200jc_middle_capacity_wex;
     return 0;
 }
 
@@ -114,7 +114,7 @@ switch (FEAT_TRAINS, SELF, switch_cr200jcl_cab_capacity, vehicle_type_id) {
     1036: switch_cr200jc_cab_capacity_we;
     1037: switch_cr200jc_cab_capacity_wy;
     1039: switch_cr200jc_cab_capacity_wg;
-    1051: return 0;
+    1536: return 0;
     return 0;
 }
 
@@ -132,7 +132,7 @@ switch (FEAT_TRAINS, SELF, switch_cr200jcl_wagon_cost, vehicle_type_id) {
     1036: return 30;
     1037: return 32;
     1039: return 34;
-    1051: return 40;
+    1536: return 40;
     return 0;
 }
 
@@ -145,7 +145,7 @@ switch (FEAT_TRAINS, SELF, switch_cr200jcl_wagon_running, vehicle_type_id) {
     1036: return 15;
     1037: return 18;
     1039: return 20;
-    1051: return 22;
+    1536: return 22;
     return 0;
 }
 
