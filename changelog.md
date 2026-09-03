@@ -5,6 +5,29 @@ China Set: Trains Changelog
 
 ## Initial-0-4 Updates
 
+0.4.2 (2026-08-30)
+--------------------
+Add: Inspection EMUs and coaches, includin CR400BF-J-0001, CRH2C-2061-2068, CRH2C-2150, CRH2J, CRH380BJ, CRH380BJA, CRH5J; SSY25K998329, SY25T999209, WX25T999305, WX25T999318;
+Add Livery: SS3 Remembrance Livery;
+Fix: Multiple Units did not work as expected in the "real reversing" feature of newer versions of OpenTTD.
+
+0.4.1 (2026-02-18)
+--------------------
+Add: ND2, DF8, 18 Series Gen5, 25A Series, FXSY, 24 HK Series, 24 DDR Series, DQ35
+Add Liveries for 25K, 25T, 25Z, 25G, 25B, HXD1C
+Renew sprites of 25K, 25T, 25Z, 25G, 25B, HXD1B
+Add the Asia Express Series:
+    - ADD SL7 Steam Locomotive
+    - ADD Ha 8, Ro 8, I 8, Ten'i 8, Teyu 8, Shi 8 Passenger coaches
+Completed the CR200J Series:
+    - ADD CR200J-D
+    - Now sprites of wagon change by type of seat
+    - CR200JCL now can attach luggage wagon(kymuw)
+Fix: some wrong or misspelt language strings
+Fix: CR200JA sprite errors
+Fix: SLeeper EMUs cargo decay wrong
+Fix: CR400BF Guage Changed EMU change to section and fix power.
+
 0.4.0 (2025-09-01)
 --------------------
 Add vehicles of South Manchuria Railways, which was a railway company established by the Japanese during their invasion of China in WWII:
@@ -17,7 +40,7 @@ Completed the CRH6 Series:
     - The seat type of CRH6A (2 Doors) has been changed to 2nd-Seat MU Wagon now, with its capacity change
     - Refurbish the sprites of CRH6A (2 Doors & 3 Doors), CRH6F
     - Add: CRH6A (Comfort Version)
-Fix: CR400BF-0031/0057 can't run on 1520mm gauge 
+Fix: CR400BF-0031/0057 can't run on 1520mm gauge
 Fix: luggage room in RZXL coaches with wrong electric visual effects
 Fix: RZXL25Z can't change livery normally
 Fix: Power of NYJ1 "Beihai"
@@ -44,7 +67,7 @@ Fix: DF11G sprite misalignments
 0.3.4.178 (11/02/2025)
 --------------------
 Fix: Incorrect tractive effort coefficient of CRH2A/B in purchase menu
-Fix: RW25K bought after 2014 not defaulting to "Gaozu Green" livery 
+Fix: RW25K bought after 2014 not defaulting to "Gaozu Green" livery
 Fix: DF11G use wrong sprites
 Fix: Remove unreal liveries of S25K series
 Add：CRH2A-4020, SYZ25, SRZ25, 25 Series (Sanshui-Maoming Railway), SCA25B, DF9, DF7D Series
@@ -77,7 +100,7 @@ Fix: DF11G sprite misalignments
 0.3.4.178 (11/02/2025)
 --------------------
 Fix: Incorrect tractive effort coefficient of CRH2A/B in purchase menu
-Fix: RW25K bought after 2014 not defaulting to "Gaozu Green" livery 
+Fix: RW25K bought after 2014 not defaulting to "Gaozu Green" livery
 Fix: DF11G use wrong sprites
 Fix: Remove unreal liveries of S25K series
 Add：CRH2A-4020, SYZ25, SRZ25, 25 Series (Sanshui-Maoming Railway), SCA25B, DF9, DF7D Series
