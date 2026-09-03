@@ -2,9 +2,9 @@
 STR_GRF_NAME,China Set: Trains {VERSION_STRING},中国包：火车 {VERSION_STRING}
 STR_GRF_DESC,The Train sector of the China Set of OpenTTD.,OpenTTD中国包的火车部分。
 STR_GRF_URL,https://www.tt-forums.net/viewtopic.php?t=91092,
-STR_GRF_DESC_EXTRA,"Locomotives, MUs, Coaches and Wagons in China Mainland. More contents in the future.",中国大陆的火车，包括机车、动车组、车厢。未来会有更多内容。{RED}在游戏中更新NewGRF时请注意最低兼容版本！请不要强行更新！
+STR_GRF_DESC_EXTRA,"Locomotives, MUs, Coaches and Wagons in China Mainland. More contents in the future.",中国大陆的火车，包括机车、动车组、车厢。未来会有更多内容。欢迎加群讨论和反馈：QQ群893589759{}{GOLD}在游戏中更新NewGRF时请注意最低兼容版本！请不要强行更新！
 STR_GRF_DESC_README,See readme for details.,更多信息请查看Readme。
-STR_GRF_DESC_4,{BLUE}The people's railway for the people,{BLUE}人民铁路为人民
+STR_GRF_DESC_4,{RED}The people's railway for the people,{RED}人民铁路为人民
 STR_PARAM_LOADING_SPEED,Loading speed,装载速度
 STR_PARAM_LOADING_SPEED_DESC,Adjust vehicle loading speed. Default is 100%.,调整车辆装载速度。默认为100%。
 STR_PARAM_PURCHASE_COST,Purchase costs,购买费用
@@ -1283,7 +1283,7 @@ STR_CRH1A_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car cons
 STR_CRH1B_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars",{BLACK}构成：{GOLD}4-24节：其中8节标准编组为5M3T，16节标准编组为10M6T
 STR_CRH1E_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars, and a standard 16-car consist 10 motorised cars",{BLACK}构成：{GOLD}4-24节：其中8节标准编组为5M3T，16节标准编组为10M6T
 STR_CRH1AA_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; with a standard 8-car consist 5 motorised cars. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节：其中8节标准编组为5M3T。大于12节时以重联方式运行
-STR_CRH2A_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars. Will run as coupled when cars more than 12,{BLACK}构成：{GOLD}4-24节：半数车厢为动力车。大于12节时以重联方式运行
+STR_CRH2A_CONSIST,{BLACK}Consist: -,{BLACK}构成：机车-至少2x车厢-机车+(机车-至少2x车厢-机车)
 STR_CRH2B_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars,{BLACK}构成：{GOLD}4-24节：半数车厢为动力车
 STR_CRH2C_CONSIST,"{BLACK}Consist: {GOLD}4 to 24 cars; with head and cab trailers, all middle cars motorised. Will run as coupled when cars more than 12",{BLACK}构成：{GOLD}4-24节：头尾拖车，中间全为动力车。大于12节时以重联方式运行
 STR_CRH2E_CONSIST,{BLACK}Consist: {GOLD}4 to 24 cars; half of which (ceiling up) are motorised cars,{BLACK}构成：{GOLD}4-24节：半数车厢为动力车
