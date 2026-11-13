@@ -180,6 +180,11 @@ STR_NAME_SRZ125Z,SRZ125Z (Passenger Coach),SRZ125Z (客车)
 STR_NAME_SRZ225Z,SRZ225Z (Passenger Coach),SRZ225Z (客车)
 STR_NAME_SCA25Z,SCA25Z (Restaurant Car),SCA25Z (餐车)
 STR_NAME_SRZXL25Z,SRZX125Z (Luggage Car),SRZX125Z (行李客车)
+STR_NAME_SK1,SK1 (Passenger Coach),SK1 (客车)
+STR_NAME_SYZ,SYZ (Passenger Coach),SYZ (客车)
+STR_NAME_SRZ,SRZ (Passenger Coach),SRZ (客车)
+STR_NAME_SRYW,206 Double-deck Soft and Hard Sleeper (Passenger Coach),206双层软硬卧合造车  (客车)
+STR_NAME_SXT,SXT1 (Luggage Generator Car),SXT1 (行李发电车)
 STR_NAME_YZ25DT_JINLUN,YZ25DT (JINLUN DMU) (Passenger Coach),YZ25DT (金轮号动车组) (客车)
 STR_NAME_YW25DT_JINLUN,YW25DT (JINLUN DMU) (Passenger Coach),YW25DT (金轮号动车组) (客车)
 STR_NAME_RW25DT_JINLUN,RW25DT (JINLUN DMU) (Passenger Coach),RW25DT (金轮号动车组) (客车)
@@ -361,6 +366,7 @@ STR_NAME_FXD2B,FXD2B (Electric),FXD2B (电力)
 STR_NAME_FXD2B1000,FXD2B-1000 (Electric),FXD2B-1000 (电力)
 STR_NAME_FXSY,FXSY (Hybrid),FXSY (混合动力)
 STR_NAME_CHA1C,CHA1C (Hybrid),CHA1C (混合动力)
+STR_NAME_NM1,NM1 "DongFeng"(DMU),NM1 "东风" (内燃动车)
 STR_NAME_NC3,NC3 (DMU),NC3 (内燃动车)
 STR_NAME_NZJ1_XINSHUGUANG,"NZJ1 ""Xinshuguang"" (DMU)","NZJ1 ""新曙光号"" (内燃动车)"
 STR_NAME_NZJ2_SHENZHOU,"NZJ2 ""Shenzhou"" (DMU)","NZJ2 ""神舟号"" (内燃动车)"
@@ -676,23 +682,23 @@ STR_FULL_NAME_SS7E,{BLACK}FULLNAME: {GOLD}Shaoshan 7E Electric Locomotive,{BLACK
 STR_FULL_NAME_SS8,{BLACK}FULLNAME: {GOLD}Shaoshan 8 Electric Locomotive,{BLACK}全称：{GOLD}韶山8型电力机车
 STR_FULL_NAME_SS9,{BLACK}FULLNAME: {GOLD}Shaoshan 9 Electric Locomotive,{BLACK}全称：{GOLD}韶山9型电力机车
 STR_FULL_NAME_SS9G,{BLACK}FULLNAME: {GOLD}Shaoshan 9G Electric Locomotive,{BLACK}全称：{GOLD}韶山9G型电力机车
-STR_FULL_NAME_HXD1,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1 Electric Locomotive,{BLACK}全称：{GOLD}和谐1型电力机车
-STR_FULL_NAME_HXD11000,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1 Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}和谐1型电力机车1000系
-STR_FULL_NAME_HXD1B,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1B Electric Locomotive,{BLACK}全称：{GOLD}和谐1B型电力机车
-STR_FULL_NAME_HXD1C,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1C Electric Locomotive,{BLACK}全称：{GOLD}和谐1C型电力机车
-STR_FULL_NAME_HXD1D,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 1D Electric Locomotive,{BLACK}全称：{GOLD}和谐1D型电力机车
-STR_FULL_NAME_FXD1B,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 1B Electric Locomotive,{BLACK}全称：{GOLD}复兴1B型电力机车
-STR_FULL_NAME_FXD1B1000,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 1B Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}复兴1B型电力机车1000系
-STR_FULL_NAME_HXD2,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2 Electric Locomotive,{BLACK}全称：{GOLD}和谐2型电力机车
-STR_FULL_NAME_HXD21000,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2 Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}和谐2型电力机车1000系
-STR_FULL_NAME_HXD2B,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2B Electric Locomotive,{BLACK}全称：{GOLD}和谐2B型电力机车
-STR_FULL_NAME_HXD2D,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 2D Electric Locomotive,{BLACK}全称：{GOLD}和谐2D型电力机车
-STR_FULL_NAME_FXD1,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 1 Electric Locomotive,{BLACK}全称：{GOLD}复兴1型电力机车
-STR_FULL_NAME_FXD2B,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 2B Electric Locomotive,{BLACK}全称：{GOLD}复兴2B型电力机车
-STR_FULL_NAME_FXD2B1000,{BLACK}FULLNAME: {GOLD}Fuxing/Revival 2B Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}复兴2B型电力机车1000系
-STR_FULL_NAME_HXD3,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3 Electric Locomotive,{BLACK}全称：{GOLD}和谐3型电力机车
-STR_FULL_NAME_HXD3C,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3C Electric Locomotive,{BLACK}全称：{GOLD}和谐3C型电力机车
-STR_FULL_NAME_HXD3D,{BLACK}FULLNAME: {GOLD}Hexie/Harmony 3D Electric Locomotive,{BLACK}全称：{GOLD}和谐3D型电力机车
+STR_FULL_NAME_HXD1,{BLACK}FULLNAME: {GOLD}Hexie 1 Electric Locomotive,{BLACK}全称：{GOLD}和谐1型电力机车
+STR_FULL_NAME_HXD11000,{BLACK}FULLNAME: {GOLD}Hexie 1 Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}和谐1型电力机车1000系
+STR_FULL_NAME_HXD1B,{BLACK}FULLNAME: {GOLD}Hexie 1B Electric Locomotive,{BLACK}全称：{GOLD}和谐1B型电力机车
+STR_FULL_NAME_HXD1C,{BLACK}FULLNAME: {GOLD}Hexie 1C Electric Locomotive,{BLACK}全称：{GOLD}和谐1C型电力机车
+STR_FULL_NAME_HXD1D,{BLACK}FULLNAME: {GOLD}Hexie 1D Electric Locomotive,{BLACK}全称：{GOLD}和谐1D型电力机车
+STR_FULL_NAME_FXD1B,{BLACK}FULLNAME: {GOLD}Fuxing 1B Electric Locomotive,{BLACK}全称：{GOLD}复兴1B型电力机车
+STR_FULL_NAME_FXD1B1000,{BLACK}FULLNAME: {GOLD}Fuxing 1B Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}复兴1B型电力机车1000系
+STR_FULL_NAME_HXD2,{BLACK}FULLNAME: {GOLD}Hexie 2 Electric Locomotive,{BLACK}全称：{GOLD}和谐2型电力机车
+STR_FULL_NAME_HXD21000,{BLACK}FULLNAME: {GOLD}Hexie 2 Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}和谐2型电力机车1000系
+STR_FULL_NAME_HXD2B,{BLACK}FULLNAME: {GOLD}Hexie 2B Electric Locomotive,{BLACK}全称：{GOLD}和谐2B型电力机车
+STR_FULL_NAME_HXD2D,{BLACK}FULLNAME: {GOLD}Hexie 2D Electric Locomotive,{BLACK}全称：{GOLD}和谐2D型电力机车
+STR_FULL_NAME_FXD1,{BLACK}FULLNAME: {GOLD}Fuxing 1 Electric Locomotive,{BLACK}全称：{GOLD}复兴1型电力机车
+STR_FULL_NAME_FXD2B,{BLACK}FULLNAME: {GOLD}Fuxing 2B Electric Locomotive,{BLACK}全称：{GOLD}复兴2B型电力机车
+STR_FULL_NAME_FXD2B1000,{BLACK}FULLNAME: {GOLD}Fuxing 2B Electric Locomotive 1000 Series,{BLACK}全称：{GOLD}复兴2B型电力机车1000系
+STR_FULL_NAME_HXD3,{BLACK}FULLNAME: {GOLD}Hexie 3 Electric Locomotive,{BLACK}全称：{GOLD}和谐3型电力机车
+STR_FULL_NAME_HXD3C,{BLACK}FULLNAME: {GOLD}Hexie 3C Electric Locomotive,{BLACK}全称：{GOLD}和谐3C型电力机车
+STR_FULL_NAME_HXD3D,{BLACK}FULLNAME: {GOLD}Hexie 3D Electric Locomotive,{BLACK}全称：{GOLD}和谐3D型电力机车
 STR_FULL_NAME_FXSY,{BLACK}FULLNAME: {GOLD}Fuxing Hibrid Locomotive,{BLACK}全称：{GOLD}复兴型双源机车
 # Series Name,,
 STR_JF1_SERIES,JF1 (Steam Locomotive),解放1型 (蒸汽机车)
@@ -755,6 +761,7 @@ STR_S25Z_SERIES,Type S25Z Series Coaches,S25Z型双层客车
 STR_25K_SERIES,Type 25K Series Coaches,25K型客车
 STR_S25K_SERIES,Type S25K Series Coaches,S25K型双层客车
 STR_25T_SERIES,Type 25T Series Coaches,25T型客车
+STR_SK1_SERIES,SK1 Series Coaches,双层客车列车组
 STR_25DT_JINLUN_SERIES,NZJ2 JINLUN DMU Wagons,"NZJ2 ""金轮号""动车组拖车"
 STR_INSPECTION_SERIES,Inspection trains,特种检测列车
 STR_MU_WAGON,MU Wagons,动车组车厢
@@ -787,6 +794,7 @@ STR_LV_AVAILABLE_S,{STRING}{STRING} {STRING} {STRING} {STRING} {STRING},
 STR_LV_AVAILABLE_L,{STRING}{STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING} {STRING},
 # Desc,,
 STR_SMR_VEHICLE,"{BLACK}Vehicle used by the South Manchuria Railway, a railway company which was established by the Japanese during their invasion of China",{BLACK}日本侵略者所设立的“南满洲铁道株式会社”所使用过的车辆
+STR_SK1_DESC,"Coaches use for NM1",NM1内燃动车组所使用的拖车
 STR_JINLUN_25DT,"Coaches use for DMU {BLUE}""JIN{WHITE}LUN""",{BLUE}金{WHITE}轮{RED}号{GOLD}内燃动车组所使用的拖车
 STR_XL25T_SSPE_DESCRIPTION,"{BLACK}A version of XL25T for Super Speed Parcel Express Co., Ltd.",{BLACK}新时速运递公司使用的XL25T版本。
 STR_CHA1C_DESC,"{BLACK}Hybrid Locomotive using battery on non-electrified tracks providing {BLUE}2000 kW{BLACK}, and providing {RED}2400 kW{BLACK} on 25kV AC tracks",{BLACK}混合动力机车。在非电气化路段使用电池供电，功率为{BLUE}2000 kW{BLACK}。在25kV交流供电铁路上功率为{RED}2400 kW
@@ -1275,6 +1283,7 @@ STR_NC3_CAN_ATTACH_WAGON,"{BLACK}Matching Wagons: Only {GOLD}ZE{BLACK}, Comfort:
 STR_NJ2_CONSIST,{BLACK}Consist: {GOLD}2 to 4 sections,{BLACK}构成：{GOLD}2-4节重联
 STR_HXN3QZ_CONSIST,{BLACK}Consist: {GOLD}2 to 4 sections,{BLACK}构成：{GOLD}2-4节重联
 STR_DF11G_CONSIST,"{BLACK}Consist: {GOLD}2 sections joint together (Normal), or one section at head, another section at back (""Splitting Pig"", max speed 120 km/h, power 4133 hpM)","{BLACK}构成：{GOLD}两节重联 (普通)，或一节在头部提供动力，另一节在尾部供电 (“拆猪”，最高速度 120 km/h, 功率 4133 公制马力)"
+STR_NM1_CONSIST,"{BLACK}Consist: {GOLD}One section at front, another section at back. Only can attach SK1 coaches.","{BLACK}构成：{GOLD}头尾各一节，仅可挂载SK1车厢"
 STR_NC3_CONSIST,{BLACK}Consist: {GOLD}2 to 16 cars; cabs are powered,{BLACK}构成：{GOLD}2-16节；控制车带动力
 STR_NZJ1_XINSHUGUANG_CONSIST,"{BLACK}Consist: {GOLD}One section at front, another section at back, at least 4 wagons at middle",{BLACK}构成：{GOLD}头尾各一节，中间加挂至少四节车厢
 STR_SHENZHOU_CONSIST,"{BLACK}Consist: {GOLD}One section at front, another section at back.","{BLACK}构成：{GOLD}头尾各一节"

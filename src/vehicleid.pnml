@@ -211,6 +211,11 @@ item (FEAT_TRAINS, sy25t999209, 2203){}
 item (FEAT_TRAINS, wx25t999318, 2204){}
 item (FEAT_TRAINS, wx25t999305, 2205){}
 item (FEAT_TRAINS, teyu1, 2206){}
+item (FEAT_TRAINS, sk1, 2207){}
+item (FEAT_TRAINS, syz, 2208){}
+item (FEAT_TRAINS, srz, 2209){}
+item (FEAT_TRAINS, sryw, 2210){}
+item (FEAT_TRAINS, sxt, 2212){}
 
 item (FEAT_TRAINS, luggageroom_s25, 3070) {}
 item (FEAT_TRAINS, luggageroom_25, 3071) {}
@@ -431,6 +436,7 @@ item (FEAT_TRAINS, nzj2_jinlun_2, 8194) {}
 item (FEAT_TRAINS, nzj1_xinshuguang, 8195) {}
 item (FEAT_TRAINS, nc3, 8196) {}
 item (FEAT_TRAINS, nzj2_shenzhou, 8197) {}
+item (FEAT_TRAINS, nm1, 8198) {}
 
 //25kV AC EMU, available ID range: 9216-10239 (hex 0x2400..0x27FF)
 #define id_range_25_emu 0x2000..0x23FF

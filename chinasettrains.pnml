@@ -196,6 +196,12 @@
 #include "src/coaches/25z/srzxl25z.pnml"
 #include "src/coaches/25z/kd25z.pnml"
 
+#include "src/coaches/sk1/sk1.pnml"
+#include "src/coaches/sk1/syz.pnml"
+#include "src/coaches/sk1/srz.pnml"
+#include "src/coaches/sk1/sryw.pnml"
+#include "src/coaches/sk1/sxt.pnml"
+
 #include "src/coaches/25dt/yz25dt_jinlun.pnml"
 #include "src/coaches/25dt/yw25dt_jinlun.pnml"
 #include "src/coaches/25dt/rw25dt_jinlun.pnml"
@@ -402,6 +408,7 @@
 #include "src/1500-electric/dekii.pnml"
 
 // DMU
+#include "src/dmu/nm1.pnml"
 #include "src/dmu/nc3.pnml"
 #include "src/dmu/nyj1_beihai.pnml"
 #include "src/dmu/ndj3.pnml"
