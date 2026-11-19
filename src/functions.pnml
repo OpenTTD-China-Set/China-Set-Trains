@@ -262,6 +262,7 @@ switch (FEAT_TRAINS, SELF, citonly, vehicle_type_id) {
     crh380bj: onlyallowcst;
     crh2c_2150: onlyallowcst;
     crh2c_20612068: onlyallowcst;
+    cr400bf_j_0001: onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
