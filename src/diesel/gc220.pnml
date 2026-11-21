@@ -68,7 +68,7 @@ item (FEAT_TRAINS, gc220) {
         model_life:                     50;
         retire_early:                   35;
         vehicle_life:                   30;
-        track_type:                     SACN;
+        track_type:                     SABN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);

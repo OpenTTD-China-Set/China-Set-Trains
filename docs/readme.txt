@@ -89,6 +89,7 @@ make
 
 Contributors (in alphabetical order):
 
+- 2036
 - Ahyangyi
 - asAn0
 - babel
@@ -101,9 +102,11 @@ Contributors (in alphabetical order):
 - huanfeng
 - jackgqj 
 - John Franklin
+- JUSTILI
 - Mikhail
 - NACHN
 - nengyeqing
+- RWZR
 - shentie106
 - SL-1230
 - WenSim

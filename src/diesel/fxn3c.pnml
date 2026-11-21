@@ -56,7 +56,7 @@ item (FEAT_TRAINS, fxn3c) {
         introduction_date:              date(2019,10,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   35;
-        track_type:                     SACN;
+        track_type:                     SADN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);

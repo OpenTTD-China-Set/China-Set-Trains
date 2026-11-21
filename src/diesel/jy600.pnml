@@ -38,7 +38,7 @@ item (FEAT_TRAINS, jy600) {
         model_life:                     60;
         retire_early:                   30;
         vehicle_life:                   30;
-        track_type:                     SACN;
+        track_type:                     SABN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);

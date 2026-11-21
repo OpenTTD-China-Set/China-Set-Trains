@@ -1,0 +1,173 @@
+// Begin NZJ2_SHENZHOU
+switch (FEAT_TRAINS, SELF, switch_nzj2_shenzhou_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_NZJ2_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_nzj2_shenzhou_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("dmu/nzj2-shenzhou", "nzj2-shenzhou-m")
+}
+
+// Vehicle
+spriteset (spriteset_nzj2_shenzhou_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu/nzj2-shenzhou", "nzj2-shenzhou-m")
+}
+spriteset (spriteset_nzj2_shenzhou_yz, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu/nzj2-shenzhou", "syz25dt-shenzhou")
+}
+spriteset (spriteset_nzj2_shenzhou_rz, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("dmu/nzj2-shenzhou", "srz25dt-shenzhou")
+}
+spriteset (spriteset_nzj2_shenzhou_back, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed_10 ("dmu/nzj2-shenzhou", "nzj2-shenzhou-m")
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj2_shenzhou_articulated_part, extra_callback_info1) {
+    1..2: return nzj2_shenzhou;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+switch (FEAT_TRAINS, SELF, nzj2_shenzhouwagon, vehicle_type_id) {
+    1024..1025: onlyallowcst;
+    nzj2_shenzhou: onlyallowcst;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_nzj2_shenzhou_start_stop, !hasbit(bitmask_consist_info, 0) && (num_vehs_in_consist >= 12) && (count_veh_id(8197) == 6) && ((position_in_consist < 3) || (position_in_consist_from_end < 3))) {
+    0: return string(STR_SHENZHOU_CONSIST);
+    return CB_RESULT_NO_TEXT;
+}
+
+
+
+switch (FEAT_TRAINS, SELF, switch_nzj2_shenzhou_graphics_position_error_control, position_in_consist_from_end / 3) {
+    0: spriteset_nzj2_shenzhou_back;
+    spriteset_erroremu;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj2_shenzhou_graphics_position, position_in_consist / 3 ) {
+    0: spriteset_nzj2_shenzhou_front;
+    switch_nzj2_shenzhou_graphics_position_error_control;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj2_shenzhou_graphics, position_in_consist % 3) {
+    1: switch_nzj2_shenzhou_graphics_position;
+    empty_sprites;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_nzj2_shenzhou_wagon_graphics_type, vehicle_type_id) {
+    1024: spriteset_nzj2_shenzhou_yz;
+    1025: spriteset_nzj2_shenzhou_rz;
+    empty_sprites;
+}
+switch (FEAT_TRAINS, SELF, switch_nzj2_shenzhou_wagon_graphics, position_in_articulated_veh % 3) {
+    1: switch_nzj2_shenzhou_wagon_graphics_type;
+    empty_sprites;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_nzj2_shenzhou_ze_capacity, position_in_articulated_veh % 3) {
+    1: return 144;
+    return 0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nzj2_shenzhou_zy_capacity, position_in_articulated_veh % 3) {
+    1: return 92;
+    return 0;
+}
+
+
+
+
+item (FEAT_TRAINS, nzj2_shenzhou) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_NZJ2_SHENZHOU);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2000,07,01);
+        model_life:                     40;
+        vehicle_life:                   25;
+        retire_early:                   15;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          180 km/h;
+        power:                          2740 kW;
+        weight:                         132 ton;
+        tractive_effort_coefficient:    0.126;
+        cost_factor:                    96;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            44;
+        reliability_decay:              12;
+        bitmask_vehicle_info:           bitmask(2);
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_4, string(STR_SHENZHOU_CAN_ATTACH_WAGON), string(STR_SHENZHOU_CONSIST), string(STR_RELDEC_MEDIUM, 12));
+        can_attach_wagon:               nzj2_shenzhouwagon;
+        start_stop:                     switch_nzj2_shenzhou_start_stop;
+
+        // Graphics
+        default:                        switch_nzj2_shenzhou_graphics;
+        purchase:                       spriteset_nzj2_shenzhou_purchase_original;
+        articulated_part:               switch_nzj2_shenzhou_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_6_2;
+        cargo_capacity:                 0;
+        cost_factor:                    80;
+        running_cost_factor:            60 * runningcostfactor() + 20;
+        purchase_running_cost_factor:   260;
+        purchase_cargo_capacity:        0;
+        bitmask_vehicle_info:           switch_pushpull_consist_correction;
+        name:                           switch_nzj2_shenzhou_name;
+    }
+
+    // Multiple Unit Wagons
+    livery_override(zemuw) {
+        default:                        switch_nzj2_shenzhou_wagon_graphics;
+        cargo_capacity:                 switch_nzj2_shenzhou_ze_capacity;
+        length:                         switch_length_2_8_2;
+        weight:                         58;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (10 * cafedecayfactor() * 5) << param_cargo_decay;
+        bitmask_vehicle_info:           0;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        running_cost_factor:            12 * runningcostfactor() * cafecostfactor() + 2; // WITH AC
+    }
+    livery_override(zymuw) {
+        default:                        switch_nzj2_shenzhou_wagon_graphics;
+        cargo_capacity:                 switch_nzj2_shenzhou_zy_capacity;
+        length:                         switch_length_2_8_2;
+        weight:                         58;
+        can_attach_wagon:               muhead;
+        cargo_age_period:               (20 * cafedecayfactor() * 5) << param_cargo_decay;
+        bitmask_vehicle_info:           0;
+        articulated_part:               switch_crh_wagon_articulated_part;
+        running_cost_factor:            16 * runningcostfactor() * cafecostfactor() + 2; // WITH AC
+    }
+}
+
+// End NZJ2_SHENZHOU

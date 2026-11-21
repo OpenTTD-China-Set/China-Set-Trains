@@ -243,7 +243,7 @@ item (FEAT_TRAINS, crh2b) {
         introduction_date:              date(2008,06,19);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   20;
-        track_type:                     SAAA;
+        track_type:                     SABA;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);

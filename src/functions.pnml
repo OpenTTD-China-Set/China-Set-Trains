@@ -262,6 +262,7 @@ switch (FEAT_TRAINS, SELF, citonly, vehicle_type_id) {
     crh380bj: onlyallowcst;
     crh2c_2150: onlyallowcst;
     crh2c_20612068: onlyallowcst;
+    cr400bf_j_0001: onlyallowcst;
     return CB_RESULT_ATTACH_DISALLOW;
 }
 
@@ -432,4 +433,13 @@ switch (FEAT_TRAINS, SELF, switch_25dt_jinlun_cargo_subtype, cargo_subtype) {
     1: return string(STR_EARLIER);
     2: return string(STR_LATER);
     return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_25dt_jinlun_speed, count_veh_id(8193)) {
+    0: return 140;
+    return 160;
+}
+switch (FEAT_TRAINS, SELF, switch_s25dt_jinlun_speed, count_veh_id(8194)) {
+    0: return 140;
+    return 160;
 }

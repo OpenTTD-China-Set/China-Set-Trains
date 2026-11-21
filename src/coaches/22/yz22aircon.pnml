@@ -7,18 +7,21 @@ switch (FEAT_TRAINS, SELF, switch_yz22aircon_name, getbits(extra_callback_info1,
 
 // Purchase Menu
 spriteset (spriteset_yz22aircon_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "yz22aircon")
+    template_purchase ("coaches", "22/yz22ac-shanghai")
 }
 
 // Vehicle
-spriteset (spriteset_yz22aircon_beijing2shanghai, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "yz22aircon")
+spriteset (spriteset_yz22aircon_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "22/yz22ac-beijing")
 }
-spriteset (spriteset_yz22aircon_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "yz22aircon-alternative")
+spriteset (spriteset_yz22aircon_shanghai, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "22/yz22ac-shanghai")
 }
 spriteset (spriteset_yz22aircon_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "yz22aircon-guangzhou")
+    template_standard ("coaches", "22/yz22ac-guangzhou")
+}
+spriteset (spriteset_yz22aircon_dayaoshan, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "22/yz22ac-dayaoshan")
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz22aircon_articulated_part, extra_callback_info1) {
@@ -27,16 +30,18 @@ switch (FEAT_TRAINS, SELF, switch_yz22aircon_articulated_part, extra_callback_in
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz22aircon_cargo_subtype, cargo_subtype) {
-    0: return string(STR_BEIJING2SHANGHAI);
-    1: return string(STR_BEIJING2SHANGHAIALT);
+    0: return string(STR_22SHANGHAI);
+    1: return string(STR_22BEIJING);
     2: return string(STR_GUANGSHEN);
+    3: return string(STR_DAYAOSHAN);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz22aircon_graphics_subtype, cargo_subtype) {
-    0: spriteset_yz22aircon_beijing2shanghai;
-    1: spriteset_yz22aircon_alternative;
+    0: spriteset_yz22aircon_shanghai;
+    1: spriteset_yz22aircon_beijing;
     2: spriteset_yz22aircon_guangzhou;
+    3: spriteset_yz22aircon_dayaoshan;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yz22aircon_graphics, position_in_articulated_veh % 3) {
@@ -86,7 +91,7 @@ item (FEAT_TRAINS, yz22aircon) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YZ22AIRCON), string(STR_22AIRCON_LIVERY_AVAILABILITY), string(STR_COMFORT_LOW, 160));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_YZ22AIRCON), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_22SHANGHAI), string(STR_22BEIJING), string(STR_GUANGSHEN), string(STR_DAYAOSHAN)), string(STR_COMFORT_LOW, 160));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_yz22aircon_cargo_subtype;
 

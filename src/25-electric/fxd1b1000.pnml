@@ -45,7 +45,7 @@ item (FEAT_TRAINS, fxd1b1000) {
         introduction_date:              date(2023,12,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SACA;
+        track_type:                     SADA;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);

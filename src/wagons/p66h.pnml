@@ -47,9 +47,9 @@ switch (FEAT_TRAINS, SELF, switch_p66h_graphics, position_in_articulated_veh % 3
 }
 
 switch (FEAT_TRAINS, SELF, switch_p66h_capacity_cargo, cargo_type_in_veh) {
-    MAIL: return 160;
-    GOOD: return 120;
-    return 80;
+    MAIL: return 120;
+    GOOD: return 90;
+    return 60;
 }
 
 switch (FEAT_TRAINS, SELF, switch_p66h_capacity, position_in_articulated_veh % 3) {
@@ -82,7 +82,7 @@ item (FEAT_TRAINS, p66h) {
         introduction_date:              date(2004,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SADN;
+        track_type:                     SACN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_MAIL, CC_ARMOURED, CC_EXPRESS, CC_PIECE_GOODS, CC_COVERED);

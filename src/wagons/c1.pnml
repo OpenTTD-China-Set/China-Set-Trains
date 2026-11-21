@@ -68,10 +68,10 @@ switch (FEAT_TRAINS, SELF, switch_c1_capacity, position_in_articulated_veh % 3) 
 item (FEAT_TRAINS, c1) {
     property {
         // Menu
-        name:                           string(STR_NAME_C1);
+        name:                           string(STR_NAME_C11949);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        /* variant_group:					c1; */
+        variant_group:					musa;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -123,7 +123,7 @@ item (FEAT_TRAINS, c1) {
         name:                           switch_c1_name;
     }
 }
-/* item (FEAT_TRAINS, c11956) {
+item (FEAT_TRAINS, c11956) {
     property {
         // Menu
         name:                           string(STR_NAME_C11956);
@@ -180,5 +180,5 @@ item (FEAT_TRAINS, c1) {
         purchase_cargo_capacity:        30/3;
         name:                           switch_c1_name;
     }
-} */
+}
 // End C1

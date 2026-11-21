@@ -117,7 +117,7 @@ item (FEAT_TRAINS, crh2j) {
         introduction_date:              date(2015,07,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   25;
-        track_type:                     SAAA;
+        track_type:                     SABA;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
@@ -147,7 +147,7 @@ item (FEAT_TRAINS, crh2j) {
         // Menu
         additional_text:                string(STR_DESC_6, string(STR_CRH2J_DESC), string(STR_RELDEC_VERY_LOW, 4));
         can_attach_wagon:               citonly;
-        start_stop:                     mu4to24car;
+        start_stop:                     mu5to17car;
         cargo_subtype_text:             switch_crh2j_cargo_subtype;
 
         // Graphics

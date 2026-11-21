@@ -121,14 +121,14 @@ item (FEAT_TRAINS, x2k) {
         name:                           string(STR_NAME_X2K);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					3095;
+        variant_group:					chini;
 
         // Availability
         climates_available:             ALL_CLIMATES;
         introduction_date:              date(2004,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SACN;
+        track_type:                     SADN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_EXPRESS, CC_BULK, CC_PIECE_GOODS, CC_COVERED, CC_OVERSIZED);

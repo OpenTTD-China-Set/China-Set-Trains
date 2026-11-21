@@ -40,7 +40,7 @@ item (FEAT_TRAINS, df11z) {
         introduction_date:              date(2002,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SACN;
+        track_type:                     SADN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);

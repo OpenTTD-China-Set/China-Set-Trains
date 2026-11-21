@@ -18,6 +18,12 @@ switch (FEAT_TRAINS, SELF, switch_yw22_name, getbits(extra_callback_info1, 0, 8)
  spriteset (spriteset_yw22_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
      template_standard ("coaches", "22/yw22")
  }
+  spriteset (spriteset_yw22_gmsr, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+     template_standard ("coaches", "22/yw22-gmsr")
+ }
+ spriteset (spriteset_yw22_int, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+     template_standard ("coaches", "22/yw22-int")
+ }
 
 switch (FEAT_TRAINS, SELF, switch_yw22_articulated_part, extra_callback_info1) {
     1..2: return yw22;
@@ -31,15 +37,22 @@ switch (FEAT_TRAINS, SELF, switch_yw221966_articulated_part, extra_callback_info
 
 switch (FEAT_TRAINS, SELF, switch_yw22_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGINAL);
-    1: return string(STR_WRU);
+    1: return string(STR_GMSR_EARLY);
+    2: return string(STR_SANMAO);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_yw22_graphics_subtype, cargo_subtype) {
     0: spriteset_yw22_original;
-    1: spriteset_22_wru;
+    1: spriteset_yw22_gmsr;
+    2: spriteset_yw22_int;
+    3: spriteset_22_wru;
 }
 
+switch (FEAT_TRAINS, SELF, switch_yw22_early_graphics, position_in_articulated_veh % 3) {
+    1: spriteset_yw22_original;
+    empty_sprites;
+}
 switch (FEAT_TRAINS, SELF, switch_yw22_graphics, position_in_articulated_veh % 3) {
     1: switch_yw22_graphics_subtype;
     empty_sprites;
@@ -94,7 +107,7 @@ item (FEAT_TRAINS, yw22) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 240), string(STR_NO_AIR_CONDITIONER));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL)), string(STR_COMFORT_HIGH, 240), string(STR_NO_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
 
 
@@ -102,7 +115,7 @@ item (FEAT_TRAINS, yw22) {
         default:                        switch_yw22_graphics;
         purchase:                       spriteset_yw22_purchase_original;
         articulated_part:               switch_yw22_articulated_part;
-        cargo_subtype_text:             switch_yw22_cargo_subtype;
+        /* cargo_subtype_text:             switch_yw22_cargo_subtype; */
 
         // Stats
         length:                         switch_length_2_7_2;
@@ -159,7 +172,7 @@ item (FEAT_TRAINS, yw221966) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 288), string(STR_NO_AIR_CONDITIONER));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YW22), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GMSR_EARLY), string(STR_INTERNATIONAL),string(STR_WRU),), string(STR_COMFORT_HIGH, 288), string(STR_NO_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
 
 

@@ -61,12 +61,13 @@ item (FEAT_TRAINS, df) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
+        variant_group:					nd;
 
         // Availability
         climates_available:             ALL_CLIMATES;
-        introduction_date:              date(1958,09,26);
-        model_life:                     40;
-        retire_early:                   30;
+        introduction_date:              date(1963,12,19);
+        model_life:                     60;
+        retire_early:                   45;
         vehicle_life:                   40;
         track_type:                     SACN;
 
@@ -111,6 +112,7 @@ item (FEAT_TRAINS, df) {
         running_cost_factor:            35 * runningcostfactor();
         purchase_running_cost_factor:   140;
         purchase_cargo_capacity:        0;
+        name:                           switch_df_name;
     }
 }
 

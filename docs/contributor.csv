@@ -55,6 +55,10 @@ CRH380BJ,,"JUSTINLI,Babel",2036,
 CRH380BJA,,"JUSTINLI,Babel",2036,
 CRH2C2150,,"JUSTINLI,Babel",2036,
 CRH2C20612068,,"JUSTINLI,Babel",2036,
+CR400BFJ0001,,"JUSTINLI,Babel",2036,
+NM1,,Babel,RWZR,
+CRH2A2010,,Babel,2036,
+CR200JCJ,,Babel,2036,
 JF1,jf1,JF,EMB,
 Mikai,,Babel,EMB,
 SL6,sl6,JF,EMB,
@@ -152,6 +156,7 @@ DF10,,wuwu,wuwu
 GC160,,wuwu,wuwu
 GC220,,wuwu,wuwu
 DF8,,EMB,EMB
+ND,,Babel,RWZR,RWZR
 C64,,JF,Babel,
 P62,,JF,Babel,
 G60,,JF,Babel,Other Colaor: Sunjuzhensun
@@ -210,6 +215,8 @@ GQ80,,wuwu,Sunjuzhensun,
 GN60,,wuwu,Sunjuzhensun,
 Yai,,Babel,Babel,
 DQ35,,wuwu,wuwu,
+Musa,,Babel,Babel,
+Chini,,Babel,Babel,
 YZ25A,yz25a,Haiyan,EMB,
 YW25A,yz25a,Haiyan,EMB,
 RW25A,yz25a,Haiyan,EMB,
@@ -323,3 +330,5 @@ ASIA EXPRESS,,Babel,Haiyan,
 24 HK,,Babel,Haiyan,
 99029,,JUSTINLI,2036,
 99305,,JUSTINLI,2036,
+Teyu1,,Babel,Babel
+SK1 Series,,Babel,RWZR,

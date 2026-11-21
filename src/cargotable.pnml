@@ -17,5 +17,5 @@ cargotable {
     SESP, SGBT, SGCN, SLAG, SOAP, STAL, STCB, STSE, 
     STSH, STST, STWR, TATO, TEXT, TBCO, TWOD, VBOD, 
     VENG, VPTS, WSTE, YETI, YETY, RSGR, SCRP, ALO_,
-    COCO, FOCA, PPAR, NHNO, C2H4, H2__, N7__       // This line is copied from xUSSR, I am not sure what they acctually are.
+    COCO, FOCA, PPAR, NHNO, C2H4, H2__, N7__, VEHC       // This line is copied from xUSSR, I am not sure what they acctually are.
 }

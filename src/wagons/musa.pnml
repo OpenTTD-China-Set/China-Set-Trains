@@ -1,0 +1,120 @@
+// Begin MUSA
+switch (FEAT_TRAINS, SELF, switch_musa_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_GONDOLA);
+    return CB_RESULT_NO_TEXT;
+}
+
+// Graphics
+
+// Purchase Menu
+spriteset (spriteset_musa_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("wagons/smr", "musa")
+}
+
+// Vehicle
+spriteset (spriteset_musa_black_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/smr", "musa")
+}
+spriteset (spriteset_musa_black_coal_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/smr", "musa-coal-half")
+}
+spriteset (spriteset_musa_black_coal_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/smr", "musa-coal-full")
+}
+spriteset (spriteset_musa_black_cover, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/smr", "musa-cover")
+}
+
+switch (FEAT_TRAINS, SELF, switch_musa_black_coal, cargo_count < 40) {
+    0: spriteset_musa_black_coal_full;
+    spriteset_musa_black_coal_half;
+}
+
+switch (FEAT_TRAINS, SELF, switch_musa_cargo, cargo_classes) {
+    bitmask(CC_COVERED): spriteset_musa_black_cover;
+    bitmask(CC_BULK): switch_musa_black_coal;
+    spriteset_musa_black_cover;
+}
+
+switch (FEAT_TRAINS, SELF, switch_musa_black, cargo_count < 5) {
+    0: switch_musa_cargo;
+    spriteset_musa_black_empty;
+}
+
+random_switch (FEAT_TRAINS, SELF, random_musa_colour) {
+    1: switch_musa_black; // More colours waiting to be added
+}
+
+switch (FEAT_TRAINS, SELF, switch_musa_articulated_part, extra_callback_info1) {
+    1..2: return musa;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_musa_graphics, position_in_articulated_veh % 3) {
+    1: random_musa_colour;
+    empty_sprites;
+}
+
+switch (FEAT_TRAINS, SELF, switch_musa_capacity, position_in_articulated_veh % 3) {
+    1: return 30;
+    return 0;
+}
+
+
+item (FEAT_TRAINS, musa) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_MUSA);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1908,01,01);
+        model_life:                     50;
+        retire_early:                   25;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_BULK, CC_PIECE_GOODS, CC_COVERED);
+        non_refittable_cargo_classes:   bitmask(CC_PASSENGERS, CC_LIQUID, CC_HAZARDOUS);
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             DEFAULT_CARGO_FIRST_REFITTABLE;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 60;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          65 km/h;
+        power:                          0 hp;
+        weight:                         13 ton;
+        cost_factor:                    7;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            6;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_2, string(STR_SMR_VEHICLE), string(STR_FRESHNESS_MEDIUM, 185));
+        can_attach_wagon:               locowagon;
+
+
+        // Graphics
+        default:                        switch_musa_graphics;
+        purchase:                       spriteset_musa_purchase;
+        articulated_part:               switch_musa_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_1_2;
+        cargo_capacity:                 switch_musa_capacity;
+        cargo_age_period:               185 << (param_cargo_decay + param_wagoncargodecay);
+        cost_factor:                    4;
+        running_cost_factor:            3 * runningcostfactor();
+        purchase_running_cost_factor:   12;
+        purchase_cargo_capacity:        30/3;
+        name:                           switch_musa_name;
+    }
+}

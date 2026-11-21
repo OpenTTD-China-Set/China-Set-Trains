@@ -163,7 +163,7 @@ item (FEAT_TRAINS, crh5e) {
         introduction_date:              date(2015,12,20);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   25;
-        track_type:                     SAAA;
+        track_type:                     SABA;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
@@ -190,7 +190,7 @@ item (FEAT_TRAINS, crh5e) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_5, string(STR_CRH5E_CAN_ATTACH_WAGON), /* string(STR_CRH5E_NICKNAME), */ string(STR_RELDEC_LOW, 8), string(STR_CRH5_CONSIST), string(STR_CRH5_HEAD_SEAT));
+        additional_text:                string(STR_DESC_5, string(STR_CRH5E_CAN_ATTACH_WAGON), /* string(STR_CRH5E_NICKNAME), */ string(STR_RELDEC_LOW, 8), string(STR_CRH5E_CONSIST), string(STR_CRH5E_HEAD_SEAT));
         can_attach_wagon:               crhsleeperonly;
         start_stop:                     mu4to24car;
         // Graphics

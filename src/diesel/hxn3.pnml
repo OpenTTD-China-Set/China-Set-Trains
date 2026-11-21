@@ -60,7 +60,7 @@ item (FEAT_TRAINS, hxn3) {
         introduction_date:              date(2008,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SACN;
+        track_type:                     SADN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);

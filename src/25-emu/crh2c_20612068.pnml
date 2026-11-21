@@ -87,7 +87,7 @@ item (FEAT_TRAINS, crh2c_20612068) {
         introduction_date:              date(2007,12,22);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   25;
-        track_type:                     SAAA;
+        track_type:                     SABA;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
@@ -117,7 +117,7 @@ item (FEAT_TRAINS, crh2c_20612068) {
         // Menu
         additional_text:                string(STR_DESC_6, string(STR_CRH2C_20612068_INTRODUCTION), string(STR_CRH2C_20612068_NICKNAME), string(STR_RELDEC_LOW, 8), string(STR_CRH2C_20612068_AVAILABLE));
         can_attach_wagon:               citonly;
-        start_stop:                     mu4to24car;
+        start_stop:                     mu5to17car;
         cargo_subtype_text:             switch_crh2c_20612068_cargo_subtype;
 
         // Graphics

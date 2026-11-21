@@ -38,6 +38,7 @@ item (FEAT_TRAINS, df3) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
         engine_class:                   ENGINE_CLASS_DIESEL;
+        variant_group:					nd;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -88,6 +89,7 @@ item (FEAT_TRAINS, df3) {
         running_cost_factor:            46 * runningcostfactor();
         purchase_running_cost_factor:   184;
         purchase_cargo_capacity:        0;
+        name:                           switch_df_name;
     }
 }
 

@@ -43,7 +43,7 @@ item (FEAT_TRAINS, ss4c) {
         model_life:                     60;
         retire_early:                   30;
         vehicle_life:                   30;
-        track_type:                     SACA;
+        track_type:                     SADA;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);

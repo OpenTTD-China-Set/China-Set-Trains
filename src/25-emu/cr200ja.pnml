@@ -467,7 +467,7 @@ item (FEAT_TRAINS, cr200ja) {
         introduction_date:              date(2017,03,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SACA;
+        track_type:                     SABA;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);

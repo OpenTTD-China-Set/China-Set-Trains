@@ -24,13 +24,11 @@ switch (FEAT_TRAINS, SELF, switch_rw22_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_rw22_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORIGINAL);
-    1: return string(STR_WRU);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw22_graphics_subtype, cargo_subtype) {
     0: spriteset_rw22_original;
-    1: spriteset_22_wru;
 }
 
 switch (FEAT_TRAINS, SELF, switch_rw22_graphics, position_in_articulated_veh % 3) {
@@ -81,7 +79,7 @@ item (FEAT_TRAINS, rw22) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_RW22), string(STR_22_LIVERY_AVAILABILITY), string(STR_COMFORT_HIGH, 384), string(STR_NO_AIR_CONDITIONER));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_RW22), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL)), string(STR_COMFORT_HIGH, 384), string(STR_NO_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
         cargo_subtype_text:             switch_rw22_cargo_subtype;
 

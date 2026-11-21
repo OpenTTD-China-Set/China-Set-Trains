@@ -182,7 +182,7 @@ item (FEAT_TRAINS, nc3) {
         model_life:                     40;
         vehicle_life:                   25;
         retire_early:                   15;
-        track_type:                     SACN;
+        track_type:                     SABN;
         visual_effect_and_powered:      visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 0, ENABLE_WAGON_POWER);
 
         // Cargo

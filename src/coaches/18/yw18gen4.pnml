@@ -50,7 +50,7 @@ item (FEAT_TRAINS, yw18gen4) {
         introduction_date:              date(1995,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     DBDN;
+        track_type:                     DACN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);

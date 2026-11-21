@@ -217,7 +217,7 @@ item (FEAT_TRAINS, c80) {
         name:                           string(STR_NAME_C80);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					c1;
+        variant_group:					musa;
 
 
         // Availability
@@ -225,7 +225,7 @@ item (FEAT_TRAINS, c80) {
         introduction_date:              date(2003,03,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SACN;
+        track_type:                     SADN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_BULK);

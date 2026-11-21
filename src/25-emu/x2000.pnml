@@ -79,7 +79,7 @@ item (FEAT_TRAINS, x2000) {
         model_life:                     30;
         retire_early:                   20;
         vehicle_life:                   15;
-        track_type:                     SACA;
+        track_type:                     SABA;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);

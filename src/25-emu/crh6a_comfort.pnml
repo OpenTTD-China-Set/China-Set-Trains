@@ -38,7 +38,7 @@ switch (FEAT_TRAINS, SELF, switch_crh6a_comfort_graphics, position_in_articulate
 }
 
 switch (FEAT_TRAINS, SELF, switch_crh6a_comfort_head_capacity, position_in_articulated_veh % 3) {
-    1: return 150;
+    1: return 48;
     return 0;
 }
 

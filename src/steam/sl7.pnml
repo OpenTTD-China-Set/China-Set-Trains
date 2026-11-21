@@ -111,7 +111,7 @@ item (FEAT_TRAINS, sl7) {
         model_life:                     60;
         retire_early:                   49;
         vehicle_life:                   40;
-        track_type:                     SABN;
+        track_type:                     SACN;
         loading_speed:                  8 << param_loading_speed;
         cargo_age_period:               185 << param_cargo_decay;
         speed:                          130 km/h;

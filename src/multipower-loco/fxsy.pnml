@@ -92,7 +92,7 @@ item (FEAT_TRAINS, fxsy) {
         // Stats
         speed:                          160 km/h;
         power:                          7200 kW;
-        weight:                         132 ton;
+        weight:                         264 ton;
         tractive_effort_coefficient:    0.381;
         cost_factor:                    85;
         running_cost_base:              RUNNING_COST_ELECTRIC;

@@ -1,0 +1,175 @@
+//CR200JC-J
+
+//GFX
+
+spriteset(spriteset_cr200jcj_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/cr200jcj", "cr200jcj-m")
+}
+
+spriteset(spriteset_cr200jcj_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/cr200jcj", "cr200jcj-m")
+}
+spriteset(spriteset_cr200jcj_tc, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/cr200jcj", "cr200jcj-tc")
+}
+spriteset(spriteset_cr200jcj_tc_c, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/cr200jcj", "cr200jcj-tc-c")
+}
+spriteset(spriteset_cr200jcj_t_05, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/cr200jcj", "cr200jcj-t-05")
+}
+spriteset(spriteset_cr200jcj_t_04, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/cr200jcj", "cr200jcj-t-04")
+}
+spriteset(spriteset_cr200jcj_t_03, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/cr200jcj", "cr200jcj-t-03")
+}
+spriteset(spriteset_cr200jcj_t_02, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard("25-emu/cr200jcj", "cr200jcj-t-02")
+}
+
+spriteset(spriteset_cr200jcj_m_r, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed_10("25-emu/cr200jcj", "cr200jcj-m")
+}
+spriteset(spriteset_cr200jcj_tc_r, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/cr200jcj", "cr200jcj-tc")
+}
+spriteset(spriteset_cr200jcj_tc_c_r, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/cr200jcj", "cr200jcj-tc-c")
+}
+spriteset(spriteset_cr200jcj_t_05_r, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/cr200jcj", "cr200jcj-t-05")
+}
+spriteset(spriteset_cr200jcj_t_04_r, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/cr200jcj", "cr200jcj-t-04")
+}
+spriteset(spriteset_cr200jcj_t_03_r, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/cr200jcj", "cr200jcj-t-03")
+}
+spriteset(spriteset_cr200jcj_t_02_r, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed("25-emu/cr200jcj", "cr200jcj-t-02")
+}
+
+switch(FEAT_TRAINS, SELF, switch_cr200jcj_articulated_part, extra_callback_info1) {
+    1..17: return cr200jcj;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_cr200jcj_graphics_tc, position_in_consist_from_end / 3) {
+    0: spriteset_cr200jcj_tc;
+    spriteset_cr200jcj_tc_c;
+}
+
+switch(FEAT_TRAINS, SELF, switch_cr200jcj_graphics_front, position_in_articulated_veh % 24) {
+    1: return spriteset_cr200jcj_m;
+    4: return spriteset_cr200jcj_t_05;
+    7: return spriteset_cr200jcj_t_04;
+    10: return spriteset_cr200jcj_t_03;
+    13: return spriteset_cr200jcj_t_02;
+    16: return switch_cr200jcj_graphics_tc;
+    empty_sprites;
+}
+switch(FEAT_TRAINS, SELF, switch_cr200jcj_graphics_end, position_in_articulated_veh_from_end % 24) {
+    1: return spriteset_cr200jcj_m_r;
+    4: return spriteset_cr200jcj_t_05_r;
+    7: return spriteset_cr200jcj_t_04_r;
+    10: return spriteset_cr200jcj_t_03_r;
+    13: return spriteset_cr200jcj_t_02_r;
+    16: return spriteset_cr200jcj_tc_c_r;
+    empty_sprites;
+}
+
+switch(FEAT_TRAINS, SELF, switch_cr200jcj_graphics, position_in_articulated_veh ==  position_in_consist) {
+    1: switch_cr200jcj_graphics_front;
+    switch_cr200jcj_graphics_end;
+}
+
+switch (FEAT_TRAINS, SELF, switch_length_200jcj_front, position_in_articulated_veh) {
+        1: return 6;
+        4: return 8;
+        7: return 8;
+        10: return 8;
+        13: return 8;
+        16: return 8;
+        return 2;
+    }
+switch (FEAT_TRAINS, SELF, switch_length_200jcj_back, position_in_articulated_veh_from_end) {
+        1: return 6;
+        4: return 8;
+        7: return 8;
+        10: return 8;
+        13: return 8;
+        16: return 8;
+        return 2;
+    }
+switch (FEAT_TRAINS, SELF, switch_length_cr200jcj, position_in_articulated_veh ==  position_in_consist) {
+        1: switch_length_200jcj_front;
+        switch_length_200jcj_back;
+    }
+switch (FEAT_TRAINS, SELF, onlycr200jcj, vehicle_type_id) {
+    cr200jcj: onlyallowcst;
+    return CB_RESULT_ATTACH_DISALLOW;
+}
+
+item (FEAT_TRAINS, cr200jcj) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_CR200JCJ);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        variant_group:                  cr200ja;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(2024,12,06);
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                   25;
+        track_type:                     SABA;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [PASS, TOUR, YETI, YETY];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          160 km/h;
+        power:                          5600 kW;
+        weight:                         343 ton;
+        tractive_effort_coefficient:    0.071;
+        cost_factor:                    1;
+        running_cost_base:              RUNNING_COST_ELECTRIC;
+        running_cost_factor:            1;
+        reliability_decay:              8;
+        bitmask_vehicle_info:           bitmask(2);
+
+    }
+        graphics {
+        // Menu
+        additional_text:                string(STR_DESC_6, string(STR_RELDEC_LOW, 8));
+        can_attach_wagon:               onlycr200jcj;
+        start_stop:                     mu5to17car;
+
+        // Graphics
+        default:                        switch_cr200jcj_graphics;
+        purchase:                       spriteset_cr200jcj_purchase_original;
+        articulated_part:               switch_cr200jcj_articulated_part;
+
+        // Stats
+        length:                         switch_length_200jcj_front;
+        purchase_tractive_effort_coefficient: return int(0.071*255);
+        cargo_capacity:                 0;
+        cost_factor:                    70;
+        running_cost_factor:            0;
+        purchase_running_cost_factor:   0;
+        purchase_cargo_capacity:        0;
+        name:                           switch_cr200ja_name;
+    }
+}

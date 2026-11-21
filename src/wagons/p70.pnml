@@ -119,7 +119,7 @@ item (FEAT_TRAINS, p70) {
         introduction_date:              date(2003,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SADN;
+        track_type:                     SACN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_MAIL, CC_ARMOURED, CC_EXPRESS, CC_PIECE_GOODS, CC_COVERED);

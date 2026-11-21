@@ -1,0 +1,121 @@
+// Begin ND
+switch (FEAT_TRAINS, SELF, switch_df_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_DF_SERIES);
+    return CB_RESULT_NO_TEXT;
+}
+// Graphics
+
+spriteset (spriteset_nd_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase ("diesel", "julong")
+}
+
+spriteset (spriteset_nd_standard, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "julong")
+}
+
+spriteset (spriteset_nd_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed_8 ("diesel", "julong")
+}
+
+spriteset (spriteset_nd_whiteline_standard, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("diesel", "nd")
+}
+
+spriteset (spriteset_nd_whiteline_reversed, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_reversed_8 ("diesel", "nd")
+}
+
+switch (FEAT_TRAINS, SELF, switch_nd_articulated_part, extra_callback_info1) {
+    1..2: return nd;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nd_graphics_subtype_default, cargo_subtype) {
+    1: spriteset_nd_whiteline_standard;
+    spriteset_nd_standard;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nd_graphics_subtype_reversed, cargo_subtype) {
+    1: spriteset_nd_whiteline_reversed;
+    spriteset_nd_reversed;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nd_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_GREEN);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nd_direction, (position_in_consist != 1) && (position_in_consist_from_end == 1) || ((position_in_vehid_chain % 6) == 4)) {
+    0: switch_nd_graphics_subtype_default;
+    switch_nd_graphics_subtype_reversed;
+}
+
+switch (FEAT_TRAINS, SELF, switch_nd_graphics, position_in_articulated_veh % 3) {
+    1: switch_nd_direction;
+    empty_sprites;
+}
+
+
+item (FEAT_TRAINS, nd) {
+    property {
+        // Menu
+        name:                           string(STR_NAME_ND);
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+        misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
+        engine_class:                   ENGINE_CLASS_DIESEL;
+
+        // Availability
+        climates_available:             ALL_CLIMATES;
+        introduction_date:              date(1958,09,26);
+        model_life:                     40;
+        retire_early:                   30;
+        vehicle_life:                   30;
+        track_type:                     SACN;
+
+        // Cargo
+        refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:   0;
+        cargo_allow_refit:              [];
+        cargo_disallow_refit:           [];
+        refit_cost:                     0;
+        default_cargo_type:             PASS;
+        ai_special_flag:                AI_FLAG_CARGO;
+        cargo_capacity:                 1;
+        loading_speed:                  8 << param_loading_speed;
+        cargo_age_period:               185 << param_cargo_decay;
+
+        // Stats
+        speed:                          85 km/h;
+        power:                          1471 kW;
+        weight:                         126 ton;
+        tractive_effort_coefficient:    0.245;
+        cost_factor:                    45;
+        running_cost_base:              RUNNING_COST_DIESEL;
+        running_cost_factor:            35;
+        reliability_decay:              24;
+        bitmask_vehicle_info:           0;
+    }
+    graphics {
+        // Menu
+        additional_text:                string(STR_DESC_6, string(STR_FULL_NAME_ND), string(STR_ELECTRICITY_SUPPLY_NO), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_GREEN)), string(STR_RELDEC_HIGH, 24));
+        cargo_subtype_text:             switch_nd_cargo_subtype;
+        can_attach_wagon:               locowagon;
+
+        // Graphics
+        default:                        switch_nd_graphics;
+        purchase:                       spriteset_nd_purchase;
+        articulated_part:               switch_nd_articulated_part;
+
+        // Stats
+        length:                         switch_length_2_4_2;
+        cargo_capacity:                 0;
+        cost_factor:                    45;
+        running_cost_factor:            35 * runningcostfactor();
+        purchase_running_cost_factor:   140;
+        purchase_cargo_capacity:        0;
+        name:                           switch_df_name;
+    }
+}
+
+// End DF

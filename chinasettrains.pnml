@@ -34,6 +34,8 @@
 // Coaches
 
 #include "src/coaches/smr/ha1.pnml"
+#include "src/coaches/smr/teyu1.pnml"
+
 #include "src/coaches/smr/ha8.pnml"
 #include "src/coaches/smr/ro8.pnml"
 #include "src/coaches/smr/i8.pnml"
@@ -194,6 +196,12 @@
 #include "src/coaches/25z/srzxl25z.pnml"
 #include "src/coaches/25z/kd25z.pnml"
 
+#include "src/coaches/sk1/sk1.pnml"
+#include "src/coaches/sk1/syz.pnml"
+#include "src/coaches/sk1/srz.pnml"
+#include "src/coaches/sk1/sryw.pnml"
+#include "src/coaches/sk1/sxt.pnml"
+
 #include "src/coaches/25dt/yz25dt_jinlun.pnml"
 #include "src/coaches/25dt/yw25dt_jinlun.pnml"
 #include "src/coaches/25dt/rw25dt_jinlun.pnml"
@@ -208,6 +216,7 @@
 
 
 // Wagons
+#include "src/wagons/musa.pnml"
 #include "src/wagons/c1.pnml"
 #include "src/wagons/c62.pnml"
 #include "src/wagons/c64.pnml"
@@ -256,6 +265,7 @@
 #include "src/wagons/gs.pnml"
 #include "src/wagons/bgw70.pnml"
 
+#include "src/wagons/chini.pnml"
 #include "src/wagons/n5.pnml"
 #include "src/wagons/n60.pnml"
 #include "src/wagons/nx17.pnml"
@@ -291,6 +301,7 @@
 #include "src/steam/sl7.pnml"
 
 // Diesel
+#include "src/diesel/nd.pnml"
 #include "src/diesel/df.pnml"
 #include "src/diesel/df2.pnml"
 #include "src/diesel/df3.pnml"
@@ -328,6 +339,7 @@
 #include "src/diesel/beijing_freight.pnml"
 #include "src/diesel/beijing_passenger.pnml"
 #include "src/diesel/beijing_special.pnml"
+#include "src/diesel/rd1.pnml"
 #include "src/diesel/nd2.pnml"
 #include "src/diesel/nd4.pnml"
 #include "src/diesel/nd5.pnml"
@@ -391,11 +403,17 @@
 #include "src/multipower-loco/fxsy.pnml"
 #include "src/multipower-loco/cha1c.pnml"
 
+// 1500V Locomotive
+#include "src/1500-electric/ge50t.pnml"
+#include "src/1500-electric/dekii.pnml"
+
 // DMU
+#include "src/dmu/nm1.pnml"
 #include "src/dmu/nc3.pnml"
 #include "src/dmu/nyj1_beihai.pnml"
 #include "src/dmu/ndj3.pnml"
 #include "src/dmu/nzj1_xinshuguang.pnml"
+#include "src/dmu/nzj2_shenzhou.pnml"
 #include "src/dmu/nzj2_jinlun_unilaminar.pnml"
 #include "src/dmu/nzj2_jinlun_double_decker.pnml"
 
@@ -412,6 +430,7 @@
 #include "src/25-emu/cr200jc.pnml"
 #include "src/25-emu/cr200jcl.pnml"
 #include "src/25-emu/cr200jd.pnml"
+#include "src/25-emu/cr200jcj.pnml"
 #include "src/25-emu/crh1a.pnml"
 #include "src/25-emu/crh1b.pnml"
 #include "src/25-emu/crh1e.pnml"

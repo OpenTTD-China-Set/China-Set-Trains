@@ -39,7 +39,7 @@ item (FEAT_TRAINS, hxd3) {
         introduction_date:              date(2006,05,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SACA;
+        track_type:                     SADA;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);

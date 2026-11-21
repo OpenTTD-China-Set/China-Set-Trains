@@ -90,7 +90,7 @@ item (FEAT_TRAINS, crh380bj) {
         introduction_date:              date(2011,05,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   25;
-        track_type:                     SAAA;
+        track_type:                     SABA;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
@@ -120,7 +120,7 @@ item (FEAT_TRAINS, crh380bj) {
         // Menu
         additional_text:                string(STR_DESC_6, string(STR_RELDEC_LOW, 8), string(STR_CRH380BJ_AVAILABLE));
         can_attach_wagon:               citonly;
-        start_stop:                     mu4to24car;
+        start_stop:                     mu5to17car;
         cargo_subtype_text:             switch_crh380bj_cargo_subtype;
 
         // Graphics

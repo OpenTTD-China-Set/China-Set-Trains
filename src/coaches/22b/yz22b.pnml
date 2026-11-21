@@ -14,14 +14,33 @@ spriteset (spriteset_22b_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 spriteset (spriteset_22b_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches", "22b")
 }
+spriteset (spriteset_yz22b_jinwen, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "22/yz22b-jinwen")
+}
+spriteset (spriteset_yz22b_jitong, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "22/yz22b-jitong")
+}
 
 switch (FEAT_TRAINS, SELF, switch_yz22b_articulated_part, extra_callback_info1) {
     1..2: return yz22b;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+switch (FEAT_TRAINS, SELF, switch_yz22b_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_JINWEN);
+    2: return string(STR_JITONG);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_yz22b_graphics_subtype, cargo_subtype) {
+    0: spriteset_22b_original;
+    1: spriteset_yz22b_jinwen;
+    2: spriteset_yz22b_jitong;
+}
+
 switch (FEAT_TRAINS, SELF, switch_22b_graphics, position_in_articulated_veh % 3) {
-    1: spriteset_22b_original;
+    1: switch_yz22b_graphics_subtype;
     empty_sprites;
 }
 
@@ -67,8 +86,9 @@ item (FEAT_TRAINS, yz22b) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YZ22B), string(STR_22B_LIVERY_AVAILABILITY), string(STR_COMFORT_LOW, 144), string(STR_NO_AIR_CONDITIONER));
+        additional_text:                string(STR_DESC_4, string(STR_FULL_NAME_YZ22B), string(STR_LV_AVAILABLE_L ,string(STR_LIVERY_AVAILABLE), string(STR_ORIGINAL), string(STR_JINWEN), string(STR_JINWEN_GREEN), string(STR_JITONG)), string(STR_COMFORT_LOW, 144), string(STR_NO_AIR_CONDITIONER));
         can_attach_wagon:               locowagon;
+        cargo_subtype_text:             switch_yz22b_cargo_subtype;
 
         // Graphics
         default:                        switch_22b_graphics;

@@ -243,7 +243,7 @@ item (FEAT_TRAINS, cr200jsg_electric) {
         introduction_date:              date(2021,04,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SABA;
+        track_type:                     SACA;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
@@ -361,7 +361,7 @@ item (FEAT_TRAINS, cr200jsg_diesel) {
         introduction_date:              date(2021,04,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SABN;
+        track_type:                     SACN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);

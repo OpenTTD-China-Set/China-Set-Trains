@@ -45,7 +45,7 @@ item (FEAT_TRAINS, gq80) {
         introduction_date:              date(2020,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SACN;
+        track_type:                     SADN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_LIQUID, CC_HAZARDOUS);

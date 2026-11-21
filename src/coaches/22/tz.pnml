@@ -9,27 +9,24 @@ switch (FEAT_TRAINS, SELF, switch_tz_name, getbits(extra_callback_info1, 0, 8) =
 
 // Purchase Menu
 spriteset (spriteset_tz_purchase_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("coaches", "tz")
+    template_purchase ("coaches", "22/tz")
 }
 
 // Vehicle
 spriteset (spriteset_tz_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "tz")
+    template_standard ("coaches", "22/tz")
 }
-spriteset (spriteset_tz_beijing2shanghai, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "tz-beijing2shanghai")
+spriteset (spriteset_tz_shanghai, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "22/tz-shanghai")
 }
-spriteset (spriteset_tz_beijing2shanghai_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "tz-beijing2shanghai-alternative")
+spriteset (spriteset_tz_beijing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("coaches", "22/tz-beijing")
 }
 spriteset (spriteset_tz_guangzhou, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "tz-guangzhou")
+    template_standard ("coaches", "22/tz-guangzhou")
 }
 spriteset (spriteset_tz_xianxing, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "tz-xianxing")
-}
-spriteset (spriteset_tz_alternative, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("coaches", "tz-alternative")
+    template_standard ("coaches", "22/tz-xianxing")
 }
 spriteset (spriteset_tz_beidaihe, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard ("coaches/25", "kd25-beidaihe")
@@ -42,23 +39,21 @@ switch (FEAT_TRAINS, SELF, switch_tz_articulated_part, extra_callback_info1) {
 
 switch (FEAT_TRAINS, SELF, switch_tz_cargo_subtype, cargo_subtype) {
     0: return string(STR_ORANGE);
-    1: return string(STR_BEIJING2SHANGHAI);
-    2: return string(STR_BEIJING2SHANGHAIALT);
+    1: return string(STR_22SHANGHAI);
+    2: return string(STR_22BEIJING);
     3: return string(STR_GUANGSHEN);
     4: return string(STR_XIANXING);
-    5: return string(STR_ALTERNATIVE);
-    6: return string(STR_BEIDAIHE);
+    5: return string(STR_BEIDAIHE);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_TRAINS, SELF, switch_tz_graphics_subtype, cargo_subtype) {
     0: spriteset_tz_original;
-    1: spriteset_tz_beijing2shanghai;
-    2: spriteset_tz_beijing2shanghai_alternative;
+    1: spriteset_tz_shanghai;
+    2: spriteset_tz_beijing;
     3: spriteset_tz_guangzhou;
     4: spriteset_tz_xianxing;
-    5: spriteset_tz_alternative;
-    6: spriteset_tz_beidaihe;
+    5: spriteset_tz_beidaihe;
 }
 
 switch (FEAT_TRAINS, SELF, switch_tz_graphics, position_in_articulated_veh % 3) {
@@ -105,7 +100,7 @@ item (FEAT_TRAINS, tz) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_TZ), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVAILABLE), string(STR_ORANGE), string(STR_BEIJING2SHANGHAI), string(STR_BEIJING2SHANGHAIALT), string(STR_GUANGSHEN), string(STR_XIANXING), string(STR_ALTERNATIVE), string(STR_BEIDAIHE)), string(STR_AIR_CONDITIONER_EFFECT));
+        additional_text:                string(STR_DESC_3, string(STR_FULL_NAME_TZ), string(STR_LV_AVAILABLE_S ,string(STR_LIVERY_AVAILABLE), string(STR_ORANGE), string(STR_22BEIJING), string(STR_22SHANGHAI), string(STR_GUANGSHEN), string(STR_XIANXING), string(STR_BEIDAIHE)), string(STR_AIR_CONDITIONER_EFFECT));
         can_attach_wagon:               locowagon;
 
         // Graphics

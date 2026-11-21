@@ -9,15 +9,33 @@ switch (FEAT_TRAINS, SELF, switch_n60_name, getbits(extra_callback_info1, 0, 8) 
 
 // Purchase Menu
 spriteset (spriteset_n60_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("wagons", "n60")
+    template_purchase ("wagons/n60", "n60")
 }
 
 // Vehicle
 spriteset (spriteset_n60_original_empty, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("wagons", "n60")
+    template_standard ("wagons/n60", "n60")
 }
 spriteset (spriteset_n60_original_cover, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("wagons", "n60-cover")
+    template_standard ("wagons/n60", "n60-cover")
+}
+spriteset (spriteset_n60_original_bucket_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/n60", "n60-bucket-half")
+}
+spriteset (spriteset_n60_original_bucket_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/n60", "n60-bucket-full")
+}
+spriteset (spriteset_n60_original_goods_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/n60", "n60-goods-half")
+}
+spriteset (spriteset_n60_original_goods_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/n60", "n60-goods-full")
+}
+spriteset (spriteset_n60_original_metal_half, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/n60", "n60-steel-half")
+}
+spriteset (spriteset_n60_original_metal_full, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard ("wagons/n60", "n60-steel-full")
 }
 
 switch (FEAT_TRAINS, SELF, switch_n60_original, cargo_count < 5) {
@@ -25,8 +43,76 @@ switch (FEAT_TRAINS, SELF, switch_n60_original, cargo_count < 5) {
     spriteset_n60_original_empty;
 }
 
+switch (FEAT_TRAINS, SELF, switch_n60_original_metal, cargo_count) {
+    0..5: spriteset_n60_original_empty;
+    6..30: spriteset_n60_original_metal_half;
+    31..90: spriteset_n60_original_metal_full;
+}
+
+switch (FEAT_TRAINS, SELF, switch_n60_original_bucket, cargo_count) {
+    0..5: spriteset_n60_original_empty;
+    6..30: spriteset_n60_original_bucket_half;
+    spriteset_n60_original_bucket_full;
+}
+
+
+switch (FEAT_TRAINS, SELF, switch_n60_original_goods_more_than_0_percent, cargo_count) {
+    0..5: spriteset_n60_original_empty;
+    6..38: spriteset_n60_original_goods_half;
+    spriteset_n60_original_goods_full;
+}
+
+switch (FEAT_TRAINS, SELF, switch_n60_original_all_cargo, cargo_type_in_veh) {
+// the following list is shamelessly stolen from xUSSR
+    ALUM: switch_n60_original_metal;
+    COPR: switch_n60_original_metal;
+    CSTI: switch_n60_original_metal;
+    IRON: switch_n60_original_metal;
+    METL: switch_n60_original_metal;
+    PIPE: switch_n60_original_metal;
+    STEL: switch_n60_original_metal;
+    STAL: switch_n60_original_metal;
+    STST: switch_n60_original_metal;
+    STCB: switch_n60_original_metal;
+    STSE: switch_n60_original_metal;
+    STSH: switch_n60_original_metal;
+    STWR: switch_n60_original_metal;
+    ZINC: switch_n60_original_metal;
+
+    EOIL: switch_n60_original_bucket;
+    FZDR: switch_n60_original_bucket;
+    WATR: switch_n60_original_bucket;
+    OIL_: switch_n60_original_bucket;
+    PETR: switch_n60_original_bucket;
+    RFPR: switch_n60_original_bucket;
+    BUBL: switch_n60_original_bucket;
+    COAT: switch_n60_original_bucket;
+    DYES: switch_n60_original_bucket;
+    NHNO: switch_n60_original_bucket;
+    PLAS: switch_n60_original_bucket;
+    PLST: switch_n60_original_bucket;
+    RUBR: switch_n60_original_bucket;
+    SOAP: switch_n60_original_bucket;
+    ACID: switch_n60_original_bucket;
+    CTAR: switch_n60_original_bucket;
+    LYE_: switch_n60_original_bucket;
+    C2H4: switch_n60_original_bucket;
+    CHLO: switch_n60_original_bucket;
+    FUEL: switch_n60_original_bucket;
+    H2__: switch_n60_original_bucket;
+    N7__: switch_n60_original_bucket;
+    NH3_: switch_n60_original_bucket;
+    O2__: switch_n60_original_bucket;
+
+    VEHI: switch_n60_original;
+    FMSP: switch_n60_original;
+    ENSP: switch_n60_original;
+
+    switch_n60_original_goods_more_than_0_percent;
+}
+
 random_switch (FEAT_TRAINS, SELF, random_n60_colour) {
-    1: switch_n60_original; // More colours waiting to be added
+    1: switch_n60_original_all_cargo; // More colours waiting to be added
 }
 
 switch (FEAT_TRAINS, SELF, switch_n60_articulated_part, extra_callback_info1) {
@@ -61,7 +147,7 @@ item (FEAT_TRAINS, n60) {
         name:                           string(STR_NAME_N60);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT);
-        variant_group:					3095;
+        variant_group:					chini;
 
         // Availability
         climates_available:             ALL_CLIMATES;
@@ -72,8 +158,8 @@ item (FEAT_TRAINS, n60) {
         track_type:                     SACN;
 
         // Cargo
-        refittable_cargo_classes:       bitmask(CC_EXPRESS, CC_BULK, CC_PIECE_GOODS, CC_COVERED, CC_OVERSIZED);
-        non_refittable_cargo_classes:   bitmask(CC_PASSENGERS, CC_LIQUID, CC_HAZARDOUS);
+        refittable_cargo_classes:       bitmask(CC_EXPRESS, CC_BULK, CC_PIECE_GOODS, CC_LIQUID, CC_COVERED, CC_OVERSIZED);
+        non_refittable_cargo_classes:   bitmask(CC_PASSENGERS, CC_HAZARDOUS);
         cargo_allow_refit:              [];
         cargo_disallow_refit:           [YETI, YETY];
         refit_cost:                     0;
